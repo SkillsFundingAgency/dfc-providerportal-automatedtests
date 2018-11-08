@@ -3,7 +3,6 @@ using ApiTesting.Framework.BaseObjects;
 using ApiTesting.Framework.Models;
 using NLog;
 using RestSharp;
-using System;
 
 namespace ApiTesting.Framework.Clients
 {

@@ -51,7 +51,6 @@ namespace ApiTesting.Framework.Clients
             return Execute<Post>(request);
         }
 
-
         public IRestResponse<Post> UpdatePost(string postId, string propertyName, string propertyValue)
         {
             RestRequest request = new RestRequest(PostByIdRoute, Method.PATCH);
