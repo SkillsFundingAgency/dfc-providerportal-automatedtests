@@ -15,7 +15,7 @@ namespace ApiTesting.ApiTests.Steps
     {
         private UserContext UserContext;
         private LARSObject LARSObject;
-        private string JSON;
+        //private string JSON;
 
         public LARSSteps(UserContext userContext)
         {
@@ -32,7 +32,7 @@ namespace ApiTesting.ApiTests.Steps
         [When(@"user sends LARS request with no facets (.*)")]
         public void SendsAPostWithOneFacet(string search)
         {
-            string JSON = "{ \"search\": \"" + search + "\", \"count\": true}";
+             string JSON = "{ \"search\": \"" + search + "\", \"count\": true}";
             //Console.WriteLine(JSON);                                                              //Debug
             ScenarioContext.Current.Add("Response", LARSObject.SendLARS(UserContext.LARS, JSON));
             ScenarioContext.Current["SearchTerm"] = search;

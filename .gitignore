@@ -300,3 +300,4 @@ __pycache__/
 /src/ApiTesting.Framework/Clients/PostsObject.cs
 /src/ApiTesting.Framework/Clients/UsersObject.cs
 /src/ApiTesting.ApiTests/App.config
+/src/ApiTesting.Framework/SecurityTesting.APIs.csproj
