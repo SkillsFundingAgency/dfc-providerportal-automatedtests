@@ -296,3 +296,7 @@ __pycache__/
 /src/ApiTesting.Framework/Clients/UsersObjects.cs
 /src/ApiTesting.Framework/Models/Posts.cs
 /src/ApiTesting.Framework/Models/Users.cs
+/src/ApiTesting.Framework/Models/Post.cs
+/src/ApiTesting.Framework/Clients/PostsObject.cs
+/src/ApiTesting.Framework/Clients/UsersObject.cs
+/src/ApiTesting.ApiTests/App.config
