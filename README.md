@@ -1,4 +1,10 @@
 
+Automated Tests for Provider Portal
+
+API Tests
+UI Tests 
+Security Tests
+
 
 Packages used:
 * [SpecFlow 2.1.0](http://specflow.org/)
