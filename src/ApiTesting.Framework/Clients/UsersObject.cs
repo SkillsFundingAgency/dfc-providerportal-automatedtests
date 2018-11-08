@@ -4,6 +4,7 @@ using ApiTesting.Framework.Models;
 using NLog;
 using RestSharp;
 
+
 namespace ApiTesting.Framework.Clients
 {
     public class UsersObject : ResourceObject
