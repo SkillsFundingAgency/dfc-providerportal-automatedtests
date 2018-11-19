@@ -10,6 +10,8 @@ namespace UITesting.Framework.Helpers
         const String numbers = "0123456789";
         const String specialChars = "!@£$%^&*()_+{}:<>?-=[];',./";
 
+        
+
         public static String GenerateRandomAlphabeticString(int length)
         {
             return GenerateRandomString(alphabets, length);
@@ -57,6 +59,12 @@ namespace UITesting.Framework.Helpers
             Random random = new Random();
             return new string(Enumerable.Repeat(characters, length)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        public static string GenerateRandomWebsiteString()
+        {
+            string webDomainStart = "www.";
+            string webDomainEnd = ".course.uk";
+            return webDomainStart + GenerateRandomAlphabeticString(5) + webDomainEnd;
         }
     }
 }

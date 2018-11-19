@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.ProviderPortal", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.Framework", "src\UITesting.Framework\UITesting.Framework.csproj", "{E30DD9FE-E69D-41BB-8D4F-19FCAD02B2FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.CourseDirectory", "UITesting.CourseDirectory\UITesting.CourseDirectory.csproj", "{0A748301-791B-4CFE-B200-834CCC997A99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CITests|Any CPU = CITests|Any CPU
@@ -58,6 +60,12 @@ Global
 		{E30DD9FE-E69D-41BB-8D4F-19FCAD02B2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E30DD9FE-E69D-41BB-8D4F-19FCAD02B2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E30DD9FE-E69D-41BB-8D4F-19FCAD02B2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A748301-791B-4CFE-B200-834CCC997A99}.CITests|Any CPU.ActiveCfg = Release|Any CPU
+		{0A748301-791B-4CFE-B200-834CCC997A99}.CITests|Any CPU.Build.0 = Release|Any CPU
+		{0A748301-791B-4CFE-B200-834CCC997A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A748301-791B-4CFE-B200-834CCC997A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A748301-791B-4CFE-B200-834CCC997A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A748301-791B-4CFE-B200-834CCC997A99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

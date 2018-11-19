@@ -115,6 +115,11 @@ namespace UITesting.Framework.Helpers
         {
             var selectElement = new SelectElement(element);
             selectElement.SelectByText(text);
+         }
+        public static void SelectFromDropDownByIndex(IWebElement element, int index)
+        {
+            var selectElement = new SelectElement(element);
+            selectElement.SelectByIndex(index);
         }
 
         public static void SelectCheckBox(IWebElement element)

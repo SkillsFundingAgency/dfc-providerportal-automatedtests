@@ -155,7 +155,9 @@ namespace UITesting.Framework.Helpers
         {
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
+            
         }
+        
 
         public static Boolean IsElementPresent(By locator)
         {
@@ -206,7 +208,7 @@ namespace UITesting.Framework.Helpers
 
         public static void TurnOnImplicitWaits()
         {
-            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
         }
     }
 }
