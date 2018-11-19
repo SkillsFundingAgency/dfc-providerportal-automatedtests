@@ -22,6 +22,7 @@ namespace UITesting.Framework.Helpers
             }
             webDriver.Close();
             webDriver.SwitchTo().Window(newWindowHandle);
+            
         }
 
         public static void SwitchToDefaultWindow(IWebDriver webDriver)
