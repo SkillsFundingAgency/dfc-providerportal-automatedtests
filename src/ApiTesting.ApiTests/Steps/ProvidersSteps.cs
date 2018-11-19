@@ -28,30 +28,62 @@ namespace ApiTesting.ApiTests.Steps
             ProvidersObject = new ProvidersObject();
         }
 
-        [When(@"user requests all updated providers")]
-        public void WhenRequestsAllProviders()
+        [When(@"user requests sync providers")]
+        public void WhenRequestsSyncProviders()
 
         {
-            ScenarioContext.Current.Add("Response", ProvidersObject.GetProviders());
+            ScenarioContext.Current.Add("Response", ProvidersObject.SyncProviders());
         }
 
-        [When(@"he requests details for provider (.*)")]
-        public void WhenHeRequestsDetailsForProviderId(int Id)
+        [When(@"user requests all providers")]
+        public void WhenRequestsGetAllProviders()
+
         {
-            ScenarioContext.Current.Add("Response", ProvidersObject.GetProvider(Id));
+            ScenarioContext.Current.Add("Response", ProvidersObject.GetAllProviders());
+        }
+
+
+        [When(@"he requests details for provider (.*) By UKPRN")]
+        public void RequestProviderByUKPRN(int UKPRN)
+        {
+            ScenarioContext.Current.Add("Response", ProvidersObject.GetProviderByPRN(UKPRN));
+        }
+
+
+        [When(@"he requests details for provider (.*) By Name")]
+        public void RequestProviderByName(string ProviderName)
+        {
+            ScenarioContext.Current.Add("Response", ProvidersObject.GetProviderByName(ProviderName));
+        }
+
+        [When(@"he requests details for provider (.*) By UKPRN POST Method")]
+        public void RequestProviderByUKPRNPOST(int UKPRN)
+        {
+            string JSON = "{ \"PRN\":\"" + UKPRN + "\"}";
+            ScenarioContext.Current.Add("Response", ProvidersObject.GetProviderByPRNPOST(UserContext.Providers, JSON));
+        }
+
+
+        [When(@"he requests details for provider (.*) By Name POST Method")]
+        public void RequestProviderByUKNamePOST(string ProviderName)
+        {
+            string JSON = "{ \"Name\":\"" + ProviderName + "\"}";
+            ScenarioContext.Current.Add("Response", ProvidersObject.GetProviderByNamePOST(UserContext.Providers, JSON));
         }
 
 
         [Then(@"the response should contain (.*) providers")]
-        public void ThenTheResponseShouldContainProviders(string provCount)
+        public void ThenTheResponseShouldContainProviders(int provCount)
         {
             var response = JsonConvert.DeserializeObject(ScenarioContext.Current.Get<IRestResponse<Providers>>("Response").Content);
             var Providers = JsonConvert.DeserializeObject<List<Providers>>(response.ToString());
 
-            if (Providers.Count.ToString() != FeatureContext.Current["ProviderCount"].ToString())
+            if (Providers.Count != provCount)
+            //if (Providers.Count.ToString() != FeatureContext.Current["ProviderCount"].ToString())
             {
                 throw new Exception("No. of Provider updates is incorrect, \n Expected: " 
-                                    + FeatureContext.Current["ProviderCount"].ToString() 
+                                    + provCount
+                                   // + FeatureContext.Current["ProviderCount"].ToString() 
                                     + "\n Found: " 
                                     + Providers.Count.ToString());
             }
@@ -101,12 +133,13 @@ namespace ApiTesting.ApiTests.Steps
 
 
         [Then(@"the response should contain provider (.*)")]
-        public void ThenTheResponseShouldContainProvider(int Id)
+        public void ThenTheResponseShouldContainProvider(string Provider)
         {
             var response = JsonConvert.DeserializeObject(ScenarioContext.Current.Get<IRestResponse<Providers>>("Response").Content);
-            var Providers = JsonConvert.DeserializeObject<List<Providers>>(response.ToString()); 
+            var Providers = JsonConvert.DeserializeObject<List<Providers>>(response.ToString());
 
-            if (!response.ToString().Contains(FeatureContext.Current["ProviderRef"].ToString()))
+            if (!response.ToString().Contains(Provider))
+            //if (!response.ToString().Contains(FeatureContext.Current["ProviderRef"].ToString()))
             {
                 throw new Exception("Provider not found");
             }
@@ -131,5 +164,6 @@ namespace ApiTesting.ApiTests.Steps
             if (prop != null && prop.CanWrite)
                 prop.SetValue(obj, value, null);
         }
+
     }
 }
