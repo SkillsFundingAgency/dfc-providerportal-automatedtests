@@ -72,7 +72,7 @@ namespace ApiTesting.ApiTests.Steps
         }
 
 
-        [Then(@"the response should contain (.*) providers")]
+        [Then(@"the response should contain (.*) providers By Name")]
         public void ThenTheResponseShouldContainProviders(int provCount)
         {
             var response = JsonConvert.DeserializeObject(ScenarioContext.Current.Get<IRestResponse<Providers>>("Response").Content);
@@ -108,7 +108,7 @@ namespace ApiTesting.ApiTests.Steps
                     Assert.IsNotNull(provider.UnitedKingdomProviderReferenceNumber);
                     if (i==0)
                     {
-                        //store first provider to use in other scenarios within feature
+                        //store first provider to use in other scenarios within feature - if you want to
                         FeatureContext.Current["ProviderRef"] = provider.UnitedKingdomProviderReferenceNumber;
                         i++;
                     }
@@ -117,14 +117,20 @@ namespace ApiTesting.ApiTests.Steps
 
                     foreach (var contact in provider.ProviderContact)
                     {
-                        System.Console.WriteLine(contact.ContactType);
-                        System.Console.WriteLine(contact.ContactWebsiteAddress);
-                        System.Console.WriteLine(contact.ContactPersonalDetails.PersonFamilyName);
+                        Assert.IsNotNull(contact.ContactType);
+                        if (contact.ContactType != "L")
+                        {
+                            if (contact.ContactType != "P")
+                            {
+                                throw new Exception("Incorrect Contact Type Returned");
+                            }
+                        }
+
                     }
 
                     foreach (var verify in provider.VerificationDetails)
                     {
-                        System.Console.WriteLine(verify.VerificationAuthority);
+                        Assert.IsNotNull(verify.VerificationAuthority);
                     }
 
                 });
@@ -146,7 +152,21 @@ namespace ApiTesting.ApiTests.Steps
 
         }
 
- 
+        [Then(@"the response contains provider UKPRN (.*)")]
+        public void ResponseShouldContainProviderPRN(string Provider)
+        {
+
+            var response = JsonConvert.DeserializeObject(ScenarioContext.Current.Get<IRestResponse<Providers>>("Response").Content); 
+            
+            if (!response.ToString().Contains(Provider))
+            //if (!response.ToString().Contains(FeatureContext.Current["ProviderRef"].ToString()))
+            {
+                throw new Exception("Provider not found");
+            }
+
+        }
+
+
         private static int GetRandomIntBetween(int min, int max)
         {
             var random = new Random();
