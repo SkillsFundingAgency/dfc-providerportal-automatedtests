@@ -72,7 +72,7 @@ namespace ApiTesting.ApiTests.Steps
         }
 
 
-        [Then(@"the response should contain (.*) providers By Name")]
+        [Then(@"the response should contain (.*) providers")]
         public void ThenTheResponseShouldContainProviders(int provCount)
         {
             var response = JsonConvert.DeserializeObject(ScenarioContext.Current.Get<IRestResponse<Providers>>("Response").Content);
