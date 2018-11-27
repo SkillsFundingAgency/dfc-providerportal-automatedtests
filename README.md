@@ -1,10 +1,7 @@
 
 Automated Tests for Provider Portal
 
-API Tests
-UI Tests 
-Security Tests
-Browserstack Integration
+API Tests, UI Tests, Security Tests, Browserstack Integration
 
 Packages used:
 * [SpecFlow 2.1.0](http://specflow.org/)
