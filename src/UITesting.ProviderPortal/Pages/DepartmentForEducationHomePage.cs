@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 namespace UITesting.ProviderPortal.Pages
 
 {
-    class DepartmentForEducationHomePage : BasePage
+    public class DepartmentForEducationHomePage : BasePage
     {
         private static String PAGE_TITLE = "Department for Education";
 

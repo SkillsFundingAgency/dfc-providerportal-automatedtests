@@ -18,8 +18,9 @@ namespace UITesting.ProviderPortal.TestSupport
         protected static IWebDriver webDriver;
         private static string screenshotPath;
 
-
-        [BeforeTestRun]
+        [Scope(Tag ="CI")]
+        [BeforeScenario]
+        //[BeforeTestRun]
         public static void SetUp()
         {
             String browser = Configurator.GetConfiguratorInstance().GetBrowser();
@@ -50,8 +51,9 @@ namespace UITesting.ProviderPortal.TestSupport
             PageInteractionHelper.SetDriver(webDriver);
         }
 
-
-        [AfterTestRun]
+        [Scope(Tag = "CI")]
+        [AfterScenario]
+        //[AfterTestRun]
         public static void TearDown()
         {
             try

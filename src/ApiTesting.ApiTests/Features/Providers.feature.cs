@@ -143,7 +143,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.CategoryAttribute("ukrlp")]
         [NUnit.Framework.TestCaseAttribute("XENON", "1", null)]
         [NUnit.Framework.TestCaseAttribute("MARCUS EVANS", "1", null)]
-        [NUnit.Framework.TestCaseAttribute("TRAINING", "1580", null)]
+        [NUnit.Framework.TestCaseAttribute("TEACH", "34", null)]
         public virtual void GETProviderByName(string provider_Name, string provider_Count, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -202,7 +202,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.CategoryAttribute("ukrlp")]
         [NUnit.Framework.TestCaseAttribute("XENON", "1", null)]
         [NUnit.Framework.TestCaseAttribute("MARCUS EVANS", "1", null)]
-        [NUnit.Framework.TestCaseAttribute("TRAINING", "1580", null)]
+        [NUnit.Framework.TestCaseAttribute("TEACH", "34", null)]
         public virtual void GETProviderByNameUsingPOST(string provider_Name, string provider_Count, string[] exampleTags)
         {
             string[] @__tags = new string[] {

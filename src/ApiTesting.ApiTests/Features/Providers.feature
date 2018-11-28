@@ -38,7 +38,7 @@ Examples:
 | provider_name | provider_count |
 | XENON         | 1              |
 | MARCUS EVANS  | 1              |
-| TRAINING      | 1580           |
+| TEACH         | 34             |
 
 
 @ukrlp
@@ -64,4 +64,4 @@ Examples:
 | provider_name | provider_count |
 | XENON         | 1              |
 | MARCUS EVANS  | 1              |
-| TRAINING      | 1580           |
+| TEACH         | 34             |

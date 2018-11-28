@@ -301,6 +301,5 @@ __pycache__/
 /src/ApiTesting.Framework/Clients/UsersObject.cs
 /src/ApiTesting.ApiTests/App.config
 /src/ApiTesting.Framework/SecurityTesting.APIs.csproj
-/src/UITesting.ProviderPortal/Project/Screenshots/09-11-2018
-/src/UITesting.ProviderPortal/Project/Screenshots/23-11-2018
-/src/UITesting.ProviderPortal/Project/Screenshots/27-11-2018
+/src/UITesting.ProviderPortal/Project/Screenshots/
+/src/UITesting.BrowserStack/Project/Screenshots/27-11-2018

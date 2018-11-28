@@ -22,7 +22,7 @@ namespace UITesting.ProviderPortal.Pages
 
         private By dfeLink = By.LinkText("Department for Education");
 
-        internal DepartmentForEducationHomePage ClickDfeLink()
+        public DepartmentForEducationHomePage ClickDfeLink()
         {
             FormCompletionHelper.ClickElement(dfeLink);
             return new DepartmentForEducationHomePage(webDriver);

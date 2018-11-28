@@ -16,7 +16,7 @@ namespace SecurityTesting.APIs.ZAP_Tests
         private static readonly string ZapApiKey = ConfigurationManager.AppSettings["zapAPIKey"];
         private static readonly string ZapUrl = ConfigurationManager.AppSettings["zapHost"];
         private static readonly string ZapPort = ConfigurationManager.AppSettings["zapPort"];
-        private static readonly string TargetUrl = ConfigurationManager.AppSettings["UKRLPEndpoint"] + ConfigurationManager.AppSettings["UKRLP_Key"];
+        private static readonly string TargetUrl = ConfigurationManager.AppSettings["UKRLPEndpoint"] + "SyncProviders?code=" + ConfigurationManager.AppSettings["UKRLP_Key"];
         private static readonly string ReportPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["zapReportPath"];
         private static ClientApi zap;
         private IApiResponse response;

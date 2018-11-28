@@ -23,7 +23,7 @@ namespace UITesting.ProviderPortal.Pages
         //private By searchButton = By.CssSelector(".search-submit");
 		private By searchButton = By.XPath (".//*[@id='content']/header/div/div/div/div[1]/div/form/div/div/div/button");
 
-		internal SearchResultsPage EnterSearchTextAndSubmit(String searchText)
+		public SearchResultsPage EnterSearchTextAndSubmit(String searchText)
         {
             FormCompletionHelper.EnterText(searchField, searchText);
             FormCompletionHelper.ClickElement(searchButton);

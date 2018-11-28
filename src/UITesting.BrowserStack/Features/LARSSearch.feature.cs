@@ -72,16 +72,38 @@ namespace UITesting.BrowserStack.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Search for LARS")]
         [NUnit.Framework.CategoryAttribute("BrowserStack")]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "macchrome", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "safari", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "macfirefox", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "ie8", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "ie9", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "ie10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "ie11", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "edge", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome62win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome63win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win8", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win8", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63osx", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62osx", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "ie11win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "ie11win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "ie11win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "ie10win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "ie9win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "ie8win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "edge17win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "edge16win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "safari12macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "safari11macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "safari10macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "safari9macos", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ipad", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "iphone", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "android", null)]
@@ -94,14 +116,14 @@ namespace UITesting.BrowserStack.Features
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for LARS", null, @__tags);
-#line 4
+#line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
- testRunner.Given(string.Format("I have navigated to the landing page for {0} and {1}", profile, environment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("I do a LARS Search for Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I have navigated to the landing page for {0} and {1}", profile, environment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
+ testRunner.When("I do a LARS Search for Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
  testRunner.Then("I should see title Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -114,14 +136,14 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for LARS Regression", null, new string[] {
                         "Regression"});
-#line 27
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 28
+#line 51
  testRunner.Given("I have navigated to the landing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
+#line 52
  testRunner.When("I do a LARS Search for Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 53
  testRunner.Then("I should see title Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -134,15 +156,37 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for LARS Regression2", null, new string[] {
                         "Regression"});
-#line 34
+#line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 35
+#line 58
  testRunner.Given("I have navigated to the landing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 36
+#line 59
  testRunner.When("I do a LARS Search for Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
+#line 60
  testRunner.Then("I should see title Biology", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User navigate to DFE home page")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void UserNavigateToDFEHomePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User navigate to DFE home page", null, new string[] {
+                        "Regression"});
+#line 64
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 65
+ testRunner.Given("I navigate to GOV.UK home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 66
+ testRunner.When("I search for Department for Education", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
+ testRunner.And("I click on DFE link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 68
+ testRunner.Then("I should be on Department for Education home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
