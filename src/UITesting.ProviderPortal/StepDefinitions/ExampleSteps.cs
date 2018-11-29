@@ -10,6 +10,7 @@ namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
     [Binding]
     public class ExampleSteps : BaseTest
     {
+
         [Given(@"I navigate to GOV.UK home page")]
         public void NavigateToGovUkHomePage()
         {
@@ -30,11 +31,9 @@ namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
             searchResultsPage.ClickDfeLink();
         }
 
-		//km [Then(@"I should be on DFE home page")]
 		[Then(@"I should be on (.*) home page")]
 		public void ShouldBeOnDfeHomePage(string onPage)
         {
-			//PageInteractionHelper.VerifyPageHeading(By.TagName("h1"), "Department for Education");
 			PageInteractionHelper.VerifyPageHeading(By.TagName("h1"), onPage);
 		}
     }

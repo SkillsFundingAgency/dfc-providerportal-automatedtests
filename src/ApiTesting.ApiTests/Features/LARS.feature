@@ -3,7 +3,7 @@
 		I want to Access the LARS resource
 		So that I retrieve LARS data for my searches
 
-
+@lars
 Scenario Outline: Sending a LARS post with No Facet
 		Given a user is using the LARS resource
 		When user sends LARS request with no facets <search>
@@ -21,7 +21,7 @@ Examples:
 | in              |
 | (QCF)           |
 
-
+@lars
 Scenario Outline: Sending a LARS post with No Facet Special Chars
 		Given a user is using the LARS resource
 		When user sends LARS request with no facets <search>
@@ -39,6 +39,7 @@ Examples:
 | :      |
 | ,      |
 
+@lars
 Scenario Outline: Sending a LARS post with Facets
 		Given a user is using the LARS resource
 		When user sends LARS request with facets <search>, <count>, <facet1>, <facet2>, <filter1>, <filter2>
@@ -59,7 +60,7 @@ Examples:
 | medicine   | true  | NotionalNVQLevelv2 | AwardOrgCode | NotionalNVQLevelv2 eq 'X' | AwardOrgCode eq 'NONE'    |
 | APPRENTICE | true  | NotionalNVQLevelv2 | AwardOrgCode | NotionalNVQLevelv2 eq '1' | AwardOrgCode eq 'WBA'     |
 
-
+@lars
 Scenario: Sending a LARS post with One Facet no search term
 		Given a user is using the LARS resource
 		When user sends LARS request with one facet:
@@ -67,7 +68,7 @@ Scenario: Sending a LARS post with One Facet no search term
 |        | true  | NotionalNVQLevelv2 | NotionalNVQLevelv2 eq '2' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with One Facet level 2
 		Given a user is using the LARS resource
 		When user sends LARS request with one facet:
@@ -75,7 +76,7 @@ Scenario: Sending a LARS post with One Facet level 2
 | biology | true  | NotionalNVQLevelv2 | NotionalNVQLevelv2 eq '2' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with One Facet level 3
 		Given a user is using the LARS resource
 		When user sends LARS request with one facet:
@@ -83,7 +84,7 @@ Scenario: Sending a LARS post with One Facet level 3
 | biology | true  | NotionalNVQLevelv2 | NotionalNVQLevelv2 eq '3' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with One Facet OrgCode
 		Given a user is using the LARS resource
 		When user sends LARS request with one facet:
@@ -91,7 +92,7 @@ Scenario: Sending a LARS post with One Facet OrgCode
 | biology | true  | AwardOrgCode | AwardOrgCode eq 'EDEXCEL' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with One Facet Hair and Beauty
 		Given a user is using the LARS resource
 		When user sends LARS request with one facet:
@@ -99,7 +100,7 @@ Scenario: Sending a LARS post with One Facet Hair and Beauty
 | geography | true  | NotionalNVQLevelv2 | NotionalNVQLevelv2 eq '4' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with One Facet Hair and Beauty level 3
 		Given a user is using the LARS resource
 		When user sends LARS request with one facet:
@@ -107,7 +108,7 @@ Scenario: Sending a LARS post with One Facet Hair and Beauty level 3
 | english | true  | NotionalNVQLevelv2 | NotionalNVQLevelv2 eq '3' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with Two Facets
 		Given a user is using the LARS resource
 		When user sends LARS request with two facets:
@@ -115,7 +116,7 @@ Scenario: Sending a LARS post with Two Facets
 | biology | true  |NotionalNVQLevelv2 | AwardOrgCode |  NotionalNVQLevelv2 eq '4' | AwardOrgCode eq 'EDEXCEL' |
 		Then Response should contain the correct information
 
-
+@lars
 Scenario: Sending a LARS post with Two Facets no search term
 		Given a user is using the LARS resource
 		When user sends LARS request with two facets:

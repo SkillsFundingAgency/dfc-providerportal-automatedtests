@@ -70,39 +70,159 @@ namespace ApiTesting.ApiTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Requesting all Provider Updates")]
-        public virtual void RequestingAllProviderUpdates()
+        [NUnit.Framework.DescriptionAttribute("SYNC Providers")]
+        [NUnit.Framework.CategoryAttribute("ukrlp")]
+        public virtual void SYNCProviders()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Requesting all Provider Updates", null, ((string[])(null)));
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SYNC Providers", null, new string[] {
+                        "ukrlp"});
+#line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
-  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
-  testRunner.When("user requests all updated providers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
+  testRunner.When("user requests sync providers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
   testRunner.Then("all providers should contain required properties", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Requesting updates of a specific provider")]
-        public virtual void RequestingUpdatesOfASpecificProvider()
+        [NUnit.Framework.DescriptionAttribute("GET All Providers")]
+        [NUnit.Framework.CategoryAttribute("ukrlp")]
+        public virtual void GETAllProviders()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Requesting updates of a specific provider", null, ((string[])(null)));
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET All Providers", null, new string[] {
+                        "ukrlp"});
+#line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 10
-  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
-  testRunner.When("he requests details for provider 00000000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
-  testRunner.Then("the response should contain n providers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
-  testRunner.Then("the response should contain provider 00000000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 14
+  testRunner.When("user requests all providers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+  testRunner.Then("all providers should contain required properties", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("GET Provider by UKPRN")]
+        [NUnit.Framework.CategoryAttribute("ukrlp")]
+        [NUnit.Framework.TestCaseAttribute("10025273", null)]
+        [NUnit.Framework.TestCaseAttribute("10028192", null)]
+        [NUnit.Framework.TestCaseAttribute("10030798", null)]
+        [NUnit.Framework.TestCaseAttribute("10057206", null)]
+        public virtual void GETProviderByUKPRN(string ukprn_Ref, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "ukrlp"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET Provider by UKPRN", null, @__tags);
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 20
+  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+  testRunner.When(string.Format("he requests details for provider {0} By UKPRN", ukprn_Ref), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+  testRunner.Then(string.Format("the response contains provider UKPRN {0}", ukprn_Ref), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("GET Provider by Name")]
+        [NUnit.Framework.CategoryAttribute("ukrlp")]
+        [NUnit.Framework.TestCaseAttribute("XENON", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("MARCUS EVANS", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("TEACH", "34", null)]
+        public virtual void GETProviderByName(string provider_Name, string provider_Count, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "ukrlp"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET Provider by Name", null, @__tags);
+#line 32
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 33
+  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 34
+  testRunner.When(string.Format("he requests details for provider {0} By Name", provider_Name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+  testRunner.Then(string.Format("the response should contain {0} providers", provider_Count), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 36
+  testRunner.Then(string.Format("the response should contain provider {0}", provider_Name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("GET Provider by UKPRN using POST")]
+        [NUnit.Framework.CategoryAttribute("ukrlp")]
+        [NUnit.Framework.TestCaseAttribute("10025273", null)]
+        [NUnit.Framework.TestCaseAttribute("10028192", null)]
+        [NUnit.Framework.TestCaseAttribute("10030798", null)]
+        [NUnit.Framework.TestCaseAttribute("10057206", null)]
+        public virtual void GETProviderByUKPRNUsingPOST(string ukprn_Ref, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "ukrlp"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET Provider by UKPRN using POST", null, @__tags);
+#line 45
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 46
+  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 47
+  testRunner.When(string.Format("he requests details for provider {0} By UKPRN POST Method", ukprn_Ref), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
+  testRunner.Then(string.Format("the response contains provider UKPRN {0}", ukprn_Ref), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("GET Provider by Name using POST")]
+        [NUnit.Framework.CategoryAttribute("ukrlp")]
+        [NUnit.Framework.TestCaseAttribute("XENON", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("MARCUS EVANS", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("TEACH", "34", null)]
+        public virtual void GETProviderByNameUsingPOST(string provider_Name, string provider_Count, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "ukrlp"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GET Provider by Name using POST", null, @__tags);
+#line 58
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 59
+  testRunner.Given("a user is using the providers resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 60
+  testRunner.When(string.Format("he requests details for provider {0} By Name POST Method", provider_Name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
+  testRunner.Then(string.Format("the response should contain {0} providers", provider_Count), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
+  testRunner.Then(string.Format("the response should contain provider {0}", provider_Name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

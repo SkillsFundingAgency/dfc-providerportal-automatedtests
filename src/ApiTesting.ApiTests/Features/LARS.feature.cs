@@ -72,6 +72,7 @@ namespace ApiTesting.ApiTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with No Facet")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         [NUnit.Framework.TestCaseAttribute("biology", null)]
         [NUnit.Framework.TestCaseAttribute("hair and beauty", null)]
         [NUnit.Framework.TestCaseAttribute("english", null)]
@@ -84,7 +85,13 @@ namespace ApiTesting.ApiTests.Features
         [NUnit.Framework.TestCaseAttribute("(QCF)", null)]
         public virtual void SendingALARSPostWithNoFacet(string search, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with No Facet", null, exampleTags);
+            string[] @__tags = new string[] {
+                    "lars"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with No Facet", null, @__tags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -100,6 +107,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with No Facet Special Chars")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         [NUnit.Framework.TestCaseAttribute("&", null)]
         [NUnit.Framework.TestCaseAttribute("-", null)]
         [NUnit.Framework.TestCaseAttribute("(", null)]
@@ -112,7 +120,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute(",", null)]
         public virtual void SendingALARSPostWithNoFacetSpecialChars(string search, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with No Facet Special Chars", null, exampleTags);
+            string[] @__tags = new string[] {
+                    "lars"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with No Facet Special Chars", null, @__tags);
 #line 25
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -128,6 +142,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with Facets")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         [NUnit.Framework.TestCaseAttribute("biology", "true", "NotionalNVQLevelv2", "AwardOrgCode", "NotionalNVQLevelv2 eq \'3\'", "AwardOrgCode eq \'EDEXCEL\'", null)]
         [NUnit.Framework.TestCaseAttribute("biology", "true", "NotionalNVQLevelv2", "AwardOrgCode", "NotionalNVQLevelv2 eq \'4\'", "AwardOrgCode eq \'EDEXCEL\'", null)]
         [NUnit.Framework.TestCaseAttribute("biology", "true", "NotionalNVQLevelv2", "AwardOrgCode", "NotionalNVQLevelv2 eq \'2\'", "AwardOrgCode eq \'IB\'", null)]
@@ -143,15 +158,21 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("APPRENTICE", "true", "NotionalNVQLevelv2", "AwardOrgCode", "NotionalNVQLevelv2 eq \'1\'", "AwardOrgCode eq \'WBA\'", null)]
         public virtual void SendingALARSPostWithFacets(string search, string count, string facet1, string facet2, string filter1, string filter2, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with Facets", null, exampleTags);
-#line 42
+            string[] @__tags = new string[] {
+                    "lars"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with Facets", null, @__tags);
+#line 43
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 43
-  testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 44
-  testRunner.When(string.Format("user sends LARS request with facets {0}, {1}, {2}, {3}, {4}, {5}", search, count, facet1, facet2, filter1, filter2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 45
+  testRunner.When(string.Format("user sends LARS request with facets {0}, {1}, {2}, {3}, {4}, {5}", search, count, facet1, facet2, filter1, filter2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 46
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -159,13 +180,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with One Facet no search term")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithOneFacetNoSearchTerm()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet no search term", null, ((string[])(null)));
-#line 63
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet no search term", null, new string[] {
+                        "lars"});
+#line 64
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 64
+#line 65
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -178,9 +201,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "true",
                         "NotionalNVQLevelv2",
                         "NotionalNVQLevelv2 eq \'2\'"});
-#line 65
+#line 66
   testRunner.When("user sends LARS request with one facet:", ((string)(null)), table1, "When ");
-#line 68
+#line 69
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -188,13 +211,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with One Facet level 2")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithOneFacetLevel2()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet level 2", null, ((string[])(null)));
-#line 71
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet level 2", null, new string[] {
+                        "lars"});
+#line 72
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 72
+#line 73
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -207,9 +232,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "true",
                         "NotionalNVQLevelv2",
                         "NotionalNVQLevelv2 eq \'2\'"});
-#line 73
+#line 74
   testRunner.When("user sends LARS request with one facet:", ((string)(null)), table2, "When ");
-#line 76
+#line 77
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -217,13 +242,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with One Facet level 3")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithOneFacetLevel3()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet level 3", null, ((string[])(null)));
-#line 79
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet level 3", null, new string[] {
+                        "lars"});
+#line 80
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 80
+#line 81
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -236,9 +263,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "true",
                         "NotionalNVQLevelv2",
                         "NotionalNVQLevelv2 eq \'3\'"});
-#line 81
+#line 82
   testRunner.When("user sends LARS request with one facet:", ((string)(null)), table3, "When ");
-#line 84
+#line 85
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -246,13 +273,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with One Facet OrgCode")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithOneFacetOrgCode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet OrgCode", null, ((string[])(null)));
-#line 87
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet OrgCode", null, new string[] {
+                        "lars"});
+#line 88
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 88
+#line 89
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -265,9 +294,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "true",
                         "AwardOrgCode",
                         "AwardOrgCode eq \'EDEXCEL\'"});
-#line 89
+#line 90
   testRunner.When("user sends LARS request with one facet:", ((string)(null)), table4, "When ");
-#line 92
+#line 93
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -275,13 +304,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with One Facet Hair and Beauty")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithOneFacetHairAndBeauty()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet Hair and Beauty", null, ((string[])(null)));
-#line 95
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet Hair and Beauty", null, new string[] {
+                        "lars"});
+#line 96
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 96
+#line 97
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -294,9 +325,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "true",
                         "NotionalNVQLevelv2",
                         "NotionalNVQLevelv2 eq \'4\'"});
-#line 97
+#line 98
   testRunner.When("user sends LARS request with one facet:", ((string)(null)), table5, "When ");
-#line 100
+#line 101
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -304,13 +335,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with One Facet Hair and Beauty level 3")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithOneFacetHairAndBeautyLevel3()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet Hair and Beauty level 3", null, ((string[])(null)));
-#line 103
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with One Facet Hair and Beauty level 3", null, new string[] {
+                        "lars"});
+#line 104
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 104
+#line 105
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -323,9 +356,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "true",
                         "NotionalNVQLevelv2",
                         "NotionalNVQLevelv2 eq \'3\'"});
-#line 105
+#line 106
   testRunner.When("user sends LARS request with one facet:", ((string)(null)), table6, "When ");
-#line 108
+#line 109
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -333,13 +366,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with Two Facets")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithTwoFacets()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with Two Facets", null, ((string[])(null)));
-#line 111
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with Two Facets", null, new string[] {
+                        "lars"});
+#line 112
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 112
+#line 113
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
@@ -356,9 +391,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "AwardOrgCode",
                         "NotionalNVQLevelv2 eq \'4\'",
                         "AwardOrgCode eq \'EDEXCEL\'"});
-#line 113
+#line 114
   testRunner.When("user sends LARS request with two facets:", ((string)(null)), table7, "When ");
-#line 116
+#line 117
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -366,13 +401,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sending a LARS post with Two Facets no search term")]
+        [NUnit.Framework.CategoryAttribute("lars")]
         public virtual void SendingALARSPostWithTwoFacetsNoSearchTerm()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with Two Facets no search term", null, ((string[])(null)));
-#line 119
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending a LARS post with Two Facets no search term", null, new string[] {
+                        "lars"});
+#line 120
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 120
+#line 121
   testRunner.Given("a user is using the LARS resource", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
@@ -389,9 +426,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "AwardOrgCode",
                         "NotionalNVQLevelv2 eq \'4\'",
                         "AwardOrgCode eq \'EDEXCEL\'"});
-#line 121
+#line 122
   testRunner.When("user sends LARS request with two facets:", ((string)(null)), table8, "When ");
-#line 124
+#line 125
   testRunner.Then("Response should contain the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
