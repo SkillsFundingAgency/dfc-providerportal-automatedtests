@@ -166,6 +166,7 @@ namespace UITesting.Framework.Helpers
             {
                 webDriver.FindElement(locator);
                 return true;
+
             }
             catch (NoSuchElementException)
             {
@@ -209,6 +210,10 @@ namespace UITesting.Framework.Helpers
         public static void TurnOnImplicitWaits()
         {
             webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+        }
+        public static void TurnOnSleep()
+        {
+            Thread.Sleep(5000);
         }
     }
 }
