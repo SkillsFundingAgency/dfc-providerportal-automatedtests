@@ -303,3 +303,6 @@ __pycache__/
 /src/ApiTesting.Framework/SecurityTesting.APIs.csproj
 /src/UITesting.ProviderPortal/Project/Screenshots/
 /src/UITesting.BrowserStack/Project/Screenshots/27-11-2018
+/src/UITesting.BrowserStack/Features/LARSSearchXXX.feature
+/src/UITesting.BrowserStack/Features/LARSSearchXXX.feature.cs
+/src/UITesting.BrowserStackParallel

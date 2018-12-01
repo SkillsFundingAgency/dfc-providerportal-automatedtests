@@ -41,9 +41,9 @@ Scenario Outline: Search for LARS
 		| parallel | safari11macos  |
 		| parallel | safari10macos  |
 		| parallel | safari9macos   |
-		| parallel | ipad           |
-		| parallel | iphone         |
-		| parallel | android        |
+		#| parallel | ipad           |
+		#| parallel | iphone         |
+		#| parallel | android        |
 
 
 @Regression
