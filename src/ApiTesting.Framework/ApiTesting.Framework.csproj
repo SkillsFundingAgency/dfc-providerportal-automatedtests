@@ -91,8 +91,10 @@
     <Compile Include="BaseObjects\ResourceObject.cs" />
     <Compile Include="Clients\ProvidersObject.cs" />
     <Compile Include="Clients\LARSObject.cs" />
+    <Compile Include="Clients\VenuesObject.cs" />
     <Compile Include="GlobalConfiguration.cs" />
     <Compile Include="Models\LARS.cs" />
+    <Compile Include="Models\Venues.cs" />
     <Compile Include="Models\LARSSearch.cs" />
     <Compile Include="Models\Providers.cs" />
     <Compile Include="Models\UserContext.cs" />

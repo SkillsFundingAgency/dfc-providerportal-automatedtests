@@ -303,3 +303,4 @@ __pycache__/
 /src/ApiTesting.Framework/SecurityTesting.APIs.csproj
 /src/UITesting.ProviderPortal/Project/Screenshots/
 /src/UITesting.BrowserStack/Project/Screenshots/27-11-2018
+/src/ApiTesting.Framework/Clients/LARSObject - Copy.cs

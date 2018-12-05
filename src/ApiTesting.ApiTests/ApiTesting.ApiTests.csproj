@@ -107,9 +107,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Features\Venues.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Venues.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\LARSSteps.cs" />
     <Compile Include="Steps\ProvidersSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\VenuesSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -123,6 +129,10 @@
     <None Include="Features\Providers.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Providers.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venues.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Venues.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
