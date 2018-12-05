@@ -19,8 +19,7 @@ namespace UITesting.CourseDirectory.Steps.Courses
         {
             Pages.Courses.CoursesPage CoursesPage = new Pages.Courses.CoursesPage(webDriver);
             CoursesPage.ClickCoursesMenu();
-            CoursesPage.ClickAddNewCourse();
-            
+            CoursesPage.ClickAddNewCourse();            
         }
         
         [When(@"I enter the required details")]

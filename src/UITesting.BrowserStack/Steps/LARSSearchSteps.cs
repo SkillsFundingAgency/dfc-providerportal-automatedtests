@@ -12,11 +12,11 @@ namespace UITesting.BrowserStack.Steps
     [Binding]
     public class LARSSearchSteps
     {
-        private IWebDriver _driver;
+        //private IWebDriver _driver;
         public static IWebDriver webDriver;
         readonly BrowserStackDriver _bsDriver;
 
-        
+
         public LARSSearchSteps()
         {
 
@@ -27,7 +27,7 @@ namespace UITesting.BrowserStack.Steps
             else
             {
                 webDriver = (IWebDriver)ScenarioContext.Current["_driver"];
-            }    
+            }
         }
 
 

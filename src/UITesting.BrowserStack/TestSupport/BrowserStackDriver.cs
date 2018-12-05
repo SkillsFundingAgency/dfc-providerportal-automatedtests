@@ -25,6 +25,7 @@ namespace UITesting.BrowserStack.TestSupport
         public BrowserStackDriver(ScenarioContext context)
         {
             this.context = context;
+
         }
 
         public IWebDriver Init(string profile, string environment)

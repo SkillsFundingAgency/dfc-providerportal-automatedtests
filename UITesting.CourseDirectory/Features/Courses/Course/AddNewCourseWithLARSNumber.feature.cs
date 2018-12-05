@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UITesting.CourseDirectory.Features.Courses
+namespace UITesting.CourseDirectory.Features.Courses.Course
 {
     using TechTalk.SpecFlow;
     

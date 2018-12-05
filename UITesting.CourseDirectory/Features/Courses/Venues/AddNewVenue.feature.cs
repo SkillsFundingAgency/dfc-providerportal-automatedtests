@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UITesting.CourseDirectory.Features.Courses
+namespace UITesting.CourseDirectory.Features.Courses.Venues
 {
     using TechTalk.SpecFlow;
     
@@ -31,8 +31,8 @@ namespace UITesting.CourseDirectory.Features.Courses
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Add New Venue", "\tIn order to create a new venue\r\n\tAs a provider\r\n\tI want to be able to add a new " +
-                    "venue via course directory", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Add New Venue", "\tIn order to Add a new venue\r\n\tAs a provider\r\n\tI want to be able to add a venue v" +
+                    "ia Add Venue screen", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,25 +71,23 @@ namespace UITesting.CourseDirectory.Features.Courses
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add a new course venue")]
-        [NUnit.Framework.CategoryAttribute("Courses")]
-        public virtual void AddANewCourseVenue()
+        [NUnit.Framework.DescriptionAttribute("Add a Venue")]
+        [NUnit.Framework.CategoryAttribute("regression")]
+        public virtual void AddAVenue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a new course venue", null, new string[] {
-                        "Courses"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a Venue", null, new string[] {
+                        "regression"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given("I logged into course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have logged onto Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And("I have accessed add a new venue screen via courses menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have accessed the Add Venue screen via course menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.And("I have entered the required values and clicked Create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have entered the required details to add a new venue and clicked create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.Then("the new venue should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.And("the venue should be listed in the All venues screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the new venue should be saved and visible on the All venues screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

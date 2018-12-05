@@ -104,9 +104,6 @@ namespace UITesting.BrowserStack.Features
         [NUnit.Framework.TestCaseAttribute("parallel", "safari11macos", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "safari10macos", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "safari9macos", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "ipad", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "iphone", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "android", null)]
         public virtual void SearchForLARS(string profile, string environment, string[] exampleTags)
         {
             string[] @__tags = new string[] {
