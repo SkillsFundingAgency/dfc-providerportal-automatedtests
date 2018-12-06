@@ -8,8 +8,8 @@ using System.IO;
 using FluentAssertions;
 
 
-
-namespace SecurityTesting.APIs.ZAP_Tests
+namespace SecurityTesting.ProviderPortal.ZAPTests
+//namespace SecurityTesting.APIs.ZAP_Tests
 {
     [TestFixture]
     public class ProviderPortal
