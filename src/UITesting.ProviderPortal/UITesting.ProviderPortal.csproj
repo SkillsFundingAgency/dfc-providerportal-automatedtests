@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4762 Add Venue - Enter Address Manually.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC-4778-View All Live Venues.feature.cs" />
     <Compile Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,9 +83,11 @@
     <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage - Copy.cs" />
     <Compile Include="Pages\Venue Management\AddVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
+    <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
+    <Compile Include="StepDefinitions\ViewLiveVenuesSteps.cs" />
     <Compile Include="Test Support\BasePage.cs" />
     <Compile Include="Test Support\BaseTest.cs" />
     <Compile Include="Test Support\Configurator.cs" />
