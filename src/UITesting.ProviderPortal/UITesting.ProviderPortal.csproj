@@ -79,6 +79,9 @@
     </Compile>
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage - Copy.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueConfirmAddressPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
@@ -94,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Provider Management\" />
+    <Folder Include="StepDefinitions\VenueManagement\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects">
