@@ -87,6 +87,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddApprenticeshipNewLocation.feature</DependentUpon>
     </Compile>
+    <Compile Include="Steps\Apprenticeships\AddApprenticeshipNewLocationSteps.cs" />
     <Compile Include="Features\Apprenticeships\ViewApprenticeshipLocations.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,7 +147,6 @@
     <Compile Include="Pages\Start\LoginPage.cs" />
     <Compile Include="Pages\Provider\ProviderPage.cs" />
     <Compile Include="Pages\Start\WelcomePage.cs" />
-    <Compile Include="Steps\Apprenticeships\AddApprenticeshipNewLocationSteps.cs" />
     <Compile Include="Steps\Courses\Course\AddNewCourseWithLARSNumberSteps.cs" />
     <Compile Include="Steps\Courses\Course\AddNewCourseWithNoLARSNumberSteps.cs" />
     <Compile Include="Steps\Courses\Course\ViewAllCoursesSteps.cs" />

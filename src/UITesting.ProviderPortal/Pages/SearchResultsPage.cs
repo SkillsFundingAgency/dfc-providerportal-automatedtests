@@ -3,7 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 
-namespace UITesting.ProviderPortal.Pages
+/*namespace UITesting.ProviderPortal.Pages
 
 {
     public class SearchResultsPage : BasePage
@@ -28,4 +28,4 @@ namespace UITesting.ProviderPortal.Pages
             return new DepartmentForEducationHomePage(webDriver);
         }
     }
-}
+}*/

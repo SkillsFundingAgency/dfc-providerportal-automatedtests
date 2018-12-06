@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Example.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\View Live Venues.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View Live Venues.feature</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
@@ -120,6 +125,10 @@
     <None Include="Features\Example.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Example.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\View Live Venues.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>View Live Venues.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
