@@ -3,11 +3,15 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 
-namespace UITesting.ProviderPortal.Pages.VenueManagement
+namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenuePage : BasePage
     {
         private static String PAGE_TITLE = "Add venue";
+        private By venueName = By.Id("name");
+        private By venuePostcode = By.Id("PostCode");
+        private By FindAddressButton = By.Id("postcode-search");
+        private By PostcodeValidationMessage = By.Id("validation-msg");
 
         public AddVenuePage(IWebDriver webDriver) : base(webDriver)
         {
@@ -18,10 +22,6 @@ namespace UITesting.ProviderPortal.Pages.VenueManagement
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
-
-        private By venueName = By.Id("name");
-        private By venuePostcode = By.Id("address-postcode");
-        private By FindAddressButton = By.Id("find-address"); 
 
 		public AddVenuePage EnterVenueName(String name)
         {
@@ -41,6 +41,11 @@ namespace UITesting.ProviderPortal.Pages.VenueManagement
             return new AddVenuePage(webDriver);
         }
 
-
+        public AddVenuePage AddressValidationMessage(string validationMsg)
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            PageInteractionHelper.VerifyText(PostcodeValidationMessage, validationMsg);
+            return new AddVenuePage(webDriver);
+        }
     }
 }

@@ -9,11 +9,11 @@ Background:
 	And I have navigated to the Your Venues Pages
 	When I click Add Venue
 	Then I am on the Add Venue page
-	And the page displays the expected content
-	When I enter the following postcode b17 7en
+	And the Add Venue page displays the expected content
+	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the first address returned
+	When I select the address 120 Sandford Road Birmingham
 	And I enter venue name Test Venue
 	And I click continue
 

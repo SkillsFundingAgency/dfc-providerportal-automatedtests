@@ -55,6 +55,12 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             PageInteractionHelper.VerifyElementPresent(By.XPath(ADD_VENUE_BUTTON));
         }
 
+        internal ViewAllLiveVenuesPage ClickAddVenueButton()
+        {
+            FormCompletionHelper.ClickElement(By.XPath(ADD_VENUE_BUTTON));
+            return new ViewAllLiveVenuesPage(webDriver);
+        }
+
         internal void ViewArchivedVenues()
         {
             webDriver.FindElement(By.XPath(ARCH_TAB)).Click();
