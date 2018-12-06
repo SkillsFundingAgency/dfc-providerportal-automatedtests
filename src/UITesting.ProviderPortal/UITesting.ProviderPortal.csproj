@@ -62,6 +62,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC-4762 Add Venue - Enter Address Manually.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4762 Add Venue - Enter Address Manually.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-5486 Add Venue - Edit Venue Address.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-5463 Add Venue - Confirm Details.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +146,14 @@
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC-4762 Add Venue - Enter Address Manually.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4762 Add Venue - Enter Address Manually.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-5486 Add Venue - Edit Venue Address.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-5463 Add Venue - Confirm Details.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
