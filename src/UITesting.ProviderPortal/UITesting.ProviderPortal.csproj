@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Example.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
@@ -72,7 +77,9 @@
       <Name>UITesting.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Provider Management\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects">
       <Version>3.11.0</Version>
@@ -120,6 +127,10 @@
     <None Include="Features\Example.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Example.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
