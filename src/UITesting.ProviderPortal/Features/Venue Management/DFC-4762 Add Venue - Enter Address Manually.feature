@@ -1,11 +1,15 @@
 ﻿Feature: DFC-4762 Add Venue - Enter Address Manually
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to add an address 
+	As a provider user when Adding a Venue
+	I want to add manually without using postcode look-up
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+
+#all tests start at Add Venue address screen 
+
+@add_venue
+Scenario: Add an Address without using postcode look-up
+	Given I am on the address screen
+	And I have chosen to enter address manually
+	When I manually enter address without using postcode matching
+	Then my new address is shown on address screen
+	#-- reuse steps to confirm and check new venue
