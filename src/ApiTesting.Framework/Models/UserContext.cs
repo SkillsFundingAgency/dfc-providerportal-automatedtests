@@ -9,6 +9,7 @@
             Providers = new Providers();
             LARS = new LARS();
             LARSSearch = new LARSSearch();
+            Venues = new Venues();
         }
 
         //public Post Post { get; set; }
@@ -19,5 +20,7 @@
 
         public LARS LARS { get; set; }
         public LARSSearch LARSSearch { get; set; }
+
+        public Venues Venues { get; set; }
     }
 }
