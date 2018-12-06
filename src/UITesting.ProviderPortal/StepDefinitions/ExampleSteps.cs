@@ -5,7 +5,7 @@ using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
-namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
+/*namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
 {
     [Binding]
     public class ExampleSteps : BaseTest
@@ -37,4 +37,4 @@ namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
 			PageInteractionHelper.VerifyPageHeading(By.TagName("h1"), onPage);
 		}
     }
-}
+}*/

@@ -34,9 +34,10 @@ namespace UITesting.CourseDirectory.Models
         public string LARS_SCREEN = "/html/body/div[7]/div/div/div[1]/div";
 
 
-        public string Course_Title = "Selenium Fundamentals";
+        public string Course_Title = "jMeter";
         public string Course_Id = RandomDataGenerator.GenerateRandomNumber(5);
-        public string Course_Summary = "Basic Selenium";
+        public string Course_Summary = "Basic Performance Testing";
+        public string Course_Last_Update_Date;
         //public string Course_URL = RandomDataGenerator.GenerateRandomWebsiteString();
         public string Course_URL = "www.gov.uk";
         public string Course_Entry = "A-Level";

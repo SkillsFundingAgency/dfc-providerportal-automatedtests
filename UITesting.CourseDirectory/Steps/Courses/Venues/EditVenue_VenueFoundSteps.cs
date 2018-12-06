@@ -23,9 +23,9 @@ namespace UITesting.CourseDirectory.Steps.Courses.Venues
         }
         
         [Given(@"I want to Search for ""(.*)""")]
-        public void GivenIWantToSearchFor(string Prov_Name)
+        public void GivenIWantToSearchFor(string Venue_Name)
         {
-            CoursesPage.FindProvider(Prov_Name);
+            CoursesPage.FindVenueName(Venue_Name);
         }
         
         [Given(@"I have found the Venue and clicked Edit")]
