@@ -62,11 +62,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC-4778-View All Live Venues.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4778-View All Live Venues.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
+    <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
+    <Compile Include="StepDefinitions\Venue Management\ViewLiveVenuesSteps.cs" />
     <Compile Include="Test Support\BasePage.cs" />
     <Compile Include="Test Support\BaseTest.cs" />
     <Compile Include="Test Support\Configurator.cs" />
@@ -131,6 +139,10 @@
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC-4778-View All Live Venues.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4778-View All Live Venues.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
