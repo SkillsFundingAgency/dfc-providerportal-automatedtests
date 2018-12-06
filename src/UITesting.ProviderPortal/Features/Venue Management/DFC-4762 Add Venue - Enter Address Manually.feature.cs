@@ -31,8 +31,8 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-4762 Add Venue - Enter Address Manually", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-4762 Add Venue - Enter Address Manually", "\tIn order to add an address \r\n\tAs a provider user when Adding a Venue\r\n\tI want to" +
+                    " add manually without using postcode look-up", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,23 +71,23 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add two numbers")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void AddTwoNumbers()
+        [NUnit.Framework.DescriptionAttribute("Add an Address without using postcode look-up")]
+        [NUnit.Framework.CategoryAttribute("add_venue")]
+        public virtual void AddAnAddressWithoutUsingPostcodeLook_Up()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, new string[] {
-                        "mytag"});
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an Address without using postcode look-up", null, new string[] {
+                        "add_venue"});
+#line 10
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
- testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I am on the address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.And("I have chosen to enter address manually", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.When("I manually enter address without using postcode matching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+ testRunner.Then("my new address is shown on address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

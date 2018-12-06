@@ -1,11 +1,27 @@
 ﻿Feature: DFC-5486 Add Venue - Edit Venue Address
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to alter a provisionally entered address 
+	As a provider user when Adding a Venue
+	I want to be able to edit Venue Address
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+#all tests start at Add Venue address screen 
+
+@add_venue
+Scenario: Change address manually during Add Venue
+	Given I have entered an address
+	And I am on the address screen
+	When I press edit address
+	Then I am taken to the change address screen
+	And I can change the address manually
+	And my new address is shown on address screen
+#-- reuse steps to confirm and check new venue
+
+
+@add_venue
+Scenario: Change address using postcode during Add Venue
+	Given I have entered an address
+	And I am on the address screen
+	When I press edit address
+	Then I am taken to the change address screen
+#--look into using postcode look-up steps
+	And my new address is shown on address screen
+#-- reuse steps to confirm and check new venue
