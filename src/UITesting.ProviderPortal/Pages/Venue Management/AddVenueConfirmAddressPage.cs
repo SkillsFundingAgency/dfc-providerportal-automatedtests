@@ -3,7 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 
-namespace UITesting.ProviderPortal.VenueManagement.Pages
+namespace UITesting.ProviderPortal.Pages.VenueManagement
 {
     public class AddVenueConfirmAddressPage : BasePage
     {
