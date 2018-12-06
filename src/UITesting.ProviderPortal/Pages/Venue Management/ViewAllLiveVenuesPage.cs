@@ -19,8 +19,14 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         
         public ViewAllLiveVenuesPage(IWebDriver webDriver) : base(webDriver)
         {
-            
+           // SelfVerify();
         }
+
+        protected override bool SelfVerify()
+        {
+            return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
+        }
+
         internal void SearchProvider(string UKPRNNO)
         {
             webDriver.FindElement(By.Id("UKPrn")).SendKeys(UKPRNNO.ToString());

@@ -3,7 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 
-/*namespace UITesting.ProviderPortal.Pages
+namespace UITesting.ProviderPortal.Pages
 {
     public class WelcomeToGovUkPage : BasePage
     {
@@ -30,4 +30,4 @@ using OpenQA.Selenium;
             return new SearchResultsPage(webDriver);
         }
     }
-}*/
+}

@@ -67,7 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4762 Add Venue - Enter Address Manually.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Venue Management\DFC-4778-View All Live Venues.feature.cs" />
+    <Compile Include="Features\Venue Management\DFC-4778-View All Live Venues.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4778-View All Live Venues.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5463 Add Venue - Confirm Details.feature</DependentUpon>
     </Compile>
+    <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage.cs" />
@@ -101,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Provider Management\" />
-    <Folder Include="StepDefinitions\VenueManagement\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects">
@@ -158,6 +162,10 @@
     <None Include="Features\Venue Management\DFC-4762 Add Venue - Enter Address Manually.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4762 Add Venue - Enter Address Manually.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC-4778-View All Live Venues.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4778-View All Live Venues.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

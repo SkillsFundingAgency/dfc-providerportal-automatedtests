@@ -3,7 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 
-/*namespace UITesting.ProviderPortal.Pages
+namespace UITesting.ProviderPortal.Pages
 
 {
     public class DepartmentForEducationHomePage : BasePage
@@ -21,4 +21,4 @@ using OpenQA.Selenium;
 
 		}
     }
-}*/
+}

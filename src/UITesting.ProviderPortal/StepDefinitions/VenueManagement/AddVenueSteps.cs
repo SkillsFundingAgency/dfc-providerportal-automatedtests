@@ -26,8 +26,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [When(@"I click Add Venue")]
         public void GoToAddVenuePage(string searchText)
         {
-            WelcomeToGovUkPage welcomeToGovUkPage = new WelcomeToGovUkPage(webDriver);
-            welcomeToGovUkPage.EnterSearchTextAndSubmit(searchText);
+           WelcomeToGovUkPage welcomeToGovUkPage = new WelcomeToGovUkPage(webDriver);
+           welcomeToGovUkPage.EnterSearchTextAndSubmit(searchText);
         }
 
         [When(@"I click on DFE link")]

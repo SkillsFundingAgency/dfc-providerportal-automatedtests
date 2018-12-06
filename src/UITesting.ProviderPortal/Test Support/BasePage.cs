@@ -18,7 +18,7 @@ namespace UITesting.ProviderPortal.TestSupport
             SeleniumExtras.PageObjects.PageFactory.InitElements(webDriver, this);
         }
 
-       // protected abstract Boolean SelfVerify();
+        protected abstract Boolean SelfVerify();
 
         protected String GetPageHeading()
         {
