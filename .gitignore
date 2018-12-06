@@ -306,3 +306,4 @@ __pycache__/
 /src/UITesting.BrowserStack/Features/LARSSearchXXX.feature
 /src/UITesting.BrowserStack/Features/LARSSearchXXX.feature.cs
 /src/UITesting.BrowserStackParallel
+/src/ApiTesting.Framework/Clients/LARSObject - Copy.cs

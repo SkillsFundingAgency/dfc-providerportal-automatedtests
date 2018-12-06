@@ -57,10 +57,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Example.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Venue Management\View Live Venues.feature.cs">
+    <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>View Live Venues.feature</DependentUpon>
+      <DependentUpon>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature</DependentUpon>
     </Compile>
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
@@ -77,7 +77,9 @@
       <Name>UITesting.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Features\Provider Management\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects">
       <Version>3.11.0</Version>
@@ -126,9 +128,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Example.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Venue Management\View Live Venues.feature">
+    <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>View Live Venues.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
