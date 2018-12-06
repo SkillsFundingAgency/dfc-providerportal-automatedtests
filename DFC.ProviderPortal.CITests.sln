@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTesting.Framework", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTesting.APIs", "src\SecurityTesting.APIs\SecurityTesting.APIs.csproj", "{164391BF-B348-40F0-B477-5D2A87EEE4A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTesting.UI", "src\SecurityTesting.ProviderPortal\SecurityTesting.UI.csproj", "{92C06A85-E04D-4171-AA71-CD663667F63E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityTesting.ProviderPortal", "src\SecurityTesting.ProviderPortal\SecurityTesting.ProviderPortal.csproj", "{92C06A85-E04D-4171-AA71-CD663667F63E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.ProviderPortal", "src\UITesting.ProviderPortal\UITesting.ProviderPortal.csproj", "{8F34486E-E483-4472-8417-EF8679D707CC}"
 EndProject
