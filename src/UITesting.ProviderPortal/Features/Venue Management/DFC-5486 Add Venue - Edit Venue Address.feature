@@ -4,8 +4,14 @@
 	I want to be able to edit Venue Address
 
 #all tests start at Add Venue address screen 
+Background:
+	Given I have logged into course directory as a provider
+	And I have navigated to the Your Venues Pages
+	When I click Add Venue
+	Then I am on the Add Venue page
+	And the page displays the expected content
 
-@add_venue
+@CI
 Scenario: Change address manually during Add Venue
 	Given I have entered an address
 	And I am on the address screen
@@ -16,7 +22,7 @@ Scenario: Change address manually during Add Venue
 #-- reuse steps to confirm and check new venue
 
 
-@add_venue
+@CI
 Scenario: Change address using postcode during Add Venue
 	Given I have entered an address
 	And I am on the address screen

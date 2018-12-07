@@ -70,23 +70,41 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 9
+#line 10
+ testRunner.Given("I have logged into course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+ testRunner.And("I have navigated to the Your Venues Pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.When("I click Add Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.Then("I am on the Add Venue page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.And("the page displays the expected content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add an Address without using postcode look-up")]
-        [NUnit.Framework.CategoryAttribute("add_venue")]
+        [NUnit.Framework.CategoryAttribute("CI")]
         public virtual void AddAnAddressWithoutUsingPostcodeLook_Up()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an Address without using postcode look-up", null, new string[] {
-                        "add_venue"});
-#line 10
+                        "CI"});
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 11
+#line 9
+this.FeatureBackground();
+#line 18
  testRunner.Given("I am on the address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
+#line 19
  testRunner.And("I have chosen to enter address manually", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 20
  testRunner.When("I manually enter address without using postcode matching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
+#line 21
  testRunner.Then("my new address is shown on address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

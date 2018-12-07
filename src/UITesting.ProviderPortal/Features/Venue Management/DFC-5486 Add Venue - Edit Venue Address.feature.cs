@@ -70,27 +70,45 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 7
+#line 8
+ testRunner.Given("I have logged into course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+ testRunner.And("I have navigated to the Your Venues Pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.When("I click Add Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.Then("I am on the Add Venue page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.And("the page displays the expected content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Change address manually during Add Venue")]
-        [NUnit.Framework.CategoryAttribute("add_venue")]
+        [NUnit.Framework.CategoryAttribute("CI")]
         public virtual void ChangeAddressManuallyDuringAddVenue()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change address manually during Add Venue", null, new string[] {
-                        "add_venue"});
-#line 9
+                        "CI"});
+#line 15
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 10
+#line 7
+this.FeatureBackground();
+#line 16
  testRunner.Given("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
+#line 17
  testRunner.And("I am on the address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 18
  testRunner.When("I press edit address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 19
  testRunner.Then("I am taken to the change address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
+#line 20
  testRunner.And("I can change the address manually", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
+#line 21
  testRunner.And("my new address is shown on address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -98,23 +116,25 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Change address using postcode during Add Venue")]
-        [NUnit.Framework.CategoryAttribute("add_venue")]
+        [NUnit.Framework.CategoryAttribute("CI")]
         public virtual void ChangeAddressUsingPostcodeDuringAddVenue()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change address using postcode during Add Venue", null, new string[] {
-                        "add_venue"});
-#line 20
+                        "CI"});
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 21
+#line 7
+this.FeatureBackground();
+#line 27
  testRunner.Given("I have entered an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
+#line 28
  testRunner.And("I am on the address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
+#line 29
  testRunner.When("I press edit address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 30
  testRunner.Then("I am taken to the change address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
+#line 32
  testRunner.And("my new address is shown on address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

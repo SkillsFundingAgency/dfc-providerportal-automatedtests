@@ -77,6 +77,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5463 Add Venue - Confirm Details.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\Models\Apprenticeships.cs" />
+    <Compile Include="Features\Venue Management\Models\Courses.cs" />
+    <Compile Include="Features\Venue Management\Models\Provider.cs" />
+    <Compile Include="Features\Venue Management\Models\Venue.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
