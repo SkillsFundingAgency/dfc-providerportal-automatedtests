@@ -14,19 +14,19 @@ Background:
 @CI
 Scenario: User Does Not enter postcode to Find Address
 	When I click Find Address
-	Then A validation message is displayed postcode must be entered
+	Then Address validation message is displayed postcode must be entered
 
 @CI
 Scenario: User enters invalid postcode to Find Address
 	When I enter the following postcode hello
 	And I click Find Address
-	Then A validation message is displayed postcode is invalid
+	Then Address validation message is displayed postcode is invalid
 
 @CI
 Scenario: User enters valid not found postcode to Find Address
 	When I enter the following postcode b17 7en
 	And I click Find Address
-	Then A validation message is displayed postcode is not found
+	Then Address validation message is displayed postcode is not found
 
 @CI
 Scenario: User enters valid postcode to Find Address
@@ -40,43 +40,43 @@ Scenario: User clicks continue without selecting from list of addresses
 	And I click Find Address
 	Then I am on the Select Address page
 	When I click continue
-	Then A validation message is displayed select address
+	Then Select Address validation message is displayed select address
 
 @CI
 Scenario: User selects address and does not enter venue name then clicks continue
-	When I enter the following postcode b17 7en
+	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the first address returned
+	When I select the address 120 Sandford Road Birmingham
 	And I click continue
-	Then A validation message is displayed enter venue name
+	Then Venue Name validation message is displayed enter venue name
 
 @CI
 Scenario: User selects address and enters space in venue name then clicks continue
-	When I enter the following postcode b17 7en
+	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the first address returned
-	And I enter venue name Test Venue
+	When I select the address 120 Sandford Road Birmingham
+	And I enter venue name space
 	And I click continue
-	Then A validation message is displayed enter valid venue name
+	Then Venue Name validation message is displayed enter venue name
 
 @CI
 Scenario: User selects address and enter invalid venue name then clicks continue
-	When I enter the following postcode b17 7en
+	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the first address returned
+	When I select the address 120 Sandford Road Birmingham
 	And I enter venue name ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 	And I click continue
-	Then A validation message is displayed enter valid venue name
+	Then Venue Name validation message is displayed enter venue name
 
 @CI
 Scenario: User selects address and enters valid venue name then clicks continue
-	When I enter the following postcode b17 7en
+	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the first address returned
+	When I select the address 120 Sandford Road Birmingham
 	And I enter venue name Test Venue
 	And I click continue
 	Then I am on the Add Venue Confirm details page

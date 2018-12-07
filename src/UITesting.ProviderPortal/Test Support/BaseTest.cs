@@ -53,7 +53,7 @@ namespace UITesting.ProviderPortal.TestSupport
 
         [Scope(Tag = "CI")]
         [AfterScenario]
-        //[AfterTestRun]
+        [AfterTestRun]
         public static void TearDown()
         {
             try

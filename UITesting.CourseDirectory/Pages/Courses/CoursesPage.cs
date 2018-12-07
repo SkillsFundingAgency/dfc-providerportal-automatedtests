@@ -35,11 +35,11 @@ namespace UITesting.CourseDirectory.Pages.Courses
         {
             webDriver.FindElement(By.XPath(Courses.COURSE_MENU)).Click();            
         }
-
-        internal void FindProvider(string Provider_Name)
+       
+        internal void FindVenueName(string Venue_Name)
         {
-            webDriver.FindElement(By.XPath(Venue.FILTER_VENUE_NAME)).SendKeys(Provider_Name);
-            PageInteractionHelper.VerifyText(By.XPath(Venue.VENUE_TABLE_NAME_COL), Provider_Name);
+            webDriver.FindElement(By.XPath(Venue.FILTER_VENUE_NAME)).SendKeys(Venue_Name);
+            PageInteractionHelper.VerifyText(By.XPath(Venue.VENUE_TABLE_NAME_COL), Venue_Name);            
         }
         internal void ValidatePageSuccess(string strMessage)
         {            
@@ -148,12 +148,13 @@ namespace UITesting.CourseDirectory.Pages.Courses
             }
             else
             {
-                ValidateNewCourseData();
+                AddNewCourseDataWithLARS();
             }
             webDriver.FindElement(By.XPath(Courses.CREATE_COURSE)).Click();
             ValidatePageSuccess(webDriver.FindElement(By.XPath(Courses.ADD_COURSE_SUCCESS_MSG)).Text);
+
         }
-        private void ValidateNewCourseData()
+        private void AddNewCourseDataWithLARS()
         {
            if (string.IsNullOrEmpty(webDriver.FindElement(By.XPath(Courses.COURSE_TITLE_TEXT)).Text))
            {
