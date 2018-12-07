@@ -1,5 +1,6 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using UITesting.ProviderPortal.Pages.Venue_Management;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
 {
@@ -44,5 +45,26 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         {
             ViewAllLiveVenuesPage.ViewArchivedVenues();
         }
+
+        [Then(@"I am on the View All Live Venues Page")]
+        public void ThenIAmOnTheViewAllLiveVenuesPage()
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        }
+
+        [Then(@"System displays new Venue added")]
+        public void ThenSystemDisplaysNewVenueAdded()
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            viewAllLiveVenuesPage.ValidateVenue();
+        }
+
+        [Then(@"System displays banner message")]
+        public void ThenSystemDisplaysBannerMessage()
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            viewAllLiveVenuesPage.VenueAddedBanner();
+        }
+
     }
 }

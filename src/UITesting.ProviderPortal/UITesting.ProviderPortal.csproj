@@ -82,6 +82,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5463 Add Venue - Confirm Details.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC5624 Add Venue - Commit Add Venue Record.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC5624 Add Venue - Commit Add Venue Record.feature</DependentUpon>
+    </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
@@ -174,6 +179,10 @@
     <None Include="Features\Venue Management\DFC-5463 Add Venue - Confirm Details.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5463 Add Venue - Confirm Details.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC5624 Add Venue - Commit Add Venue Record.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC5624 Add Venue - Commit Add Venue Record.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

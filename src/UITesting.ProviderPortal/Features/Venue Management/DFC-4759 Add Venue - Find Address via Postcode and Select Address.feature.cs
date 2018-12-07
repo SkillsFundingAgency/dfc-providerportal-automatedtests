@@ -113,16 +113,676 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address", null, new string[] {
                         "CI"});
-#line 20
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 21
- testRunner.When("I enter the following postcode hello", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
- testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
+ testRunner.When("I enter the following postcode hello", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address QA14 7EN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressQA147EN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address QA14 7EN", null, new string[] {
+                        "CI"});
+#line 31
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 32
+ testRunner.When("I enter the following postcode QA14 7EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address VA14 7EN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressVA147EN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address VA14 7EN", null, new string[] {
+                        "CI"});
+#line 37
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 38
+ testRunner.When("I enter the following postcode VA14 7EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address XA14 7EN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressXA147EN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address XA14 7EN", null, new string[] {
+                        "CI"});
+#line 43
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 44
+ testRunner.When("I enter the following postcode XA14 7EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address BI14 7EN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressBI147EN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address BI14 7EN", null, new string[] {
+                        "CI"});
+#line 52
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 53
+ testRunner.When("I enter the following postcode BI14 7EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 55
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address BJ14 7EN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressBJ147EN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address BJ14 7EN", null, new string[] {
+                        "CI"});
+#line 58
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 59
+ testRunner.When("I enter the following postcode BJ14 7EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 61
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address BZ14 7EN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressBZ147EN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address BZ14 7EN", null, new string[] {
+                        "CI"});
+#line 64
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 65
+ testRunner.When("I enter the following postcode BZ14 7EN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 66
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 67
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1I 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1I1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1I 1BB", null, new string[] {
+                        "CI"});
+#line 73
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 74
+ testRunner.When("I enter the following postcode EC1I 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 76
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1L 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1L1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1L 1BB", null, new string[] {
+                        "CI"});
+#line 79
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 80
+ testRunner.When("I enter the following postcode EC1L 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 81
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 82
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1M 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1M1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1M 1BB", null, new string[] {
+                        "CI"});
+#line 85
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 86
+ testRunner.When("I enter the following postcode EC1M 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 87
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 88
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1N 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1N1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1N 1BB", null, new string[] {
+                        "CI"});
+#line 91
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 92
+ testRunner.When("I enter the following postcode EC1N 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 93
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 94
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1O 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1O1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1O 1BB", null, new string[] {
+                        "CI"});
+#line 97
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 98
+ testRunner.When("I enter the following postcode EC1O 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 99
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 100
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1P 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1P1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1P 1BB", null, new string[] {
+                        "CI"});
+#line 103
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 104
+ testRunner.When("I enter the following postcode EC1P 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 105
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 106
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1Q 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1Q1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1Q 1BB", null, new string[] {
+                        "CI"});
+#line 109
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 110
+ testRunner.When("I enter the following postcode EC1Q 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 111
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 112
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1R 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1R1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1R 1BB", null, new string[] {
+                        "CI"});
+#line 115
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 116
+ testRunner.When("I enter the following postcode EC1R 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 117
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 118
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1V 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1V1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1V 1BB", null, new string[] {
+                        "CI"});
+#line 121
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 122
+ testRunner.When("I enter the following postcode EC1V 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 123
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 124
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1X 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1X1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1X 1BB", null, new string[] {
+                        "CI"});
+#line 127
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 128
+ testRunner.When("I enter the following postcode EC1X 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 129
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 130
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address EC1Y 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressEC1Y1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address EC1Y 1BB", null, new string[] {
+                        "CI"});
+#line 133
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 134
+ testRunner.When("I enter the following postcode EC1Y 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 136
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7CN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147CN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7CN", null, new string[] {
+                        "CI"});
+#line 142
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 143
+ testRunner.When("I enter the following postcode B14 7CN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 144
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 145
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7IN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147IN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7IN", null, new string[] {
+                        "CI"});
+#line 149
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 150
+ testRunner.When("I enter the following postcode B14 7IN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 151
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 152
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7KN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147KN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7KN", null, new string[] {
+                        "CI"});
+#line 155
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 156
+ testRunner.When("I enter the following postcode B14 7KN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 157
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 158
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7MN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147MN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7MN", null, new string[] {
+                        "CI"});
+#line 161
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 162
+ testRunner.When("I enter the following postcode B14 7MN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 163
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 164
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7ON")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147ON()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7ON", null, new string[] {
+                        "CI"});
+#line 167
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 168
+ testRunner.When("I enter the following postcode B14 7ON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 169
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 170
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7VN")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147VN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7VN", null, new string[] {
+                        "CI"});
+#line 173
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 174
+ testRunner.When("I enter the following postcode B14 7VN", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 175
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 176
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7EC")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147EC()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7EC", null, new string[] {
+                        "CI"});
+#line 179
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 180
+ testRunner.When("I enter the following postcode B14 7EC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 181
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 182
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7EI")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147EI()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7EI", null, new string[] {
+                        "CI"});
+#line 185
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 186
+ testRunner.When("I enter the following postcode B14 7EI", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 187
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 188
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7EK")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147EK()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7EK", null, new string[] {
+                        "CI"});
+#line 191
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 192
+ testRunner.When("I enter the following postcode B14 7EK", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 193
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 194
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7EM")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147EM()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7EM", null, new string[] {
+                        "CI"});
+#line 197
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 198
+ testRunner.When("I enter the following postcode B14 7EM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 199
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 200
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7EO")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147EO()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7EO", null, new string[] {
+                        "CI"});
+#line 203
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 204
+ testRunner.When("I enter the following postcode B14 7EO", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 205
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 206
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 7EV")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB147EV()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 7EV", null, new string[] {
+                        "CI"});
+#line 210
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 211
+ testRunner.When("I enter the following postcode B14 7EV", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 212
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 213
+ testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters invalid postcode to Find Address B14 E77")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersInvalidPostcodeToFindAddressB14E77()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid postcode to Find Address B14 E77", null, new string[] {
+                        "CI"});
+#line 217
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 218
+ testRunner.When("I enter the following postcode B14 E77", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 219
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 220
  testRunner.Then("Address validation message is displayed postcode is invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -135,16 +795,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid not found postcode to Find Address", null, new string[] {
                         "CI"});
-#line 26
+#line 224
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 27
- testRunner.When("I enter the following postcode b17 7en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
+#line 225
+ testRunner.When("I enter the following postcode b13 9cc", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 226
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 227
  testRunner.Then("Address validation message is displayed postcode is not found", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -157,16 +817,148 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address", null, new string[] {
                         "CI"});
-#line 32
+#line 230
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 33
- testRunner.When("I enter the following postcode b17 7en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 231
+ testRunner.When("I enter the following postcode b13 9da", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 232
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
+#line 233
+ testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters valid postcode to Find Address M1 1AA")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersValidPostcodeToFindAddressM11AA()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address M1 1AA", null, new string[] {
+                        "CI"});
+#line 236
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 237
+ testRunner.When("I enter the following postcode M1 1AA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 238
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 239
+ testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters valid postcode to Find Address M60 1NW")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersValidPostcodeToFindAddressM601NW()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address M60 1NW", null, new string[] {
+                        "CI"});
+#line 242
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 243
+ testRunner.When("I enter the following postcode M60 1NW", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 244
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 245
+ testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters valid postcode to Find Address CR2 6XH")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersValidPostcodeToFindAddressCR26XH()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address CR2 6XH", null, new string[] {
+                        "CI"});
+#line 248
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 249
+ testRunner.When("I enter the following postcode CR2 6XH", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 250
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 251
+ testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters valid postcode to Find Address DN55 1PT")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersValidPostcodeToFindAddressDN551PT()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address DN55 1PT", null, new string[] {
+                        "CI"});
+#line 254
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 255
+ testRunner.When("I enter the following postcode DN55 1PT", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 256
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 257
+ testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters valid postcode to Find Address W1A 1HQ")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersValidPostcodeToFindAddressW1A1HQ()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address W1A 1HQ", null, new string[] {
+                        "CI"});
+#line 260
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 261
+ testRunner.When("I enter the following postcode W1A 1HQ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 262
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 263
+ testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User enters valid postcode to Find Address EC1A 1BB")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void UserEntersValidPostcodeToFindAddressEC1A1BB()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid postcode to Find Address EC1A 1BB", null, new string[] {
+                        "CI"});
+#line 266
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 267
+ testRunner.When("I enter the following postcode EC1A 1BB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 268
+ testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 269
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -179,20 +971,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User clicks continue without selecting from list of addresses", null, new string[] {
                         "CI"});
-#line 38
+#line 274
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 39
- testRunner.When("I enter the following postcode b17 7en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 275
+ testRunner.When("I enter the following postcode b14 7en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 276
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
+#line 277
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
+#line 278
  testRunner.When("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
+#line 279
  testRunner.Then("Select Address validation message is displayed select address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -205,22 +997,22 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User selects address and does not enter venue name then clicks continue", null, new string[] {
                         "CI"});
-#line 46
+#line 282
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 47
+#line 283
  testRunner.When("I enter the following postcode b13 9da", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
+#line 284
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 285
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 286
  testRunner.When("I select the address 120 Sandford Road Birmingham", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 287
  testRunner.And("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 288
  testRunner.Then("Venue Name validation message is displayed enter venue name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -233,24 +1025,24 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User selects address and enters space in venue name then clicks continue", null, new string[] {
                         "CI"});
-#line 55
+#line 291
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 56
+#line 292
  testRunner.When("I enter the following postcode b13 9da", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
+#line 293
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
+#line 294
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 59
+#line 295
  testRunner.When("I select the address 120 Sandford Road Birmingham", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
+#line 296
  testRunner.And("I enter venue name space", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
+#line 297
  testRunner.And("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 62
+#line 298
  testRunner.Then("Venue Name validation message is displayed enter venue name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -263,24 +1055,24 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User selects address and enter invalid venue name then clicks continue", null, new string[] {
                         "CI"});
-#line 65
+#line 301
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 66
+#line 302
  testRunner.When("I enter the following postcode b13 9da", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 303
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 304
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
+#line 305
  testRunner.When("I select the address 120 Sandford Road Birmingham", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
+#line 306
  testRunner.And(@"I enter venue name ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
+#line 307
  testRunner.And("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
+#line 308
  testRunner.Then("Venue Name validation message is displayed enter venue name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -293,24 +1085,24 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User selects address and enters valid venue name then clicks continue", null, new string[] {
                         "CI"});
-#line 75
+#line 311
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 76
+#line 312
  testRunner.When("I enter the following postcode b13 9da", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
+#line 313
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 78
+#line 314
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 79
- testRunner.When("I select the address 120 Sandford Road Birmingham", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
+#line 315
+ testRunner.When("I select the address 120 Sandford Road Birmingham, B13 9DA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 316
  testRunner.And("I enter venue name Test Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
+#line 317
  testRunner.And("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
+#line 318
  testRunner.Then("I am on the Add Venue Confirm details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -323,20 +1115,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User selects Change on add venue slect address page", null, new string[] {
                         "CI"});
-#line 85
+#line 321
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 86
+#line 322
  testRunner.When("I enter the following postcode b17 7en", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
+#line 323
  testRunner.And("I click Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 324
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 89
+#line 325
  testRunner.When("I Click Change", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 326
  testRunner.Then("I am on the Add Venue page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
