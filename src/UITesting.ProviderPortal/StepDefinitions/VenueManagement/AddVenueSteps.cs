@@ -71,6 +71,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Then(@"I am on the Select Address page")]
         public void ThenIAmOnTheSlectAddressPage()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
         }
 
@@ -144,6 +145,16 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         {
             AddVenueConfirmAddressPage addVenueConfirmAddressPage = new AddVenueConfirmAddressPage(webDriver);
         }
+
+
+        [When(@"On the Confirmation Page I click continue")]
+        public void WhenOnTheConfirmationPageIClickContinue()
+        {
+            AddVenueConfirmAddressPage addVenueConfirmAddressPage = new AddVenueConfirmAddressPage(webDriver);
+            addVenueConfirmAddressPage.ClickContinue();
+        }
+
+
 
     }
 }

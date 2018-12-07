@@ -9,8 +9,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     {
         private static String PAGE_TITLE = "Add venue";
         private By venueName = By.Id("name");
-        private By venuePostcode = By.Id("PostCode");
-        private By FindAddressButton = By.Id("postcode-search");
+        private By venuePostcode = By.Id("Postcode");
+        private By FindAddressButton = By.Id("PostcodeLookupFindAddress");
         private By PostcodeValidationMessage = By.Id("validation-msg");
 
         public AddVenuePage(IWebDriver webDriver) : base(webDriver)

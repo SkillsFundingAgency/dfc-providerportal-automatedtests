@@ -15,6 +15,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private static String VENUE_DATA = "//*[@id='live']/div[1]/label";
         private static String ARCH_TAB= "//*[@id='tab_archived']";
         private static String ADD_VENUE_BUTTON = "//*[@id='venueSearchResultForm']/div/div/div/div[2]/button";
+        private By venueBanner = By.Id("venue-banner");
         Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
         
         public ViewAllLiveVenuesPage(IWebDriver webDriver) : base(webDriver)
@@ -65,6 +66,12 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         {
             webDriver.FindElement(By.XPath(ARCH_TAB)).Click();
         }
+
+        internal void VenueAddedBanner()
+        {
+            PageInteractionHelper.IsElementDisplayed(venueBanner);
+        }
+
         /* protected override bool SelfVerify()
          {
             //return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
