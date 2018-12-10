@@ -60,7 +60,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         }
 
         [Then(@"System displays banner message")]
-        public void ThenSystemDisplaysBannerMessage()
+        public void DisplaysBannerMessageVenueAdded()
         {
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             viewAllLiveVenuesPage.VenueAddedBanner();
