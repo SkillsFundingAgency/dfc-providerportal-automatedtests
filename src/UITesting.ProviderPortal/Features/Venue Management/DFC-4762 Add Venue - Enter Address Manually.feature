@@ -5,7 +5,7 @@
 
 Background:
 	Given I have logged as a provider
-	And I want to add a new venue
+	And I have navigated to Your Venues page
 	When I have select Add Venue
 	And on the Add Venue page I want to enter address manually
 	And the Add Venue page displays the fields to enter address
