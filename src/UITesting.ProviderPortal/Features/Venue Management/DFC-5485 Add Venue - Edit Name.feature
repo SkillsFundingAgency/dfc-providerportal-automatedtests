@@ -1,7 +1,7 @@
-﻿Feature: DFC-5486 Add Venue - Edit Venue Address
-	In order to alter a provisionally entered address 
+﻿Feature: DFC-5485 Add Venue - Edit Venue Name
+	In order to alter a provisionally entered Venue Name 
 	As a provider user when Adding a Venue
-	I want to be able to edit Venue Address
+	I want to be able to edit Venue Name
 
 #all tests start at Add Venue address screen 
 Background:
@@ -12,50 +12,30 @@ Background:
 	And the page displays the expected content
 
 @CI
-Scenario: Change address manually during Add Venue
+Scenario: Change name manually during Add Venue
 	Given I have entered a venue name and address
 	And I am on the venue name and address screen
-	When I press edit address
-	Then I am taken to the change address screen
-	And I can change the address manually
-	And my new address is shown on the venue name and address screen
+	When I press edit venue name
+	Then I am taken to the change venue name screen
+	And I can change the venue name manually
+	And my new venue name is shown on name screen
 #-- reuse steps to confirm and check new venue
 
 
 @CI
-Scenario: Change address using postcode during Add Venue
+Scenario: User backs-out of change
 	Given I have entered a venue name and address
 	And I am on the venue name and address screen
 	When I press edit address
 	Then I am taken to the change address screen
-#--look into using postcode look-up steps
-	And my new address is shown on the venue name and address screen
-#-- reuse steps to confirm and check new venue
-
-@CI
-Scenario: Back out of address change during Add Venue
-	Given I have entered a venue name and address
-	And I am on the venue name and address screen
-	When I press edit address
-	Then I am taken to the change address screen
-	And I can change the address manually
+	And I can change the venue name manually
 	And I click on cancel
-	Then original address is shown on the venue name and address screen
+	Then original venue name is shown on the venue name and address screen
 #-- reuse steps to confirm and check new venue
 
 
 @CI
-Scenario: Amended address can not be blank
-	Given I have entered a venue name and address
-	And I am on the venue name and address screen
-	When I press edit address
-	Then I am taken to the change address screen
-	And I can change the venue name to blank and click commit
-	Then I am shown a message <message-text>
-
-
-@CI
-Scenario: Amended address can not have blank postcode
+Scenario: Amended venue name can not be blank
 	Given I have entered a venue name and address
 	And I am on the venue name and address screen
 	When I press edit address
@@ -64,10 +44,29 @@ Scenario: Amended address can not have blank postcode
 	Then I am shown a message <message-text>
 
 	@CI
-Scenario: Amended address can not have blank line 1
+Scenario: Amended venue name exceeds maximum name length
 	Given I have entered a venue name and address
 	And I am on the venue name and address screen
 	When I press edit address
 	Then I am taken to the change address screen
-	And I can change the venue name to blank and click commit
+	And I can change the venue name to <excede-255-chrs> and click commit
+	Then I am shown a message <message-text>
+
+#editing...
+		@CI
+Scenario: Amended venue name contains leading space
+	Given I have entered a venue name and address
+	And I am on the venue name and address screen
+	When I press edit address
+	Then I am taken to the change address screen
+	And I can change the venue name to <excede-255-chrs> and click commit
+	Then I am shown a message <message-text>
+
+	@CI
+Scenario: Amended venue name contains non-standard chars
+	Given I have entered a venue name and address
+	And I am on the venue name and address screen
+	When I press edit address
+	Then I am taken to the change address screen
+	And I can change the venue name to <excede-255-chrs> and click commit
 	Then I am shown a message <message-text>
