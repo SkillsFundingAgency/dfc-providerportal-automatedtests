@@ -213,7 +213,7 @@ namespace UITesting.Framework.Helpers
         }
         public static void TurnOnSleep()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(10000);
         }
     }
 }

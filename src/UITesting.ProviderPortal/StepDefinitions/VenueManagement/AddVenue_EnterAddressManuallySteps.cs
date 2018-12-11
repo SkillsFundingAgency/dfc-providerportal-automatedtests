@@ -6,132 +6,139 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
     [Binding]
     public class AddVenue_EnterAddressManuallySteps : TestSupport.BaseTest
     {
-        Pages.Venue_Management.AddVenue_EnterAddressManually EnterAddressManually = new Pages.Venue_Management.AddVenue_EnterAddressManually(webDriver);
+        Pages.Venue_Management.AddVenue_EnterAddressManuallyPage EnterAddressManually = new Pages.Venue_Management.AddVenue_EnterAddressManuallyPage(webDriver);
+        Pages.Venue_Management.AddVenuePage AddVenuePage = new Pages.Venue_Management.AddVenuePage(webDriver);
+        Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
+        Pages.Venue_Management.ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new Pages.Venue_Management.ViewAllLiveVenuesPage(webDriver);
+        Pages.Venue_Management.AddVenueManualAddressPage AddVenueManualAddressPage = new Pages.Venue_Management.AddVenueManualAddressPage(webDriver);
         [Given(@"I have logged as a provider")]
         public void GivenIHaveLoggedAsAProvider()
         {
-            //webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();
         }
         
-        [Given(@"I want to add a new venue")]
-        public void GivenIWantToAddANewVenue()
+        [Given(@"I have navigated to Your Venues page")]
+        public void GivenIHaveNavigatedToYourVenuesPage()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();            
+            ViewAllLiVeVenuesPage.SearchProvider(VenueData.UKPRNNo);
+            
         }
         
         [When(@"I have select Add Venue")]
         public void WhenIHaveSelectAddVenue()
         {
-            Pages.Venue_Management.ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new Pages.Venue_Management.ViewAllLiveVenuesPage(webDriver);
             ViewAllLiVeVenuesPage.ClickAddVenueButton();
         }
         
         [When(@"on the Add Venue page I want to enter address manually")]
         public void WhenOnTheAddVenuePageIWantToEnterAddressManually()
         {
-            EnterAddressManually.ClickEnterAddressManually();
+            AddVenuePage.ClickEnterAddressManuallyLink();
+           
         }
         
         [When(@"the Add Venue page displays the fields to enter address")]
         public void WhenTheAddVenuePageDisplaysTheFieldsToEnterAddress()
         {
-            Pages.Venue_Management.AddVenuePage AddVenuePage = new  Pages.Venue_Management.AddVenuePage(webDriver);
+            AddVenueManualAddressPage.ValidateFields();
         }
         
         [When(@"I enter Valid Venue Name")]
         public void WhenIEnterValidVenueName()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddVenueName(VenueData.VenueName);
         }
         
         [When(@"I enter valid Address Line(.*)")]
         public void WhenIEnterValidAddressLine(int p0)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddAddressLine1(VenueData.AddressLine1);
         }
         
         [When(@"I enter Town or City")]
         public void WhenIEnterTownOrCity()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddTownCity(VenueData.TownCity);
         }
         
         [When(@"I Enter a Valid postcode")]
         public void WhenIEnterAValidPostcode()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddPostCode(VenueData.PostCode);
         }
         
         [When(@"I Click Continue")]
         public void WhenIClickContinue()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.ClickContinue();
         }
         
         [When(@"I do not enter Venue Name")]
         public void WhenIDoNotEnterVenueName()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddVenueName("");
         }
         
         [When(@"I leave Address Line (.*) as blank")]
         public void WhenILeaveAddressLineAsBlank(int p0)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddAddressLine1("");
+
         }
         
         [When(@"I leave Town or City as blank")]
         public void WhenILeaveTownOrCityAsBlank()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddTownCity("");
         }
         
         [When(@"I leave PostCode as blank")]
         public void WhenILeavePostCodeAsBlank()
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddPostCode("");
+
         }
         
         [When(@"I enter the following PostCode ""(.*)""")]
-        public void WhenIEnterTheFollowingPostCode(string p0)
+        public void WhenIEnterTheFollowingPostCode(string postcode)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddPostCode(postcode);
         }
         
         [Then(@"Add Venue screen with the entered details should be displayed")]
         public void ThenAddVenueScreenWithTheEnteredDetailsShouldBeDisplayed()
         {
-            ScenarioContext.Current.Pending();
+            
         }
         
         [Then(@"a venue name validation message should be displayed ""(.*)""")]
-        public void ThenAVenueNameValidationMessageShouldBeDisplayed(string p0)
+        public void ThenAVenueNameValidationMessageShouldBeDisplayed(string validationMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.VenueNameValidationMessage(validationMsg);
         }
         
         [Then(@"a Address Line validation message should be displayed ""(.*)""")]
-        public void ThenAAddressLineValidationMessageShouldBeDisplayed(string p0)
+        public void ThenAAddressLineValidationMessageShouldBeDisplayed(string validationMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.AddressLineValidationMessage(validationMsg);
         }
         
         [Then(@"a Town or City validation message should be displayed ""(.*)""")]
-        public void ThenATownOrCityValidationMessageShouldBeDisplayed(string p0)
+        public void ThenATownOrCityValidationMessageShouldBeDisplayed(string validationMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.TownOrCityValidationMessage(validationMsg);
         }
         
         [Then(@"a postcode validation message should be displayed ""(.*)""")]
-        public void ThenAPostcodeValidationMessageShouldBeDisplayed(string p0)
+        public void ThenAPostcodeValidationMessageShouldBeDisplayed(string validationMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.PostcodeValidationMessage(validationMsg);
         }
         
         [Then(@"a valid postcode validation message should be displayed ""(.*)""")]
-        public void ThenAValidPostcodeValidationMessageShouldBeDisplayed(string p0)
+        public void ThenAValidPostcodeValidationMessageShouldBeDisplayed(string validationMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddVenueManualAddressPage.PostcodeValidationMessage(validationMsg);
         }
     }
 }
