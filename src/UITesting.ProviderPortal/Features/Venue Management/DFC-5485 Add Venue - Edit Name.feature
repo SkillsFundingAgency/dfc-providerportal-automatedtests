@@ -5,11 +5,20 @@
 
 #all tests start at Add Venue address screen 
 Background:
-	Given I have logged into course directory as a provider
-	And I have navigated to the Your Venues Pages
-	When I click Add Venue
-	Then I am on the Add Venue page
-	And the page displays the expected content
+#	Given I have logged into course directory as a provider
+#	And I have navigated to the Your Venues Pages
+#	When I click Add Venue
+#	Then I am on the Add Venue page
+#	And the page displays the expected content
+Given I am on the edit venue name page
+
+@standalone
+Scenario: Change name manually from Edit Venue Screen
+	Given I have entered a venue name
+	When I press commit venue name
+	Then I am taken to the next page stub
+
+
 
 @CI
 Scenario: Change name manually during Add Venue
