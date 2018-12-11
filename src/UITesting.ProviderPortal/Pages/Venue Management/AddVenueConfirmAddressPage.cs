@@ -21,7 +21,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         private By changeNameLink = By.XPath(".//*[@id='content']/div[2]/div/table/tbody/tr[1]/td[2]/a");
         private By changeAddressLink = By.XPath(".//*[@id='content']/div[2]/div/table/tbody/tr[2]/td[2]/a");
-        private By continueButton = By.Id("continue"); 
+        private By continueButton = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/div/button"); 
 
 
         public AddVenueConfirmAddressPage ChangeName()
@@ -37,10 +37,10 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         }
 
 
-        public AddVenueConfirmAddressPage ClickContinue()
+        public ViewAllLiveVenuesPage ClickContinue()
         {
             FormCompletionHelper.ClickElement(continueButton);
-            return new AddVenueConfirmAddressPage(webDriver);
+            return new ViewAllLiveVenuesPage(webDriver);
         }
 
 
