@@ -21,24 +21,24 @@ Scenario: User enters all valid details
 Scenario: User does not enter Venue Name
 	When I do not enter Venue Name
 	And I Click Continue 
-	Then a venue name validation message should be displayed "Venue Name is required"
+	Then a venue name validation message should be displayed "Enter a venue name"
 @CI
 Scenario: User does not enter Address Line 1
 	When I leave Address Line 1 as blank
 	And I Click Continue 
-	Then a Address Line validation message should be displayed "Address Line 1 is required"
+	Then a Address Line validation message should be displayed "Enter a building and street"
 @CI
 Scenario: User does not enter Town or City
-	When I leave Town or City as blank
+	When I leave Town or City as blank 
 	And I Click Continue 
-	Then a Town or City validation message should be displayed "Town or City is required"
+	Then a Town or City validation message should be displayed "Enter a town or city"
 @CI
 Scenario: User does not enter PostCode
 	When I leave PostCode as blank
 	And I Click Continue 
-	Then a postcode validation message should be displayed "PostCode is required"
+	Then a postcode validation message should be displayed "Enter a postcode"
 @CI
 Scenario: User does not enter Valid PostCode
 	When I enter the following PostCode "xxxxxx"
 	And I Click Continue 
-	Then a valid postcode validation message should be displayed "PostCode is not valid"
+	Then a valid postcode validation message should be displayed "Postcode must be a valid format and only include letters a to z, numbers and spaces"

@@ -25,24 +25,10 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         internal void  ClickEnterAddressManually()
         {
-            Pages.Venue_Management.AddVenuePage AddVenuePage = new Pages.Venue_Management.AddVenuePage(webDriver);
+            Pages.Venue_Management.AddVenueManualAddressPage  AddManualAddressVenuePage = new Pages.Venue_Management.AddVenueManualAddressPage(webDriver);
             
         }
-       /* public AddVenue_EnterAddressManuallyPage AddVenueName(string VenueName)
-        {
-            FormCompletionHelper.EnterText(venueNameText, VenueName);
-            return new AddVenue_EnterAddressManuallyPage(webDriver);
-        }
-        public AddVenue_EnterAddressManuallyPage AddAddressLine1(string AddressLine1)
-        {
-            FormCompletionHelper.EnterText(addressLine1Text, AddressLine1);
-            return new AddVenue_EnterAddressManuallyPage(webDriver);
-        }
-        public AddVenue_EnterAddressManuallyPage AddTownCity(string TownCity)
-        {
-            FormCompletionHelper.EnterText(towncityText, TownCity);
-            return new AddVenue_EnterAddressManuallyPage(webDriver);
-        }*/
+       
         internal void ClickContinue()
         {
             webDriver.FindElement(clickContinueButton).Click();

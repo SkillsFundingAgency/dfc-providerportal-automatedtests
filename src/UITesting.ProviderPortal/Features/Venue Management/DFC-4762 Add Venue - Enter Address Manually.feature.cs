@@ -131,7 +131,7 @@ this.FeatureBackground();
 #line 23
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
- testRunner.Then("a venue name validation message should be displayed \"Venue Name is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a venue name validation message should be displayed \"Enter a venue name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -153,8 +153,8 @@ this.FeatureBackground();
 #line 28
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
- testRunner.Then("a Address Line validation message should be displayed \"Address Line 1 is required" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a Address Line validation message should be displayed \"Enter a building and stree" +
+                    "t\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -176,7 +176,7 @@ this.FeatureBackground();
 #line 33
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
- testRunner.Then("a Town or City validation message should be displayed \"Town or City is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a Town or City validation message should be displayed \"Enter a town or city\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -198,7 +198,7 @@ this.FeatureBackground();
 #line 38
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
- testRunner.Then("a postcode validation message should be displayed \"PostCode is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a postcode validation message should be displayed \"Enter a postcode\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -220,7 +220,8 @@ this.FeatureBackground();
 #line 43
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 44
- testRunner.Then("a valid postcode validation message should be displayed \"PostCode is not valid\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a valid postcode validation message should be displayed \"Postcode must be a valid" +
+                    " format and only include letters a to z, numbers and spaces\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

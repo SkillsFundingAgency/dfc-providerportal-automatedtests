@@ -12,10 +12,13 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By venuePostcode = By.Id("Postcode");
         private By FindAddressButton = By.Id("PostcodeLookupFindAddress");
         private By PostcodeValidationMessage = By.CssSelector("#Postcode-error");
+        private By ClickEnterAddressManually = By.XPath("//a[@href='/Venues/AddVenueManualAddress']");
+
+
 
         public AddVenuePage(IWebDriver webDriver) : base(webDriver)
         {
-            SelfVerify();
+            //SelfVerify();
         }
 
         protected override bool SelfVerify()
@@ -47,5 +50,10 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             PageInteractionHelper.VerifyText(PostcodeValidationMessage, validationMsg);
             return new AddVenuePage(webDriver);
         }
+        internal void ClickEnterAddressManuallyLink()
+        {
+            FormCompletionHelper.ClickElement(ClickEnterAddressManually);
+        }
+
     }
 }
