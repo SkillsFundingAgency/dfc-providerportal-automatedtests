@@ -35,6 +35,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Then(@"I am on the Add Venue page")]
         public void ThenIAmOnTheAddVenuePage()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             AddVenuePage addVenuePage = new AddVenuePage(webDriver);
         }
 

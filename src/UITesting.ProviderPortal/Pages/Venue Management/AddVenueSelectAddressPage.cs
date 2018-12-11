@@ -37,10 +37,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenueSelectAddressPage selectAddress(string address)
         {
-            IList<IWebElement> all = webDriver.FindElements(addressList);
-            PageInteractionHelper.IsElementPresent(addressList);
-            System.Console.WriteLine(addressList);
-            FormCompletionHelper.SelectFromDropDownList(all, address, addressList);
+            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(By.XPath(".//*[@id='PostcodeLookupContainer']/div/div[2]/select")),address);
             return new AddVenueSelectAddressPage(webDriver);
         }
 

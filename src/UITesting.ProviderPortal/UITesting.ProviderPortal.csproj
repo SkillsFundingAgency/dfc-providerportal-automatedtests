@@ -92,24 +92,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5463 Add Venue - Confirm Details.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Venue Management\DFC5624 Add Venue - Commit Add Venue Record.feature.cs">
+    <Compile Include="Features\Venue Management\DFC-5624 Add Venue - Commit Add Venue Record.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC5624 Add Venue - Commit Add Venue Record.feature</DependentUpon>
+      <DependentUpon>DFC-5624 Add Venue - Commit Add Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
-    <Compile Include="Pages\Venue Management\EditVenueNamePage..cs" />
     <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManually.cs" />
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
-    <Compile Include="StepDefinitions\VenueManagement\EditVenueNameSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
     <Compile Include="StepDefinitions\ViewLiveVenuesSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenueSteps.cs" />
     <Compile Include="Test Support\BasePage.cs" />
@@ -199,9 +199,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5463 Add Venue - Confirm Details.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Venue Management\DFC5624 Add Venue - Commit Add Venue Record.feature">
+    <None Include="Features\Venue Management\DFC-5624 Add Venue - Commit Add Venue Record.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC5624 Add Venue - Commit Add Venue Record.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-5624 Add Venue - Commit Add Venue Record.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

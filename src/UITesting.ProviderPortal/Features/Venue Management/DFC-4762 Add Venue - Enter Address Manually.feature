@@ -3,22 +3,42 @@
 	As a provider user when Adding a Venue
 	I want to add manually without using postcode look-up
 
-
-#all tests start at Add Venue address screen 
-
 Background:
-	Given I have logged into course directory as a provider
-	And I have navigated to the Your Venues Pages
-	When I click Add Venue
-	Then I am on the Add Venue page
-	And the page displays the expected content
-
+	Given I have logged as a provider
+	And I want to add a new venue
+	When I have select Add Venue
+	And on the Add Venue page I want to enter address manually
+	And the Add Venue page displays the fields to enter address
 @CI
-Scenario: Add an Address without using postcode look-up
-	Given I am on the address screen
-	And I have chosen to enter address manually
-	When I manually enter address without using postcode matching
-	Then my new address is shown on address screen
-	#-- reuse steps to confirm and check new venue
-
-
+Scenario: User enters all valid details
+	When I enter Valid Venue Name 
+	And I enter valid Address Line1
+	And I enter Town or City
+	And I Enter a Valid postcode
+	And I Click Continue 
+	Then Add Venue screen with the entered details should be displayed
+@CI
+Scenario: User does not enter Venue Name
+	When I do not enter Venue Name
+	And I Click Continue 
+	Then a venue name validation message should be displayed "Venue Name is required"
+@CI
+Scenario: User does not enter Address Line 1
+	When I leave Address Line 1 as blank
+	And I Click Continue 
+	Then a Address Line validation message should be displayed "Address Line 1 is required"
+@CI
+Scenario: User does not enter Town or City
+	When I leave Town or City as blank
+	And I Click Continue 
+	Then a Town or City validation message should be displayed "Town or City is required"
+@CI
+Scenario: User does not enter PostCode
+	When I leave PostCode as blank
+	And I Click Continue 
+	Then a postcode validation message should be displayed "PostCode is required"
+@CI
+Scenario: User does not enter Valid PostCode
+	When I enter the following PostCode "xxxxxx"
+	And I Click Continue 
+	Then a valid postcode validation message should be displayed "PostCode is not valid"

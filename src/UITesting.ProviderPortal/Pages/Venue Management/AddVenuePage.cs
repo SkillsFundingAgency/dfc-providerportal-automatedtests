@@ -11,7 +11,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By venueName = By.Id("name");
         private By venuePostcode = By.Id("Postcode");
         private By FindAddressButton = By.Id("PostcodeLookupFindAddress");
-        private By PostcodeValidationMessage = By.Id("validation-msg");
+        private By PostcodeValidationMessage = By.CssSelector("#Postcode-error");
 
         public AddVenuePage(IWebDriver webDriver) : base(webDriver)
         {
