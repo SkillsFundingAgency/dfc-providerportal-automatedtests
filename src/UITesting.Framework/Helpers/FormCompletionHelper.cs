@@ -147,5 +147,12 @@ namespace UITesting.Framework.Helpers
             if (radioToSelect != null)
                 ClickElement(radioToSelect);
         }
+
+        public static void ClearContents(By locator)
+        {
+            IWebElement element = webDriver.FindElement(locator);
+            element.Clear();
+        }
+
     }
 }

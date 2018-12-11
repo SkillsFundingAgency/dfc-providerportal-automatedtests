@@ -17,6 +17,9 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private static String ADD_VENUE_BUTTON = "//*[@id='venueSearchResultForm']/div/div/div/div[2]/button";
         private By venueBanner = By.XPath(".//*[@id='qual']");
         private By firstRecord = By.XPath(".//*[@id='live']/div[1]/label");
+        private By prnText = By.Id("UKPrn");
+        private By searchButton = By.Id("search");
+
         Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
         
         public ViewAllLiveVenuesPage(IWebDriver webDriver) : base(webDriver)
@@ -31,8 +34,9 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         internal void SearchProvider(string UKPRNNO)
         {
-            webDriver.FindElement(By.Id("UKPrn")).SendKeys(UKPRNNO.ToString());
-            webDriver.FindElement(By.Id("search")).Click();
+            webDriver.FindElement(prnText).SendKeys(UKPRNNO.ToString());
+            webDriver.FindElement(searchButton).Click();
+            PageInteractionHelper.TurnOnSleep();
             PageInteractionHelper.VerifyPageTitle(webDriver.FindElement(By.XPath(PAGE_TITLE_ELEMENT)).Text, PAGE_TITLE);
         }
         internal void CheckEditLink()
@@ -48,7 +52,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         {
             PageInteractionHelper.VerifyText(webDriver.FindElement(By.XPath(VENUE_DATA)).Text, VenueData.VenueName);
             PageInteractionHelper.VerifyText(webDriver.FindElement(By.XPath(VENUE_DATA)).Text, VenueData.AddressLine1);
-            PageInteractionHelper.VerifyText(webDriver.FindElement(By.XPath(VENUE_DATA)).Text, VenueData.City);
+            PageInteractionHelper.VerifyText(webDriver.FindElement(By.XPath(VENUE_DATA)).Text, VenueData.TownCity);
             PageInteractionHelper.VerifyText(webDriver.FindElement(By.XPath(VENUE_DATA)).Text, VenueData.PostCode);
         }
 
