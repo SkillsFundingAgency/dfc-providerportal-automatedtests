@@ -18,20 +18,20 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DFC5624 Add Venue - Commit Add Venue Record")]
-    public partial class DFC5624AddVenue_CommitAddVenueRecordFeature
+    [NUnit.Framework.DescriptionAttribute("DFC-5624 Add Venue - Commit Add Venue Record")]
+    public partial class DFC_5624AddVenue_CommitAddVenueRecordFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "DFC5624 Add Venue - Commit Add Venue Record.feature"
+#line 1 "DFC-5624 Add Venue - Commit Add Venue Record.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC5624 Add Venue - Commit Add Venue Record", "As a user\r\nI need to commit the add venue record\r\nso that the new venue record is" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-5624 Add Venue - Commit Add Venue Record", "As a user\r\nI need to commit the add venue record\r\nso that the new venue record is" +
                     " committed to the CD database", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
