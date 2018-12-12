@@ -156,6 +156,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         }
 
 
+        [When(@"I enter (.*) and click search")]
+        public void WhenIEnterAndClickSearch(string ukprn)
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            viewAllLiveVenuesPage.SearchProvider(ukprn);
+        }
 
     }
 }

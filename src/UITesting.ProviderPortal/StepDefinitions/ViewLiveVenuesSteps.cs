@@ -53,11 +53,11 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
         }
 
-        [Then(@"System displays new Venue added")]
-        public void ThenSystemDisplaysNewVenueAdded()
+        [Then(@"System displays new Venue added (.*)")]
+        public void ThenSystemDisplaysNewVenueAdded(string venueName)
         {
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
-            viewAllLiveVenuesPage.ValidateVenue();
+            viewAllLiveVenuesPage.VenueAdded(venueName);
         }
 
         [Then(@"System displays banner message")]

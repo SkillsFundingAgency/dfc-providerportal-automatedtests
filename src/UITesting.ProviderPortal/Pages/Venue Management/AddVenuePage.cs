@@ -7,10 +7,11 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenuePage : BasePage
     {
-        private static String PAGE_TITLE = "Add venue";
+        private static String PAGE_TITLE = "Add a venue";
         private By venueName = By.Id("name");
+        private By UKPRN = By.Id("UKPrn");
         private By venuePostcode = By.Id("Postcode");
-        private By FindAddressButton = By.Id("PostcodeLookupFindAddress");
+        private By FindAddressButton = By.XPath(".//*[@id='main-content']/div/div/form/div[2]/div/div[2]/button");
         private By PostcodeValidationMessage = By.CssSelector("#Postcode-error");
         private By ClickEnterAddressManually = By.XPath("//a[@href='/Venues/AddVenueManualAddress']");
 
