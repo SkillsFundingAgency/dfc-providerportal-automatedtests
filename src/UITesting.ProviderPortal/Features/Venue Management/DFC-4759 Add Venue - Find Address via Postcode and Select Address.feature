@@ -7,6 +7,7 @@ so that I can use the address to create a new venue in the course directory
 Background:
 	Given I have logged into course directory as a provider
 	And I have navigated to the Your Venues Pages
+	When I enter 10028015 and click search
 	When I click Add Venue
 	Then I am on the Add Venue page
 	And the Add Venue page displays the expected content
@@ -14,7 +15,7 @@ Background:
 @CI
 Scenario: User Does Not enter postcode to Find Address
 	When I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Enter a postcode
 
 # START OF INVALID POSTCODES
 
@@ -22,7 +23,7 @@ Scenario: User Does Not enter postcode to Find Address
 Scenario: User enters invalid postcode to Find Address 
 	When I enter the following postcode hello
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 # The letters Q, V and X are not used in the first position
@@ -31,19 +32,19 @@ Scenario: User enters invalid postcode to Find Address
 Scenario: User enters invalid postcode to Find Address QA14 7EN
 	When I enter the following postcode QA14 7EN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address VA14 7EN
 	When I enter the following postcode VA14 7EN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address XA14 7EN
 	When I enter the following postcode XA14 7EN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 # The letters I, J and Z are not used in the second position.
@@ -52,19 +53,19 @@ Scenario: User enters invalid postcode to Find Address XA14 7EN
 Scenario: User enters invalid postcode to Find Address BI14 7EN
 	When I enter the following postcode BI14 7EN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address BJ14 7EN
 	When I enter the following postcode BJ14 7EN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address BZ14 7EN
 	When I enter the following postcode BZ14 7EN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 # The only letters to appear in the third position are A, B, C, D, E, F, G, H, J, K, S, T, U and W.
@@ -73,67 +74,67 @@ Scenario: User enters invalid postcode to Find Address BZ14 7EN
 Scenario: User enters invalid postcode to Find Address EC1I 1BB
 	When I enter the following postcode EC1I 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1L 1BB
 	When I enter the following postcode EC1L 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1M 1BB
 	When I enter the following postcode EC1M 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1N 1BB
 	When I enter the following postcode EC1N 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1O 1BB
 	When I enter the following postcode EC1O 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1P 1BB
 	When I enter the following postcode EC1P 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1Q 1BB
 	When I enter the following postcode EC1Q 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1R 1BB
 	When I enter the following postcode EC1R 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1V 1BB
 	When I enter the following postcode EC1V 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1X 1BB
 	When I enter the following postcode EC1X 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address EC1Y 1BB
 	When I enter the following postcode EC1Y 1BB
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 ###  The second half of the postcode is always consistent numeric, alpha, alpha format and the letters C, I, K, M, O and V are never used
@@ -142,89 +143,89 @@ Scenario: User enters invalid postcode to Find Address EC1Y 1BB
 Scenario: User enters invalid postcode to Find Address B14 7CN
 	When I enter the following postcode B14 7CN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7IN
 	When I enter the following postcode B14 7IN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7KN
 	When I enter the following postcode B14 7KN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7MN
-	When I enter the following postcode B14 7MN
+	When I enter the following postcode B14 7mN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7ON
 	When I enter the following postcode B14 7ON
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7VN
 	When I enter the following postcode B14 7VN
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7EC
 	When I enter the following postcode B14 7EC
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7EI
 	When I enter the following postcode B14 7EI
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7EK
 	When I enter the following postcode B14 7EK
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7EM
-	When I enter the following postcode B14 7EM
+	When I enter the following postcode B14 7em
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7EO
 	When I enter the following postcode B14 7EO
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 7EV
 	When I enter the following postcode B14 7EV
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 @CI
 Scenario: User enters invalid postcode to Find Address B14 E77
 	When I enter the following postcode B14 E77
 	And I click Find Address
-	Then Address validation message is displayed Enter a full and valid postcode
+	Then Address validation message is displayed Postcode must be a valid format and only include letters a to z, numbers and spaces
 
 
 # END OF INVALID  POSTCODE TESTS
 
 @CI
 Scenario: User enters valid not found postcode to Find Address
-	When I enter the following postcode b13 9cc
+	When I enter the following postcode b13 9zy
 	And I click Find Address
 	Then Address validation message is displayed Postcode is not found
 
@@ -278,7 +279,7 @@ Scenario: User clicks continue without selecting from list of addresses
 	And I click Find Address
 	Then I am on the Select Address page
 	When I click continue
-	Then Select Address validation message is displayed select address
+	Then Select Address validation message is displayed This field is required.
 
 @CI
 Scenario: User selects address and does not enter venue name then clicks continue
@@ -287,7 +288,7 @@ Scenario: User selects address and does not enter venue name then clicks continu
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I click continue
-	Then Venue Name validation message is displayed enter venue name
+	Then Venue Name validation message is displayed Enter a venue name
 
 @CI
 Scenario: User selects address and enters space in venue name then clicks continue
@@ -297,7 +298,7 @@ Scenario: User selects address and enters space in venue name then clicks contin
 	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I enter venue name space
 	And I click continue
-	Then Venue Name validation message is displayed enter venue name
+	Then Venue Name validation message is displayed Venue name must only include letters a to z, numbers, hyphens, spaces, full-stops, and or apostrophes
 
 @CI
 Scenario: User selects address and enter invalid venue name then clicks continue
@@ -307,7 +308,7 @@ Scenario: User selects address and enter invalid venue name then clicks continue
 	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I enter venue name ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 	And I click continue
-	Then Venue Name validation message is displayed enter venue name
+	Then Venue Name validation message is displayed Venue name must be 255 characters or less
 
 @CI
 Scenario: User selects address and enters valid venue name then clicks continue
