@@ -16,7 +16,7 @@ Background:
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I enter venue name Test Venue
-	And I click continue
+	And I click continue to confirm page
 
 
 @CI

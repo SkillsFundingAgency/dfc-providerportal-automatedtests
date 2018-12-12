@@ -1,14 +1,15 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.Pages.Venue_Management;
+using UITesting.ProviderPortal.Models.Venue_Management;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
 {
     [Binding]
     public class ViewLiveVenuesSteps : TestSupport.BaseTest 
     {
-        Pages.Venue_Management.ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new Pages.Venue_Management.ViewAllLiveVenuesPage(webDriver);
-        Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
+        ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        Venue_Data VenueData = new Venue_Data();
         [Given(@"I have accessed the Course Directory")]
         public void GivenIHaveAccessedTheCourseDirectory()
         {

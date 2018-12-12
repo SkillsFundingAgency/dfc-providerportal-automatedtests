@@ -26,7 +26,7 @@ Scenario: User does not enter Venue Name
 Scenario: User does not enter Address Line 1
 	When I leave Address Line 1 as blank
 	And I Click Continue 
-	Then a Address Line validation message should be displayed "Enter a building and street"
+	Then a Address Line validation message should be displayed "Enter a address line 1"
 @CI
 Scenario: User does not enter Town or City
 	When I leave Town or City as blank 

@@ -1,16 +1,19 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using UITesting.ProviderPortal.Pages.Venue_Management;
+using UITesting.ProviderPortal.Models.Venue_Management;
+
 
 namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
 {
     [Binding]
     public class AddVenue_EnterAddressManuallySteps : TestSupport.BaseTest
     {
-        Pages.Venue_Management.AddVenue_EnterAddressManuallyPage EnterAddressManually = new Pages.Venue_Management.AddVenue_EnterAddressManuallyPage(webDriver);
-        Pages.Venue_Management.AddVenuePage AddVenuePage = new Pages.Venue_Management.AddVenuePage(webDriver);
-        Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
-        Pages.Venue_Management.ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new Pages.Venue_Management.ViewAllLiveVenuesPage(webDriver);
-        Pages.Venue_Management.AddVenueManualAddressPage AddVenueManualAddressPage = new Pages.Venue_Management.AddVenueManualAddressPage(webDriver);
+        AddVenue_EnterAddressManuallyPage EnterAddressManually = new AddVenue_EnterAddressManuallyPage(webDriver);
+        AddVenuePage AddVenuePage = new AddVenuePage(webDriver);
+        Venue_Data VenueData = new Venue_Data();
+        ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
         [Given(@"I have logged as a provider")]
         public void GivenIHaveLoggedAsAProvider()
         {

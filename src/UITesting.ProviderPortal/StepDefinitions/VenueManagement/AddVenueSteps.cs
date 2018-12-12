@@ -85,6 +85,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         }
 
 
+        [When(@"I click continue to confirm page")]
+        public void WhenIClickContinueIClickContinueToConfirmPage()
+        {
+            AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
+            addVenueSelectAddressPage.ClickContinueConfirm();
+        }
+
+
         [Then(@"Select Address validation message is displayed (.*)")]
         public void SelectAddressValidationMessageIsDisplayed(string selectValidationMsg)
         {
