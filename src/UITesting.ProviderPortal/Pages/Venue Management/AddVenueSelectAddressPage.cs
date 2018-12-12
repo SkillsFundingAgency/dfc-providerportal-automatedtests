@@ -8,7 +8,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenueSelectAddressPage : BasePage
     {
-        private static String PAGE_TITLE = "Add a venue";
+        private static String PAGE_TITLE = "Add venue";
         private By venueName = By.Id("VenueName");
         private By addressSelector = By.Id("address-selector");
         private By clickChange = By.LinkText("Change");
@@ -48,11 +48,16 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return new AddVenueSelectAddressPage(webDriver);
         }
 
-
         public AddVenueSelectAddressPage ClickContinue()
         {
             FormCompletionHelper.ClickElement(continueButton);
             return new AddVenueSelectAddressPage(webDriver);
+        }
+
+        public AddVenueConfirmAddressPage ClickContinueConfirm()
+        {
+            FormCompletionHelper.ClickElement(continueButton);
+            return new AddVenueConfirmAddressPage(webDriver);
         }
 
         public AddVenueSelectAddressPage SelectAddressValidationMessage(string validationMsg)

@@ -19,15 +19,15 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        private By changeNameLink = By.XPath(".//*[@id='content']/div[2]/div/table/tbody/tr[1]/td[2]/a");
-        private By changeAddressLink = By.XPath(".//*[@id='content']/div[2]/div/table/tbody/tr[2]/td[2]/a");
+        private By changeNameLink = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/table/tbody/tr[1]/td[2]/button");  
+        private By changeAddressLink = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/table/tbody/tr[2]/td[2]/button");  
         private By continueButton = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/div/button"); 
 
 
-        public AddVenueConfirmAddressPage ChangeName()
+        public AddVenueEditNamePage ChangeName()
         {
             FormCompletionHelper.ClickElement(changeNameLink);
-            return new AddVenueConfirmAddressPage(webDriver);
+            return new AddVenueEditNamePage(webDriver);
         }
 
         public AddVenueConfirmAddressPage ChangeAddress()
