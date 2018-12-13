@@ -9,7 +9,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
     [Binding]
     public class AddVenue_EnterAddressManuallySteps : TestSupport.BaseTest
     {
-        AddVenue_EnterAddressManuallyPage EnterAddressManually = new AddVenue_EnterAddressManuallyPage(webDriver);
+        ///AddVenue_EnterAddressManuallyPage EnterAddressManually = new AddVenue_EnterAddressManuallyPage(webDriver);
         AddVenuePage AddVenuePage = new AddVenuePage(webDriver);
         Venue_Data VenueData = new Venue_Data();
         ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new ViewAllLiveVenuesPage(webDriver);

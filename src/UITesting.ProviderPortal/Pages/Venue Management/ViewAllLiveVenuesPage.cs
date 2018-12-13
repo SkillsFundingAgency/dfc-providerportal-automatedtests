@@ -24,7 +24,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         
         public ViewAllLiveVenuesPage(IWebDriver webDriver) : base(webDriver)
         {
-           // SelfVerify();
+           SelfVerify();
         }
 
         protected override bool SelfVerify()
