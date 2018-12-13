@@ -7,7 +7,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenuePage : BasePage
     {
-        private static String PAGE_TITLE = "Add a venue";
+        private static String PAGE_TITLE = "Add venue";
         private By venueName = By.Id("name");
         private By UKPRN = By.Id("UKPrn");
         private By venuePostcode = By.Id("Postcode");
