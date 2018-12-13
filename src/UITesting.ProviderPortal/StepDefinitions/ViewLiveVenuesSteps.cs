@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         [Given(@"I have accessed the Course Directory")]
         public void GivenIHaveAccessedTheCourseDirectory()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
         }
         
         [Given(@"I have searched for a PRN Number ""(.*)""")]

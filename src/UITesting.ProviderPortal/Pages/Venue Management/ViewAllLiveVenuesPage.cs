@@ -32,7 +32,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        internal void SearchProvider(string UKPRNNO)
+        public void SearchProvider(string UKPRNNO)
         {
             webDriver.FindElement(prnText).SendKeys(UKPRNNO.ToString());
             webDriver.FindElement(searchButton).Click();
@@ -56,12 +56,12 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             PageInteractionHelper.VerifyText(webDriver.FindElement(By.XPath(VENUE_DATA)).Text, VenueData.PostCode);
         }
 
-        internal void CheckAddVenueButton()
+        public void CheckAddVenueButton()
         {
             PageInteractionHelper.VerifyElementPresent(By.XPath(ADD_VENUE_BUTTON));
         }
 
-        internal ViewAllLiveVenuesPage ClickAddVenueButton()
+        public ViewAllLiveVenuesPage ClickAddVenueButton()
         {
             FormCompletionHelper.ClickElement(By.XPath(ADD_VENUE_BUTTON));
             return new ViewAllLiveVenuesPage(webDriver);

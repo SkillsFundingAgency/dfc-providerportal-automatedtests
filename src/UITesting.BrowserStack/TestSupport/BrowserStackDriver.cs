@@ -16,7 +16,7 @@ namespace UITesting.BrowserStack.TestSupport
 
     public class BrowserStackDriver
     {
-        private IWebDriver driver;
+        private IWebDriver webDriver;
         private Local browserStackLocal;
         private string profile;
         private string environment;
@@ -72,13 +72,13 @@ namespace UITesting.BrowserStack.TestSupport
             }
 
             // File.AppendAllText("C:\\Users\\Admin\\Desktop\\sf.log", "Starting driver");
-            driver = new RemoteWebDriver(new Uri("http://" + ConfigurationManager.AppSettings.Get("server") + "/wd/hub/"), capability);
-            return driver;
+            webDriver = new RemoteWebDriver(new Uri("http://" + ConfigurationManager.AppSettings.Get("server") + "/wd/hub/"), capability);
+            return webDriver;
         }
 
         public void Cleanup()
         {
-            driver.Quit();
+            webDriver.Quit();
             if (browserStackLocal != null)
             {
                 browserStackLocal.stop();

@@ -16,7 +16,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void GivenIAmOnTheEditVenueNamePage()
         {
             //Console.WriteLine("debug1");
-            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "/EditVenueName";
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues() + "/EditVenueName";
             AddVenueEditNamePage AddVenueEditNamePage = new AddVenueEditNamePage(webDriver);
             
         }

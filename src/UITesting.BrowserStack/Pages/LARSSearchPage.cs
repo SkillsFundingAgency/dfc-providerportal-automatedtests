@@ -7,7 +7,7 @@ namespace UITesting.BrowserStack.Pages
 {
     public class LARSSearchPage : BasePage
     {
-        private static String PAGE_TITLE = "Customised page template";
+        private static String PAGE_TITLE = "Provider Search";
 
         public LARSSearchPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -20,16 +20,24 @@ namespace UITesting.BrowserStack.Pages
         }
 
         //private By searchField = By.Name("LarsSearchTerm");
-        private readonly By location = By.Name("LarsSearchTerm");
-        private readonly By searchResults = By.XPath(".//*[@id='LarsSearchResultContainer']");
+        private readonly By UKPRN = By.Id("UKPrn");
+        private readonly By SearchBtn = By.Id("search");
+        private readonly By searchResults = By.Id("live");
 
-        internal LARSSearchPage EnterSearchTextAndSubmit(String searchText)
+        public LARSSearchPage EnterSearchTextAndSubmit(String searchText)
         {
-            FormCompletionHelper.EnterText(location, searchText);
+            FormCompletionHelper.EnterText(UKPRN, searchText);
             return new LARSSearchPage(webDriver);
         }
 
-        internal LARSSearchPage ConfirmLARSdisplayed(String searchText)
+
+        public LARSSearchPage Submit()
+        {
+            FormCompletionHelper.ClickElement(SearchBtn);
+            return new LARSSearchPage(webDriver);
+        }
+
+        public LARSSearchPage ConfirmLARSdisplayed()
         {
             PageInteractionHelper.IsElementDisplayed(searchResults);
             return new LARSSearchPage(webDriver);

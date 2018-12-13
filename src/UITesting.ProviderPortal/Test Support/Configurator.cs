@@ -32,7 +32,7 @@ namespace UITesting.ProviderPortal.TestSupport
             return browser;
         }
 
-        public String GetBaseUrl()
+        public String GetBaseUrlVenues()
         {
             return baseUrl;
         }
