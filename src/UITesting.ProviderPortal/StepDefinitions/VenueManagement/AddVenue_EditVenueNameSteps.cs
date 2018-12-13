@@ -55,8 +55,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [When(@"I press commit venue name")]
         public void WhenIPressCommitVenueName()
         {
+
             AddVenueEditNamePage addVenueEditNamePage = new AddVenueEditNamePage(webDriver);
             addVenueEditNamePage.ClickSubmit();
+
         }
         
         [When(@"I press edit venue name")]
