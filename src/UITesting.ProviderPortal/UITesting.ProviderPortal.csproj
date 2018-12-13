@@ -106,10 +106,11 @@
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueManualAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
-    <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManually.cs" />
+    <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManuallyPage.cs" />
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
