@@ -14,9 +14,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     {
         private static String PAGE_TITLE = "Edit Venue Name";
         private By venueName = By.Id("VenueName");
-        private By submitButton = By.Id("submit");
-
-
+        private By submitButton = By.XPath("//*[@id=\"edit-venue\"]/div/div/div[2]/button");
+        
         public AddVenueEditNamePage(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
@@ -26,12 +25,11 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         protected override bool SelfVerify()
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
-            //return true;
+            
         }
 
         public AddVenueEditNamePage ClearVenueName()
         {
-            Console.WriteLine("debug2");
             //FormCompletionHelper.ClearContents(venueName);
             return new AddVenueEditNamePage(webDriver);
         }
@@ -44,10 +42,10 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         }
 
 
-        public AddVenueEditNamePage ClickSubmit()
+        public AddVenuePage ClickSubmit()
         {
             FormCompletionHelper.ClickElement(submitButton);
-            return new AddVenueEditNamePage(webDriver);
+            return new AddVenuePage(webDriver);
         }
 
 

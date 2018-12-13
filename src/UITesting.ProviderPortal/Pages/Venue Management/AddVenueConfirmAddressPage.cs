@@ -20,7 +20,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         }
 
         private By changeNameLink = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/table/tbody/tr[1]/td[2]/button");  
-        private By changeAddressLink = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/table/tbody/tr[2]/td[2]/button");  
+        private By changeAddressLink = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/table/tbody/tr[2]/td[2]/button");
         private By continueButton = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/div/button"); 
 
 
@@ -44,5 +44,10 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         }
 
 
+        public AddVenueEditAddressPage EditAddress()
+        {
+            FormCompletionHelper.ClickElement(changeAddressLink);
+            return new AddVenueEditAddressPage(webDriver);
+        }
     }
 }

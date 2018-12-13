@@ -105,6 +105,7 @@
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueManualAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
@@ -166,6 +168,7 @@
     </None>
     <None Include="App.config">
       <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
     </None>
     <None Include="App.Debug.config">
       <DependentUpon>App.config</DependentUpon>
