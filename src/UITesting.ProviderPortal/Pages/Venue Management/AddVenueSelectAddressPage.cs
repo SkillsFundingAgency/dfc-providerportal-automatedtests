@@ -8,14 +8,15 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenueSelectAddressPage : BasePage
     {
-        private static String PAGE_TITLE = "Add a venue";
-        private By venueName = By.Id("name");
+        private static String PAGE_TITLE = "Add venue";
+        private By venueName = By.Id("VenueName");
         private By addressSelector = By.Id("address-selector");
         private By clickChange = By.LinkText("Change");
-        private By continueButton = By.XPath(".//*[@id='postCodeSearchResultForm']/div/div/div/div[3]/button");
-        private By AddressSelectionValidationMessage = By.Id("validation-msg");
-        private By AddressSelectionVenueValidationMessage = By.Id("venue-validation-msg");
-        private readonly By addressList = By.CssSelector("#address-list");
+        private By continueButton = By.Id("venueAddressConfirmationSelection");
+        private By AddressSelectionPCValidationMessage = By.Id("PostcodeId-error");
+        private By AddressSelectionVenueValidationMessage = By.Id("VenueName-error");
+        //private By addressList = By.CssSelector("#address-list");
+        private By addressList = By.XPath(".//*[@id='PostcodeLookupContainer']/div/div[2]/select");
 
         public AddVenueSelectAddressPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -30,14 +31,13 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenueSelectAddressPage EnterVenueName(String name)
         {
-            FormCompletionHelper.EnterText(venueName, name);
+            FormCompletionHelper.EnterTextWithoutClearing(venueName, name);
             return new AddVenueSelectAddressPage(webDriver);
         }
 
         public AddVenueSelectAddressPage selectAddress(string address)
         {
-            IList<IWebElement> all = webDriver.FindElements(addressList);
-            FormCompletionHelper.SelectFromDropDownList(all, address, addressList);
+            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(By.XPath(".//*[@id='PostcodeId']")),address);
             return new AddVenueSelectAddressPage(webDriver);
         }
 
@@ -48,17 +48,22 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return new AddVenueSelectAddressPage(webDriver);
         }
 
-
         public AddVenueSelectAddressPage ClickContinue()
         {
             FormCompletionHelper.ClickElement(continueButton);
             return new AddVenueSelectAddressPage(webDriver);
         }
 
+        public AddVenueConfirmAddressPage ClickContinueConfirm()
+        {
+            FormCompletionHelper.ClickElement(continueButton);
+            return new AddVenueConfirmAddressPage(webDriver);
+        }
+
         public AddVenueSelectAddressPage SelectAddressValidationMessage(string validationMsg)
         {
             PageInteractionHelper.WaitForPageToLoad();
-            PageInteractionHelper.VerifyText(AddressSelectionValidationMessage, validationMsg);
+            PageInteractionHelper.VerifyText(AddressSelectionPCValidationMessage, validationMsg);
             return new AddVenueSelectAddressPage(webDriver);
         }
 

@@ -1,17 +1,19 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using UITesting.ProviderPortal.Pages.Venue_Management;
+using UITesting.ProviderPortal.Models.Venue_Management;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
 {
     [Binding]
     public class ViewLiveVenuesSteps : TestSupport.BaseTest 
     {
-        Pages.Venue_Management.ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new Pages.Venue_Management.ViewAllLiveVenuesPage(webDriver);
-        Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
+        ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        Venue_Data VenueData = new Venue_Data();
         [Given(@"I have accessed the Course Directory")]
         public void GivenIHaveAccessedTheCourseDirectory()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
         }
         
         [Given(@"I have searched for a PRN Number ""(.*)""")]
@@ -44,5 +46,26 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         {
             ViewAllLiveVenuesPage.ViewArchivedVenues();
         }
+
+        [Then(@"I am on the View All Live Venues Page")]
+        public void ThenIAmOnTheViewAllLiveVenuesPage()
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        }
+
+        [Then(@"System displays new Venue added (.*)")]
+        public void ThenSystemDisplaysNewVenueAdded(string venueName)
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            viewAllLiveVenuesPage.VenueAdded(venueName);
+        }
+
+        [Then(@"System displays banner message")]
+        public void DisplaysBannerMessageVenueAdded()
+        {
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            viewAllLiveVenuesPage.VenueAddedBanner();
+        }
+
     }
 }

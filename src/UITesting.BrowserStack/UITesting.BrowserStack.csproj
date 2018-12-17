@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\AddVenue.feature.cs">
+      <DependentUpon>AddVenue.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Pages\LARSSearchPage.cs" />
+    <Compile Include="StepDefinitions\AddVenueSteps.cs" />
     <Compile Include="TestSupport\BasePage.cs" />
     <Compile Include="TestSupport\BaseTest.cs" />
     <Compile Include="Features\LARSSearch.feature.cs">
@@ -51,13 +57,17 @@
       <DependentUpon>LARSSearch.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\LARSSearchSteps.cs" />
+    <Compile Include="StepDefinitions\BrowserStackSteps.cs" />
     <Compile Include="TestSupport\BrowserStackDriver.cs" />
     <Compile Include="TestSupport\Configurator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\AddVenue.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddVenue.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\LARSSearch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

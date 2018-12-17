@@ -9,9 +9,13 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     {
         private static String PAGE_TITLE = "Add venue";
         private By venueName = By.Id("name");
-        private By venuePostcode = By.Id("PostCode");
-        private By FindAddressButton = By.Id("postcode-search");
-        private By PostcodeValidationMessage = By.Id("validation-msg");
+        private By UKPRN = By.Id("UKPrn");
+        private By venuePostcode = By.Id("Postcode");
+        private By FindAddressButton = By.XPath(".//*[@id='main-content']/div/div/form/div[2]/div/div[2]/button");
+        private By PostcodeValidationMessage = By.CssSelector("#Postcode-error");
+        private By ClickEnterAddressManually = By.XPath("//a[@href='/Venues/AddVenueManualAddress']");
+
+
 
         public AddVenuePage(IWebDriver webDriver) : base(webDriver)
         {
@@ -47,5 +51,10 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             PageInteractionHelper.VerifyText(PostcodeValidationMessage, validationMsg);
             return new AddVenuePage(webDriver);
         }
+        internal void ClickEnterAddressManuallyLink()
+        {
+            FormCompletionHelper.ClickElement(ClickEnterAddressManually);
+        }
+
     }
 }

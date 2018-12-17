@@ -18,21 +18,21 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DFC-5486 Add Venue - Edit Venue Address")]
-    public partial class DFC_5486AddVenue_EditVenueAddressFeature
+    [NUnit.Framework.DescriptionAttribute("DFC-5624 Add Venue - Commit Add Venue Record")]
+    public partial class DFC_5624AddVenue_CommitAddVenueRecordFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "DFC-5486 Add Venue - Edit Venue Address.feature"
+#line 1 "DFC-5624 Add Venue - Commit Add Venue Record.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-5486 Add Venue - Edit Venue Address", "\tIn order to alter a provisionally entered address \r\n\tAs a provider user when Add" +
-                    "ing a Venue\r\n\tI want to be able to edit Venue Address", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-5624 Add Venue - Commit Add Venue Record", "As a user\r\nI need to commit the add venue record\r\nso that the new venue record is" +
+                    " committed to the CD database", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -97,35 +97,31 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
  testRunner.And("I enter venue name Test Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
  testRunner.And("I click continue to confirm page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
- testRunner.Then("I am on the Add Venue Confirm details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Change address manually during Add Venue")]
+        [NUnit.Framework.DescriptionAttribute("User Confirms Details")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        [NUnit.Framework.TestCaseAttribute("CV23 9JR", null)]
-        public virtual void ChangeAddressManuallyDuringAddVenue(string postcode, string[] exampleTags)
+        public virtual void UserConfirmsDetails()
         {
-            string[] @__tags = new string[] {
-                    "CI"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change address manually during Add Venue", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Confirms Details", null, new string[] {
+                        "CI"});
 #line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
 #line 24
-testRunner.Given("I am on the edit venue address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("I am on the Add Venue Confirm details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
- testRunner.When(string.Format("Editing I enter the postcode {0}", postcode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("On the Confirmation Page I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
- testRunner.And("I click Find Address to change to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I am on the View All Live Venues Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 27
+ testRunner.And("System displays banner message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.And("System displays new Venue added Test Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

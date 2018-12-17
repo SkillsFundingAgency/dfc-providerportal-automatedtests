@@ -18,21 +18,21 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DFC-5486 Add Venue - Edit Venue Address")]
-    public partial class DFC_5486AddVenue_EditVenueAddressFeature
+    [NUnit.Framework.DescriptionAttribute("DFC-5485 Add Venue - Edit Venue Name")]
+    public partial class DFC_5485AddVenue_EditVenueNameFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "DFC-5486 Add Venue - Edit Venue Address.feature"
+#line 1 "DFC-5485 Add Venue - Edit Name.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-5486 Add Venue - Edit Venue Address", "\tIn order to alter a provisionally entered address \r\n\tAs a provider user when Add" +
-                    "ing a Venue\r\n\tI want to be able to edit Venue Address", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-5485 Add Venue - Edit Venue Name", "\tIn order to alter a provisionally entered Venue Name \r\n\tAs a provider user when " +
+                    "Adding a Venue\r\n\tI want to be able to edit Venue Name", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -103,29 +103,25 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Change address manually during Add Venue")]
+        [NUnit.Framework.DescriptionAttribute("Change name manually from Edit Venue Screen")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        [NUnit.Framework.TestCaseAttribute("CV23 9JR", null)]
-        public virtual void ChangeAddressManuallyDuringAddVenue(string postcode, string[] exampleTags)
+        public virtual void ChangeNameManuallyFromEditVenueScreen()
         {
-            string[] @__tags = new string[] {
-                    "CI"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change address manually during Add Venue", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change name manually from Edit Venue Screen", null, new string[] {
+                        "CI"});
 #line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
 #line 24
-testRunner.Given("I am on the edit venue address screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I am on the edit venue name page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
- testRunner.When(string.Format("Editing I enter the postcode {0}", postcode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have cleared the venue name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
- testRunner.And("I click Find Address to change to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have entered a venue name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.When("I press commit venue name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

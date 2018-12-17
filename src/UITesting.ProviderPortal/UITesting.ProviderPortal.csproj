@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5112 AddProviderSearchUKRLP.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4806 Search For Qualification.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Provider Management\DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +87,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4778-View All Live Venues.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC-5485 Add Venue - Edit Name.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-5485 Add Venue - Edit Name.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,17 +102,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5463 Add Venue - Confirm Details.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\DFC-5624 Add Venue - Commit Add Venue Record.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-5624 Add Venue - Commit Add Venue Record.feature</DependentUpon>
+    </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueManualAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManuallyPage.cs" />
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
     <Compile Include="StepDefinitions\ViewLiveVenuesSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenueSteps.cs" />
     <Compile Include="Test Support\BasePage.cs" />
@@ -151,6 +173,7 @@
     </None>
     <None Include="App.config">
       <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
     </None>
     <None Include="App.Debug.config">
       <DependentUpon>App.config</DependentUpon>
@@ -168,6 +191,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5112 AddProviderSearchUKRLP.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4806 Search For Qualification.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Provider Management\DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature.cs</LastGenOutput>
@@ -184,6 +211,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4778-View All Live Venues.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\Venue Management\DFC-5485 Add Venue - Edit Name.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-5485 Add Venue - Edit Name.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Venue Management\DFC-5486 Add Venue - Edit Venue Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5486 Add Venue - Edit Venue Address.feature.cs</LastGenOutput>
@@ -191,6 +222,10 @@
     <None Include="Features\Venue Management\DFC-5463 Add Venue - Confirm Details.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5463 Add Venue - Confirm Details.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\DFC-5624 Add Venue - Commit Add Venue Record.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-5624 Add Venue - Commit Add Venue Record.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
