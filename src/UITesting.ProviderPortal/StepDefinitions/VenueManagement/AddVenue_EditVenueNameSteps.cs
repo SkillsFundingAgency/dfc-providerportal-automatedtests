@@ -16,7 +16,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void GivenIAmOnTheEditVenueNamePage()
         {
             //Console.WriteLine("debug1");
-            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "/EditVenueName";
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues() + "/EditVenueName";
             AddVenueEditNamePage AddVenueEditNamePage = new AddVenueEditNamePage(webDriver);
             
         }
@@ -55,8 +55,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [When(@"I press commit venue name")]
         public void WhenIPressCommitVenueName()
         {
+
             AddVenueEditNamePage addVenueEditNamePage = new AddVenueEditNamePage(webDriver);
             addVenueEditNamePage.ClickSubmit();
+
         }
         
         [When(@"I press edit venue name")]

@@ -8,10 +8,12 @@ namespace UITesting.BrowserStack.TestSupport
         private static Configurator configuratorInstance = null;
 
         private readonly String baseUrl;
+        private readonly String baseUrlVenues;
 
         private Configurator()
         {
             baseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+            baseUrlVenues = ConfigurationManager.AppSettings["BaseUrlVenues"];
         }
 
         public static Configurator GetConfiguratorInstance()
@@ -26,6 +28,11 @@ namespace UITesting.BrowserStack.TestSupport
         public String GetBaseUrl()
         {
             return baseUrl;
+        }
+
+        public String GetBaseUrlVenues()
+        {
+            return baseUrlVenues;
         }
 
     }

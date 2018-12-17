@@ -1,16 +1,42 @@
 ﻿using System;
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.Pages.Venue_Management;
-using UITesting.ProviderPortal.Pages;
-using UITesting.ProviderPortal.TestSupport;
+using UITesting.BrowserStack.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+using System.Linq;
 
-namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
+namespace UITesting.BrowserStack.StepDefinitions
 {
     [Binding]
-    public class AddVenueSteps : BaseTest
+    public class AddVenueSteps
     {
+        private IWebDriver _driver;
+        public static IWebDriver webDriver;
+        readonly BrowserStackDriver _bsDriver;
+
+        public AddVenueSteps()
+        {
+
+            if (!ScenarioContext.Current.ScenarioInfo.Tags.Contains("Regression"))
+            {
+                _bsDriver = (BrowserStackDriver)ScenarioContext.Current["bsDriver"];
+            }
+            else
+            {
+                webDriver = (IWebDriver)ScenarioContext.Current["_driver"];
+            }
+        }
+
+
+        [Given(@"I have navigated to the Venues page using (.*) and (.*)")]
+        public void GivenIAmOnTheLandingPage(string profile, string environment)
+        {
+            webDriver = _bsDriver.Init(profile, environment);
+            webDriver.Navigate().GoToUrl(Configurator.GetConfiguratorInstance().GetBaseUrlVenues());
+            PageInteractionHelper.SetDriver(webDriver);
+        }
+
 
         [Given(@"I have logged into course directory as a provider")]
         public void LoginToCourseDirectory()

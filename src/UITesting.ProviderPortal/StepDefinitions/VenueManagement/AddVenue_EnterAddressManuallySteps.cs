@@ -17,7 +17,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Given(@"I have logged as a provider")]
         public void GivenIHaveLoggedAsAProvider()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
         }
         
         [Given(@"I have navigated to Your Venues page")]
