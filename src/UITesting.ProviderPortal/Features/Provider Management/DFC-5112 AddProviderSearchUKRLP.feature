@@ -22,3 +22,5 @@ Then I should see an error message
 Scenario: User enters valid input
 When I enter a valid input
 Then I should not see the error message on clicking "Find"
+
+

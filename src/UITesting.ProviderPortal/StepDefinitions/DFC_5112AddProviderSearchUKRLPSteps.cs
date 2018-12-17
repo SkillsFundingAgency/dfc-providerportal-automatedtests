@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace UITesting.ProviderPortal.StepDefinitions
 {
     [Binding]
-    public class DFC_5112AddProviderSearchUKRLPSteps
+    public class DFC_5112AddProviderSearchUKRLPSteps : TestSupport.BaseTest
     {
         [Given(@"I am on Add a Provider Page")]
         public void GivenIAmOnAddAProviderPage()

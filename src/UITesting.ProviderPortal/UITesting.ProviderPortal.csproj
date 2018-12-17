@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5112 AddProviderSearchUKRLP.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Provider Management\DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +167,10 @@
     <None Include="Features\Provider Management\DFC-5112 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5112 AddProviderSearchUKRLP.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Provider Management\DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-5114 Add ProviderViewUKRLPAndCDSearchResults.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
