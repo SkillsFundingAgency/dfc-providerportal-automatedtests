@@ -6,22 +6,22 @@
 Background:
 	Given I have accessed the Course Directory as a provider
 	And I have accessed the Qualifications page	
-	And the page title is shown "Find a Qualification"
 	And there is a field to enter the LARS/QAN number.
 @CI
 Scenario: Search for a Qualification by LARS/QAN Reference Number
-	Given I have entered LARS/QAN Number 
+	Given I have entered LARS/QAN Number "60060955"
 	Then I want to see the Qualifications listed for that LARS/QAN Number
 	And I want to see LARS/QAN number, Level and awarding body for each qualification
 	And I want to see a Link to add this qualification.
-	And I want to see Level and Awarding body on the screen.
+	And I want to see Qualification Level Filter "Qualification Level"
+	And I want to see Awarding Organisation Filter on the screen "Awarding Organisation"
 @CI
 Scenario: Search for a Qualification when user enters an invalid search term
 	Given that I have entered an invalid search term "xxxxx"
-	Then I want to see a validation message "No Records Found"
+	Then I want to see a validation message "No records found"
 @CI
 Scenario: No results to be returned when LARS/QAN number is not entered
-	Given that I have not entered a LARS/QAN Number
+	Given that I have not entered a LARS/QAN Number 
 	Then no results should be returned and page should be empty
 @CI
 Scenario: Search for a Qualification using Qualification Name

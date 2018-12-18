@@ -24,7 +24,7 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "DFC-4778-View All Live Venues.feature"
+#line 1 "DFC-4778 View All Live Venues.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
