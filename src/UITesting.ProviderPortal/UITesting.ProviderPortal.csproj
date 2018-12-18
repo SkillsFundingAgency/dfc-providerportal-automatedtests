@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
+    <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
+    <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
     <Compile Include="StepDefinitions\ViewLiveVenuesSteps.cs" />
