@@ -52,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Course Management\DFC-5843 Add Course - Add Part 1 of Description.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-5843 Add Course - Add Part 1 of Description.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Example.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +108,7 @@
       <DependentUpon>DFC-5624 Add Venue - Commit Add Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
@@ -134,7 +140,9 @@
       <Name>UITesting.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="StepDefinitions\Course Management\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects">
       <Version>3.11.0</Version>
@@ -179,6 +187,10 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="Features\Course Management\DFC-5843 Add Course - Add Part 1 of Description.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-5843 Add Course - Add Part 1 of Description.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Example.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -1,0 +1,1 @@
+﻿#error (7:1): Scenario Outline 'Valid data entered in all section 1 fields' has no examples defined
