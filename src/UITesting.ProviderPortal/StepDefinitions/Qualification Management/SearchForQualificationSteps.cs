@@ -1,59 +1,59 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using UITesting.ProviderPortal.Pages.Qualification_Management;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
 {
     [Binding]
-    public class DFC_4806SearchForQualificationSteps: TestSupport.BaseTest 
+    public class SearchForQualificationSteps :TestSupport.BaseTest
     {
         [Given(@"I have accessed the Course Directory as a provider")]
         public void GivenIHaveAccessedTheCourseDirectoryAsAProvider()
         {
-            ScenarioContext.Current.Pending();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetQualUrl();
         }
         
         [Given(@"I have accessed the Qualifications page")]
         public void GivenIHaveAccessedTheQualificationsPage()
         {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"the page title is shown ""(.*)""")]
-        public void GivenThePageTitleIsShown(string p0)
-        {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
         }
         
         [Given(@"there is a field to enter the LARS/QAN number\.")]
         public void GivenThereIsAFieldToEnterTheLARSQANNumber_()
         {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.CheckSearchTermField();
         }
         
-        [Given(@"I have entered LARS/QAN Number")]
-        public void GivenIHaveEnteredLARSQANNumber()
+        [Given(@"I have entered LARS/QAN Number ""(.*)""")]
+        public void GivenIHaveEnteredLARSQANNumber(string LARS_QAN_No)
         {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.EnterLARS_QANNumber(LARS_QAN_No);
         }
-        
+
         [Given(@"that I have entered an invalid search term ""(.*)""")]
-        public void GivenThatIHaveEnteredAnInvalidSearchTerm(string p0)
+        public void GivenThatIHaveEnteredAnInvalidSearchTerm(string Inv_Search_Term)
         {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.EnterLARS_QANNumber(Inv_Search_Term);
         }
-        
+
         [Given(@"that I have not entered a LARS/QAN Number")]
         public void GivenThatIHaveNotEnteredALARSQANNumber()
         {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.EnterLARS_QANNumber("");
         }
-        
+
         [Given(@"I have entered a Qualification Name ""(.*)""")]
-        public void GivenIHaveEnteredAQualificationName(string p0)
+        public void GivenIHaveEnteredAQualificationName(string QualName)
         {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.EnterLARS_QANNumber(QualName);
         }
-        
+
         [Given(@"I have retrieved results for a LARS/QAN Number")]
         public void GivenIHaveRetrievedResultsForALARSQANNumber()
         {
@@ -75,35 +75,51 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Then(@"I want to see the Qualifications listed for that LARS/QAN Number")]
         public void ThenIWantToSeeTheQualificationsListedForThatLARSQANNumber()
         {
-            ScenarioContext.Current.Pending();
+           // ScenarioContext.Current.Pending();
         }
         
         [Then(@"I want to see LARS/QAN number, Level and awarding body for each qualification")]
         public void ThenIWantToSeeLARSQANNumberLevelAndAwardingBodyForEachQualification()
         {
-            ScenarioContext.Current.Pending();
+           // ScenarioContext.Current.Pending();
         }
         
         [Then(@"I want to see a Link to add this qualification\.")]
         public void ThenIWantToSeeALinkToAddThisQualification_()
+        {
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.CheckAddQualificationLink();
+        }
+        
+        [Then(@"I want to see Qualification Level Filter ""(.*)""")]
+        public void ThenIWantToSeeQualificationLevelFilter(string QualLevelFilter)
+        {
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.LookForQualificationLevelFilter(QualLevelFilter);
+        }
+        
+        [Then(@"I want to see Awarding Organisation Filter on the screen ""(.*)""")]
+        public void ThenIWantToSeeAwardingOrganisationFilterOnTheScreen(string AwardBodyFilter)
+        {
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.LookForAwardingBodyFilter(AwardBodyFilter);
+        }
+        
+        [Then(@"I want to see a validation message ""(.*)""")]
+        public void ThenIWantToSeeAValidationMessage(string validation_msg)
+        {
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.CheckValidationMessage(validation_msg);
+        }
+
+        [Then(@"no results should be returned and page should be empty")]
+        public void ThenNoResultsShouldBeReturnedAndPageShouldBeEmpty()
         {
             ScenarioContext.Current.Pending();
         }
         
         [Then(@"I want to see Level and Awarding body on the screen\.")]
         public void ThenIWantToSeeLevelAndAwardingBodyOnTheScreen_()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I want to see a validation message ""(.*)""")]
-        public void ThenIWantToSeeAValidationMessage(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"no results should be returned and page should be empty")]
-        public void ThenNoResultsShouldBeReturnedAndPageShouldBeEmpty()
         {
             ScenarioContext.Current.Pending();
         }

@@ -77,10 +77,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4762 Add Venue - Enter Address Manually.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Venue Management\DFC-4778-View All Live Venues.feature.cs">
+    <Compile Include="Features\Venue Management\DFC-4778 View All Live Venues.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-4778-View All Live Venues.feature</DependentUpon>
+      <DependentUpon>DFC-4778 View All Live Venues.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Venue Management\DFC-5485 Add Venue - Edit Name.feature.cs">
       <AutoGen>True</AutoGen>
@@ -200,9 +200,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4762 Add Venue - Enter Address Manually.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Venue Management\DFC-4778-View All Live Venues.feature">
+    <None Include="Features\Venue Management\DFC-4778 View All Live Venues.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-4778-View All Live Venues.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-4778 View All Live Venues.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-5485 Add Venue - Edit Name.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

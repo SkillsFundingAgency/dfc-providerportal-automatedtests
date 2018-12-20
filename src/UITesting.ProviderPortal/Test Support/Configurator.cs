@@ -43,5 +43,9 @@ namespace UITesting.ProviderPortal.TestSupport
         {
             return useBS;
         }
+        public String GetQualUrl()
+        {
+            return QualUrl;
+        }
     }
 }
