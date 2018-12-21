@@ -7,15 +7,16 @@ so that I can amend the details or confirm that the venue details are correct
 Background:
 	Given I have logged into course directory as a provider
 	And I have navigated to the Your Venues Pages
+	When I enter 10028015 and click search
 	When I click Add Venue
 	Then I am on the Add Venue page
 	And the Add Venue page displays the expected content
 	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham
+	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I enter venue name Test Venue
-	And I click continue
+	And I click continue to confirm page
 
 
 @CI

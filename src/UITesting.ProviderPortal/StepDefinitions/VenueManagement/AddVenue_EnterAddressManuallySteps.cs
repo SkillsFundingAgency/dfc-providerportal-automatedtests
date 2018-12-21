@@ -10,10 +10,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
     public class AddVenue_EnterAddressManuallySteps : TestSupport.BaseTest
     {
         ///AddVenue_EnterAddressManuallyPage EnterAddressManually = new AddVenue_EnterAddressManuallyPage(webDriver);
-       
-        Venue_Data VenueData = new Venue_Data();
+        ///km
         
-        
+        //AddVenuePage AddVenuePage = new AddVenuePage(webDriver);
+        //Venue_Data VenueData = new Venue_Data();
+        //ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        //AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
         [Given(@"I have logged as a provider")]
         public void GivenIHaveLoggedAsAProvider()
         {
@@ -24,6 +26,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void GivenIHaveNavigatedToYourVenuesPage()
         {
             ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            Venue_Data VenueData = new Venue_Data();
             ViewAllLiVeVenuesPage.SearchProvider(VenueData.UKPRNNo);
             
         }
@@ -46,7 +49,6 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [When(@"the Add Venue page displays the fields to enter address")]
         public void WhenTheAddVenuePageDisplaysTheFieldsToEnterAddress()
         {
-
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
             AddVenueManualAddressPage.ValidateFields();
         }
@@ -55,6 +57,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void WhenIEnterValidVenueName()
         {
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
+            Venue_Data VenueData = new Venue_Data();
             AddVenueManualAddressPage.AddVenueName(VenueData.VenueName);
         }
         
@@ -62,6 +65,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void WhenIEnterValidAddressLine(int p0)
         {
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
+            Venue_Data VenueData = new Venue_Data();
             AddVenueManualAddressPage.AddAddressLine1(VenueData.AddressLine1);
         }
         
@@ -69,6 +73,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void WhenIEnterTownOrCity()
         {
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
+            Venue_Data VenueData = new Venue_Data();
             AddVenueManualAddressPage.AddTownCity(VenueData.TownCity);
         }
         
@@ -76,6 +81,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void WhenIEnterAValidPostcode()
         {
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
+            Venue_Data VenueData = new Venue_Data();
             AddVenueManualAddressPage.AddPostCode(VenueData.PostCode);
         }
         
@@ -111,7 +117,6 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [When(@"I leave PostCode as blank")]
         public void WhenILeavePostCodeAsBlank()
         {
-
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
             AddVenueManualAddressPage.AddPostCode("");
 

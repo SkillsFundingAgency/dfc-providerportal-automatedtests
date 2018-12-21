@@ -2,14 +2,15 @@
 using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.Pages.Venue_Management;
 using UITesting.ProviderPortal.Models.Venue_Management;
+using UITesting.ProviderPortal.TestSupport;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
 {
     [Binding]
-    public class ViewLiveVenuesSteps : TestSupport.BaseTest 
+    public class ViewLiveVenuesSteps : BaseTest 
     {
-        
-        Venue_Data VenueData = new Venue_Data();
+        //ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        //Venue_Data VenueData = new Venue_Data();
         [Given(@"I have accessed the Course Directory")]
         public void GivenIHaveAccessedTheCourseDirectory()
         {
@@ -20,6 +21,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         public void GivenIHaveSearchedForAPRNNumber(string p0)
         {
             ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            Venue_Data VenueData = new Venue_Data();
             ViewAllLiveVenuesPage.SearchProvider(VenueData.UKPRNNo);
         }
         

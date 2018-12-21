@@ -5,7 +5,7 @@ using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
-/*namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
+namespace ESFA.UI.Specflow.Framework.Project.Tests.StepDefinitions
 {
     [Binding]
     public class ExampleSteps : BaseTest
@@ -31,10 +31,10 @@ using TechTalk.SpecFlow;
             searchResultsPage.ClickDfeLink();
         }
 
-		[Then(@"I should be on (.*) home page")]
-		public void ShouldBeOnDfeHomePage(string onPage)
+        [Then(@"I should be on (.*) home page")]
+        public void ShouldBeOnDfeHomePage(string onPage)
         {
-			PageInteractionHelper.VerifyPageHeading(By.TagName("h1"), onPage);
-		}
+            PageInteractionHelper.VerifyPageHeading(By.TagName("h1"), onPage);
+        }
     }
-}*/
+}

@@ -12,7 +12,7 @@ namespace UITesting.BrowserStack.TestSupport
     {
         protected static IWebDriver webDriver;
         public BrowserStackDriver bsDriver;
-        private string[] tags;
+        //private string[] tags;
         private static string screenshotPath;
 
 
