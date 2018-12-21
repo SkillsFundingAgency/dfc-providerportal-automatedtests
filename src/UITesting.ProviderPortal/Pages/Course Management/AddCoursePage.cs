@@ -13,6 +13,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By whatWillLearn = By.Id("WhatWillLearn");
         private By courseFor = By.Id("CourseFor");
         private By entryRequirements = By.Id("EntryRequirements");
+        private By equipmentNeeded = By.Id("EquipmentNeeded");
+        private By nextButton = By.Id("goToSection2");
 
         public AddCoursePage(IWebDriver webDriver) : base(webDriver)
         {
@@ -49,8 +51,17 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage(webDriver);
         }
 
+        public AddCoursePage EnterEquipmentNeeded(String equipText)
+        {
+            FormCompletionHelper.EnterText(equipmentNeeded, equipText);
+            return new AddCoursePage(webDriver);
+        }
 
-
+        public AddCoursePage ClickNext()
+        {
+            FormCompletionHelper.ClickElement(nextButton);
+            return new AddCoursePage(webDriver);
+        }
 
     }
 }
