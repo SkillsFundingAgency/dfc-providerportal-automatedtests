@@ -366,7 +366,7 @@ Scenario: User clicks continue without selecting from list of addresses
 	And I click Find Address
 	Then I am on the Select Address page
 	When I click continue
-	Then Select Address validation message is displayed This field is required.
+	Then Select Address validation message is displayed Select an address
 
 @CI
 Scenario: User selects address and does not enter venue name then clicks continue
@@ -385,7 +385,7 @@ Scenario: User selects address and enters space in venue name then clicks contin
 	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I enter venue name space
 	And I click continue
-	Then Venue Name validation message is displayed Venue name must only include letters a to z, numbers, hyphens, spaces, full-stops, and or apostrophes
+	Then Venue Name validation message is displayed Venue name must not have any leading, trailing or contain multiple consecutive spaces
 
 @CI
 Scenario: User selects address and enter invalid venue name then clicks continue

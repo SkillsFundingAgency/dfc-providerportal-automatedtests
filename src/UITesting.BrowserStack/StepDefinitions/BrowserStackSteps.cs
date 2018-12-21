@@ -13,7 +13,7 @@ namespace UITesting.BrowserStack.StepDefinitions
     [Binding]
     public class BrowserStackSteps
     {
-        private IWebDriver _driver;
+       // private IWebDriver _driver;
         public static IWebDriver webDriver;
         readonly BrowserStackDriver _bsDriver;
 
@@ -44,7 +44,7 @@ namespace UITesting.BrowserStack.StepDefinitions
         [Given(@"I have navigated to the landing page")]
         public void GivenIAmOnTheLandingPage2()
         {
-            webDriver.Navigate().GoToUrl(Configurator.GetConfiguratorInstance().GetBaseUrl());
+            webDriver.Navigate().GoToUrl(Configurator.GetConfiguratorInstance().GetBaseUrlVenues());
         }
 
 

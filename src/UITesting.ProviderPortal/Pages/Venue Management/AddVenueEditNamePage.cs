@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenueEditNamePage : TestSupport.BasePage
     {
-        private static String PAGE_TITLE = "Edit Venue Name";
+        private static String PAGE_TITLE = "Edit venue name";
         private By venueName = By.Id("VenueName");
         private By submitButton = By.XPath("//*[@id=\"edit-venue\"]/div/div/div[2]/button");
         
@@ -48,6 +48,11 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return new AddVenuePage(webDriver);
         }
 
+        public EditVenueConfirmAddressPage ClickContinue()
+        {
+            FormCompletionHelper.ClickElement(submitButton);
+            return new EditVenueConfirmAddressPage(webDriver);
+        }
 
     }
 }

@@ -18,8 +18,8 @@ namespace UITesting.BrowserStack.TestSupport
     {
         private IWebDriver webDriver;
         private Local browserStackLocal;
-        private string profile;
-        private string environment;
+        //private string profile;
+        //private string environment;
         private ScenarioContext context;
 
         public BrowserStackDriver(ScenarioContext context)
