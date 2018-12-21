@@ -57,12 +57,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         [Then(@"I am on the View All Live Venues Page")]
         public void ThenIAmOnTheViewAllLiveVenuesPage()
         {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
         }
 
         [Then(@"System displays new Venue added (.*)")]
         public void ThenSystemDisplaysNewVenueAdded(string venueName)
         {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             viewAllLiveVenuesPage.VenueAdded(venueName);
         }
@@ -70,6 +72,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         [Then(@"System displays banner message")]
         public void DisplaysBannerMessageVenueAdded()
         {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             viewAllLiveVenuesPage.VenueAddedBanner();
         }

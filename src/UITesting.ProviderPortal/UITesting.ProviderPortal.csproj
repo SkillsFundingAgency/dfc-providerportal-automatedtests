@@ -52,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Course Management\DFC-5843 Add Course - Add Part 1 of Description.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-5843 Add Course - Add Part 1 of Description.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Example.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,10 +87,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4762 Add Venue - Enter Address Manually.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Venue Management\DFC-4778-View All Live Venues.feature.cs">
+    <Compile Include="Features\Venue Management\DFC-4778 View All Live Venues.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-4778-View All Live Venues.feature</DependentUpon>
+      <DependentUpon>DFC-4778 View All Live Venues.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Venue Management\DFC-5485 Add Venue - Edit Name.feature.cs">
       <AutoGen>True</AutoGen>
@@ -123,7 +128,9 @@
       <DependentUpon>DFC-5794 Edit Venue - Commit Edit Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
+    <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
@@ -139,6 +146,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\ExampleSteps.cs" />
+    <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
@@ -154,7 +162,9 @@
       <Name>UITesting.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="StepDefinitions\Course Management\" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.PageObjects">
       <Version>3.11.0</Version>
@@ -203,6 +213,10 @@
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
     </None>
+    <None Include="Features\Course Management\DFC-5843 Add Course - Add Part 1 of Description.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-5843 Add Course - Add Part 1 of Description.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Example.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Example.feature.cs</LastGenOutput>
@@ -227,9 +241,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4762 Add Venue - Enter Address Manually.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Venue Management\DFC-4778-View All Live Venues.feature">
+    <None Include="Features\Venue Management\DFC-4778 View All Live Venues.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-4778-View All Live Venues.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-4778 View All Live Venues.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-5485 Add Venue - Edit Name.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

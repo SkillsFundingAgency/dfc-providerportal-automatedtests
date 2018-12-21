@@ -11,12 +11,14 @@ namespace UITesting.ProviderPortal.TestSupport
         private readonly String baseUrlVenues;
         private readonly String baseUrl;
         private readonly String useBS;
+        private readonly String QualUrl;
 
         private Configurator()
         {
             browser = ConfigurationManager.AppSettings["config_setting"];
             useBS = ConfigurationManager.AppSettings["useBS"];
             baseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+            QualUrl = ConfigurationManager.AppSettings["QualUrl"];
             baseUrlVenues = ConfigurationManager.AppSettings["BaseUrlVenues"];
         }
 
@@ -47,6 +49,10 @@ namespace UITesting.ProviderPortal.TestSupport
         public String GetUseBS()
         {
             return useBS;
+        }
+        public String GetQualUrl()
+        {
+            return QualUrl;
         }
     }
 }
