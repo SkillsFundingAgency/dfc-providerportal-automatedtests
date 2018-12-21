@@ -19,6 +19,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By firstRecord = By.XPath(".//*[@id='live']/div[1]/label");
         private By prnText = By.Id("UKPrn");
         private By searchButton = By.Id("search");
+        private By firstEditlink = By.XPath(".//*[@id='live']/div[1]/label/a[1]");
 
         Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
         
@@ -61,10 +62,16 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             PageInteractionHelper.VerifyElementPresent(By.XPath(ADD_VENUE_BUTTON));
         }
 
-        public ViewAllLiveVenuesPage ClickAddVenueButton()
+        public AddVenuePage ClickAddVenueButton()
         {
             FormCompletionHelper.ClickElement(By.XPath(ADD_VENUE_BUTTON));
-            return new ViewAllLiveVenuesPage(webDriver);
+            return new AddVenuePage(webDriver);
+        }
+
+        public EditVenueConfirmAddressPage ClickFirstEdit()
+        {
+            FormCompletionHelper.ClickElement(firstEditlink);
+            return new EditVenueConfirmAddressPage(webDriver);
         }
 
         internal void ViewArchivedVenues()

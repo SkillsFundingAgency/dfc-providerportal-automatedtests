@@ -8,6 +8,7 @@ namespace UITesting.ProviderPortal.TestSupport
         private static Configurator configuratorInstance = null;
 
         private readonly String browser;
+        private readonly String baseUrlVenues;
         private readonly String baseUrl;
         private readonly String useBS;
 
@@ -16,6 +17,7 @@ namespace UITesting.ProviderPortal.TestSupport
             browser = ConfigurationManager.AppSettings["config_setting"];
             useBS = ConfigurationManager.AppSettings["useBS"];
             baseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+            baseUrlVenues = ConfigurationManager.AppSettings["BaseUrlVenues"];
         }
 
         public static Configurator GetConfiguratorInstance()
@@ -32,9 +34,14 @@ namespace UITesting.ProviderPortal.TestSupport
             return browser;
         }
 
-        public String GetBaseUrlVenues()
+        public String GetBaseUrl()
         {
             return baseUrl;
+        }
+
+        public String GetBaseUrlVenues()
+        {
+            return baseUrlVenues;
         }
 
         public String GetUseBS()

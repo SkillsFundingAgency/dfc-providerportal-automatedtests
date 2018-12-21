@@ -7,7 +7,7 @@ namespace UITesting.BrowserStack.Pages
 {
     public class LARSSearchPage : BasePage
     {
-        private static String PAGE_TITLE = "Provider Search";
+        private static String PAGE_TITLE = "Your Venues";
 
         public LARSSearchPage(IWebDriver webDriver) : base(webDriver)
         {
