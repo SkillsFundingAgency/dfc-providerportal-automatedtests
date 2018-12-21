@@ -15,7 +15,7 @@ Scenario Outline: Valid data entered in all section 1 fields
 	And I have enter the next step following completion of the course <next-stage>
 	When I click Next Button
 	Then I progess to section 2 of course description
-
+	Examples:
 	| audience                | pre-requisites         | outline                              | instruction     | equipment             | assessment       | next-stage             |
 	| Semi-qualified (people) | 1. Industry experience | Student will learn about the subject | Classroom-based | Will need to buy pens | Practical & Exam | Level 2 of this course |
 
