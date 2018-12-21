@@ -55,7 +55,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         }
         internal void ClickQualLevelFilter()
         {
-            FormCompletionHelper.
+            //FormCompletionHelper.
         }
     }
 }
