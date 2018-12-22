@@ -9,6 +9,7 @@ namespace UITesting.ProviderPortal.TestSupport
 
         private readonly String browser;
         private readonly String baseUrl;
+        private readonly String providerbaseUrl;
         private readonly String useBS;
 
         private Configurator()
@@ -16,6 +17,8 @@ namespace UITesting.ProviderPortal.TestSupport
             browser = ConfigurationManager.AppSettings["config_setting"];
             useBS = ConfigurationManager.AppSettings["useBS"];
             baseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+            providerbaseUrl = ConfigurationManager.AppSettings["BaseUrlAddProvider"];
+
         }
 
         public static Configurator GetConfiguratorInstance()
@@ -35,6 +38,11 @@ namespace UITesting.ProviderPortal.TestSupport
         public String GetBaseUrlVenues()
         {
             return baseUrl;
+        }
+
+        public String GetBaseUrlAddProvider()
+        {
+            return providerbaseUrl;
         }
 
         public String GetUseBS()
