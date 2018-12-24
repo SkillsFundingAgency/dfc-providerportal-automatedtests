@@ -73,39 +73,25 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Valid data entered in all section 1 fields")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        [NUnit.Framework.TestCaseAttribute("Semi-qualified (people)", "1. Industry experience", "Student will learn about the subject", "Classroom-based", "Will need to buy pens", "Practical & Exam", "Level 2 of this course", null)]
-        public virtual void ValidDataEnteredInAllSection1Fields(string audience, string pre_Requisites, string outline, string instruction, string equipment, string assessment, string next_Stage, string[] exampleTags)
+        public virtual void ValidDataEnteredInAllSection1Fields()
         {
-            string[] @__tags = new string[] {
-                    "CI"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Valid data entered in all section 1 fields", null, @__tags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Valid data entered in all section 1 fields", null, new string[] {
+                        "CI"});
+#line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.And(string.Format("I have specified who the course is for {0}", audience), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.And(string.Format("I have entered the entry requirements {0}", pre_Requisites), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And(string.Format("I have entered what the student will learn {0}", outline), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And(string.Format("I have entered how the student will learn {0}", instruction), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
- testRunner.And(string.Format("I have entered what equipment will be needed {0}", equipment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
- testRunner.And(string.Format("I have entered how the student will be assessed {0}", assessment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
- testRunner.And(string.Format("I have enter the next step following completion of the course {0}", next_Stage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
- testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.Then("I progess to section 2 of course description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+ testRunner.Then("I progess to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
