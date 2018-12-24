@@ -148,6 +148,15 @@ namespace UITesting.Framework.Helpers
                 ClickElement(radioToSelect);
         }
 
+        public static void SelectRadioOptionByForValue(By locator, String valAttribute)
+        {
+            IList<IWebElement> radios = webDriver.FindElements(locator);
+            var radioToSelect = radios.FirstOrDefault(radio => radio.GetAttribute("value") == valAttribute);
+
+            if (radioToSelect != null)
+                ClickElement(radioToSelect);
+        }
+
         public static void ClearContents(By locator)
         {
             IWebElement element = webDriver.FindElement(locator);
