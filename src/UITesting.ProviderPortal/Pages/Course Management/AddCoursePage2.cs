@@ -20,6 +20,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By costDescriptionError = By.Id("CostDescription-error");
         private By costDescriptionInfo = By.Id("CostDescription-info");
         private By attendanceMode = By.Id("AttendanceMode");
+        private By studyMode = By.Id("StudyMode");
 
         private string errortxt;
 
@@ -165,11 +166,6 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return new AddCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 SelectAttendance(string attendance)
-        {
-            FormCompletionHelper.SelectRadioOptionByForValue(attendanceMode, attendance);
-            return new AddCoursePage2(webDriver);
-        }
 
         public AddCoursePage2 ConfirmInfoMessage(string field, string infoMsg)
         {
@@ -191,6 +187,20 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             }
 
         }
+
+        public AddCoursePage2 SelectAttendance(string attendance)
+        {
+            FormCompletionHelper.SelectRadioOptionByForValue(attendanceMode, attendance);
+            return new AddCoursePage2(webDriver);
+        }
+
+
+        public AddCoursePage2 SelectStudyMode(string studymode)
+        {
+            FormCompletionHelper.SelectRadioOptionByForValue(studyMode, studymode);
+            return new AddCoursePage2(webDriver);
+        }
+
 
     }
 }

@@ -62,11 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5843 Add Course - Add Part 1 of Description.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Example.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Example.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\Provider Management\DFC-5112 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,9 +130,7 @@
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
-    <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
-    <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
@@ -147,13 +140,11 @@
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
     <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManuallyPage.cs" />
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
-    <Compile Include="Pages\WelcomeToGovUkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
-    <Compile Include="StepDefinitions\ExampleSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
@@ -226,10 +217,6 @@
     <None Include="Features\Course Management\DFC-5843 Add Course - Add Part 1 of Description.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5843 Add Course - Add Part 1 of Description.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Example.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Example.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Provider Management\DFC-5112 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

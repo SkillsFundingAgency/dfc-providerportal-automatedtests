@@ -13,13 +13,13 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
     {
 
         [Given(@"I have navigated to the Add Course Section 2 page")]
-        public void NavigateToYourVenuesPage()
+        public void NavigateToAddCoursePage()
         {
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "//Courses//AddCourseSection2";
         }
 
         [When(@"I enter the following in the course name field Course (.*)")]
-        public void WhenIEnterTheFollowingInTheCourseNameFieldCourseA(string coursename)
+        public void EntereCourseNameField(string coursename)
         {
             if (coursename == "blank") 
             {
@@ -68,7 +68,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
 
 
         [When(@"I enter the following in the cost field (.*)")]
-        public void WhenIEnterTheFollowingInTheCostField(string cost)
+        public void EnterTheFollowingInTheCostField(string cost)
         {
             if (cost == "blank")
             {
@@ -120,14 +120,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         }
 
         [Then(@"cost description error validation is displayed")]
-        public void ThenCostDescriptionErrorValidationIsDisplayed()
+        public void CostDescriptionErrorValidationIsDisplayed()
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
             addCoursePage2.CostDescriptionErrorDisplayed();
         }
 
         [Then(@"info message for field (.*) states (.*)")]
-        public void ThenInfoMessageForFieldCostDescriptionStatesYouHaveCharacterTooMany(string field, string infoMsg)
+        public void InfoMessageForFieldCostDescription(string field, string infoMsg)
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
             addCoursePage2.ConfirmInfoMessage(field, infoMsg);
@@ -140,6 +140,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             addCoursePage2.SelectAttendance(attendance);
         }
 
+        [When(@"I Select study mode (.*)")]
+        public void WhenISelectStudyMode(string studymode)
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectStudyMode(studymode);
+        }
 
     }
 }

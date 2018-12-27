@@ -1,4 +1,4 @@
-﻿Feature: 6074 - AddCourse Page 2
+﻿Feature: DFC 6074 Add Course - Add Course Details
 
 As a User
 I need the following actions to be performed on page 2:
@@ -7,6 +7,8 @@ Add Course Name
 Add Course URL
 Add Cost
 Add Cost Description
+Select Study Mode
+Select Attendance Mode
 so that I can add a course
 
 Background:
@@ -166,6 +168,7 @@ Scenario: DFC4768 User Adds Cost Description
 Scenario: DFC4768 User Adds Cost Description max chars
 	When I enter the following in the cost description field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTU
 	And I enter the following in the course name field Course test
+	Then info message for field Cost Description states You have 0 characters remaining
 
 @CI
 Scenario: DFC4768 User Adds Cost Description over max chars
@@ -174,6 +177,12 @@ Scenario: DFC4768 User Adds Cost Description over max chars
 	Then cost description error validation is displayed
 	And error message for field Cost Description states Cost description must be 255 characters or less
 	And info message for field Cost Description states You have 1 character too many
+
+@CI
+Scenario: DFC4768 User Adds Cost Description under max chars
+	When I enter the following in the cost description field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST
+	And I enter the following in the course name field Course test
+	Then info message for field Cost Description states You have 1 character remaining
 
 @CI
 Scenario: DFC4810 User Select Attendance Evening
@@ -194,4 +203,20 @@ Scenario: DFC4810 User Select Attendance Day/Block Release
 Scenario: DFC4810 User Select Attendance Daytime
 	When I Select attendance mode Day/Block 
 	When I Select attendance mode Daytime
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4810 User Study Mode Full-time
+	When I Select study mode Part-time
+	When I Select study mode Full-time
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4810 User Study Mode Part-time
+	When I Select study mode Part-time
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4810 User Study Mode Flexible
+	When I Select study mode Flexible
 	And I enter the following in the course name field Course test

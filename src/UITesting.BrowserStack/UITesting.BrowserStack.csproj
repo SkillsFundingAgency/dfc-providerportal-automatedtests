@@ -47,17 +47,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Pages\LARSSearchPage.cs" />
     <Compile Include="StepDefinitions\AddVenueSteps.cs" />
     <Compile Include="TestSupport\BasePage.cs" />
     <Compile Include="TestSupport\BaseTest.cs" />
-    <Compile Include="Features\LARSSearch.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LARSSearch.feature</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepDefinitions\BrowserStackSteps.cs" />
     <Compile Include="TestSupport\BrowserStackDriver.cs" />
     <Compile Include="TestSupport\Configurator.cs" />
   </ItemGroup>
@@ -68,10 +61,6 @@
     <None Include="Features\AddVenue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddVenue.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\LARSSearch.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>LARSSearch.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +95,9 @@
       <Project>{8f34486e-e483-4472-8417-ef8679d707cc}</Project>
       <Name>UITesting.ProviderPortal</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
