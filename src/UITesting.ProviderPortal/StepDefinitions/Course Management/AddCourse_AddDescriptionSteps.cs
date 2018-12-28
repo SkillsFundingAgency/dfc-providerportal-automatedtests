@@ -15,8 +15,9 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [Given(@"I am on the add a course form")]
         public void GivenIAmOnTheAddACourseForm()
         {
-        
-            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses() + "/AddCourseSection1";
+
+            //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses() + "/AddCourseSection1";
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "//Courses//AddCourseSection1";
             Console.WriteLine("url=" + webDriver.Url);
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
         }
@@ -54,30 +55,25 @@ namespace UITesting.ProviderPortal.StepDefinitions
         public void GivenIHaveEnteredWhatEquipmentWillBeNeeded(string p0)
         {
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
-            AddCoursePage.EnterWhoCourseFor(p0);
+            AddCoursePage.EnterEquipmentNeeded(p0);
         }
 
         [Given(@"I have entered how the student will be assessed (.*)")]
         public void GivenIHaveEnteredHowTheStudentWillBeAssessed(string p0)
         {
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
-            AddCoursePage.EnterWhoCourseFor(p0);
+            AddCoursePage.HowAssessed(p0);
         }
 
-        [Given(@"I have enter the next step following completion of the course (.*)")]
-        public void GivenIHaveEnterTheNextStepFollowingCompletionOfTheCourse(string p0)
+
+        [Given(@"I have enter the next steps following completion of the course (.*)")]
+        public void NextStepsFollowingCompletionOfTheCourseLevelOfThisCourse(string p0)
         {
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
-            AddCoursePage.EnterWhoCourseFor(p0);
+            AddCoursePage.NextSteps(p0);
         }
 
-        [Given(@"I have enter the next step following completion of the course (.*)")]
-        public void GivenIHaveEnterTheNextStepFollowingCompletionOfTheCourseLevelOfThisCourse(string p0)
-        {
-            AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
-            AddCoursePage.EnterWhoCourseFor(p0);
-        }
-        
+
         [When(@"I click Next Button")]
         public void WhenIClickNextButton()
         {

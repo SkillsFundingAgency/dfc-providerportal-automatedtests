@@ -1,12 +1,12 @@
 ﻿using System;
 using UITesting.Framework.Helpers;
-using UITesting.ProviderPortal.Pages.Venue_Management;
+using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.Pages;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
-namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
+namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 {
     [Binding]
     public class AddCourseSteps : BaseTest

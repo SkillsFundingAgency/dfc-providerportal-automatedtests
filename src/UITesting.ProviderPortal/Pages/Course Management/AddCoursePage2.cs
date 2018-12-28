@@ -3,7 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 
-namespace UITesting.ProviderPortal.Pages.Venue_Management
+namespace UITesting.ProviderPortal.Pages.Course_Management
 {
     public class AddCoursePage2 : BasePage
     {
