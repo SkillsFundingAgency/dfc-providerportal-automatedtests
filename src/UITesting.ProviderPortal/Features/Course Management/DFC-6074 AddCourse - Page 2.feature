@@ -206,17 +206,17 @@ Scenario: DFC4810 User Select Attendance Daytime
 	And I enter the following in the course name field Course test
 
 @CI
-Scenario: DFC4810 User Study Mode Full-time
+Scenario: DFC4770 User Study Mode Full-time
 	When I Select study mode Part-time
 	When I Select study mode Full-time
 	And I enter the following in the course name field Course test
 
 @CI
-Scenario: DFC4810 User Study Mode Part-time
+Scenario: DFC4770 User Study Mode Part-time
 	When I Select study mode Part-time
 	And I enter the following in the course name field Course test
 
 @CI
-Scenario: DFC4810 User Study Mode Flexible
+Scenario: DFC4770 User Study Mode Flexible
 	When I Select study mode Flexible
 	And I enter the following in the course name field Course test

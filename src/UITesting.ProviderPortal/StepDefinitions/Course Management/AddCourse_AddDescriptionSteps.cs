@@ -25,6 +25,10 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [Given(@"I have specified who the course is for (.*)")]
         public void GivenIHaveSpecifiedWhoTheCourseIsFor(string p0)
         {
+            if (p0 == "blank")
+            {
+                p0 = "";
+            }
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
             AddCoursePage.EnterWhoCourseFor(p0);
         }
@@ -80,7 +84,29 @@ namespace UITesting.ProviderPortal.StepDefinitions
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
             AddCoursePage.ClickNext();
         }
-        
+
+        [When(@"I click Next Button Failure")]
+        public void WhenIClickNextButtonFail()
+        {
+            AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
+            AddCoursePage.ClickNextFail();
+        }
+
+        [Then(@"Page 1 error message for field (.*) states (.*)")]
+        public void ConfirmErrorMessage(string field, string errorMsg)
+        {
+            AddCoursePage addCoursePage = new AddCoursePage(webDriver);
+            addCoursePage.ConfirmErrorMessage(field, errorMsg);
+        }
+
+
+        [Then(@"Page 1 info message for field (.*) states (.*)")]
+        public void ConfirmInfoMessage(string field, string errorMsg)
+        {
+            AddCoursePage addCoursePage = new AddCoursePage(webDriver);
+            addCoursePage.ConfirmInfoMessage(field, errorMsg);
+        }
+
 
         [Then(@"I progess to next page")]
         public void ThenIProgessToNextPage()

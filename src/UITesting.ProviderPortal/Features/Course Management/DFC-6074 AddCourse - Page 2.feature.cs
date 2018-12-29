@@ -773,11 +773,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DFC4810 User Study Mode Full-time")]
+        [NUnit.Framework.DescriptionAttribute("DFC4770 User Study Mode Full-time")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DFC4810UserStudyModeFull_Time()
+        public virtual void DFC4770UserStudyModeFull_Time()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4810 User Study Mode Full-time", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4770 User Study Mode Full-time", null, new string[] {
                         "CI"});
 #line 209
 this.ScenarioInitialize(scenarioInfo);
@@ -795,11 +795,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DFC4810 User Study Mode Part-time")]
+        [NUnit.Framework.DescriptionAttribute("DFC4770 User Study Mode Part-time")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DFC4810UserStudyModePart_Time()
+        public virtual void DFC4770UserStudyModePart_Time()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4810 User Study Mode Part-time", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4770 User Study Mode Part-time", null, new string[] {
                         "CI"});
 #line 215
 this.ScenarioInitialize(scenarioInfo);
@@ -815,11 +815,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DFC4810 User Study Mode Flexible")]
+        [NUnit.Framework.DescriptionAttribute("DFC4770 User Study Mode Flexible")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DFC4810UserStudyModeFlexible()
+        public virtual void DFC4770UserStudyModeFlexible()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4810 User Study Mode Flexible", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4770 User Study Mode Flexible", null, new string[] {
                         "CI"});
 #line 220
 this.ScenarioInitialize(scenarioInfo);
