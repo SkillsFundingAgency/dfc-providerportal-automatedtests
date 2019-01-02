@@ -21,17 +21,18 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By TownOrCityValidationMsg = By.XPath("//*[@id='TownOrCity-error']");
         private By PostcodeValidationMsg = By.XPath("//*[@id='Postcode-error']");
         private By ClickContinueButton = By.XPath("//*[@id='main-content']/form/div[7]/button");
+        private static String PAGE_TITLE = "Add venue";
 
 
         public AddVenueManualAddressPage(IWebDriver webDriver):base(webDriver)
         {
-           // SelfVerify();
+           SelfVerify();
         }
         protected override bool SelfVerify()
         {
-            throw new NotImplementedException();
+            return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
-         internal void AddVenueName(string VenueName)
+        internal void AddVenueName(string VenueName)
         {
             FormCompletionHelper.EnterText(venueNameText, VenueName);
             

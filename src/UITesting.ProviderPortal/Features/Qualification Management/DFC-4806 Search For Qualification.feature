@@ -1,22 +1,47 @@
 ﻿Feature: DFC-4806 Search For Qualification
 	In order to Add a Qualification
 	As a provider
-	I want to be able to search for a Qualification using LARS/QAN Reference Number or by Qualification Name
+	I want to be able to search for a Qualification using LARS/QAN Reference Number 
 
 Background:
 	Given I have accessed the Course Directory as a provider
 	And I have accessed the Qualifications page	
+	And there is a field to enter the LARS/QAN number.
 @CI
 Scenario: Search for a Qualification by LARS/QAN Reference Number
-	Given I have entered LARS/QAN Number 
-	Then I want to see the Qualification for that LARS/QAN Number
-	And I want to validate the returned results
+	Given I have entered LARS/QAN Number "60060955"
+	Then I want to see the Qualifications listed for that LARS/QAN Number
+	And I want to see LARS/QAN number "LARS/QAN", Level "Level" and awarding body "Awarding body" for each qualification
+	And I want to see a Link to add this qualification.
+	And I want to see Qualification Level Filter "Qualification Level"
+	And I want to see Awarding Organisation Filter on the screen "Awarding Organisation"
 @CI
-Scenario: Search for a Qualification when user enters an invalid LARS/QAN Reference Number
-	Given that I have entered and invalid LARS/QAN Number
-	Then I want to see a validation message should be displayed.
+Scenario: Search for a Qualification when user enters an invalid search term
+	Given that I have entered an invalid search term "xxxxx"
+	Then I want to see a validation message "No records found"
 @CI
-Scenario: Search for a Qualification by Qualification Name
-	Given I have entered a full Qualification name
-	Then I want to see all the qualificatiions with that Qualification Name
-	And I want to validate the returned results
+Scenario: Search for a Qualification using Qualification Name
+	Given I have entered a Qualification Name "Biology"
+	Then I want to see the Qualifications listed for that LARS/QAN Number
+	And I want to see LARS/QAN number "LARS/QAN", Level "Level" and awarding body "Awarding body" for each qualification
+	And I want to see the number of results returned for the name "Found results for Biology"
+	And I want to see a Link to add this qualification.
+	And I want to see Level and Awarding body on the screen.
+@CI
+Scenario: Select filters for Qualification Level
+	Given I have retrieved results for a search term
+	And I select one level for qualification level
+	Then I should be able to select another level for qualification level
+@CI
+Scenario: Select filters for Awarding Body
+	Given I have retrieved results for a search term
+	And I have selected one awarding body
+	Then I should be able to select another awarding body
+@CI
+Scenario: Clear filters when reset is clicked
+	Given I have selected filters in Qualification Level and/or Awarding body
+	When I click reset
+	Then all filters should be cleared.
+
+	
+

@@ -37,6 +37,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenueSelectAddressPage selectAddress(string address)
         {
+            PageInteractionHelper.WaitForPageToLoad(10);
             FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(By.XPath(".//*[@id='PostcodeId']")),address);
             return new AddVenueSelectAddressPage(webDriver);
         }

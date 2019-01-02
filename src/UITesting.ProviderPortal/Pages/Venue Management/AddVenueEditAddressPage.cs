@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class AddVenueEditAddressPage : TestSupport.BasePage
     {
-        private static String PAGE_TITLE = "Edit Venue Address";
+        private static String PAGE_TITLE = "Edit venue address";
         private By submitButton = By.XPath("//*[@id=\"postCodeSearchResultForm\"]/div/div/table/tbody/tr[2]/td[2]/button");
         private By venueName = By.Id("name");
         private By UKPRN = By.Id("UKPrn");
@@ -20,6 +20,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By FindAddressButton = By.XPath("//*[@id=\"findAddress\"]");
        // private By postcodeBox = By.Id("#Postcode-error");
         private By ClickEnterAddressManually = By.XPath("//a[@href='/Venues/AddVenueManualAddress']");
+        private By continueButton = By.Id("venueAddressConfirmationSelection");
 
         public AddVenueEditAddressPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -60,6 +61,17 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return new AddVenueEditAddressPage(webDriver);
         }
 
+        public AddVenueEditAddressPage selectAddress(string address)
+        {
+            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(By.XPath(".//*[@id='PostcodeId']")), address);
+            return new AddVenueEditAddressPage(webDriver);
+        }
+
+        public EditVenueConfirmAddressPage ClickContinue()
+        {
+            FormCompletionHelper.ClickElement(continueButton);
+            return new EditVenueConfirmAddressPage(webDriver);
+        }
 
     }
 }

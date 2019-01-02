@@ -11,7 +11,7 @@ namespace UITesting.BrowserStack.StepDefinitions
     [Binding]
     public class AddVenueSteps
     {
-        private IWebDriver _driver;
+        //private IWebDriver _driver;
         public static IWebDriver webDriver;
         readonly BrowserStackDriver _bsDriver;
 

@@ -1340,7 +1340,7 @@ this.FeatureBackground();
 #line 368
  testRunner.When("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 369
- testRunner.Then("Select Address validation message is displayed This field is required.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Select Address validation message is displayed Select an address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1398,8 +1398,8 @@ this.FeatureBackground();
 #line 387
  testRunner.And("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 388
- testRunner.Then("Venue Name validation message is displayed Venue name must only include letters a" +
-                    " to z, numbers, hyphens, spaces, full-stops, and or apostrophes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Venue Name validation message is displayed Venue name must not have any leading, " +
+                    "trailing or contain multiple consecutive spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
