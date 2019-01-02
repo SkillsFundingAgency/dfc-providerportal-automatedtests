@@ -63,9 +63,10 @@
       <DependentUpon>DFC-5843 Add Course - Add Part 1 of Description.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Provider Management\DFC-5112 AddProviderSearchUKRLP.feature.cs">
+    <Compile Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-5112 AddProviderSearchUKRLP.feature</DependentUpon>
+      <DependentUpon>DFC-5112-5114 AddProviderSearchUKRLP.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature.cs">
       <AutoGen>True</AutoGen>
@@ -132,6 +133,9 @@
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
+    <Compile Include="Pages\DepartmentForEducationHomePage.cs" />
+    <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
+    <Compile Include="Pages\SearchResultsPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueManualAddressPage.cs" />
@@ -145,6 +149,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\DFC_5112AddProviderSearchUKRLPSteps.cs" />
+    <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
@@ -218,9 +223,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5843 Add Course - Add Part 1 of Description.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Provider Management\DFC-5112 AddProviderSearchUKRLP.feature">
+    <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-5112 AddProviderSearchUKRLP.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-5112-5114 AddProviderSearchUKRLP.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

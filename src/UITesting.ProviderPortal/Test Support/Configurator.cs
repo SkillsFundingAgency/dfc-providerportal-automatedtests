@@ -11,6 +11,7 @@ namespace UITesting.ProviderPortal.TestSupport
         private readonly String baseUrlVenues;
         private readonly String baseUrlCourses;
         private readonly String baseUrl;
+        private readonly String providerbaseUrl;
         private readonly String useBS;
         private readonly String QualUrl;
 
@@ -51,6 +52,11 @@ namespace UITesting.ProviderPortal.TestSupport
         public String GetBaseUrlCourses()
         {
             return baseUrlCourses;
+        }
+
+        public String GetBaseUrlAddProvider()
+        {
+            return providerbaseUrl;
         }
 
         public String GetUseBS()

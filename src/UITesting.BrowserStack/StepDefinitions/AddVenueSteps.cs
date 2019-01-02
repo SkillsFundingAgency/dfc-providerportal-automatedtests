@@ -54,7 +54,7 @@ namespace UITesting.BrowserStack.StepDefinitions
         public void GoToAddVenuePage()
         {
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
-            viewAllLiveVenuesPage.ClickAddVenueButton();
+           // viewAllLiveVenuesPage.ClickAddVenueButton();
         }
 
 
@@ -115,7 +115,7 @@ namespace UITesting.BrowserStack.StepDefinitions
         public void WhenIClickContinueIClickContinueToConfirmPage()
         {
             AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
-            addVenueSelectAddressPage.ClickContinueConfirm();
+            //addVenueSelectAddressPage.ClickContinueConfirm();
         }
 
 
@@ -194,7 +194,7 @@ namespace UITesting.BrowserStack.StepDefinitions
         public void WhenIEnterAndClickSearch(string ukprn)
         {
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
-            viewAllLiveVenuesPage.SearchProvider(ukprn);
+            //viewAllLiveVenuesPage.SearchProvider(ukprn);
         }
 
     }
