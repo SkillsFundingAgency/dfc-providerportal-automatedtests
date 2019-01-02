@@ -830,6 +830,28 @@ this.FeatureBackground();
  testRunner.When("I Select study mode Flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 222
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 223
+ testRunner.And("I print Qualification details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC6069 Select Advanced Learner Loans")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC6069SelectAdvancedLearnerLoans()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC6069 Select Advanced Learner Loans", null, new string[] {
+                        "CI"});
+#line 226
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 14
+this.FeatureBackground();
+#line 227
+ testRunner.When("I tick the Advanced Learner Loans option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 228
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

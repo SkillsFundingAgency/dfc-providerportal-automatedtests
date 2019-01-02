@@ -7,7 +7,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 {
     public class AddCoursePage2 : BasePage
     {
-        private static String PAGE_TITLE = "Add course section 2";
+        private static String PAGE_TITLE = "Add course details";
+        private By qualification = By.Id("qual--");
         private By courseName = By.Id("CourseName");
         private By courseNameError = By.Id("CourseName-error");
         private By courseId = By.Id("CourseProviderReference");
@@ -21,6 +22,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By costDescriptionInfo = By.Id("CostDescription-info");
         private By attendanceMode = By.Id("AttendanceMode");
         private By studyMode = By.Id("StudyMode");
+        private By advancedLearnerLoan = By.Id("AdvancedLearnerLoan");
+        private By publishBtn = By.Id("publish");
 
         private string errortxt;
 
@@ -34,7 +37,18 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-		public AddCoursePage2 EnterCourseName(String name)
+
+        public AddCoursePage2 GetQualifiactionDetails()
+        {
+            string[] qualificationDetails = webDriver.FindElement(qualification).GetAttribute("textContent").Split(':');
+            Console.WriteLine("qualification added: " + qualificationDetails[1].Split(' ')[1]);
+            Console.WriteLine("level: " + qualificationDetails[2].Split(' ')[1]);
+            Console.WriteLine("awarding organisation: " + qualificationDetails[3].Split(' ')[1]);
+            Console.WriteLine("LARS/QAN: " + qualificationDetails[4]);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 EnterCourseName(String name)
         {
             FormCompletionHelper.EnterText(courseName, name);
             return new AddCoursePage2(webDriver);
@@ -198,6 +212,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public AddCoursePage2 SelectStudyMode(string studymode)
         {
             FormCompletionHelper.SelectRadioOptionByForValue(studyMode, studymode);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 SelectAdvancedLearnerLoan()
+        {
+            FormCompletionHelper.SelectCheckBox2(advancedLearnerLoan);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 PublishCourse()
+        {
+            FormCompletionHelper.ClickElement(publishBtn);
+            PageInteractionHelper.WaitForPageToLoad();
             return new AddCoursePage2(webDriver);
         }
 

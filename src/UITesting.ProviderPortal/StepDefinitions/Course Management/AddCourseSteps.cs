@@ -147,5 +147,19 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.SelectStudyMode(studymode);
         }
 
+        [When(@"I print Qualification details")]
+        public void WhenIPrintQualificationDetails()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.GetQualifiactionDetails();
+        }
+
+        [When(@"I tick the Advanced Learner Loans option")]
+        public void TickTheAdvancedLearnerLoansOption()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectAdvancedLearnerLoan();
+        }
+
     }
 }
