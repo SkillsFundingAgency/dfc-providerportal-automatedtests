@@ -16,8 +16,9 @@ Background:
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road Birmingham, B13 9DA
 	And I enter venue name Test Venue
-	And I Click Continue				
-	Then  I am on the Add Venue Confirm details page
+	#And I Click Change
+	And I click continue to confirm page				
+	#Then  I am on the Add Venue Confirm details page
 
 @CI
 Scenario: Change name manually from Edit Venue Screen

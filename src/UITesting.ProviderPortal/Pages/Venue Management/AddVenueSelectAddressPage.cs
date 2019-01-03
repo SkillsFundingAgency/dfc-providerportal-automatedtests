@@ -12,6 +12,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By venueName = By.Id("VenueName");
         private By addressSelector = By.Id("address-selector");
         private By clickChange = By.LinkText("Change");
+
+
         private By continueButton = By.Id("venueAddressConfirmationSelection");
         private By AddressSelectionPCValidationMessage = By.Id("PostcodeId-error");
         private By AddressSelectionVenueValidationMessage = By.Id("VenueName-error");

@@ -42,10 +42,12 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         }
 
 
-        public AddVenuePage ClickSubmit()
+        public AddVenueConfirmAddressPage ClickSubmit()
         {
             FormCompletionHelper.ClickElement(submitButton);
-            return new AddVenuePage(webDriver);
+
+            return new AddVenueConfirmAddressPage(webDriver);
+            //return new AddVenuePage(webDriver);
         }
 
         public EditVenueConfirmAddressPage ClickContinue()
