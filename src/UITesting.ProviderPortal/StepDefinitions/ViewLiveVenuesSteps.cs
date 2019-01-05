@@ -37,7 +37,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         {
             ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage.CheckEditLink();
-            ViewAllLiveVenuesPage.CheckArchiveLink();
+           // ViewAllLiveVenuesPage.CheckArchiveLink();
         }
         
         [Then(@"Add Venue Button should be visible")]

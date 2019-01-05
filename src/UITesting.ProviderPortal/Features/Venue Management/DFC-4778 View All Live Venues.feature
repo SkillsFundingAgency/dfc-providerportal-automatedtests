@@ -10,4 +10,4 @@ Scenario: View Live Venues
 	Then all venues for that provider should be displayed with complete address
 	And links to Edit and Archive should be visible
 	And Add Venue Button should be visible
-	And I should be able to view my archived venues
+#	And I should be able to view my archived venues

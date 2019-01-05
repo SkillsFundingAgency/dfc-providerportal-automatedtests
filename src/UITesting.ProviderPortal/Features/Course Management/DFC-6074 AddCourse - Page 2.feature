@@ -11,9 +11,16 @@ Select Study Mode
 Select Attendance Mode
 so that I can add a course
 
+
 Background:
-	Given I have logged into course directory as a provider
-	And I have navigated to the Add Course Section 2 page
+	Given I have accessed the Course Directory as a provider
+	And I have accessed the Qualifications page	
+	And I have entered a Qualification Name "Biology"
+	And I click the link to Add Qualification
+	And I have specified who the course is for Semi-qualified (people)
+	And I have entered the entry requirements 1. Industry experience
+	And I have entered what the student will learn Student will learn about the subject 
+	When I click Next Button
 
 @CI
 Scenario: DFC4950 User Adds Course Name
@@ -39,7 +46,7 @@ Scenario: DFC4950 User enters invalid Course Name
 	When I enter the following in the course name field Course 我想输入文字
 	And I enter the following in the URL field https://www.google.com
 	Then course name error validation is displayed
-	And error message for field Course Name states Invalid characters
+	And error message for field Course Name states Course Name contains invalid characters
 
 @CI
 Scenario: DFC5115 User enters valid course URL
@@ -122,15 +129,15 @@ Scenario: DFC5116 User enters valid cost 2
 Scenario: DFC5116 User enters invalid cost 
 	When I enter the following in the cost field 9999999
 	When I enter the following in the course name field Course test
-	Then course Cost error validation is displayed
-	And error message for field Cost states Maximum value for cost is £999,999.99
+#	Then course Cost error validation is displayed
+	Then error message for field Invalid Cost Length states Maximum value for cost is £999,999.99
 
 @CI
 Scenario: DFC5116 User enters no cost 
 	When I enter the following in the cost field blank
 	When I enter the following in the course name field Course test
-	Then course Cost error validation is displayed
-	And error message for field Cost states Enter the cost in pounds and pence
+#	Then course Cost error validation is displayed
+	Then error message for field Invalid Cost states Enter the cost in pounds and pence
 
 
 @CI
@@ -157,7 +164,7 @@ Scenario: DFC5011 User enters invalid Course ID
 	When I enter the following in the course id field 我想输入文字
 	And I enter the following in the URL field https://www.google.com
 	Then course id error validation is displayed
-	And error message for field Course ID states Invalid characters	
+	And error message for field Course ID states ID contains invalid characters
 
 @CI
 Scenario: DFC4768 User Adds Cost Description

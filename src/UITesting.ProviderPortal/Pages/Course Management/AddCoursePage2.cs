@@ -17,6 +17,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseURLError = By.Id("Url-error");
         private By courseCost = By.Id("Cost");
         private By courseCostError = By.Id("Cost-error");
+        private By courseCostInvalidLength = By.Id("invalidCostLengthMessage");
+        private By courseCostInvalid = By.Id("invalidCostMessage");
         private By costDescription = By.Id("CostDescription");
         private By costDescriptionError = By.Id("CostDescription-error");
         private By costDescriptionInfo = By.Id("CostDescription-info");
@@ -123,6 +125,26 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseCostError);
                     PageInteractionHelper.IsElementDisplayed(courseCostError);
                     errortxt = webDriver.FindElement(courseCostError).GetAttribute("innerText");
+                    if (errorMsg != errortxt)
+                    {
+                        throw new Exception("Incorrect Error message displayed");
+                    }
+                    return new AddCoursePage2(webDriver);
+
+                case "Invalid Cost Length":
+                    PageInteractionHelper.WaitForElementToBePresent(courseCostInvalidLength);
+                    PageInteractionHelper.IsElementDisplayed(courseCostInvalidLength);
+                    errortxt = webDriver.FindElement(courseCostInvalidLength).GetAttribute("innerText");
+                    if (errorMsg != errortxt)
+                    {
+                        throw new Exception("Incorrect Error message displayed");
+                    }
+                    return new AddCoursePage2(webDriver);
+
+                case "Invalid Cost":
+                    PageInteractionHelper.WaitForElementToBePresent(courseCostInvalid);
+                    PageInteractionHelper.IsElementDisplayed(courseCostInvalid);
+                    errortxt = webDriver.FindElement(courseCostInvalid).GetAttribute("innerText");
                     if (errorMsg != errortxt)
                     {
                         throw new Exception("Incorrect Error message displayed");
