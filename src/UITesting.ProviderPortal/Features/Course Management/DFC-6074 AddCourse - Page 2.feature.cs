@@ -862,6 +862,281 @@ this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4901 Select Flexible Start Date")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4901SelectFlexibleStartDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4901 Select Flexible Start Date", null, new string[] {
+                        "CI"});
+#line 238
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 239
+ testRunner.When("I select start date Flexible Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 240
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4901 Select Defined Start Date and enter no date")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4901SelectDefinedStartDateAndEnterNoDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4901 Select Defined Start Date and enter no date", null, new string[] {
+                        "CI"});
+#line 243
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 244
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 245
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 246
+ testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 247
+ testRunner.Then("error message for field Day states Day must be a number between 1 and 31", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 248
+ testRunner.And("error message for field Month states Month must be a number between 1 and 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 249
+ testRunner.And("error message for field Year states Year must be a valid 4 digit year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 250
+ testRunner.And("error message for field Start Date states Choose an actual Start Date or select ‘" +
+                    "Flexible Start Date’", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4901 Select Defined Start Date and enter valid date")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4901SelectDefinedStartDateAndEnterValidDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4901 Select Defined Start Date and enter valid date", null, new string[] {
+                        "CI"});
+#line 253
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 254
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 255
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 256
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 257
+ testRunner.And("I enter 2020 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 258
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 259
+ testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4901 Select Defined Start Date and enter date before today")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4901SelectDefinedStartDateAndEnterDateBeforeToday()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4901 Select Defined Start Date and enter date before today", null, new string[] {
+                        "CI"});
+#line 262
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 263
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 264
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 265
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 266
+ testRunner.And("I enter 2019 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 267
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 268
+ testRunner.Then("error message for field Past Date states Start Date cannot be earlier than today’" +
+                    "s date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4901 Select Defined Start Date and enter date more than 2 years in future")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4901SelectDefinedStartDateAndEnterDateMoreThan2YearsInFuture()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4901 Select Defined Start Date and enter date more than 2 years in future", null, new string[] {
+                        "CI"});
+#line 271
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 272
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 273
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 274
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 275
+ testRunner.And("I enter 2024 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 276
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 277
+ testRunner.Then("error message for field Future Date states Start Date cannot be later than 2 year" +
+                    "s from today’s date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4901 Select Defined Start Date and enter invalid date")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4901SelectDefinedStartDateAndEnterInvalidDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4901 Select Defined Start Date and enter invalid date", null, new string[] {
+                        "CI"});
+#line 280
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 281
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 282
+ testRunner.And("I enter 30 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 283
+ testRunner.And("I enter 02 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 284
+ testRunner.And("I enter 2020 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 285
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 286
+ testRunner.Then("error message for field Invalid Date states Date entered is not valid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4902 Select Duration in Days")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4902SelectDurationInDays()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4902 Select Duration in Days", null, new string[] {
+                        "CI"});
+#line 289
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 290
+ testRunner.When("I select duration length 999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 291
+ testRunner.And("I select duration unit Days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 292
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4902 Select Duration in Weeks")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4902SelectDurationInWeeks()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4902 Select Duration in Weeks", null, new string[] {
+                        "CI"});
+#line 295
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 296
+ testRunner.When("I select duration length 099", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 297
+ testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 298
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4902 Select Duration in Months")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4902SelectDurationInMonths()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4902 Select Duration in Months", null, new string[] {
+                        "CI"});
+#line 301
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 302
+ testRunner.When("I select duration length 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 303
+ testRunner.And("I select duration unit Months", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 304
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4902 Select Duration in Years")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4902SelectDurationInYears()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4902 Select Duration in Years", null, new string[] {
+                        "CI"});
+#line 307
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 308
+ testRunner.When("I select duration length 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 309
+ testRunner.And("I select duration unit Years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 310
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("DFC4902 No Duration entered")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void DFC4902NoDurationEntered()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4902 No Duration entered", null, new string[] {
+                        "CI"});
+#line 313
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+this.FeatureBackground();
+#line 314
+ testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 315
+ testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 316
+ testRunner.Then("error message for field Duration states Enter Duration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -233,3 +233,85 @@ Scenario: DFC4770 User Study Mode Flexible
 Scenario: DFC6069 Select Advanced Learner Loans
 	When I tick the Advanced Learner Loans option
 	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4901 Select Flexible Start Date
+	When I select start date Flexible Start Date
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter no date
+	When I select start date Defined Start Date
+	And I enter the following in the course name field Course test
+	And I click Publish
+	Then error message for field Day states Day must be a number between 1 and 31
+	And error message for field Month states Month must be a number between 1 and 12
+	And error message for field Year states Year must be a valid 4 digit year
+	And error message for field Start Date states Choose an actual Start Date or select ‘Flexible Start Date’
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter valid date
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2020 in the Year field
+	And I enter the following in the course name field Course test
+	And I click Publish
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter date before today
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2019 in the Year field
+	And I enter the following in the course name field Course test
+	Then error message for field Past Date states Start Date cannot be earlier than today’s date
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter date more than 2 years in future
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2024 in the Year field
+	And I enter the following in the course name field Course test
+	Then error message for field Future Date states Start Date cannot be later than 2 years from today’s date
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter invalid date
+	When I select start date Defined Start Date
+	And I enter 30 in the Day field
+	And I enter 02 in the Month field
+	And I enter 2020 in the Year field
+	And I enter the following in the course name field Course test
+	Then error message for field Invalid Date states Date entered is not valid
+
+@CI
+Scenario: DFC4902 Select Duration in Days
+	When I select duration length 999
+	And I select duration unit Days
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 Select Duration in Weeks
+	When I select duration length 099
+	And I select duration unit Weeks
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 Select Duration in Months
+	When I select duration length 9
+	And I select duration unit Months
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 Select Duration in Years
+	When I select duration length 1
+	And I select duration unit Years
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 No Duration entered
+	When I enter the following in the course name field Course test
+	And I click Publish
+	Then error message for field Duration states Enter Duration
+	
