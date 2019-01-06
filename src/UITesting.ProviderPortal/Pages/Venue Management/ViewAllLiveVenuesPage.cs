@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     {
         private static String PAGE_TITLE = "Your Venues";
         private static String PAGE_TITLE_ELEMENT = "//*[@id='main-content']/div/div[1]/div/div/h1";
-        private static String VENUE_DATA = "//*[@id='live']/div[1]/label";
+        private static String VENUE_DATA = "//*[@id='live']/div[1]/label";  //*[@id="live"]/div[1]/label
         private static String ARCH_TAB= "//*[@id='tab_archived']";
         private static String ADD_VENUE_BUTTON = "//*[@id='venueSearchResultForm']/div/div/div/div[2]/button";
         private By venueBanner = By.XPath(".//*[@id='qual']");

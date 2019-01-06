@@ -103,6 +103,18 @@ namespace UITesting.Framework.Helpers
             throw new Exception("The Element does not exist on the page");
         }
 
+
+        public static Boolean VerifyElementNotPresent(By locator)
+        {
+            String actual = webDriver.FindElement(locator).Text;
+            if (actual == null)
+            {
+                return true;
+            }
+
+            throw new Exception("The Element exists on the page");
+        }
+
         public static Boolean VerifyEditFieldText(By locator, String expected)
         {
             String actual = webDriver.FindElement(locator).GetAttribute("value");

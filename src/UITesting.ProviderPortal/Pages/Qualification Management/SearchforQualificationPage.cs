@@ -13,14 +13,19 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private static String PAGE_TITLE = "Find a Qualification";
         private static By LARSSearchTerm = By.Id("LarsSearchTerm");
         private By SearchValidationMsg = By.XPath("//*[@id='error-summary-title']");
-        private By QualLevelFilter = By.XPath("//*[@id='tab0']/h3");
-        private By AwardBodyFilter = By.XPath("//*[@id='tab1']/h3");
-        private By AddQualLink = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[2]/div/div[2]/p[4]/a");
+        //private By QualLevelFilter = By.XPath("//*[@id='tab0']/h3");
+        private By QualLevelFilter = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[2]/div[1]/div[1]"); 
+        //private By AwardBodyFilter = By.XPath("//*[@id='tab1']/h3");
+        private By AwardBodyFilter = By.XPath(".//*[@id='LarsSearchResultContainer']/div/div[2]/div[2]/div[1]");
+        private By AddQualLink = By.XPath(".//*[@id='LarsSearchResultContainer']/div/div[3]/div/div[1]/a");
         private By ClickQualFilter = By.XPath("//*[@id='tab0']/h3/span");
         private By ResultsMessage = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[1]");
         private By LARSQANlabel = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[3]/div/div[1]/p[1]");
         private By LevelLabel = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[3]/div/div[1]/p[2]");
         private By AwardBodyLabel = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[3]/div/div[1]/p[3]");
+        private By ClearFilters = By.Id("ClearAllFilters");
+        private By FirstFilter = By.XPath(".//*[@id='NotionalNVQLevelv2Filter-0']");
+
         public SearchforQualificationPage(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
@@ -53,7 +58,12 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         {
             PageInteractionHelper.VerifyElementPresent(AddQualLink);
         }
-        
+
+        public void AddQualificationLink()
+        {
+            FormCompletionHelper.ClickElement(AddQualLink);
+        }
+
         internal void ClickQualLevelFilter()
         {
             //FormCompletionHelper.IsElementPresent(QualLevelFilter);
@@ -70,5 +80,29 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
             FormCompletionHelper.VerifyText(LevelLabel, levelLbl);
             FormCompletionHelper.VerifyText(AwardBodyLabel, awardBodyLbl);
         }
+
+        internal void ClearAllFilters()
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(ClearFilters);
+        }
+
+        internal SearchforQualificationPage FiltersCleared()
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            if (!(webDriver.FindElement(ClearFilters).Displayed))
+            {
+                throw new Exception("Filters not cleared");
+            }
+            return new SearchforQualificationPage(webDriver);
+        }
+
+        internal SearchforQualificationPage ClickFirstFilter()
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(FirstFilter);
+            return new SearchforQualificationPage(webDriver);
+        }
+
     }
 }

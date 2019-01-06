@@ -161,5 +161,41 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.SelectAdvancedLearnerLoan();
         }
 
+        [When(@"I select start date (.*)")]
+        public void WhenISelectStartDate(string StartDate)
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectStartDateType(StartDate);
+        }
+        
+        [When(@"I enter (.*) in the (.*) field")]
+        public void WhenIEnterDay(string value, string field)
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.EnterStartDate(value, field);
+        }
+
+        [When(@"I select duration length (.*)")]
+        public void WhenISelectDurationLength(string length)
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.EnterDuration(length);
+        }
+
+        [When(@"I select duration unit (.*)")]
+        public void WhenISelectDurationUnit(string unit)
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectDurationUnit(unit);
+        }
+
+        [When(@"I click Publish")]
+        public void WhenIClickPublish()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.PublishCourse();
+        }
+
+
     }
 }

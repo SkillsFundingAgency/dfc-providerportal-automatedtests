@@ -70,6 +70,20 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+ testRunner.Given("I have accessed the Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+ testRunner.And("I have accessed the Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.And("I have entered a Qualification Name \"Biology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.And("I click the link to Add Qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("DFC-5843 Valid data entered in all section 1 fields")]
         [NUnit.Framework.CategoryAttribute("CI")]
@@ -77,18 +91,18 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5843 Valid data entered in all section 1 fields", null, new string[] {
                         "CI"});
-#line 8
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 9
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
+#line 6
+this.FeatureBackground();
+#line 15
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
  testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 17
  testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 18
  testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -101,23 +115,23 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4904 Valid data entered in all section 2 fields", null, new string[] {
                         "CI"});
-#line 16
+#line 21
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 17
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
- testRunner.And("I have entered how the student will learn Classroom-based", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
- testRunner.And("I have entered what equipment will be needed Will need to buy pens", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
- testRunner.And("I have entered how the student will be assessed Practical & Exam", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 6
+this.FeatureBackground();
 #line 22
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+ testRunner.And("I have entered how the student will learn Classroom-based", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.And("I have entered what equipment will be needed Will need to buy pens", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+ testRunner.And("I have entered how the student will be assessed Practical & Exam", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
  testRunner.And("I have enter the next steps following completion of the course Level 2 of this co" +
                     "urse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
+#line 27
  testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -130,20 +144,20 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5843 Who Course is for not entered", null, new string[] {
                         "CI"});
-#line 26
+#line 30
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 27
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
- testRunner.And("I have specified who the course is for blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
- testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
- testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 6
+this.FeatureBackground();
 #line 31
- testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have specified who the course is for blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 32
+ testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+ testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
  testRunner.Then("Page 1 error message for field Who is the course for states Enter who is the cour" +
                     "se for", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -157,19 +171,19 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5843 Who Course is for exceeds 500 chars", null, new string[] {
                         "CI"});
-#line 35
+#line 38
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 36
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
- testRunner.And(@"I have specified who the course is for ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
- testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 6
+this.FeatureBackground();
 #line 39
+ testRunner.Given(@"I have specified who the course is for ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 40
+ testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
  testRunner.Then("Page 1 error message for field Who is the course for states Who is this course fo" +
                     "r must be 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
+#line 42
  testRunner.And("Page 1 info message for field Who is the course for states You have 1 character t" +
                     "oo many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -183,22 +197,22 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5843 Entry Requirements exceeds 500 chars", null, new string[] {
                         "CI"});
-#line 43
+#line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 44
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 45
- testRunner.And("I have specified who the course is for Anybody who wishes to learn 1234567890 !\"£" +
-                    "$%^&*()", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 6
+this.FeatureBackground();
 #line 46
- testRunner.And(@"I have entered the entry requirements ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have specified who the course is for Anybody who wishes to learn 1234567890 !\"£" +
+                    "$%^&*()", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 47
- testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(@"I have entered the entry requirements ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
+ testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 49
  testRunner.Then("Page 1 error message for field Entry requirements states Entry requirements must " +
                     "be 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 49
+#line 50
  testRunner.Then("Page 1 info message for field Entry requirements states You have 1 character too " +
                     "many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -212,13 +226,13 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5843 What you will learn exceeds 500 chars", null, new string[] {
                         "CI"});
-#line 52
+#line 53
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 53
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+this.FeatureBackground();
 #line 54
- testRunner.And("I have specified who the course is for ABCD\\/?><  <!\"£$%^&1234567", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have specified who the course is for ABCD\\/?><  <!\"£$%^&1234567", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 55
  testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 56
@@ -245,18 +259,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 62
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 6
+this.FeatureBackground();
 #line 63
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 64
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
  testRunner.And(@"I have entered how the student will learn ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 65
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 66
  testRunner.Then("Page 1 error message for field How you will learn states How you’ll learn must be" +
                     " 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
+#line 67
  testRunner.Then("Page 1 info message for field How you will learn states You have 1 character too " +
                     "many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -270,21 +284,21 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4904 What you need to bring exceeds 500 chars", null, new string[] {
                         "CI"});
-#line 71
+#line 70
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line 71
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 72
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 73
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
  testRunner.And(@"I have entered what equipment will be needed ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
+#line 73
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 76
+#line 74
  testRunner.Then("Page 1 error message for field What you need to bring states What you’ll need to " +
                     "bring must be 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 77
+#line 75
  testRunner.Then("Page 1 info message for field What you need to bring states You have 1 character " +
                     "too many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -298,21 +312,21 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4904 How you will be assessed exceeds 500 chars", null, new string[] {
                         "CI"});
-#line 80
+#line 78
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 81
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 82
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
+#line 6
+this.FeatureBackground();
+#line 79
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 80
  testRunner.And(@"I have entered how the student will be assessed ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 81
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
+#line 82
  testRunner.Then("Page 1 error message for field How you will be assessed states ‘How you’ll be ass" +
                     "essed\' must be 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 86
+#line 83
  testRunner.Then("Page 1 info message for field How you will be assessed states You have 1 characte" +
                     "r too many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -326,21 +340,21 @@ this.ScenarioInitialize(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4904 Where Next exceeds 500 chars", null, new string[] {
                         "CI"});
-#line 89
+#line 86
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 90
- testRunner.Given("I am on the add a course form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 91
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 6
+this.FeatureBackground();
+#line 87
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 88
  testRunner.And(@"I have enter the next steps following completion of the course ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 89
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 94
+#line 90
  testRunner.Then("Page 1 error message for field Where next states \'Where next\' must be 500 charact" +
                     "ers or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 95
+#line 91
  testRunner.Then("Page 1 info message for field Where next states You have 1 character too many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
