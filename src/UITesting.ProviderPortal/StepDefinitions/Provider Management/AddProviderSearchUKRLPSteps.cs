@@ -11,7 +11,7 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [Given(@"I am on Add a Provider Page")]
         public void GivenIAmOnAddAProviderPage()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlAddProvider();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetProviderBaseUrl();
         }
 
         [Then(@"I should see label ""(.*)""")]

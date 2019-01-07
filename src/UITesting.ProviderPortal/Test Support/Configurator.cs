@@ -23,6 +23,8 @@ namespace UITesting.ProviderPortal.TestSupport
             QualUrl = ConfigurationManager.AppSettings["QualUrl"];
             baseUrlVenues = ConfigurationManager.AppSettings["BaseUrlVenues"];
             baseUrlCourses = ConfigurationManager.AppSettings["BaseUrlCourses"];
+            providerbaseUrl = ConfigurationManager.AppSettings["ProviderBaseUrl"];
+
         }
 
         public static Configurator GetConfiguratorInstance()
@@ -54,10 +56,11 @@ namespace UITesting.ProviderPortal.TestSupport
             return baseUrlCourses;
         }
 
-        public String GetBaseUrlAddProvider()
+        public String GetProviderBaseUrl()
         {
-            return providerbaseUrl;
+            return providerbaseUrl; 
         }
+       
 
         public String GetUseBS()
         {
