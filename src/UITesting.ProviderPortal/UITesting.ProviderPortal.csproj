@@ -67,6 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6183 View Course - Description.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-6185_6816 View URL_CostDesc.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-6185_6816 View URL_CostDesc.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-6187 View Your Courses - Line 11.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -235,6 +240,10 @@
     <None Include="Features\Course Management\DFC-6183 View Course - Description.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6183 View Course - Description.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\DFC-6185_6816 View URL_CostDesc.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6185_6816 View URL_CostDesc.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-6187 View Your Courses - Line 1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
