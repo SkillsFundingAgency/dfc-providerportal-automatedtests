@@ -14,18 +14,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     {
         private static String PAGE_TITLE = "Your courses";
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='main-content']/div/div/div[2]/div/ul/li[2]/div/div/p/a");
-        //elt added - View Description...
-        private By courseDescription = By.XPath("---");
+ 
+        //elt added - View Description... using links from prototype
+        private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
-        
-        private By courseFor = By.Id("CourseFor");
-        private By entryRequirements = By.Id("EntryRequirements");
-        private By whatWillLearn = By.Id("WhatWillLearn");
-        private By howWillLearn = By.Id("HowYouWillLearn");
-        private By equipmentNeeded = By.Id("WhatYouNeed");
-        private By howAssessed = By.Id("HowAssessed");
-        private By nextSteps = By.Id("WhereNext");
-        private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
+        private By courseDescriptionPopup = By.Id("popup-descript");
+        private By courseFor = By.Id("descript");
+        private By entryRequirements = By.Id("next");
+        private By whatWillLearn = By.Id("learn");
+        private By howWillLearn = By.Id("how");
+        private By equipmentNeeded = By.Id("how");
+        private By howAssessed = By.Id("how");
+        private By nextSteps = By.Id("next");
+        private By diplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
+        private By closeViewCourseDescriptionPopup = By.XPath("//*[@id=\"close-preview\"]"); // By.Id("close -preview");
         
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
@@ -48,45 +50,75 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ClickViewCourseDescription()
         {
             FormCompletionHelper.ClickElement(ViewCourseDescriptionLink);
-            Thread.Sleep(5000);
+            
         }
 
         internal void ClickShowCourseDescriptionPopup()
         {
             FormCompletionHelper.ClickElement(showCourseDescriptionPopupLink);
-            Thread.Sleep(5000);
+        
         }
 
         internal void ClickOpenAccordianDiploma()
         {
-            FormCompletionHelper.ClickElement(DiplomaAccordianLink);
-            Thread.Sleep(5000);
+            FormCompletionHelper.ClickElement(diplomaAccordianLink);
+           
         }
 
-        public ViewYourCoursesPage VerifyCourseDescription(String whoText)
+        internal void VerifyDescriptionPopupOpens()
         {
-            FormCompletionHelper.EnterText(courseFor, whoText);
+            PageInteractionHelper.IsElementPresent(courseDescriptionPopup);
+
+        }
+        public ViewYourCoursesPage VerifyCourseDescriptionShown()
+        {
+            //Title 'Course Description' shown
+            PageInteractionHelper.VerifyElementPresent(courseDescriptionTitle);
             return new ViewYourCoursesPage(webDriver);
         }
-        public ViewYourCoursesPage VerifyWhoCourseFor(String whoText)
+
+        public ViewYourCoursesPage VerifyWhoCourseFor()
         {
-            FormCompletionHelper.EnterText(courseFor, whoText);
+            PageInteractionHelper.VerifyElementPresent(courseFor);
             return new ViewYourCoursesPage(webDriver);
         }
-        public ViewYourCoursesPage VerifyEntryRequirements(String whoText)
+
+        public ViewYourCoursesPage VerifyEntryRequirements()
         {
-            FormCompletionHelper.EnterText(courseFor, whoText);
+            PageInteractionHelper.VerifyElementPresent(entryRequirements);
             return new ViewYourCoursesPage(webDriver);
         }
-        public ViewYourCoursesPage VerifyWhatWillLearn(String whoText)
+
+        public ViewYourCoursesPage VerifyWhatWillLearn()
         {
-            FormCompletionHelper.EnterText(courseFor, whoText);
+            PageInteractionHelper.VerifyElementPresent(whatWillLearn);
             return new ViewYourCoursesPage(webDriver);
         }
-        public ViewYourCoursesPage VerifyHowWillLearn(String whoText)
+
+        public ViewYourCoursesPage VerifyHowWillLearn()
         {
-            FormCompletionHelper.EnterText(courseFor, whoText);
+            PageInteractionHelper.VerifyElementPresent(howWillLearn);
             return new ViewYourCoursesPage(webDriver);
+        }
+
+        public ViewYourCoursesPage VerifyEquipmentNeeded()
+        {
+            PageInteractionHelper.VerifyElementPresent(equipmentNeeded);
+            return new ViewYourCoursesPage(webDriver);
+        }
+
+        public ViewYourCoursesPage VerifyHowAssessed()
+        {
+            PageInteractionHelper.VerifyElementPresent(howAssessed);
+            return new ViewYourCoursesPage(webDriver);
+        }
+
+
+        internal void ClickCloseCourseDescriptionPopup()
+        {
+            PageInteractionHelper.VerifyElementPresent(closeViewCourseDescriptionPopup);
+            //FormCompletionHelper.ClickElement(showCourseDescriptionPopupLink);
+
         }
 
     }
