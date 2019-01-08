@@ -156,6 +156,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />

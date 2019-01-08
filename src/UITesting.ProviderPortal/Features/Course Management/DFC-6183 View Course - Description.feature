@@ -4,13 +4,18 @@ I need to view the Course Description
 so that I can review the course description content that was added when the course was created
 
 Background:
-	Given I have logged into course directory as a provider
-	And I have navigated to the Your-Courses Page
-	And accordion of courses is maximised
+	#Given I have logged into course directory as a provider
+	#And I have navigated to the Your-Courses Page
+	#And accordion of courses is maximised
 
-@mytag
+	Given I have accessed my courses
+	Then I want to view the course details
+	And I open the course details accordian for diploma
+	#And I click on the view course description link
+
+@CI
 Scenario: View description of the first diploma course encountered
-	Given I have clicked on 'view course description'
+	Given I click on the view course description link
 	Then course description pop-up opens
 	And qualification title is shown
 	And Who is the course for is shown
