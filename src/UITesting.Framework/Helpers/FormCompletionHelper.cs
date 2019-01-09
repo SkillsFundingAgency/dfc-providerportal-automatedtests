@@ -162,6 +162,7 @@ namespace UITesting.Framework.Helpers
             IWebElement element = webDriver.FindElement(locator);
             element.Clear();
         }
+       
 
     }
 }
