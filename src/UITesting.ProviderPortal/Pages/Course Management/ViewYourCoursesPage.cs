@@ -28,13 +28,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
         
 
-        public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
-
-
-
+        public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)                   
         {
             SelfVerify();
         }
+
+
         protected override bool SelfVerify()
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);

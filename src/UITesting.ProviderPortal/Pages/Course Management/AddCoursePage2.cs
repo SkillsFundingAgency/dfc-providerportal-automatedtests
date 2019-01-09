@@ -37,11 +37,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By StartDateRequiredError = By.Id("requiredMessage");
         private By PasttDateError = By.Id("pastMessage");
         private By FutureDateError = By.Id("futureMessage");
-        private By InvalidDateError = By.Id("invalidMessage");
+        private By InvalidDateError = By.Id("invalidDateMessage");
         private By FlexDateRadio = By.Id("FlexibleStartDate");
         private By DurationLength = By.Id("DurationLength");
         private By DurationUnit = By.Id("Id");
         private By DurationError = By.Id("DurationLength-error");
+        private By FirstVenue = By.Id("VenueName-1");
+        private By SecondVenue = By.Id("VenueName-2");
 
         private string errortxt;
 
@@ -376,14 +378,24 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage2(webDriver);
         }
 
-
-        public AddCoursePage2 PublishCourse()
+        public ViewYourCoursesPage PublishCourse()
         {
             FormCompletionHelper.ClickElement(publishBtn);
             PageInteractionHelper.WaitForPageToLoad();
+            return new ViewYourCoursesPage(webDriver);
+        }
+
+        public AddCoursePage2 SelectFirstVenue()
+        {
+            FormCompletionHelper.SelectCheckBox2(FirstVenue);
             return new AddCoursePage2(webDriver);
         }
 
+        public AddCoursePage2 SelectSecondVenue()
+        {
+            FormCompletionHelper.SelectCheckBox2(SecondVenue);
+            return new AddCoursePage2(webDriver);
+        }
 
     }
 }
