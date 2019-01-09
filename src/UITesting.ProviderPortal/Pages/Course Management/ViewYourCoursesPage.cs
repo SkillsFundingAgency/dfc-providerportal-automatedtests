@@ -40,7 +40,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
 
-        private By courseFor = By.Id("CourseFor");
+       /* private By courseFor = By.Id("CourseFor");
         private By entryRequirements = By.Id("EntryRequirements");
 
        
@@ -49,7 +49,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By howWillLearn = By.Id("HowYouWillLearn");
         private By equipmentNeeded = By.Id("WhatYouNeed");
         private By howAssessed = By.Id("HowAssessed");
-        private By nextSteps = By.Id("WhereNext");
+        private By nextSteps = By.Id("WhereNext");*/
 
         
 

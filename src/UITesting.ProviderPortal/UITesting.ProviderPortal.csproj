@@ -145,6 +145,7 @@
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
+    <Compile Include="Pages\Course Management\ViewURL_CostDescSteps.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
