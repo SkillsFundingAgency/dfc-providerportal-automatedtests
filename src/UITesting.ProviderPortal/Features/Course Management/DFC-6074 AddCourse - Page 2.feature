@@ -14,7 +14,11 @@ so that I can add a course
 
 Background:
 	Given I have accessed the Course Directory as a provider
-	And I have accessed the Qualifications page	
+	## to attach Session to UKPRN - to be removed after login
+	And I have navigated to the Your Venues Pages  
+	When I enter 10043577 and click search
+	# to be removed up to here
+	Given I have accessed the Qualifications page	
 	And I have entered a Qualification Name "Biology"
 	And I click the link to Add Qualification
 	And I have specified who the course is for Semi-qualified (people)
@@ -283,7 +287,7 @@ Scenario: DFC4901 Select Defined Start Date and enter invalid date
 	And I enter 02 in the Month field
 	And I enter 2020 in the Year field
 	And I enter the following in the course name field Course test
-	Then error message for field Invalid Date states Date entered is not valid
+	Then error message for field Invalid Date states Invalid date
 
 @CI
 Scenario: DFC4902 Select Duration in Days
@@ -313,5 +317,42 @@ Scenario: DFC4902 Select Duration in Years
 Scenario: DFC4902 No Duration entered
 	When I enter the following in the course name field Course test
 	And I click Publish
-	Then error message for field Duration states Enter Duration
-	
+	Then error message for field Duration states Enter Duration	
+
+@CI
+Scenario: DFC4769 Select Single Venue 
+	When I enter the following in the course name field Course test
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I select the first venue in the venues list
+
+@CI
+Scenario: DFC4769 Select Multiple Venues 
+	When I enter the following in the course name field Course test
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I select the first venue in the venues list
+	And I select the second venue in the venues list
+
+@CI
+Scenario: DFC4900 User Publishes Course
+	When I enter the following in the course name field Course test
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I select the first venue in the venues list
+	And I click Publish

@@ -196,6 +196,20 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.PublishCourse();
         }
 
+        [When(@"I select the first venue in the venues list")]
+        public void SelectTheFirstVenueInTheVenuesList()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectFirstVenue();
+        }
+
+        [When(@"I select the second venue in the venues list")]
+        public void SelectTheSecondVenueInTheVenuesList()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectSecondVenue();
+        }
+
 
     }
 }

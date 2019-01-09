@@ -5,7 +5,11 @@
 
 Background:
 	Given I have accessed the Course Directory as a provider
-	And I have accessed the Qualifications page	
+	## to attach Session to UKPRN - to be removed after login
+	And I have navigated to the Your Venues Pages
+	When I enter 10028015 and click search
+	## remove up to here
+	Given I have accessed the Qualifications page	
 	And I have entered a Qualification Name "Biology"
 	And I click the link to Add Qualification
 
