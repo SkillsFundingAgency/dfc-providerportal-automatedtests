@@ -27,28 +27,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By howAssessed = By.Id("how");
         private By nextSteps = By.Id("next");
         private By diplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
-        private By closeViewCourseDescriptionPopup = By.XPath("//*[@id=\"close-preview\"]"); // By.Id("close -preview");
+        private By closeViewCourseDescriptionPopup = By.XPath("//*[@id=\"close-preview\"]"); 
         
-
-        public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
-
         private By ClickViewURLLink = By.Id("URLLink");
         private By ViewCourseURLText = By.Id("courseRun_CourseURL");
         private By ClickURLClose = By.XPath("//a[contains(text(), 'Close')]/text()");
 
-        
-        private By courseFor = By.Id("CourseFor");
-        private By entryRequirements = By.Id("EntryRequirements");
-
-        
-
-        private By whatWillLearn = By.Id("WhatWillLearn");
-        private By howWillLearn = By.Id("HowYouWillLearn");
-        private By equipmentNeeded = By.Id("WhatYouNeed");
-        private By howAssessed = By.Id("HowAssessed");
-        private By nextSteps = By.Id("WhereNext");
-
-        
 
         private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
         
