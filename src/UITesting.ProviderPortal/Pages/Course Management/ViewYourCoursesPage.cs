@@ -32,8 +32,28 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
 
+        private By ClickViewURLLink = By.Id("URLLink");
+        private By ViewCourseURLText = By.Id("courseRun_CourseURL");
+        private By ClickURLClose = By.XPath("//a[contains(text(), 'Close')]/text()");
 
+        
+        private By courseFor = By.Id("CourseFor");
+        private By entryRequirements = By.Id("EntryRequirements");
 
+        
+
+        private By whatWillLearn = By.Id("WhatWillLearn");
+        private By howWillLearn = By.Id("HowYouWillLearn");
+        private By equipmentNeeded = By.Id("WhatYouNeed");
+        private By howAssessed = By.Id("HowAssessed");
+        private By nextSteps = By.Id("WhereNext");
+
+        
+
+        private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
+        
+
+        public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
         }
@@ -41,9 +61,30 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
+        internal void CloseURL()
+        {
+            FormCompletionHelper.ClickElement(ClickURLClose);
+        }
+
+        internal void ClickViewURL()
+        {
+            FormCompletionHelper.ClickElement(ClickViewURLLink);
+        }
+
+        internal void ViewCourseURL()
+        {
+            FormCompletionHelper.IsElementPresent(ViewCourseURLText);
+        }
+
         internal void CheckViewCourseDescription()
         {
             PageInteractionHelper.IsElementPresent(ViewCourseDescriptionLink);
+        }
+
+        internal void ConfirmURLReadOnly()
+        {
+            //throw new NotImplementedException();
+           // PageInteractionHelper.IsElementReadOnly(ViewCourseURLText);            
         }
 
         //Elt view Description->
@@ -51,6 +92,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             FormCompletionHelper.ClickElement(ViewCourseDescriptionLink);
             
+        }
+
+        internal void HideURL()
+        {
+            throw new NotImplementedException();
         }
 
         internal void ClickShowCourseDescriptionPopup()

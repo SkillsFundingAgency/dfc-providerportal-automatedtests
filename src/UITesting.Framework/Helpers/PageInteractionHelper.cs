@@ -206,6 +206,7 @@ namespace UITesting.Framework.Helpers
                 TurnOnImplicitWaits();
             }
         }
+       
 
         public static void FocusTheElement(By locator)
         {
