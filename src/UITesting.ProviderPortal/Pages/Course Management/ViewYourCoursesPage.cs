@@ -13,9 +13,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     public class ViewYourCoursesPage : TestSupport.BasePage 
     {
         private static String PAGE_TITLE = "Your courses";
-        private static By ViewCourseDescriptionLink = By.XPath("//*[@id='main-content']/div/div/div[2]/div/ul/li[2]/div/div/p/a");
- 
-        //elt added - View Description... using links from prototype
+        private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");       //first one in list '0'
+
+        //elt added - View Description..
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
         private By courseDescriptionPopup = By.Id("popup-descript");
