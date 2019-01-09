@@ -10,11 +10,11 @@ Background:
 
 	Given I have accessed my courses
 	Then I want to view the course details
-	And I open the course details accordian for diploma
+	#And I open the course details accordian for diploma
 	#And I click on the view course description link
 
 @CI
-Scenario: View description of the first diploma course encountered
+Scenario: View description of the first course encountered
 	Given I click on the view course description link
 	Then course description pop-up opens
 	And qualification title is shown
@@ -24,5 +24,19 @@ Scenario: View description of the first diploma course encountered
 	And What you'll need to bring is shown
 	And How you'll be assessed is shown
 	And Where next? is shown
-	When I click close 'view course description' pop-up button 
+	When I click close view course description pop-up button 
+	Then course description pop-up is no longer visible
+
+@CI
+Scenario: View description of the first diploma course encountered again..
+	Given I click on the view course description link
+	Then course description pop-up opens
+	And qualification title is shown
+	And Who is the course for is shown
+	And Entry requirements are shown
+	And What you’ll learn is shown
+	And What you'll need to bring is shown
+	And How you'll be assessed is shown
+	And Where next? is shown
+	When I click close view course description pop-up button 
 	Then course description pop-up is no longer visible

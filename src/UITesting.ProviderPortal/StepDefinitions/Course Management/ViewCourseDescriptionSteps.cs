@@ -9,17 +9,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
     [Binding]
     public class ViewCourseDescriptionSteps : BaseTest
     {
-        //[Given(@"I have accessed my courses")]
-        //public void GivenIHaveAccessedMyCourses()
-        //{
-        //    webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses();
-        //}
 
-        //[Then(@"I want to view the course details")]
-        //public void ThenIWantToViewTheCourseDetails()
-        //{
-        //    ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-        //}
 
         [Then(@"I open the course details accordian for diploma")]
         public void ThenIOpenTheCourseDetailsAccordianForDiploma()
@@ -37,13 +27,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
             
         }
-        
-        [When(@"I click close '(.*)' pop-up button")]
-        public void WhenIClickClosePop_UpButton(string p0)
+
+        [When(@"I click close view course description pop-up button")]
+        public void WhenIClickCloseViewCourseDescriptionPop_UpButton()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-
+            ViewYourCoursesPage.ClickCloseCourseDescriptionPopup();
         }
+
 
         [Given(@"I click on the view course description link")]
         public void GivenIClickOnTheViewCourseDescriptionLink()
@@ -56,6 +47,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenCourseDescriptionPop_UpOpens()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.VerifyDescriptionPopupOpens();
+
 
         }
 
@@ -63,6 +56,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenQualificationTitleIsShown()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.VerifyCourseDescriptionShown();
+
 
         }
 
@@ -70,13 +65,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenWhoIsTheCourseForIsShown()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-
+            ViewYourCoursesPage.VerifyWhoCourseFor();
         }
 
         [Then(@"Entry requirements are shown")]
         public void ThenEntryRequirementsAreShown()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.VerifyEntryRequirements();
 
         }
 
@@ -84,20 +80,21 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenWhatYouLlLearnIsShown()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-
+            ViewYourCoursesPage.VerifyWhatWillLearn();
         }
 
         [Then(@"What you'll need to bring is shown")]
         public void ThenWhatYouLlNeedToBringIsShown()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-           
+            ViewYourCoursesPage.VerifyEquipmentNeeded();
         }
         
         [Then(@"How you'll be assessed is shown")]
         public void ThenHowYouLlBeAssessedIsShown()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.VerifyHowAssessed();
 
         }
 
