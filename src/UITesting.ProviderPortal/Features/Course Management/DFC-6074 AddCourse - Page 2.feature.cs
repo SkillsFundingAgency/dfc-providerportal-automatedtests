@@ -904,7 +904,7 @@ this.FeatureBackground();
 #line 249
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 250
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click Publish leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 251
  testRunner.Then("error message for field Day states Day must be a number between 1 and 31", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 252
@@ -941,7 +941,7 @@ this.FeatureBackground();
 #line 262
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 263
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click Publish leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1135,7 +1135,7 @@ this.FeatureBackground();
 #line 318
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 319
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click Publish leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 320
  testRunner.Then("error message for field Duration states Enter Duration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

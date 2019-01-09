@@ -247,7 +247,7 @@ Scenario: DFC4901 Select Flexible Start Date
 Scenario: DFC4901 Select Defined Start Date and enter no date
 	When I select start date Defined Start Date
 	And I enter the following in the course name field Course test
-	And I click Publish
+	And I click Publish leading to error
 	Then error message for field Day states Day must be a number between 1 and 31
 	And error message for field Month states Month must be a number between 1 and 12
 	And error message for field Year states Year must be a valid 4 digit year
@@ -260,7 +260,7 @@ Scenario: DFC4901 Select Defined Start Date and enter valid date
 	And I enter 01 in the Month field
 	And I enter 2020 in the Year field
 	And I enter the following in the course name field Course test
-	And I click Publish
+	And I click Publish leading to error
 
 @CI
 Scenario: DFC4901 Select Defined Start Date and enter date before today
@@ -316,7 +316,7 @@ Scenario: DFC4902 Select Duration in Years
 @CI
 Scenario: DFC4902 No Duration entered
 	When I enter the following in the course name field Course test
-	And I click Publish
+	And I click Publish leading to error
 	Then error message for field Duration states Enter Duration	
 
 @CI

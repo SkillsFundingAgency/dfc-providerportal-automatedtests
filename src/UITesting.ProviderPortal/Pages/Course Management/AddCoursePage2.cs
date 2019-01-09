@@ -385,6 +385,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new ViewYourCoursesPage(webDriver);
         }
 
+        public AddCoursePage2 PublishCourseError()
+        {
+            FormCompletionHelper.ClickElement(publishBtn);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new AddCoursePage2(webDriver);
+        }
+
         public AddCoursePage2 SelectFirstVenue()
         {
             FormCompletionHelper.SelectCheckBox2(FirstVenue);
