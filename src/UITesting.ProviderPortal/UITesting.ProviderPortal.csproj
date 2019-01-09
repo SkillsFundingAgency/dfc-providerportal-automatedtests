@@ -52,9 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\dfc-providerportal-automatedtests-master\dfc-providerportal-automatedtests-master\src\UITesting.ProviderPortal\StepDefinitions\Course Management\ViewURL_CostDescSteps.cs">
-      <Link>StepDefinitions\Course Management\ViewURL_CostDescSteps.cs</Link>
-    </Compile>
     <Compile Include="Features\Course Management\DFC-6074 AddCourse - Page 2.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
