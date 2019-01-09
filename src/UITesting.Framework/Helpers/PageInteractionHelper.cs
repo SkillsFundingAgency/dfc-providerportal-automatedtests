@@ -107,7 +107,7 @@ namespace UITesting.Framework.Helpers
         public static Boolean VerifyElementNotPresent(By locator)
         {
             String actual = webDriver.FindElement(locator).Text;
-            if (actual == null)
+            if (actual == null || actual=="")
             {
                 return true;
             }
@@ -170,7 +170,15 @@ namespace UITesting.Framework.Helpers
             
         }
         
-
+        public static void  IsElementReadOnly(By locator)
+        {
+            
+            if (webDriver.FindElement(locator).GetAttribute("readonly")=="false")
+            {
+                throw new Exception("The field is not read only");
+            }
+            
+        }
         public static Boolean IsElementPresent(By locator)
         {
             TurnOffImplicitWaits();
@@ -178,6 +186,7 @@ namespace UITesting.Framework.Helpers
             {
                 webDriver.FindElement(locator);
                 return true;
+                
 
             }
             catch (NoSuchElementException)
@@ -189,7 +198,7 @@ namespace UITesting.Framework.Helpers
                 TurnOnImplicitWaits();
             }
         }
-
+        
         public static Boolean IsElementDisplayed(By locator)
         {
             TurnOffImplicitWaits();

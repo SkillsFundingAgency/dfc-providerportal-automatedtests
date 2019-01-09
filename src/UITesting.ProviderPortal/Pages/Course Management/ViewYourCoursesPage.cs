@@ -20,13 +20,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         private By ClickViewURLLink = By.Id("URLLink");
         private By ViewCourseURLText = By.Id("courseRun_CourseURL");
-        private By ClickURLClose = By.XPath("//a[contains(text(), 'Close')]/text()");
+        private By ClickURLClose = By.LinkText("Close");
+        private By ClickCostDescriptionLink = By.Id("CostDetailLink");
+        private By ViewCostDescriptionText = By.Id("courseRun_CostDescription");
+        private By ClickCostDescriptionClose = By.LinkText("Close");
 
-        
+
+
+
+
         private By courseFor = By.Id("CourseFor");
         private By entryRequirements = By.Id("EntryRequirements");
 
-        
+       
 
         private By whatWillLearn = By.Id("WhatWillLearn");
         private By howWillLearn = By.Id("HowYouWillLearn");
@@ -43,10 +49,27 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             SelfVerify();
         }
+
+        internal void ClickCloseCostDescription()
+        {
+            FormCompletionHelper.ClickElement(ClickCostDescriptionClose);
+        }
+
         protected override bool SelfVerify()
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
+
+        internal void HideCostDescription()
+        {
+            PageInteractionHelper.VerifyElementNotPresent(ViewCostDescriptionText);
+        }
+        internal void ClickCourseCostDescriptionLink()
+        {
+            FormCompletionHelper.ClickElement(ClickCostDescriptionLink);
+        }
+
+        
         internal void CloseURL()
         {
             FormCompletionHelper.ClickElement(ClickURLClose);
@@ -64,13 +87,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void CheckViewCourseDescription()
         {
-            PageInteractionHelper.IsElementPresent(ViewCourseDescriptionLink);
+            PageInteractionHelper.IsElementPresent(ViewCostDescriptionText);
         }
 
         internal void ConfirmURLReadOnly()
         {
             //throw new NotImplementedException();
-           // PageInteractionHelper.IsElementReadOnly(ViewCourseURLText);            
+            PageInteractionHelper.IsElementReadOnly(ViewCourseURLText);            
         }
 
         //Elt view Description->
@@ -80,9 +103,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             Thread.Sleep(5000);
         }
 
-        internal void HideURL()
+        internal void ViewCourseCostDetail()
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.VerifyElementPresent(ViewCostDescriptionText);
+        }
+
+        internal void HideURLText()
+        {
+            
+            PageInteractionHelper.VerifyElementNotPresent(ViewCourseURLText);
+        }
+
+        internal void ConfirmCourseCostDescReadOnly()
+        {
+            PageInteractionHelper.IsElementReadOnly(ViewCostDescriptionText);
         }
 
         internal void ClickShowCourseDescriptionPopup()
