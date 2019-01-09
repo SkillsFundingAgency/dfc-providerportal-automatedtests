@@ -10,7 +10,7 @@ Background:
 
 	Given I have accessed my courses
 	Then I want to view the course details
-	And I open the course details accordian for diploma
+	#And I open the course details accordian for diploma
 	#And I click on the view course description link
 
 @CI

@@ -77,8 +77,6 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
  testRunner.Given("I have accessed my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
  testRunner.Then("I want to view the course details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 13
- testRunner.And("I open the course details accordian for diploma", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
         

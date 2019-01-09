@@ -27,7 +27,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By howAssessed = By.Id("how");
         private By nextSteps = By.Id("next");
         private By diplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
-        private By closeViewCourseDescriptionPopup = By.XPath("//*[@id=\"close-preview\"]"); 
+        private By closeViewCourseDescriptionPopup = By.Id("popup-descript-close");   //XPath("//*[@id=\"close-preview\"]"); 
         
         private By ClickViewURLLink = By.Id("URLLink");
         private By ViewCourseURLText = By.Id("courseRun_CourseURL");
