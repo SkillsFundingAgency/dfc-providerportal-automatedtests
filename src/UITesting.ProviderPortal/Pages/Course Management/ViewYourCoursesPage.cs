@@ -28,7 +28,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By nextSteps = By.Id("next");
         private By diplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
         private By closeViewCourseDescriptionPopup = By.Id("popup-descript-close");   //XPath("//*[@id=\"close-preview\"]"); 
-        
+
 
         private By ClickViewURLLink = By.Id("URLLink");
         private By ViewCourseURLText = By.Id("courseRun_CourseURL");
@@ -38,19 +38,16 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By ClickCostDescriptionClose = By.LinkText("Close");
 
 
+        //private By courseFor = By.Id("CourseFor");
+        //private By entryRequirements = By.Id("EntryRequirements");
 
 
 
-       /* private By courseFor = By.Id("CourseFor");
-        private By entryRequirements = By.Id("EntryRequirements");
-
-       
-
-        private By whatWillLearn = By.Id("WhatWillLearn");
-        private By howWillLearn = By.Id("HowYouWillLearn");
-        private By equipmentNeeded = By.Id("WhatYouNeed");
-        private By howAssessed = By.Id("HowAssessed");
-        private By nextSteps = By.Id("WhereNext");
+        //private By whatWillLearn = By.Id("WhatWillLearn");
+        //private By howWillLearn = By.Id("HowYouWillLearn");
+        //private By equipmentNeeded = By.Id("WhatYouNeed");
+        //private By howAssessed = By.Id("HowAssessed");
+        //private By nextSteps = By.Id("WhereNext");
         private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
 
 
@@ -93,10 +90,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
 
-        public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
+        //public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
 
-        private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
-        
+        //private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
+
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -122,7 +119,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(ClickCostDescriptionLink);
         }
 
-        
+
         internal void CloseURL()
         {
             FormCompletionHelper.ClickElement(ClickURLClose);
@@ -146,14 +143,14 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ConfirmURLReadOnly()
         {
             //throw new NotImplementedException();
-            PageInteractionHelper.IsElementReadOnly(ViewCourseURLText);            
+            PageInteractionHelper.IsElementReadOnly(ViewCourseURLText);
         }
 
         //Elt view Description->
         internal void ClickViewCourseDescription()
         {
             FormCompletionHelper.ClickElement(ViewCourseDescriptionLink);
-            
+
         }
 
         internal void ViewCourseCostDetail()
@@ -163,7 +160,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void HideURLText()
         {
-            
+
             PageInteractionHelper.VerifyElementNotPresent(ViewCourseURLText);
         }
 
@@ -175,13 +172,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ClickShowCourseDescriptionPopup()
         {
             FormCompletionHelper.ClickElement(showCourseDescriptionPopupLink);
-        
+
         }
 
         internal void ClickOpenAccordianDiploma()
         {
             FormCompletionHelper.ClickElement(diplomaAccordianLink);
-           
+
         }
 
         internal void VerifyDescriptionPopupOpens()
@@ -249,7 +246,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             if (courseLabel == "Delivery")
             {
                 PageInteractionHelper.VerifyText(verifyDeliveryTitle, courseLabel);
-               
+
             }
             if (courseLabel == "Start Date")
             {
@@ -273,7 +270,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             if (courseLabel == "Duration Unit")
             {
                 PageInteractionHelper.VerifyText(verifyDurationUnitTitle, courseLabel);
-               
+
             }
             if (courseLabel == "Attendance")
             {
@@ -340,3 +337,4 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
     }
 }
+

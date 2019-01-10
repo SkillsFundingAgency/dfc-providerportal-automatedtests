@@ -32,7 +32,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void WhenIClickCloseViewCourseDescriptionPop_UpButton()
         {
             ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-            ViewYourCoursesPage.ClickCloseCourseDescriptionPopup();
+            //ViewYourCoursesPage.ClickCloseCourseDescriptionPopup();
         }
 
 
