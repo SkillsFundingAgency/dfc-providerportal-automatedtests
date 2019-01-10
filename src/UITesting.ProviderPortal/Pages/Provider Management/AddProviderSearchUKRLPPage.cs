@@ -16,10 +16,10 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         private By dataReg = By.CssSelector("tr:nth-of-type(1) td.govuk-table__cell");
         private By labelUKPRNStatus = By.CssSelector("tr:nth-of-type(2) th.govuk-table__header");
         private By dataActive = By.CssSelector("tr:nth-of-type(2) td.govuk-table__cell");
-        //private static String PAGE_TITLE = "Add a Provider";
+        private static String PAGE_TITLE = "Add a Provider";
         private static String INPUT_BOX_LABEL = "Enter UKPRN number";
-        private By textInputField = By.Id("input#SearchTerm");
-        private By searchIcon = By.Id("button#searchProvider");
+        private By textInputField = By.Id("SearchTerm");
+        private By searchIcon = By.Id("searchProvider");
         private By labelUKPRN = By.CssSelector("tr:nth-of-type(3) th.govuk-table__header");
         private By labelName = By.CssSelector("tr:nth-of-type(4) th.govuk-table__header");
         private By labelAddress = By.CssSelector("tr:nth-of-type(5) th.govuk-table__header");
@@ -29,6 +29,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         private By AddProviderButton = By.CssSelector("a#btnOnboardProvider");
         private By ProviderIsAdded = By.CssSelector("h1.govuk-heading-m");
         private By ValueOnboarded = By.CssSelector(" tr:nth-of-type(1) td.govuk-table__cell");
+        private By SearchErrorMsg = By.Id("SearchTerm-error");
 
 
 
@@ -54,8 +55,8 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         protected override bool SelfVerify()
         {
-            //return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
-            throw new NotImplementedException();
+            return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
+            //throw new NotImplementedException();
         }
 
 
@@ -188,7 +189,27 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         }
 
+        public AddProviderSearchUKRLPPage CheckErrorMessage(string errorMsg)
+        {
+            PageInteractionHelper.WaitForElementToBePresent(SearchErrorMsg);
+            PageInteractionHelper.IsElementDisplayed(SearchErrorMsg);
+            string errortxt = webDriver.FindElement(SearchErrorMsg).GetAttribute("innerText");
+            if (errorMsg != errortxt)
+            {
+                throw new Exception("Incorrect Error message displayed");
+            }
+            return new AddProviderSearchUKRLPPage(webDriver);
+        }
 
-       
+
+        public AddProviderSearchUKRLPPage CheckErrorMessageNotDisplayed()
+        {
+            if (!(webDriver.FindElement(labelUKPRN).Displayed))
+            {
+                throw new Exception("Error message is displayed");
+            }
+            return new AddProviderSearchUKRLPPage(webDriver);
+        }
+
     }
 }

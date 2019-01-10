@@ -68,13 +68,15 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Given(@"I have selected filters in Qualification Level and/or Awarding body")]
         public void GivenIHaveSelectedFiltersInQualificationLevelAndOrAwardingBody()
         {
-           // ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.ClickFirstFilter();
         }
 
         [When(@"I click reset")]
         public void WhenIClickReset()
         {
-           // ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.ClearAllFilters();
         }
 
         [Then(@"I want to see the Qualifications listed for that LARS/QAN Number")]
@@ -97,6 +99,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
             SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
             SearchforQualificationPage.CheckAddQualificationLink();
         }
+
+        [Given(@"I click the link to Add Qualification")]
+        public void GivenIClickTheLinkToAddQualification()
+        {
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.AddQualificationLink();
+        }
+
 
         [Then(@"I want to see Qualification Level Filter ""(.*)""")]
         public void ThenIWantToSeeQualificationLevelFilter(string QualLevelFilter)
@@ -147,7 +157,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Then(@"all filters should be cleared\.")]
         public void ThenAllFiltersShouldBeCleared_()
         {
-            ScenarioContext.Current.Pending();
+            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            SearchforQualificationPage.FiltersCleared();
         }
     }
 }

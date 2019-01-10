@@ -11,9 +11,16 @@ Select Study Mode
 Select Attendance Mode
 so that I can add a course
 
+
 Background:
-	Given I have logged into course directory as a provider
-	And I have navigated to the Add Course Section 2 page
+	Given I have accessed the Course Directory as a provider
+	And I have accessed the Qualifications page	
+	And I have entered a Qualification Name "Biology"
+	And I click the link to Add Qualification
+	And I have specified who the course is for Semi-qualified (people)
+	And I have entered the entry requirements 1. Industry experience
+	And I have entered what the student will learn Student will learn about the subject 
+	When I click Next Button
 
 @CI
 Scenario: DFC4950 User Adds Course Name
@@ -39,7 +46,7 @@ Scenario: DFC4950 User enters invalid Course Name
 	When I enter the following in the course name field Course 我想输入文字
 	And I enter the following in the URL field https://www.google.com
 	Then course name error validation is displayed
-	And error message for field Course Name states Invalid characters
+	And error message for field Course Name states Course Name contains invalid characters
 
 @CI
 Scenario: DFC5115 User enters valid course URL
@@ -122,15 +129,15 @@ Scenario: DFC5116 User enters valid cost 2
 Scenario: DFC5116 User enters invalid cost 
 	When I enter the following in the cost field 9999999
 	When I enter the following in the course name field Course test
-	Then course Cost error validation is displayed
-	And error message for field Cost states Maximum value for cost is £999,999.99
+#	Then course Cost error validation is displayed
+	Then error message for field Invalid Cost Length states Maximum value for cost is £999,999.99
 
 @CI
 Scenario: DFC5116 User enters no cost 
 	When I enter the following in the cost field blank
 	When I enter the following in the course name field Course test
-	Then course Cost error validation is displayed
-	And error message for field Cost states Enter the cost in pounds and pence
+#	Then course Cost error validation is displayed
+	Then error message for field Invalid Cost states Enter the cost in pounds and pence
 
 
 @CI
@@ -157,7 +164,7 @@ Scenario: DFC5011 User enters invalid Course ID
 	When I enter the following in the course id field 我想输入文字
 	And I enter the following in the URL field https://www.google.com
 	Then course id error validation is displayed
-	And error message for field Course ID states Invalid characters	
+	And error message for field Course ID states ID contains invalid characters
 
 @CI
 Scenario: DFC4768 User Adds Cost Description
@@ -226,3 +233,85 @@ Scenario: DFC4770 User Study Mode Flexible
 Scenario: DFC6069 Select Advanced Learner Loans
 	When I tick the Advanced Learner Loans option
 	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4901 Select Flexible Start Date
+	When I select start date Flexible Start Date
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter no date
+	When I select start date Defined Start Date
+	And I enter the following in the course name field Course test
+	And I click Publish
+	Then error message for field Day states Day must be a number between 1 and 31
+	And error message for field Month states Month must be a number between 1 and 12
+	And error message for field Year states Year must be a valid 4 digit year
+	And error message for field Start Date states Choose an actual Start Date or select ‘Flexible Start Date’
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter valid date
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2020 in the Year field
+	And I enter the following in the course name field Course test
+	And I click Publish
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter date before today
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2019 in the Year field
+	And I enter the following in the course name field Course test
+	Then error message for field Past Date states Start Date cannot be earlier than today’s date
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter date more than 2 years in future
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2024 in the Year field
+	And I enter the following in the course name field Course test
+	Then error message for field Future Date states Start Date cannot be later than 2 years from today’s date
+
+@CI
+Scenario: DFC4901 Select Defined Start Date and enter invalid date
+	When I select start date Defined Start Date
+	And I enter 30 in the Day field
+	And I enter 02 in the Month field
+	And I enter 2020 in the Year field
+	And I enter the following in the course name field Course test
+	Then error message for field Invalid Date states Date entered is not valid
+
+@CI
+Scenario: DFC4902 Select Duration in Days
+	When I select duration length 999
+	And I select duration unit Days
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 Select Duration in Weeks
+	When I select duration length 099
+	And I select duration unit Weeks
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 Select Duration in Months
+	When I select duration length 9
+	And I select duration unit Months
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 Select Duration in Years
+	When I select duration length 1
+	And I select duration unit Years
+	And I enter the following in the course name field Course test
+
+@CI
+Scenario: DFC4902 No Duration entered
+	When I enter the following in the course name field Course test
+	And I click Publish
+	Then error message for field Duration states Enter Duration
+	

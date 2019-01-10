@@ -4,11 +4,20 @@
 	I want to add manually without using postcode look-up
 
 Background:
-	Given I have logged as a provider
-	And I have navigated to Your Venues page
-	When I have select Add Venue
-	And on the Add Venue page I want to enter address manually
+	#Given I have logged as a provider
+	#And I have navigated to Your Venues page
+	#When I have select Add Venue
+	#And on the Add Venue page I want to enter address manually
+	#And the Add Venue page displays the fields to enter address
+	Given I have logged into course directory as a provider
+	And I have navigated to the Your Venues Pages
+	When I enter 10028015 and click search
+	When I click Add Venue
+	Then I am on the Add Venue page
+	And the Add Venue page displays the expected content
+	When on the Add Venue page I want to enter address manually
 	And the Add Venue page displays the fields to enter address
+
 @CI
 Scenario: User enters all valid details
 	When I enter Valid Venue Name 

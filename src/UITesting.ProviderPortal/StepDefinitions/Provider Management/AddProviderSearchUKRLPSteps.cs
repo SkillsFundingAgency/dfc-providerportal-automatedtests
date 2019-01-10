@@ -50,8 +50,9 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [When(@"I do not put an input and click ""(.*)""")]
         public void WhenIDoNotPutAnInputAndClick(string enterNull)
         {
-            //nothing is entered
-            
+            AddProviderSearchUKRLPPage addProviderSearchUKRLPPage = new AddProviderSearchUKRLPPage(webDriver);
+            addProviderSearchUKRLPPage.ClickSearch();
+
         }
 
         [When(@"I enter UKPRN less than eight digits (.*)")]
@@ -78,11 +79,12 @@ namespace UITesting.ProviderPortal.StepDefinitions
         addProviderSearchUKRLPPage.EnterInputDoesNotStartWithOne(InputDoesNotStartWithOne);
         }
 
-
-        [Then(@"I should see an error message")]
-        public void ThenIShouldSeeAnErrorMessage()
+       
+        [Then(@"I should see an error message (.*)")]
+        public void ThenIShouldSeeAnErrorMessage(string errorMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddProviderSearchUKRLPPage addProviderSearchUKRLPPage = new AddProviderSearchUKRLPPage(webDriver);
+            addProviderSearchUKRLPPage.CheckErrorMessage(errorMsg);
         }
 
         [When(@"I enter a valid input ""(.*)""")]
@@ -96,7 +98,9 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [Then(@"I should not see the error message on clicking ""(.*)""")]
         public void ThenIShouldNotSeeTheErrorMessageOnClicking(string p0)
         {
-            ScenarioContext.Current.Pending();
+            AddProviderSearchUKRLPPage addProviderSearchUKRLPPage = new AddProviderSearchUKRLPPage(webDriver);
+            addProviderSearchUKRLPPage.ClickSearch();
+            addProviderSearchUKRLPPage.CheckErrorMessageNotDisplayed();
         }
 
         [When(@"I enter valid input and hit search icon or Enter key")]
@@ -124,7 +128,7 @@ namespace UITesting.ProviderPortal.StepDefinitions
             
         }
         
-        [Then(@"The label will be ""(.*)""and the data value will be ""(.*)""")]
+        [Then(@"The label will be ""(.*)"" and the data value will be ""(.*)""")]
         public void ThenTheLabelWillBeAndTheDataValueWillBe(string UKPRNStatus, string Active)
         {
             AddProviderSearchUKRLPPage addProviderSearchUKRLPPage = new AddProviderSearchUKRLPPage(webDriver);
