@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Given(@"I have accessed my courses")]
         public void GivenIHaveAccessedMyCourses()
         {
-            webDriver.Url = Configurator.GetConfiguratorInstance().GetYourCoursesUrl(); 
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses(); 
         }
         
         [Then(@"I want to view the course details")]
