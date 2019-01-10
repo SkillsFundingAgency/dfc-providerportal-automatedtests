@@ -16,7 +16,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         private By dataReg = By.CssSelector("tr:nth-of-type(1) td.govuk-table__cell");
         private By labelUKPRNStatus = By.CssSelector("tr:nth-of-type(2) th.govuk-table__header");
         private By dataActive = By.CssSelector("tr:nth-of-type(2) td.govuk-table__cell");
-        private static String PAGE_TITLE = "Add a Provider";
+        private static String PAGE_TITLE = "Add Provider";
         private static String INPUT_BOX_LABEL = "Enter UKPRN number";
         private By textInputField = By.Id("SearchTerm");
         private By searchIcon = By.Id("searchProvider");

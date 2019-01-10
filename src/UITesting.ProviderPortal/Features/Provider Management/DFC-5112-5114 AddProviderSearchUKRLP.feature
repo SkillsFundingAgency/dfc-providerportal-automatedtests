@@ -6,7 +6,7 @@ so that I can check that the provider has a valid record on the UK Register of L
 Background:  
 #Scenario: User is on Add a Provider page
 Given I am on Add a Provider Page
-Then I should see label "Add a Provider"
+Then I should see label "Add Provider"
 And I should see another label "Enter UKPRN number"
 And I should see a text input field
 And I should see a search icon
