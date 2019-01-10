@@ -15,6 +15,7 @@ namespace UITesting.ProviderPortal.TestSupport
         private readonly String useBS;
         private readonly String QualUrl;
         private readonly String YourCoursesUrl;
+        
 
         private Configurator()
         {
@@ -26,6 +27,7 @@ namespace UITesting.ProviderPortal.TestSupport
             baseUrlCourses = ConfigurationManager.AppSettings["BaseUrlCourses"];
             providerbaseUrl = ConfigurationManager.AppSettings["BaseUrlProviders"];
             YourCoursesUrl = ConfigurationManager.AppSettings["YourCoursesUrl"];
+            
         }
 
         public static Configurator GetConfiguratorInstance()
@@ -75,5 +77,7 @@ namespace UITesting.ProviderPortal.TestSupport
         {
             return YourCoursesUrl;
         }
+
+       
     }
 }
