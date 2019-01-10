@@ -16,7 +16,15 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Given(@"I have accessed the Qualifications page")]
         public void GivenIHaveAccessedTheQualificationsPage()
         {
-            SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            if (webDriver.Url.Contains("/Qualifications"))
+            {
+                SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            }
+            else
+            {
+                webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetQualUrl();
+                SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
+            }
         }
 
         [Given(@"there is a field to enter the LARS/QAN number\.")]

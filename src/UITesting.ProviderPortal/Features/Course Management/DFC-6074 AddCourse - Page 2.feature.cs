@@ -71,19 +71,23 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
 #line 15
 #line 16
  testRunner.Given("I have accessed the Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 17
- testRunner.And("I have accessed the Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
- testRunner.And("I have entered a Qualification Name \"Biology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have navigated to the Your Venues Pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
- testRunner.And("I click the link to Add Qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
- testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I enter 10043577 and click search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
- testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have accessed the Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have entered a Qualification Name \"Biology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
+ testRunner.And("I click the link to Add Qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+ testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
  testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
         }
@@ -96,12 +100,13 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC4950 User Adds Course Name", new string[] {
                         "CI"});
 #line 26
-this.ScenarioSetup(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 15
 this.FeatureBackground();
-#line 27
+#line 31
  testRunner.When("I enter the following in the course name field Course 123(A-1)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
+#line 32
  testRunner.Then("course name error validation is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -118,13 +123,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 32
+#line 36
  testRunner.When("I enter the following in the course name field Course blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 37
  testRunner.And("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
+#line 38
  testRunner.Then("course name error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 39
  testRunner.And("error message for field Course Name states Enter Course Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -141,13 +146,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 39
+#line 43
  testRunner.When(@"I enter the following in the course name field Course ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 44
  testRunner.And("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
+#line 45
  testRunner.Then("course name error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
+#line 46
  testRunner.And("error message for field Course Name states The maximum length of Course Name is 2" +
                     "55 characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -165,13 +170,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 46
+#line 50
  testRunner.When("I enter the following in the course name field Course 我想输入文字", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
+#line 51
  testRunner.And("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 52
  testRunner.Then("course name error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 49
+#line 53
  testRunner.And("error message for field Course Name states Course Name contains invalid character" +
                     "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -189,9 +194,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 53
+#line 57
  testRunner.When("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 58
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -208,9 +213,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 58
+#line 62
  testRunner.When("I enter the following in the URL field http://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 59
+#line 63
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -227,9 +232,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 63
+#line 67
  testRunner.When("I enter the following in the URL field http://www.google.net", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 68
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -246,9 +251,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 68
+#line 72
  testRunner.When("I enter the following in the URL field http://www.12345.net", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 73
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -265,13 +270,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 73
+#line 77
  testRunner.When("I enter the following in the URL field https://www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
+#line 78
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
+#line 79
  testRunner.Then("course URL error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
+#line 80
  testRunner.And("error message for field URL states The format of URL is incorrect", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -288,13 +293,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 80
+#line 84
  testRunner.When("I enter the following in the URL field htts://www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
+#line 85
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
+#line 86
  testRunner.Then("course URL error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
+#line 87
  testRunner.And("error message for field URL states The format of URL is incorrect", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -311,13 +316,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 87
+#line 91
  testRunner.When("I enter the following in the URL field https//www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 88
+#line 92
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
+#line 93
  testRunner.Then("course URL error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 90
+#line 94
  testRunner.And("error message for field URL states The format of URL is incorrect", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -334,13 +339,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 94
+#line 98
  testRunner.When("I enter the following in the URL field https:/www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 95
+#line 99
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
+#line 100
  testRunner.Then("course URL error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 97
+#line 101
  testRunner.And("error message for field URL states The format of URL is incorrect", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -357,13 +362,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 101
+#line 105
  testRunner.When("I enter the following in the URL field https://www.google.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 106
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 103
+#line 107
  testRunner.Then("course URL error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 104
+#line 108
  testRunner.And("error message for field URL states The format of URL is incorrect", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -380,13 +385,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 108
+#line 112
  testRunner.When("I enter the following in the URL field test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 109
+#line 113
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
+#line 114
  testRunner.Then("course URL error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 111
+#line 115
  testRunner.And("error message for field URL states The format of URL is incorrect", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -403,9 +408,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 115
+#line 119
  testRunner.When("I enter the following in the cost field 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 116
+#line 120
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -422,9 +427,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 120
+#line 124
  testRunner.When("I enter the following in the cost field 0.01", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 125
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -441,9 +446,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 125
+#line 129
  testRunner.When("I enter the following in the cost field 999999.99", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 126
+#line 130
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -460,11 +465,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 130
+#line 134
  testRunner.When("I enter the following in the cost field 9999999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 135
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 133
+#line 137
  testRunner.Then("error message for field Invalid Cost Length states Maximum value for cost is £999" +
                     ",999.99", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -482,11 +487,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 137
+#line 141
  testRunner.When("I enter the following in the cost field blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 142
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 140
+#line 144
  testRunner.Then("error message for field Invalid Cost states Enter the cost in pounds and pence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -503,9 +508,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 145
+#line 149
  testRunner.When("I enter the following in the course id field 123(A-1)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 146
+#line 150
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -522,9 +527,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 150
+#line 154
  testRunner.When("I enter the following in the course id field blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 155
  testRunner.And("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -541,13 +546,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 157
+#line 161
  testRunner.When(@"I enter the following in the course id field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 158
+#line 162
  testRunner.And("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 159
+#line 163
  testRunner.Then("course id error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 160
+#line 164
  testRunner.And("error message for field Course ID states The maximum length of \'ID\' is 255 charac" +
                     "ters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -565,13 +570,13 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 164
+#line 168
  testRunner.When("I enter the following in the course id field 我想输入文字", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
+#line 169
  testRunner.And("I enter the following in the URL field https://www.google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
+#line 170
  testRunner.Then("course id error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
+#line 171
  testRunner.And("error message for field Course ID states ID contains invalid characters", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -588,10 +593,10 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 171
+#line 175
  testRunner.When("I enter the following in the cost description field 123(A-1) £!\"£$%^&*()_+ 123456" +
                     "7890-= QWERTYUIOP asdfghjklmnbvcxz #\';:@~/.,<>?|\\ qwertyuiop ASDFGHJKL ZXCVBNM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
+#line 176
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -608,11 +613,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 176
+#line 180
  testRunner.When(@"I enter the following in the cost description field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTU", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 177
+#line 181
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 182
  testRunner.Then("info message for field Cost Description states You have 0 characters remaining", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -629,16 +634,16 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 182
+#line 186
  testRunner.When(@"I enter the following in the cost description field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 183
+#line 187
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 184
+#line 188
  testRunner.Then("cost description error validation is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 185
+#line 189
  testRunner.And("error message for field Cost Description states Cost description must be 255 char" +
                     "acters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 186
+#line 190
  testRunner.And("info message for field Cost Description states You have 1 character too many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -655,11 +660,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 190
+#line 194
  testRunner.When(@"I enter the following in the cost description field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 191
+#line 195
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 192
+#line 196
  testRunner.Then("info message for field Cost Description states You have 1 character remaining", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -676,9 +681,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 196
+#line 200
  testRunner.When("I Select attendance mode Evening", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 197
+#line 201
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -695,9 +700,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 201
+#line 205
  testRunner.When("I Select attendance mode Weekend", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 202
+#line 206
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -714,9 +719,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 206
+#line 210
  testRunner.When("I Select attendance mode Day/Block Release", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 207
+#line 211
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -733,11 +738,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 211
+#line 215
  testRunner.When("I Select attendance mode Day/Block", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 212
+#line 216
  testRunner.When("I Select attendance mode Daytime", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 213
+#line 217
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -754,11 +759,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 217
+#line 221
  testRunner.When("I Select study mode Part-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 218
+#line 222
  testRunner.When("I Select study mode Full-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 219
+#line 223
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -775,9 +780,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 223
+#line 227
  testRunner.When("I Select study mode Part-time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 224
+#line 228
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -794,11 +799,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 228
+#line 232
  testRunner.When("I Select study mode Flexible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 229
+#line 233
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 230
+#line 234
  testRunner.And("I print Qualification details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -815,9 +820,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 234
+#line 238
  testRunner.When("I tick the Advanced Learner Loans option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 235
+#line 239
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -834,9 +839,9 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 239
+#line 243
  testRunner.When("I select start date Flexible Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 240
+#line 244
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -853,19 +858,19 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 244
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 245
- testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 246
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 247
- testRunner.Then("error message for field Day states Day must be a number between 1 and 31", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 248
- testRunner.And("error message for field Month states Month must be a number between 1 and 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 249
- testRunner.And("error message for field Year states Year must be a valid 4 digit year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 250
+ testRunner.And("I click Publish leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 251
+ testRunner.Then("error message for field Day states Day must be a number between 1 and 31", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 252
+ testRunner.And("error message for field Month states Month must be a number between 1 and 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 253
+ testRunner.And("error message for field Year states Year must be a valid 4 digit year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 254
  testRunner.And("error message for field Start Date states Choose an actual Start Date or select ‘" +
                     "Flexible Start Date’", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -883,18 +888,18 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 254
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 255
- testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 256
- testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 257
- testRunner.And("I enter 2020 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 258
- testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 259
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 260
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 261
+ testRunner.And("I enter 2020 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 262
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 263
+ testRunner.And("I click Publish leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -910,17 +915,17 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 263
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 264
- testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 265
- testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 266
- testRunner.And("I enter 2019 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 267
- testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 268
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 269
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 270
+ testRunner.And("I enter 2019 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 271
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 272
  testRunner.Then("error message for field Past Date states Start Date cannot be earlier than today’" +
                     "s date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -938,17 +943,17 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 272
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 273
- testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 274
- testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 275
- testRunner.And("I enter 2024 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 276
- testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 277
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 278
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 279
+ testRunner.And("I enter 2024 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 280
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 281
  testRunner.Then("error message for field Future Date states Start Date cannot be later than 2 year" +
                     "s from today’s date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -966,18 +971,18 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 281
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 282
- testRunner.And("I enter 30 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 283
- testRunner.And("I enter 02 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 284
- testRunner.And("I enter 2020 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 285
- testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 286
- testRunner.Then("error message for field Invalid Date states Date entered is not valid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I enter 30 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 287
+ testRunner.And("I enter 02 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 288
+ testRunner.And("I enter 2020 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 289
+ testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 290
+ testRunner.Then("error message for field Invalid Date states Invalid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -993,11 +998,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 290
+#line 294
  testRunner.When("I select duration length 999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 291
+#line 295
  testRunner.And("I select duration unit Days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 292
+#line 296
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1014,11 +1019,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 296
+#line 300
  testRunner.When("I select duration length 099", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 297
+#line 301
  testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 298
+#line 302
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1035,11 +1040,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 302
+#line 306
  testRunner.When("I select duration length 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 303
+#line 307
  testRunner.And("I select duration unit Months", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 304
+#line 308
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1056,11 +1061,11 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 308
+#line 312
  testRunner.When("I select duration length 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 309
+#line 313
  testRunner.And("I select duration unit Years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 310
+#line 314
  testRunner.And("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1077,12 +1082,26 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 15
 this.FeatureBackground();
-#line 314
+#line 349
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 315
+#line 350
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 351
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 352
+ testRunner.And("I enter 01 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 353
+ testRunner.And("I enter 2021 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 354
+ testRunner.And("I enter the following in the cost field 999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 355
+ testRunner.And("I select duration length 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 356
+ testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 357
+ testRunner.And("I select the first venue in the venues list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 358
  testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 316
- testRunner.Then("error message for field Duration states Enter Duration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
