@@ -40,16 +40,16 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
 
-        private By courseFor = By.Id("CourseFor");
-        private By entryRequirements = By.Id("EntryRequirements");
+        //private By courseFor = By.Id("CourseFor");
+        //private By entryRequirements = By.Id("EntryRequirements");
 
        
 
-        private By whatWillLearn = By.Id("WhatWillLearn");
-        private By howWillLearn = By.Id("HowYouWillLearn");
-        private By equipmentNeeded = By.Id("WhatYouNeed");
-        private By howAssessed = By.Id("HowAssessed");
-        private By nextSteps = By.Id("WhereNext");
+        //private By whatWillLearn = By.Id("WhatWillLearn");
+        //private By howWillLearn = By.Id("HowYouWillLearn");
+        //private By equipmentNeeded = By.Id("WhatYouNeed");
+        //private By howAssessed = By.Id("HowAssessed");
+        //private By nextSteps = By.Id("WhereNext");
 
         
 
