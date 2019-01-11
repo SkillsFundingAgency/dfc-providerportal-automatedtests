@@ -21,7 +21,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Given(@"I have navigated to the Your Venues Pages")]
         public void NavigateToYourVenuesPage()
         {
-            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
+            //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
+            webDriver.Url = "https://dfc-sit-prov-as.azurewebsites.net/venues";
         }
 
         [When(@"I click Add Venue")]
