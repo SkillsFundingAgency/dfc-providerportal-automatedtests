@@ -21,6 +21,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Given(@"I have navigated to the Your Venues Pages")]
         public void NavigateToYourVenuesPage()
         {
+            //km debugging for SIT CI
             //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
             webDriver.Url = "https://dfc-sit-prov-as.azurewebsites.net/venues";
         }
