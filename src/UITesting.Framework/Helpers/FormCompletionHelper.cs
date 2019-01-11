@@ -163,6 +163,14 @@ namespace UITesting.Framework.Helpers
             element.Clear();
         }
        
+        public static String StoreObjectText(By locator)
+        {
+            IWebElement element = webDriver.FindElement(locator);
+            String objectText = element.Text;
+
+            return objectText;
+        }
+
 
     }
 }
