@@ -43,6 +43,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             ViewYourCoursesPage.ClickShowCourseDescriptionPopup();
         }
 
+
         [Then(@"course description pop-up opens")]
         public void ThenCourseDescriptionPop_UpOpens()
         {

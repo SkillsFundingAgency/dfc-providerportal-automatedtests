@@ -27,16 +27,4 @@ Scenario: View description of the first course encountered
 	When I click close view course description pop-up button 
 	Then course description pop-up is no longer visible
 
-@CI
-Scenario: View description of the first diploma course encountered again..
-	Given I click on the view course description link
-	Then course description pop-up opens
-	And qualification title is shown
-	And Who is the course for is shown
-	And Entry requirements are shown
-	And What you’ll learn is shown
-	And What you'll need to bring is shown
-	And How you'll be assessed is shown
-	And Where next? is shown
-	When I click close view course description pop-up button 
-	Then course description pop-up is no longer visible
+

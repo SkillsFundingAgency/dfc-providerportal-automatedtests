@@ -14,7 +14,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     {
         private static String PAGE_TITLE = "Your courses";
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");       //first one in list '0'
-
+        private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
+        private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
         //elt added - View Description..
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
@@ -174,6 +175,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(showCourseDescriptionPopupLink);
 
         }
+
 
         internal void ClickOpenAccordianDiploma()
         {
