@@ -23,7 +23,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         {
             //km debugging for SIT CI
             //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
-            webDriver.Url = "https://dfc-sit-prov-as.azurewebsites.net/venues";
+            //webDriver.Url = "https://dfc-sit-prov-as.azurewebsites.net/venues";
+            webDriver.Url = "https://" + Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
         }
 
         [When(@"I click Add Venue")]
