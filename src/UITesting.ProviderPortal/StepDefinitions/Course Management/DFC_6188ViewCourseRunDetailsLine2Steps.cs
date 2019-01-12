@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Given(@"I am on Your Course Screen Line Two")]
         public void GivenIAmOnYourCourseScreenLineTwo()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetYourCoursesUrl();
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlCourses();
         }
 
         [Then(@"I would see a text input box with title ""(.*)""")]
@@ -41,7 +41,6 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         {
             //automated in another story
         }
-        
-       
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.Pages.Venue_Management;
 using UITesting.ProviderPortal.Pages;
@@ -22,9 +23,41 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void NavigateToYourVenuesPage()
         {
             //km debugging for SIT CI
-            //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
             //webDriver.Url = "https://dfc-sit-prov-as.azurewebsites.net/venues";
-            webDriver.Url = "https://" + Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
+            logURL();
+
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
+        }
+
+        private static void logURL()
+        {
+            DateTime dateTime = DateTime.Now;
+            string logFilename = "TestRun.log";
+            string logDirectory = AppDomain.CurrentDomain.BaseDirectory + "../../" + "\\Project\\Logs\\";
+            string filepath = logDirectory + logFilename;
+
+            if (!Directory.Exists(logDirectory))
+            {
+                Directory.CreateDirectory(logDirectory);
+            }
+
+            if (!File.Exists(filepath))
+            {
+                File.Create(filepath).Dispose();
+
+                using (TextWriter tw = new StreamWriter(filepath))
+                {
+                    tw.WriteLine(Configurator.GetConfiguratorInstance().GetBaseUrlVenues());
+                }
+
+            }
+            else if (File.Exists(filepath))
+            {
+                using (TextWriter tw = new StreamWriter(filepath))
+                {
+                    tw.WriteLine(Configurator.GetConfiguratorInstance().GetBaseUrlVenues());
+                }
+            }
         }
 
         [When(@"I click Add Venue")]
