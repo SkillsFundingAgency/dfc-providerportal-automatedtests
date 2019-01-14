@@ -24,8 +24,8 @@ namespace SecurityTesting.ProviderPortal.ZAPTests
          
         public ProviderPortal()
         {
-            StartProc(@"C:\Program Files\OWASP\Zed Attack Proxy\zap.sh", "start");
-            Thread.Sleep(40000);
+           // StartProc(@"C:\Program Files\OWASP\Zed Attack Proxy\zap.sh", "start");
+           // Thread.Sleep(40000);
 
 
             zap = new ClientApi(ZapUrl, Convert.ToInt32(ZapPort), ZapApiKey);
@@ -72,7 +72,7 @@ namespace SecurityTesting.ProviderPortal.ZAPTests
                 zap.Dispose();
 
                 GenerateScanReport(reportFilename, ReportFileExtention.Html);
-                StopProc();
+                //StopProc();
             }
         }
 
