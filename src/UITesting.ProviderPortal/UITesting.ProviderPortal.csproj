@@ -72,10 +72,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6185_6186 View URL_CostDesc.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-6267 View Course Runs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-6267 View Course Runs.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-6187 View Your Courses - Line 11.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6187 View Your Courses - Line 1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Course Management\DFC-6188 ViewCourseRunDetailsLine2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-6188 ViewCourseRunDetailsLine2.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
@@ -145,7 +155,6 @@
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
-    <Compile Include="Pages\Course Management\ViewURL_CostDescSteps.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
@@ -164,6 +173,7 @@
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
@@ -246,9 +256,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6185_6186 View URL_CostDesc.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\Course Management\DFC-6267 View Course Runs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6267 View Course Runs.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Course Management\DFC-6187 View Your Courses - Line 1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6187 View Your Courses - Line 11.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\DFC-6188 ViewCourseRunDetailsLine2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6188 ViewCourseRunDetailsLine2.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

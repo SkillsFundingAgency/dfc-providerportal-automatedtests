@@ -76,7 +76,7 @@ namespace UITesting.ProviderPortal.Features.ProviderManagement
 #line 8
 testRunner.Given("I am on Add a Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-testRunner.Then("I should see label \"Add a Provider\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see label \"Add Provider\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
 testRunner.And("I should see another label \"Enter UKPRN number\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
