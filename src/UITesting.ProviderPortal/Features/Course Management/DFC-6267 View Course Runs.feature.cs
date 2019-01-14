@@ -85,11 +85,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Show count of live course runs for first course LARS Ref")]
+        [NUnit.Framework.DescriptionAttribute("Sum of course runs displayed for run matches the total course runs expected")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ShowCountOfLiveCourseRunsForFirstCourseLARSRef()
+        public virtual void SumOfCourseRunsDisplayedForRunMatchesTheTotalCourseRunsExpected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show count of live course runs for first course LARS Ref", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sum of course runs displayed for run matches the total course runs expected", null, new string[] {
                         "CI"});
 #line 19
 this.ScenarioInitialize(scenarioInfo);
@@ -99,32 +99,6 @@ this.FeatureBackground();
 #line 20
  testRunner.Given("The first course displayed has a count of total live course runs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
-  testRunner.And("the count of live course runs matches number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-  testRunner.And("the course runs are sorted firstly on course name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-  testRunner.And("the course runs are sorted secondly on start date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
-  testRunner.And("the course runs are sorted thirdly on venue name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Show count of live course runs for first course QAN Ref")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ShowCountOfLiveCourseRunsForFirstCourseQANRef()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show count of live course runs for first course QAN Ref", null, new string[] {
-                        "CI"});
-#line 27
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 28
- testRunner.Given("The first course displayed has a count of total live course runs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
   testRunner.And("the count of live course runs matches number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
