@@ -15,6 +15,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
             ViewCourseRunsPage.StoreLiveCourseRunCount();
 
+            ViewCourseRunsPage.NumberOfDisplayedCourseRuns();
+
         }
         
         [Given(@"the count of live course runs matches number of course runs displayed")]

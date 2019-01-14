@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UITesting.Framework.Helpers;
+using System.Collections;
+using OpenQA.Selenium.Support.UI;
+using NUnit.Framework;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -20,7 +23,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
         private By courseDescriptionPopup = By.Id("popup-descript");
-        private By firstCourseRunsCount = By.XPath("//*[@id='main-content']/div/div/div[2]/div/ul/li[2]/span");
+        private By firstCourseRunsCount = By.XPath("//*[@id='main-content']/div/div/div[2]/div/span");
 
 
         public ViewCourseRunsPage(IWebDriver webDriver) : base(webDriver)
@@ -49,7 +52,61 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             // retrieve the number of course runs as displayed
             String courseRunCount = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
 
-            Console.WriteLine("Course Runs for first course: " + courseRunCount);
+
+            int runningTotalRuns = 0;
+            int thisRunNumber = 0;
+            int grandTotalRunsShown = 0;
+            String firstPartOfField = "";
+
+
+            IList<IWebElement> all = webDriver.FindElements(By.ClassName("govuk-body"));
+
+            String totalRunsShownString = all[0].Text.Substring(1,1);
+            //Console.WriteLine("Total Runs:" + totalRunsShownString);
+
+            try
+            {
+                grandTotalRunsShown = Int32.Parse(totalRunsShownString);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            String runsForIndividualCourse;
+
+            int i = 0;  //start after total and ignore £ values
+            foreach (IWebElement webElement in all)
+            {
+                firstPartOfField = all[i].Text.Substring(0, 1);
+ 
+
+                if (firstPartOfField.Equals("(") && i>0)   //assume totals are in brackets eg (3) and ignore main total
+                {
+                    runsForIndividualCourse = all[i].Text.Substring(1, 1);
+                    
+                    try
+                    {
+                        thisRunNumber = Int32.Parse(runsForIndividualCourse);
+
+                    }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+
+                    runningTotalRuns = runningTotalRuns + thisRunNumber;
+                }
+
+                i++;
+            }
+
+            Console.WriteLine("Grand total added up=" + runningTotalRuns);
+
+            if (!runningTotalRuns.Equals(grandTotalRunsShown))
+                {
+                Assert.Fail("Total runs at top of screen doesn't match sub totals");
+                }
 
         }
     }
