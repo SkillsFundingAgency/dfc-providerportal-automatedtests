@@ -19,7 +19,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenIWouldSeeATextInputBoxWithTitle(string courseLabel)
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-           // viewYourCoursesPage.courseNameLabelText(courseLabel);
+            viewYourCoursesPage.courseNameLabelText(courseLabel);
         }
         
         [Then(@"The ""(.*)"" text input box should have a dropdown")]
