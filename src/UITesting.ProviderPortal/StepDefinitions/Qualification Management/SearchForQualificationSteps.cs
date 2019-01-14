@@ -22,7 +22,9 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
             }
             else
             {
+                //km debugging for SIT CI
                 webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetQualUrl();
+                //webDriver.Url = "https://dfc-sit-prov-as.azurewebsites.net/Qualifications";
                 SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
             }
         }
