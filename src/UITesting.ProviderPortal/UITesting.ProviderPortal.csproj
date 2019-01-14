@@ -173,6 +173,7 @@
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
