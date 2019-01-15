@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
+      <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-6074 AddCourse - Page 2.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,10 +183,9 @@
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
-    <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
-    <Compile Include="StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />

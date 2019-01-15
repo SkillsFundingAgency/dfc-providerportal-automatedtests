@@ -5,7 +5,9 @@
 
 
 Background:
-	Given I have accessed Your courses Page
+	Given I have accessed course directory
+	And I have entered "10043577" and clicked search provider
+	Then I want to view the course details
 @CI
 Scenario: View and close Course URL
 	Given I have clicked view URL Link
