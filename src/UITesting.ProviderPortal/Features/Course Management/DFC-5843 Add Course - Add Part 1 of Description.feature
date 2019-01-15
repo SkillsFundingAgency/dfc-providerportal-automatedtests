@@ -6,8 +6,9 @@
 Background:
 	Given I have accessed the Course Directory as a provider
 	## to attach Session to UKPRN - to be removed after login
-	And I have navigated to the Your Venues Pages
-	When I enter 10028015 and click search
+	And I have navigated to the Search Provider Page
+	When I enter 10028015 and click search provider
+	And I click to view my courses
 	## remove up to here
 	Given I have accessed the Qualifications page	
 	And I have entered a Qualification Name "Biology"
