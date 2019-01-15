@@ -6,7 +6,9 @@ so that I can review the course details
 @CI 
 Scenario: For individual course, system displays the following course run details for Line 2
 	
-	Given I am on Your Course Screen Line Two
+	
+    Given I have accessed the Course Directory as a provider for the first time
+   
 	Then I would see a text input box with title "Course name"
 	And  I would see a text input box with title "ID"
 	And  I would see a text input box with title "Delivery"

@@ -2,6 +2,7 @@
 using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.TestSupport;
 using UITesting.Framework.Helpers;
+using UITesting.ProviderPortal.Pages.Provider_Management;
 using UITesting.ProviderPortal.Pages.Course_Management;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
@@ -9,11 +10,22 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
     [Binding]
     public class DFC_6188ViewCourseRunDetailsLine2Steps :BaseTest
     {
-        [Given(@"I am on Your Course Screen Line Two")]
-        public void GivenIAmOnYourCourseScreenLineTwo()
+        [Given(@"I have accessed the Course Directory as a provider for the first time")]
+        public void GivenIHaveAccessedTheCourseDirectoryAsAProviderForTheFirstTime()
         {
-            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetYourCoursesUrl();
+           
+                webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlCourses(); 
         }
+
+        /*[When(@"I have navigated to Home page")]
+        public void WhenIHaveNavigatedToHomePage()
+        {
+            //ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            //ViewYourCoursesPage.clickHomeButtonOnPage();
+        }*/
+
+
+
 
         [Then(@"I would see a text input box with title ""(.*)""")]
         public void ThenIWouldSeeATextInputBoxWithTitle(string courseLabel)

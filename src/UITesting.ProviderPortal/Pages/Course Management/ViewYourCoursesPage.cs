@@ -53,29 +53,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
         //Shivani added - Line2
+        private By clickHomeButton = By.CssSelector("ul.govuk-header__navigation li:nth-of-type(1)");
+        private By enterUKPRN = By.Id("SearchTerm");
+        private By clickSearch = By.Id("searchProvider");
+        private By coursesButton = By.CssSelector("ul.govuk-header__navigation li:nth-of-type(5)");
         private By verifyCourseTitle = By.Id("courseRun_CourseName");
         private By verifyIDTitle = By.Id("courseRun_ProviderCourseID");
-  
         private By verifyDeliveryTitle = By.Id("deliveryMode");
-        
         private By verifyVenueTitle = By.Id("VenueId");
-       
-
         private By verifyURLTitle = By.Id("URLLink");
-
-
         private By verifyCostTitle = By.Id("cost");
-
-
         private By verifyCostDescriptionTitle = By.Id("CostDetailLink");
-
-
         private By verifyDurationTitle = By.Id("courseRun_DurationValue");
-
         private By verifyDurationUnitTitle = By.Id("durationUnit");
-
         private By verifyAttendanceTitle = By.Id("attendance");
-
         private By verifyModeTitle = By.Id("mode");
          
 
@@ -220,7 +211,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new ViewYourCoursesPage(webDriver);
         }
 
+
         //Shivani Line2
+
+      
+
         internal void courseNameLabelText(string courseLabel)
         {
             if (courseLabel == "Course name")
