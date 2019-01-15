@@ -28,6 +28,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveClickedViewURLLink()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickMainDiplomaDetail();
+            viewYourCoursesPage.ClickCourseDetailLink();
             viewYourCoursesPage.ClickViewURL();
         }
         
@@ -35,6 +37,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveClickedTheCourseCostDescription()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickMainDiplomaDetail();
+            viewYourCoursesPage.ClickCourseDetailLink();
             viewYourCoursesPage.ClickCourseCostDescriptionLink();
         }
         

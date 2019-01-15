@@ -28,6 +28,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By howAssessed = By.Id("how");
         private By nextSteps = By.Id("next");
         private By diplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
+
+        private By MainDiplomaDetailLink = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[1]");
+        private By CourseDetailLink = By.XPath("  //*[@id='main-content']/div/div/div[2]/div/div[1]/ul[1]/li[1]/h3");
+      
         private By closeViewCourseDescriptionPopup = By.Id("popup-descript-close");   //XPath("//*[@id=\"close-preview\"]"); 
 
 
@@ -50,7 +54,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         //private By howAssessed = By.Id("HowAssessed");
         //private By nextSteps = By.Id("WhereNext");
         private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
-
+     
 
         //Shivani added - Line2
         private By verifyCourseTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) label.govuk-label");
@@ -124,6 +128,15 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void CloseURL()
         {
             FormCompletionHelper.ClickElement(ClickURLClose);
+        }
+
+        internal void ClickMainDiplomaDetail()
+        {
+            FormCompletionHelper.ClickElement(MainDiplomaDetailLink);
+        }
+        internal void ClickCourseDetailLink()
+        {
+            FormCompletionHelper.ClickElement(CourseDetailLink);
         }
 
         internal void ClickViewURL()

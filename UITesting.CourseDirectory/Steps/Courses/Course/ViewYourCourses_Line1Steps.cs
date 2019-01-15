@@ -36,6 +36,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenALinkToViewTheCourseDescriptionLink()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickMainDiplomaDetail();
             viewYourCoursesPage.CheckViewCourseDescription();
         }
     }
