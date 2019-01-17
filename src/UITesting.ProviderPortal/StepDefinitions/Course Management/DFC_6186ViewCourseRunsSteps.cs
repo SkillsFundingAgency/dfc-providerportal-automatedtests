@@ -9,7 +9,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
     [Binding]
     public class DFC_6186ViewCourseRunsSteps : BaseTest
     {
-        //Tests do nothing at moment while being fixed and merged.. 17/01
+
         
         [Given(@"the count of live course runs matches number of course runs displayed")]
         public void GivenTheCountOfLiveCourseRunsMatchesNumberOfCourseRunsDisplayed()
@@ -65,6 +65,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveOpenendTheMainQualTypeAccordian()
         {
             ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
+            ViewCourseRunsPage.OpenMainAccordians();
             
         }
 
@@ -72,6 +73,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveOpennedTheSecondaryCourseAccordian()
         {
             ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
+            ViewCourseRunsPage.OpenQualificationAccordians();
         }
 
         [When(@"I add up the number of course runs displayed")]
@@ -81,6 +83,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
 
 
+        [Given(@"I have accessed my courses")]
+        public void GivenIHaveAccessedMyCourses()
+        {
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses();
+            ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
+        }
 
 
 
