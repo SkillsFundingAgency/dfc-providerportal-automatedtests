@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
+      <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-6074 AddCourse - Page 2.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +95,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-5112-5114 AddProviderSearchUKRLP.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Provider Management\DFC-6494 Search Provider.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-6494 Search Provider.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature.cs">
       <AutoGen>True</AutoGen>
@@ -157,6 +165,7 @@
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
+    <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
@@ -174,10 +183,10 @@
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
-    <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
-    <Compile Include="StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
+    <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
@@ -275,6 +284,10 @@
     <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5112-5114 AddProviderSearchUKRLP.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Provider Management\DFC-6494 Search Provider.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6494 Search Provider.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

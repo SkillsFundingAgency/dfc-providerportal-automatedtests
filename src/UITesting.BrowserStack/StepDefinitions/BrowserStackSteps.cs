@@ -1,6 +1,7 @@
 ﻿using System;
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.Pages.Venue_Management;
+using UITesting.ProviderPortal.Pages.Provider_Management;
 using UITesting.BrowserStack.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
@@ -8,14 +9,15 @@ using System.Linq;
 
 namespace UITesting.BrowserStack.StepDefinitions
 {
+    //[Scope(Tag = "Venues")]
     [Binding]
-    public class AddVenueSteps
+    public class BrowserStackSteps
     {
         //private IWebDriver _driver;
         public static IWebDriver webDriver;
         readonly BrowserStackDriver _bsDriver;
 
-        public AddVenueSteps()
+        public BrowserStackSteps()
         {
 
             if (!ScenarioContext.Current.ScenarioInfo.Tags.Contains("Regression"))
@@ -29,11 +31,11 @@ namespace UITesting.BrowserStack.StepDefinitions
         }
 
 
-        [Given(@"I have navigated to the Venues page using (.*) and (.*)")]
+        [Given(@"I have navigated to the Home page using (.*) and (.*)")]
         public void GivenIAmOnTheLandingPage(string profile, string environment)
         {
             webDriver = _bsDriver.Init(profile, environment);
-            webDriver.Navigate().GoToUrl(Configurator.GetConfiguratorInstance().GetBaseUrlVenues());
+            webDriver.Navigate().GoToUrl(Configurator.GetConfiguratorInstance().GetBaseUrl());
             PageInteractionHelper.SetDriver(webDriver);
         }
 
@@ -44,6 +46,7 @@ namespace UITesting.BrowserStack.StepDefinitions
            // webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
         }
 
+        #region Venues
         [Given(@"I have navigated to the Your Venues Pages")]
         public void NavigateToYourVenuesPage()
         {
@@ -197,6 +200,32 @@ namespace UITesting.BrowserStack.StepDefinitions
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             viewAllLiveVenuesPage.SearchProvider(ukprn);
         }
+        #endregion Venues
+
+        #region Provider
+        [Given(@"I have navigated to the Search Provider Page")]
+        public void GivenIAmOnSearchAProviderPage()
+        {
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl();
+        }
+
+
+        [When(@"I enter (.*) and click search provider")]
+        public void WhenIEnterAndClickSearchProvider(string UKPRN)
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+            searchProviderPage.EnterUKPRN(UKPRN);
+            searchProviderPage.ClickSearchButton();
+        }
+
+        [When(@"I click to view my courses")]
+        public void WhenIClickToViewMyCourses()
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+            searchProviderPage.ClickViewCoursesButton();
+        }
+        #endregion Provider
+
 
     }
 }

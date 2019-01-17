@@ -2,23 +2,34 @@
 using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.TestSupport;
 using UITesting.ProviderPortal.Pages.Course_Management;
+using UITesting.ProviderPortal.Pages.Provider_Management;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 {
     [Binding]
-    public class ViewURL_CostDescSteps: BaseTest  
+    public class ViewURL_CostDescSteps : BaseTest 
     {
-        [Given(@"I have accessed Your courses Page")]
-        public void GivenIHaveAccessedYourCoursesPage()
+        [Given(@"I have accessed course directory")]
+        public void GivenIHaveAccessedCourseDirectory()
         {
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
-            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+        }
+        
+        [Given(@"I have entered ""(.*)"" and clicked search provider")]
+        public void GivenIHaveEnteredAndClickedSearchProvider(string UKPRN)
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+            searchProviderPage.EnterUKPRN(UKPRN);
+            searchProviderPage.ClickSearchButton();
+            searchProviderPage.ClickViewCoursesButton();
         }
         
         [Given(@"I have clicked view URL Link")]
         public void GivenIHaveClickedViewURLLink()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickMainDiplomaDetail();
+            viewYourCoursesPage.ClickCourseDetailLink();
             viewYourCoursesPage.ClickViewURL();
         }
         
@@ -26,6 +37,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveClickedTheCourseCostDescription()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickMainDiplomaDetail();
+            viewYourCoursesPage.ClickCourseDetailLink();
             viewYourCoursesPage.ClickCourseCostDescriptionLink();
         }
         
