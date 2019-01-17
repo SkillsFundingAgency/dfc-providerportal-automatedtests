@@ -24,6 +24,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
         private By courseDescriptionPopup = By.Id("popup-descript");
         private By firstCourseRunsCount = By.XPath("//*[@id='main-content']/div/div/div[2]/div/span");
+        //accordian function
+        private By accordianMainOpenIconXPath = By.XPath("//*[@id='main - content']/div/div/div[2]/div/h2");
+
+
+        static int runningTotalRuns;
+        static int runningTotalByQual;
 
 
         public ViewCourseRunsPage(IWebDriver webDriver) : base(webDriver)
@@ -40,55 +46,62 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
 
             // retrieve the number of course runs as displayed
+            // this is no longer useful
             String courseRunCount = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
-
-            Console.WriteLine("Course Runs for first course: " + courseRunCount);
 
         }
 
-        internal void NumberOfDisplayedCourseRuns()
+
+
+
+        public void AddCourseRunsCourseLevel()
         {
 
             // retrieve the number of course runs as displayed
             String courseRunCount = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
 
-
             int runningTotalRuns = 0;
             int thisRunNumber = 0;
             int grandTotalRunsShown = 0;
+
+
             String firstPartOfField = "";
 
+            //Get all the matching Run Numbers into ILists
+            IList<IWebElement> subTotals = webDriver.FindElements(By.XPath("//*[@id='main-content']/div/div/div[2]/div/ul[*]/li[2]/span"));
 
-            IList<IWebElement> all = webDriver.FindElements(By.ClassName("govuk-body"));
 
-            String totalRunsShownString = all[0].Text.Substring(1,1);
-            //Console.WriteLine("Total Runs:" + totalRunsShownString);
+
+            //Convert the substring Texts (x) to int x
+            String sumTotalRunsShownString = subTotals[0].Text.Substring(1, 1);
 
             try
             {
-                grandTotalRunsShown = Int32.Parse(totalRunsShownString);
+                grandTotalRunsShown = Int32.Parse(sumTotalRunsShownString);
             }
             catch (FormatException e)
             {
                 Console.WriteLine(e.Message);
             }
 
+
+            //Add up Run sub-totals by course eg; HND in Maths, etc
+
             String runsForIndividualCourse;
 
-            int i = 0;  //start after total and ignore £ values
-            foreach (IWebElement webElement in all)
+            int i = 0;  //add-subTotals - ignore £ values
+            foreach (IWebElement webElement in subTotals)
             {
-                firstPartOfField = all[i].Text.Substring(0, 1);
- 
+                firstPartOfField = subTotals[i].Text.Substring(0, 1);
 
-                if (firstPartOfField.Equals("(") && i>0)   //assume totals are in brackets eg (3) and ignore main total
+                if (firstPartOfField.Equals("("))   //assume totals are in brackets eg (3) 
                 {
-                    runsForIndividualCourse = all[i].Text.Substring(1, 1);
-                    
+                    runsForIndividualCourse = subTotals[i].Text.Substring(1, 1);
+
                     try
                     {
                         thisRunNumber = Int32.Parse(runsForIndividualCourse);
-
+                        //Console.WriteLine("This Course Total:" + thisRunNumber);
                     }
                     catch (FormatException e)
                     {
@@ -101,14 +114,108 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                 i++;
             }
 
-            Console.WriteLine("Grand total added up=" + runningTotalRuns);
+            Console.WriteLine("Number of runs found by Course=" + runningTotalRuns);
 
-            if (!runningTotalRuns.Equals(grandTotalRunsShown))
-                {
-                Assert.Fail("Total runs at top of screen doesn't match sub totals");
-                }
 
         }
+
+
+
+
+
+        public void AddCourseRunsQualLevel()
+        {
+
+            // retrieve the number of course runs as displayed
+            String courseRunCount = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
+
+            int runningTotalByQual = 0;
+            int thisRunNumber = 0;
+            int grandTotalRunsShown = 0;
+
+            String firstPartOfField = "";
+
+            //Get all the matching Run Numbers into ILists
+            IList<IWebElement> mainTotals = webDriver.FindElements(By.XPath("//*[@id='main-content']/div/div/div[2]/div/span"));
+
+
+
+            //Convert the substring Texts (x) to int x
+            String sumTotalRunsShownString = mainTotals[0].Text.Substring(1, 1);
+
+            try
+            {
+                grandTotalRunsShown = Int32.Parse(sumTotalRunsShownString);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+            //Add up main Run totals by Qualification Type eg; Degree, Diploma
+
+            String runsByQualificationType;
+
+            int j = 0;  //add-mainTotals - ignore £ values
+            foreach (IWebElement webElement in mainTotals)
+            {
+                firstPartOfField = mainTotals[j].Text.Substring(0, 1);
+
+                if (firstPartOfField.Equals("("))   //assume totals are in brackets eg (3) 
+                {
+                    runsByQualificationType = mainTotals[j].Text.Substring(1, 1);
+
+                    try
+                    {
+                        thisRunNumber = Int32.Parse(runsByQualificationType);
+                        //Console.WriteLine("This Qual Total:" + thisRunNumber);
+                    }
+                    catch (FormatException e)
+                    {
+                    Console.WriteLine(e.Message);
+                    }
+
+                runningTotalByQual = runningTotalByQual + thisRunNumber;
+
+                }
+
+            j++;
+
+            }
+
+            Console.WriteLine("Number of runs expected by Qual Type=" + runningTotalByQual);
+
+
+        }
+
+        public void CompareTotals()
+        {
+            //Compare the 2 run totals are the same
+            Console.WriteLine(">>" + runningTotalByQual + " " + runningTotalRuns);
+            if (!runningTotalRuns.Equals(runningTotalByQual))
+            {
+                Assert.Fail("Total runs by Qual Type doesn't match run number by course");
+            }
+            else if(runningTotalRuns.Equals(runningTotalByQual))
+            {
+                Console.WriteLine("Totals Match OK");
+            }
+            
+        }
+        private void OpenAllAccordians()
+        {
+            //first store all the accordian open icon xpaths into an IList[x]
+            IList<IWebElement> subTotals = webDriver.FindElements(By.XPath(accordianMainOpenIconXPath+"[*]"));
+
+
+            //cycle through and expand until last accordian open icon
+
+        }
+
+        
+
     }
+
 }
 

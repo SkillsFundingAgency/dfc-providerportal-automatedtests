@@ -16,8 +16,16 @@ Background:
 	Then I want to view the course details
 
 @CI
-Scenario: Sum of course runs displayed for run matches the total course runs expected
-	Given The first course displayed has a count of total live course runs
-	 And the count of live course runs matches number of course runs displayed
+Scenario: Sum of course runs displayed matches the runs expected totalled by qualification level
+	Given I have added up the number of runs expected for each qualification level
+	 And I have added up the total runs for each course
+	 Then The total number of runs by course matches the total by qualification level
 
+
+@CI
+Scenario: Open Qual type accordian and then open second Course accordian
+Given I have openend the main Qual Type accordian
+And I have openned the secondary Course accordian
+When I add up the number of course runs displayed
+Then The total number of runs by course matches the total by qualification level
 

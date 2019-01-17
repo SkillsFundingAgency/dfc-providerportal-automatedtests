@@ -10,15 +10,15 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class ViewAllLiveVenuesPage : TestSupport.BasePage 
     {
-        private static String PAGE_TITLE = "Your Venues";
-        private static String PAGE_TITLE_ELEMENT = "//*[@id='main-content']/div/div[1]/div/div/h1";
+        private static String PAGE_TITLE = "Venue Search";//Your Venues
+        private static String PAGE_TITLE_ELEMENT = "govuk-heading-l";//"//*[@id='main-content']/div/div[1]/div/div/h1"
         private static String VENUE_DATA = "//*[@id='live']/div[1]/label";  //*[@id="live"]/div[1]/label
         private static String ARCH_TAB= "//*[@id='tab_archived']";
         private static String ADD_VENUE_BUTTON = "//*[@id='venueSearchResultForm']/div/div/div/div[2]/button";
         private By venueBanner = By.XPath(".//*[@id='qual']");
         private By firstRecord = By.XPath(".//*[@id='live']/div[1]/label");
-        private By prnText = By.Id("UKPrn");
-        private By searchButton = By.Id("search");
+        private By prnText = By.Id("SearchTerm");//UKPrn
+        private By searchButton = By.Id("venueProvider");//search
         private By firstEditlink = By.XPath(".//*[@id='live']/div[1]/label/a[1]");
 
         Models.Venue_Management.Venue_Data VenueData = new Models.Venue_Management.Venue_Data();
@@ -38,7 +38,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             webDriver.FindElement(prnText).SendKeys(UKPRNNO.ToString());
             webDriver.FindElement(searchButton).Click();
             PageInteractionHelper.TurnOnSleep();
-            PageInteractionHelper.VerifyPageTitle(webDriver.FindElement(By.XPath(PAGE_TITLE_ELEMENT)).Text, PAGE_TITLE);
+            //PageInteractionHelper.VerifyPageTitle(webDriver.FindElement(By.XPath(PAGE_TITLE_ELEMENT)).Text, PAGE_TITLE);
+            PageInteractionHelper.VerifyPageTitle(webDriver.FindElement(By.ClassName(PAGE_TITLE_ELEMENT)).Text, PAGE_TITLE);
         }
         internal void CheckEditLink()
         {
