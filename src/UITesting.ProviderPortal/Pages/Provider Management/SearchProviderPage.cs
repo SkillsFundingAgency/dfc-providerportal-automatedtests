@@ -41,6 +41,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         {
             PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(ViewCoursesButton);
+            PageInteractionHelper.WaitForPageToLoad();
             return new ViewYourCoursesPage(webDriver);
         }
 

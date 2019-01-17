@@ -1,28 +1,17 @@
-﻿Feature: Add Venue
-
-As a user
-I need to commit the add venue record
-so that the new venue record is committed to the CD database
+﻿Feature: Search Provider
+	In order to view provider details
+	As a provider
+	I want to be able to search for providers
 
 
 @BrowserStack
-Scenario Outline: Add Venue Details
+Scenario Outline: Search a Provider
 	Given I have navigated to the Home page using <profile> and <environment>
-	And I have navigated to the Your Venues Pages
-	When I enter 10043577 and click search
-	When I click Add Venue
-	Then I am on the Add Venue page
-	And the Add Venue page displays the expected content
-	When I enter the following postcode b13 9da
-	And I click Find Address
-	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
-	And I enter venue name Test Venue
-	And I click continue to confirm page
-	When I am on the Add Venue Confirm details page
-	And On the Confirmation Page I click continue
+	And I have navigated to the Search Provider Page
+	When I enter 10028015 and click search provider
+	And I click to view my courses
 
-	Examples:
+Examples:
 		| profile  | environment    |
 		| parallel | chrome70win10  |
 		| parallel | chrome69win10  |
@@ -59,4 +48,3 @@ Scenario Outline: Add Venue Details
 		#| parallel | ipad           | # real devices
 		#| parallel | iphone         | # real devices
 		#| parallel | android        | # real devices
-
