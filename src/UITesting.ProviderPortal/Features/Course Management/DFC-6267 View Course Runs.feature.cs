@@ -79,17 +79,17 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
  testRunner.And("I have searched for a PRN Number \"UKPRN Number\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
  testRunner.Given("I have accessed my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
- testRunner.Then("I want to view the course details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Sum of course runs displayed for run matches the total course runs expected")]
+        [NUnit.Framework.DescriptionAttribute("Sum of course runs displayed matches the runs expected totalled by qualification " +
+            "level")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SumOfCourseRunsDisplayedForRunMatchesTheTotalCourseRunsExpected()
+        public virtual void SumOfCourseRunsDisplayedMatchesTheRunsExpectedTotalledByQualificationLevel()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sum of course runs displayed for run matches the total course runs expected", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sum of course runs displayed matches the runs expected totalled by qualification " +
+                    "level", null, new string[] {
                         "CI"});
 #line 19
 this.ScenarioInitialize(scenarioInfo);
@@ -97,9 +97,39 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 20
- testRunner.Given("The first course displayed has a count of total live course runs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I have openend the main Qual Type accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
-  testRunner.And("the count of live course runs matches number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I have openned the secondary Course accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.And("I have added up the number of runs expected for each qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+  testRunner.And("I have added up the total runs for each course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+  testRunner.Then("The total number of runs by course matches the total by qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Open Qual type accordian and then open second Course accordian")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void OpenQualTypeAccordianAndThenOpenSecondCourseAccordian()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Qual type accordian and then open second Course accordian", null, new string[] {
+                        "CI"});
+#line 28
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line 29
+testRunner.Given("I have openend the main Qual Type accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+testRunner.And("I have openned the secondary Course accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+testRunner.When("I add up the number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+testRunner.Then("The total number of runs by course matches the total by qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
