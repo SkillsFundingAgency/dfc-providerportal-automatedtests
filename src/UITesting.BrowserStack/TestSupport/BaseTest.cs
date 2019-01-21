@@ -109,11 +109,14 @@ namespace UITesting.BrowserStack.TestSupport
                 if (stepType == "Given")
                     scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
                 else if (stepType == "When")
+                {
                     scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
+                    TakeScreenshotOnFailure();
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioStepContext.Current.StepInfo.Text).AddScreenCaptureFromPath(screenshotPath);
+                }
                 else if (stepType == "Then")
                 {
-                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail((ScenarioContext.Current.TestError.Message)
-                                                                                            + (ScenarioContext.Current.TestError.StackTrace));
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail((ScenarioContext.Current.TestError.Message) + (ScenarioContext.Current.TestError.StackTrace));
                     TakeScreenshotOnFailure();
                     scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioStepContext.Current.StepInfo.Text).AddScreenCaptureFromPath(screenshotPath);
                 }

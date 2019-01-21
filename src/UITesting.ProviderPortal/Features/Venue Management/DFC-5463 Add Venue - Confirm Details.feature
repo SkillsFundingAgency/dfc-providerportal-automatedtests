@@ -6,8 +6,12 @@ so that I can amend the details or confirm that the venue details are correct
 
 Background:
 	Given I have logged into course directory as a provider
-	And I have navigated to the Your Venues Pages
-	When I enter 10028015 and click search
+	## Use Provider Search to Navigate o course for a Provider
+	And I have navigated to the Search Provider Page
+	When I enter 10028015 and click search provider
+	And I click to view my courses
+	## End of Provider Search Steps
+	Given I have navigated to the Your Venues Pages
 	When I click Add Venue
 	Then I am on the Add Venue page
 	And the Add Venue page displays the expected content
