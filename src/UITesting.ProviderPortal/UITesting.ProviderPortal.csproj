@@ -56,6 +56,11 @@
     <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
       <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-4827 Edit Course Name.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4827 Edit Course Name.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-6074 AddCourse - Page 2.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +169,7 @@
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
+    <Compile Include="Pages\Course Management\EditYourCoursePage.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
@@ -182,6 +188,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
@@ -252,6 +259,10 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="Features\Course Management\DFC-4827 Edit Course Name.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4827 Edit Course Name.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-6074 AddCourse - Page 2.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
