@@ -22,5 +22,50 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
+
+        internal void SearchQual(string qualName)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void SearchCourseName(string courseName)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void SelectCourseRunName(string oldCourseRunName)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void ChangeCourseName(string newCourseName)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void SaveCourseName()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void ValidateButtons()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void ValidateSavedData()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void ValidateErrorMessage(string errMessage)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void ValidateSpacesData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
