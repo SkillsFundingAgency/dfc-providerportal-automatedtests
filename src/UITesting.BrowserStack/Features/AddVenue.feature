@@ -8,8 +8,12 @@ so that the new venue record is committed to the CD database
 @BrowserStack
 Scenario Outline: Add Venue Details
 	Given I have navigated to the Home page using <profile> and <environment>
-	And I have navigated to the Your Venues Pages
-	When I enter 10043577 and click search
+	## Use Provider Search to Navigate o course for a Provider
+	And I have navigated to the Search Provider Page
+	When I enter 10028015 and click search provider
+	And I click to view my courses
+	## End of Provider Search Steps
+	Given I have navigated to the Your Venues Pages
 	When I click Add Venue
 	Then I am on the Add Venue page
 	And the Add Venue page displays the expected content
@@ -47,15 +51,15 @@ Scenario Outline: Add Venue Details
 		| parallel | ie11win10      |
 		| parallel | ie11win81      |
 		| parallel | ie11win7       |
-		| parallel | ie10win7       |
+	   #| parallel | ie10win7       | # not supported
 	   #| parallel | ie9win7        | # not supported
 	   #| parallel | ie8win7        | # not supported
 		| parallel | edge17win10    |
 		| parallel | edge16win10    |
 		| parallel | safari12macos  |
-		#| parallel | safari11macos  | # safari webtoolkit needs to be applied
-		#| parallel | safari10macos  | # safari webtoolkit needs to be applied
-		#| parallel | safari9macos   | # safari webtoolkit needs to be applied
+	   #| parallel | safari11macos  | # safari webtoolkit needs to be applied
+	   #| parallel | safari10macos  | # safari webtoolkit needs to be applied
+	   #| parallel | safari9macos   | # safari webtoolkit needs to be applied
 		#| parallel | ipad           | # real devices
 		#| parallel | iphone         | # real devices
 		#| parallel | android        | # real devices
