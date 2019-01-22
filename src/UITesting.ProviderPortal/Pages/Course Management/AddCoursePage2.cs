@@ -2,6 +2,7 @@
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
+using System.Diagnostics;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -44,13 +45,73 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By DurationError = By.Id("DurationLength-error");
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
-
         private string errortxt;
+
+        //Shivani Added
+
+        private By selectOnline = By.Id("Online");
+        private By selectVenueOption = By.Id("VenueItemsCheckboxList");
+        private By selectTimeOption = By.Id("time");
+        private By selectModeOption = By.Id("mode");
+        private By flexibleStartDateOption = By.Id("FlexibleStartDate");
 
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
         }
+
+        public AddCoursePage2 clickOnline()
+        {
+            FormCompletionHelper.ClickElement(selectOnline);
+            return new AddCoursePage2(webDriver);
+
+        }
+
+        public AddCoursePage2 selectVenueIsDisplayed()
+        {
+            PageInteractionHelper.WaitForElementToBePresent(selectVenueOption);
+            PageInteractionHelper.IsElementDisplayed(selectVenueOption);
+            Debug.WriteLine("I can see Select Venue Field before clicking Online option");
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 timeIsDisplayed()
+        {
+            PageInteractionHelper.WaitForElementToBePresent(selectTimeOption);
+            PageInteractionHelper.IsElementDisplayed(selectTimeOption);
+            Debug.WriteLine("I can see Full Time Part Time field before clicking Online option");
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 modeIsDisplayed()
+        {
+            PageInteractionHelper.WaitForElementToBePresent(selectModeOption);
+            PageInteractionHelper.IsElementDisplayed(selectModeOption);
+            Debug.WriteLine("I can Attendance field before clicking Online option");
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 selectVenueIsNotDisplayed()
+        {
+            PageInteractionHelper.VerifyElementNotPresent(selectVenueOption);
+            Debug.WriteLine("I cannot see Select Venue field after clicking Online option");
+            return new AddCoursePage2(webDriver);
+        }
+        public AddCoursePage2 timeIsNotDisplayed()
+        {
+            PageInteractionHelper.VerifyElementNotPresent(selectTimeOption);
+            Debug.WriteLine("I cannot see Full Time Part Time field after clicking Online option");
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 modeIsNotDisplayed()
+        {
+            PageInteractionHelper.VerifyElementNotPresent(selectModeOption);
+            Debug.WriteLine("I cannot see Mode field after clicking Online option");
+            return new AddCoursePage2(webDriver);
+        }
+
+
 
         protected override bool SelfVerify()
         {
