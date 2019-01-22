@@ -4,6 +4,11 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using UITesting.Framework.Helpers;
+//km
+using AventStack.ExtentReports.Reporter;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+//km
 
 namespace UITesting.BrowserStack.TestSupport
 {
@@ -12,14 +17,34 @@ namespace UITesting.BrowserStack.TestSupport
     {
         protected static IWebDriver webDriver;
         public BrowserStackDriver bsDriver;
-        //private string[] tags;
         private static string screenshotPath;
-
+        //km
+        private static ExtentTest featureName;
+        private static ExtentTest scenario;
+        private static ExtentReports extent;
+        protected static string reportLocation;
+        //km
 
         [BeforeTestRun]
-        public static void BeforeTestRun()
+        //km
+        public static void InitializeReport(object sender, EventArgs e)
         {
-            //TODO
+            //Create extent report
+            string reportPath = "\\BrowserStackReports\\";
+            reportLocation = FileSystemHelper.CreateFilePath(reportPath);
+            var htmlReporter = new ExtentHtmlReporter(reportLocation);
+            htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+            htmlReporter.Config.DocumentTitle = reportLocation;
+            extent = new ExtentReports();
+            extent.AttachReporter(htmlReporter);
+            extent.AddSystemInfo("Test Environment", Configurator.GetConfiguratorInstance().GetBaseUrl());
+        }
+        //km
+
+        [BeforeFeature]
+        public static void BeforeFeature()
+        {
+            featureName = extent.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
         }
 
 
@@ -27,7 +52,8 @@ namespace UITesting.BrowserStack.TestSupport
         public void BeforeScenarioBrowserStack()
         {
             bsDriver = new BrowserStackDriver(ScenarioContext.Current);
-            ScenarioContext.Current["bsDriver"] = bsDriver;           
+            ScenarioContext.Current["bsDriver"] = bsDriver;
+            scenario = featureName.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
         }
 
 
@@ -44,7 +70,80 @@ namespace UITesting.BrowserStack.TestSupport
 
             PageInteractionHelper.SetDriver(webDriver);
         }
-        
+
+
+        [BeforeScenarioBlock]
+        public void BeforeScenarioBlock()
+        {
+            //TO DO
+        }
+
+
+        [BeforeStep]
+        public void BeforeStep()
+        {
+            //TO DO
+        }
+
+
+        [AfterStep]
+        public static void InsertReportingSteps(object sender, EventArgs e)
+        {
+            var stepType = ScenarioStepContext.Current.StepInfo.StepDefinitionType.ToString();
+
+            if (ScenarioContext.Current.TestError == null)
+            {
+                if (stepType == "Given")
+                    scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text);
+                else if (stepType == "When")
+                    scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text);
+                else if (stepType == "Then")
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text);
+                else if (stepType == "And")
+                    scenario.CreateNode<And>(ScenarioStepContext.Current.StepInfo.Text);
+                else if (stepType == "But")
+                    scenario.CreateNode<But>(ScenarioStepContext.Current.StepInfo.Text);
+            }
+            else if (ScenarioContext.Current.TestError != null)
+            {
+                if (stepType == "Given")
+                    scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
+                else if (stepType == "When")
+                {
+                    scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
+                    TakeScreenshotOnFailure();
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioStepContext.Current.StepInfo.Text).AddScreenCaptureFromPath(screenshotPath);
+                }
+                else if (stepType == "Then")
+                {
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail((ScenarioContext.Current.TestError.Message) + (ScenarioContext.Current.TestError.StackTrace));
+                    TakeScreenshotOnFailure();
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioStepContext.Current.StepInfo.Text).AddScreenCaptureFromPath(screenshotPath);
+                }
+                else if (stepType == "And")
+                    scenario.CreateNode<And>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
+                else if (stepType == "But")
+                    scenario.CreateNode<But>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
+            }
+
+            if (ScenarioContext.Current.ScenarioExecutionStatus.ToString() == "StepDefinitionPending")
+            {
+                if (stepType == "Given")
+                    scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Skip("Step Definition Pending");
+                else if (stepType == "When")
+                    scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Skip("Step Definition Pending");
+                else if (stepType == "Then")
+                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Skip("Step Definition Pending");
+            }
+        }
+
+
+        [AfterScenarioBlock]
+        public void AfteScenarioBlock()
+        {
+            //TO DO
+        }
+
 
         [AfterScenario, Scope(Tag = "BrowserStack")]
         public void AfterScenarioBrowserStack()
@@ -52,7 +151,7 @@ namespace UITesting.BrowserStack.TestSupport
             bsDriver.Cleanup();
         }
 
-
+               
         [AfterScenario, Scope(Tag = "Regression")]
         public void AfterScenario()
         {
@@ -69,7 +168,7 @@ namespace UITesting.BrowserStack.TestSupport
         [AfterTestRun]
         public static void TearDown()
         {
-            //TODO
+            extent.Flush();
         }
 
         public static void TakeScreenshotOnFailure()

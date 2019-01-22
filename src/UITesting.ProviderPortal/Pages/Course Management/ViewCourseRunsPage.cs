@@ -10,6 +10,7 @@ using System.Collections;
 using OpenQA.Selenium.Support.UI;
 using NUnit.Framework;
 
+
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
 
@@ -25,7 +26,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionPopup = By.Id("popup-descript");
         private By firstCourseRunsCount = By.XPath("//*[@id='main-content']/div/div/div[2]/div/span");
         //accordian function
-        private By accordianMainOpenIconXPath = By.XPath("//*[@id='main - content']/div/div/div[2]/div/h2");
+        public By accordianMainOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[*]");               //* - array id
+        private By accordianQualOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[2]/div/div[*]/ul/li[1]/h3");  //* - array id
 
 
         static int runningTotalRuns;
@@ -203,17 +205,22 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             }
             
         }
-        private void OpenAllAccordians()
+
+
+        public void OpenMainAccordians()
         {
-            //first store all the accordian open icon xpaths into an IList[x]
-            IList<IWebElement> subTotals = webDriver.FindElements(By.XPath(accordianMainOpenIconXPath+"[*]"));
 
-
-            //cycle through and expand until last accordian open icon
+            PageInteractionHelper.OpenAccordians(accordianMainOpenIconXPath);
 
         }
 
-        
+        public void OpenQualificationAccordians()
+        {
+
+            PageInteractionHelper.OpenAccordians(accordianQualOpenIconXPath);
+            //Thread.Sleep(20000);
+
+        }
 
     }
 

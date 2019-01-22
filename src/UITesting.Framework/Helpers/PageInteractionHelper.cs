@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -237,5 +238,34 @@ namespace UITesting.Framework.Helpers
         {
             Thread.Sleep(10000);
         }
+
+
+        public static void OpenAccordians(By accordianIconXPath)
+        {
+            //first store all the accordian-open icon xpaths into an IList[x]
+            IList<IWebElement> mainAccordianLinks = webDriver.FindElements(accordianIconXPath);
+
+            //cycle through and expand until last accordian-open icon
+
+            int i = 0;
+
+            foreach (IWebElement webElement in mainAccordianLinks)
+            {
+                try
+                {
+                    mainAccordianLinks[i].Click();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+                i++;
+
+            }
+
+        }
+
+
     }
 }

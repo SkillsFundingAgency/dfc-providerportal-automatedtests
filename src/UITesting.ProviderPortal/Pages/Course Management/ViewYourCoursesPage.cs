@@ -13,6 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     public class ViewYourCoursesPage : TestSupport.BasePage
     {
         private static String PAGE_TITLE = "Your courses";
+        private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");       //first one in list '0'
         private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
@@ -107,7 +108,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
-            SelfVerify();
+            if (!PageInteractionHelper.IsElementPresent(successMsg))
+            {
+                SelfVerify();
+            }           
         }
 
         internal void ClickCloseCostDescription()
@@ -117,6 +121,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 

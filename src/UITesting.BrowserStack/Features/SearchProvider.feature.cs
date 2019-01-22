@@ -96,7 +96,6 @@ namespace UITesting.BrowserStack.Features
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win81", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "ie10win7", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge17win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge16win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "safari12macos", null)]

@@ -1,32 +1,37 @@
-﻿Feature: Add Venue
+﻿Feature: Add Course
 
-As a user
-I need to commit the add venue record
-so that the new venue record is committed to the CD database
+As a User
+I need to provide the mandatory information
+so that I can add a course
 
 
 @BrowserStack
-Scenario Outline: Add Venue Details
+Scenario Outline: Add a Course
 	Given I have navigated to the Home page using <profile> and <environment>
-	## Use Provider Search to Navigate o course for a Provider
+	## Use Provider Search to Navigate to course for a Provider
 	And I have navigated to the Search Provider Page
 	When I enter 10028015 and click search provider
 	And I click to view my courses
 	## End of Provider Search Steps
-	Given I have navigated to the Your Venues Pages
-	When I click Add Venue
-	Then I am on the Add Venue page
-	And the Add Venue page displays the expected content
-	When I enter the following postcode b13 9da
-	And I click Find Address
-	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
-	And I enter venue name Test Venue
-	And I click continue to confirm page
-	When I am on the Add Venue Confirm details page
-	And On the Confirmation Page I click continue
+	Given I have accessed the Qualifications page	
+	And I have entered a Qualification Name "Biology"
+	And I click the link to Add Qualification
+	And I have specified who the course is for Semi-qualified (people)
+	And I have entered the entry requirements 1. Industry experience
+	And I have entered what the student will learn Student will learn about the subject 
+	When I click Next Button
+	When I enter the following in the course name field Course test
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I select the first venue in the venues list
+	And I click Publish
 
-	Examples:
+Examples:
 		| profile  | environment    |
 		| parallel | chrome70win10  |
 		| parallel | chrome69win10  |
@@ -63,4 +68,3 @@ Scenario Outline: Add Venue Details
 		#| parallel | ipad           | # real devices
 		#| parallel | iphone         | # real devices
 		#| parallel | android        | # real devices
-
