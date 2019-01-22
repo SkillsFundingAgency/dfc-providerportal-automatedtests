@@ -16,13 +16,13 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
         
         [Given(@"I have searched for UKPRN ""(.*)"" and clicked search")]
-        public void GivenIHaveSearchedForUKPRNAndClickedSearch(string UkPRN)
+        public void GivenIHaveSearchedForUKPRNAndClickedSearch(string ukPRN)
         {
             SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
-            searchProviderPage.EnterUKPRN(UkPRN);
-            searchProviderPage.ClickSearchButton();          
+            searchProviderPage.EnterUKPRN(ukPRN);
+            searchProviderPage.ClickSearchButton();
         }
-        
+
         [Given(@"I have clicked View Courses button")]
         public void GivenIHaveClickedViewCoursesButton()
         {
@@ -31,31 +31,30 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
         
         [Given(@"I have searched for a Qualification ""(.*)""")]
-        public void GivenIHaveSearchedForAQualification(string QualName)
+        public void GivenIHaveSearchedForAQualification(string qualName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.SearchQual(QualName);
+            editYourCoursePage.SearchQual(qualName);
         }
-        
+
         [Given(@"I have searched for a course name ""(.*)""")]
         public void GivenIHaveSearchedForACourseName(string CourseName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
             editYourCoursePage.SearchCourseName(CourseName);
         }
-        
-        [Given(@"I have searched for a course runs with a course name ""(.*)""")]
+
         public void GivenIHaveSearchedForACourseRunsWithACourseName(string OldCourseRunName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
             editYourCoursePage.SelectCourseRunName(OldCourseRunName);
         }
-        
-        [Given(@"I have changed the course name to ""(.*)""")]
-        public void GivenIHaveChangedTheCourseNameTo(string NewCourseName)
+
+        [Given(@"I have changed the course name from ""(.*)"" to ""(.*)""")]
+        public void GivenIHaveChangedTheCourseNameFromTo(string oldCourseRunName, string newCourseRunName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ChangeCourseName(NewCourseName);
+            editYourCoursePage.ChangeCourseName(oldCourseRunName, newCourseRunName);
         }
         
         [When(@"I Click Save")]
@@ -68,7 +67,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Then(@"I want to view my courses")]
         public void ThenIWantToViewMyCourses()
         {
-           // ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
         }
         
         [Then(@"Save , Discard and preview buttons should be visible")]
@@ -78,25 +77,25 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             editYourCoursePage.ValidateButtons();
         }
         
-        [Then(@"the new course name should be saved")]
-        public void ThenTheNewCourseNameShouldBeSaved()
+        [Then(@"the new course name should be saved as ""(.*)""")]
+        public void ThenTheNewCourseNameShouldBeSavedAs(string newCourseName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ValidateSavedData();
+            editYourCoursePage.ValidateSavedData(newCourseName);
         }
-        
+
         [Then(@"the Error message should be displayed ""(.*)""")]
         public void ThenTheErrorMessageShouldBeDisplayed(string errMessage)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
             editYourCoursePage.ValidateErrorMessage(errMessage);
         }
-        
-        [Then(@"the course name should be saved without leading or trailing spaces")]
-        public void ThenTheCourseNameShouldBeSavedWithoutLeadingOrTrailingSpaces()
+
+        [Then(@"the course name should be saved without leading or trailing spaces as ""(.*)""")]
+        public void ThenTheCourseNameShouldBeSavedWithoutLeadingOrTrailingSpaces(string newCourseName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ValidateSpacesData();
+            editYourCoursePage.ValidateSpacesData(newCourseName);
         }
     }
 }

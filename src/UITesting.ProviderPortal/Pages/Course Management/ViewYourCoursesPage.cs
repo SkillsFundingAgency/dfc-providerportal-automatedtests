@@ -45,7 +45,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         //private By courseFor = By.Id("CourseFor");
         //private By entryRequirements = By.Id("EntryRequirements");
-
+        //accordian function
+        public By accordianMainOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[*]");               //* - array id
+        private By accordianQualOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[2]/div/div[*]/ul/li[1]/h3");  //* - array id
 
 
         //private By whatWillLearn = By.Id("WhatWillLearn");
@@ -334,6 +336,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                 Thread.Sleep(2000);
 
             }
+
+        }
+        public void OpenMainAccordians()
+        {
+
+            PageInteractionHelper.OpenAccordians(accordianMainOpenIconXPath);
+
+        }
+
+        public void OpenQualificationAccordians()
+        {
+
+            PageInteractionHelper.OpenAccordians(accordianQualOpenIconXPath);
+            //Thread.Sleep(20000);
 
         }
 

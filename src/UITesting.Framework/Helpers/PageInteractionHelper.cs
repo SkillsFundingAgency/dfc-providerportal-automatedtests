@@ -239,33 +239,59 @@ namespace UITesting.Framework.Helpers
             Thread.Sleep(10000);
         }
 
-
         public static void OpenAccordians(By accordianIconXPath)
         {
             //first store all the accordian-open icon xpaths into an IList[x]
             IList<IWebElement> mainAccordianLinks = webDriver.FindElements(accordianIconXPath);
-
             //cycle through and expand until last accordian-open icon
-
             int i = 0;
-
             foreach (IWebElement webElement in mainAccordianLinks)
             {
                 try
                 {
-                    mainAccordianLinks[i].Click();
+                    mainAccordianLinks[i].Click(); 
+                    
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
-
                 i++;
-
+            }        
+        }  
+        public static Boolean VerifyAccordianText(By locator, string accordianText)
+        {
+            IList<IWebElement> AccordianLinkText = webDriver.FindElements(locator);
+            int i = 0;
+            foreach(IWebElement webElement in AccordianLinkText)
+            {
+                if(AccordianLinkText[i].Text.Contains(accordianText))
+                    {
+                    AccordianLinkText[i].Click();
+                    return true;
+                    }
+                 i++;
             }
-
+            throw new Exception("Text verification failed: "
+                + accordianText + "\n Not Found: ");
         }
+        public static Boolean VerifyCourseRunValue(By locator, string CourseRunValue)
+        {
+            /* Verifies the value of a field in a course run*/
 
-
+            IList<IWebElement> AccordianLinkText = webDriver.FindElements(locator);
+            int i = 0;
+            foreach (IWebElement webElement in AccordianLinkText)
+            {
+                if (AccordianLinkText[i].GetAttribute("value").Contains(CourseRunValue))
+                {
+                    return true;
+                }
+                i++;
+            }
+            throw new Exception("Text verification failed: "
+                + CourseRunValue + "\n Not Found: ");
+        }
+        
     }
 }

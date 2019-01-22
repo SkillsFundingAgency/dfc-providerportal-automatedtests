@@ -28,8 +28,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         //accordian function
         public By accordianMainOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[*]");               //* - array id
         private By accordianQualOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[2]/div/div[*]/ul/li[1]/h3");  //* - array id
-
-
+        
+ 
         static int runningTotalRuns;
         static int runningTotalByQual;
 
@@ -52,9 +52,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             String courseRunCount = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
 
         }
-
-
-
 
         public void AddCourseRunsCourseLevel()
         {
