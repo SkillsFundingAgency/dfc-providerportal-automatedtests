@@ -36,7 +36,7 @@ Examples:
 		| parallel | ie11win10      |
 		| parallel | ie11win81      |
 		| parallel | ie11win7       |
-		| parallel | ie10win7       |
+	   #| parallel | ie10win7       | # not supported
 	   #| parallel | ie9win7        | # not supported
 	   #| parallel | ie8win7        | # not supported
 		| parallel | edge17win10    |

@@ -1,10 +1,13 @@
 ﻿using OpenQA.Selenium;
 using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UITesting.Framework.Helpers;
+using System.Web;
+using TechTalk.SpecFlow;
 
 namespace UITesting.ProviderPortal.Pages.Qualification_Management
 {
@@ -24,7 +27,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private By LevelLabel = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[3]/div/div[1]/p[2]");
         private By AwardBodyLabel = By.XPath("//*[@id='LarsSearchResultContainer']/div/div[3]/div/div[1]/p[3]");
         private By ClearFilters = By.Id("ClearAllFilters");
-        private By FirstFilter = By.XPath(".//*[@id='NotionalNVQLevelv2Filter-0']");
+        private By FirstFilter = By.CssSelector("#NotionalNVQLevelv2Filter-0");
 
         public SearchforQualificationPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -34,27 +37,27 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
-        internal void CheckSearchTermField()
+        public void CheckSearchTermField()
         {
             PageInteractionHelper.IsElementPresent(LARSSearchTerm);
         }
-        internal void EnterLARS_QANNumber(string searchTerm)
+        public void EnterLARS_QANNumber(string searchTerm)
         {
             FormCompletionHelper.EnterText(LARSSearchTerm, searchTerm);
         }
-        internal void CheckValidationMessage(string validationMsg)
+        public void CheckValidationMessage(string validationMsg)
         {
             PageInteractionHelper.VerifyText(SearchValidationMsg, validationMsg);
         }
-        internal  void LookForQualificationLevelFilter(string QualLevelFilterName)
+        public void LookForQualificationLevelFilter(string QualLevelFilterName)
         {
             PageInteractionHelper.VerifyText(QualLevelFilter, QualLevelFilterName);
         }
-        internal void LookForAwardingBodyFilter(string AwardBodyFilterName)
+        public void LookForAwardingBodyFilter(string AwardBodyFilterName)
         {
             PageInteractionHelper.VerifyText(AwardBodyFilter, AwardBodyFilterName);
         }
-        internal void CheckAddQualificationLink()
+        public void CheckAddQualificationLink()
         {
             PageInteractionHelper.VerifyElementPresent(AddQualLink);
         }
@@ -64,30 +67,35 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
             FormCompletionHelper.ClickElement(AddQualLink);
         }
 
-        internal void ClickQualLevelFilter()
+        public void ClickQualLevelFilter()
         {
             //FormCompletionHelper.IsElementPresent(QualLevelFilter);
         }
 
-        internal void CheckResultsMessage(string resultsMsg)
+        public void CheckResultsMessage(string resultsMsg)
         {
           //  FormCompletionHelper.VerifyText(ResultsMessage, resultsMsg);
         }
 
-        internal void ValidateLabels(string lARSQAN_Lbl, string levelLbl, string awardBodyLbl)
+        public void ValidateLabels(string lARSQAN_Lbl, string levelLbl, string awardBodyLbl)
         {
             FormCompletionHelper.VerifyText(LARSQANlabel, lARSQAN_Lbl);
             FormCompletionHelper.VerifyText(LevelLabel, levelLbl);
             FormCompletionHelper.VerifyText(AwardBodyLabel, awardBodyLbl);
         }
 
-        internal void ClearAllFilters()
+        public void ClearAllFilters()
         {
             PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(ClearFilters, 10);
+            //if (!FormCompletionHelper.IsElementDisplayed(ClearFilters))
+            //{
+            //    Thread.Sleep(3000);
+            //}
             FormCompletionHelper.ClickElement(ClearFilters);
         }
 
-        internal SearchforQualificationPage FiltersCleared()
+        public SearchforQualificationPage FiltersCleared()
         {
             PageInteractionHelper.WaitForPageToLoad();
             if (!(webDriver.FindElement(ClearFilters).Displayed))
@@ -97,10 +105,21 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
             return new SearchforQualificationPage(webDriver);
         }
 
-        internal SearchforQualificationPage ClickFirstFilter()
+        public SearchforQualificationPage ClickFirstFilter()
         {
+            if (webDriver.GetType().Name.ToString().Contains("RemoteWebDriver"))
+            {
+                Thread.Sleep(3000);
+                var element = this.webDriver.FindElement(FirstFilter);
+                ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
+            }
+            else
+            {
+                PageInteractionHelper.WaitForPageToLoad();
+                FormCompletionHelper.ClickElement(FirstFilter);
+            }
+
             PageInteractionHelper.WaitForPageToLoad();
-            FormCompletionHelper.ClickElement(FirstFilter);
             return new SearchforQualificationPage(webDriver);
         }
 

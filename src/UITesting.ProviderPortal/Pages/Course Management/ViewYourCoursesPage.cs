@@ -13,6 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     public class ViewYourCoursesPage : TestSupport.BasePage
     {
         private static String PAGE_TITLE = "Your courses";
+        private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");       //first one in list '0'
         private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
@@ -31,7 +32,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         private By MainDiplomaDetailLink = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[1]");
         private By CourseDetailLink = By.XPath("  //*[@id='main-content']/div/div/div[2]/div/div[1]/ul[1]/li[1]/h3");
-      
+
         private By closeViewCourseDescriptionPopup = By.Id("popup-descript-close");   //XPath("//*[@id=\"close-preview\"]"); 
 
 
@@ -54,44 +55,49 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         //private By howAssessed = By.Id("HowAssessed");
         //private By nextSteps = By.Id("WhereNext");
         private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
-     
+
 
         //Shivani added - Line2
-        private By verifyCourseTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) label.govuk-label");
-        private By CourseTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) input");
 
-        private By verifyIDTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(2) label.govuk-label");
-        private By IDTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(2) input");
+        private By openInnerchevron = By.CssSelector("h3.accordion.govuk-heading-l:nth-of-type(1).active");
+        private By openchevron = By.CssSelector("h2.accordion.govuk-heading-l:nth-of-type(1).active");
 
-        private By verifyDeliveryTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(3) label.govuk-label");
-        private By deliveryTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(3) select#deliveryMode");
+        private By verifyCourseTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[1]/label");
 
-        private By verifyStartDateTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(4) label.govuk-label");
-        private By startDateTitleInputBox = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[4]/div");
+       //private By CourseTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) input");
 
-        private By verifyVenueTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(5) label.govuk-label");
-        private By venueTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(5) select#VenueId");
+        private By verifyIDTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[2]/label");
+        // private By IDTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(2) input");
 
-        private By verifyURLTitle = By.XPath("//*[@id='course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba']/div[6]/label");
-        private By urlTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#URLLink");
+        private By verifyDeliveryTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[3]/label");
+        //private By deliveryTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(3) select#deliveryMode");
 
-        private By verifyCostTitle = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[7]/label");
-        private By costTitleInputBox = By.CssSelector("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[7]/input");
+        //private By verifyStartDateTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(4) label.govuk-label");
+        //private By startDateTitleInputBox = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[4]/div");
 
-        private By verifyCostDescriptionTitle = By.XPath("//*[@id='course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba']/div[8]/label");
-        private By costDescriptionTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#CostDetailLink");
+        private By verifyVenueTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[5]/label");
+        //private By venueTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(5) select#VenueId");
 
-        private By verifyDurationTitle = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[9]/label");
-        private By durationTitleInputBox = By.CssSelector("//*[@id='courseRun_DurationValue']");
+        private By verifyURLTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[6]/label");
+        //private By urlTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#URLLink");
 
-        private By verifyDurationUnitTitle = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[10]/label");
-        private By durationUnitTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#durationUnit");
+        private By verifyCostTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[7]/div/label");
+        //private By costTitleInputBox = By.CssSelector("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[7]/input");
 
-        private By verifyAttendanceTitle = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[11]/label");
-        private By attendanceTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#attendance");
+        private By verifyCostDescriptionTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[8]/label");
+        //private By costDescriptionTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#CostDetailLink");
 
-        private By verifyModeTitle = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[12]/label");
-        private By modeTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#mode");
+        private By verifyDurationTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[9]/label");
+        // private By durationTitleInputBox = By.CssSelector("//*[@id='courseRun_DurationValue']");
+
+        private By verifyDurationUnitTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[10]/label");
+        //private By durationUnitTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#durationUnit");
+
+        private By verifyAttendanceTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[11]/label");
+        //private By attendanceTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#attendance");
+
+        private By verifyModeTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[12]/label");
+        //private By modeTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#mode");
 
 
 
@@ -102,7 +108,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
-            SelfVerify();
+            if (!PageInteractionHelper.IsElementPresent(successMsg))
+            {
+                SelfVerify();
+            }           
         }
 
         internal void ClickCloseCostDescription()
@@ -112,6 +121,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -245,29 +255,47 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         }
 
         //Shivani Line2
+
+
+        internal void clickChevron()
+        {
+            FormCompletionHelper.ClickElement(openchevron);
+            Thread.Sleep(2000);
+
+        }
+
+        internal void clickInnerChevron()
+        {
+            FormCompletionHelper.ClickElement(openInnerchevron);
+            Thread.Sleep(2000);
+        }
+
+
         internal void courseNameLabelText(string courseLabel)
         {
             if (courseLabel == "Course name")
             {
-                PageInteractionHelper.VerifyText(verifyCourseTitle, courseLabel);
-                PageInteractionHelper.IsElementPresent(CourseTitleInputBox);
+                PageInteractionHelper.VerifyText(verifyCourseTitle, "Course name");
+                //PageInteractionHelper.IsElementPresent(CourseTitleInputBox);
 
             }
             if (courseLabel == "ID")
             {
-                PageInteractionHelper.VerifyText(verifyIDTitle, courseLabel);
-                PageInteractionHelper.IsElementPresent(IDTitleInputBox);
+                PageInteractionHelper.VerifyText(verifyIDTitle, "ID");
+                //PageInteractionHelper.IsElementPresent(IDTitleInputBox);
             }
             if (courseLabel == "Delivery")
             {
                 PageInteractionHelper.VerifyText(verifyDeliveryTitle, courseLabel);
 
             }
-            if (courseLabel == "Start Date")
+
+            /*if (courseLabel == "Start Date")
             {
                 PageInteractionHelper.VerifyText(verifyStartDateTitle, courseLabel);
                 PageInteractionHelper.IsElementPresent(startDateTitleInputBox);
-            }
+            }*/
+
             if (courseLabel == "Venue")
             {
                 PageInteractionHelper.VerifyText(verifyVenueTitle, courseLabel);
@@ -275,12 +303,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             if (courseLabel == "Cost")
             {
                 PageInteractionHelper.VerifyText(verifyCostTitle, courseLabel);
-                PageInteractionHelper.IsElementPresent(costTitleInputBox);
+                //PageInteractionHelper.IsElementPresent(costTitleInputBox);
             }
             if (courseLabel == "Duration")
             {
                 PageInteractionHelper.VerifyText(verifyDurationTitle, courseLabel);
-                PageInteractionHelper.IsElementPresent(durationTitleInputBox);
+                //PageInteractionHelper.IsElementPresent(durationTitleInputBox);
             }
             if (courseLabel == "Duration Unit")
             {
@@ -297,59 +325,60 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             }
 
 
+            
+                } 
+
+            /*internal void checkDropDownBoxes(string dropDown)
+            {
+                if (dropDown == "Delivery")
+                {
+                    FormCompletionHelper.ClickElement(deliveryTitleDropDown);
+                    Thread.Sleep(2000);
+
+                }
+                if (dropDown == "Venue")
+                {
+                    FormCompletionHelper.ClickElement(venueTitleDropDown);
+                    Thread.Sleep(2000);
+
+                }
+                if (dropDown == "Duration Unit")
+                {
+                    FormCompletionHelper.ClickElement(durationUnitTitleDropDown);
+                    Thread.Sleep(2000);
+
+                }
+                if (dropDown == "Attendance")
+                {
+                    FormCompletionHelper.ClickElement(attendanceTitleDropDown);
+                    Thread.Sleep(2000);
+
+                }
+                if (dropDown == "Mode")
+                {
+                    FormCompletionHelper.ClickElement(modeTitleDropDown);
+                    Thread.Sleep(2000);
+
+                    FormCompletionHelper.ClickElement(modeTitleDropDown);
+                    Thread.Sleep(2000);
+
+                }
+
+            }
+
+            internal void checkhyperLinkTitle(string hyperlink)
+            {
+                if (hyperlink == "URL")
+                {
+                    PageInteractionHelper.VerifyText(verifyURLTitle, hyperlink);
+                }
+
+                if (hyperlink == "Cost Description")
+                {
+                    PageInteractionHelper.VerifyText(verifyCostDescriptionTitle, hyperlink);
+                }
+            }*/
+
         }
-
-        internal void checkDropDownBoxes(string dropDown)
-        {
-            if (dropDown == "Delivery")
-            {
-                FormCompletionHelper.ClickElement(deliveryTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Venue")
-            {
-                FormCompletionHelper.ClickElement(venueTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Duration Unit")
-            {
-                FormCompletionHelper.ClickElement(durationUnitTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Attendance")
-            {
-                FormCompletionHelper.ClickElement(attendanceTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Mode")
-            {
-                FormCompletionHelper.ClickElement(modeTitleDropDown);
-                Thread.Sleep(2000);
-
-                FormCompletionHelper.ClickElement(modeTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-
-        }
-
-        internal void checkhyperLinkTitle(string hyperlink)
-        {
-            if (hyperlink == "URL")
-            {
-                PageInteractionHelper.VerifyText(verifyURLTitle, hyperlink);
-            }
-
-            if (hyperlink == "Cost Description")
-            {
-                PageInteractionHelper.VerifyText(verifyCostDescriptionTitle, hyperlink);
-            }
-        }
-
-    }
 }
 
