@@ -103,6 +103,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
+            PageInteractionHelper.WaitForPageToLoad();
             if (!PageInteractionHelper.IsElementPresent(successMsg))
             {
                 SelfVerify();
