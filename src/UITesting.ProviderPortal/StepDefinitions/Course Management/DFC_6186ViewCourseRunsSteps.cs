@@ -56,7 +56,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void ThenTheTotalNumberOfRunsByCourseMatchesTheTotalByQualificationLevel()
         {
             ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
-            //ViewCourseRunsPage.CompareTotals();
+            ViewCourseRunsPage.CompareTotals();
 
         }
 
@@ -80,6 +80,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void WhenIAddUpTheNumberOfCourseRunsDisplayed()
         {
             ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
+            //int numberOfRunsShown = countUpAllCourseRunsShown();
+            ViewCourseRunsPage.CountUpAllCourseRunsShown();
         }
 
 
@@ -88,6 +90,15 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         {
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses();
             ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
+        }
+
+
+        [When(@"I get the main total of course runs from the main heading")]
+        public void WhenIGetTheMainTotalOfCourseRunsFromTheMainHeading()
+        {
+            ViewCourseRunsPage ViewCourseRunsPage = new ViewCourseRunsPage(webDriver);
+            ViewCourseRunsPage.StoreLiveCourseRunCount();
+
         }
 
 
