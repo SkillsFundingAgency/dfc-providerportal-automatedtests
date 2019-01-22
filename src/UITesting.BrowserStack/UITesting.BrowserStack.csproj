@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\AddCourse.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddCourse.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\AddVenue.feature.cs">
       <DependentUpon>AddVenue.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -66,6 +71,10 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\AddCourse.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddCourse.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\AddVenue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
