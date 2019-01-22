@@ -73,41 +73,15 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         public virtual void FeatureBackground()
         {
 #line 6
-#line 12
- testRunner.Given("I have accessed the Course Directory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 13
- testRunner.And("I have searched for a PRN Number \"UKPRN Number\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
- testRunner.Given("I have accessed my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+ testRunner.Given("I have accessed the Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+ testRunner.And("I have navigated to the Search Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.When("I enter 10028015 and click search provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.And("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Sum of course runs displayed matches the runs expected totalled by qualification " +
-            "level")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SumOfCourseRunsDisplayedMatchesTheRunsExpectedTotalledByQualificationLevel()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sum of course runs displayed matches the runs expected totalled by qualification " +
-                    "level", null, new string[] {
-                        "CI"});
-#line 19
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 20
-testRunner.Given("I have openend the main Qual Type accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
-testRunner.And("I have openned the secondary Course accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
- testRunner.And("I have added up the number of runs expected for each qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-  testRunner.And("I have added up the total runs for each course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
-  testRunner.Then("The total number of runs by course matches the total by qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -117,18 +91,20 @@ testRunner.And("I have openned the secondary Course accordian", ((string)(null))
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Qual type accordian and then open second Course accordian", null, new string[] {
                         "CI"});
-#line 28
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 29
+#line 25
 testRunner.Given("I have openend the main Qual Type accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 30
+#line 26
 testRunner.And("I have openned the secondary Course accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 27
 testRunner.When("I add up the number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 28
+testRunner.And("I get the main total of course runs from the main heading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
 testRunner.Then("The total number of runs by course matches the total by qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -59,7 +59,9 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenueConfirmAddressPage ClickContinueConfirm()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(continueButton);
+            PageInteractionHelper.WaitForPageToLoad();
             return new AddVenueConfirmAddressPage(webDriver);
         }
 

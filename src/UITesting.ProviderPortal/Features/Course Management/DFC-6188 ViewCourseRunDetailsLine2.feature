@@ -3,10 +3,16 @@ As a User
 I need to view the Course Runs (line 2) of the course details within the Your Courses screen
 so that I can review the course details
 
+Background:
+   Given I have accessed course directory
+	And I have entered 10028015 and click search provider
+	##And I have entered "10043577" and clicked search provider
+	##Then I want to view the course details
+
 @CI 
 Scenario: For individual course, system displays the following course run details for Line 2
 	
-	Given I am on Your Course Screen Line Two
+	Given I am on Your Course Screen Line Two and click line one
 	Then I would see a text input box with title "Course name"
 	And  I would see a text input box with title "ID"
 	And  I would see a text input box with title "Delivery"
