@@ -58,6 +58,7 @@
     <Compile Include="Helpers\PageInteractionHelper.cs" />
     <Compile Include="Helpers\RandomDataGenerator.cs" />
     <Compile Include="Helpers\SqlDatabaseConnectionHelper.cs" />
+    <Compile Include="Helpers\WebDriverExtensions.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

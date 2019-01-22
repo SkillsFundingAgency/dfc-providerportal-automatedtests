@@ -112,6 +112,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 

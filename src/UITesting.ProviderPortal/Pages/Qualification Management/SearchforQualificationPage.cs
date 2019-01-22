@@ -87,10 +87,11 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         public void ClearAllFilters()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            if (!FormCompletionHelper.IsElementDisplayed(ClearFilters))
-            {
-                Thread.Sleep(3000);
-            }
+            webDriver.FindElementWait(ClearFilters, 10);
+            //if (!FormCompletionHelper.IsElementDisplayed(ClearFilters))
+            //{
+            //    Thread.Sleep(3000);
+            //}
             FormCompletionHelper.ClickElement(ClearFilters);
         }
 
