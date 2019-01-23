@@ -23,6 +23,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By PreviewLink = By.LinkText("Preview");
         private static By CourseRunNameText = By.Id("courseRun_CourseName");        
         private static By CourseNameErrMessage = By.Id("courseRun_CourseName-error");
+        
 
         /*End DFC-4827-variables*/
 
@@ -36,29 +37,25 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        internal void SearchQual(string qualName)
+        internal void ClickQual()
         {
-            //PageInteractionHelper.OpenAccordians(QualChevron);
-            PageInteractionHelper.VerifyAccordianText(QualChevron, qualName);
+            PageInteractionHelper.OpenAccordians(QualChevron);           
             
         }
-
-        internal void SearchCourseName(string courseName)
+        internal void ClickCourseName()
         {
-            //PageInteractionHelper.OpenAccordians(CourseChevron);
-            PageInteractionHelper.VerifyAccordianText(CourseChevron, courseName);
+            PageInteractionHelper.OpenAccordians(CourseChevron);           
+        }
+        internal void SelectCourseRunName()
+        {
+
+            FormCompletionHelper.ClickElement(CourseRunNameText);
         }
 
-        internal void SelectCourseRunName(string oldCourseRunName)
+        internal void ChangeCourseName(string newCourseRunName)
         {
+            FormCompletionHelper.EnterText(CourseRunNameText, newCourseRunName);           
             
-            //PageInteractionHelper.VerifyText(CourseRunNameText, oldCourseRunName);
-            PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, oldCourseRunName);
-        }
-
-        internal void ChangeCourseName(string oldCourseRunName, string newCourseRunName)
-        {
-            //FormCompletionHelper.EnterText(CourseRunNameText, oldCourseRunName,  newCourseRunName);
         }
 
         internal void SaveCourseName()
@@ -75,17 +72,23 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void ValidateSavedData(string newCourseName)
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.OpenAccordians(QualChevron);
+            PageInteractionHelper.OpenAccordians(CourseChevron);
+            PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, newCourseName);
+            
         }
 
         internal void ValidateErrorMessage(string errMessage)
         {
             PageInteractionHelper.VerifyText(CourseNameErrMessage, errMessage);
+            
         }
 
         internal void ValidateSpacesData(string newCourseName)
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.OpenAccordians(QualChevron);
+            PageInteractionHelper.OpenAccordians(CourseChevron);
+            PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, newCourseName);
         }
     }
 }

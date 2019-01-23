@@ -27,11 +27,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Given(@"I have clicked view URL Link")]
         public void GivenIHaveClickedViewURLLink()
         {
-            
-            ViewCourseRunsPage viewCourseRunsPage = new ViewCourseRunsPage(webDriver);
-            viewCourseRunsPage.OpenMainAccordians();
-            viewCourseRunsPage.OpenQualificationAccordians();
+
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickMainDiplomaDetail();
+            viewYourCoursesPage.ClickCourseDetailLink();
             viewYourCoursesPage.ClickViewURL();
         }
         
@@ -39,12 +38,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveClickedTheCourseCostDescription()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-            viewYourCoursesPage.OpenMainAccordians();
-            viewYourCoursesPage.OpenQualificationAccordians();
-            //ViewCourseRunsPage viewCourseRunsPage = new ViewCourseRunsPage(webDriver);
-            //viewCourseRunsPage.OpenMainAccordians();
-            //viewCourseRunsPage.OpenQualificationAccordians();
-
+            viewYourCoursesPage.ClickMainDiplomaDetail();
+            viewYourCoursesPage.ClickCourseDetailLink();
             viewYourCoursesPage.ClickCourseCostDescriptionLink();
         }
         
