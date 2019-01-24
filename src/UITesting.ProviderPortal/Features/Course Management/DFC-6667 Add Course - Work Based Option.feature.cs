@@ -18,21 +18,21 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DFC-6186 View Course Runs")]
-    public partial class DFC_6186ViewCourseRunsFeature
+    [NUnit.Framework.DescriptionAttribute("DFC-6667 Add Course - Work Based Option")]
+    public partial class DFC_6667AddCourse_WorkBasedOptionFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "DFC-6267 View Course Runs.feature"
+#line 1 "DFC-6667 Add Course - Work Based Option.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-6186 View Course Runs", "As a provider\r\nI need to view all of the course runs within a selected LARS/QAN R" +
-                    "eference course\r\nso that I can quickly review all of these related course runs", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-6667 Add Course - Work Based Option", "\tIn order to Add A Course\r\n\tAs a provider\r\n\tI want the option to make the Course " +
+                    "Work Based", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,40 +72,48 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         
         public virtual void FeatureBackground()
         {
-#line 6
+#line 7
 #line 8
  testRunner.Given("I have accessed the Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.And("I have navigated to the Search Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("I enter 10001800 and click search provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter 10028015 and click search provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
  testRunner.And("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.Given("I have accessed the Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 14
+ testRunner.And("I have entered a Qualification Name \"Biology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+ testRunner.And("I click the link to Add Qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+ testRunner.And("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+ testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Open accordian and count all course runs shown and compare with total expected")]
+        [NUnit.Framework.DescriptionAttribute("Enter Work Based Options when adding a course")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void OpenAccordianAndCountAllCourseRunsShownAndCompareWithTotalExpected()
+        public virtual void EnterWorkBasedOptionsWhenAddingACourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open accordian and count all course runs shown and compare with total expected", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Work Based Options when adding a course", null, new string[] {
                         "CI"});
-#line 24
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 7
 this.FeatureBackground();
-#line 25
-testRunner.Given("I have openend the main Qual Type accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
-testRunner.And("I have openned the secondary Course accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-testRunner.When("I add up the number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
-testRunner.And("I get the main total of course runs from the main heading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-testRunner.Then("The total number of runs by course matches the total by qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 23
+ testRunner.When("I enter the following in the course name field Course AutoTestCourseName", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+ testRunner.And("I enter the following in the cost field 999", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

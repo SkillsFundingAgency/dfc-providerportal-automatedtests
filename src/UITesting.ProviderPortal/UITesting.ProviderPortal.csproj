@@ -56,6 +56,11 @@
     <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
       <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-4830Edit Course Venue.feature.cs">
+      <DependentUpon>DFC-4830Edit Course Venue.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-4827 Edit Course Name.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +110,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6188 ViewCourseRunDetailsLine2.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Course Management\DFC-6667 Add Course - Work Based Option.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-6667 Add Course - Work Based Option.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
@@ -193,7 +203,6 @@
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
     <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManuallyPage.cs" />
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
-    <Compile Include="Pages\Course Management\ViewCourseRunsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
@@ -271,6 +280,10 @@
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
     </None>
+    <None Include="Features\Course Management\DFC-4830Edit Course Venue.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4830Edit Course Venue.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Course Management\DFC-4827 Edit Course Name.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4827 Edit Course Name.feature.cs</LastGenOutput>
@@ -310,6 +323,10 @@
     <None Include="Features\Course Management\DFC-6188 ViewCourseRunDetailsLine2.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6188 ViewCourseRunDetailsLine2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\DFC-6667 Add Course - Work Based Option.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6667 Add Course - Work Based Option.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
