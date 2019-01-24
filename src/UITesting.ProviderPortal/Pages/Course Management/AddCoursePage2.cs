@@ -3,6 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using System.Diagnostics;
+using System.Threading;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -54,6 +55,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By selectTimeOption = By.Id("time");
         private By selectModeOption = By.Id("mode");
         private By flexibleStartDateOption = By.Id("FlexibleStartDate");
+        private By venueSelector = By.Id("VenueItemsCheckboxList");
+        private By fullPartTimeButtons = By.Id("FullPartTimeRadioButtons");
+        private By attendancePatternButtons = By.Id("AttendancePatternRadioButtons");
+
+        private By workBasedOptionButton = By.Id("WorkBased");
+
 
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
@@ -474,6 +481,39 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public AddCoursePage2 SelectSecondVenue()
         {
             FormCompletionHelper.SelectCheckBox2(SecondVenue);
+            return new AddCoursePage2(webDriver);
+        }
+
+
+        public AddCoursePage2 clickWorkBasedRadioButton()
+        {
+            FormCompletionHelper.ClickElement(workBasedOptionButton);
+            Debug.WriteLine("Selected Work Based Option");
+            return new AddCoursePage2(webDriver);
+        }
+
+
+        public AddCoursePage2 verifyFlexibleStartDateSelected()
+        {
+            FormCompletionHelper.IsObjectSelected(flexibleStartDateOption);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 verifyVenueSelectionNotShown()
+        {
+            FormCompletionHelper.VerifyElementNotPresent(selectVenueOption);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 verifyAttendancePatternButtonsnotShown()
+        {
+            FormCompletionHelper.VerifyElementNotPresent(attendancePatternButtons);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 verifyFullPartTimeButtonsNotShown() //mode: fulltime or part time
+        {
+            FormCompletionHelper.VerifyElementNotPresent(fullPartTimeButtons);
             return new AddCoursePage2(webDriver);
         }
 

@@ -208,6 +208,7 @@
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_6667AddCourse_WorkBasedOptionSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />

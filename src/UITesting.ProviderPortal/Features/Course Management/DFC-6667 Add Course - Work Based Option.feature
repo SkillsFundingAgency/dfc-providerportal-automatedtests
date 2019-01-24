@@ -21,4 +21,9 @@ Background:
 @CI
 Scenario: Enter Work Based Options when adding a course
 	When I enter the following in the course name field Course AutoTestCourseName
-	And I enter the following in the cost field 999
+	And I enter the following in the cost field 999.00
+	And I click on the Work Based Option Radio Button
+	Then the flexible start date option is selected
+	And the venue selection options are not shown
+	And full time or part time options are hidden
+	And Day Night or Weekend attendance options are hidden
