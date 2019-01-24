@@ -23,7 +23,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By PreviewLink = By.LinkText("Preview");
         private static By CourseRunNameText = By.Id("courseRun_CourseName");        
         private static By CourseNameErrMessage = By.Id("courseRun_CourseName-error");
+        private static By CourseRunVenueField = By.Id("courseRun_VenueId");
         
+
 
         /*End DFC-4827-variables*/
 
@@ -78,6 +80,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             
         }
 
+        internal void ValidateSavedVenue(string venueName)
+        {
+            FormCompletionHelper.VerifyDropdownDefaultValue(CourseRunVenueField, venueName);
+//            PageInteractionHelper.VerifyCourseRunValue(CourseRunVenueField, venueName);
+        }
+
+
         internal void ValidateErrorMessage(string errMessage)
         {
             PageInteractionHelper.VerifyText(CourseNameErrMessage, errMessage);
@@ -90,5 +99,27 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.OpenAccordians(CourseChevron);
             PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, newCourseName);
         }
+
+        internal void ChangeVenueName(string venueName)
+        {
+            FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(CourseRunVenueField), 1);
+
+            switch (venueName)
+            {
+                case "Farnham Sixth Form College":
+                    FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(CourseRunVenueField), 1);
+                    break;
+
+                case "Show_Tell":
+                    FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(CourseRunVenueField), 4);
+                    break;
+
+                default:
+                    throw new Exception("Option not available");
+            }
+
+        }
+
     }
+
 }

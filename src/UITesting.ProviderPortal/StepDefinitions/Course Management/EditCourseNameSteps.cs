@@ -90,5 +90,20 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
             editYourCoursePage.ValidateSpacesData(newCourseName);
         }
+
+        [Given(@"I have changed the course venue to (.*)")]
+        public void EditVenueName(string venueName)
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.ChangeVenueName(venueName);
+        }
+
+        [Then(@"the new course venue should be saved as (.*)")]
+        public void NewCourseVenueShouldBeSaved(string venueName)
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.ValidateSavedVenue(venueName);
+        }
+
     }
 }
