@@ -198,7 +198,6 @@
     <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
     <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManuallyPage.cs" />
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
-    <Compile Include="Pages\Course Management\ViewCourseRunsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />

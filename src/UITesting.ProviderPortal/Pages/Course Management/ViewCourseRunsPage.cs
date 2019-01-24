@@ -14,7 +14,7 @@ using NUnit.Framework;
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
 
-    public class ViewCourseRunsPage : TestSupport.BasePage
+    public class ViewYourCoursesPage : TestSupport.BasePage
     {
         private static String PAGE_TITLE = "Your courses";
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");       //first one in list '0'
@@ -36,7 +36,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
 
-        public ViewCourseRunsPage(IWebDriver webDriver) : base(webDriver)
+        public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
         }
