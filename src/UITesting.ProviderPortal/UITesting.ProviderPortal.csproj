@@ -56,6 +56,11 @@
     <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
       <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-4830Edit Course Venue.feature.cs">
+      <DependentUpon>DFC-4830Edit Course Venue.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-4827 Edit Course Name.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +203,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_5844_AddCourseLine2SelectOnlineSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
@@ -269,6 +275,10 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="Features\Course Management\DFC-4830Edit Course Venue.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4830Edit Course Venue.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-4827 Edit Course Name.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

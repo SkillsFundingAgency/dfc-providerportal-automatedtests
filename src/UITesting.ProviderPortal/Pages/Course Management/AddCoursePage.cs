@@ -92,6 +92,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public AddCoursePage2 ClickNext()
         {
             FormCompletionHelper.ClickElement(nextButton);
+            PageInteractionHelper.WaitForPageToLoad();
             return new AddCoursePage2(webDriver);
         }
 

@@ -42,7 +42,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By ClickCostDescriptionLink = By.Id("CostDetailLink");
         private By ViewCostDescriptionText = By.Id("courseRun_CostDescription");
         private By ClickCostDescriptionClose = By.LinkText("Close");
-
+        public By accordianMainOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[*]/div/div/h2");
+        private By accordianQualOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[*]/div[1]/div/div/h3");
 
         //private By courseFor = By.Id("CourseFor");
         //private By entryRequirements = By.Id("EntryRequirements");
@@ -108,6 +109,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
+            PageInteractionHelper.WaitForPageToLoad();
             if (!PageInteractionHelper.IsElementPresent(successMsg))
             {
                 SelfVerify();
@@ -134,7 +136,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(ClickCostDescriptionLink);
         }
 
-
         internal void CloseURL()
         {
             FormCompletionHelper.ClickElement(ClickURLClose);
@@ -142,11 +143,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void ClickMainDiplomaDetail()
         {
-            FormCompletionHelper.ClickElement(MainDiplomaDetailLink);
+            PageInteractionHelper.OpenAccordians(accordianMainOpenIconXPath);
         }
         internal void ClickCourseDetailLink()
         {
-            FormCompletionHelper.ClickElement(CourseDetailLink);
+            PageInteractionHelper.OpenAccordians(accordianQualOpenIconXPath);
         }
 
         internal void ClickViewURL()

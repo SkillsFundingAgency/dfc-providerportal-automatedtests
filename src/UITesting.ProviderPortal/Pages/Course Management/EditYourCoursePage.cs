@@ -14,7 +14,23 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     {
         private static String PAGE_TITLE = "Your courses";
 
-        public  EditYourCoursePage(IWebDriver webDriver):base(webDriver)
+        /* DFC-4827-variables-Usman*/        
+
+        private static By QualChevron = By.XPath("//*[@id='main-content']/div/div/div[*]/div/div/h2");
+        private static By CourseChevron = By.XPath("//*[@id='main-content']/div/div/div[*]/div[1]/div/div/h3");
+        private static By SaveButton = By.Id("save-button");
+        private static By DiscardLink = By.LinkText("Discard");
+        private static By PreviewLink = By.LinkText("Preview");
+        private static By CourseRunNameText = By.Id("courseRun_CourseName");        
+        private static By CourseNameErrMessage = By.Id("courseRun_CourseName-error");
+        private static By CourseRunVenueField = By.Id("courseRun_VenueId");
+        
+
+
+        /*End DFC-4827-variables*/
+
+
+        public EditYourCoursePage(IWebDriver webDriver):base(webDriver)
         {
             SelfVerify();
         }
@@ -23,49 +39,87 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        internal void SearchQual(string qualName)
+        internal void ClickQual()
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.OpenAccordians(QualChevron);           
+            
+        }
+        internal void ClickCourseName()
+        {
+            PageInteractionHelper.OpenAccordians(CourseChevron);           
+        }
+        internal void SelectCourseRunName()
+        {
+
+            FormCompletionHelper.ClickElement(CourseRunNameText);
         }
 
-        internal void SearchCourseName(string courseName)
+        internal void ChangeCourseName(string newCourseRunName)
         {
-            throw new NotImplementedException();
-        }
-
-        internal void SelectCourseRunName(string oldCourseRunName)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void ChangeCourseName(string newCourseName)
-        {
-            throw new NotImplementedException();
+            FormCompletionHelper.EnterText(CourseRunNameText, newCourseRunName);           
+            
         }
 
         internal void SaveCourseName()
         {
-            throw new NotImplementedException();
+            FormCompletionHelper.ClickElement(SaveButton);
         }
 
         internal void ValidateButtons()
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.VerifyElementPresent(SaveButton);
+            PageInteractionHelper.VerifyElementPresent(DiscardLink);
+            PageInteractionHelper.VerifyElementPresent(PreviewLink);
         }
 
-        internal void ValidateSavedData()
+        internal void ValidateSavedData(string newCourseName)
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.OpenAccordians(QualChevron);
+            PageInteractionHelper.OpenAccordians(CourseChevron);
+            PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, newCourseName);
+            
         }
+
+        internal void ValidateSavedVenue(string venueName)
+        {
+            FormCompletionHelper.VerifyDropdownDefaultValue(CourseRunVenueField, venueName);
+//            PageInteractionHelper.VerifyCourseRunValue(CourseRunVenueField, venueName);
+        }
+
 
         internal void ValidateErrorMessage(string errMessage)
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.VerifyText(CourseNameErrMessage, errMessage);
+            
         }
 
-        internal void ValidateSpacesData()
+        internal void ValidateSpacesData(string newCourseName)
         {
-            throw new NotImplementedException();
+            PageInteractionHelper.OpenAccordians(QualChevron);
+            PageInteractionHelper.OpenAccordians(CourseChevron);
+            PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, newCourseName);
         }
+
+        internal void ChangeVenueName(string venueName)
+        {
+            FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(CourseRunVenueField), 1);
+
+            switch (venueName)
+            {
+                case "Farnham Sixth Form College":
+                    FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(CourseRunVenueField), 1);
+                    break;
+
+                case "Show_Tell":
+                    FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(CourseRunVenueField), 4);
+                    break;
+
+                default:
+                    throw new Exception("Option not available");
+            }
+
+        }
+
     }
+
 }
