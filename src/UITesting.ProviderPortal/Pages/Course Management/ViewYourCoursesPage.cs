@@ -21,13 +21,21 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
         private By courseDescriptionPopup = By.Id("popup-descript");
-        private By courseFor = By.Id("descript");
-        private By entryRequirements = By.Id("next");
-        private By whatWillLearn = By.Id("learn");
-        private By howWillLearn = By.Id("how");
-        private By equipmentNeeded = By.Id("how");
-        private By howAssessed = By.Id("how");
-        private By nextSteps = By.Id("next");
+        //private By courseFor = By.Id("descript");
+        //private By entryRequirements = By.Id("next");
+        //private By whatWillLearn = By.Id("learn");
+        //private By howWillLearn = By.Id("how");
+        //private By equipmentNeeded = By.Id("how");
+        //private By howAssessed = By.Id("how");
+        //private By nextSteps = By.Id("next");
+        //km amended identifiers for pop up course description fields
+        private By courseFor = By.Id("popup-descript-0");
+        private By entryRequirements = By.Id("popup-entry-reqs-0");
+        private By whatWillLearn = By.Id("popup-what-learn-0");
+        private By howWillLearn = By.Id("popup-how-learn-0");
+        private By equipmentNeeded = By.Id("popup-what-bring-0");
+        private By howAssessed = By.Id("popup-how-assessed-0");
+        private By nextSteps = By.Id("popup-next-0");
         private By diplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
 
         private By MainDiplomaDetailLink = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[1]");
@@ -63,41 +71,52 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By openInnerchevron = By.CssSelector("h3.accordion.govuk-heading-l:nth-of-type(1).active");
         private By openchevron = By.CssSelector("h2.accordion.govuk-heading-l:nth-of-type(1).active");
 
-        private By verifyCourseTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[1]/label");
+        //private By verifyCourseTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[1]/label");
+        private By verifyCourseTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[1]/label");
 
-       //private By CourseTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) input");
+        //private By CourseTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) input");
 
-        private By verifyIDTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[2]/label");
+        //private By verifyIDTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[2]/label");
+        private By verifyIDTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[2]/label");
         // private By IDTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(2) input");
 
-        private By verifyDeliveryTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[3]/label");
+        //private By verifyDeliveryTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[3]/label");
+        private By verifyDeliveryTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[3]/label");
         //private By deliveryTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(3) select#deliveryMode");
 
         //private By verifyStartDateTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(4) label.govuk-label");
         //private By startDateTitleInputBox = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[4]/div");
 
-        private By verifyVenueTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[5]/label");
+        //private By verifyVenueTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[5]/label");
+        private By verifyVenueTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[5]/label");
         //private By venueTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(5) select#VenueId");
 
-        private By verifyURLTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[6]/label");
+        //private By verifyURLTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[6]/label");
+        private By verifyURLTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[6]/label");
         //private By urlTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#URLLink");
 
-        private By verifyCostTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[7]/div/label");
+        //private By verifyCostTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[7]/div/label");
+        private By verifyCostTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[7]/div/label");
         //private By costTitleInputBox = By.CssSelector("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[7]/input");
 
-        private By verifyCostDescriptionTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[8]/label");
+        //private By verifyCostDescriptionTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[8]/label");
+        private By verifyCostDescriptionTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[8]/label");
         //private By costDescriptionTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#CostDetailLink");
 
-        private By verifyDurationTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[9]/label");
+        //private By verifyDurationTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[9]/label");
+        private By verifyDurationTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[9]/label");
         // private By durationTitleInputBox = By.CssSelector("//*[@id='courseRun_DurationValue']");
 
-        private By verifyDurationUnitTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[10]/label");
+        //private By verifyDurationUnitTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[10]/label");
+        private By verifyDurationUnitTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[10]/label");
         //private By durationUnitTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#durationUnit");
 
-        private By verifyAttendanceTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[11]/label");
+        //private By verifyAttendanceTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[11]/label");
+        private By verifyAttendanceTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[11]/label");
         //private By attendanceTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#attendance");
 
-        private By verifyModeTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[12]/label");
+        //private By verifyModeTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[12]/label");
+        private By verifyModeTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[12]/label");
         //private By modeTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#mode");
 
 
