@@ -7,9 +7,9 @@ Background:
 
 	Given I have accessed the Course Directory as a provider
 	And I have navigated to the Search Provider Page
-	When I enter 10028015 and click search provider
+	When I enter 10001800 and click search provider
 	And I click to view my courses
-	#Given I have accessed my courses
+	#10028015
 
 #@CI
 #Scenario: Sum of course runs displayed matches the runs expected totalled by qualification level
@@ -21,7 +21,7 @@ Background:
 
 
 @CI
-Scenario: Open Qual type accordian and then open second Course accordian
+Scenario: Open accordian and count all course runs shown and compare with total expected
 Given I have openend the main Qual Type accordian
 And I have openned the secondary Course accordian
 When I add up the number of course runs displayed

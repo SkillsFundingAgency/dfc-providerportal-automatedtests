@@ -292,6 +292,16 @@ namespace UITesting.Framework.Helpers
             throw new Exception("Text verification failed: "
                 + CourseRunValue + "\n Not Found: ");
         }
-        
+
+        public static void IsObjectSelected(By locator)
+        {
+            String attributeValue = webDriver.FindElement(locator).GetAttribute("selected");
+            if (attributeValue == "false")
+            {
+                throw new Exception("Object not selected as expected - " + attributeValue);
+            }
+        }
+
+
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UITesting.Framework.Helpers;
+using NUnit.Framework;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -14,7 +15,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     {
         private static String PAGE_TITLE = "Your courses";
         private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
-        private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");       //first one in list '0'
+        private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");     
         private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
         //elt added - View Description..
@@ -41,7 +42,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By MainDiplomaDetailLink = By.XPath("//*[@id='main-content']/div/div/div[2]/div/h2[1]");
         private By CourseDetailLink = By.XPath("  //*[@id='main-content']/div/div/div[2]/div/div[1]/ul[1]/li[1]/h3");
 
-        private By closeViewCourseDescriptionPopup = By.Id("popup-descript-close");   //XPath("//*[@id=\"close-preview\"]"); 
+        private By closeViewCourseDescriptionPopup = By.Id("popup-descript-close");   
 
 
         private By ClickViewURLLink = By.Id("URLLink");
@@ -53,16 +54,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public By accordianMainOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[*]/div/div/h2");
         private By accordianQualOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[*]/div[1]/div/div/h3");
 
-        //private By courseFor = By.Id("CourseFor");
-        //private By entryRequirements = By.Id("EntryRequirements");
+        private By firstCourseRunsCount = By.XPath("//*[@id='main-content']/div/div/div[1]/div/div/form/span");
+        private By courseRunRowXPath = By.XPath("//*[contains(@class,'govuk-grid-row course-run-container')]");
+        static int countOfRunsShown;
+        static int mainCourseRunCount;
 
-
-
-        //private By whatWillLearn = By.Id("WhatWillLearn");
-        //private By howWillLearn = By.Id("HowYouWillLearn");
-        //private By equipmentNeeded = By.Id("WhatYouNeed");
-        //private By howAssessed = By.Id("HowAssessed");
-        //private By nextSteps = By.Id("WhereNext");
         private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
 
 
@@ -118,12 +114,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         //private By verifyModeTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[12]/label");
         private By verifyModeTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[12]/label");
         //private By modeTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#mode");
-
-
-
-        //public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
-
-        //private By DiplomaAccordianLink = By.XPath("//*[@id='adminContent']/div[1]/div[1]/i");
 
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
@@ -231,6 +221,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.IsElementPresent(courseDescriptionPopup);
 
         }
+
         public ViewYourCoursesPage VerifyCourseDescriptionShown()
         {
             //Title 'Course Description' shown
@@ -346,59 +337,126 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
             
-                } 
+        }
 
-            /*internal void checkDropDownBoxes(string dropDown)
+
+
+        internal void StoreLiveCourseRunCount()
+        {
+
+            String mainTotal = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
+
+            String mainTotalString = mainTotal.Replace(")", "").Replace("(", "").Replace(" ", "");
+
+            try
             {
-                if (dropDown == "Delivery")
-                {
-                    FormCompletionHelper.ClickElement(deliveryTitleDropDown);
-                    Thread.Sleep(2000);
+                mainCourseRunCount = Int32.Parse(mainTotalString);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
-                }
-                if (dropDown == "Venue")
-                {
-                    FormCompletionHelper.ClickElement(venueTitleDropDown);
-                    Thread.Sleep(2000);
+            Console.WriteLine("Main run count: " + mainCourseRunCount);
+        }
 
-                }
-                if (dropDown == "Duration Unit")
-                {
-                    FormCompletionHelper.ClickElement(durationUnitTitleDropDown);
-                    Thread.Sleep(2000);
 
-                }
-                if (dropDown == "Attendance")
-                {
-                    FormCompletionHelper.ClickElement(attendanceTitleDropDown);
-                    Thread.Sleep(2000);
 
-                }
-                if (dropDown == "Mode")
-                {
-                    FormCompletionHelper.ClickElement(modeTitleDropDown);
-                    Thread.Sleep(2000);
 
-                    FormCompletionHelper.ClickElement(modeTitleDropDown);
-                    Thread.Sleep(2000);
+        public void CompareTotals()
+        {
+            //Compare the 2 run totals are the same
+            if (!mainCourseRunCount.Equals(countOfRunsShown))
+            {
+                Assert.Fail("Total runs shown doesn't match total at top of page");
+            }
+            else if (mainCourseRunCount.Equals(countOfRunsShown))
+            {
+                Console.WriteLine("Totals Match OK");
+            }
 
-                }
+        }
+
+
+        public void OpenMainAccordians()
+        {
+
+            PageInteractionHelper.OpenAccordians(accordianMainOpenIconXPath);
+
+        }
+
+        public void OpenQualificationAccordians()
+        {
+
+            PageInteractionHelper.OpenAccordians(accordianQualOpenIconXPath);
+
+        }
+
+        public void CountUpAllCourseRunsShown()
+        {
+            //add up number of course run rows displayed
+            IList<IWebElement> courseRunRows = webDriver.FindElements(courseRunRowXPath);
+            countOfRunsShown = courseRunRows.Count();
+
+            Console.WriteLine("Counted Runs: " + countOfRunsShown);
+
+
+        }
+
+
+
+
+        /*internal void checkDropDownBoxes(string dropDown)
+        {
+            if (dropDown == "Delivery")
+            {
+                FormCompletionHelper.ClickElement(deliveryTitleDropDown);
+                Thread.Sleep(2000);
+
+            }
+            if (dropDown == "Venue")
+            {
+                FormCompletionHelper.ClickElement(venueTitleDropDown);
+                Thread.Sleep(2000);
+
+            }
+            if (dropDown == "Duration Unit")
+            {
+                FormCompletionHelper.ClickElement(durationUnitTitleDropDown);
+                Thread.Sleep(2000);
+
+            }
+            if (dropDown == "Attendance")
+            {
+                FormCompletionHelper.ClickElement(attendanceTitleDropDown);
+                Thread.Sleep(2000);
+
+            }
+            if (dropDown == "Mode")
+            {
+                FormCompletionHelper.ClickElement(modeTitleDropDown);
+                Thread.Sleep(2000);
+
+                FormCompletionHelper.ClickElement(modeTitleDropDown);
+                Thread.Sleep(2000);
 
             }
 
-            internal void checkhyperLinkTitle(string hyperlink)
-            {
-                if (hyperlink == "URL")
-                {
-                    PageInteractionHelper.VerifyText(verifyURLTitle, hyperlink);
-                }
-
-                if (hyperlink == "Cost Description")
-                {
-                    PageInteractionHelper.VerifyText(verifyCostDescriptionTitle, hyperlink);
-                }
-            }*/
-
         }
+
+        internal void checkhyperLinkTitle(string hyperlink)
+        {
+            if (hyperlink == "URL")
+            {
+                PageInteractionHelper.VerifyText(verifyURLTitle, hyperlink);
+            }
+
+            if (hyperlink == "Cost Description")
+            {
+                PageInteractionHelper.VerifyText(verifyCostDescriptionTitle, hyperlink);
+            }
+        }*/
+
+    }
 }
 
