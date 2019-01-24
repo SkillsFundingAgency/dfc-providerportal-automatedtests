@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-4827 Edit Course Name.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-4832 Edit Cost.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4832 Edit Cost.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-5844 AddCoursePage2-SelectOnline.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -283,6 +288,10 @@
     <None Include="Features\Course Management\DFC-4827 Edit Course Name.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-4827 Edit Course Name.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\DFC-4832 Edit Cost.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4832 Edit Cost.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-5844 AddCoursePage2-SelectOnline.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
