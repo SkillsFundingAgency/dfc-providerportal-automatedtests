@@ -1148,11 +1148,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User enters valid not found postcode to Find Address")]
+        [NUnit.Framework.DescriptionAttribute("User enters valid not found postcode to Find Address - (AWAITING FIX BUG DFC-6050" +
+            ")")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UserEntersValidNotFoundPostcodeToFindAddress()
+        public virtual void UserEntersValidNotFoundPostcodeToFindAddress_AWAITINGFIXBUGDFC_6050()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid not found postcode to Find Address", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid not found postcode to Find Address - (AWAITING FIX BUG DFC-6050" +
+                    ")", null, new string[] {
                         "CI"});
 #line 318
 this.ScenarioInitialize(scenarioInfo);

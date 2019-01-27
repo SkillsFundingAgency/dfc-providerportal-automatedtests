@@ -67,6 +67,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void ValidateButtons()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             PageInteractionHelper.VerifyElementPresent(SaveButton);
             PageInteractionHelper.VerifyElementPresent(DiscardLink);
             PageInteractionHelper.VerifyElementPresent(PreviewLink);
