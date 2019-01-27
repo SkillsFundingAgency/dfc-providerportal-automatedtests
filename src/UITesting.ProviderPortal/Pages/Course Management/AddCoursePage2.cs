@@ -60,7 +60,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By attendancePatternButtons = By.Id("AttendancePatternRadioButtons");
 
         private By workBasedOptionButton = By.Id("WorkBased");
-
+        private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
+        private By courseRegionSelectorFirstField = By.Id("RegionName-1");
 
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
@@ -514,6 +515,18 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public AddCoursePage2 verifyFullPartTimeButtonsNotShown() //mode: fulltime or part time
         {
             FormCompletionHelper.VerifyElementNotPresent(fullPartTimeButtons);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 verifyCourseRegionIsShown()
+        {
+            FormCompletionHelper.IsElementPresent(courseRegionSelector);
+            return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage2 selectFirstOptionOnRegionSelector()
+        {
+            FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
             return new AddCoursePage2(webDriver);
         }
 

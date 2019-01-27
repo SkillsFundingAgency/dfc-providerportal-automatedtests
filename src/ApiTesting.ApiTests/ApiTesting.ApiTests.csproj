@@ -97,11 +97,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DFC-6667 Add Course - Work Based Option.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-6667 Add Course - Work Based Option.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\LARS.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,10 +121,6 @@
     <None Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="DFC-6667 Add Course - Work Based Option.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-6667 Add Course - Work Based Option.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\LARS.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
