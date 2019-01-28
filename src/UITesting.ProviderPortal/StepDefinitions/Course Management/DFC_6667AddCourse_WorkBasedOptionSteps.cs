@@ -47,6 +47,21 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.verifyAttendancePatternButtonsnotShown();
         }
 
+        [Then(@"the course region selection options are shown")]
+        public void ThenTheCourseRegionSelectionOptionsAreShown()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.verifyCourseRegionIsShown();
+        }
 
+        [When(@"I select the first course region option on selector")]
+        public void WhenISelectTheFirstCourseRegionOptionOnSelector()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.selectFirstOptionOnRegionSelector();
+        }
+
+
+        
     }
 }
