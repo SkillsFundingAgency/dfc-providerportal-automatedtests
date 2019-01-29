@@ -3,7 +3,6 @@ using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.TestSupport;
 using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.Pages.Provider_Management;
-using UITesting.ProviderPortal.Pages;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 {
@@ -11,31 +10,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
     public class EditCourseNameSteps :BaseTest
     {
         [Given(@"I have logged to course directory as a provider")]
-        [Given(@"I have accessed course directory as a provider")]
         public void GivenIHaveLoggedToCourseDirectoryAsAProvider()
         {
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
-            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
-            searchProviderPage.ClickLoginLink();
-        }
-
-        [Given(@"I login with (.*) and (.*)")]
-        public void LoginWithUsernameAndPassword(string user, string pass)
-        {
-            DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
-            dfESignInPage.EnterUsername(user);
-            dfESignInPage.EnterPassword(pass);
-            dfESignInPage.ClickSignIn();
-        }
-
-
-        [Then(@"I am logged in")]
-        public void ThenIAmLoggedIn()
-        {
-            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
-        }
-
-
+        }        
         [Given(@"I have searched for UKPRN ""(.*)"" and clicked search")]
         public void GivenIHaveSearchedForUKPRNAndClickedSearch(string ukPRN)
         {
@@ -43,14 +21,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             searchProviderPage.EnterUKPRN(ukPRN);
             searchProviderPage.ClickSearchButton();
         }        
-
         [Given(@"I have clicked View Courses button to see a list of courses")]
         public void GivenIHaveClickedViewCoursesButtonToSeeAListOfCourses()
         {
             SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
             searchProviderPage.ClickViewCoursesButton();
-        }
-
+        }        
         [Given(@"I have clicked the Main Qualification")]
         public void GivenIHaveClickedTheMainQualification()
         {

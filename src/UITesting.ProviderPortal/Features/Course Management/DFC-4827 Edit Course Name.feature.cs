@@ -74,20 +74,16 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         {
 #line 6
 #line 7
- testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have logged to course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And("I login with liam.wright@contractsonline.org and oCtober616!!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 10
- testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
  testRunner.And("I have clicked View Courses button to see a list of courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 10
  testRunner.And("I have clicked the Main Qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
+#line 11
  testRunner.And("I have clicked one of the courses available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 12
  testRunner.Then("I should be able to view the course runs.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
@@ -99,20 +95,20 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with valid data", null, new string[] {
                         "CI"});
-#line 16
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 17
+#line 15
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
+#line 16
  testRunner.And("I have changed the course name to \"Updated Course Name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 17
  testRunner.Then("Save , Discard and preview buttons should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 18
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 19
  testRunner.Then("the new course name should be saved as \"Updated Course Name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -125,20 +121,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with null data", null, new string[] {
                         "CI"});
-#line 23
+#line 21
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 24
+#line 22
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
+#line 23
  testRunner.And("I have changed the course name to \" \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
+#line 24
  testRunner.Then("Save , Discard and preview buttons should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 27
+#line 25
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
+#line 26
  testRunner.Then("the Error message should be displayed \"Enter Course Name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -151,20 +147,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with 255 characters", null, new string[] {
                         "CI"});
-#line 30
+#line 28
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 31
+#line 29
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 32
+#line 30
  testRunner.And(@"I have changed the course name to ""ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 31
  testRunner.Then("Save , Discard and preview buttons should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
+#line 32
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 33
  testRunner.Then(@"the new course name should be saved as ""ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -177,20 +173,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with more than 255 characters", null, new string[] {
                         "CI"});
-#line 37
+#line 35
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 38
+#line 36
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 39
+#line 37
  testRunner.And(@"I have changed the course name to ""ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVB""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
+#line 38
  testRunner.Then("Save , Discard and preview buttons should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
+#line 39
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 40
  testRunner.Then("the Error message should be displayed \"The maximum length of Course Name is 255 c" +
                     "haracters\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -204,20 +200,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with non-ascii characters", null, new string[] {
                         "CI"});
-#line 44
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 45
+#line 43
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 46
+#line 44
  testRunner.And("I have changed the course name to \"GCEЕлизавета A Level in Biology - Testing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 45
  testRunner.Then("Save , Discard and preview buttons should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 48
+#line 46
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 47
  testRunner.Then("the Error message should be displayed \"Course Name contains invalid characters\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -230,20 +226,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with trailing and leading spaces", null, new string[] {
                         "CI"});
-#line 51
+#line 49
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 52
+#line 50
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 53
+#line 51
  testRunner.And("I have changed the course name to \" Course name update 001 \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 52
  testRunner.Then("Save , Discard and preview buttons should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 55
+#line 53
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 54
  testRunner.Then("the course name should be saved without leading or trailing spaces as \"Course nam" +
                     "e update 001\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

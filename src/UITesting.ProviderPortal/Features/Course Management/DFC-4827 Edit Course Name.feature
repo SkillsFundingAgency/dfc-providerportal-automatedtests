@@ -4,10 +4,8 @@
 	I want to be able to change the course name
 
 Background:
-	Given I have accessed course directory as a provider
-	And I login with liam.wright@contractsonline.org and oCtober616!!
-	Then I am logged in
-	Given I have searched for UKPRN "10002815" and clicked search
+	Given I have logged to course directory as a provider
+	And I have searched for UKPRN "10002815" and clicked search
 	And I have clicked View Courses button to see a list of courses
 	And I have clicked the Main Qualification
 	And I have clicked one of the courses available

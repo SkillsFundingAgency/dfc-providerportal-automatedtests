@@ -74,15 +74,13 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         {
 #line 6
 #line 7
- testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
- testRunner.And("I login with liam.wright@contractsonline.org and oCtober616!!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have logged into course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I have navigated to the Search Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("I enter 10028015 and click search provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.Given("I have navigated to the Your Venues Pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden

@@ -73,27 +73,25 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         public virtual void FeatureBackground()
         {
 #line 6
-#line 7
- testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
- testRunner.And("I login with liam.wright@contractsonline.org and oCtober616!!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 9
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 10
- testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
- testRunner.Given("I have navigated to the Your Venues Pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.Given("I have logged into course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
- testRunner.When("I click Add Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have navigated to the Search Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.Then("I am on the Add Venue page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I enter 10028015 and click search provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
- testRunner.And("the Add Venue page displays the expected content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
- testRunner.When("on the Add Venue page I want to enter address manually", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
+ testRunner.Given("I have navigated to the Your Venues Pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.When("I click Add Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.Then("I am on the Add Venue page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+ testRunner.And("the Add Venue page displays the expected content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.When("on the Add Venue page I want to enter address manually", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
  testRunner.And("the Add Venue page displays the fields to enter address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
@@ -105,22 +103,22 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters all valid details", null, new string[] {
                         "CI"});
-#line 21
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 22
- testRunner.When("I enter Valid Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
- testRunner.And("I enter valid Address Line1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
- testRunner.And("I enter Town or City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.And("I Enter a Valid postcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
- testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
+ testRunner.When("I enter Valid Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.And("I enter valid Address Line1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+ testRunner.And("I enter Town or City", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+ testRunner.And("I Enter a Valid postcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
  testRunner.Then("Add Venue screen with the entered details should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -133,16 +131,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User does not enter Venue Name", null, new string[] {
                         "CI"});
-#line 29
+#line 34
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 30
+#line 35
  testRunner.When("I do not enter Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
+#line 36
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 37
  testRunner.Then("a venue name validation message should be displayed \"Enter a venue name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -155,16 +153,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User does not enter Address Line 1", null, new string[] {
                         "CI"});
-#line 34
+#line 39
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 35
+#line 40
  testRunner.When("I leave Address Line 1 as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 41
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
+#line 42
  testRunner.Then("a Address Line validation message should be displayed \"Enter address line 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -177,16 +175,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User does not enter Town or City", null, new string[] {
                         "CI"});
-#line 39
+#line 44
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 40
+#line 45
  testRunner.When("I leave Town or City as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 46
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
+#line 47
  testRunner.Then("a Town or City validation message should be displayed \"Enter a town or city\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -199,16 +197,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User does not enter PostCode", null, new string[] {
                         "CI"});
-#line 44
+#line 49
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 45
+#line 50
  testRunner.When("I leave PostCode as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
+#line 51
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 52
  testRunner.Then("a postcode validation message should be displayed \"Enter a postcode\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -221,16 +219,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User does not enter Valid PostCode", null, new string[] {
                         "CI"});
-#line 49
+#line 54
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 50
+#line 55
  testRunner.When("I enter the following PostCode \"xxxxxx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 56
  testRunner.And("I Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 57
  testRunner.Then("a valid postcode validation message should be displayed \"Postcode must be a valid" +
                     " format and only include letters a to z, numbers and spaces\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

@@ -74,18 +74,10 @@ namespace UITesting.ProviderPortal.Features.QualificationManagement
         {
 #line 6
 #line 7
- testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have accessed the Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And("I login with liam.wright@contractsonline.org and oCtober616!!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have accessed the Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 10
- testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
- testRunner.Given("I have accessed the Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 13
  testRunner.And("there is a field to enter the LARS/QAN number.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
@@ -97,23 +89,23 @@ namespace UITesting.ProviderPortal.Features.QualificationManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for a Qualification by LARS/QAN Reference Number", null, new string[] {
                         "CI"});
-#line 15
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 16
+#line 12
  testRunner.Given("I have entered LARS/QAN Number \"60060955\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 17
+#line 13
  testRunner.Then("I want to see the Qualifications listed for that LARS/QAN Number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 14
  testRunner.And("I want to see LARS/QAN number \"LARS/QAN\", Level \"Level\" and awarding body \"Awardi" +
                     "ng body\" for each qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 15
  testRunner.And("I want to see a Link to add this qualification.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
+#line 16
  testRunner.And("I want to see Qualification Level Filter \"Qualification Level\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
+#line 17
  testRunner.And("I want to see Awarding Organisation Filter on the screen \"Awarding Organisation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -126,14 +118,14 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for a Qualification when user enters an invalid search term", null, new string[] {
                         "CI"});
-#line 23
+#line 19
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 24
+#line 20
  testRunner.Given("that I have entered an invalid search term \"xxxxx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
+#line 21
  testRunner.Then("I want to see a validation message \"No records found\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -146,24 +138,24 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for a Qualification using Qualification Name", null, new string[] {
                         "CI"});
-#line 27
+#line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 28
+#line 24
  testRunner.Given("I have entered a Qualification Name \"Biology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
+#line 25
  testRunner.Then("I want to see the Qualifications listed for that LARS/QAN Number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
+#line 26
  testRunner.And("I want to see LARS/QAN number \"LARS/QAN\", Level \"Level\" and awarding body \"Awardi" +
                     "ng body\" for each qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 27
  testRunner.And("I want to see the number of results returned for the name \"Found results for Biol" +
                     "ogy\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 28
  testRunner.And("I want to see a Link to add this qualification.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 29
  testRunner.And("I want to see Level and Awarding body on the screen.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -176,14 +168,14 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select filters for Qualification Level", null, new string[] {
                         "CI"});
-#line 35
+#line 31
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 36
+#line 32
  testRunner.Given("I have retrieved results for a search term", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
+#line 33
  testRunner.And("I select one level for qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -196,14 +188,14 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select filters for Awarding Body", null, new string[] {
                         "CI"});
-#line 42
+#line 38
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 43
+#line 39
  testRunner.Given("I have retrieved results for a search term", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 44
+#line 40
  testRunner.And("I have selected one awarding body", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -216,18 +208,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Clear filters when reset is clicked", null, new string[] {
                         "CI"});
-#line 49
+#line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 50
+#line 46
  testRunner.Given("I have entered a Qualification Name \"Biology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 51
+#line 47
  testRunner.Given("I have selected filters in Qualification Level and/or Awarding body", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 52
+#line 48
  testRunner.When("I click reset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
+#line 49
  testRunner.Then("all filters should be cleared.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -4,12 +4,8 @@
 	I want to be able to search for a Qualification using LARS/QAN Reference Number 
 
 Background:
-	Given I have accessed course directory as a provider
-	And I login with liam.wright@contractsonline.org and oCtober616!!
-	Then I am logged in
-	Given I have searched for UKPRN "10002815" and clicked search
-	When I click to view my courses
-	Given I have accessed the Qualifications page	
+	Given I have accessed the Course Directory as a provider
+	And I have accessed the Qualifications page	
 	And there is a field to enter the LARS/QAN number.
 @CI
 Scenario: Search for a Qualification by LARS/QAN Reference Number
