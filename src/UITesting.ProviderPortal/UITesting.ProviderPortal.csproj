@@ -208,6 +208,7 @@
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_5844_AddCourseLine2SelectOnlineSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCostSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />

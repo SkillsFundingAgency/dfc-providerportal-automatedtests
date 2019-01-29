@@ -24,10 +24,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By CourseRunNameText = By.Id("courseRun_CourseName");        
         private static By CourseNameErrMessage = By.Id("courseRun_CourseName-error");
         private static By CourseRunVenueField = By.Id("courseRun_VenueId");
-        
-
 
         /*End DFC-4827-variables*/
+
+        /*DFC-4832-variables-Usman*/
+        private static By CostText = By.Id("cost");
+        private static By InvLengthMessage = By.Id("invalidCostLengthMessage");
 
 
         public EditYourCoursePage(IWebDriver webDriver):base(webDriver)
@@ -65,6 +67,16 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(SaveButton);
         }
 
+        internal void SelectCost()
+        {
+            FormCompletionHelper.ClickElement(CostText);
+        }
+
+        internal void EnterNewCostValue(string updCost)
+        {
+            FormCompletionHelper.EnterText(CostText, updCost);
+        }
+
         internal void ValidateButtons()
         {
             PageInteractionHelper.WaitForPageToLoad();
@@ -87,6 +99,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 //            PageInteractionHelper.VerifyCourseRunValue(CourseRunVenueField, venueName);
         }
 
+        internal void ValidateLengthMessage(string errMessage)
+        {
+            PageInteractionHelper.VerifyText(InvLengthMessage, errMessage);
+        }
 
         internal void ValidateErrorMessage(string errMessage)
         {
