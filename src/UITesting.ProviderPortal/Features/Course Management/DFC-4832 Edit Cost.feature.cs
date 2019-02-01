@@ -141,37 +141,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost with value less than 0")]
+        [NUnit.Framework.DescriptionAttribute("Update cost with a value without decimals")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostWithValueLessThan0()
+        public virtual void UpdateCostWithAValueWithoutDecimals()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with value less than 0", null, new string[] {
-                        "CI"});
-#line 28
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 29
- testRunner.Given("I have selected a course cost to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 30
- testRunner.And("I have updated the cost as \"-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
- testRunner.Then("I\'m able to view Save, Discard and Preview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 32
- testRunner.And("I press save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
- testRunner.Then("there should be an error message \"Minimum value for cost is 0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost and cost detail with null value")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostAndCostDetailWithNullValue()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost and cost detail with null value", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with a value without decimals", null, new string[] {
                         "CI"});
 #line 35
 this.ScenarioInitialize(scenarioInfo);
@@ -181,66 +155,12 @@ this.FeatureBackground();
 #line 36
  testRunner.Given("I have selected a course cost to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 37
- testRunner.And("I have updated the cost as \" \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
- testRunner.And("I have updated Cost Detail as null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
- testRunner.Then("I\'m able to view Save, Discard and Preview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
- testRunner.And("I press save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
- testRunner.Then("there should be an error message \"Enter Cost or Cost detail\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost with wrong format")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostWithWrongFormat()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with wrong format", null, new string[] {
-                        "CI"});
-#line 43
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 44
- testRunner.Given("I have selected a course cost to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 45
- testRunner.And("I have updated the cost as \"ABC\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
- testRunner.Then("I\'m able to view Save, Discard and Preview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 47
- testRunner.And("I press save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
- testRunner.Then("there should be an error message \"Enter the cost in pounds and pence\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost with a value without decimals")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostWithAValueWithoutDecimals()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with a value without decimals", null, new string[] {
-                        "CI"});
-#line 50
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 51
- testRunner.Given("I have selected a course cost to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 52
  testRunner.And("I have updated the cost as \"2000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 38
  testRunner.Then("I\'m able to view Save, Discard and Preview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 54
+#line 39
  testRunner.And("I press save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 40
  testRunner.Then("the cost should be updated with decimal places as \"2000.00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -253,20 +173,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with a value with one decimals", null, new string[] {
                         "CI"});
-#line 57
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 58
+#line 43
  testRunner.Given("I have selected a course cost to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 59
+#line 44
  testRunner.And("I have updated the cost as \"300.0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
+#line 45
  testRunner.Then("I\'m able to view Save, Discard and Preview", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 61
+#line 46
  testRunner.And("I press save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 62
+#line 47
  testRunner.Then("the cost should be updated with decimal places as \"300.00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
