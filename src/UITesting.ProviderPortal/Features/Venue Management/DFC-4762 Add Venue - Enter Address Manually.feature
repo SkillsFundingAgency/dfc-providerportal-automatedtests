@@ -4,16 +4,11 @@
 	I want to add manually without using postcode look-up
 
 Background:
-	#Given I have logged as a provider
-	#And I have navigated to Your Venues page
-	#When I have select Add Venue
-	#And on the Add Venue page I want to enter address manually
-	#And the Add Venue page displays the fields to enter address
-	Given I have logged into course directory as a provider
-	## Use Provider Search to Navigate o course for a Provider
-	And I have navigated to the Search Provider Page
-	When I enter 10028015 and click search provider
-	And I click to view my courses
+	Given I have accessed course directory as a provider
+	And I login with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have navigated to the Your Venues Pages
 	When I click Add Venue

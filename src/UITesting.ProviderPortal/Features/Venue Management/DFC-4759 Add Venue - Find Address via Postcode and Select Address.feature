@@ -5,11 +5,11 @@ I need to find an address via postcode lookup and select this address
 so that I can use the address to create a new venue in the course directory
 
 Background:
-	Given I have logged into course directory as a provider
-	## Use Provider Search to Navigate o course for a Provider
-	And I have navigated to the Search Provider Page
-	When I enter 10028015 and click search provider
-	And I click to view my courses
+	Given I have accessed course directory as a provider
+	And I login with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have navigated to the Your Venues Pages
 	When I click Add Venue

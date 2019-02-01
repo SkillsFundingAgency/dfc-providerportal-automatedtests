@@ -14,7 +14,8 @@ namespace UITesting.ProviderPortal.TestSupport
         private readonly String providerbaseUrl;
         private readonly String useBS;
         private readonly String QualUrl;
-        private readonly String YourCoursesUrl;
+         private readonly String dFEUser;
+        private readonly String dFEPassword;
         
 
         private Configurator()
@@ -26,7 +27,9 @@ namespace UITesting.ProviderPortal.TestSupport
             baseUrlVenues = ConfigurationManager.AppSettings["BaseUrlVenues"];
             baseUrlCourses = ConfigurationManager.AppSettings["BaseUrlCourses"];
             providerbaseUrl = ConfigurationManager.AppSettings["BaseUrlProviders"];
-            
+            dFEUser = ConfigurationManager.AppSettings["dFEUser"];
+            dFEPassword = ConfigurationManager.AppSettings["dFEPassword"];
+
         }
 
         public static Configurator GetConfiguratorInstance()
@@ -72,6 +75,16 @@ namespace UITesting.ProviderPortal.TestSupport
         public String GetQualUrl()
         {
             return QualUrl;
+        }
+
+        public String GetdFEUser()
+        {
+            return dFEUser;
+        }
+
+        public String GetdFEPassword()
+        {
+            return dFEPassword;
         }
 
     }

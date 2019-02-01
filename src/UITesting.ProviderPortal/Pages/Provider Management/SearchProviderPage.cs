@@ -12,6 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         private By SearchField = By.Id("SearchTerm");
         private By SearchButton = By.Id("searchProvider");
         private By ViewCoursesButton = By.Id("btnShowCourses");
+        private By LoginLink = By.LinkText("Login");
 
 
 
@@ -22,6 +23,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -36,6 +38,14 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
             FormCompletionHelper.ClickElement(SearchButton);
             return new SearchProviderPage(webDriver);
         }
+
+        public DfESignInPage ClickLoginLink()
+        {
+            FormCompletionHelper.ClickElement(LoginLink);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new DfESignInPage(webDriver);
+        }
+
 
         public ViewYourCoursesPage ClickViewCoursesButton()
         {
