@@ -42,7 +42,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By InvalidDateError = By.Id("invalidDateMessage");
         private By FlexDateRadio = By.Id("FlexibleStartDate");
         private By DurationLength = By.Id("DurationLength");
-        private By DurationUnit = By.Id("Id");
+        private By DurationUnit = By.Id("DurationUnit");
         private By DurationError = By.Id("DurationLength-error");
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
@@ -447,11 +447,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage2(webDriver);
         }
 
-        public ViewYourCoursesPage PublishCourse()
+        public AddCourseSummaryPage PublishCourse()
         {
             FormCompletionHelper.ClickElement(publishBtn);
             PageInteractionHelper.WaitForPageToLoad();
-            return new ViewYourCoursesPage(webDriver);
+            return new AddCourseSummaryPage(webDriver);
         }
 
         public AddCoursePage2 PublishCourseError()

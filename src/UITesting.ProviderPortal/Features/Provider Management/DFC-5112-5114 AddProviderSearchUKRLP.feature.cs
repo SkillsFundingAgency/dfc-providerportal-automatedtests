@@ -74,14 +74,24 @@ namespace UITesting.ProviderPortal.Features.ProviderManagement
         {
 #line 6
 #line 8
-testRunner.Given("I am on Add a Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-testRunner.Then("I should see label \"Add Provider\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I login as admin with user and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-testRunner.And("I should see another label \"Enter UKPRN number\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
-testRunner.And("I should see a text input field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
+testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+testRunner.Given("I am on Add a Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+testRunner.Then("I should see label \"Add Provider\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+testRunner.And("I should see another label \"Enter UKPRN number\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+testRunner.And("I should see a text input field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
 testRunner.And("I should see a search icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
@@ -93,28 +103,28 @@ testRunner.And("I should see a search icon", ((string)(null)), ((TechTalk.SpecFl
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid input", null, new string[] {
                         "CI"});
-#line 16
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 17
-testRunner.When("I do not put an input and click \"Find\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
-testRunner.Then("I should see an error message UKPRN required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
-testRunner.When("I enter UKPRN less than eight digits 102345", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.Then("I should see an error message UKPRN is 8 digit number starting with a 1 e.g. 1000" +
-                    "0364", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 21
-testRunner.When("I enter input which is a string of alphabets\"abcdef\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
-testRunner.Then("I should see an error message UKPRN is 8 digit number starting with a 1 e.g. 1000" +
-                    "0364", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 23
-testRunner.When("I enter UKPRN that does not start with one \"23456712\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I do not put an input and click \"Find\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
+testRunner.Then("I should see an error message UKPRN required", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 25
+testRunner.When("I enter UKPRN less than eight digits 102345", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+testRunner.Then("I should see an error message UKPRN is 8 digit number starting with a 1 e.g. 1000" +
+                    "0364", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 27
+testRunner.When("I enter input which is a string of alphabets\"abcdef\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+testRunner.Then("I should see an error message UKPRN is 8 digit number starting with a 1 e.g. 1000" +
+                    "0364", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 29
+testRunner.When("I enter UKPRN that does not start with one \"23456712\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 30
 testRunner.Then("I should see an error message UKPRN is 8 digit number starting with a 1 e.g. 1000" +
                     "0364", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -128,14 +138,14 @@ testRunner.Then("I should see an error message UKPRN is 8 digit number starting 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid input", null, new string[] {
                         "CI"});
-#line 27
+#line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 28
+#line 34
 testRunner.When("I enter a valid input \"10002370\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 35
 testRunner.Then("I should not see the error message on clicking \"Find\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -148,35 +158,35 @@ testRunner.Then("I should not see the error message on clicking \"Find\"", ((str
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid UKPRN and sees the following input", null, new string[] {
                         "CI"});
-#line 33
+#line 39
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 35
-testRunner.When("I enter a valid input \"10002370\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
-testRunner.Then("I should not see the error message on clicking \"Find\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
-testRunner.Then("The label will be \"Course Directory Status\" and the data will be \"Onboarded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
-testRunner.Then("The label will be \"UKPRN Status\" and the data value will be \"Active\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
+testRunner.When("I enter a valid input \"10002370\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
+testRunner.Then("I should not see the error message on clicking \"Find\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 45
+testRunner.Then("The label will be \"Course Directory Status\" and the data will be \"Onboarded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
+testRunner.Then("The label will be \"UKPRN Status\" and the data value will be \"Active\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 47
 testRunner.And("The label will be \"UKPRN\" and the data value will be the entered regiestration nu" +
                     "mber", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
+#line 48
 testRunner.And("The label wil be \"Name\" and the data value will be the Provider name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 49
 testRunner.And("The label will be \"Address\"and the data value will be the Provider\'s address and " +
                     "the address lines are separated by commas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
+#line 50
 testRunner.And("the label will be \"Web\" and the data value will be the Web address of provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
+#line 51
 testRunner.And("The label wll be \"Email\" and the data value will be the Provider\'s email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
+#line 52
 testRunner.And("The label will be \"Telephone\" and the data value will be the Provider\'s telephone" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 53
 testRunner.And("an \"Add Provider\" button at the bottom", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

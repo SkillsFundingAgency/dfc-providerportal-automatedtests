@@ -5,6 +5,12 @@ so that I can check that the provider has a valid record on the UK Register of L
 
 Background:  
 #Scenario: User is on Add a Provider page
+Given I have accessed course directory as a provider
+And I login as admin with user and password
+Then I am logged in
+Given I have searched for UKPRN "10002815" and clicked search
+When I click to view my courses
+## End of Provider Search Steps
 Given I am on Add a Provider Page
 Then I should see label "Add Provider"
 And I should see another label "Enter UKPRN number"

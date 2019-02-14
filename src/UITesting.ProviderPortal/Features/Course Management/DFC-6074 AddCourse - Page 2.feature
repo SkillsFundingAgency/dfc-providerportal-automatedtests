@@ -232,7 +232,6 @@ Scenario: DFC4770 User Study Mode Part-time
 Scenario: DFC4770 User Study Mode Flexible
 	When I Select study mode Flexible
 	And I enter the following in the course name field Course test
-	And I print Qualification details
 
 @CI
 Scenario: DFC6069 Select Advanced Learner Loans
