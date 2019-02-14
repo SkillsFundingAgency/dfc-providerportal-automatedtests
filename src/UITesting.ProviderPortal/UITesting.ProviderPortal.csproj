@@ -191,9 +191,11 @@
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
     <Compile Include="Pages\Course Management\EditYourCoursePage.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\DfESignInPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />

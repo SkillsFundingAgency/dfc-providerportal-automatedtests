@@ -18,16 +18,16 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
 
 
-        [Given(@"I login with (.*) and (.*)")]
+        [Given(@"I login as admin with (.*) and (.*)")]
         public void GivenILoginWithUsernameAndPassword(string user, string pass)
         {
-            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
-            searchProviderPage.ClickLoginLink();
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLogin();
 
-            DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
-            dfESignInPage.EnterUsername(Configurator.GetConfiguratorInstance().GetdFEUser());
-            dfESignInPage.EnterPassword(Configurator.GetConfiguratorInstance().GetdFEPassword());
-            dfESignInPage.ClickSignInButton();
+            LoginPage loginPage = new LoginPage(webDriver);
+            loginPage.EnterUsername(Configurator.GetConfiguratorInstance().GetadminUser());
+            loginPage.EnterPassword(Configurator.GetConfiguratorInstance().GetadminPassword());
+            loginPage.ClickLoginButton();
         }
 
         [Then(@"I am logged in")]

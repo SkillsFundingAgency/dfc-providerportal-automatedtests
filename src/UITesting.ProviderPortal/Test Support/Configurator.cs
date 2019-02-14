@@ -14,9 +14,10 @@ namespace UITesting.ProviderPortal.TestSupport
         private readonly String providerbaseUrl;
         private readonly String useBS;
         private readonly String QualUrl;
-         private readonly String dFEUser;
+        private readonly String dFEUser;
         private readonly String dFEPassword;
-        
+        private readonly String adminUser;
+        private readonly String adminPassword;
 
         private Configurator()
         {
@@ -29,6 +30,8 @@ namespace UITesting.ProviderPortal.TestSupport
             providerbaseUrl = ConfigurationManager.AppSettings["BaseUrlProviders"];
             dFEUser = ConfigurationManager.AppSettings["dFEUser"];
             dFEPassword = ConfigurationManager.AppSettings["dFEPassword"];
+            adminUser = ConfigurationManager.AppSettings["AdminUser"];
+            adminPassword = ConfigurationManager.AppSettings["AdminPassword"];
 
         }
 
@@ -87,5 +90,14 @@ namespace UITesting.ProviderPortal.TestSupport
             return dFEPassword;
         }
 
+        public String GetadminUser()
+        {
+            return adminUser;
+        }
+
+        public String GetadminPassword()
+        {
+            return adminPassword;
+        }
     }
 }

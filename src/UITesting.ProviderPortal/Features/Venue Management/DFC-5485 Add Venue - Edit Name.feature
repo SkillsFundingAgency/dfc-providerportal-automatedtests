@@ -6,7 +6,7 @@
 #all tests start at Add Venue address screen 
 Background:
 	Given I have accessed course directory as a provider
-	And I login with user and password
+	And I login as admin with user and password
 	Then I am logged in
 	Given I have searched for UKPRN "10002815" and clicked search
 	When I click to view my courses
