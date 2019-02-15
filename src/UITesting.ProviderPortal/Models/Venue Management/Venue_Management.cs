@@ -11,10 +11,10 @@ namespace UITesting.ProviderPortal.Models.Venue_Management
     {
         public string UKPRNNo = "10002815";
         public string VenueName = "Academy Of Contemporary Music";
-        public string AddressLine1 = "8 York Road";
-        public string AddressLine2 = "Kings Heath";
+        public string AddressLine1 = "	120 Sandford Road";
+        public string AddressLine2 = "";
         public string TownCity = "Birmingham";
         public string County = "West Midlands";
-        public string PostCode = "B14 7RZ";
+        public string PostCode = "B13 9DA";
     }
 }
