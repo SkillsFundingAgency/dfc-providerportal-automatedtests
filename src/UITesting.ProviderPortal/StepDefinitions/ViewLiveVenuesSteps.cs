@@ -66,7 +66,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Venue_Management
         {
             ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
-            viewAllLiveVenuesPage.VenueAdded(venueName);
+            viewAllLiveVenuesPage.VenueEdited(venueName);
         }
 
         [Then(@"System displays banner message")]
