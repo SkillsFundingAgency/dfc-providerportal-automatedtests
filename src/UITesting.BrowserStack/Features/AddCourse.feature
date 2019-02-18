@@ -8,10 +8,10 @@ so that I can add a course
 @BrowserStack
 Scenario Outline: Add a Course
 	Given I have navigated to the Home page using <profile> and <environment>
-	## Use Provider Search to Navigate to course for a Provider
-	And I have navigated to the Search Provider Page
-	When I enter 10028015 and click search provider
-	And I click to view my courses
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have accessed the Qualifications page	
 	And I have entered a Qualification Name "Biology"

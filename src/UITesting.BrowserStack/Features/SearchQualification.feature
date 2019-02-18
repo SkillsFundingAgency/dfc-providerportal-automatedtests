@@ -6,7 +6,12 @@
 @BrowserStack
 Scenario Outline: Search a Qualification
 	Given I have navigated to the Home page using <profile> and <environment>
-	And I have accessed the Qualifications page	
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
+	## End of Provider Search Steps
+	Given I have accessed the Qualifications page	
 	And there is a field to enter the LARS/QAN number.
 	And I have entered LARS/QAN Number "60060955"
 	Then I want to see the Qualifications listed for that LARS/QAN Number
@@ -58,7 +63,12 @@ Examples:
 @BrowserStack
 Scenario Outline: Clear filters when reset is clicked
 	Given I have navigated to the Home page using <profile> and <environment>
-	And I have accessed the Qualifications page	
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
+	## End of Provider Search Steps
+	Given I have accessed the Qualifications page	
 	Given I have entered a Qualification Name "Biology"
 	Given I have selected filters in Qualification Level and/or Awarding body
 	When I click reset

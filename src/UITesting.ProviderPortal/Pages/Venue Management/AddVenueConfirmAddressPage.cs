@@ -39,7 +39,9 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public ViewAllLiveVenuesPage ClickContinue()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(continueButton);
+            PageInteractionHelper.WaitForPageToLoad();
             return new ViewAllLiveVenuesPage(webDriver);
         }
 
