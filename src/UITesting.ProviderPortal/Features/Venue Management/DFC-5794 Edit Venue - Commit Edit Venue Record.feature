@@ -37,13 +37,13 @@ Scenario: Commit Edited Venue Name and Address
 Scenario: Commit Edited Venue Name
 	When I click Change Name on Edit Venue page
 	Then I am on Edit Venue name page
-	When I edit the venue name to New Venue Name Two
+	When I edit the venue name to New Venue Name
 	And I click continue on edit venue name page
 	Then I am on the Edit venue details page
 	When I click continue on the Edit venue details page
 	Then I am on the View All Live Venues Page
 	And System displays banner message
-	And System displays new Venue added New Venue Name Two
+	And System displays new Venue added New Venue Name
 
 @CI
 Scenario: Commit Edited Venue Address

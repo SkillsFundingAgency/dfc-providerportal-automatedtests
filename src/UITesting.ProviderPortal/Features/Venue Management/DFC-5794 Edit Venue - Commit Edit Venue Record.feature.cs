@@ -155,7 +155,7 @@ this.FeatureBackground();
 #line 39
  testRunner.Then("I am on Edit Venue name page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
- testRunner.When("I edit the venue name to New Venue Name Two", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I edit the venue name to New Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
  testRunner.And("I click continue on edit venue name page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42
@@ -167,7 +167,7 @@ this.FeatureBackground();
 #line 45
  testRunner.And("System displays banner message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
- testRunner.And("System displays new Venue added New Venue Name Two", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("System displays new Venue added New Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
