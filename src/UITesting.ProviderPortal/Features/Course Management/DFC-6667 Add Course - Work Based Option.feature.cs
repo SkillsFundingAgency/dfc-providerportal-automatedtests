@@ -99,11 +99,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter Work Based Options when adding a course")]
+        [NUnit.Framework.DescriptionAttribute("Enter Work Based Options when adding a course field changes")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterWorkBasedOptionsWhenAddingACourse()
+        public virtual void EnterWorkBasedOptionsWhenAddingACourseFieldChanges()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Work Based Options when adding a course", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Work Based Options when adding a course field changes", null, new string[] {
                         "CI"});
 #line 22
 this.ScenarioInitialize(scenarioInfo);

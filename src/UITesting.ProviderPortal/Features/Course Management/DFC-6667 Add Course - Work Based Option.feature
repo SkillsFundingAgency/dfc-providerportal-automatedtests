@@ -19,7 +19,7 @@ Background:
 	When I click Next Button
 
 @CI
-Scenario: Enter Work Based Options when adding a course
+Scenario: Enter Work Based Options when adding a course field changes
 	When I enter the following in the course name field Course AutoTestAddWorkBasedOption1
 	And I enter the following in the cost field 999.00
 	And I click on the Work Based Option Radio Button
