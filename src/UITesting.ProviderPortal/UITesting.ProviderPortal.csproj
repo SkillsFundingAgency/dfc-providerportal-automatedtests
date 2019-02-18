@@ -187,12 +187,16 @@
       <DependentUpon>DFC-5794 Edit Venue - Commit Edit Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Course Management\AddCourseSummaryPage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
     <Compile Include="Pages\Course Management\EditYourCoursePage.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
+    <Compile Include="Pages\DfESignInPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
@@ -208,6 +212,7 @@
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_5844_AddCourseLine2SelectOnlineSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCostSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />

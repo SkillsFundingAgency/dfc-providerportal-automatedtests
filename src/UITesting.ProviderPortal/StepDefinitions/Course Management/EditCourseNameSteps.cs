@@ -3,17 +3,40 @@ using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.TestSupport;
 using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.Pages.Provider_Management;
+using UITesting.ProviderPortal.Pages;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 {
     [Binding]
     public class EditCourseNameSteps :BaseTest
     {
+        [Given(@"I have accessed course directory as a provider")]
         [Given(@"I have logged to course directory as a provider")]
         public void GivenIHaveLoggedToCourseDirectoryAsAProvider()
         {
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
-        }        
+        }
+
+
+        [Given(@"I login as admin with (.*) and (.*)")]
+        public void GivenILoginWithUsernameAndPassword(string user, string pass)
+        {
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLogin();
+
+            LoginPage loginPage = new LoginPage(webDriver);
+            loginPage.EnterUsername(Configurator.GetConfiguratorInstance().GetadminUser());
+            loginPage.EnterPassword(Configurator.GetConfiguratorInstance().GetadminPassword());
+            loginPage.ClickLoginButton();
+        }
+
+        [Then(@"I am logged in")]
+        public void ThenIAmLoggedIn()
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+        }
+
+
         [Given(@"I have searched for UKPRN ""(.*)"" and clicked search")]
         public void GivenIHaveSearchedForUKPRNAndClickedSearch(string ukPRN)
         {

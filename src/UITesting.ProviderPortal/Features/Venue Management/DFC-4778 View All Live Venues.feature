@@ -5,11 +5,11 @@
 
 @CI
 Scenario: View Live Venues
-	Given I have accessed the Course Directory
-	## Use Provider Search to Navigate o course for a Provider
-	And I have navigated to the Search Provider Page
-	When I enter 10028015 and click search provider
-	And I click to view my courses
+	Given I have accessed course directory as a provider
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
 	## End of Provider Search Steps
 	#And I have searched for a PRN Number "UKPRN Number"
 	Given I have navigated to the Your Venues Pages
