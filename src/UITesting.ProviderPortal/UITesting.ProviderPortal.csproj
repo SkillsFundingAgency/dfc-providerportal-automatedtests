@@ -225,8 +225,8 @@
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
-    <Compile Include="StepDefinitions\ViewLiveVenuesSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenueSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\ViewLiveVenuesSteps.cs" />
     <Compile Include="Test Support\BasePage.cs" />
     <Compile Include="Test Support\BaseTest.cs" />
     <Compile Include="Test Support\Configurator.cs" />

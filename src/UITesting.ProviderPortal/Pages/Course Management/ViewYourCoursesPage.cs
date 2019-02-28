@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
     public class ViewYourCoursesPage : TestSupport.BasePage
     {
-        private static String PAGE_TITLE = "Your courses";
+        private static String PAGE_TITLE = "Your Qualifications";
         private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");     
         private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
