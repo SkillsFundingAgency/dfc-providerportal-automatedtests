@@ -11,7 +11,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         private static String PAGE_TITLE = "Search Provider";
         private By SearchField = By.Id("SearchTerm");
         private By SearchButton = By.Id("searchProvider");
-        private By ViewCoursesButton = By.Id("btnShowCourses");
+        private By ViewCoursesButton = By.Id("btnQualificationList");
         private By LoginLink = By.LinkText("Login");
 
 

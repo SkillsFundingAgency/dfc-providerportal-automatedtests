@@ -4,6 +4,7 @@ using UITesting.ProviderPortal.Pages.Venue_Management;
 using UITesting.ProviderPortal.Pages.Provider_Management;
 using UITesting.ProviderPortal.Pages.Qualification_Management;
 using UITesting.ProviderPortal.Pages.Course_Management;
+using UITesting.ProviderPortal.Pages;
 using UITesting.BrowserStack.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
@@ -42,11 +43,43 @@ namespace UITesting.BrowserStack.StepDefinitions
             PageInteractionHelper.SetDriver(webDriver);
         }
 
+        [Given(@"I login as admin with (.*) and (.*)")]
+        public void GivenILoginWithUsernameAndPassword(string user, string pass)
+        {
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLogin();
+
+            LoginPage loginPage = new LoginPage(webDriver);
+            loginPage.EnterUsername(Configurator.GetConfiguratorInstance().GetadminUser());
+            loginPage.EnterPassword(Configurator.GetConfiguratorInstance().GetadminPassword());
+            loginPage.ClickLoginButton();
+        }
+
+        [Then(@"I am logged in")]
+        public void ThenIAmLoggedIn()
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+        }
 
         [Given(@"I have logged into course directory as a provider")]
         public void LoginToCourseDirectory()
         {
            // webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
+        }
+
+        [Given(@"I have searched for UKPRN ""(.*)"" and clicked search")]
+        public void GivenIHaveSearchedForUKPRNAndClickedSearch(string ukPRN)
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+            searchProviderPage.EnterUKPRN(ukPRN);
+            searchProviderPage.ClickSearchButton();
+        }
+
+        [Given(@"I have clicked View Courses button to see a list of courses")]
+        public void GivenIHaveClickedViewCoursesButtonToSeeAListOfCourses()
+        {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+            searchProviderPage.ClickViewCoursesButton();
         }
 
         #region Venues

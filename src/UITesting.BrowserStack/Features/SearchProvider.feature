@@ -7,9 +7,11 @@
 @BrowserStack
 Scenario Outline: Search a Provider
 	Given I have navigated to the Home page using <profile> and <environment>
-	And I have navigated to the Search Provider Page
-	When I enter 10028015 and click search provider
-	And I click to view my courses
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
+	## End of Provider Search Steps
 
 Examples:
 		| profile  | environment    |

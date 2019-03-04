@@ -27,6 +27,7 @@ namespace UITesting.ProviderPortal.Pages
 
         public LoginPage ClickLogin()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(loginLink);
             System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
