@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6667 Add Course - Work Based Option.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Course Management\DFC-7094 Edit Course Description-YC3.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-7094 Edit Course Description-YC3.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,6 +195,7 @@
     <Compile Include="Pages\Course Management\AddCourseSummaryPage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage.cs" />
     <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
+    <Compile Include="Pages\Course Management\EditCourseDescription_YC3Page.cs" />
     <Compile Include="Pages\Course Management\EditYourCoursePage.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
@@ -213,6 +219,7 @@
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_5844_AddCourseLine2SelectOnlineSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCostSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCourseDescription_YC3Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
@@ -333,6 +340,10 @@
     <None Include="Features\Course Management\DFC-6667 Add Course - Work Based Option.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6667 Add Course - Work Based Option.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\DFC-7094 Edit Course Description-YC3.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-7094 Edit Course Description-YC3.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
