@@ -13,23 +13,24 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
     public class ViewYourCoursesPage : TestSupport.BasePage
     {
-        private static String PAGE_TITLE = "Your Qualifications";
+        private static String PAGE_TITLE = "Your courses";
         private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");     
         private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
+        // Elt - YC3 specific.. //
+
+        private static By selectedLevelTitle = By.ClassName("cd__your-courses__filters-list__link cd__your-courses__filters-list__link--selected");
+        private static By qualificationTitles = By.ClassName("govuk-details__summary-text");
+        private static By courseRunTitles = By.ClassName("govuk-accordion__section-button");
+
+        // end YC3 //
+
         //elt added - View Description..
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
         private By courseDescriptionPopup = By.Id("popup-descript");
-        //private By courseFor = By.Id("descript");
-        //private By entryRequirements = By.Id("next");
-        //private By whatWillLearn = By.Id("learn");
-        //private By howWillLearn = By.Id("how");
-        //private By equipmentNeeded = By.Id("how");
-        //private By howAssessed = By.Id("how");
-        //private By nextSteps = By.Id("next");
-        //km amended identifiers for pop up course description fields
+
         private By courseFor = By.Id("popup-descript-0");
         private By entryRequirements = By.Id("popup-entry-reqs-0");
         private By whatWillLearn = By.Id("popup-what-learn-0");
@@ -403,6 +404,30 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         }
 
+
+
+        //  YC3  //
+    
+
+        public void OpenAllQualificationsYC3()
+        {
+        
+            PageInteractionHelper.OpenAccordians(qualificationTitles);
+            Console.WriteLine("Open qualifications");
+
+        }
+
+
+        public void OpenAllCourseRunsYC3()
+        {
+
+            PageInteractionHelper.OpenAccordians(courseRunTitles);
+            Console.WriteLine("Open course runs");
+
+        }
+
+
+        // end YC3 //
 
 
 

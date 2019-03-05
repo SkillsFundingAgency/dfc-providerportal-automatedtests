@@ -103,6 +103,51 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 
 
 
+        // start of YC three steps
+
+        [Given(@"I am on the YC-three screen")]
+        public void GivenIAmOnTheYC_ThreeScreen()
+        {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+        }
+
+        [Given(@"The default Qualification Level is open in YC-three")]
+        public void GivenTheDefaultQualificationLevelIsOpenInYC_Three()
+        {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+        }
+
+        [Then(@"the number of courses displayed matches the facet shown for Level in YC-three")]
+        public void ThenTheNumberOfCoursesDisplayedMatchesTheFacetShownForLevelInYC_Three()
+        {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+        }
+
+        [When(@"I click on each course listed for the qualification level that is selected in YC-three")]
+        public void WhenIClickOnEachCourseListedForTheQualificationLevelThatIsSelectedInYC_Three()
+        {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.OpenAllQualificationsYC3();
+        }
+
+
+
+
+        [Then(@"the number of course runs displayed matches the facet shown for each Course in YC-three")]
+        public void ThenTheNumberOfCourseRunsDisplayedMatchesTheFacetShownForEachCourseInYC_Three()
+        {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+        }
+
+        [When(@"I click on each course run listed for each qualification level that is selected in YC-three")]
+        public void WhenIClickOnEachCourseRunListedForEachQualificationLevelThatIsSelectedInYC_Three()
+        {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.OpenAllCourseRunsYC3();
+        }
+
+        // end of YC three steps
+
 
     }
 }

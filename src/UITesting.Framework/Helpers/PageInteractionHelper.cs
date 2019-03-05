@@ -257,7 +257,8 @@ namespace UITesting.Framework.Helpers
                     Console.WriteLine(e.Message);
                 }
                 i++;
-            }        
+            }
+            //Thread.Sleep(5000);
         }  
         public static Boolean VerifyAccordianText(By locator, string accordianText)
         {

@@ -73,39 +73,46 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         public virtual void FeatureBackground()
         {
 #line 6
+#line 7
+ testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.Given("I have accessed the Course Directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I login as admin with user and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.And("I have navigated to the Search Provider Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
- testRunner.When("I enter 10001800 and click search provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have searched for UKPRN \"10000654\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
- testRunner.And("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Open accordian and count all course runs shown and compare with total expected")]
+        [NUnit.Framework.DescriptionAttribute("Maximise all course runs for default Qualification Level on entering YC-three")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void OpenAccordianAndCountAllCourseRunsShownAndCompareWithTotalExpected()
+        public virtual void MaximiseAllCourseRunsForDefaultQualificationLevelOnEnteringYC_Three()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open accordian and count all course runs shown and compare with total expected", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Maximise all course runs for default Qualification Level on entering YC-three", null, new string[] {
                         "CI"});
-#line 24
+#line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 25
-testRunner.Given("I have openend the main Qual Type accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
-testRunner.And("I have openned the secondary Course accordian", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-testRunner.When("I add up the number of course runs displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
-testRunner.And("I get the main total of course runs from the main heading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-testRunner.Then("The total number of runs by course matches the total by qualification level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 34
+testRunner.Given("I am on the YC-three screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 35
+testRunner.And("The default Qualification Level is open in YC-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+testRunner.Then("the number of courses displayed matches the facet shown for Level in YC-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+testRunner.When("I click on each course listed for the qualification level that is selected in YC-" +
+                    "three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+testRunner.Then("the number of course runs displayed matches the facet shown for each Course in YC" +
+                    "-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 39
+testRunner.When("I click on each course run listed for each qualification level that is selected i" +
+                    "n YC-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
