@@ -32,7 +32,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By WhatYouWillLearnErrMsg = By.XPath("//*[@id='sectionWhatWillLearn']/div/div/span[2]");
         private By HowYouWillLearnErrMsg = By.XPath("//*[@id='sectionHowYouWillLearn']/div/div/span[2]");
         private By WhatYouWillNeedtoBringErrMsg = By.XPath("//*[@id='sectionWhatYouNeed']/div/div/span[2]");
-        private By HowYouWillBeAssessedErrMsg = By.XPath("//*[@id='sectionHowAssessed']/div/div/span[2]);
+        private By HowYouWillBeAssessedErrMsg = By.XPath("//*[@id='sectionHowAssessed']/div/div/span[2]");
         private By WhereNextErrMsg = By.XPath("//*[@id='sectionWhereNext']/div/div/span[2]");
 
 
@@ -56,7 +56,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         }
         internal void EnterEntryRequirements(string strData)
         {
-            FormCompletionHelper.EnterText(EntryReqText,strData)
+            FormCompletionHelper.EnterText(EntryReqText, strData);
         }
 
         internal void EnterHowYouWillLearn(string strData)
