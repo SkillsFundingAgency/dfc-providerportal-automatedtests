@@ -16,7 +16,6 @@ Background:
 #Scenario: Sum of course runs displayed matches the runs expected totalled by qualification level
 #Given I have openend the main Qual Type accordian
 #And I have openned the secondary Course accordian
-#	And I have added up the number of runs expected for each qualification level
 #	 And I have added up the total runs for each course
 #	 Then The total number of runs by course matches the total by qualification level
 

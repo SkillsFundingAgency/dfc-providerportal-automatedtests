@@ -93,24 +93,24 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Maximise all course runs for default Qualification Level on entering YC-three", null, new string[] {
                         "CI"});
-#line 33
+#line 32
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 34
+#line 33
 testRunner.Given("I am on the YC-three screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
+#line 34
 testRunner.And("The default Qualification Level is open in YC-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
+#line 35
 testRunner.Then("the number of courses displayed matches the facet shown for Level in YC-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 37
+#line 36
 testRunner.When("I click on each course listed for the qualification level that is selected in YC-" +
                     "three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 37
 testRunner.Then("the number of course runs displayed matches the facet shown for each Course in YC" +
                     "-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
+#line 38
 testRunner.When("I click on each course run listed for each qualification level that is selected i" +
                     "n YC-three", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
