@@ -13,8 +13,30 @@ Given I have accessed course directory as a provider
 	And I have clicked Edit Course Details 
 	Then Edit Course details screen should be displayed
 @CI
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: Edit Course Name with valid data
+	Given I have accessed the selected course run data
+	And I have entered the following course name "Award in Computerised Accounts-Edited"
+	When I click Save
+	Then the course run should be saved and the changed course run link should be visible
+	When I click the link to the changed course run
+	Then I should be able to view the changed data
+@CI
+Scenario: Edit Course Name with blank data
+	Given I have accessed the selected course run data
+	And I have entered the following course name " "
+	When I click Save
+	Then the following course name message should be displayed "Enter course name"
+Scenario: Edit course run with valid defined start date when Classroom mode is selected
+	Given I have accessed the selected course run data
+	And I have selected "Classroom" as deleivery mode
+	And I have entered "25" in Day, "09" in Month and "2019" in Year
+	When I click Save
+	Then the date should be saved and the changed course run link should be visible
+	When I click the link to the changed course run
+	Then I should be able to view the changed data	
+Scenario: Edit course run with invalid defined start date when Classroom mode is selected
+	Given I have accessed the selected course run data
+	And I have selected "Classroom" as deleivery mode
+	And I have entered "31" in Day, "02" in Month and "2019" in Year
+	When I click Save
+	Then the following error date message should be displayed "Invalid date"
