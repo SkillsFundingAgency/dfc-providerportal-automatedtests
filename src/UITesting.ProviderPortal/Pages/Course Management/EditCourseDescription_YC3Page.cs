@@ -19,6 +19,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By AdvancedLearnerLoan = By.Id("AdvancedLearnerLoan");
         private By SaveButton = By.Id("save");
         private By CancelLink = By.LinkText("Cancel");
+        //private By CancelLink = By.XPath("//*[@id='editCourse']/div[10]/a");
         private By CourseForText = By.Id("CourseFor");
         private By EntryReqText = By.Id("EntryRequirements");
         private By HowYouWillLearnText = By.Id("HowYouWillLearn");
@@ -81,17 +82,32 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void SelectAdvancedLearnerOption()
         {
-            FormCompletionHelper.ClickElement(AdvancedLearnerLoan);
+            FormCompletionHelper.SelectCheckBox2(AdvancedLearnerLoan);
+            
         }
 
-        internal void SelectAdultEducationOption()
+        internal void ClickAdultEducationOption()
         {
             FormCompletionHelper.ClickElement(AdultEducationBudget);
         }
 
+        internal void SelectAdultEducationOption()
+        {
+            FormCompletionHelper.SelectCheckBox2 (AdultEducationBudget);
+        }
+        internal void CheckAdultEducationOption()
+        {
+            FormCompletionHelper.IsObjectSelected(AdultEducationBudget);
+        }
+        internal void CheckAdvancedLearnerOption()
+        {
+            FormCompletionHelper.IsObjectSelected(AdvancedLearnerLoan);
+        }
+
         internal void ClickCancel()
         {
-            FormCompletionHelper.ClickElement(CancelLink);
+            FormCompletionHelper.IsElementPresent(CancelLink);
+            FormCompletionHelper.SubmitLink(CancelLink);
         }
 
         internal void CheckFundingOptions()

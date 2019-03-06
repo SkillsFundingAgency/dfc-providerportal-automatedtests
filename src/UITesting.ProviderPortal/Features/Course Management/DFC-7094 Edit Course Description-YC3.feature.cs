@@ -226,7 +226,8 @@ this.FeatureBackground();
 #line 33
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 34
- testRunner.Then("following course for error message should be displayed \"Enter Course Name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("following course for error message should be displayed \"Enter who is this course " +
+                    "for\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -364,7 +365,7 @@ this.FeatureBackground();
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 64
  testRunner.Then("following Where next error message should be displayed \"\'Where next\' must be 500 " +
-                    "characters or less must be 500 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -382,7 +383,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 67
- testRunner.Given("I have added an invalid character in Course description \"☺😌\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have added an invalid character in Course description \"…\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 68
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 69

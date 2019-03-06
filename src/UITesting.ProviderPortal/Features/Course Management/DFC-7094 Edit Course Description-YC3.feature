@@ -31,7 +31,7 @@ Scenario: Edit course description for a course with description more than 2000 c
 Scenario: Edit Course with no data in course name
 	Given I have left the course description as blank
 	When I Click the Save button
-	Then following course for error message should be displayed "Enter Course Name"
+	Then following course for error message should be displayed "Enter who is this course for"
 @CI
 Scenario: Edit Entry Requirements with more than 500 characters
 	Given I have entered the following data  in Entry Requirements"ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXY"
@@ -61,10 +61,10 @@ Scenario: Edit How you’ll be assessed with more than 500 characters
 Scenario: Edit Where next with more than 500 characters
 	Given I have entered the following data in Where Next "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.The languages only differ in their grammar, their pronunciation and their most common words. The one way to learn is to practice regularly daily"
 	When I Click the Save button
-	Then following Where next error message should be displayed "'Where next' must be 500 characters or less must be 500 characters or less"
+	Then following Where next error message should be displayed "'Where next' must be 500 characters or less"
 @CI
 Scenario: Edit Course with invalid characters
-	Given I have added an invalid character in Course description "☺😌"
+	Given I have added an invalid character in Course description "…"
 	When I Click the Save button
 	Then following course for error message should be displayed "Course for contains invalid characters"
 @CI

@@ -13,6 +13,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveAccessedTheEditCourseScreen()
         {
             //ScenarioContext.Current.Pending();
+            
         }        
         [Given(@"I have edited course description with valid values ""(.*)""")]
         public void GivenIHaveEditedCourseDescriptionWithValidValues(string strData)
@@ -84,12 +85,15 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveDeselecetedTheAdultEducationCourse()
         {
             EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
-            editCourseDescription_YC3Page.SelectAdultEducationOption();
+            editCourseDescription_YC3Page.ClickAdultEducationOption();
+            
         }        
         [When(@"I select Edit Course Description")]
         public void WhenISelectEditCourseDescription()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+           // ViewYourCoursesPage.OpenAllQualificationsYC3();
+            ViewYourCoursesPage.ClickEditCourseDescriptionLink();
         }        
         [When(@"I Click the Save button")]
         public void WhenIClickTheSaveButton()
@@ -106,7 +110,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Then(@"Edit Course screen should be displayed")]
         public void ThenEditCourseScreenShouldBeDisplayed()
         {
-            ScenarioContext.Current.Pending();
+            EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
         }        
         [Then(@"Adult Education and Advanced Learner check boxes should be present")]
         public void ThenAdultEducationAndAdvancedLearnerCheckBoxesShouldBePresent()
@@ -123,12 +127,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Then(@"the course description should be saved")]
         public void ThenTheCourseDescriptionShouldBeSaved()
         {
-            ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
         }        
         [Then(@"I should be able to see the saved data")]
         public void ThenIShouldBeAbleToSeeTheSavedData()
         {
-            ScenarioContext.Current.Pending();
+           // ScenarioContext.Current.Pending();
         }        
         [Then(@"folloiwng course for error message should be displayed ""(.*)""")]
         public void ThenFolloiwngCourseForErrorMessageShouldBeDisplayed(string errMsg)
@@ -181,19 +185,29 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Then(@"the Advanced Learner option should be selected")]
         public void ThenTheAdvancedLearnerOptionShouldBeSelected()
         {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.ClickEditCourseDescriptionLink();
             EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
-            editCourseDescription_YC3Page.SelectAdvancedLearnerOption();
+            editCourseDescription_YC3Page.CheckAdvancedLearnerOption();
         }        
         [Then(@"the Adult Education option should be selected")]
         public void ThenTheAdultEducationOptionShouldBeSelected()
         {
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.ClickEditCourseDescriptionLink();
             EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
-            editCourseDescription_YC3Page.SelectAdultEducationOption();
+            editCourseDescription_YC3Page.CheckAdultEducationOption();
         }        
         [Then(@"the Adult Education should not be deselected")]
         public void ThenTheAdultEducationShouldNotBeDeselected()
         {
+            //EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
+            //editCourseDescription_YC3Page.ClickAdultEducationOption();
+            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            ViewYourCoursesPage.ClickEditCourseDescriptionLink();
             EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
-            editCourseDescription_YC3Page.SelectAdultEducationOption();
-        }    }
+            editCourseDescription_YC3Page.CheckAdultEducationOption();
+
+        }
+    }
 }

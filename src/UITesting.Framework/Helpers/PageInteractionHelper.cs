@@ -199,7 +199,7 @@ namespace UITesting.Framework.Helpers
                 TurnOnImplicitWaits();
             }
         }
-        
+         
         public static Boolean IsElementDisplayed(By locator)
         {
             TurnOffImplicitWaits();

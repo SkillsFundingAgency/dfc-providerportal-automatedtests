@@ -21,6 +21,10 @@ namespace UITesting.Framework.Helpers
         {
             webDriver.FindElement(locator).Click();
         }
+        public static void SubmitLink(By locator)
+        {
+            webDriver.FindElement(locator).Submit();
+        }
 
         public static void EnterText(IWebElement element, String text)
         {

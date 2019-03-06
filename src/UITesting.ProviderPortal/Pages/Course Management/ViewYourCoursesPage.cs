@@ -29,6 +29,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         //elt added - View Description..
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
+        private By EditCourseDescriptionLink = By.LinkText("Edit course description");
         private By courseDescriptionPopup = By.Id("popup-descript");
 
         private By courseFor = By.Id("popup-descript-0");
@@ -361,7 +362,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             Console.WriteLine("Main run count: " + mainCourseRunCount);
         }
 
-
+        internal void ClickEditCourseDescriptionLink()
+        {
+            FormCompletionHelper.ClickElement(EditCourseDescriptionLink);
+        }
 
 
         public void CompareTotals()
