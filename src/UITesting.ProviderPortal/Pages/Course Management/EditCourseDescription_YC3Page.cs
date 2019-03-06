@@ -104,11 +104,46 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             PageInteractionHelper.IsElementPresent(SaveButton);
             PageInteractionHelper.IsElementPresent(CancelLink);
+        }       
+
+        internal void ClickSave()
+        {
+            FormCompletionHelper.ClickElement(SaveButton);
         }
 
-        internal void ValidateErrorMessage(string errMsg)
+        internal void ValidateCourseForError(string errMsg)
         {
-            FormCompletionHelper.VerifyText(errMsg);
+            PageInteractionHelper.VerifyText(CourseForErrMsg, errMsg);
+        }
+
+        internal void ValidateEntryRequirementsError(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(EntryReqErrMsg, errMsg);
+        }
+
+        internal void WhatYouWillLearnError(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(WhatYouWillLearnErrMsg, errMsg);
+        }
+
+        internal void HowYouWillLearnError(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(HowYouWillLearnErrMsg, errMsg);
+        }
+
+        internal void WhatYouWillNeedToBringError(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(WhatYouWillNeedtoBringErrMsg, errMsg);
+        }
+
+        internal void HowYouWillBeAssessedError(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(HowYouWillBeAssessedErrMsg, errMsg);
+        }
+
+        internal void WhereNextError(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(WhereNextErrMsg, errMsg);
         }
     }
 }
