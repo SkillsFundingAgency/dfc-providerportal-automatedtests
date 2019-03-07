@@ -227,6 +227,7 @@
     <Compile Include="StepDefinitions\Course Management\EditCostSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseDescription_YC3Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCourseRunDetails_YC3Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />

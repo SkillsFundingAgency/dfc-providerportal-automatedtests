@@ -30,6 +30,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
         private By EditCourseDescriptionLink = By.LinkText("Edit course description");
+        private By EditCourseDetailsLink = By.LinkText("Edit course details");
         private By courseDescriptionPopup = By.Id("popup-descript");
 
         private By courseFor = By.Id("popup-descript-0");
@@ -366,7 +367,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             FormCompletionHelper.ClickElement(EditCourseDescriptionLink);
         }
-
+        internal void ClickEditCourseDetailsLink()
+        {
+            FormCompletionHelper.ClickElement(EditCourseDetailsLink);
+        }
 
         public void CompareTotals()
         {
