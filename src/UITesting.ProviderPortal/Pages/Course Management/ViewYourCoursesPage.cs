@@ -29,9 +29,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         //elt added - View Description..
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
         private By showCourseDescriptionPopupLink = By.LinkText("View course description");
+        private By courseDescriptionPopup = By.Id("popup-descript");
+
+        //Usman added for edit course
         private By EditCourseDescriptionLink = By.LinkText("Edit course description");
         private By EditCourseDetailsLink = By.LinkText("Edit course details");
-        private By courseDescriptionPopup = By.Id("popup-descript");
+        private By CourseEditedLink = By.Id("courseeditlink");
 
         private By courseFor = By.Id("popup-descript-0");
         private By entryRequirements = By.Id("popup-entry-reqs-0");
@@ -363,6 +366,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             Console.WriteLine("Main run count: " + mainCourseRunCount);
         }
 
+        //Usman added for Edit course and edit course run
+
         internal void ClickEditCourseDescriptionLink()
         {
             FormCompletionHelper.ClickElement(EditCourseDescriptionLink);
@@ -370,6 +375,14 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ClickEditCourseDetailsLink()
         {
             FormCompletionHelper.ClickElement(EditCourseDetailsLink);
+        }
+        internal void ClickEditedCourseDetailsLink()
+        {
+            FormCompletionHelper.ClickElement(CourseEditedLink);
+        }
+        internal void ValidateEditedCourseDeatilsLink()
+        {
+            PageInteractionHelper.IsElementPresent(CourseEditedLink);
         }
 
         public void CompareTotals()

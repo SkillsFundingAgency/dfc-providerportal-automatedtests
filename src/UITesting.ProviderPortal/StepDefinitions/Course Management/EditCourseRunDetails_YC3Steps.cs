@@ -7,113 +7,140 @@ using UITesting.ProviderPortal.Pages.Course_Management;
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 {
     [Binding]
-    public class EditCourseRunDetails_YC3Steps : BaseTest
+    public class EditCourseRunDetails_YC3Steps : BaseTest 
     {
         [Given(@"I have accessed the selected course run data")]
         public void GivenIHaveAccessedTheSelectedCourseRunData()
         {
-            
-
+            //ScenarioContext.Current.Pending();
         }
-        
+
         [Given(@"I have entered the following course name ""(.*)""")]
         public void GivenIHaveEnteredTheFollowingCourseName(string strCourseName)
         {
             EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
             editCourseRunDetailsPage.EnterCourseName(strCourseName);
         }
-        
+
         [Given(@"I have selected ""(.*)"" as delivery mode")]
         public void GivenIHaveSelectedAsDeliveryMode(string strDelMode)
         {
             EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
             editCourseRunDetailsPage.SelectDeliveryMode(strDelMode);
         }
-        
-        [Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year")]
-        public void GivenIHaveEnteredInDayInMonthAndInYear(string  strDay, string  strMonth, string  strYear)
+
+        [Given(@"I have selected Start Date ""(.*)""")]
+        public void GivenIHaveSelectedStartDate(string strDefStartDate)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SelectDefinedStartDate(strDefStartDate);
         }
-        
-       /* [Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year")]
+
+        [Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year")]
+        public void GivenIHaveEnteredInDayInMonthAndInYear(string strDay, string strMonth, string strYear)
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterStartDate(strDay, strMonth, strYear);
+        }
+
+        /*[Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year")]
         public void GivenIHaveEnteredInDayInMonthAndInYear(string p0, string p1, string p2)
         {
             ScenarioContext.Current.Pending();
         }*/
-        
+
         [Given(@"I have entered selected a venue from the dropdown")]
         public void GivenIHaveEnteredSelectedAVenueFromTheDropdown()
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SelectVenue();
         }
-        
+
         [Given(@"I have selected entered a value in cost ""(.*)""")]
-        public void GivenIHaveSelectedEnteredAValueInCost(string  strCoset)
+        public void GivenIHaveSelectedEnteredAValueInCost(string strCost)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterCost(strCost);
         }
-        
+
         [Given(@"I have left cost description as blank")]
         public void GivenIHaveLeftCostDescriptionAsBlank()
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterCostDescription(" ");
         }
-        
+
         [Given(@"I have entered a value in cost description ""(.*)""")]
         public void GivenIHaveEnteredAValueInCostDescription(string strCostDesc)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterCostDescription(strCostDesc);
         }
-        
+
+        [Given(@"I have left cost as blank")]
+        public void GivenIHaveLeftCostAsBlank()
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterCost(" ");
+        }
+
         [Given(@"I have left cost and cost description as blank")]
         public void GivenIHaveLeftCostAndCostDescriptionAsBlank()
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterCost(" ");
+            editCourseRunDetailsPage.EnterCostDescription(" ");
         }
-        
+
         [Given(@"I have entered a value in Duration ""(.*)""")]
         public void GivenIHaveEnteredAValueInDuration(string strDuration)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterDuration(strDuration);
         }
-        
+
         [Given(@"I have selected ""(.*)"" in the duration unit")]
-        public void GivenIHaveSelectedInTheDurationUnit(string strMonth)
+        public void GivenIHaveSelectedInTheDurationUnit(string strDurationUnit)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SelectDurationUnit(strDurationUnit);
         }
-        
+
         [Given(@"I have entered a blank value in Duration ""(.*)""")]
         public void GivenIHaveEnteredABlankValueInDuration(string strDuration)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterDuration(strDuration);
         }
-        
+
         [Given(@"I have selected ""(.*)"" in attendance pattern")]
         public void GivenIHaveSelectedInAttendancePattern(string strAttPatt)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SelectAttendancePattern(strAttPatt);
         }
-        
+
         [Given(@"I have selected ""(.*)"" in Attendance")]
         public void GivenIHaveSelectedInAttendance(string strAtt)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SelectAttendance(strAtt);
         }
-        
+
         [Given(@"I have entered following URL ""(.*)""")]
         public void GivenIHaveEnteredFollowingURL(string strURL)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.EnterURL(strURL);
         }
-        
+
         [Given(@"I have selected ""(.*)"" as attendance pattern")]
         public void GivenIHaveSelectedAsAttendancePattern(string strAttPatt)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SelectAttendancePattern(strAttPatt);
         }
-        
+
         [When(@"I selected a Course and a course run")]
         public void WhenISelectedACourseAndACourseRun()
         {
@@ -121,126 +148,164 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             viewYourCoursesPage.OpenAllQualificationsYC3();
             viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [When(@"I have clicked Edit Course Details")]
         public void WhenIHaveClickedEditCourseDetails()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
             viewYourCoursesPage.ClickEditCourseDetailsLink();
         }
-        
+
         [When(@"I  Save the data")]
         public void WhenISaveTheData()
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.SaveData();
         }
-        
+
         [When(@"I click the link to the changed course run")]
         public void WhenIClickTheLinkToTheChangedCourseRun()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickEditedCourseDetailsLink();
         }
-        
-        /*[When(@"I Save the data")]
+
+       /*[When(@"I Save the data")]
         public void WhenISaveTheData()
         {
             ScenarioContext.Current.Pending();
         }*/
+        
+        [When(@"I select Cancel")]
+        public void WhenISelectCancel()
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ClickCancel();
+        }
         
         [Then(@"Edit Course details screen should be displayed")]
         public void ThenEditCourseDetailsScreenShouldBeDisplayed()
         {
             EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
         }
-        
+
         [Then(@"the course run should be saved and the changed course run link should be visible")]
         public void ThenTheCourseRunShouldBeSavedAndTheChangedCourseRunLinkShouldBeVisible()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ValidateEditedCourseDeatilsLink();
         }
-        
+
         [Then(@"I should be able to view the changed data")]
         public void ThenIShouldBeAbleToViewTheChangedData()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"the following course name message should be displayed ""(.*)""")]
         public void ThenTheFollowingCourseNameMessageShouldBeDisplayed(string strErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateErrorMessage(strErrMsg, "Course Name");
         }
-        
+
         [Then(@"the date should be saved and the changed course run link should be visible")]
         public void ThenTheDateShouldBeSavedAndTheChangedCourseRunLinkShouldBeVisible()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"the following error date message should be displayed ""(.*)""")]
         public void ThenTheFollowingErrorDateMessageShouldBeDisplayed(string strErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateErrorMessage(strErrMsg, "Start Date");
         }
-        
+
+        /* [Then(@"the following error date message should be displayed ""(.*)""")]
+         public void ThenTheFollowingErrorDateMessageShouldBeDisplayed(string strErrMsg)
+         {
+             EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+             editCourseRunDetailsPage.ValidateErrorMessage(strErrMsg, "Start Date");
+         }*/
         [Then(@"I should be able to view the changed data with the new venue")]
         public void ThenIShouldBeAbleToViewTheChangedDataWithTheNewVenue()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
         [Then(@"I should be able to view the changed data with the cost")]
         public void ThenIShouldBeAbleToViewTheChangedDataWithTheCost()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"I should be able to view the changed data with the cost description")]
         public void ThenIShouldBeAbleToViewTheChangedDataWithTheCostDescription()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"the following cost message should be displayed ""(.*)""")]
         public void ThenTheFollowingCostMessageShouldBeDisplayed(string strErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateErrorMessage(strErrMsg, "Cost");
         }
-        
+
         [Then(@"I should be able to view the changed data with the duration")]
         public void ThenIShouldBeAbleToViewTheChangedDataWithTheDuration()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"the following duration message should be displayed ""(.*)""")]
         public void ThenTheFollowingDurationMessageShouldBeDisplayed(string strErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateErrorMessage(strErrMsg, "Duration Length");
         }
-        
+
         [Then(@"I should be able to view the changed data with the attendance pattern and attendance")]
         public void ThenIShouldBeAbleToViewTheChangedDataWithTheAttendancePatternAndAttendance()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"I should be able to view the changed data with the Url")]
         public void ThenIShouldBeAbleToViewTheChangedDataWithTheUrl()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
-        
+
         [Then(@"the following URL message should be displayed ""(.*)""")]
         public void ThenTheFollowingURLMessageShouldBeDisplayed(string strErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateErrorMessage(strErrMsg, "URL");
         }
-        
+
         [Then(@"changes should not be saved")]
         public void ThenChangesShouldNotBeSaved()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.OpenAllQualificationsYC3();
+            viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
     }
 }
