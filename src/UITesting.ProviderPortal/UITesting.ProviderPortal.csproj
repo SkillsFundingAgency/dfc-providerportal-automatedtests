@@ -126,11 +126,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-7095-EditCourseRunDetails-YC3.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Course Management\DFC-7097 Archive Course-YC3.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-7097 Archive Course-YC3.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -360,10 +355,6 @@
     <None Include="Features\Course Management\DFC-7095-EditCourseRunDetails-YC3.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-7095-EditCourseRunDetails-YC3.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Course Management\DFC-7097 Archive Course-YC3.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-7097 Archive Course-YC3.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
