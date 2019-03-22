@@ -14,12 +14,18 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         {
             webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
         }
-        
+
         [Then(@"links to Edit and Archive should be visible")]
         public void ThenLinksToEditAndArchiveShouldBeVisible()
         {
             ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage.CheckEditLink();
+        }
+
+        [Then(@"I am on the View All Live Venues Page")]
+        public void ThenIamontheViewAllLiveVenuesPage()
+        {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
         }
         
         [Then(@"Add Venue Button should be visible")]
@@ -27,6 +33,20 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         {
             ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage.CheckAddVenueButton();
+        }
+
+        [Then(@"System displays banner message")]
+        public void SystemDisplaysBannerMessage()
+        {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            ViewAllLiveVenuesPage.VenueAddedBanner();
+        }
+
+        [Then(@"System displays new Venue added (.*)")]
+        public void SystemDisplaysNewVenueAdded(string venueName)
+        {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            ViewAllLiveVenuesPage.VenueEdited(venueName);
         }
     }
 }

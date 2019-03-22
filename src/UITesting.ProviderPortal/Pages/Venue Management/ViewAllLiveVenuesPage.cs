@@ -16,7 +16,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private static String ARCH_TAB= "//*[@id='tab_archived']";
         private static String ADD_VENUE_BUTTON = "//*[@id='venueSearchResultForm']/div/div/div/a[2]/div/button";  //*[@id="venueSearchResultForm"]/div/div/div/a[2]/div/button
         private By venueBanner = By.XPath(".//*[@id='qual']");
-        private By firstRecord = By.XPath(".//*[@id='live']/table/tbody/tr[1]/td[2]");   //(".//*[@id='live']/div[1]/label");
+        private By firstRecord = By.XPath(".//*[@id='live']/table/tbody/tr[1]/td[2]");   //(".//*[@id='live']/div[1]/label"); 
         private By firstVenue = By.XPath(".//*[@id='live']/table/tbody/tr[1]/td[1]");
         private By prnText = By.Id("SearchTerm");//UKPrn
         private By searchButton = By.Id("venueProvider");//search
