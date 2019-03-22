@@ -17,9 +17,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By whatWillLearnError = By.Id("WhatWillLearn-error");
         private By whatWillLearnInfo = By.Id("WhatWillLearn-info");
         private By courseFor = By.Id("CourseFor");
-        private By courseForError = By.Id("CourseFor-error");
+        private By courseForError = By.XPath(".//*[@id='sectionCourseFor']/div/div/span[2]");  //By.Id("CourseFor-error");
         private By courseForInfo = By.Id("CourseFor-info");
-        private By entryRequirements = By.Id("EntryRequirements");
+        private By entryRequirements = By.XPath(".//*[@id='sectionEntryRequirements']/div/div/span[2]");//By.Id("EntryRequirements");
         private By entryRequirementsError = By.Id("EntryRequirements-error");
         private By entryRequirementsInfo = By.Id("EntryRequirements-info");
         private By equipmentNeeded = By.Id("WhatYouNeed");

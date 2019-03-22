@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 {
     public class EditYourCoursePage: BasePage
     {
-        private static String PAGE_TITLE = "Your courses";
+        private static String PAGE_TITLE = "Your published courses";
 
         /* DFC-4827-variables-Usman*/        
 

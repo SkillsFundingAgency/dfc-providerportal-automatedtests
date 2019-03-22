@@ -42,7 +42,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By InvalidDateError = By.Id("invalidDateMessage");
         private By FlexDateRadio = By.Id("FlexibleStartDate");
         private By DurationLength = By.Id("DurationLength");
-        private By DurationUnit = By.Id("DurationUnit");
+        private By DurationUnit = By.Id("durationDropDown");
         private By DurationError = By.Id("DurationLength-error");
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
