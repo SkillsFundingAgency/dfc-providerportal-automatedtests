@@ -36,13 +36,15 @@ Scenario: DFC4950 User Adds Course Name
 Scenario: DFC4950 User does not enter Course Name
 	When I enter the following in the course name field Course blank
 	And I enter the following in the URL field https://www.google.com
+	And I click Publish leading to error
 	Then course name error validation is displayed
-	And error message for field Course Name states Enter Course Name
+	And error message for field Course Name states Enter course name
 
 @CI
 Scenario: DFC4950 User enter Course Name greater than 255 chars
 	When I enter the following in the course name field Course ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 	And I enter the following in the URL field https://www.google.com
+	And I click Publish leading to error
 	Then course name error validation is displayed
 	And error message for field Course Name states The maximum length of Course Name is 255 characters
 
@@ -50,6 +52,7 @@ Scenario: DFC4950 User enter Course Name greater than 255 chars
 Scenario: DFC4950 User enters invalid Course Name
 	When I enter the following in the course name field Course 我想输入文字
 	And I enter the following in the URL field https://www.google.com
+	And I click Publish leading to error
 	Then course name error validation is displayed
 	And error message for field Course Name states Course Name contains invalid characters
 
@@ -77,6 +80,7 @@ Scenario: DFC5115 User enters valid course URL 4
 Scenario: DFC5115 User enters Invalid course URL
 	When I enter the following in the URL field https://www.google
 	When I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 	
@@ -84,6 +88,7 @@ Scenario: DFC5115 User enters Invalid course URL
 Scenario: DFC5115 User enters Invalid course URL 2
 	When I enter the following in the URL field htts://www.google
 	When I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 
@@ -91,6 +96,7 @@ Scenario: DFC5115 User enters Invalid course URL 2
 Scenario: DFC5115 User enters Invalid course URL 3
 	When I enter the following in the URL field https//www.google
 	When I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 
@@ -98,6 +104,7 @@ Scenario: DFC5115 User enters Invalid course URL 3
 Scenario: DFC5115 User enters Invalid course URL 4
 	When I enter the following in the URL field https:/www.google
 	When I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 
@@ -105,6 +112,7 @@ Scenario: DFC5115 User enters Invalid course URL 4
 Scenario: DFC5115 User enters Invalid course URL 5
 	When I enter the following in the URL field https://www.google.
 	When I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 
@@ -112,6 +120,7 @@ Scenario: DFC5115 User enters Invalid course URL 5
 Scenario: DFC5115 User enters Invalid course URL 6
 	When I enter the following in the URL field test
 	When I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 
@@ -134,15 +143,17 @@ Scenario: DFC5116 User enters valid cost 2
 Scenario: DFC5116 User enters invalid cost 
 	When I enter the following in the cost field 9999999
 	When I enter the following in the course name field Course test
-#	Then course Cost error validation is displayed
+	And I click Publish leading to error
+	Then course Cost error validation is displayed
 	Then error message for field Invalid Cost Length states Maximum value for cost is £999,999.99
 
 @CI
 Scenario: DFC5116 User enters no cost 
 	When I enter the following in the cost field blank
 	When I enter the following in the course name field Course test
-#	Then course Cost error validation is displayed
-	Then error message for field Invalid Cost states Enter the cost in pounds and pence
+	And I click Publish leading to error
+	Then course Cost error validation is displayed
+	Then error message for field Invalid Cost states Enter cost or cost description
 
 
 @CI
@@ -161,6 +172,7 @@ Scenario: DFC5011 User does not enter Course ID
 Scenario: DFC5011 User enter Course ID greater than 255 chars
 	When I enter the following in the course id field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 	And I enter the following in the URL field https://www.google.com
+	And I click Publish leading to error
 	Then course id error validation is displayed
 	And error message for field Course ID states The maximum length of 'ID' is 255 characters
 
@@ -168,6 +180,7 @@ Scenario: DFC5011 User enter Course ID greater than 255 chars
 Scenario: DFC5011 User enters invalid Course ID
 	When I enter the following in the course id field 我想输入文字
 	And I enter the following in the URL field https://www.google.com
+	And I click Publish leading to error
 	Then course id error validation is displayed
 	And error message for field Course ID states ID contains invalid characters
 
@@ -186,6 +199,7 @@ Scenario: DFC4768 User Adds Cost Description max chars
 Scenario: DFC4768 User Adds Cost Description over max chars
 	When I enter the following in the cost description field ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 	And I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then cost description error validation is displayed
 	And error message for field Cost Description states Cost description must be 255 characters or less
 	And info message for field Cost Description states You have 1 character too many
@@ -233,10 +247,11 @@ Scenario: DFC4770 User Study Mode Flexible
 	When I Select study mode Flexible
 	And I enter the following in the course name field Course test
 
-@CI
-Scenario: DFC6069 Select Advanced Learner Loans
-	When I tick the Advanced Learner Loans option
-	And I enter the following in the course name field Course test
+#REMOVED BY DFC-8096 UI - Hide Funding Options From All Pages
+#@CI
+#Scenario: DFC6069 Select Advanced Learner Loans
+#	When I tick the Advanced Learner Loans option
+#	And I enter the following in the course name field Course test
 
 @CI
 Scenario: DFC4901 Select Flexible Start Date
@@ -248,10 +263,10 @@ Scenario: DFC4901 Select Defined Start Date and enter no date
 	When I select start date Defined Start Date
 	And I enter the following in the course name field Course test
 	And I click Publish leading to error
-	Then error message for field Day states Day must be a number between 1 and 31
-	And error message for field Month states Month must be a number between 1 and 12
-	And error message for field Year states Year must be a valid 4 digit year
-	And error message for field Start Date states Choose an actual Start Date or select ‘Flexible Start Date’
+#	Then error message for field Day states Day must be a number between 1 and 31
+#	And error message for field Month states Month must be a number between 1 and 12
+#	And error message for field Year states Year must be a valid 4 digit year
+	Then error message for field Start Date states Enter start date
 
 @CI
 Scenario: DFC4901 Select Defined Start Date and enter valid date
@@ -269,6 +284,7 @@ Scenario: DFC4901 Select Defined Start Date and enter date before today
 	And I enter 01 in the Month field
 	And I enter 2019 in the Year field
 	And I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then error message for field Past Date states Start Date cannot be earlier than today’s date
 
 @CI
@@ -278,6 +294,7 @@ Scenario: DFC4901 Select Defined Start Date and enter date more than 2 years in 
 	And I enter 01 in the Month field
 	And I enter 2024 in the Year field
 	And I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then error message for field Future Date states Start Date cannot be later than 2 years from today’s date
 
 @CI
@@ -287,6 +304,7 @@ Scenario: DFC4901 Select Defined Start Date and enter invalid date
 	And I enter 02 in the Month field
 	And I enter 2020 in the Year field
 	And I enter the following in the course name field Course test
+	And I click Publish leading to error
 	Then error message for field Invalid Date states Invalid date
 
 @CI
@@ -356,3 +374,4 @@ Scenario: DFC4900 User Publishes Course
 	And I select duration unit Weeks
 	And I select the first venue in the venues list
 	And I click Publish
+

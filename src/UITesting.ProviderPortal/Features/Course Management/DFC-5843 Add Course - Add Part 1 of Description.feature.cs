@@ -166,8 +166,8 @@ this.FeatureBackground();
 #line 39
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
- testRunner.Then("Page 1 error message for field Who is the course for states Enter who is the cour" +
-                    "se for", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Page 1 error message for field Who is the course for states Enter who is this cou" +
+                    "rse for", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -215,7 +215,7 @@ this.FeatureBackground();
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 46
  testRunner.Then("Page 1 error message for field Who is the course for states Who is this course fo" +
-                    "r must be 2000 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "r? must be 2000 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 47
  testRunner.And("Page 1 info message for field Who is the course for states You have 1 character t" +
                     "oo many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -357,8 +357,8 @@ this.FeatureBackground();
 #line 86
  testRunner.When("I click Next Button Failure", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 87
- testRunner.Then("Page 1 error message for field How you will be assessed states ‘How you’ll be ass" +
-                    "essed\' must be 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Page 1 error message for field How you will be assessed states How you’ll be asse" +
+                    "ssed must be 500 characters or less", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 88
  testRunner.Then("Page 1 info message for field How you will be assessed states You have 1 characte" +
                     "r too many", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

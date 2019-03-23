@@ -11,25 +11,25 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         private static String PAGE_TITLE = "Complete your qualification details";
         private By howWillLearn = By.Id("HowYouWillLearn");
-        private By howWillLearnError = By.Id("HowYouWillLearn-error");
+        private By howWillLearnError = By.XPath(".//*[@id='sectionHowYouWillLearn']/div/div/span[2]");              //By.Id("HowYouWillLearn -error");
         private By howWillLearnInfo = By.Id("HowYouWillLearn-info");
         private By whatWillLearn = By.Id("WhatWillLearn");
-        private By whatWillLearnError = By.Id("WhatWillLearn-error");
+        private By whatWillLearnError = By.XPath(".//*[@id='sectionWhatWillLearn']/div/div/span[2]");               // By.Id("WhatWillLearn -error");
         private By whatWillLearnInfo = By.Id("WhatWillLearn-info");
         private By courseFor = By.Id("CourseFor");
-        private By courseForError = By.XPath(".//*[@id='sectionCourseFor']/div/div/span[2]");  //By.Id("CourseFor-error");
+        private By courseForError = By.XPath(".//*[@id='sectionCourseFor']/div/div/span[2]");                       //By.Id("CourseFor-error");
         private By courseForInfo = By.Id("CourseFor-info");
-        private By entryRequirements = By.XPath(".//*[@id='sectionEntryRequirements']/div/div/span[2]");//By.Id("EntryRequirements");
-        private By entryRequirementsError = By.Id("EntryRequirements-error");
+        private By entryRequirements = By.Id("EntryRequirements");
+        private By entryRequirementsError = By.XPath(".//*[@id='sectionEntryRequirements']/div/div/span[2]");        //By.Id("EntryRequirements -error");
         private By entryRequirementsInfo = By.Id("EntryRequirements-info");
         private By equipmentNeeded = By.Id("WhatYouNeed");
-        private By equipmentNeededError = By.Id("WhatYouNeed-error");
+        private By equipmentNeededError = By.XPath(".//*[@id='sectionWhatYouNeed']/div/div/span[2]");               //By.Id("WhatYouNeed -error");
         private By equipmentNeededInfo = By.Id("WhatYouNeed-info");
         private By howAssessed = By.Id("HowAssessed");
-        private By howAssessedError = By.Id("HowAssessed-error");
+        private By howAssessedError = By.XPath(".//*[@id='sectionHowAssessed']/div/div/span[2]");                   //By.Id("HowAssessed -error");
         private By howAssessedInfo = By.Id("HowAssessed-info");
         private By nextSteps = By.Id("WhereNext");
-        private By nextStepsError = By.Id("WhereNext-error");
+        private By nextStepsError = By.XPath(".//*[@id='sectionWhereNext']/div/div/span[2]");                        //By.Id("WhereNext -error");
         private By nextStepsInfo = By.Id("WhereNext-info");
         private By nextButton = By.Id("goToSection2");
 
