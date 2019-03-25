@@ -28,7 +28,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By CostDesc = By.Id("CostDescription");
         private static By DurLength = By.Id("DurationLength");      
 
-        private static By DurUnit = By.Id("DurationUnit");
+        private static By DurUnit = By.Id("durationDropDown");
         private static By Fulltime = By.Id("FullTime");
         private static By Parttime = By.Id("PartTime");
         private static By Flexible = By.Id("Flexible");

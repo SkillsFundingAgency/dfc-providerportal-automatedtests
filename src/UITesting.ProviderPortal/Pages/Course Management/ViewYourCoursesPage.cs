@@ -33,7 +33,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         //Usman added for edit course
         private By EditCourseDescriptionLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
-        private By EditCourseDetailsLink = By.LinkText("Edit course details");
+        private By EditCourseDetailsLink = By.LinkText("Edit");
         private By CourseEditedLink = By.Id("courseeditlink");
 
         private By courseFor = By.Id("popup-descript-0");

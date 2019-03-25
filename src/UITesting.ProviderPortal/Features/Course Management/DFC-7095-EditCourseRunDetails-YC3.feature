@@ -15,8 +15,7 @@ Given I have accessed course directory as a provider
 @CI
 Scenario: Edit Course Name with valid data 
 	Given I have accessed the selected course run data
-	And I have entered the following course name "Award in Computerised Accounts-Edited"
-	
+	And I have entered the following course name "Award in Computerised Accounts-Edited"	
 	When I  Save the data
 	Then the course run should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
