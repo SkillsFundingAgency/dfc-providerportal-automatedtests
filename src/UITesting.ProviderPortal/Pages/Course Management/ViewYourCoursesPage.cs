@@ -15,8 +15,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     {
         private static String PAGE_TITLE = "Your published courses";
         private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
-        private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");     
-        private static By showFirstCourseDescriptionPopupLink = By.XPath("//*[@id='0']");
+        private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");
+        private static By showFirstCourseDescriptionPopupLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
         // Elt - YC3 specific.. //
 
@@ -32,7 +32,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionPopup = By.Id("popup-descript");
 
         //Usman added for edit course
-        private By EditCourseDescriptionLink = By.LinkText("Edit course description");
+        private By EditCourseDescriptionLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
         private By EditCourseDetailsLink = By.LinkText("Edit course details");
         private By CourseEditedLink = By.Id("courseeditlink");
 
@@ -211,7 +211,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void ClickShowCourseDescriptionPopup()
         {
-            FormCompletionHelper.ClickElement(showCourseDescriptionPopupLink);
+            FormCompletionHelper.ClickElement(EditCourseDescriptionLink);
 
         }
 

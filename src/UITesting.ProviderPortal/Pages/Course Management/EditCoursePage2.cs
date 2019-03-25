@@ -7,9 +7,9 @@ using System.Threading;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
-    public class AddCoursePage2 : BasePage
+    public class EditCoursePage2 : BasePage
     {
-        private static String PAGE_TITLE = "Add course details";
+        private static String PAGE_TITLE = "Edit course details";
         private By qualification = By.Id("qual--");
         private By courseName = By.Id("CourseName");
         private By courseNameError = By.XPath(".//*[@id='courseNameContainer']/span[2]");                   // By.Id("CourseName -error");
@@ -27,7 +27,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By attendanceMode = By.Id("AttendanceMode");
         private By studyMode = By.Id("StudyMode");
         private By advancedLearnerLoan = By.Id("AdvancedLearnerLoan");
-        private By publishBtn = By.Id("publish");
+        private By saveBtn = By.Id("save");
         private By StartDateRadio = By.Id("SpecifiedStartDate");
         private By StartDateType = By.Name("StartDateType");
         private By DateDD = By.Id("Day");
@@ -46,7 +46,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By DurationError = By.XPath(".//*[@id='sectionDuration']/div/span[2]");             // By.Id("DurationLength -error");
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
-        private By DeliveryMode = By.Name("DeliveryMode");
+        private By VenueDropdown = By.Id("VenueId");
         private string errortxt;
 
         //Shivani Added
@@ -64,60 +64,60 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
 
-        public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
+        public EditCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
         }
 
-        public AddCoursePage2 clickOnline()
+        public EditCoursePage2 clickOnline()
         {
             FormCompletionHelper.ClickElement(selectOnline);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
 
         }
 
-        public AddCoursePage2 selectVenueIsDisplayed()
+        public EditCoursePage2 selectVenueIsDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(selectVenueOption);
             PageInteractionHelper.IsElementDisplayed(selectVenueOption);
             Debug.WriteLine("I can see Select Venue Field before clicking Online option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 timeIsDisplayed()
+        public EditCoursePage2 timeIsDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(selectTimeOption);
             PageInteractionHelper.IsElementDisplayed(selectTimeOption);
             Debug.WriteLine("I can see Full Time Part Time field before clicking Online option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 modeIsDisplayed()
+        public EditCoursePage2 modeIsDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(selectModeOption);
             PageInteractionHelper.IsElementDisplayed(selectModeOption);
             Debug.WriteLine("I can Attendance field before clicking Online option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 selectVenueIsNotDisplayed()
+        public EditCoursePage2 selectVenueIsNotDisplayed()
         {
             PageInteractionHelper.VerifyElementNotPresent(selectVenueOption);
             Debug.WriteLine("I cannot see Select Venue field after clicking Online option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
-        public AddCoursePage2 timeIsNotDisplayed()
+        public EditCoursePage2 timeIsNotDisplayed()
         {
             PageInteractionHelper.VerifyElementNotPresent(selectTimeOption);
             Debug.WriteLine("I cannot see Full Time Part Time field after clicking Online option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 modeIsNotDisplayed()
+        public EditCoursePage2 modeIsNotDisplayed()
         {
             PageInteractionHelper.VerifyElementNotPresent(selectModeOption);
             Debug.WriteLine("I cannot see Mode field after clicking Online option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
 
@@ -128,64 +128,65 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         }
 
 
-        public AddCoursePage2 GetQualifiactionDetails()
+        public EditCoursePage2 GetQualifiactionDetails()
         {
             string[] qualificationDetails = webDriver.FindElement(qualification).GetAttribute("textContent").Split(':');
             Console.WriteLine("qualification added: " + qualificationDetails[1].Split(' ')[1]);
             Console.WriteLine("level: " + qualificationDetails[2].Split(' ')[1]);
             Console.WriteLine("awarding organisation: " + qualificationDetails[3].Split(' ')[1]);
             Console.WriteLine("LARS/QAN: " + qualificationDetails[4]);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 EnterCourseName(String name)
+        public EditCoursePage2 EnterCourseName(String name)
         {
             FormCompletionHelper.EnterText(courseName, name);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 CourseNameErrorNotDisplayed()
+
+        public EditCoursePage2 CourseNameErrorNotDisplayed()
         {
             PageInteractionHelper.IsElementDisplayed(courseNameError);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 CourseNameErrorDisplayed()
+        public EditCoursePage2 CourseNameErrorDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(courseNameError);
             PageInteractionHelper.IsElementDisplayed(courseNameError);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 EnterCourseId(String courseid)
+        public EditCoursePage2 EnterCourseId(String courseid)
         {
             FormCompletionHelper.EnterText(courseId, courseid);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
 
-        public AddCoursePage2 CourseIDErrorDisplayed()
+        public EditCoursePage2 CourseIDErrorDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(courseIdError);
             PageInteractionHelper.IsElementDisplayed(courseIdError);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 EnterCourseURL(String url)
+        public EditCoursePage2 EnterCourseURL(String url)
         {
             FormCompletionHelper.EnterText(courseURL, url);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 CourseURLErrorDisplayed()
+        public EditCoursePage2 CourseURLErrorDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(courseURLError);
             PageInteractionHelper.IsElementDisplayed(courseURLError);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
 
-        public AddCoursePage2 ConfirmErrorMessage(string field, string errorMsg)
+        public EditCoursePage2 ConfirmErrorMessage(string field, string errorMsg)
         {
             switch (field)
             {
@@ -197,7 +198,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Course Name":
                     PageInteractionHelper.WaitForElementToBePresent(courseNameError);
@@ -207,7 +208,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Cost":
                     PageInteractionHelper.WaitForElementToBePresent(courseCostError);
@@ -217,7 +218,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Invalid Cost Length":
                     PageInteractionHelper.WaitForElementToBePresent(courseCostInvalidLength);
@@ -227,7 +228,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Invalid Cost":
                     PageInteractionHelper.WaitForElementToBePresent(courseCostInvalid);
@@ -237,7 +238,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Course ID":
                     PageInteractionHelper.WaitForElementToBePresent(courseIdError);
@@ -247,7 +248,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Cost Description":
                     PageInteractionHelper.WaitForElementToBePresent(costDescriptionError);
@@ -257,7 +258,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Day":
                     PageInteractionHelper.WaitForElementToBePresent(DayError);
@@ -267,7 +268,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Month":
                     PageInteractionHelper.WaitForElementToBePresent(MonthError);
@@ -277,7 +278,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Year":
                     PageInteractionHelper.WaitForElementToBePresent(YearError);
@@ -287,7 +288,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Start Date":
                     PageInteractionHelper.WaitForElementToBePresent(StartDateRequiredError);
@@ -297,7 +298,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Past Date":
                     PageInteractionHelper.WaitForElementToBePresent(PasttDateError);
@@ -307,7 +308,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Future Date":
                     PageInteractionHelper.WaitForElementToBePresent(FutureDateError);
@@ -317,7 +318,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Invalid Date":
                     PageInteractionHelper.WaitForElementToBePresent(InvalidDateError);
@@ -327,7 +328,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Duration":
                     PageInteractionHelper.WaitForElementToBePresent(DurationError);
@@ -337,40 +338,40 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 default:
                     throw new Exception("Field does not exist");
             }
         }
 
-        public AddCoursePage2 EnterCourseCost(string cost)
+        public EditCoursePage2 EnterCourseCost(string cost)
         {
             FormCompletionHelper.EnterText(courseCost, cost);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 CourseCostErrorDisplayed()
+        public EditCoursePage2 CourseCostErrorDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(courseCostError);
             PageInteractionHelper.IsElementDisplayed(courseCostError);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 EnterCostDescription(String costdescription)
+        public EditCoursePage2 EnterCostDescription(String costdescription)
         {
             FormCompletionHelper.EnterText(costDescription, costdescription);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 CostDescriptionErrorDisplayed()
+        public EditCoursePage2 CostDescriptionErrorDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(costDescriptionError);
             PageInteractionHelper.IsElementDisplayed(costDescriptionError);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 ConfirmInfoMessage(string field, string infoMsg)
+        public EditCoursePage2 ConfirmInfoMessage(string field, string infoMsg)
         {
             switch (field)
             {
@@ -382,7 +383,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     {
                         throw new Exception("Incorrect Info message displayed");
                     }
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 default:
                     throw new Exception("Field does not exist");
@@ -390,52 +391,45 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             }
         }
 
-        public AddCoursePage2 SelectAttendance(string attendance)
+        public EditCoursePage2 SelectAttendance(string attendance)
         {
             FormCompletionHelper.SelectRadioOptionByForValue(FlexDateRadio, attendance);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
         
-        public AddCoursePage2 SelectStudyMode(string studymode)
+        public EditCoursePage2 SelectStudyMode(string studymode)
         {
             FormCompletionHelper.SelectRadioOptionByForValue(studyMode, studymode);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 SelectAdvancedLearnerLoan()
+        public EditCoursePage2 SelectAdvancedLearnerLoan()
         {
             FormCompletionHelper.SelectCheckBox2(advancedLearnerLoan);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
         
-        public AddCoursePage2 SelectStartDateType(string StartDate)
+        public EditCoursePage2 SelectStartDateType(string StartDate)
         {
             FormCompletionHelper.SelectRadioOptionByForValue(StartDateType, StartDate);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
-
-        public AddCoursePage2 SelectDeliveryMode(string deliveryMode)
-        {
-            FormCompletionHelper.SelectRadioOptionByForValue(DeliveryMode, deliveryMode);
-            return new AddCoursePage2(webDriver);
-        }
-
-
-        public AddCoursePage2 EnterStartDate(string value, string field)
+        
+        public EditCoursePage2 EnterStartDate(string value, string field)
         {
             switch (field)
             {
                 case "Day":
                     FormCompletionHelper.EnterText(DateDD, value);
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Month":
                     FormCompletionHelper.EnterText(DateMM, value);
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 case "Year":
                     FormCompletionHelper.EnterText(DateCCYY, value);
-                    return new AddCoursePage2(webDriver);
+                    return new EditCoursePage2(webDriver);
 
                 default:
                     throw new Exception("Field does not exist");
@@ -443,33 +437,33 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             }
         }
 
-        public AddCoursePage2 EnterDuration (String length)
+        public EditCoursePage2 EnterDuration (String length)
         {
             FormCompletionHelper.EnterText(DurationLength, length);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 SelectDurationUnit (String unit)
+        public EditCoursePage2 SelectDurationUnit (String unit)
         {
             FormCompletionHelper.SelectFromDropDownByText((webDriver.FindElement(DurationUnit)), unit);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCourseSummaryPage PublishCourse()
+        public EditYourCoursePage SaveCourse()
         {
-            FormCompletionHelper.ClickElement(publishBtn);
+            FormCompletionHelper.ClickElement(saveBtn);
             PageInteractionHelper.WaitForPageToLoad();
-            return new AddCourseSummaryPage(webDriver);
+            return new EditYourCoursePage(webDriver);
         }
 
-        public AddCoursePage2 PublishCourseError()
+        public EditCoursePage2 SaveCourseError()
         {
-            FormCompletionHelper.ClickElement(publishBtn);
+            FormCompletionHelper.ClickElement(saveBtn);
             PageInteractionHelper.WaitForPageToLoad();
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 SelectFirstVenue()
+        public EditCoursePage2 SelectFirstVenue()
         {
             if (webDriver.GetType().Name.ToString().Contains("RemoteWebDriver"))
             {
@@ -484,58 +478,64 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             }
 
             PageInteractionHelper.WaitForPageToLoad();
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 SelectSecondVenue()
+        public EditCoursePage2 SelectSecondVenue()
         {
             FormCompletionHelper.SelectCheckBox2(SecondVenue);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
+        public EditCoursePage2 SelectVenue(string venue)
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(VenueDropdown), venue);
+            return new EditCoursePage2(webDriver);
+        }
 
-        public AddCoursePage2 clickWorkBasedRadioButton()
+        public EditCoursePage2 clickWorkBasedRadioButton()
         {
             FormCompletionHelper.ClickElement(workBasedOptionButton);
             Debug.WriteLine("Selected Work Based Option");
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
 
-        public AddCoursePage2 verifyFlexibleStartDateSelected()
+        public EditCoursePage2 verifyFlexibleStartDateSelected()
         {
             FormCompletionHelper.IsObjectSelected(flexibleStartDateOption);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 verifyVenueSelectionNotShown()
+        public EditCoursePage2 verifyVenueSelectionNotShown()
         {
             FormCompletionHelper.VerifyElementNotPresent(selectVenueOption);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 verifyAttendancePatternButtonsnotShown()
+        public EditCoursePage2 verifyAttendancePatternButtonsnotShown()
         {
             FormCompletionHelper.VerifyElementNotPresent(attendancePatternButtons);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 verifyFullPartTimeButtonsNotShown() //mode: fulltime or part time
+        public EditCoursePage2 verifyFullPartTimeButtonsNotShown() //mode: fulltime or part time
         {
             FormCompletionHelper.VerifyElementNotPresent(fullPartTimeButtons);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 verifyCourseRegionIsShown()
+        public EditCoursePage2 verifyCourseRegionIsShown()
         {
             FormCompletionHelper.IsElementPresent(courseRegionSelector);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 selectFirstOptionOnRegionSelector()
+        public EditCoursePage2 selectFirstOptionOnRegionSelector()
         {
             FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
-            return new AddCoursePage2(webDriver);
+            return new EditCoursePage2(webDriver);
         }
 
     }

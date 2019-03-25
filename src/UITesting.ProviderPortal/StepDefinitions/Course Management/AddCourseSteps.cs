@@ -167,7 +167,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
             addCoursePage2.SelectStartDateType(StartDate);
         }
-        
+
+        [When(@"I select delivery mode (.*)")]
+        public void WhenISelectDeliveryMode(string deliveryMode)
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectDeliveryMode(deliveryMode);
+        }
+
         [When(@"I enter (.*) in the (.*) field")]
         public void WhenIEnterDay(string value, string field)
         {

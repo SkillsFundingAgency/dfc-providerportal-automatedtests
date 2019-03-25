@@ -21,9 +21,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By SaveButton = By.Id("save-button");
         private static By DiscardLink = By.LinkText("Discard");
         private static By PreviewLink = By.LinkText("Preview");
-        private static By CourseRunNameText = By.Id("courseRun_CourseName");        
+        private static By Course = By.Id("accordion-heading-1");
+        private static By CourseRunEditLink = By.XPath(".//*[@id='6db91275-5a2a-467f-8326-7f9b9c4f8f61']/div[4]/a[1]");
+        private static By CourseRunNameText = By.XPath(".//*[@id='6db91275-5a2a-467f-8326-7f9b9c4f8f61']/div[1]/span");   
         private static By CourseNameErrMessage = By.Id("courseRun_CourseName-error");
-        private static By CourseRunVenueField = By.Id("courseRun_VenueId");
+        private static By CourseRunVenueField = By.XPath(".//*[@id='6db91275-5a2a-467f-8326-7f9b9c4f8f61']/div[2]/span");
+        private static By CourseRunURLField = By.XPath(".//*[@id='6db91275-5a2a-467f-8326-7f9b9c4f8f61']/div[2]/span");
 
         /*End DFC-4827-variables*/
 
@@ -50,6 +53,22 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             PageInteractionHelper.OpenAccordians(CourseChevron);           
         }
+
+        internal void SelectCourse()
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(Course);
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(CourseRunEditLink);
+        }
+
+        internal void EditCourseRun()
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(CourseRunEditLink);
+            PageInteractionHelper.WaitForPageToLoad();
+        }
+
         internal void SelectCourseRunName()
         {
 
@@ -91,6 +110,27 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.OpenAccordians(CourseChevron);
             PageInteractionHelper.VerifyCourseRunValue(CourseRunNameText, newCourseName);
             
+        }
+
+        internal void VerifyUpdate(string updatedfield, string updatedValue)
+        {
+            switch (updatedfield)
+            {
+                case "course name":
+                    PageInteractionHelper.VerifyText(CourseRunNameText, updatedValue);
+                    break;
+
+                case "venue name":
+                    PageInteractionHelper.VerifyText(CourseRunVenueField, updatedValue);
+                    break;
+
+                case "URL":
+                    PageInteractionHelper.VerifyText(CourseRunURLField, updatedValue);
+                    break;
+                default:
+                    throw new Exception("Field does not exist");
+            }        
+
         }
 
         internal void ValidateSavedVenue(string venueName)

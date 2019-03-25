@@ -66,20 +66,55 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveSelectedACourseRunToUpdate()
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.SelectCourseRunName();
-        }        
+            //editYourCoursePage.SelectCourseRunName();
+            editYourCoursePage.SelectCourse();
+        }
+
+
+        [Given(@"I have clicked edit for a course run")]
+        public void CourseRunToUpdate()
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            //editYourCoursePage.SelectCourseRunName();
+            editYourCoursePage.EditCourseRun();
+        }
+
         [Given(@"I have changed the course name to ""(.*)""")]
         public void GivenIHaveChangedTheCourseNameTo(string newCourseName)
         {
-            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ChangeCourseName(newCourseName);
-        }        
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterCourseName(newCourseName);
+        }
+
+        [Given(@"I have changed the URL to (.*)")]
+        public void GivenIHaveChangedTheURLTo(string newURL)
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterCourseURL(newURL);
+        }
+
+        [Given(@"I have changed the cost to (.*)")]
+        public void GivenIHaveChangedTheCost(string newCost)
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterCourseCost(newCost);
+        }
+
         [When(@"I Click Save")]
         public void WhenIClickSave()
         {
-            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.SaveCourseName();
-        }        
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.SaveCourse();
+        }
+
+
+        [When(@"I Click Save leading to Error")]
+        public void WhenIClickSaveError()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.SaveCourseError();
+        }
+
         [Then(@"I should be able to view the course runs\.")]
         public void ThenIShouldBeAbleToViewTheCourseRuns_()
         {
@@ -93,18 +128,18 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             editYourCoursePage.ValidateButtons();
         }
         
-        [Then(@"the new course name should be saved as ""(.*)""")]
-        public void ThenTheNewCourseNameShouldBeSavedAs(string newCourseName)
+        [Then(@"the new (.*) should be saved as (.*)")]
+        public void ThenTheNewCourseNameShouldBeSavedAs(string updatedField, string newCourseName)
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ValidateSavedData(newCourseName);
+            editYourCoursePage.VerifyUpdate(updatedField, newCourseName);
         }
         
-        [Then(@"the Error message should be displayed ""(.*)""")]
-        public void ThenTheErrorMessageShouldBeDisplayed(string errMessage)
+        [Then(@"the Error message for (.*) should be displayed (.*)")]
+        public void ThenTheErrorMessageShouldBeDisplayed(string field, string errMessage)
         {
-            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ValidateErrorMessage(errMessage);
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.ConfirmErrorMessage(field, errMessage);
         }
         
         [Then(@"the course name should be saved without leading or trailing spaces as ""(.*)""")]
@@ -117,8 +152,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Given(@"I have changed the course venue to (.*)")]
         public void EditVenueName(string venueName)
         {
-            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            editYourCoursePage.ChangeVenueName(venueName);
+            EditCoursePage2 editCoursePage2= new EditCoursePage2(webDriver);
+            editCoursePage2.SelectVenue(venueName);
         }
 
         [Then(@"the new course venue should be saved as (.*)")]

@@ -3,45 +3,42 @@
 	As a Provider
 	I want to be able to change the course cost
 
+
 Background:
-	Given I have logged to course directory 
-	And I have searched for a UKPRN "10043577" and clicked search
-	And I have clicked View Courses button
-	And I have clicked the Main Qualification Chevron
-	And I have clicked one of the courses available Chevron
-	Then I should be able to view the course run details.	
+	Given I have accessed course directory as a provider
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10002815" and clicked search
+	When I click to view my courses
+	## End of Provider Search Steps
+	Given I have clicked the Main Qualification
+	And I have clicked one of the courses available
+	Then I should be able to view the course runs.
+
+
 @CI
 Scenario: Update cost with valid value
-	Given I have selected a course cost to update
-	And I have updated the cost as "1500.00"
-	Then I'm able to view Save, Discard and Preview
-	And I press save
-	Then the cost should be updated with 1500.00
+	Given I have selected a course run to update
+	And I have changed the cost to 1234.56
+	When I Click Save
+
+
 @CI
 Scenario: Update cost with value more than 999999.99
-	Given I have selected a course cost to update
-	And I have updated the cost as "1000000.99"
-	Then I'm able to view Save, Discard and Preview
-	And I press save
-	Then there should be an error message "Maximum value for cost is £999,999.99"
-##@CI
-##Scenario: Update cost and cost detail with null value
-##	Given I have selected a course cost to update
-##	And I have updated the cost as "  "
-##	Then I'm able to view Save, Discard and Preview
-##	And I press save
-##	Then there should be an error message "Enter the cost in pounds and pence"
+	Given I have selected a course run to update
+	And I have changed the cost to 9999999.99
+	When I Click Save leading to Error
+	Then the Error message for cost should be displayed Maximum value for cost is £999,999.99
+
 @CI
 Scenario: Update cost with a value without decimals
-	Given I have selected a course cost to update
-	And I have updated the cost as "2000"
-	Then I'm able to view Save, Discard and Preview
-	And I press save
-	Then the cost should be updated with decimal places as "2000.00"
+	Given I have selected a course run to update
+	And I have changed the cost to 123456
+	When I Click Save
+
+
 @CI
 Scenario: Update cost with a value with one decimals
-	Given I have selected a course cost to update
-	And I have updated the cost as "300.0"
-	Then I'm able to view Save, Discard and Preview
-	And I press save
-	Then the cost should be updated with decimal places as "300.00"
+	Given I have selected a course run to update
+	And I have changed the cost to 1234.5
+	When I Click Save

@@ -17,41 +17,36 @@ Background:
 Scenario: Edit Course Name with valid data
 	Given I have selected a course run to update
 	And I have changed the course name to "Updated Course Name"
-	Then Save , Discard and preview buttons should be visible
 	When I Click Save
-	Then the new course name should be saved as "Updated Course Name"	
+	Then the new course name should be saved as Updated Course Name
 @CI
 Scenario: Edit Course Name with null data
 	Given I have selected a course run to update
 	And I have changed the course name to " "
-	Then Save , Discard and preview buttons should be visible
-	When I Click Save
-	Then the Error message should be displayed "Enter Course Name"
+	When I Click Save leading to Error
+	Then the Error message for Course Name should be displayed Enter course name
+
 @CI
 Scenario: Edit Course Name with 255 characters
 	Given I have selected a course run to update
 	And I have changed the course name to "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV"
-	Then Save , Discard and preview buttons should be visible 
 	When I Click Save
-	Then the new course name should be saved as "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV"
+	Then the new course name should be saved as ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 @CI
 Scenario: Edit Course Name with more than 255 characters
 	Given I have selected a course run to update
 	And I have changed the course name to "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVB"
-	Then Save , Discard and preview buttons should be visible
-	When I Click Save
-	Then the Error message should be displayed "The maximum length of Course Name is 255 characters"
+	When I Click Save leading to Error
+	Then the Error message for Course Name should be displayed The maximum length of Course Name is 255 characters
 @CI
 Scenario: Edit Course Name with non-ascii characters
 	Given I have selected a course run to update
 	And I have changed the course name to "GCEЕлизавета A Level in Biology - Testing"
-	Then Save , Discard and preview buttons should be visible
-	When I Click Save
-	Then the Error message should be displayed "Course Name contains invalid characters"
+	When I Click Save leading to Error
+	Then the Error message for Course Name should be displayed Course Name contains invalid characters
 @CI
 Scenario: Edit Course Name with trailing and leading spaces
 	Given I have selected a course run to update
 	And I have changed the course name to " Course name update 001 "
-	Then Save , Discard and preview buttons should be visible
 	When I Click Save
-	Then the course name should be saved without leading or trailing spaces as "Course name update 001"
+	Then the new course name should be saved as Course name update 001

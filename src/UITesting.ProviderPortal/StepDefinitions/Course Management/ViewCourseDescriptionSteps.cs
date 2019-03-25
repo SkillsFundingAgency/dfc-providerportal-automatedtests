@@ -44,6 +44,13 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
 
 
+        [Then(@"I am on the Edit course description page")]
+        public void ThenIamOnEditCoursePage()
+        {
+            EditCoursePage editCoursePage = new EditCoursePage(webDriver);
+   
+        }
+
         [Then(@"course description pop-up opens")]
         public void ThenCourseDescriptionPop_UpOpens()
         {
