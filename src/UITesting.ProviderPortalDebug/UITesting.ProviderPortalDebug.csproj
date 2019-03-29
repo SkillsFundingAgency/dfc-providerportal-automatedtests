@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E92E6574-9C9F-41D5-9898-6B21E6BE0A47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UITesting.ProviderPortal</RootNamespace>
+    <AssemblyName>UITesting.ProviderPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CITests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\CITests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
+      <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
+    </Compile>
+    <Compile Include="Features\Venue Management\DFC-4761 Edit Venue - View Venue Details.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-4761 Edit Venue - View Venue Details.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Course Management\EditCoursePage.cs" />
+    <Compile Include="Pages\Course Management\EditCoursePage2.cs" />
+    <Compile Include="Pages\Course Management\AddCourseSummaryPage.cs" />
+    <Compile Include="Pages\Course Management\AddCoursePage.cs" />
+    <Compile Include="Pages\Course Management\AddCoursePage2.cs" />
+    <Compile Include="Pages\Course Management\EditCourseDescription_YC3Page.cs" />
+    <Compile Include="Pages\Course Management\EditCourseRunDetails-YC3Page.cs" />
+    <Compile Include="Pages\Course Management\EditYourCoursePage.cs" />
+    <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
+    <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
+    <Compile Include="Pages\DfESignInPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
+    <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueEditNamePage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueManualAddressPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueSelectAddressPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenueConfirmAddressPage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenuePage.cs" />
+    <Compile Include="Pages\Venue Management\AddVenue_EnterAddressManuallyPage.cs" />
+    <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_5844_AddCourseLine2SelectOnlineSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCostSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCourseDescription_YC3Steps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\EditCourseRunDetails_YC3Steps.cs" />
+    <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
+    <Compile Include="StepDefinitions\Course Management\DFC_6667AddCourse_WorkBasedOptionSteps.cs" />
+    <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
+    <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
+    <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenueSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\ViewLiveVenuesSteps.cs" />
+    <Compile Include="Test Support\BasePage.cs" />
+    <Compile Include="Test Support\BaseTest.cs" />
+    <Compile Include="Test Support\Configurator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UITesting.Framework\UITesting.Framework.csproj">
+      <Project>{e30dd9fe-e69d-41bb-8d4f-19fcad02b2ff}</Project>
+      <Name>UITesting.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah">
+      <Version>3.1.66</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.13.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.23.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver">
+      <Version>73.0.3683.68</Version>
+    </PackageReference>
+    <PackageReference Include="SpecFlow">
+      <Version>2.4.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.CITests.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="App.config">
+      <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="Features\Venue Management\DFC-4761 Edit Venue - View Venue Details.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-4761 Edit Venue - View Venue Details.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
