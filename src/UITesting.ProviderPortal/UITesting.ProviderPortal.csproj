@@ -56,6 +56,11 @@
     <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
       <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
     </Compile>
+    <Compile Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-6716 BulkUpload.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-4830Edit Course Venue.feature.cs">
       <DependentUpon>DFC-4830Edit Course Venue.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -197,6 +202,10 @@
       <DependentUpon>DFC-5794 Edit Venue - Commit Edit Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Bulk Upload\BulkUploadFilePublishedPage.cs" />
+    <Compile Include="Pages\Bulk Upload\BulkUploadPublishPage.cs" />
+    <Compile Include="Pages\Bulk Upload\BulkUploadFixPublishPage.cs" />
+    <Compile Include="Pages\Bulk Upload\UploadAFilePage.cs" />
     <Compile Include="Pages\Course Management\EditCoursePage.cs" />
     <Compile Include="Pages\Course Management\EditCoursePage2.cs" />
     <Compile Include="Pages\Course Management\AddCourseSummaryPage.cs" />
@@ -223,6 +232,7 @@
     <Compile Include="Pages\Venue Management\ViewAllLiveVenuesPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
+    <Compile Include="StepDefinitions\Bulk Upload\BulkUploadSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_5844_AddCourseLine2SelectOnlineSteps.cs" />
@@ -301,6 +311,10 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6716 BulkUpload.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-4830Edit Course Venue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -414,6 +428,58 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5794 Edit Venue - Commit Edit Venue Record.feature.cs</LastGenOutput>
     </None>
+    <None Include="Test Data\BulkUpload_1000courses.csv" />
+    <None Include="Test Data\BulkUpload_100courses.csv" />
+    <None Include="Test Data\BulkUpload_ALLMAXCHARS.csv" />
+    <None Include="Test Data\BulkUpload_ALLOVERMAXCHARS.csv" />
+    <None Include="Test Data\BulkUpload_attendancemissing.csv" />
+    <None Include="Test Data\BulkUpload_ColumnNameMisplet.csv" />
+    <None Include="Test Data\BulkUpload_dayblockrelease.csv" />
+    <None Include="Test Data\BulkUpload_DurationDays.csv" />
+    <None Include="Test Data\BulkUpload_DurationHours.csv" />
+    <None Include="Test Data\BulkUpload_DurationOver3digits.csv" />
+    <None Include="Test Data\BulkUpload_DurationYears.csv" />
+    <None Include="Test Data\BulkUpload_Empty.csv" />
+    <None Include="Test Data\BulkUpload_ExpiredLARS.csv" />
+    <None Include="Test Data\BulkUpload_extracolumn.csv" />
+    <None Include="Test Data\BulkUpload_extracolumn2.csv" />
+    <None Include="Test Data\BulkUpload_extracolumn3.csv" />
+    <None Include="Test Data\BulkUpload_FlexibleDateSelected.csv" />
+    <None Include="Test Data\BulkUpload_flexibleevening.csv" />
+    <None Include="Test Data\BulkUpload_InvalidCost.csv" />
+    <None Include="Test Data\BulkUpload_InvalidCostformat.csv" />
+    <None Include="Test Data\BulkUpload_InvalidDuration.csv" />
+    <None Include="Test Data\BulkUpload_InvalidLARS.csv" />
+    <None Include="Test Data\BulkUpload_InValidStartDateDay.csv" />
+    <None Include="Test Data\BulkUpload_InvalidStartDateDD.csv" />
+    <None Include="Test Data\BulkUpload_InValidStartDateMonth.csv" />
+    <None Include="Test Data\BulkUpload_InvalidStartDateYear.csv" />
+    <None Include="Test Data\BulkUpload_InvalidURL.csv" />
+    <None Include="Test Data\BulkUpload_MissingColumns.csv" />
+    <None Include="Test Data\BulkUpload_MissingCourseName.csv" />
+    <None Include="Test Data\BulkUpload_MissingCourseNamemutiplerows.csv" />
+    <None Include="Test Data\BulkUpload_MissingLARS.csv" />
+    <None Include="Test Data\BulkUpload_NoAttendancePattern.csv" />
+    <None Include="Test Data\BulkUpload_NoCost.csv" />
+    <None Include="Test Data\BulkUpload_NoCostorCostDesc.csv" />
+    <None Include="Test Data\BulkUpload_NoDeliveryMode.csv" />
+    <None Include="Test Data\BulkUpload_NoStudyMode.csv" />
+    <None Include="Test Data\BulkUpload_OnlyLARSentered.csv" />
+    <None Include="Test Data\BulkUpload_parttimeweekend.csv" />
+    <None Include="Test Data\BulkUpload_SpecialChars.csv" />
+    <None Include="Test Data\BulkUpload_SpecialChars2.csv" />
+    <None Include="Test Data\BulkUpload_splitcourseruns.csv" />
+    <None Include="Test Data\BulkUpload_StartDateFuture.csv" />
+    <None Include="Test Data\BulkUpload_StartDatePast.csv" />
+    <None Include="Test Data\BulkUpload_Success.csv" />
+    <None Include="Test Data\BulkUpload_Success_2500_courses.csv" />
+    <None Include="Test Data\BulkUpload_Valid.csv" />
+    <None Include="Test Data\BulkUpload_ValidStartDate.csv" />
+    <None Include="Test Data\BulkUpload_WHOCOURSEFOROVER2000.csv" />
+    <None Include="Test Data\BulkUpload_WrongOrder.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Test Data\BulkUploadNotCSV.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
