@@ -217,6 +217,7 @@
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
+    <Compile Include="Pages\Qualification Management\Reg_NonRegPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\DfESignInPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
