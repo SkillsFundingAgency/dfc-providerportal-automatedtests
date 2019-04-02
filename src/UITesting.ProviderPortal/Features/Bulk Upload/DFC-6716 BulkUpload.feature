@@ -7,8 +7,6 @@ Background:
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
-
-
 @CI
 Scenario: DFC-6737 Bulk Upload No Errors
 	Given I have searched for UKPRN "10037355" and clicked search
@@ -19,7 +17,6 @@ Scenario: DFC-6737 Bulk Upload No Errors
 	Then I am on the Publish your courses page
 	When I click publish to publish upload courses
 	Then I am on the courses published page
-
 @CI
 Scenario: DFC-6738 Bulk Upload Pass Stage 1
 	Given I have searched for UKPRN "10036802" and clicked search
@@ -28,7 +25,6 @@ Scenario: DFC-6738 Bulk Upload Pass Stage 1
 	When I click Choose a File BulkUpload_InvalidDuration.csv to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
-
 @CI
 Scenario: DFC-6738 Bulk Upload File Not CSV
 	Given I have searched for UKPRN "10036802" and clicked search
@@ -37,7 +33,6 @@ Scenario: DFC-6738 Bulk Upload File Not CSV
 	When I click Choose a File BulkUploadNotCSV.txt to upload
 	And I click Upload File leading to stage1 errors
 	Then the error The selected file must be a csv is displayed
-
 @CI
 Scenario: DFC-6738 Bulk Upload File Empty
 	Given I have searched for UKPRN "10036802" and clicked search
@@ -46,7 +41,6 @@ Scenario: DFC-6738 Bulk Upload File Empty
 	When I click Choose a File BulkUpload_Empty.csv to upload
 	And I click Upload File leading to stage1 errors
 	Then the error The selected file is empty is displayed in error summary
-
 @CI
 Scenario: DFC-6738 Bulk Upload Missing Columns
 	Given I have searched for UKPRN "10036802" and clicked search
