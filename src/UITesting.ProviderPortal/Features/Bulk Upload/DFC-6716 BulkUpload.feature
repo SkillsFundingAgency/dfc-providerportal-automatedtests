@@ -83,3 +83,56 @@ Scenario: DFC-7379 Missing LARS
 	And I click Upload File leading to stage1 errors
 	Then the error Line 2, LARS_QAN = => LARS is missing. is displayed in error summary
 
+@CI
+Scenario: DFC-7224 Bulk Upload Cancel Course Edit
+	Given I have searched for UKPRN "10036790" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_CancelTest.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+	When I click fix against the first Course
+	Then I click on Cancel to cancel edit
+	Then I am on the Fix and publish bulk upload page
+
+@CI
+Scenario: DFC-7224 Bulk Upload Cancel Course Run Edit
+	Given I have searched for UKPRN "10036790" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_CancelTest.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+	When I click fix against the first Course Run
+	Then I click on Cancel to cancel edit course run
+	Then I am on the Fix and publish bulk upload page
+
+
+@CI
+Scenario: DFC-7224 Bulk Upload Save Course Edit
+	Given I have searched for UKPRN "10036789" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_SaveTest.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+	When I click fix against the first Course i want edit and save
+	And I edit bulk upload course description Semi-qualified (people)
+	And I click to Save the Course details
+	Then I am on the Fix and publish bulk upload page
+
+@CI
+Scenario: DFC-7225 Bulk Upload Save Course Run Edit
+	Given I have searched for UKPRN "10036789" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_SaveTest.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+	When I click fix against the first Course Run i want edit and save
+	And I edit bulk upload course cost 9
+	And I click to Save the Course Run details
+	Then I am on the Fix and publish bulk upload page
+
+
+#	10036789

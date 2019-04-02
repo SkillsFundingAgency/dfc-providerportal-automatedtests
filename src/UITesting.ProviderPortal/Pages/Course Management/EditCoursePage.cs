@@ -2,7 +2,7 @@
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
-using UITesting.ProviderPortal.Pages.Venue_Management;
+using UITesting.ProviderPortal.Pages.Bulk_Upload;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -32,6 +32,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By nextStepsError = By.XPath(".//*[@id='sectionWhereNext']/div/div/span[2]");                        //By.Id("WhereNext -error");
         private By nextStepsInfo = By.Id("WhereNext-info");
         private By nextButton = By.Id("goToSection2");
+        private By CancelLink = By.XPath(".//*[@id='editCourse']/ul/li[2]/a");
+        private By SaveBtn = By.Id("save");
+      
 
         private string errortxt;
 
@@ -101,6 +104,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(nextButton);
             return new EditCoursePage(webDriver);
         }
+
+        public BulkUploadFixPublishPage ClickCancelBU()
+        {
+            FormCompletionHelper.ClickElement(CancelLink);
+            return new BulkUploadFixPublishPage(webDriver);
+        }
+
+        public BulkUploadFixPublishPage ClickSaveBU()
+        {
+            FormCompletionHelper.ClickElement(SaveBtn);
+            return new BulkUploadFixPublishPage(webDriver);
+        }
+
 
         public EditCoursePage ConfirmErrorMessage(string field, string errorMsg)
         {

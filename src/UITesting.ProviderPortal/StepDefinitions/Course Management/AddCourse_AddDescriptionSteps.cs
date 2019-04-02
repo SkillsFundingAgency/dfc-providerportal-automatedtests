@@ -22,6 +22,8 @@ namespace UITesting.ProviderPortal.StepDefinitions
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
         }
 
+        [Then(@"I have specified who the course is for (.*)")]
+        [When(@"I have specified who the course is for (.*)")]
         [Given(@"I have specified who the course is for (.*)")]
         public void GivenIHaveSpecifiedWhoTheCourseIsFor(string p0)
         {
