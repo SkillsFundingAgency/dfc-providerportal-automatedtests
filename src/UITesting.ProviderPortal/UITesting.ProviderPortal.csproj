@@ -440,6 +440,7 @@
     <None Include="Test Data\BulkUpload_DurationHours.csv" />
     <None Include="Test Data\BulkUpload_DurationOver3digits.csv" />
     <None Include="Test Data\BulkUpload_DurationYears.csv" />
+    <None Include="Test Data\BulkUpload_EditTest.csv" />
     <None Include="Test Data\BulkUpload_Empty.csv" />
     <None Include="Test Data\BulkUpload_ExpiredLARS.csv" />
     <None Include="Test Data\BulkUpload_extracolumn.csv" />
@@ -456,6 +457,7 @@
     <None Include="Test Data\BulkUpload_InValidStartDateMonth.csv" />
     <None Include="Test Data\BulkUpload_InvalidStartDateYear.csv" />
     <None Include="Test Data\BulkUpload_InvalidURL.csv" />
+    <None Include="Test Data\BulkUpload_LARSMixture.csv" />
     <None Include="Test Data\BulkUpload_MissingColumns.csv" />
     <None Include="Test Data\BulkUpload_MissingCourseName.csv" />
     <None Include="Test Data\BulkUpload_MissingCourseNamemutiplerows.csv" />
