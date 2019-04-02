@@ -16,7 +16,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private static String PAGE_TITLE = "What type of qualification are you looking for?";
         private By RegQualOption = By.Id("Regulated");
         private By NonRegOption = By.Id("NonRegulated");
-        private By NextButton = By.Id("Next");
+        private By NextButton = By.Id("next");
         private By ErrMsg = By.XPath("//*[@id='QualificationType']/div/fieldset/span");
         public RegulatedQualificationPage(IWebDriver webDriver ): base(webDriver)
         {
