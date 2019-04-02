@@ -433,6 +433,7 @@
     <None Include="Test Data\BulkUpload_ALLMAXCHARS.csv" />
     <None Include="Test Data\BulkUpload_ALLOVERMAXCHARS.csv" />
     <None Include="Test Data\BulkUpload_attendancemissing.csv" />
+    <None Include="Test Data\BulkUpload_CancelTest.csv" />
     <None Include="Test Data\BulkUpload_ColumnNameMisplet.csv" />
     <None Include="Test Data\BulkUpload_dayblockrelease.csv" />
     <None Include="Test Data\BulkUpload_DurationDays.csv" />
@@ -466,6 +467,7 @@
     <None Include="Test Data\BulkUpload_NoStudyMode.csv" />
     <None Include="Test Data\BulkUpload_OnlyLARSentered.csv" />
     <None Include="Test Data\BulkUpload_parttimeweekend.csv" />
+    <None Include="Test Data\BulkUpload_SaveTest.csv" />
     <None Include="Test Data\BulkUpload_SpecialChars.csv" />
     <None Include="Test Data\BulkUpload_SpecialChars2.csv" />
     <None Include="Test Data\BulkUpload_splitcourseruns.csv" />

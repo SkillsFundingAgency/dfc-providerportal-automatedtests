@@ -1,6 +1,9 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
 using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.Pages.Bulk_Upload;
+using UITesting.ProviderPortal.Pages.Course_Management;
 
 
 namespace UITesting.ProviderPortal.StepDefinitions
@@ -76,11 +79,109 @@ namespace UITesting.ProviderPortal.StepDefinitions
             BulkUploadFilePublishedPage bulkUploadFilePublishedPage = new BulkUploadFilePublishedPage(webDriver);
         }
 
+        [Then(@"I click on Cancel to cancel edit")]
+        public void CancleBUEdit()
+        {
+            EditCoursePage editCoursePage = new EditCoursePage(webDriver);
+            editCoursePage.ClickCancelBU();
+        }
+
+        [Then(@"I click on Cancel to cancel edit course run")]
+        public void CancleBUEdit2()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.ClickCancelBU();
+        }
+
+        [When(@"I click to Save the Course details")]
+        public void SaveBUEdit()
+        {
+            EditCoursePage editCoursePage = new EditCoursePage(webDriver);
+            editCoursePage.ClickSaveBU();
+        }
+
+        [When(@"I click to Save the Course Run details")]
+        public void SaveBURunEdit()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.ClickSaveBURun();
+        }
+
         [When(@"I click publish to publish upload courses")]
         public void PublishUploadedCourses()
         {
             BulkUploadPublishPage bulkUploadPublishPage = new BulkUploadPublishPage(webDriver);
             bulkUploadPublishPage.Publish();
         }
+
+        [When(@"I click fix against the first Course")]
+        public void FixUploadedCourses()
+        {
+            BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
+            bulkUploadFixPublishPage.FixCourse();
+        }
+
+        [When(@"I click fix against the first Course Run")]
+        public void FixUploadedCourseRun()
+        {
+            BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
+            bulkUploadFixPublishPage.FixCourseRun();
+        }
+
+
+        [When(@"I edit bulk upload course description (.*)")]
+        public void EditUploadedCourse(string description)
+        {
+            EditCoursePage editCoursePage = new EditCoursePage(webDriver);
+            editCoursePage.EnterWhoCourseFor(description);
+        }
+
+        [When(@"I edit bulk upload course cost (.*)")]
+        public void EditUploadedCourseRun(string cost)
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterCourseCost(cost);
+        }
+
+
+        [When(@"I click fix against the first Course i want edit and save")]
+        public void FixUploadedCoursesSave()
+        {
+
+            IList<IWebElement> links = webDriver.FindElements(By.LinkText("Fix"));
+            IList<IWebElement> listOflinks = new List<IWebElement>();
+
+            for (int i = 0; i < links.Count; i++)
+            {
+                links = webDriver.FindElements(By.LinkText("Fix"));
+
+                //if (!string.IsNullOrEmpty(links[i].Text))
+                if (i == 0)
+                    links[i].Click();
+            }
+
+            //BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
+            //bulkUploadFixPublishPage.FixCourseSave();
+        }
+
+        [When(@"I click fix against the first Course Run i want edit and save")]
+        public void FixUploadedCourseRunSave()
+        {
+            IList<IWebElement> links = webDriver.FindElements(By.LinkText("Fix"));
+            IList<IWebElement> listOflinks = new List<IWebElement>();
+
+            for (int i = 0; i < links.Count; i++)
+            {
+                links = webDriver.FindElements(By.LinkText("Fix"));
+
+                //if (!string.IsNullOrEmpty(links[i].Text))
+                if (i == 1)
+                    links[i].Click();
+            }
+
+            //BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
+            //bulkUploadFixPublishPage.FixCourseRunSave();
+        }
+
     }
 }

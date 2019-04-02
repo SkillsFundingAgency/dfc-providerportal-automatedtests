@@ -4,6 +4,7 @@ using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using System.Diagnostics;
 using System.Threading;
+using UITesting.ProviderPortal.Pages.Bulk_Upload;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -47,6 +48,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
         private By VenueDropdown = By.Id("VenueId");
+        private By CancelLink = By.XPath(".//*[@id='editCourseRun']/ul/li[2]/a");
+        private By SaveBtn = By.Id("save");
+
         private string errortxt;
 
         //Shivani Added
@@ -183,6 +187,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.WaitForElementToBePresent(courseURLError);
             PageInteractionHelper.IsElementDisplayed(courseURLError);
             return new EditCoursePage2(webDriver);
+        }
+
+
+        public BulkUploadFixPublishPage ClickCancelBU()
+        {
+            FormCompletionHelper.ClickElement(CancelLink);
+            return new BulkUploadFixPublishPage(webDriver);
+        }
+
+        public BulkUploadFixPublishPage ClickSaveBURun()
+        {
+            FormCompletionHelper.ClickElement(SaveBtn);
+            return new BulkUploadFixPublishPage(webDriver);
         }
 
 
