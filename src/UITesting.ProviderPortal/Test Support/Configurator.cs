@@ -12,6 +12,7 @@ namespace UITesting.ProviderPortal.TestSupport
         private readonly String baseUrlCourses;
         private readonly String baseUrl;
         private readonly String providerbaseUrl;
+        private readonly String regqualUrl;
         private readonly String useBS;
         private readonly String QualUrl;
         private readonly String dFEUser;
@@ -28,6 +29,7 @@ namespace UITesting.ProviderPortal.TestSupport
             baseUrlVenues = ConfigurationManager.AppSettings["BaseUrlVenues"];
             baseUrlCourses = ConfigurationManager.AppSettings["BaseUrlCourses"];
             providerbaseUrl = ConfigurationManager.AppSettings["BaseUrlProviders"];
+            regqualUrl = ConfigurationManager.AppSettings["RegQualUrl"];
             dFEUser = ConfigurationManager.AppSettings["dFEUser"];
             dFEPassword = ConfigurationManager.AppSettings["dFEPassword"];
             adminUser = ConfigurationManager.AppSettings["AdminUser"];
@@ -52,6 +54,10 @@ namespace UITesting.ProviderPortal.TestSupport
         public String GetBaseUrl()
         {
             return baseUrl;
+        }
+        public String GetRegQualUrl()
+        {
+            return regqualUrl;
         }
 
         public String GetBaseUrlVenues()
