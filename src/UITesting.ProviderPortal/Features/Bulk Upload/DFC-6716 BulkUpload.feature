@@ -134,5 +134,32 @@ Scenario: DFC-7225 Bulk Upload Save Course Run Edit
 	And I click to Save the Course Run details
 	Then I am on the Fix and publish bulk upload page
 
+@CI
+Scenario: DFC-6719 Bulk Upload Edit Course
+	Given I have searched for UKPRN "10036789" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_EditTest.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+	When I click fix against the first Course i want edit and save
+	And I edit bulk upload course description Semi-qualified (people)
+	And I edit bulk upload course entry requirements None Specified
+	And I click to Save the Course details
+	Then I am on the Fix and publish bulk upload page
+
+@CI
+Scenario: DFC-6736 Bulk Upload Edit Course Run
+	Given I have searched for UKPRN "10036789" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_EditTest.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+	When I click fix against the first Course Run i want edit and save
+	And I edit bulk upload course name Test Course 100
+	And I edit bulk upload course cost 9
+	And I click to Save the Course Run details
+	Then I am on the Fix and publish bulk upload page
 
 #	10036789

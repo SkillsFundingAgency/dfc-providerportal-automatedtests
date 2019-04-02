@@ -136,6 +136,13 @@ namespace UITesting.ProviderPortal.StepDefinitions
             editCoursePage.EnterWhoCourseFor(description);
         }
 
+        [When(@"I edit bulk upload course entry requirements (.*)")]
+        public void EditUploadedCourseReqs(string entryReqs)
+        {
+            EditCoursePage editCoursePage = new EditCoursePage(webDriver);
+            editCoursePage.EnterEntryRequirements(entryReqs);
+        }
+
         [When(@"I edit bulk upload course cost (.*)")]
         public void EditUploadedCourseRun(string cost)
         {
@@ -143,6 +150,12 @@ namespace UITesting.ProviderPortal.StepDefinitions
             editCoursePage2.EnterCourseCost(cost);
         }
 
+        [When(@"I edit bulk upload course name (.*)")]
+        public void EditUploadedCourseRunName(string name)
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterCourseName(name);
+        }
 
         [When(@"I click fix against the first Course i want edit and save")]
         public void FixUploadedCoursesSave()
@@ -175,7 +188,7 @@ namespace UITesting.ProviderPortal.StepDefinitions
                 links = webDriver.FindElements(By.LinkText("Fix"));
 
                 //if (!string.IsNullOrEmpty(links[i].Text))
-                if (i == 1)
+                if (i == 0)
                     links[i].Click();
             }
 
