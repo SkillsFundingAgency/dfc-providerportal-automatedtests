@@ -151,6 +151,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-7391 RegulatedQualifications.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Qualification Management\DFC-8152-NonRegSearchforCourseProvision.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-8152-NonRegSearchforCourseProvision.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -395,6 +400,10 @@
     <None Include="Features\Qualification Management\DFC-7391 RegulatedQualifications.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-7391 RegulatedQualifications.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Qualification Management\DFC-8152-NonRegSearchforCourseProvision.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-8152-NonRegSearchforCourseProvision.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

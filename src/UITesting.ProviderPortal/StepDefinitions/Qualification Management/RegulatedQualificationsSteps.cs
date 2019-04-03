@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Given(@"I have accessed the Regulated Qualifications page")]
         public void GivenIHaveAccessedTheRegulatedQualificationsPage()
         {
-            webDriver.Url = Configurator.GetConfiguratorInstance().GetRegQualUrl();
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() +"/RegulatedQualification";
         }
         
         [When(@"I Navigate to Regulated Qualifications page")]
