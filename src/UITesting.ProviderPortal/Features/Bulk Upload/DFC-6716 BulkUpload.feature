@@ -10,7 +10,7 @@ Background:
 
 
 @CI
-Scenario: DFC-6737 Bulk Upload No Errors
+Scenario: DFC-6737 Bulk Upload Status of upload Courses - No Errors
 	Given I have searched for UKPRN "10037355" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -20,8 +20,7 @@ Scenario: DFC-6737 Bulk Upload No Errors
 	When I click publish to publish upload courses
 	Then I am on the courses published page
 
-@CI
-Scenario: DFC-6738 Bulk Upload Pass Stage 1
+Scenario: DFC-7272 Bulk Upload Status of upload Courses - Errors
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -30,7 +29,16 @@ Scenario: DFC-6738 Bulk Upload Pass Stage 1
 	Then I am on the Fix and publish bulk upload page
 
 @CI
-Scenario: DFC-6738 Bulk Upload File Not CSV
+Scenario: DFC-6738 Bulk Upload Stage 1 - Pass
+	Given I have searched for UKPRN "10036802" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_InvalidDuration.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+
+@CI
+Scenario: DFC-6738 Bulk Upload Stage 1 - File Not CSV
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -39,7 +47,7 @@ Scenario: DFC-6738 Bulk Upload File Not CSV
 	Then the error The selected file must be a csv is displayed
 
 @CI
-Scenario: DFC-6738 Bulk Upload File Empty
+Scenario: DFC-6738 Bulk Upload Stage 1 - File Empty
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -48,7 +56,7 @@ Scenario: DFC-6738 Bulk Upload File Empty
 	Then the error The selected file is empty is displayed in error summary
 
 @CI
-Scenario: DFC-6738 Bulk Upload Missing Columns
+Scenario: DFC-6738 Bulk Upload Stage 1 - Missing Columns
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -57,7 +65,7 @@ Scenario: DFC-6738 Bulk Upload Missing Columns
 	Then the error Fields with names 'COURSE_NAME', 'DURATION', 'WHAT_YOU_WILL_LEARN' do not exist is displayed in error summary
 
 @CI
-Scenario: DFC-7379 Invalid LARS
+Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -66,7 +74,7 @@ Scenario: DFC-7379 Invalid LARS
 	Then the error Line 2, LARS_QAN = 60333079 invalid LARS is displayed in error summary
 
 @CI
-Scenario: DFC-7379 Expired LARS
+Scenario: DFC-7379 Bulk Upload LARS Checks - Expired LARS
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -75,7 +83,7 @@ Scenario: DFC-7379 Expired LARS
 	Then the error Line 2, LARS_QAN = 60079472 expired LARS is displayed in error summary
 
 @CI
-Scenario: DFC-7379 Missing LARS
+Scenario: DFC-7379 Bulk Upload LARS Checks - Missing LARS
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -135,7 +143,7 @@ Scenario: DFC-7225 Bulk Upload Save Course Run Edit
 	Then I am on the Fix and publish bulk upload page
 
 @CI
-Scenario: DFC-6719 Bulk Upload Edit Course
+Scenario: DFC-6719 Bulk Upload Edit uploaded Course
 	Given I have searched for UKPRN "10036789" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -149,7 +157,7 @@ Scenario: DFC-6719 Bulk Upload Edit Course
 	Then I am on the Fix and publish bulk upload page
 
 @CI
-Scenario: DFC-6736 Bulk Upload Edit Course Run
+Scenario: DFC-6736 Bulk Upload Edit uploaded Course Run
 	Given I have searched for UKPRN "10036789" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
@@ -162,4 +170,3 @@ Scenario: DFC-6736 Bulk Upload Edit Course Run
 	And I click to Save the Course Run details
 	Then I am on the Fix and publish bulk upload page
 
-#	10036789
