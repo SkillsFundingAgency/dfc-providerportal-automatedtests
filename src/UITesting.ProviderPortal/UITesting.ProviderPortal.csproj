@@ -151,6 +151,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-7391 RegulatedQualifications.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Qualification Management\DFC-8152-NonRegSearchforCourseProvision.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DFC-8152-NonRegSearchforCourseProvision.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,6 +227,8 @@
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
+    <Compile Include="Pages\Qualification Management\NonRegulatedProvisionPage.cs" />
+    <Compile Include="Pages\Qualification Management\RegulatedQualificationPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\DfESignInPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
@@ -252,6 +259,7 @@
     <Compile Include="StepDefinitions\Course Management\DFC_6667AddCourse_WorkBasedOptionSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
+    <Compile Include="StepDefinitions\Qualification Management\RegulatedQualificationsSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
@@ -392,6 +400,10 @@
     <None Include="Features\Qualification Management\DFC-7391 RegulatedQualifications.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-7391 RegulatedQualifications.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Qualification Management\DFC-8152-NonRegSearchforCourseProvision.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-8152-NonRegSearchforCourseProvision.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
