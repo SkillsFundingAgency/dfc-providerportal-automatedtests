@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 {
     public class RegulatedQualificationPage : TestSupport.BasePage 
     {
-        private static String PAGE_TITLE = "What type of qualification are you looking for?";
+        private static String PAGE_TITLE = "What are you awarding with this course";
         private By RegQualOption = By.Id("Regulated");
         private By NonRegOption = By.Id("NonRegulated");
         private By NextButton = By.Id("next");
