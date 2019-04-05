@@ -78,7 +78,7 @@ Scenario: DFC5115 User enters valid course URL 4
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL
-	When I enter the following in the URL field https://www.google
+	When I enter the following in the URL field https://w.google
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course URL error validation is displayed
@@ -86,7 +86,7 @@ Scenario: DFC5115 User enters Invalid course URL
 	
 @CI
 Scenario: DFC5115 User enters Invalid course URL 2
-	When I enter the following in the URL field htts://www.google
+	When I enter the following in the URL field htts://wwwgoogle
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course URL error validation is displayed
@@ -94,7 +94,7 @@ Scenario: DFC5115 User enters Invalid course URL 2
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 3
-	When I enter the following in the URL field https//www.google
+	When I enter the following in the URL field https//www.g
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course URL error validation is displayed
@@ -102,15 +102,15 @@ Scenario: DFC5115 User enters Invalid course URL 3
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 4
-	When I enter the following in the URL field https:/www.google
-	When I enter the following in the course name field Course test
+	When I enter the following in the URL field test
+	When I enter the following in the course name field Course w.bbc.co.uk
 	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 5
-	When I enter the following in the URL field https://www.google.
+	When I enter the following in the URL field https://wwww..test
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course URL error validation is displayed

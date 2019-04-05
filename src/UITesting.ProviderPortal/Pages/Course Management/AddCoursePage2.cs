@@ -12,13 +12,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static String PAGE_TITLE = "Add course details";
         private By qualification = By.Id("qual--");
         private By courseName = By.Id("CourseName");
-        private By courseNameError = By.XPath(".//*[@id='courseNameContainer']/span[2]");                   // By.Id("CourseName -error");
+        private By courseNameError = By.XPath(".//*[@id='courseNameContainer']/span[1]");                 // By.Id("CourseName -error");
         private By courseId = By.Id("CourseProviderReference");
-        private By courseIdError = By.XPath(".//*[@id='sectionCourseProviderReference']/div/span[2]");      //By.Id("CourseProviderReference-error");
+        private By courseIdError = By.XPath(".//*[@id='sectionCourseProviderReference']/div/span[1]");    //By.Id("CourseProviderReference-error");
         private By courseURL = By.Id("Url");
-        private By courseURLError = By.XPath(".//*[@id='sectionUrl']/div/span[2]");                         // By.Id("Url -error");   
+        private By courseURLError = By.XPath(".//*[@id='sectionUrl']/div/span[1]");                       // By.Id("Url -error");   
         private By courseCost = By.Id("Cost");
-        private By courseCostError = By.XPath(".//*[@id='costContainer']/span[3]");                         // By.Id("Cost -error");
+        private By courseCostError = By.XPath(".//*[@id='costContainer']/span[1]");                      // By.Id("Cost -error");
         private By courseCostInvalidLength = By.XPath(".//*[@id='costContainer']/span[3]");
         private By courseCostInvalid = By.XPath(".//*[@id='costContainer']/span[3]");
         private By costDescription = By.Id("CostDescription");

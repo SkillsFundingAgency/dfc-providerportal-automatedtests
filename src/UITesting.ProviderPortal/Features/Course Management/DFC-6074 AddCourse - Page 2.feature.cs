@@ -294,7 +294,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
 this.FeatureBackground();
 #line 81
- testRunner.When("I enter the following in the URL field https://www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the URL field https://w.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 82
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 83
@@ -320,7 +320,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
 this.FeatureBackground();
 #line 89
- testRunner.When("I enter the following in the URL field htts://www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the URL field htts://wwwgoogle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 90
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 91
@@ -346,7 +346,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
 this.FeatureBackground();
 #line 97
- testRunner.When("I enter the following in the URL field https//www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the URL field https//www.g", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 98
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 99
@@ -372,9 +372,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
 this.FeatureBackground();
 #line 105
- testRunner.When("I enter the following in the URL field https:/www.google", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the URL field test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 106
- testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the course name field Course w.bbc.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 107
  testRunner.And("I click Publish leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 108
@@ -398,7 +398,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
 this.FeatureBackground();
 #line 113
- testRunner.When("I enter the following in the URL field https://www.google.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the URL field https://wwww..test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 114
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 115
