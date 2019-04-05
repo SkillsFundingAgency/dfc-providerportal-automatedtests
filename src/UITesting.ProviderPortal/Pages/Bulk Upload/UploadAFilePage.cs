@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         private By ChooseFileBtn = By.Id("bulkUploadFile");
         private By UploadFileBtn = By.Id("uploadButton");
         private By ErrorMsg = By.XPath(".//*[@id='bulkUploadForm']/div[1]/span");
-        private By ErrorSummaryMsg = By.XPath(".//*[@id='errorSummary']/div/ul/li/a");
+        private By ErrorSummaryMsg = By.Id("name-error"); //By.XPath(".//*[@id='errorSummary']/div/ul/li/a");
 
         private string errortxt;
 
@@ -33,7 +33,8 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 
             string dirName = AppDomain.CurrentDomain.BaseDirectory;
             FileInfo fileInfo = new FileInfo(dirName);
-            DirectoryInfo parentDir = fileInfo.Directory.Parent.Parent;
+            //DirectoryInfo parentDir = fileInfo.Directory.Parent.Parent;
+            DirectoryInfo parentDir = fileInfo.Directory;
             string uploadFile = parentDir.FullName + "\\Test Data\\" + filename;
             //System.Console.WriteLine(uploadFile);
 
@@ -70,7 +71,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
             PageInteractionHelper.WaitForElementToBePresent(ErrorMsg);
             PageInteractionHelper.IsElementDisplayed(ErrorMsg);
             errortxt = webDriver.FindElement(ErrorMsg).GetAttribute("innerText");
-            if (errorMsg != errortxt)
+            if (errortxt != errorMsg)
             {
                 throw new Exception("No Error message displayed or Incorrect error message displayed"
                                     + "\n Expected: " + errorMsg
@@ -84,7 +85,14 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
             PageInteractionHelper.WaitForElementToBePresent(ErrorSummaryMsg);
             PageInteractionHelper.IsElementDisplayed(ErrorSummaryMsg);
             errortxt = webDriver.FindElement(ErrorSummaryMsg).GetAttribute("innerText");
-            if (errorMsg != errortxt)
+
+            string[] strArr = null;
+            char[] splitchar = { '\n' };
+            strArr = errortxt.Replace("\r\n", "\n").Split(splitchar);
+
+            Console.WriteLine("SPLIT :" + strArr[1]);
+
+            if (!strArr[1].Contains(errorMsg))
             {
                 throw new Exception("No Error Summary message displayed or Incorrect error message displayed"
                                     + "\n Expected: " + errorMsg

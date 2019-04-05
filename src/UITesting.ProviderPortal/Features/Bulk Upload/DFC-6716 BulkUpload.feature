@@ -20,6 +20,7 @@ Scenario: DFC-6737 Bulk Upload Status of upload Courses - No Errors
 	When I click publish to publish upload courses
 	Then I am on the courses published page
 
+@CI
 Scenario: DFC-7272 Bulk Upload Status of upload Courses - Errors
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
@@ -80,7 +81,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Expired LARS
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_ExpiredLARS.csv to upload
 	And I click Upload File leading to stage1 errors
-	Then the error Line 2, LARS_QAN = 60079472 expired LARS is displayed in error summary
+	Then the error Line 2, LARS_QAN = 50084914 expired LARS is displayed in error summary
 
 @CI
 Scenario: DFC-7379 Bulk Upload LARS Checks - Missing LARS
