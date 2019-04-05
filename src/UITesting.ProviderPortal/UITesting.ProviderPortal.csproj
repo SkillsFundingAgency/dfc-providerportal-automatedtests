@@ -227,11 +227,13 @@
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
-    <Compile Include="Pages\Qualification Management\NonRegulatedProvisionPage.cs" />
+    <Compile Include="Pages\Qualification Management\UnKnownZCodePage.cs" />
+    <Compile Include="Pages\Qualification Management\UnRegulatedCoursesPage.cs" />
     <Compile Include="Pages\Qualification Management\RegulatedQualificationPage.cs" />
     <Compile Include="Pages\Qualification Management\SearchforQualificationPage.cs" />
     <Compile Include="Pages\DfESignInPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\Qualification Management\UnRegulatedCoursesResultsPage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
@@ -259,6 +261,7 @@
     <Compile Include="StepDefinitions\Course Management\DFC_6667AddCourse_WorkBasedOptionSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
+    <Compile Include="StepDefinitions\Qualification Management\NonRegSearchforCourseProvisionSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\RegulatedQualificationsSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />

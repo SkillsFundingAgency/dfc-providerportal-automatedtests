@@ -16,11 +16,11 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() +"/RegulatedQualification";
         }
         
-        [When(@"I Navigate to Regulated Qualifications page")]
+       /* [When(@"I Navigate to Regulated Qualifications page")]
         public void WhenINavigateToRegulatedQualificationsPage()
         {
             //ScenarioContext.Current.Pending();
-        }
+        }*/
         
         [When(@"I select the Regulated Option")]
         public void WhenISelectTheRegulatedOption()
@@ -68,7 +68,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Then(@"Unregulated Courses page should be displayed")]
         public void ThenUnregulatedCoursesPageShouldBeDisplayed()
         {
-            NonRegulatedProvisionPage nonRegulatedProvisionPage = new NonRegulatedProvisionPage(webDriver);
+            UnRegulatedCoursesPage nonRegulatedProvisionPage = new UnRegulatedCoursesPage(webDriver);
         }
         
        

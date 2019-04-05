@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 using UITesting.Framework.Helpers;
 using System.Web;
 using TechTalk.SpecFlow;
+using UITesting.ProviderPortal.TestSupport;
 
 namespace UITesting.ProviderPortal.Pages.Qualification_Management
 {
-    public class NonRegulatedProvisionPage : TestSupport.BasePage
+    public class UnKnownZCodePage : BasePage 
     {
-
-        private static String PAGE_TITLE = "Search for a course provision";
-        public NonRegulatedProvisionPage(IWebDriver  webDriver): base(webDriver)
+        private static String PAGE_TITLE = "Choose a non-regulated provision";
+        public UnKnownZCodePage(IWebDriver webDriver): base(webDriver)
         {
             SelfVerify();
         }
