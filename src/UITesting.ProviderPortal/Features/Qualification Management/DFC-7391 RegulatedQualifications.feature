@@ -8,7 +8,7 @@ Background:
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have searched for UKPRN "10002815" and clicked search
-	When I Navigate to Regulated Qualifications page
+	#When I Navigate to Regulated Qualifications page
 @CI
 Scenario: Validate Qualification Options
 	Given I have accessed the Regulated Qualifications page
