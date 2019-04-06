@@ -542,7 +542,7 @@
   </ItemGroup>
   <Target Name="BeforeBuild">
     <ItemGroup>
-      <Content Include="Test Data\*.csv">
+      <Content Include="Test Data\BulkUploadNotCSV.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
