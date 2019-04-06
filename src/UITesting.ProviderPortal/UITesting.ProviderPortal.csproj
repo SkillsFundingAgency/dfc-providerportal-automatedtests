@@ -540,5 +540,12 @@
     <Content Include="Test Data\*.csv">
     </Content>
   </ItemGroup>
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <Content Include="Test Data\*.csv">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+  </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

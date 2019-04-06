@@ -94,7 +94,7 @@ Scenario: DFC5115 User enters Invalid course URL 2
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 3
-	When I enter the following in the URL field https//www.g
+	When I enter the following in the URL field https//w.g
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course URL error validation is displayed
@@ -141,7 +141,7 @@ Scenario: DFC5116 User enters valid cost 2
 
 @CI
 Scenario: DFC5116 User enters invalid cost 
-	When I enter the following in the cost field 9999999
+	When I enter the following in the cost field 9999999.9
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course Cost error validation is displayed
