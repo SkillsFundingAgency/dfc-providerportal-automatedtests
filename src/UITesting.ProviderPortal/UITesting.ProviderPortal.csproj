@@ -542,9 +542,14 @@
     <None Include="Test Data\BulkUpload_WrongOrder.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Test Data\BulkUploadNotCSV.txt">
+    <TestData Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </TestData>
   </ItemGroup>
+      <Target Name="BeforeBuild" Condition=" '$(Configuration)' == 'Debug' ">
+    <ItemGroup>
+      <Content Include="Test Data\*.*" />
+    </ItemGroup>
+  </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
