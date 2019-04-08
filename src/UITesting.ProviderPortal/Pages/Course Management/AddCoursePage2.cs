@@ -22,7 +22,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseCostInvalidLength = By.XPath(".//*[@id='costContainer']/span[1]");
         private By courseCostInvalid = By.XPath(".//*[@id='costContainer']/span[1]");
         private By costDescription = By.Id("CostDescription");
-        private By costDescriptionError = By.XPath(".//*[@id='sectionCost']/div[2]/div/span[1]");           // By.Id("CostDescription -error");
+        private By costDescriptionError = By.XPath(".//*[@id='sectionCost']/div[2]/div/span[2]");          // By.Id("CostDescription -error");
         private By costDescriptionInfo = By.Id("CostDescription-info");
         private By attendanceMode = By.Id("AttendanceMode");
         private By studyMode = By.Id("StudyMode");
