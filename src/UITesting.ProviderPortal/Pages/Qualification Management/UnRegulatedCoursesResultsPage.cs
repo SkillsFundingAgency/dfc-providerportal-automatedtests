@@ -19,6 +19,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private By CancelLink = By.LinkText("Cancel");
         private By SearchErrMessage = By.Id("Search-error");
         private By ZCodeNotExistErrMessage = By.Id("cd-error-summary-title");
+        private By BackLink = By.XPath("//a[@href='/UnregulatedCourses']");
         public UnRegulatedCoursesResultsPage(IWebDriver webDriver): base(webDriver)
         {
            // SelfVerify();
@@ -29,7 +30,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         }
         internal void ClickBackLink()
         {
-            throw new NotImplementedException();
+            FormCompletionHelper.ClickElement(BackLink);
         }
 
         internal void ValidateChooseButton()

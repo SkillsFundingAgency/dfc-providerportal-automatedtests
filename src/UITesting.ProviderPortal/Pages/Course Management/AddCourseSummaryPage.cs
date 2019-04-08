@@ -23,11 +23,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        public AddCourseSummaryPage ClickNext()
+        public ViewYourCoursesPage ClickNext()
         {
             FormCompletionHelper.ClickElement(acceptAndPublishBtn);
             PageInteractionHelper.WaitForPageToLoad();
-            return new AddCourseSummaryPage(webDriver);
+            //return new AddCourseSummaryPage(webDriver);
+            return new ViewYourCoursesPage(webDriver);
         }
 
 
