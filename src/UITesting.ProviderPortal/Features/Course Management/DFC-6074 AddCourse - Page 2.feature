@@ -115,6 +115,8 @@ Scenario: DFC5115 User enters Invalid course URL 5
 	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
+	And the error summary header should say "There is an issue with this qualification"
+	And the error message should be displayed on the header "The format of URL is incorrect"
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 6

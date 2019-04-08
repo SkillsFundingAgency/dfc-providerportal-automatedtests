@@ -49,6 +49,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By DeliveryMode = By.Name("DeliveryMode");
         private string errortxt;
 
+        private By HeaderErrMessage = By.XPath("//*[@id='error-summary-title']");
+        private By HeaderErrSummMessage = By.XPath("//*[@id='error-hash-link-Url-0']");
+        
+
         //Shivani Added
 
         private By selectOnline = By.Id("Online");
@@ -177,6 +181,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage2(webDriver);
         }
 
+        internal void ValidateHeaderMessage(string strHeaderMessage)
+        {
+            FormCompletionHelper.VerifyText(HeaderErrMessage, strHeaderMessage);
+        }
+
         public AddCoursePage2 CourseURLErrorDisplayed()
         {
             PageInteractionHelper.WaitForElementToBePresent(courseURLError);
@@ -184,6 +193,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage2(webDriver);
         }
 
+        internal void ValidateHeaderErrorSummary(string strHeaderErrorSumm)
+        {
+            FormCompletionHelper.VerifyText(HeaderErrSummMessage, strHeaderErrorSumm);
+        }
 
         public AddCoursePage2 ConfirmErrorMessage(string field, string errorMsg)
         {

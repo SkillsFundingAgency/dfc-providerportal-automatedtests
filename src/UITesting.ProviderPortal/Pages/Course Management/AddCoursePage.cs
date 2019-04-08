@@ -33,6 +33,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By nextStepsInfo = By.Id("WhereNext-info");
         private By nextButton = By.Id("goToSection2");
 
+        private By HeaderMessage = By.XPath("//*[@id='error-summary-title']");
+        
+
         private string errortxt;
 
         public AddCoursePage(IWebDriver webDriver) : base(webDriver)
@@ -181,6 +184,15 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             }
         }
 
+        internal void ValidateSummaryErrorMessage(string strSummErrMsg)
+        {
+            PageInteractionHelper.VerifyText(courseForError, strSummErrMsg);
+        }
+
+        internal void ValidateHeaderMessage(string strHeadMsg)
+        {
+            PageInteractionHelper.VerifyText(HeaderMessage,strHeadMsg);
+        }
 
         public AddCoursePage ConfirmInfoMessage(string field, string infoMsg)
         {

@@ -38,6 +38,8 @@ Scenario: DFC-5843 Who Course is for not entered
 	And I have entered what the student will learn Student will learn about the subject 
 	When I click Next Button Failure
 	Then Page 1 error message for field Who is the course for states Enter who is this course for
+	And there should be a error summary on the top with header "There is an issue with this qualification"
+	And the same error message displayed on top "Enter who is this course for"
 
 @CI
 Scenario: DFC-5843 Who Course is for exceeds 2000 chars
