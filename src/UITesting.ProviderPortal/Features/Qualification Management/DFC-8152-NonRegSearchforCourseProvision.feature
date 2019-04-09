@@ -89,7 +89,7 @@ Scenario: Enter valid Z code-Click Cancel link
 @CI
 Scenario: Enter valid Z code-Click Back link
 	Given I have accessed the Unregulated courses page
-	And I have entered a valid Z code "Z00004395"
+	And I have entered a valid Z code "Z0004395"
 	And I click the search button
 	Then I should be able to view the Non regulated course details
 	When i click Back Link on the Un regulated courses results page

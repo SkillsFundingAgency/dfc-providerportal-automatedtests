@@ -116,5 +116,20 @@ namespace UITesting.ProviderPortal.StepDefinitions
             ScenarioContext.Current.Pending();
         }
 
+        [Then(@"there should be a error summary on the top with header ""(.*)""")]
+        public void ThenThereShouldBeAErrorSummaryOnTheTopWithHeader(string strHeadMsg)
+        {
+            AddCoursePage addCoursePage = new AddCoursePage(webDriver);
+            addCoursePage.ValidateHeaderMessage(strHeadMsg);
+        }
+
+        [Then(@"the same error message displayed on top ""(.*)""")]
+        public void ThenTheSameErrorMessageDisplayedOnTop(string strSummErrMsg)
+        {
+            AddCoursePage addCoursePage = new AddCoursePage(webDriver);
+            addCoursePage.ValidateSummaryErrorMessage(strSummErrMsg);
+        }
+
+
     }
 }
