@@ -45,12 +45,15 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         private static By Save = By.Id("save");
         private static By Cancel = By.LinkText("Cancel");
-
-        private static By CourseNameErrMsg = By.XPath("//*[@id='courseNameContainer']/span[2]");
+      
+        private static By CourseNameErrMsg = By.XPath("//*[@id='courseNameContainer']/span[1]");
         private static By InvalidDateMsg = By.XPath("//*[@id='startDateFormGroup']/span");
         private static By InvalidURLMsg = By.XPath("//*[@id='sectionUrl']/div/span[2]");
         private static By CostErrMsg = By.XPath("//*[@id='costContainer']/span[3]");
         private static By DurationErrMsg = By.XPath("//*[@id='sectionDuration']/div/span[2]");
+
+        private static By ErrorHeaderTitle = By.XPath("//*[@id='error-summary-title']");
+        private static By ErrorHeaderMessage = By.XPath("//*[@id='error-hash-link-start_date-0']");
 
         
 
@@ -195,6 +198,16 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ClickCancel()
         {
             FormCompletionHelper.SubmitLink(Cancel);
+        }
+
+        internal void ValidateHeaderTitle(string strHeaderTitle)
+        {
+            FormCompletionHelper.VerifyText(ErrorHeaderTitle, strHeaderTitle);
+        }
+
+        internal void ValidateHeaderError(string strHeaderError)
+        {
+            FormCompletionHelper.VerifyText(ErrorHeaderMessage, strHeaderError);
         }
     }
 }

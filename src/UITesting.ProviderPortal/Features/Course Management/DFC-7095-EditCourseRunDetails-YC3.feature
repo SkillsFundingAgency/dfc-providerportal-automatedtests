@@ -46,6 +46,8 @@ Scenario: Edit course run with invalid defined start date when Classroom mode is
 	And I have entered "31" in Day, "02" in Month and "2019" in Year
 	When I  Save the data
 	Then the following error date message should be displayed "Invalid date"
+	And there should be a error summary with header "There is an issue with this qualification"
+	And the error summary should have the error "Invalid date"
 @CI
 Scenario: Edit course run with no defined start date when Classroom mode is selected
 	Given I have accessed the selected course run data

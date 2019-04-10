@@ -32,7 +32,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionPopup = By.Id("popup-descript");
 
         //Usman added for edit course
-        private By EditCourseDescriptionLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
+        //private By EditCourseDescriptionLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
+        private By EditCourseDescriptionLink = By.LinkText("Edit this qualification");
         private By EditCourseDetailsLink = By.LinkText("Edit");
         private By CourseEditedLink = By.Id("courseeditlink");
 

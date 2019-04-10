@@ -307,5 +307,19 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             viewYourCoursesPage.OpenAllQualificationsYC3();
             viewYourCoursesPage.OpenAllCourseRunsYC3();
         }
+        [Then(@"there should be a error summary with header ""(.*)""")]
+        public void ThenThereShouldBeAErrorSummaryWithHeader(string strHeaderTitle)
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateHeaderTitle(strHeaderTitle);
+        }
+
+        [Then(@"the error summary should have the error ""(.*)""")]
+        public void ThenTheErrorSummaryShouldHaveTheError(string strHeaderError)
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetailsPage.ValidateHeaderError(strHeaderError);
+        }
+
     }
 }

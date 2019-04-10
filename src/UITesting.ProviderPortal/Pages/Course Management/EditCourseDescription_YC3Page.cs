@@ -36,6 +36,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By HowYouWillBeAssessedErrMsg = By.XPath("//*[@id='sectionHowAssessed']/div/div/span[2]");
         private By WhereNextErrMsg = By.XPath("//*[@id='sectionWhereNext']/div/div/span[2]");
 
+        private By errorHeaderTitle = By.XPath("//*[@id='error-summary-title']");
+        private By errorHeaderErrorMsg = By.XPath("//*[@id='error-hash-link-CourseFor-0']");
+
 
         public EditCourseDescription_YC3Page(IWebDriver webDriver): base(webDriver)
         {
@@ -160,6 +163,16 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void WhereNextError(string errMsg)
         {
             PageInteractionHelper.VerifyText(WhereNextErrMsg, errMsg);
+        }
+
+        internal void ValidateErrSummHeader(string strErrSummHeader)
+        {
+            FormCompletionHelper.VerifyText(errorHeaderTitle, strErrSummHeader);
+        }
+
+        internal void ValidateHeaderErrMessage(string strError)
+        {
+            FormCompletionHelper.VerifyText(errorHeaderErrorMsg, strError);
         }
     }
 }
