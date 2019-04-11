@@ -120,7 +120,7 @@ Scenario: Edit course with Online and a valid URL
 Scenario: Edit course with Online and a invalid URL
 	Given I have accessed the selected course run data
 	And I have selected "Online" as delivery mode
-	And I have entered following URL "http://www.ips-apprenticeships"
+	And I have entered following URL "http://w..ips-apprenticeships"
 	When I  Save the data
 	Then the following URL message should be displayed "The format of URL is incorrect"
 @CI

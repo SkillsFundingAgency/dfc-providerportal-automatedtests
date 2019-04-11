@@ -23,7 +23,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By PreviewLink = By.LinkText("Preview");
         // private static By Course = By.Id("accordion-heading-1");
         private static By Course = By.ClassName("govuk-accordion__open-all");
-        private static By CourseRunEditLink = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[3]/a[1]"); 
+        //private static By CourseRunEditLink = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[3]/a[1]");
+        private static By CourseRunEditLink = By.LinkText("Edit");
         private static By CourseRunNameText = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[1]/span");   
         private static By CourseNameErrMessage = By.Id("courseRun_CourseName-error");
         private static By CourseRunVenueField = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[2]/span");

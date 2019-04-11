@@ -8,16 +8,16 @@ Scenario: Edit Course Venue
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
-	Given I have searched for UKPRN "10002815" and clicked search
+	Given I have searched for UKPRN "10032433" and clicked search
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have clicked the Main Qualification
 	And I have clicked one of the courses available
 	Then I should be able to view the course runs.	
 	Given I have selected a course run to update
-	And I have changed the course venue to B Show_Tell
+	And I have changed the course venue to B Venue Name
 	When I Click Save
-	Then the new venue name should be saved as B Show_Tell
+#	Then the new venue name should be saved as B Venue Name
 
 	#Revert changes for next test
 	Given I have logged to course directory as a provider
@@ -26,5 +26,5 @@ Scenario: Edit Course Venue
 	Given I have clicked the Main Qualification
 	Then I should be able to view the course runs.
 	Given I have clicked edit for a course run
-	And I have changed the course venue to A Show_Tell
+	And I have changed the course venue to A Venue Name
 	When I Click Save
