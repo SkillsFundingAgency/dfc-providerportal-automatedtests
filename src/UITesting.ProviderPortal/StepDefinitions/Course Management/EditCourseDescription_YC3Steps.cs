@@ -209,5 +209,19 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             editCourseDescription_YC3Page.CheckAdultEducationOption();
 
         }
+        [Then(@"there should be a error summary with heading ""(.*)""")]
+        public void ThenThereShouldBeAErrorSummaryWithHeading(string strErrSummHeader)
+        {
+            EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
+            editCourseDescription_YC3Page.ValidateErrSummHeader(strErrSummHeader);
+        }
+
+        [Then(@"the error summary should also list the error message ""(.*)""")]
+        public void ThenTheErrorSummaryShouldAlsoListTheErrorMessage(string strError)
+        {
+            EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
+            editCourseDescription_YC3Page.ValidateHeaderErrMessage(strError);
+        }
+
     }
 }
