@@ -49,7 +49,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By CourseNameErrMsg = By.XPath("//*[@id='courseNameContainer']/span[2]");
         private static By InvalidDateMsg = By.XPath("//*[@id='startDateFormGroup']/span");
         private static By InvalidURLMsg = By.XPath("//*[@id='sectionUrl']/div/span[2]");
-        private static By CostErrMsg = By.XPath("//*[@id='costContainer']/span[3]");
+        private static By CostErrMsg = By.XPath("//*[@id='costContainer']/span[1]");  
         private static By DurationErrMsg = By.XPath("//*[@id='sectionDuration']/div/span[2]");
 
         

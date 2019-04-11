@@ -15,9 +15,9 @@ Scenario: Edit Course Venue
 	And I have clicked one of the courses available
 	Then I should be able to view the course runs.	
 	Given I have selected a course run to update
-	And I have changed the course venue to B Venue
+	And I have changed the course venue to B Show_Tell
 	When I Click Save
-	Then the new venue name should be saved as B Venue
+	Then the new venue name should be saved as B Show_Tell
 
 	#Revert changes for next test
 	Given I have logged to course directory as a provider
@@ -26,5 +26,5 @@ Scenario: Edit Course Venue
 	Given I have clicked the Main Qualification
 	Then I should be able to view the course runs.
 	Given I have clicked edit for a course run
-	And I have changed the course venue to A Venue
+	And I have changed the course venue to A Show_Tell
 	When I Click Save

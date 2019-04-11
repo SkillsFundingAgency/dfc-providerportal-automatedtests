@@ -23,12 +23,13 @@ Scenario: Update cost with valid value
 	When I Click Save
 
 
-@CI
-Scenario: Update cost with value more than 999999.99
-	Given I have selected a course run to update
-	And I have changed the cost to 9999999.99
-	When I Click Save leading to Error
-	Then the Error message for cost should be displayed Maximum value for cost is £999,999.99
+# THIS TEST IS NO LONGER APPLICABLE DUE TO CHANGES IN VALIDATION - IT IS NO LONGER POSSIBLE TO ENTER MORE THAN 999999.99 IN THE COST FIELD
+#@CI
+#Scenario: Update cost with value more than 999999.99
+#	Given I have selected a course run to update
+#	And I have changed the cost to 9999999.99
+#	When I Click Save leading to Error
+#	Then the Error message for cost should be displayed Maximum value for cost is £999,999.99
 
 @CI
 Scenario: Update cost with a value without decimals
