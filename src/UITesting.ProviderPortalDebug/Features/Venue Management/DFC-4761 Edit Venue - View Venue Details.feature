@@ -13,12 +13,12 @@ Background:
 	Given I have navigated to the Your Venues Pages
 
 @CI
-Scenario: Test 1
+Scenario: Test 2
 	When I click Edit against the first venue
 	Then I am on the Edit venue details page
 
 @MaxBrowser
 @CI
-Scenario: Test 2 Max Browser
+Scenario: Test 1 Max Browser
 	When I click Edit against the first venue
 	Then I am on the Edit venue details page

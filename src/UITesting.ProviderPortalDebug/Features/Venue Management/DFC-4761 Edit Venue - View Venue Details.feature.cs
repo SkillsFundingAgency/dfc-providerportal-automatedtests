@@ -89,11 +89,11 @@ namespace UITesting.ProviderPortalDebug.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test 1")]
+        [NUnit.Framework.DescriptionAttribute("Test 2")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void Test1()
+        public virtual void Test2()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test 1", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test 2", null, new string[] {
                         "CI"});
 #line 16
 this.ScenarioInitialize(scenarioInfo);
@@ -109,12 +109,12 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test 2 Max Browser")]
+        [NUnit.Framework.DescriptionAttribute("Test 1 Max Browser")]
         [NUnit.Framework.CategoryAttribute("MaxBrowser")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void Test2MaxBrowser()
+        public virtual void Test1MaxBrowser()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test 2 Max Browser", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test 1 Max Browser", null, new string[] {
                         "MaxBrowser",
                         "CI"});
 #line 22
