@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UITesting.ProviderPortal.Features.VenueManagement
+namespace UITesting.ProviderPortalDebug.Features.VenueManagement
 {
     using TechTalk.SpecFlow;
     
@@ -133,3 +133,4 @@ this.FeatureBackground();
 }
 #pragma warning restore
 #endregion
+

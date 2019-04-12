@@ -7,8 +7,8 @@
     <ProjectGuid>{E92E6574-9C9F-41D5-9898-6B21E6BE0A47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UITesting.ProviderPortal</RootNamespace>
-    <AssemblyName>UITesting.ProviderPortal</AssemblyName>
+    <RootNamespace>UITesting.ProviderPortalDebug</RootNamespace>
+    <AssemblyName>UITesting.ProviderPortalDebug</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -131,12 +131,6 @@
     <PackageReference Include="NUnit">
       <Version>3.11.0</Version>
     </PackageReference>
-    <PackageReference Include="NUnit.ConsoleRunner">
-      <Version>3.10.0</Version>
-    </PackageReference>
-    <PackageReference Include="NUnit.Runners">
-      <Version>3.10.0</Version>
-    </PackageReference>
     <PackageReference Include="NUnit3TestAdapter">
       <Version>3.13.0</Version>
     </PackageReference>
@@ -153,10 +147,7 @@
       <Version>73.0.3683.68</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow">
-      <Version>3.0.188</Version>
-    </PackageReference>
-    <PackageReference Include="SpecFlow.NUnit">
-      <Version>3.0.188</Version>
+      <Version>2.4.0</Version>
     </PackageReference>
     <PackageReference Include="SpecRun.SpecFlow">
       <Version>3.0.255</Version>
