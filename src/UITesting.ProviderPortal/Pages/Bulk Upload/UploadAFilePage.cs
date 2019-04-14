@@ -33,8 +33,8 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 
             string dirName = AppDomain.CurrentDomain.BaseDirectory;
             FileInfo fileInfo = new FileInfo(dirName);
-            DirectoryInfo parentDir = fileInfo.Directory.Parent.Parent;
-            //DirectoryInfo parentDir = fileInfo.Directory;
+            //DirectoryInfo parentDir = fileInfo.Directory.Parent.Parent;
+            DirectoryInfo parentDir = fileInfo.Directory;
             string uploadFile = parentDir.FullName + "\\Test Data\\" + filename;
             //System.Console.WriteLine(uploadFile);
 
