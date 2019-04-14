@@ -547,15 +547,18 @@
     <None Include="Test Data\BulkUpload_Valid.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+	<None Include="Test Data\BulkUploadNotCSV.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>  
     <None Include="Test Data\BulkUpload_ValidStartDate.csv" />
     <None Include="Test Data\BulkUpload_WHOCOURSEFOROVER2000.csv" />
     <None Include="Test Data\BulkUpload_WrongOrder.csv" />
   </ItemGroup>
-  <ItemGroup>
+<!--   <ItemGroup>
     <TestData Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </TestData>
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
     <TestData2 Include="Test Data\*.*" />
   </ItemGroup>
