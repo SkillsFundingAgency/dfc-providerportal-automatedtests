@@ -53,6 +53,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
             unKnownZCodePage.CheckFirstLevelDropDown();
             unKnownZCodePage.CheckSecondLevelDropDown();
         }
+
         
         [Then(@"the Back Link should be visible")]
         public void ThenTheBackLinkShouldBeVisible()
@@ -61,19 +62,68 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
             unKnownZCodePage.CheckBackLink();
         }
         
-        [Then(@"Level filter and Category filter dropdown should be visible")]
+       /* [Then(@"Level filter and Category filter dropdown should be visible")]
         public void ThenLevelFilterAndCategoryFilterDropdownShouldBeVisible()
         {
             UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
             unKnownZCodePage.ValidateLevelFilter();
             unKnownZCodePage.ValidateCategoryFilter();
+        }*/
+        [Then(@"Level filter and Category filter selections should be visible")]
+        public void ThenLevelFilterAndCategoryFilterSelectionsShouldBeVisible()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.ValidateLevelFilter();
+            unKnownZCodePage.ValidateCategoryFilter();
         }
-        
+
+
         [Then(@"a link to add this provision should be visible")]
         public void ThenALinkToAddThisProvisionShouldBeVisible()
         {
             UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
             unKnownZCodePage.ValidateAddThisProvisionLink();
         }
+        [When(@"I have selected the first checkbox in Level filter Level")]
+        public void WhenIHaveSelectedTheFirstCheckboxInLevelFilterLevel()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.SelectFilterLevel();
+        }
+
+        [When(@"I have selected the first checkbox in Category Filter")]
+        public void WhenIHaveSelectedTheFirstCheckboxInCategoryFilter()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.SelectCategoryLevel();
+        }
+
+        [Then(@"a reset link should be visible")]
+        public void ThenAResetLinkShouldBeVisible()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.ViewResetLink();
+        }
+
+        [When(@"I Click the reset link")]
+        public void WhenIClickTheResetLink()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.ClickResetLink();
+        }
+
+        [Then(@"all the checkboxes in Level and category filter should be visible")]
+        public void ThenAllTheCheckboxesInLevelAndCategoryFilterShouldBeVisible()
+        {
+            //ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the selected checkboxes should be deselected\.")]
+        public void ThenTheSelectedCheckboxesShouldBeDeselected_()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.CheckBoxDeselect();
+        }
+
     }
 }
