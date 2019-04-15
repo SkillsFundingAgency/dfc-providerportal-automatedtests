@@ -27,7 +27,7 @@ Scenario: Click Back to go back to Unregulated courses page
 Scenario: Select First Level and Second Level dropdowns and validate the results page
 	Given I have accessed the UnKnown Z Code Page
 	When I Select First Level and Second Level
-	Then Level filter and Category filter dropdown should be visible
+	Then Level filter and Category filter selections should be visible
 	And a link to add this provision should be visible
 @CI
 Scenario: Select First Level and Second Level dropdowns and add selected course 
@@ -74,3 +74,13 @@ Scenario: Select First Level and Second Level dropdowns and add selected course 
 	And I select the first venue in the venues list
 	And I click Publish
 	Then the course should be listed in the Your courses page
+@CI
+Scenario: Select Level filter, category filter and click reset
+	Given I have accessed the UnKnown Z Code Page
+	When I Select First Level and Second Level
+	And I have selected the first checkbox in Level filter Level 
+	And I have selected the first checkbox in Category Filter
+	Then a reset link should be visible
+	When I Click the reset link
+	Then all the checkboxes in Level and category filter should be visible
+	And the selected checkboxes should be deselected.

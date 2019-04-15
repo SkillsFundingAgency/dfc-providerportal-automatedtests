@@ -18,11 +18,19 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private By BackLink = By.XPath("//a[@href='/UnregulatedCourses']");
         private By FirstLevelSelect = By.Id("LevelOneSelect");
         private By SecondLevelSelect = By.Id("LevelTwoSelect");
-        private By AddThisProvisionLink = By.LinkText("Add this provison");
-        private By LevelSelect = By.Id("LevelsSelect");
-        private By CategoriesSelect = By.Id("CategoriesSelect");
+        private By AddThisProvisionLink = By.LinkText("Add this provision");
+        // private By LevelSelect = By.Id("LevelsSelect");
+        private By LevelFilter = By.XPath("//*[@id='results']/div/div[1]/div[1]/div[1]");
+       // private By CategoriesSelect = By.Id("CategoriesSelect");
+        private By CategoriesFilter = By.XPath("//*[@id='results']/div/div[1]/div[2]/div[1]");
 
         private By PageNumber = By.LinkText("2");
+
+        //private By ResetLink = By.Id("ClearAllFilters");
+        //private By ResetLink=By.XPath(("//a[@href='reset']"));
+        private By ResetLink = By.LinkText("reset");
+        private By FliterLevelCheckBox = By.Id("NotionalNVQLevelv2Filter-0");
+        private By CategoryFilterCheckBox = By.Id("AwardOrgAimRefFilter-0");
 
         
         public UnKnownZCodePage(IWebDriver webDriver): base(webDriver)
@@ -79,17 +87,42 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 
         internal void ValidateLevelFilter()
         {
-            PageInteractionHelper.IsElementPresent(LevelSelect);
+            PageInteractionHelper.IsElementPresent(LevelFilter);
         }
 
         internal void ValidateCategoryFilter()
         {
-            PageInteractionHelper.IsElementPresent(CategoriesSelect);
+            PageInteractionHelper.IsElementPresent(CategoriesFilter);
         }
 
         internal void ValidateAddThisProvisionLink()
         {
             PageInteractionHelper.IsElementPresent(AddThisProvisionLink);
+        }
+
+        internal void SelectFilterLevel()
+        {
+            FormCompletionHelper.ClickElement(FliterLevelCheckBox);
+        }
+
+        internal void SelectCategoryLevel()
+        {
+            FormCompletionHelper.ClickElement(CategoryFilterCheckBox);
+        }
+
+        internal void ViewResetLink()
+        {
+            FormCompletionHelper.IsElementPresent(ResetLink);
+        }
+
+        internal void ClickResetLink()
+        {
+            FormCompletionHelper.ClickElement(ResetLink);
+        }
+
+        internal void CheckBoxDeselect()
+        {
+            
         }
     }
 }
