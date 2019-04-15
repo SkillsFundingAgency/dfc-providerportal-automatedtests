@@ -131,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-7095-EditCourseRunDetails-YC3.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Data Quality Indicators\DFC-7382 Data Quality Indicators.feature.cs">
+      <DependentUpon>DFC-7382 Data Quality Indicators.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -230,6 +235,8 @@
     <Compile Include="Pages\Course Management\EditCourseRunDetails-YC3Page.cs" />
     <Compile Include="Pages\Course Management\EditYourCoursePage.cs" />
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
+    <Compile Include="Pages\Data Quality Indicators\DQIDashbordPage.cs" />
+    <Compile Include="Pages\Data Quality Indicators\DQIFixPublishPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\UnKnownZCodePage.cs" />
@@ -269,6 +276,7 @@
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6667AddCourse_WorkBasedOptionSteps.cs" />
+    <Compile Include="StepDefinitions\Data Quality Indicators\DataQualityIndicatorsSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\NonRegSearchforCourseProvisionSteps.cs" />
@@ -403,6 +411,10 @@
     <None Include="Features\Course Management\DFC-7095-EditCourseRunDetails-YC3.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-7095-EditCourseRunDetails-YC3.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Data Quality Indicators\DFC-7382 Data Quality Indicators.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-7382 Data Quality Indicators.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Provider Management\DFC-5112-5114 AddProviderSearchUKRLP.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -547,14 +559,14 @@
     <None Include="Test Data\BulkUpload_Valid.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-	<None Include="Test Data\BulkUploadNotCSV.txt">
+    <None Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</None>  
+    </None>
     <None Include="Test Data\BulkUpload_ValidStartDate.csv" />
     <None Include="Test Data\BulkUpload_WHOCOURSEFOROVER2000.csv" />
     <None Include="Test Data\BulkUpload_WrongOrder.csv" />
   </ItemGroup>
-<!--   <ItemGroup>
+  <!--   <ItemGroup>
     <TestData Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </TestData>
@@ -562,5 +574,6 @@
   <ItemGroup>
     <TestData2 Include="Test Data\*.*" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

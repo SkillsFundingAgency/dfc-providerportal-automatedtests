@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using System.Diagnostics;
 using System.Threading;
 using UITesting.ProviderPortal.Pages.Bulk_Upload;
+using UITesting.ProviderPortal.Pages.Data_Quality_Indicators;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -70,6 +71,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public EditCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
+
             SelfVerify();
         }
 
@@ -128,6 +130,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -195,6 +198,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(CancelLink);
             return new BulkUploadFixPublishPage(webDriver);
         }
+
+        public DQIDashbordPage ClickCancelDQI()
+        {
+            FormCompletionHelper.ClickElement(CancelLink);
+            return new DQIDashbordPage(webDriver);
+        }
+
 
         public BulkUploadFixPublishPage ClickSaveBURun()
         {
@@ -546,6 +556,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public EditCoursePage2 verifyCourseRegionIsShown()
         {
             FormCompletionHelper.IsElementPresent(courseRegionSelector);
+            return new EditCoursePage2(webDriver);
+        }
+
+        public EditCoursePage2 verifySaveButton()
+        {
+            FormCompletionHelper.IsElementPresent(SaveBtn);
             return new EditCoursePage2(webDriver);
         }
 

@@ -30,6 +30,19 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             loginPage.ClickLoginButton();
         }
 
+
+        [Given(@"I login as provider admin with (.*) and (.*)")]
+        public void GivenILoginWithProviderUsernameAndPassword(string user, string pass)
+        {
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLogin();
+            LoginPage loginPage = new LoginPage(webDriver);
+            loginPage.EnterUsername(user);
+            loginPage.EnterPassword(pass);
+            loginPage.ClickLoginButton();
+        }
+
+
         [Then(@"I am logged in")]
         public void ThenIAmLoggedIn()
         {

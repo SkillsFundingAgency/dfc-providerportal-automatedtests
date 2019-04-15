@@ -146,6 +146,7 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [When(@"I edit bulk upload course cost (.*)")]
         public void EditUploadedCourseRun(string cost)
         {
+
             EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
             editCoursePage2.EnterCourseCost(cost);
         }
