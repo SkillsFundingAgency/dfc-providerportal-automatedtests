@@ -36,7 +36,6 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
             //DirectoryInfo parentDir = fileInfo.Directory.Parent.Parent;
             DirectoryInfo parentDir = fileInfo.Directory;
             string uploadFile = parentDir.FullName + "\\Test Data\\" + filename;
-            //System.Console.WriteLine(uploadFile);
 
             IWebElement element = webDriver.FindElement(ChooseFileBtn);
             element.SendKeys(uploadFile);
@@ -48,6 +47,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         public BulkUploadFixPublishPage UploadFile()
         {
             FormCompletionHelper.ClickElement(UploadFileBtn);
+            PageInteractionHelper.WaitForPageToLoad();
             return new BulkUploadFixPublishPage(webDriver);
         }
 
@@ -55,6 +55,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         public BulkUploadPublishPage UploadFileNoErrors()
         {
             FormCompletionHelper.ClickElement(UploadFileBtn);
+            PageInteractionHelper.WaitForPageToLoad();
             return new BulkUploadPublishPage(webDriver);
         }
 
@@ -62,6 +63,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         public UploadAFilePage UploadFileError()
         {
             FormCompletionHelper.ClickElement(UploadFileBtn);
+            PageInteractionHelper.WaitForPageToLoad();
             return new UploadAFilePage(webDriver);
         }
 
