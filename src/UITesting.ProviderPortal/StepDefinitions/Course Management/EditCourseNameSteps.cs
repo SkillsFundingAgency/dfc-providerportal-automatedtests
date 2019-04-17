@@ -39,7 +39,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             LoginPage loginPage = new LoginPage(webDriver);
             loginPage.EnterUsername(user);
             loginPage.EnterPassword(pass);
-            loginPage.ClickLoginButton();
+            loginPage.ClickLoginButtonProvider();
         }
 
 

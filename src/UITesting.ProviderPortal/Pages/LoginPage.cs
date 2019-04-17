@@ -3,6 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using UITesting.ProviderPortal.Pages.Provider_Management;
+using UITesting.ProviderPortal.Pages.Data_Quality_Indicators;
 
 namespace UITesting.ProviderPortal.Pages
 { 
@@ -42,10 +43,17 @@ namespace UITesting.ProviderPortal.Pages
         public SearchProviderPage ClickLoginButton()
         {
             FormCompletionHelper.ClickElement(LoginButton);
-            System.Threading.Thread.Sleep(3000);
+            //System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
             return new SearchProviderPage(webDriver);
         }
 
+        public DQIDashbordPage ClickLoginButtonProvider()
+        {
+            FormCompletionHelper.ClickElement(LoginButton);
+            //System.Threading.Thread.Sleep(3000);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new DQIDashbordPage(webDriver);
+        }
     }
 }
