@@ -34,7 +34,7 @@ Scenario: COUR-51 DQI Save out of Date Course Run
 
 
 @CI
-Scenario: COUR-55 DQI Save out of Date Course Run
+Scenario: COUR-55 DQI Cancel Edited Course Run
 	Given I click on the courses need their start date updated link
 	Then I am taken to the DQI page
 	When I click on the first course run requiring start date update

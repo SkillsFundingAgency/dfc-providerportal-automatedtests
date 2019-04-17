@@ -199,10 +199,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new BulkUploadFixPublishPage(webDriver);
         }
 
-        public DQIDashbordPage ClickCancelDQI()
+        public DQIFixPublishPage ClickCancelDQI()
         {
             FormCompletionHelper.ClickElement(CancelLink);
-            return new DQIDashbordPage(webDriver);
+            return new DQIFixPublishPage(webDriver);
         }
 
 

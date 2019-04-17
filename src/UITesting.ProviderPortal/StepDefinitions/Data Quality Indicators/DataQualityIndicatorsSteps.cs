@@ -59,7 +59,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Data_Quality_Indicators
         public void CancleDQIEdit()
         {
             EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
-            editCoursePage2.ClickCancelBU();
+            editCoursePage2.ClickCancelDQI();
         }     
 
     }

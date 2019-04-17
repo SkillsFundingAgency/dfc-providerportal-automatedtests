@@ -3,6 +3,7 @@ using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.TestSupport;
 using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.Pages.Provider_Management;
+using UITesting.ProviderPortal.Pages.Data_Quality_Indicators;
 using UITesting.ProviderPortal.Pages;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
@@ -46,7 +47,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Then(@"I am logged in")]
         public void ThenIAmLoggedIn()
         {
-            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+            DQIDashbordPage dQIDashbordPage = new DQIDashbordPage(webDriver);
         }
 
 

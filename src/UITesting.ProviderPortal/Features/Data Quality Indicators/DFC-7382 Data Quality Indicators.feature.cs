@@ -157,11 +157,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("COUR-55 DQI Save out of Date Course Run")]
+        [NUnit.Framework.DescriptionAttribute("COUR-55 DQI Cancel Edited Course Run")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void COUR_55DQISaveOutOfDateCourseRun()
+        public virtual void COUR_55DQICancelEditedCourseRun()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-55 DQI Save out of Date Course Run", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-55 DQI Cancel Edited Course Run", null, new string[] {
                         "CI"});
 #line 37
 this.ScenarioInitialize(scenarioInfo);

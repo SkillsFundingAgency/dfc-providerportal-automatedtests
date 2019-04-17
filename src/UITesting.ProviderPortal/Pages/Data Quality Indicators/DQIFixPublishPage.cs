@@ -11,7 +11,7 @@ namespace UITesting.ProviderPortal.Pages.Data_Quality_Indicators
         private static String PAGE_TITLE = "courses need their start date updating";
         private By PublishBtn = By.Id("publish");
         private By FirstFixCourseLink = By.XPath(".//*[@id='course-fix-157f5d3a-ee75-44ba-9922-15fe8afdb602']");
-        private By FirstFixCourseRunLink = By.XPath(".//*[@id='course-run-fix-b7c614aa-f6b3-40b0-a41c-33f00a0da298']");
+        private By FirstFixCourseRunLink = By.XPath(".//*[@id='course-run-fix-cc15e3af-ab3e-49ef-a7ba-1da89fe35be5']");
         private By FirstFixCourseInstance = By.XPath(".//*[@class='error-link'][0]");
         private By FirstFixCourseRunInstance = By.XPath(".//*[@class='error-link fix'][0]");
 

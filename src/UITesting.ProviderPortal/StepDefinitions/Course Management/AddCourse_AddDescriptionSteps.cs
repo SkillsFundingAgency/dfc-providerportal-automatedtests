@@ -1,9 +1,6 @@
 ﻿using System;
-using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.Pages.Course_Management;
-using UITesting.ProviderPortal.Pages;
 using UITesting.ProviderPortal.TestSupport;
-using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 
@@ -15,10 +12,7 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [Given(@"I am on the add a course form")]
         public void GivenIAmOnTheAddACourseForm()
         {
-
-            //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlCourses() + "/AddCourseSection1";
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "//Courses//AddCourseSection1";
-            Console.WriteLine("url=" + webDriver.Url);
             AddCoursePage AddCoursePage = new AddCoursePage(webDriver);
         }
 
