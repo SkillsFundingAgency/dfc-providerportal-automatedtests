@@ -12,22 +12,11 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
     public class AddVenue_EditVenueNameSteps : BaseTest
     {
 
-        //[Given(@"I am on the edit venue name page")]
-        //public void GivenIAmOnTheEditVenueNamePage()
-        //{
-        //    //Console.WriteLine("debug1");
-        //    webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues() + "/EditVenueName";
-        //    AddVenueEditNamePage AddVenueEditNamePage = new AddVenueEditNamePage(webDriver);
-            
-        //}
 
         [Given(@"I am on the edit venue name page")]
         public void GivenIAmOnTheEditVenueNamePage()
         {
-            //Console.WriteLine("debug1");
-            //webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues() + "/EditVenueName";
             AddVenueConfirmAddressPage AddVenueConfirmAddressPage = new AddVenueConfirmAddressPage(webDriver);
-
             AddVenueConfirmAddressPage.ChangeName();
 
         }

@@ -278,14 +278,14 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void clickChevron()
         {
             FormCompletionHelper.ClickElement(openchevron);
-            Thread.Sleep(2000);
+            PageInteractionHelper.WaitForPageToLoad();
 
         }
 
         internal void clickInnerChevron()
         {
             FormCompletionHelper.ClickElement(openInnerchevron);
-            Thread.Sleep(2000);
+            PageInteractionHelper.WaitForPageToLoad();
         }
 
 

@@ -122,9 +122,6 @@ namespace UITesting.ProviderPortal.TestSupport
                     Screenshot screenshot = screenshotHandler.GetScreenshot();
                     screenshotPath = Path.Combine(screenshotsDirectory, failureImageName);
                     screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
-                    Console.WriteLine(scenarioTitle
-                        + " -- Scenario failed and the screenshot is available at -- "
-                        + screenshotPath);
                 }
                 catch (Exception exception)
                 {

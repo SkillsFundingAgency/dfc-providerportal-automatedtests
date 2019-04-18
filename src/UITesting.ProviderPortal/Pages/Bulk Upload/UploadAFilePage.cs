@@ -92,8 +92,6 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
             char[] splitchar = { '\n' };
             strArr = errortxt.Replace("\r\n", "\n").Split(splitchar);
 
-            Console.WriteLine("SPLIT :" + strArr[1]);
-
             if (!strArr[1].Contains(errorMsg))
             {
                 throw new Exception("No Error Summary message displayed or Incorrect error message displayed"
