@@ -6,7 +6,7 @@
 Background:
 	Given I have accessed course directory as a provider
 	And I login as provider admin with sit.10033145@contractsonline.org and Test!234
-	Then I am logged in
+	Then I am logged in as a provider
 
 @CI
 Scenario: COUR-41 DQI View all out of date course runs

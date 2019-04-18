@@ -470,6 +470,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public AddCourseSummaryPage PublishCourse()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(publishBtn);
             PageInteractionHelper.WaitForPageToLoad();
             return new AddCourseSummaryPage(webDriver);
@@ -487,8 +488,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             if (webDriver.GetType().Name.ToString().Contains("RemoteWebDriver"))
             {
                 System.Threading.Thread.Sleep(1000);
+                PageInteractionHelper.WaitForPageToLoad();
                 var element = this.webDriver.FindElement(FirstVenue);
                 ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
+                PageInteractionHelper.WaitForPageToLoad();
             }
             else
             {

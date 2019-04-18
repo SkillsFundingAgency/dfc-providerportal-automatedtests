@@ -64,6 +64,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 
         public void AddQualificationLink()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(AddQualLink);
             PageInteractionHelper.WaitForPageToLoad();
         }

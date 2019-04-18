@@ -78,7 +78,7 @@ namespace UITesting.ProviderPortal.Features.DataQualityIndicators
 #line 8
  testRunner.And("I login as provider admin with sit.10033145@contractsonline.org and Test!234", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am logged in as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         

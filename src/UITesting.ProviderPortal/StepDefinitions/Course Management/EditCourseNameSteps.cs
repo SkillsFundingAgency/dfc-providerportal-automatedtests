@@ -47,6 +47,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [Then(@"I am logged in")]
         public void ThenIAmLoggedIn()
         {
+            SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+        }
+
+        [Then(@"I am logged in as a provider")]
+        public void ThenIAmLoggedInProvider()
+        {
             DQIDashbordPage dQIDashbordPage = new DQIDashbordPage(webDriver);
         }
 
