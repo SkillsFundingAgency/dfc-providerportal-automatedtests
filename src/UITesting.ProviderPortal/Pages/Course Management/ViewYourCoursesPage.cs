@@ -433,19 +433,17 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public void OpenAllQualificationsYC3()
         {
-        
+            PageInteractionHelper.WaitForPageToLoad();
             PageInteractionHelper.OpenAccordians(qualificationTitles);
             Console.WriteLine("Open qualifications");
-
         }
 
 
         public void OpenAllCourseRunsYC3()
         {
-
+            PageInteractionHelper.WaitForPageToLoad();
             PageInteractionHelper.OpenAccordians(courseRunTitles);
             Console.WriteLine("Open course runs");
-
         }
 
 
@@ -453,56 +451,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
 
-        /*internal void checkDropDownBoxes(string dropDown)
-        {
-            if (dropDown == "Delivery")
-            {
-                FormCompletionHelper.ClickElement(deliveryTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Venue")
-            {
-                FormCompletionHelper.ClickElement(venueTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Duration Unit")
-            {
-                FormCompletionHelper.ClickElement(durationUnitTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Attendance")
-            {
-                FormCompletionHelper.ClickElement(attendanceTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-            if (dropDown == "Mode")
-            {
-                FormCompletionHelper.ClickElement(modeTitleDropDown);
-                Thread.Sleep(2000);
-
-                FormCompletionHelper.ClickElement(modeTitleDropDown);
-                Thread.Sleep(2000);
-
-            }
-
-        }
-
-        internal void checkhyperLinkTitle(string hyperlink)
-        {
-            if (hyperlink == "URL")
-            {
-                PageInteractionHelper.VerifyText(verifyURLTitle, hyperlink);
-            }
-
-            if (hyperlink == "Cost Description")
-            {
-                PageInteractionHelper.VerifyText(verifyCostDescriptionTitle, hyperlink);
-            }
-        }*/
 
     }
 }

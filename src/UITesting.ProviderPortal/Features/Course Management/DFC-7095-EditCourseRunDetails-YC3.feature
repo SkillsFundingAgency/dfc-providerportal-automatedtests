@@ -29,11 +29,11 @@ Scenario: Edit Course Name with blank data
 @CI
 Scenario: Edit course run with valid defined start date when Classroom mode is selected and selecting Attendance and Attendance Pattern
 	Given I have accessed the selected course run data
-	And I have selected "Classroom" as delivery mode
+	And I have selected "Online" as delivery mode
 	And I have selected Start Date "Defined Start Date"
 	And I have entered "25" in Day, "09" in Month and "2019" in Year
-	And I have selected "Weekend" in Attendance
-	And I have selected "Part-Time" in attendance pattern 
+	#And I have selected "Weekend" in Attendance
+	#And I have selected "Part-Time" in attendance pattern 
 	When I  Save the data
 	Then the date should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
