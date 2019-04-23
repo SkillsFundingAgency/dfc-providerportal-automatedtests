@@ -66,7 +66,7 @@ Scenario: Edit Where next with more than 500 characters
 	Then following Where next error message should be displayed "'Where next' must be 500 characters or less"
 @CI
 Scenario: Edit Course with invalid characters
-	Given I have added an invalid character in Course description "…"
+	Given I have added an invalid character in Course description "我想输入文字"
 	When I Click the Save button
 	Then following course for error message should be displayed "Who is this course for? contains invalid characters"
 

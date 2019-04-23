@@ -65,6 +65,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By attendancePatternButtons = By.Id("AttendancePatternRadioButtons");
 
         private By workBasedOptionButton = By.Id("WorkBased");
+        private By firstRegion = By.XPath(".//*[@id='SelectRegionCheckBoxes']/details[1]/summary");
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
 
@@ -550,6 +551,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public AddCoursePage2 selectFirstOptionOnRegionSelector()
         {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(firstRegion);
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
             return new AddCoursePage2(webDriver);
         }

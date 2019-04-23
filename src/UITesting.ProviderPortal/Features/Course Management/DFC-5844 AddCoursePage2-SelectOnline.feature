@@ -11,7 +11,7 @@ Background:
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have accessed the Qualifications page	
-	And I have entered a Qualification Name "zoology"
+	And I have entered a Qualification Name "zoo"
 	And I click the link to Add Qualification
 	And I have specified who the course is for Semi-qualified (people)
 	And I have entered the entry requirements 1. Industry experience

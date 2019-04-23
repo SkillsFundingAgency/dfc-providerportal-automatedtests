@@ -389,7 +389,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 69
- testRunner.Given("I have added an invalid character in Course description \"…\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have added an invalid character in Course description \"我想输入文字\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 70
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 71

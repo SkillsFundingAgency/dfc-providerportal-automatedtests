@@ -14,6 +14,7 @@ Background:
 	And I have clicked one of the courses available
 	Then I should be able to view the course runs.	
 
+@CI
 Scenario: View Course Run Details
 	Given I have selected a course run to update
 	When I Click Save
