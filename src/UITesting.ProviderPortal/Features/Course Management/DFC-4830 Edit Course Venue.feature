@@ -21,10 +21,10 @@ Scenario: Edit Course Venue
 
 	#Revert changes for next test
 	Given I have logged to course directory as a provider
-	And I have searched for UKPRN "10002815" and clicked search
+	And I have searched for UKPRN "10032433" and clicked search
 	And I have clicked View Courses button to see a list of courses
 	Given I have clicked the Main Qualification
 	Then I should be able to view the course runs.
-	Given I have clicked edit for a course run
+	Given I have selected a course run to update
 	And I have changed the course venue to A Venue Name
 	When I Click Save

@@ -24,7 +24,7 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "DFC-7095-EditCourseRunDetails-YC3.feature"
+#line 1 "DFC-7095 EditCourseRunDetails.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

@@ -11,14 +11,16 @@ Background:
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have clicked the Main Qualification
-	And I have clicked one of the courses available
+	And I have selected a course run to update
 	Then I should be able to view the course runs.
 
 
-@CI
-Scenario: View description of the first course 
-	Given I click on the view course description link
-	Then I am on the Edit course description page
+# THIS TEST NO LONGER APPLICABLE IN NEW YOUR COURSES PAGE
+#
+#@CI
+#Scenario: View description of the first course 
+#	Given I click on the view course description link
+#	Then I am on the Edit course description page
 	#And qualification title is shown
 	#And Who is the course for is shown
 	#And Entry requirements are shown

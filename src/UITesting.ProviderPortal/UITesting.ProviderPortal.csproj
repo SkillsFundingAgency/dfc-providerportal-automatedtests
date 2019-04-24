@@ -61,8 +61,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6716 BulkUpload.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Course Management\DFC-4830Edit Course Venue.feature.cs">
-      <DependentUpon>DFC-4830Edit Course Venue.feature</DependentUpon>
+    <Compile Include="Features\Course Management\DFC-4830 Edit Course Venue.feature.cs">
+      <DependentUpon>DFC-4830 Edit Course Venue.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -101,35 +101,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6185_6186 View URL_CostDesc.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Course Management\DFC-6267 View Course Runs.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-6267 View Course Runs.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\Course Management\DFC-6187 View Your Courses - Line 11.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-6187 View Your Courses - Line 1.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\Course Management\DFC-6188 ViewCourseRunDetailsLine2.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-6188 ViewCourseRunDetailsLine2.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\Course Management\DFC-6667 Add Course - Work Based Option.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6667 Add Course - Work Based Option.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Course Management\DFC-7094 Edit Course Description-YC3.feature.cs">
+    <Compile Include="Features\Course Management\DFC-7094 Edit Course Description.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-7094 Edit Course Description-YC3.feature</DependentUpon>
+      <DependentUpon>DFC-7094 Edit Course Description.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Course Management\DFC-7095-EditCourseRunDetails-YC3.feature.cs">
+    <Compile Include="Features\Course Management\DFC-7095 EditCourseRunDetails.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-7095-EditCourseRunDetails-YC3.feature</DependentUpon>
+      <DependentUpon>DFC-7095 EditCourseRunDetails.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Data Quality Indicators\DFC-7382 Data Quality Indicators.feature.cs">
       <DependentUpon>DFC-7382 Data Quality Indicators.feature</DependentUpon>
@@ -226,6 +211,7 @@
     <Compile Include="Pages\Bulk Upload\BulkUploadPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFixPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\UploadAFilePage.cs" />
+    <Compile Include="Pages\Course Management\CourseSummaryPage.cs" />
     <Compile Include="Pages\Course Management\EditCoursePage.cs" />
     <Compile Include="Pages\Course Management\EditCoursePage2.cs" />
     <Compile Include="Pages\Course Management\AddCourseSummaryPage.cs" />
@@ -356,9 +342,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6716 BulkUpload.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Course Management\DFC-4830Edit Course Venue.feature">
+    <None Include="Features\Course Management\DFC-4830 Edit Course Venue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-4830Edit Course Venue.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-4830 Edit Course Venue.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-4827 Edit Course Name.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -388,29 +374,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6185_6186 View URL_CostDesc.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Course Management\DFC-6267 View Course Runs.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-6267 View Course Runs.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Course Management\DFC-6187 View Your Courses - Line 1.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-6187 View Your Courses - Line 11.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Course Management\DFC-6188 ViewCourseRunDetailsLine2.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-6188 ViewCourseRunDetailsLine2.feature.cs</LastGenOutput>
-    </None>
     <None Include="Features\Course Management\DFC-6667 Add Course - Work Based Option.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6667 Add Course - Work Based Option.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Course Management\DFC-7094 Edit Course Description-YC3.feature">
+    <None Include="Features\Course Management\DFC-7094 Edit Course Description.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-7094 Edit Course Description-YC3.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-7094 Edit Course Description.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Course Management\DFC-7095-EditCourseRunDetails-YC3.feature">
+    <None Include="Features\Course Management\DFC-7095 EditCourseRunDetails.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>DFC-7095-EditCourseRunDetails-YC3.feature.cs</LastGenOutput>
+      <LastGenOutput>DFC-7095 EditCourseRunDetails.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Data Quality Indicators\DFC-7382 Data Quality Indicators.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

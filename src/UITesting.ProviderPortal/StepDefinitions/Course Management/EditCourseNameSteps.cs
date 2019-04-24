@@ -86,8 +86,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void GivenIHaveSelectedACourseRunToUpdate()
         {
             EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
-            //editYourCoursePage.SelectCourseRunName();
             editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourseRun();
         }
 
 

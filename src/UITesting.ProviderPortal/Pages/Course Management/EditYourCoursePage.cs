@@ -30,6 +30,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By CourseRunVenueField = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[2]/span");
         private static By CourseRunURLField = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[2]/span");
 
+        private static By CourseRunSelect10032433 = By.XPath(".//*[@id='results']/div[2]/div/div[4]/a");
+
         /*End DFC-4827-variables*/
 
         /*DFC-4832-variables-Usman*/
@@ -59,9 +61,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void SelectCourse()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            FormCompletionHelper.ClickElement(Course);
+            //FormCompletionHelper.ClickElement(Course);
+            FormCompletionHelper.ClickElement(CourseRunSelect10032433);
             PageInteractionHelper.WaitForPageToLoad();
-            FormCompletionHelper.ClickElement(CourseRunEditLink);
+            //FormCompletionHelper.ClickElement(CourseRunEditLink);
         }
 
         internal void EditCourseRun()
