@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using UITesting.Framework.Helpers;
 using NUnit.Framework;
 
@@ -18,13 +15,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");
         private static By showFirstCourseDescriptionPopupLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
+       
         // Elt - YC3 specific.. //
-
         private static By selectedLevelTitle = By.ClassName("cd__your-courses__filters-list__link cd__your-courses__filters-list__link--selected");
         private static By qualificationTitles = By.ClassName("govuk-details__summary-text");
         private static By courseRunTitles = By.ClassName("govuk-accordion__section-button");
 
-        // end YC3 //
 
         //elt added - View Description..
         private By courseDescriptionTitle = By.ClassName("govuk-caption-l");
@@ -32,7 +28,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseDescriptionPopup = By.Id("popup-descript");
 
         //Usman added for edit course
-        //private By EditCourseDescriptionLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
         private By EditCourseDescriptionLink = By.LinkText("Edit this qualification");
         private By EditCourseDetailsLink = By.LinkText("Edit");
         private By CourseEditedLink = By.Id("courseeditlink");
@@ -70,58 +65,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
 
         //Shivani added - Line2
-
         private By openInnerchevron = By.CssSelector("h3.accordion.govuk-heading-l:nth-of-type(1).active");
         private By openchevron = By.CssSelector("h2.accordion.govuk-heading-l:nth-of-type(1).active");
-
-        //private By verifyCourseTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[1]/label");
         private By verifyCourseTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[1]/label");
-
-        //private By CourseTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.large:nth-of-type(1) input");
-
-        //private By verifyIDTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[2]/label");
         private By verifyIDTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[2]/label");
-        // private By IDTitleInputBox = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(2) input");
-
-        //private By verifyDeliveryTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[3]/label");
         private By verifyDeliveryTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[3]/label");
-        //private By deliveryTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(3) select#deliveryMode");
-
-        //private By verifyStartDateTitle = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(4) label.govuk-label");
-        //private By startDateTitleInputBox = By.XPath("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[4]/div");
-
-        //private By verifyVenueTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[5]/label");
         private By verifyVenueTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[5]/label");
-        //private By venueTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium:nth-of-type(5) select#VenueId");
-
-        //private By verifyURLTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[6]/label");
         private By verifyURLTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[6]/label");
-        //private By urlTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#URLLink");
-
-        //private By verifyCostTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[7]/div/label");
         private By verifyCostTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[7]/div/label");
-        //private By costTitleInputBox = By.CssSelector("//*[@id='course - run - 38c66b31 - 812e-4fa0 - bd18 - 13b916ba0fba']/div[7]/input");
-
-        //private By verifyCostDescriptionTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[8]/label");
         private By verifyCostDescriptionTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[8]/label");
-        //private By costDescriptionTitleHyperLink = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.popUpContainer a#CostDetailLink");
-
-        //private By verifyDurationTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[9]/label");
         private By verifyDurationTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[9]/label");
-        // private By durationTitleInputBox = By.CssSelector("//*[@id='courseRun_DurationValue']");
-
-        //private By verifyDurationUnitTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[10]/label");
         private By verifyDurationUnitTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[10]/label");
-        //private By durationUnitTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#durationUnit");
-
-        //private By verifyAttendanceTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[11]/label");
         private By verifyAttendanceTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[11]/label");
-        //private By attendanceTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#attendance");
-
-        //private By verifyModeTitle = By.XPath("//*[@id='course-run-3be8ddb1-2ea8-48f8-978d-719e6c673e24']/div/div[12]/label");
         private By verifyModeTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[12]/label");
-        //private By modeTitleDropDown = By.CssSelector("li#course-run-38c66b31-812e-4fa0-bd18-13b916ba0fba div.medium select#mode");
-
+        
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -183,11 +140,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         internal void ConfirmURLReadOnly()
         {
-            //throw new NotImplementedException();
             PageInteractionHelper.IsElementReadOnly(ViewCourseURLText);
         }
 
-        //Elt view Description->
         internal void ClickViewCourseDescription()
         {
             FormCompletionHelper.ClickElement(ViewCourseDescriptionLink);
@@ -231,7 +186,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public ViewYourCoursesPage VerifyCourseDescriptionShown()
         {
-            //Title 'Course Description' shown
             PageInteractionHelper.VerifyElementPresent(courseDescriptionTitle);
             return new ViewYourCoursesPage(webDriver);
         }
@@ -272,8 +226,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new ViewYourCoursesPage(webDriver);
         }
 
-        //Shivani Line2
-
 
         internal void clickChevron()
         {
@@ -305,14 +257,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             if (courseLabel == "Delivery")
             {
                 PageInteractionHelper.VerifyText(verifyDeliveryTitle, courseLabel);
-
             }
 
-            /*if (courseLabel == "Start Date")
-            {
-                PageInteractionHelper.VerifyText(verifyStartDateTitle, courseLabel);
-                PageInteractionHelper.IsElementPresent(startDateTitleInputBox);
-            }*/
 
             if (courseLabel == "Venue")
             {
@@ -341,18 +287,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             {
                 PageInteractionHelper.VerifyText(verifyModeTitle, courseLabel);
             }
-
-
-            
         }
 
 
 
         internal void StoreLiveCourseRunCount()
         {
-
             String mainTotal = (FormCompletionHelper.StoreObjectText(firstCourseRunsCount));
-
             String mainTotalString = mainTotal.Replace(")", "").Replace("(", "").Replace(" ", "");
 
             try
@@ -388,7 +329,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public void CompareTotals()
         {
-            //Compare the 2 run totals are the same
             if (!mainCourseRunCount.Equals(countOfRunsShown))
             {
                 Assert.Fail("Total runs shown doesn't match total at top of page");
@@ -403,9 +343,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public void OpenMainAccordians()
         {
-
             PageInteractionHelper.OpenAccordians(accordianMainOpenIconXPath);
-
         }
 
         public void OpenQualificationAccordians()
@@ -417,19 +355,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public void CountUpAllCourseRunsShown()
         {
-            //add up number of course run rows displayed
             IList<IWebElement> courseRunRows = webDriver.FindElements(courseRunRowXPath);
             countOfRunsShown = courseRunRows.Count();
-
-            Console.WriteLine("Counted Runs: " + countOfRunsShown);
-
-
         }
 
-
-
-        //  YC3  //
-    
 
         public void OpenAllQualificationsYC3()
         {
@@ -445,12 +374,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.OpenAccordians(courseRunTitles);
             Console.WriteLine("Open course runs");
         }
-
-
-        // end YC3 //
-
-
-
 
     }
 }
