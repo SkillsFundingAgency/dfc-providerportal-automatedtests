@@ -98,8 +98,6 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 
             CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
             courseSummaryPage.ClickEditCourse();
-
-
         }   
         
         [When(@"I Click the Save button")]

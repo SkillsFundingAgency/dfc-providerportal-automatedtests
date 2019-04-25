@@ -152,8 +152,16 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [When(@"I have clicked Edit Course Details")]
         public void WhenIHaveClickedEditCourseDetails()
         {
-            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-            viewYourCoursesPage.ClickEditCourseDetailsLink();
+            //ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            //viewYourCoursesPage.ClickEditCourseDetailsLink();
+
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourseRun();
+
+
         }
 
         [When(@"I  Save the data")]

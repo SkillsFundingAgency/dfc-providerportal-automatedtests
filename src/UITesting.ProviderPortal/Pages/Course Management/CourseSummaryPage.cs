@@ -32,11 +32,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new EditCoursePage2(webDriver);
         }
 
-        public EditCoursePage2 ClickEditCourse()
+        public EditCoursePage ClickEditCourse()
         {
             FormCompletionHelper.ClickElement(makeChanges);
             PageInteractionHelper.WaitForPageToLoad();
-            return new EditCoursePage2(webDriver);
+            return new EditCoursePage(webDriver);
         }
 
     }
