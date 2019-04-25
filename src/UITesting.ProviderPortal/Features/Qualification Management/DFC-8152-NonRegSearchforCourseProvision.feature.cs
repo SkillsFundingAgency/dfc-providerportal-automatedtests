@@ -343,40 +343,8 @@ this.FeatureBackground();
  testRunner.Then("I should be able to view the Un regulated courses results page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 95
  testRunner.When("i click Cancel Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
- testRunner.Then("Unregulated course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 97
- testRunner.And("the Z code text box should be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter valid Z code-Click Back link")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterValidZCode_ClickBackLink()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter valid Z code-Click Back link", null, new string[] {
-                        "CI"});
-#line 100
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 101
- testRunner.Given("I have accessed the Unregulated courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 102
- testRunner.And("I have entered a valid Z code \"Z0004395\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 103
- testRunner.And("I click the search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 104
- testRunner.Then("I should be able to view the Non regulated course details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 105
- testRunner.When("i click Back Link on the Un regulated courses results page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
- testRunner.Then("Unregulated course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 107
- testRunner.And("the Z code text box should be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the Regulated Qualifications page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -388,16 +356,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click I don\'t know Z Code", null, new string[] {
                         "CI"});
-#line 110
+#line 111
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 111
- testRunner.Given("I have accessed the Unregulated courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 112
- testRunner.And("I have clicked  I dont know z code link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have accessed the Unregulated courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 113
+ testRunner.And("I have clicked  I dont know z code link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 114
  testRunner.Then("Unknown Z code page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

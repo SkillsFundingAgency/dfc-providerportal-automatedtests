@@ -19,6 +19,10 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private By ZCodeText = By.Id("Search");
         private By SearchButton = By.Id("searchZCode");
         private By DontKnowZCode = By.XPath("//a[@href='/UnregulatedCourses/UnknownZCode']");
+
+        private By ChooseButton = By.XPath("//*[@id='results']/div[2]/a[1]");
+        private By CancelLink = By.LinkText("Cancel");
+
         public UnRegulatedCoursesPage(IWebDriver  webDriver): base(webDriver)
         {
             SelfVerify();
@@ -66,6 +70,20 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         internal void validateZCodeTextBlank()
         {
             FormCompletionHelper.VerifyText(ZCodeText, "");
+        }
+
+        internal void clickCancelLink()
+        {
+            FormCompletionHelper.ClickElement(CancelLink);
+        }
+        internal void ValidateChooseButton()
+        {
+            FormCompletionHelper.IsElementPresent(ChooseButton);
+        }
+
+        internal void ValidateCancelLink()
+        {
+            FormCompletionHelper.IsElementPresent(CancelLink);
         }
     }
 }

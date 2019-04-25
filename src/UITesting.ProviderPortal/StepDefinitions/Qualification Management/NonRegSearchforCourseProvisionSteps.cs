@@ -80,8 +80,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [When(@"i click Cancel Link")]
         public void WhenIClickCancelLink()
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
-            unRegulatedCoursesResultsPage.clickCancelLink();
+            //UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+            //unRegulatedCoursesResultsPage.clickCancelLink();
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.clickCancelLink();
         }
         
         [When(@"i click Back Link on the Un regulated courses results page")]
@@ -127,15 +129,19 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Then(@"I should be able to view the Non regulated course results page")]
         public void ThenIShouldBeAbleToViewTheNonRegulatedCourseResultsPage()
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+           // UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
         }
         
         [Then(@"I should be able to view the Choose button and the Cancel Link")]
         public void ThenIShouldBeAbleToViewTheChooseButtonAndTheCancelLink()
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
-            unRegulatedCoursesResultsPage.ValidateChooseButton();
-            unRegulatedCoursesResultsPage.ValidateCancelLink();
+            //UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+            //unRegulatedCoursesResultsPage.ValidateChooseButton();
+            //unRegulatedCoursesResultsPage.ValidateCancelLink();
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.ValidateChooseButton();
+            unRegulatedCoursesPage.ValidateCancelLink();
+
         }
         
         [Then(@"an blank z code error message should be displayed ""(.*)""")]

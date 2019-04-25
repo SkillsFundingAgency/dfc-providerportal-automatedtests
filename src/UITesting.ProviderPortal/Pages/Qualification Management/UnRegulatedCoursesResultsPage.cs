@@ -16,9 +16,11 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
     {
         private static String PAGE_TITLE = "";
         private By ChooseButton = By.XPath("//*[@id='main-content']/div[2]/a[1]");
+        
         private By CancelLink = By.LinkText("Cancel");
         private By SearchErrMessage = By.Id("Search-error");
-        private By ZCodeNotExistErrMessage = By.Id("cd-error-summary-title");
+       /* private By ZCodeNotExistErrMessage = By.Id("cd-error-summary-title");*/
+        private By ZCodeNotExistErrMessage = By.XPath("//*[@id='results']/div/h1");
         private By BackLink = By.XPath("//a[@href='/UnregulatedCourses']");
         public UnRegulatedCoursesResultsPage(IWebDriver webDriver): base(webDriver)
         {
