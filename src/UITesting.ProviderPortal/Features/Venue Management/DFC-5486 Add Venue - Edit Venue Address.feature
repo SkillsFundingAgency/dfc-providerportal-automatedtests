@@ -28,60 +28,8 @@ Scenario Outline: Change address manually during Add Venue
 Given I am on the edit venue address screen
 	When Editing I enter the postcode <postcode>
 	And I click Find Address to change to
-	#Then I am on the Select Address to change to page
 Examples:
 | postcode |
 | CV23 9JR |
 
 #-- reuse steps to confirm and check new venue
-
-
-#@CI
-#Scenario: Change address using postcode during Add Venue
-#	Given I have entered a venue name and address
-#	And I am on the venue name and address screen
-#	When I press edit address
-#	Then I am taken to the change address screen
-##--look into using postcode look-up steps
-#	And my new address is shown on the venue name and address screen
-##-- reuse steps to confirm and check new venue
-#
-#@CI
-#Scenario: Back out of address change during Add Venue
-#	Given I have entered a venue name and address
-#	And I am on the venue name and address screen
-#	When I press edit address
-#	Then I am taken to the change address screen
-#	And I can change the address manually
-#	And I click on cancel
-#	Then original address is shown on the venue name and address screen
-##-- reuse steps to confirm and check new venue
-#
-#
-#@CI
-#Scenario: Amended address can not be blank
-#	Given I have entered a venue name and address
-#	And I am on the venue name and address screen
-#	When I press edit address
-#	Then I am taken to the change address screen
-#	And I can change the venue name to blank and click commit
-#	Then I am shown a message <message-text>
-#
-#
-#@CI
-#Scenario: Amended address can not have blank postcode
-#	Given I have entered a venue name and address
-#	And I am on the venue name and address screen
-#	When I press edit address
-#	Then I am taken to the change address screen
-#	And I can change the venue name to blank and click commit
-#	Then I am shown a message <message-text>
-#
-#	@CI
-#Scenario: Amended address can not have blank line 1
-#	Given I have entered a venue name and address
-#	And I am on the venue name and address screen
-#	When I press edit address
-#	Then I am taken to the change address screen
-#	And I can change the venue name to blank and click commit
-#	Then I am shown a message <message-text>

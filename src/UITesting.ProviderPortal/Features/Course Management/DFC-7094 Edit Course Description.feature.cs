@@ -97,16 +97,16 @@ testRunner.Given("I have accessed course directory as a provider", ((string)(nul
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate options and buttons", null, new string[] {
                         "CI"});
-#line 15
+#line 16
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 16
- testRunner.Given("I have accessed the Edit Course screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
- testRunner.Then("Adult Education and Advanced Learner check boxes should be present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I have accessed the Edit Course screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
+ testRunner.Then("Adult Education and Advanced Learner check boxes should be present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
  testRunner.And("Save button and Cancel link should be present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -119,12 +119,12 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit course description for a course with valid description with 2000 characters", null, new string[] {
                         "CI"});
-#line 20
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 21
+#line 23
  testRunner.Given("I have edited course description with valid values \"ABCDEFGHIJKLMNOPQRSTUVWXYZABC" +
                     "DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDE" +
                     "FGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGH" +
@@ -151,11 +151,11 @@ this.FeatureBackground();
                     "HIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHI" +
                     "JKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK" +
                     "LMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
- testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
- testRunner.Then("the course description should be saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
+ testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+ testRunner.Then("the course description should be saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 26
  testRunner.And("I should be able to see the saved data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -168,12 +168,12 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit course description for a course with description more than 2000 characters", null, new string[] {
                         "CI"});
-#line 26
+#line 29
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 27
+#line 30
  testRunner.Given("I have edited course description with valid values \"ABCDEFGHIJKLMNOPQRSTUVWXYZABC" +
                     "DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDE" +
                     "FGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGH" +
@@ -200,9 +200,9 @@ this.FeatureBackground();
                     "HIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHI" +
                     "JKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK" +
                     "LMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
+#line 31
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 32
  testRunner.Then("folloiwng course for error message should be displayed \"Who is this course for? m" +
                     "ust be 2000 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -216,22 +216,22 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course with no data in course name", null, new string[] {
                         "CI"});
-#line 31
+#line 35
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 32
+#line 36
  testRunner.Given("I have left the course description as blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 33
+#line 37
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 38
  testRunner.Then("following course for error message should be displayed \"Enter who is this course " +
                     "for\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 39
  testRunner.And("there should be a error summary with heading \"There is an issue with this qualifi" +
                     "cation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
+#line 40
  testRunner.And("the error summary should also list the error message \"Enter who is this course fo" +
                     "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -245,16 +245,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Entry Requirements with more than 500 characters", null, new string[] {
                         "CI"});
-#line 38
+#line 43
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 39
+#line 44
  testRunner.Given(@"I have entered the following data  in Entry Requirements""ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXY""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 40
+#line 45
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 46
  testRunner.Then("following Entry Requirement error message should be displayed \"Entry requirements" +
                     " must be 500 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -268,16 +268,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit What you’ll learn with more than 1000 characters", null, new string[] {
                         "CI"});
-#line 43
+#line 49
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 44
+#line 50
  testRunner.Given(@"I have entered the following data in What You'll learn ""ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKOPQRSTUVW""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 45
+#line 51
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
+#line 52
  testRunner.Then("following What you’ll learn error message should be displayed \"What you will lear" +
                     "n must be 1000 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -291,16 +291,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit How you’ll learn with more than 500 characters", null, new string[] {
                         "CI"});
-#line 48
+#line 55
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 49
+#line 56
  testRunner.Given(@"I have entered the following data in Hou YOu'll Learn ""The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.The languages only differ in their grammar, their pronunciation and their most common words. The one way to learn is to practice regularly daily""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 50
+#line 57
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 58
  testRunner.Then("following How you’ll learn error message should be displayed \"How you’ll learn mu" +
                     "st be 500 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -314,16 +314,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit What you’ll need to bring with more than 500 characters", null, new string[] {
                         "CI"});
-#line 53
+#line 61
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 54
+#line 62
  testRunner.Given(@"I have entered the following data in What you'll need to bring ""The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.The languages only differ in their grammar, their pronunciation and their most common words. The one way to learn is to practice regularly daily""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 55
+#line 63
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 64
  testRunner.Then("following What you’ll need to bring error message should be displayed \"What you’l" +
                     "l need to bring must be 500 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -337,16 +337,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit How you’ll be assessed with more than 500 characters", null, new string[] {
                         "CI"});
-#line 58
+#line 67
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 59
+#line 68
  testRunner.Given(@"I have entered the following data in How You'll be assessed ""The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.The languages only differ in their grammar, their pronunciation and their most common words. The one way to learn is to practice regularly daily""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 60
+#line 69
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
+#line 70
  testRunner.Then("following How you’ll be assessed error message should be displayed \"How you’ll be" +
                     " assessed must be 500 characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -360,16 +360,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Where next with more than 500 characters", null, new string[] {
                         "CI"});
-#line 63
+#line 73
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 64
+#line 74
  testRunner.Given(@"I have entered the following data in Where Next ""The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.The languages only differ in their grammar, their pronunciation and their most common words. The one way to learn is to practice regularly daily""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 65
+#line 75
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
+#line 76
  testRunner.Then("following Where next error message should be displayed \"\'Where next\' must be 500 " +
                     "characters or less\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -383,16 +383,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course with invalid characters", null, new string[] {
                         "CI"});
-#line 68
+#line 79
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 69
+#line 80
  testRunner.Given("I have added an invalid character in Course description \"我想输入文字\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 70
+#line 81
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 82
  testRunner.Then("following course for error message should be displayed \"Who is this course for? c" +
                     "ontains invalid characters\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

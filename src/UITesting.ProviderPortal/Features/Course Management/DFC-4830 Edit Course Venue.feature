@@ -17,7 +17,6 @@ Scenario: Edit Course Venue
 	Given I have selected a course run to update
 	And I have changed the course venue to B Venue Name
 	When I Click Save
-#	Then the new venue name should be saved as B Venue Name
 
 	#Revert changes for next test
 	Given I have logged to course directory as a provider

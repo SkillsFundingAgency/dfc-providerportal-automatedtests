@@ -12,8 +12,6 @@ Background:
 	## End of Provider Search Steps
 	Given I have navigated to the Your Venues Pages
 
-
-
 @CI
 Scenario: Select venue to Edit
 	When I click Edit against the first venue

@@ -2,7 +2,7 @@
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
-using UITesting.ProviderPortal.Pages.Venue_Management;
+
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -27,10 +27,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             FormCompletionHelper.ClickElement(acceptAndPublishBtn);
             PageInteractionHelper.WaitForPageToLoad();
-            //return new AddCourseSummaryPage(webDriver);
             return new ViewYourCoursesPage(webDriver);
         }
-
 
     }
 }

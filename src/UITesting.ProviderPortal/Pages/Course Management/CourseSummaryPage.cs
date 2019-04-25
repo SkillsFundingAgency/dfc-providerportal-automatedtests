@@ -2,7 +2,6 @@
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
-using UITesting.ProviderPortal.Pages.Venue_Management;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -13,6 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By edit = By.XPath(".//*[@id='main-content']/main/div/div[1]/h3[1]/a"); 
         private By copy = By.XPath(".//*[@id='main-content']/main/div/div[2]/a[1]");    
         private By delete = By.XPath(".//*[@id='archive-2f40e314-5b77-424c-9a0a-eb63ab2a7f9a']");
+        private By makeChanges = By.XPath(".//*[@id='main-content']/main/div/div[2]/a[5]");
 
         public CourseSummaryPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -32,6 +32,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new EditCoursePage2(webDriver);
         }
 
+        public EditCoursePage2 ClickEditCourse()
+        {
+            FormCompletionHelper.ClickElement(makeChanges);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new EditCoursePage2(webDriver);
+        }
 
     }
 }

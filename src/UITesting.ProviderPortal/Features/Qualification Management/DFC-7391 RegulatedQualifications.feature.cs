@@ -111,18 +111,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Regulated Qualifications", null, new string[] {
                         "CI"});
-#line 17
+#line 18
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 18
- testRunner.Given("I have accessed the Regulated Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
- testRunner.When("I select the Regulated Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have accessed the Regulated Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
- testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select the Regulated Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
+ testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
  testRunner.Then("Lars Search page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -135,18 +135,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Non Regulated Qualifications", null, new string[] {
                         "CI"});
-#line 23
+#line 25
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 24
- testRunner.Given("I have accessed the Regulated Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
- testRunner.When("I select the Non Regulated Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
- testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have accessed the Regulated Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 27
+ testRunner.When("I select the Non Regulated Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
  testRunner.Then("Unregulated Courses page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -159,18 +159,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error message when no option is selected", null, new string[] {
                         "CI"});
-#line 29
+#line 32
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 30
- testRunner.Given("I have accessed the Regulated Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 31
- testRunner.When("no option is selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
- testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
+ testRunner.Given("I have accessed the Regulated Qualifications page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 34
+ testRunner.When("no option is selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
  testRunner.Then("an Error message should be displayed \"Choose 1 option to continue\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

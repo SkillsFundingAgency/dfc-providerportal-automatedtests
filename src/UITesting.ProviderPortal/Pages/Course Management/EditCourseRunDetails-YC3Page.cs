@@ -13,7 +13,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     public class EditCourseRunDetails_YC3Page : BasePage 
     {
         private static String PAGE_TITLE = "Edit course details";
-
         private static By CourseNameText=By.Id("CourseName");
         private static By Classroom_DelMode = By.Id("ClassroomBased");
         private static By Online_DelMode = By.Id("Online");
@@ -27,22 +26,14 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By Cost = By.Id("Cost");
         private static By CostDesc = By.Id("CostDescription");
         private static By DurLength = By.Id("DurationLength");      
-
         private static By DurUnit = By.Id("durationDropDown");
         private static By Fulltime = By.Id("FullTime");
         private static By Parttime = By.Id("PartTime");
         private static By Flexible = By.Id("Flexible");
         private static By Daytime = By.Id("Daytime");
         private static By Evening = By.Id("Evening");
-
-        
-
         private static By Weekend = By.Id("Weekend");
-
-        
-
         private static By DayBlock = By.Id("DayorBlockRelease");
-
         private static By Save = By.Id("save");
         private static By Cancel = By.LinkText("Cancel");
       

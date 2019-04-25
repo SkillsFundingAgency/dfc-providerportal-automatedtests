@@ -102,21 +102,21 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I have changed the course venue to B Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 22
  testRunner.Given("I have logged to course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
+#line 23
  testRunner.And("I have searched for UKPRN \"10032433\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
+#line 24
  testRunner.And("I have clicked View Courses button to see a list of courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
+#line 25
  testRunner.Given("I have clicked the Main Qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 27
+#line 26
  testRunner.Then("I should be able to view the course runs.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 28
+#line 27
  testRunner.Given("I have selected a course run to update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
+#line 28
  testRunner.And("I have changed the course venue to A Venue Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 29
  testRunner.When("I Click Save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();

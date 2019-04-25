@@ -91,10 +91,17 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         [When(@"I select Edit Course Description")]
         public void WhenISelectEditCourseDescription()
         {
-            ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
-           // ViewYourCoursesPage.OpenAllQualificationsYC3();
-            ViewYourCoursesPage.ClickEditCourseDescriptionLink();
-        }        
+          //  ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+          //  ViewYourCoursesPage.ClickEditCourseDescriptionLink();
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourse();
+
+
+        }   
+        
         [When(@"I Click the Save button")]
         public void WhenIClickTheSaveButton()
         {

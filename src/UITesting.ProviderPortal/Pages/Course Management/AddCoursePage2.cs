@@ -3,26 +3,27 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using System.Diagnostics;
-using System.Threading;
+
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
     public class AddCoursePage2 : BasePage
     {
+        //page objects
         private static String PAGE_TITLE = "Add course details";
         private By qualification = By.Id("qual--");
         private By courseName = By.Id("CourseName");
-        private By courseNameError = By.XPath(".//*[@id='courseNameContainer']/span[1]");                 // By.Id("CourseName -error");
+        private By courseNameError = By.XPath(".//*[@id='courseNameContainer']/span[1]");                 
         private By courseId = By.Id("CourseProviderReference");
-        private By courseIdError = By.XPath(".//*[@id='sectionCourseProviderReference']/div/span[1]");    //By.Id("CourseProviderReference-error");
+        private By courseIdError = By.XPath(".//*[@id='sectionCourseProviderReference']/div/span[1]");    
         private By courseURL = By.Id("Url");
-        private By courseURLError = By.XPath(".//*[@id='sectionUrl']/div/span[1]");                       // By.Id("Url -error");   
+        private By courseURLError = By.XPath(".//*[@id='sectionUrl']/div/span[1]");                        
         private By courseCost = By.Id("Cost");
-        private By courseCostError = By.XPath(".//*[@id='costContainer']/span[1]");                       // By.Id("Cost -error");
+        private By courseCostError = By.XPath(".//*[@id='costContainer']/span[1]");                       
         private By courseCostInvalidLength = By.XPath(".//*[@id='costContainer']/span[1]");
         private By courseCostInvalid = By.XPath(".//*[@id='costContainer']/span[1]");
         private By costDescription = By.Id("CostDescription");
-        private By costDescriptionError = By.XPath(".//*[@id='sectionCost']/div[2]/div/span[2]");          // By.Id("CostDescription -error");
+        private By costDescriptionError = By.XPath(".//*[@id='sectionCost']/div[2]/div/span[2]");          
         private By costDescriptionInfo = By.Id("CostDescription-info");
         private By attendanceMode = By.Id("AttendanceMode");
         private By studyMode = By.Id("StudyMode");
@@ -36,25 +37,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By MonthError = By.Id("invalidMonthMessage");
         private By DateCCYY = By.Id("Year");
         private By YearError = By.Id("invalidYearMessage");
-        private By StartDateRequiredError = By.XPath(".//*[@id='startDateFormGroup']/span");        //By.Id("requiredMessage");
-        private By PasttDateError = By.XPath(".//*[@id='startDateFormGroup']/span");                //By.Id("pastMessage");
-        private By FutureDateError = By.XPath(".//*[@id='startDateFormGroup']/span");               //By.Id("futureMessage");
-        private By InvalidDateError = By.XPath(".//*[@id='startDateFormGroup']/span");              // By.Id("invalidDateMessage");
+        private By StartDateRequiredError = By.XPath(".//*[@id='startDateFormGroup']/span");        
+        private By PasttDateError = By.XPath(".//*[@id='startDateFormGroup']/span");                
+        private By FutureDateError = By.XPath(".//*[@id='startDateFormGroup']/span");               
+        private By InvalidDateError = By.XPath(".//*[@id='startDateFormGroup']/span");              
         private By FlexDateRadio = By.Id("FlexibleStartDate");
         private By DurationLength = By.Id("DurationLength");
         private By DurationUnit = By.Id("durationDropDown");
-        private By DurationError = By.XPath(".//*[@id='sectionDuration']/div/span[2]");             // By.Id("DurationLength -error");
+        private By DurationError = By.XPath(".//*[@id='sectionDuration']/div/span[2]");             
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
         private By DeliveryMode = By.Name("DeliveryMode");
-        private string errortxt;
-
         private By HeaderErrMessage = By.XPath("//*[@id='error-summary-title']");
         private By HeaderErrSummMessage = By.XPath("//*[@id='error-hash-link-Url-0']");
-        
-
-        //Shivani Added
-
         private By selectOnline = By.Id("Online");
         private By selectVenueOption = By.Id("VenueItemsCheckboxList");
         private By selectTimeOption = By.Id("time");
@@ -63,11 +58,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By venueSelector = By.Id("VenueItemsCheckboxList");
         private By fullPartTimeButtons = By.Id("FullPartTimeRadioButtons");
         private By attendancePatternButtons = By.Id("AttendancePatternRadioButtons");
-
         private By workBasedOptionButton = By.Id("WorkBased");
         private By firstRegion = By.XPath(".//*[@id='SelectRegionCheckBoxes']/details[1]/summary");
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
+
+        //variables
+        private string errortxt;
 
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
@@ -78,7 +75,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             FormCompletionHelper.ClickElement(selectOnline);
             return new AddCoursePage2(webDriver);
-
         }
 
         public AddCoursePage2 selectVenueIsDisplayed()
@@ -537,7 +533,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage2(webDriver);
         }
 
-        public AddCoursePage2 verifyFullPartTimeButtonsNotShown() //mode: fulltime or part time
+        public AddCoursePage2 verifyFullPartTimeButtonsNotShown() 
         {
             FormCompletionHelper.VerifyElementNotPresent(fullPartTimeButtons);
             return new AddCoursePage2(webDriver);

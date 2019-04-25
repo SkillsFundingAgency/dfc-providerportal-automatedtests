@@ -12,6 +12,7 @@ Given I have accessed course directory as a provider
 	And I selected a Course and a course run
 	And I have clicked Edit Course Details 
 	Then Edit Course details screen should be displayed
+
 @CI
 Scenario: Edit Course Name with valid data 
 	Given I have accessed the selected course run data
@@ -20,12 +21,14 @@ Scenario: Edit Course Name with valid data
 	Then the course run should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
 	Then I should be able to view the changed data
+
 @CI
 Scenario: Edit Course Name with blank data
 	Given I have accessed the selected course run data
 	And I have entered the following course name " "
 	When I  Save the data
 	Then the following course name message should be displayed "Enter course name"
+
 @CI
 Scenario: Edit course run with valid defined start date when Classroom mode is selected and selecting Attendance and Attendance Pattern
 	Given I have accessed the selected course run data
@@ -38,6 +41,7 @@ Scenario: Edit course run with valid defined start date when Classroom mode is s
 	Then the date should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
 	Then I should be able to view the changed data	
+
 @CI
 Scenario: Edit course run with invalid defined start date when Classroom mode is selected
 	Given I have accessed the selected course run data
@@ -48,6 +52,7 @@ Scenario: Edit course run with invalid defined start date when Classroom mode is
 	Then the following error date message should be displayed "Invalid date"
 	And there should be a error summary with header "There is an issue with this qualification"
 	And the error summary should have the error "Invalid date"
+
 @CI
 Scenario: Edit course run with no defined start date when Classroom mode is selected
 	Given I have accessed the selected course run data
@@ -56,6 +61,7 @@ Scenario: Edit course run with no defined start date when Classroom mode is sele
 	And I have entered " " in Day, " " in Month and " " in Year
 	When I  Save the data
 	Then the following error date message should be displayed "Enter start date"
+
 @CI
 Scenario: Edit course run by selecting classrroom mode and a venue is selected
 	Given I have accessed the selected course run data
@@ -67,6 +73,7 @@ Scenario: Edit course run by selecting classrroom mode and a venue is selected
 	Then the course run should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
 	Then I should be able to view the changed data with the new venue
+
 @CI
 Scenario: Edit course run by entering a value in cost and leave cost description blank
 	Given I have accessed the selected course run data
@@ -76,6 +83,7 @@ Scenario: Edit course run by entering a value in cost and leave cost description
 	Then the course run should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
 	Then I should be able to view the changed data with the cost
+
 @CI
 Scenario: Edit course run by entering a value in cost description and leave cost blank
 	Given I have accessed the selected course run data
@@ -85,6 +93,7 @@ Scenario: Edit course run by entering a value in cost description and leave cost
 	Then the course run should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
 	Then I should be able to view the changed data with the cost description
+
 @CI
 Scenario: Edit course run by leaving cost description and leave cost blank
 	Given I have accessed the selected course run data
@@ -92,6 +101,7 @@ Scenario: Edit course run by leaving cost description and leave cost blank
 	And I have left cost description as blank
 	When I  Save the data 
 	Then the following cost message should be displayed "Enter cost or cost description"
+
 @CI
 Scenario: Edit course run with duration
 	Given I have accessed the selected course run data
@@ -100,6 +110,7 @@ Scenario: Edit course run with duration
 	When I  Save the data
 	When I click the link to the changed course run
 	Then I should be able to view the changed data with the duration
+
 @CI
 Scenario: Edit course run with blank duration
 	Given I have accessed the selected course run data
@@ -116,6 +127,7 @@ Scenario: Edit course with Online and a valid URL
 	Then the course run should be saved and the changed course run link should be visible
 	When I click the link to the changed course run
 	Then I should be able to view the changed data with the Url
+
 @CI
 Scenario: Edit course with Online and a invalid URL
 	Given I have accessed the selected course run data
@@ -123,6 +135,7 @@ Scenario: Edit course with Online and a invalid URL
 	And I have entered following URL "http://w..ips-apprenticeships"
 	When I  Save the data
 	Then the following URL message should be displayed "The format of URL is incorrect"
+
 @CI
 Scenario: No changes should be done once cancel is clicked
 	Given I have accessed the selected course run data

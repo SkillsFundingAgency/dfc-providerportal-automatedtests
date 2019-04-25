@@ -116,7 +116,6 @@ Scenario: DFC-7224 Bulk Upload Cancel Course Run Edit
 	Then I click on Cancel to cancel edit course run
 	Then I am on the Fix and publish bulk upload page
 
-
 @CI
 Scenario: DFC-7224 Bulk Upload Save Course Edit
 	Given I have searched for UKPRN "10036789" and clicked search
@@ -170,4 +169,3 @@ Scenario: DFC-6736 Bulk Upload Edit uploaded Course Run
 	And I edit bulk upload course cost 9
 	And I click to Save the Course Run details
 	Then I am on the Fix and publish bulk upload page
-

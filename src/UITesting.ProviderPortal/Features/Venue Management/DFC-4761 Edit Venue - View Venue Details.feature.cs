@@ -95,14 +95,14 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select venue to Edit", null, new string[] {
                         "CI"});
-#line 18
+#line 16
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 19
+#line 17
  testRunner.When("I click Edit against the first venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 18
  testRunner.Then("I am on the Edit venue details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -11,6 +11,7 @@ Background:
 	When I click to view my courses
 	Given I have accessed the Qualifications page	
 	And there is a field to enter the LARS/QAN number.
+
 @CI
 Scenario: Search for a Qualification by LARS/QAN Reference Number
 	Given I have entered LARS/QAN Number "60060955"
@@ -19,10 +20,12 @@ Scenario: Search for a Qualification by LARS/QAN Reference Number
 	And I want to see a Link to add this qualification.
 	And I want to see Qualification Level Filter "Qualification Level"
 	And I want to see Awarding Organisation Filter on the screen "Awarding Organisation"
+
 @CI
 Scenario: Search for a Qualification when user enters an invalid search term
 	Given that I have entered an invalid search term "xxxxx"
 	Then I want to see a validation message "No records found"
+
 @CI
 Scenario: Search for a Qualification using Qualification Name
 	Given I have entered a Qualification Name "Biology"
@@ -31,19 +34,16 @@ Scenario: Search for a Qualification using Qualification Name
 	And I want to see the number of results returned for the name "Found results for Biology"
 	And I want to see a Link to add this qualification.
 	And I want to see Level and Awarding body on the screen.
+
 @CI
 Scenario: Select filters for Qualification Level
 	Given I have retrieved results for a search term
 	And I select one level for qualification level
-#   KM Comment - this is not reflective of current behaviour in the application
-#	Then I should be able to select another level for qualification level
 
 @CI
 Scenario: Select filters for Awarding Body
 	Given I have retrieved results for a search term
 	And I have selected one awarding body
-#   KM Comment - this is not reflective of current behaviour in the application
-#	Then I should be able to select another awarding body
 
 @CI
 Scenario: Clear filters when reset is clicked
@@ -51,6 +51,3 @@ Scenario: Clear filters when reset is clicked
 	Given I have selected filters in Qualification Level and/or Awarding body
 	When I click reset
 	Then all filters should be cleared.
-
-	
-

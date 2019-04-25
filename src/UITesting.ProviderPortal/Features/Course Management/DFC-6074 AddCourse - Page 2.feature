@@ -141,15 +141,6 @@ Scenario: DFC5116 User enters valid cost 2
 	When I enter the following in the cost field 999999.99
 	When I enter the following in the course name field Course test
 
-#THIS SCENARIO IS NO LONGER APPLICABLE - IT IS NO LONGER POSSIBLE FOR USER TO ENTER AN INVALID COST
-#@CI
-#Scenario: DFC5116 User enters invalid cost 
-#	When I enter the following in the cost field 9999999.9
-#	When I enter the following in the course name field Course test
-#	And I click Publish leading to error
-#	Then course Cost error validation is displayed
-#	Then error message for field Invalid Cost Length states Maximum value for cost is £999,999.99
-
 @CI
 Scenario: DFC5116 User enters no cost 
 	When I enter the following in the cost field blank
@@ -157,7 +148,6 @@ Scenario: DFC5116 User enters no cost
 	And I click Publish leading to error
 	Then course Cost error validation is displayed
 	Then error message for field Invalid Cost states Enter cost or cost description
-
 
 @CI
 Scenario: DFC5011 User Adds Provider Course ID
@@ -168,8 +158,6 @@ Scenario: DFC5011 User Adds Provider Course ID
 Scenario: DFC5011 User does not enter Course ID
 	When I enter the following in the course id field blank
 	And I enter the following in the URL field https://www.google.com
-#	Then course id error validation is displayed
-#	And error message for field Course ID states Enter an ID
 
 @CI
 Scenario: DFC5011 User enter Course ID greater than 255 chars
@@ -250,12 +238,6 @@ Scenario: DFC4770 User Study Mode Flexible
 	When I Select study mode Flexible
 	And I enter the following in the course name field Course test
 
-#REMOVED BY DFC-8096 UI - Hide Funding Options From All Pages
-#@CI
-#Scenario: DFC6069 Select Advanced Learner Loans
-#	When I tick the Advanced Learner Loans option
-#	And I enter the following in the course name field Course test
-
 @CI
 Scenario: DFC4901 Select Flexible Start Date
 	When I select start date Flexible Start Date
@@ -266,9 +248,6 @@ Scenario: DFC4901 Select Defined Start Date and enter no date
 	When I select start date Defined Start Date
 	And I enter the following in the course name field Course test
 	And I click Publish leading to error
-#	Then error message for field Day states Day must be a number between 1 and 31
-#	And error message for field Month states Month must be a number between 1 and 12
-#	And error message for field Year states Year must be a valid 4 digit year
 	Then error message for field Start Date states Enter start date
 
 @CI
@@ -377,4 +356,3 @@ Scenario: DFC4900 User Publishes Course
 	And I select duration unit Weeks
 	And I select the first venue in the venues list
 	And I click Publish
-

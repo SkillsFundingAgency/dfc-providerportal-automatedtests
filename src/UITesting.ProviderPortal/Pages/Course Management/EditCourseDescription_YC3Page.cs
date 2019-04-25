@@ -19,7 +19,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By AdvancedLearnerLoan = By.Id("AdvancedLearnerLoan");
         private By SaveButton = By.Id("save");
         private By CancelLink = By.LinkText("Cancel");
-        //private By CancelLink = By.XPath("//*[@id='editCourse']/div[10]/a");
         private By CourseForText = By.Id("CourseFor");
         private By EntryReqText = By.Id("EntryRequirements");
         private By HowYouWillLearnText = By.Id("HowYouWillLearn");
@@ -27,7 +26,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By WhatYouNeedText = By.Id("WhatYouNeed");
         private By HowAssessedText = By.Id("HowAssessed");
         private By WhereNextText = By.Id("WhereNext");
-
         private By CourseForErrMsg = By.XPath("//*[@id='sectionCourseFor']/div/div/span[2]");
         private By EntryReqErrMsg = By.XPath("//*[@id='sectionEntryRequirements']/div/div/span[2]");
         private By WhatYouWillLearnErrMsg = By.XPath("//*[@id='sectionWhatWillLearn']/div/div/span[2]");
@@ -35,7 +33,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By WhatYouWillNeedtoBringErrMsg = By.XPath("//*[@id='sectionWhatYouNeed']/div/div/span[2]");
         private By HowYouWillBeAssessedErrMsg = By.XPath("//*[@id='sectionHowAssessed']/div/div/span[2]");
         private By WhereNextErrMsg = By.XPath("//*[@id='sectionWhereNext']/div/div/span[2]");
-
         private By errorHeaderTitle = By.XPath("//*[@id='error-summary-title']");
         private By errorHeaderErrorMsg = By.XPath("//*[@id='error-hash-link-CourseFor-0']");
 
@@ -98,10 +95,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             FormCompletionHelper.SelectCheckBox2 (AdultEducationBudget);
         }
+
         internal void CheckAdultEducationOption()
         {
             FormCompletionHelper.IsObjectSelected(AdultEducationBudget);
         }
+
         internal void CheckAdvancedLearnerOption()
         {
             FormCompletionHelper.IsObjectSelected(AdvancedLearnerLoan);

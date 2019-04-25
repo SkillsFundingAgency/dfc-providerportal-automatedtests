@@ -101,16 +101,16 @@ namespace UITesting.ProviderPortal.Features.QualificationManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate SSA Page", null, new string[] {
                         "CI"});
-#line 17
+#line 18
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 18
- testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
- testRunner.Then("I should be able to view the First Level and Second Level dropdowns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
+ testRunner.Then("I should be able to view the First Level and Second Level dropdowns", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
  testRunner.And("the Back Link should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -123,16 +123,16 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click Back to go back to Unregulated courses page", null, new string[] {
                         "CI"});
-#line 22
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 23
- testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
- testRunner.When("I click the Back Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
+ testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+ testRunner.When("I click the Back Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
  testRunner.Then("Unregulated course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -145,18 +145,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select First Level and Second Level dropdowns and validate the results page", null, new string[] {
                         "CI"});
-#line 27
+#line 30
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 28
- testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
- testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
- testRunner.Then("Level filter and Category filter selections should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 31
+ testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 32
+ testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
+ testRunner.Then("Level filter and Category filter selections should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 34
  testRunner.And("a link to add this provision should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -169,51 +169,51 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select First Level and Second Level dropdowns and add selected course", null, new string[] {
                         "CI"});
-#line 33
+#line 37
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 34
- testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
- testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
- testRunner.And("I click the Add this Provision link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
- testRunner.Then("add course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 38
- testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 39
- testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
- testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click the Add this Provision link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
- testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("add course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 42
- testRunner.Then("add course run should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 43
+ testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
+ testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 45
+ testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 46
+ testRunner.Then("add course run should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 47
  testRunner.When("I enter the following in the course name field Course test for non regulated cour" +
                     "se", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
- testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
- testRunner.And("I enter 03 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
- testRunner.And("I enter 2021 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
- testRunner.And("I enter the following in the cost field 2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 49
- testRunner.And("I select duration length 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50
- testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 03 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
- testRunner.And("I select the first venue in the venues list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 2021 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter the following in the cost field 2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 53
+ testRunner.And("I select duration length 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 54
+ testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 55
+ testRunner.And("I select the first venue in the venues list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 56
+ testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
  testRunner.Then("the course should be listed in the Your courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -228,53 +228,53 @@ this.FeatureBackground();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select First Level and Second Level dropdowns and add selected course from Page 2" +
                     "", null, new string[] {
                         "CI"});
-#line 55
+#line 60
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 56
- testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 57
- testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
- testRunner.And("select page 2 from pagination", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
- testRunner.And("I click the Add this Provision link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
- testRunner.Then("add course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 61
- testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 62
- testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 63
- testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("select page 2 from pagination", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 64
- testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click the Add this Provision link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 65
- testRunner.Then("add course run should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("add course page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 66
+ testRunner.Given("I have specified who the course is for Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 67
+ testRunner.And("I have entered the entry requirements 1. Industry experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 68
+ testRunner.And("I have entered what the student will learn Student will learn about the subject", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 69
+ testRunner.When("I click Next Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 70
+ testRunner.Then("add course run should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 71
  testRunner.When("I enter the following in the course name field Course test for non regulated cour" +
                     "se", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
- testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
- testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 69
- testRunner.And("I enter 02 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 70
- testRunner.And("I enter 2021 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
- testRunner.And("I enter the following in the cost field 2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 72
- testRunner.And("I select duration length 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select start date Defined Start Date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 73
- testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 01 in the Day field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 74
- testRunner.And("I select the first venue in the venues list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 02 in the Month field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
- testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter 2021 in the Year field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 76
+ testRunner.And("I enter the following in the cost field 2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 77
+ testRunner.And("I select duration length 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 78
+ testRunner.And("I select duration unit Weeks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 79
+ testRunner.And("I select the first venue in the venues list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 80
+ testRunner.And("I click Publish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 81
  testRunner.Then("the course should be listed in the Your courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -287,26 +287,26 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Level filter, category filter and click reset", null, new string[] {
                         "CI"});
-#line 78
+#line 84
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 79
- testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 80
- testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
- testRunner.And("I have selected the first checkbox in Level filter Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
- testRunner.And("I have selected the first checkbox in Category Filter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
- testRunner.Then("a reset link should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 84
- testRunner.When("I Click the reset link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 85
- testRunner.Then("all the checkboxes in Level and category filter should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I have accessed the UnKnown Z Code Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 86
+ testRunner.When("I Select First Level and Second Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 87
+ testRunner.And("I have selected the first checkbox in Level filter Level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 88
+ testRunner.And("I have selected the first checkbox in Category Filter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 89
+ testRunner.Then("a reset link should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 90
+ testRunner.When("I Click the reset link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 91
+ testRunner.Then("all the checkboxes in Level and category filter should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 92
  testRunner.And("the selected checkboxes should be deselected.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

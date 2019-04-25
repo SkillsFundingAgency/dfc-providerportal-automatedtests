@@ -13,22 +13,26 @@ Background:
 	Then the Unregulated courses page should be displayed
 	Given I have clicked  I dont know z code link
 	Then Unknown Z code page should be displayed
+
 @CI
 Scenario: Validate SSA Page
 	Given I have accessed the UnKnown Z Code Page
 	Then I should be able to view the First Level and Second Level dropdowns
 	And the Back Link should be visible
+
 @CI
 Scenario: Click Back to go back to Unregulated courses page
 	Given I have accessed the UnKnown Z Code Page
 	When I click the Back Link
 	Then Unregulated course page should be displayed
+
 @CI
 Scenario: Select First Level and Second Level dropdowns and validate the results page
 	Given I have accessed the UnKnown Z Code Page
 	When I Select First Level and Second Level
 	Then Level filter and Category filter selections should be visible
 	And a link to add this provision should be visible
+
 @CI
 Scenario: Select First Level and Second Level dropdowns and add selected course 
 	Given I have accessed the UnKnown Z Code Page
@@ -51,6 +55,7 @@ Scenario: Select First Level and Second Level dropdowns and add selected course
 	And I select the first venue in the venues list
 	And I click Publish
 	Then the course should be listed in the Your courses page
+
 @CI
 Scenario: Select First Level and Second Level dropdowns and add selected course from Page 2
 	Given I have accessed the UnKnown Z Code Page
@@ -74,6 +79,7 @@ Scenario: Select First Level and Second Level dropdowns and add selected course 
 	And I select the first venue in the venues list
 	And I click Publish
 	Then the course should be listed in the Your courses page
+
 @CI
 Scenario: Select Level filter, category filter and click reset
 	Given I have accessed the UnKnown Z Code Page

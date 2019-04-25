@@ -96,4 +96,3 @@ Scenario: DFC-4904 Where Next exceeds 500 chars
 	When I click Next Button Failure
 	Then Page 1 error message for field Where next states 'Where next' must be 500 characters or less
 	Then Page 1 info message for field Where next states You have 1 character too many
-

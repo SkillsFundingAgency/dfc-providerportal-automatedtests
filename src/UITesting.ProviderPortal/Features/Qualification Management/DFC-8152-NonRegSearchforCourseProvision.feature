@@ -11,17 +11,20 @@ Background:
 	When I Navigate to Regulated Qualifications page
 	And I have selected Non Regulated Option and Clicked Next
 	Then the Unregulated courses page should be displayed
+
 @CI
 Scenario: Validate the Unregulated courses page
 	Given I have accessed the Unregulated courses page
 	Then a Back Link should be visible
 	And a text box to enter a Z code should be visble
 	And a I don't know the Z code link should be visible
+
 @CI
 Scenario: Click back to go back to the Regulated qualifications page
 	Given I have accessed the Unregulated courses page
 	And I click the Back Link on the unregulated courses page
 	Then the Regulated Qualifications page should be displayed
+
 @CI
 Scenario: Enter Valid Z Code
 	Given I have accessed the Unregulated courses page
@@ -29,30 +32,35 @@ Scenario: Enter Valid Z Code
 	And I click the search button
 	Then I should be able to view the Non regulated course results page
 	And I should be able to view the Choose button and the Cancel Link
+
 @CI
 Scenario: Enter blank Z Code
 	Given I have accessed the Unregulated courses page
 	And I have entered a blank Z code ""
 	And I click the search button
 	Then an blank z code error message should be displayed "Enter a z code to search"
+
 @CI
 Scenario: Enter Invalid Z code- code without z
 	Given I have accessed the Unregulated courses page
 	And I have entered a z code "10000000"
 	And I click the search button
 	Then an error message should be displayed "Code must start with Z followed by 7 numbers or letters"
+
 @CI
 Scenario: Enter Invalid Z code- less than 8 characters
 	Given I have accessed the Unregulated courses page
 	And I have entered a z code "Z000122"
 	And I click the search button
 	Then an error message should be displayed "Code must start with Z followed by 7 numbers or letters"
+
 @CI
 Scenario: Enter Z code- Not available in database
 	Given I have accessed the Unregulated courses page
 	And I have entered a z code "Z0000000"
 	And I click the search button
 	Then an unavailable Z Code error message should be displayed "Z code does not exist"	
+
 @CI
 Scenario: Add non regulated course
 	Given I have accessed the Unregulated courses page
@@ -77,6 +85,7 @@ Scenario: Add non regulated course
 	And I select the first venue in the venues list
 	And I click Publish
 	Then the course should be listed in the Your courses page
+
 @CI
 Scenario: Enter valid Z code-Click Cancel link
 	Given I have accessed the Unregulated courses page
@@ -86,6 +95,7 @@ Scenario: Enter valid Z code-Click Cancel link
 	When i click Cancel Link 
 	Then Unregulated course page should be displayed
 	And the Z code text box should be empty
+
 @CI
 Scenario: Enter valid Z code-Click Back link
 	Given I have accessed the Unregulated courses page
@@ -95,6 +105,7 @@ Scenario: Enter valid Z code-Click Back link
 	When i click Back Link on the Un regulated courses results page
 	Then Unregulated course page should be displayed
 	And the Z code text box should be empty
+
 @CI
 Scenario: Click I don't know Z Code
 	Given I have accessed the Unregulated courses page
