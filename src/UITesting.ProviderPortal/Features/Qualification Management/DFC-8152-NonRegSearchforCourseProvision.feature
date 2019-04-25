@@ -93,18 +93,19 @@ Scenario: Enter valid Z code-Click Cancel link
 	And I click the search button
 	Then I should be able to view the Un regulated courses results page
 	When i click Cancel Link 
-	Then Unregulated course page should be displayed
-	And the Z code text box should be empty
+	##Then Unregulated course page should be displayed
+	Then the Regulated Qualifications page should be displayed
+	##And the Z code text box should be empty
 
-@CI
-Scenario: Enter valid Z code-Click Back link
-	Given I have accessed the Unregulated courses page
-	And I have entered a valid Z code "Z0004395"
-	And I click the search button
-	Then I should be able to view the Non regulated course details
-	When i click Back Link on the Un regulated courses results page
-	Then Unregulated course page should be displayed
-	And the Z code text box should be empty
+##@CI - Not valid due to change in screen
+##Scenario: Enter valid Z code-Click Back link
+##	Given I have accessed the Unregulated courses page
+##	And I have entered a valid Z code "Z0004395"
+##	And I click the search button
+##	Then I should be able to view the Non regulated course details
+##	When i click Back Link on the Un regulated courses results page
+##	Then Unregulated course page should be displayed
+##	And the Z code text box should be empty
 
 @CI
 Scenario: Click I don't know Z Code
