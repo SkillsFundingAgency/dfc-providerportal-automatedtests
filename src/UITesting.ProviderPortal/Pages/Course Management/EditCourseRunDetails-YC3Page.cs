@@ -160,6 +160,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void SaveData()
         {
             FormCompletionHelper.ClickElement(Save);
+            PageInteractionHelper.WaitForPageToLoad();
         }
 
         internal void ValidateErrorMessage(string strErrMsg,string strFieldName)
