@@ -324,6 +324,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         }
         internal void ValidateEditedCourseDeatilsLink()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             PageInteractionHelper.IsElementPresent(CourseEditedLink);
         }
 
