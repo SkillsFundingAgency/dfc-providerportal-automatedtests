@@ -15,7 +15,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By ViewCourseDescriptionLink = By.XPath("//*[@id='0']");
         private static By showFirstCourseDescriptionPopupLink = By.XPath(".//*[@id='67e5fb91-adad-41ae-b5d8-76a4aefae674']/span[4]/a");
         private static By showSecondCourseDescriptionPopupLink = By.XPath("//*[@id='1']");
-       
+
+        
+
         // Elt - YC3 specific.. //
         private static By selectedLevelTitle = By.ClassName("cd__your-courses__filters-list__link cd__your-courses__filters-list__link--selected");
         private static By qualificationTitles = By.ClassName("govuk-details__summary-text");
@@ -36,6 +38,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By entryRequirements = By.Id("popup-entry-reqs-0");
         private By whatWillLearn = By.Id("popup-what-learn-0");
         private By howWillLearn = By.Id("popup-how-learn-0");
+
+        
+
         private By equipmentNeeded = By.Id("popup-what-bring-0");
         private By howAssessed = By.Id("popup-how-assessed-0");
         private By nextSteps = By.Id("popup-next-0");
@@ -52,6 +57,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By ClickURLClose = By.LinkText("Close");
         private By ClickCostDescriptionLink = By.Id("CostDetailLink");
         private By ViewCostDescriptionText = By.Id("courseRun_CostDescription");
+
+        
+
         private By ClickCostDescriptionClose = By.LinkText("Close");
         public By accordianMainOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[*]/div/div/h2");
         private By accordianQualOpenIconXPath = By.XPath("//*[@id='main-content']/div/div/div[*]/div[1]/div/div/h3");
@@ -78,7 +86,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By verifyDurationUnitTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[10]/label");
         private By verifyAttendanceTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[11]/label");
         private By verifyModeTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[12]/label");
-        
+
+        /*Search Your Courses tests*/
+        private By SearchText = By.Id("search");
+        private By SearchErrMessage = By.XPath("//*[@id='results']/div/div/div/p");
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -373,6 +384,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.WaitForPageToLoad();
             PageInteractionHelper.OpenAccordians(courseRunTitles);
             Console.WriteLine("Open course runs");
+        }
+        internal void EnterSearchTerm(string strSearch)
+        {
+            FormCompletionHelper.EnterText(SearchText, strSearch);
+        }
+
+        internal void ValidateSearchText()
+        {
+            PageInteractionHelper.VerifyElementPresent(SearchText);
+        }
+
+        internal void ValidateSearchErrorMessage(string errMsg)
+        {
+            FormCompletionHelper.VerifyText(SearchErrMessage, errMsg);
         }
 
     }

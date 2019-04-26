@@ -151,7 +151,7 @@ this.FeatureBackground();
 #line 30
  testRunner.Given("I have accessed the Unregulated courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 31
- testRunner.And("I have entered a valid Z code \"Z00004395\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have entered a valid Z code \"Z0004395\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
  testRunner.And("I click the search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33

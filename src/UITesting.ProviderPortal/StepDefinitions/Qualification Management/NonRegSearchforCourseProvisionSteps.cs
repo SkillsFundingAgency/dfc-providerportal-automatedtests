@@ -147,22 +147,30 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Then(@"an blank z code error message should be displayed ""(.*)""")]
         public void ThenAnBlankZCodeErrorMessageShouldBeDisplayed(string errMsg)
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
-            unRegulatedCoursesResultsPage.ValidateErrorMessage(errMsg);
+            /* UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+             unRegulatedCoursesResultsPage.ValidateErrorMessage(errMsg);*/
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.ValidateErrorMessage(errMsg);
         }
         
         [Then(@"an error message should be displayed ""(.*)""")]
         public void ThenAnErrorMessageShouldBeDisplayed(string ErrMsg)
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
-            unRegulatedCoursesResultsPage.ValidateErrorMessage(ErrMsg);
+            /* UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+            unRegulatedCoursesResultsPage.ValidateErrorMessage(errMsg);*/
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.ValidateErrorMessage(ErrMsg);
         }
         
         [Then(@"an unavailable Z Code error message should be displayed ""(.*)""")]
         public void ThenAnUnavailableZCodeErrorMessageShouldBeDisplayed(string errMsg)
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
-            unRegulatedCoursesResultsPage.ValidateDoesNotexistErrorMessage(errMsg);
+            /* UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+             unRegulatedCoursesResultsPage.ValidateDoesNotexistErrorMessage(errMsg);*/
+            /* UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+            unRegulatedCoursesResultsPage.ValidateErrorMessage(errMsg);*/
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.ValidateDoesNotexistErrorMessage(errMsg);
         }
         
         [Then(@"I should be able to view the Un regulated courses results page")]
@@ -175,8 +183,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
         [Then(@"I click the choose button")]
         public void ThenIClickTheChooseButton()
         {
-            UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
-            unRegulatedCoursesResultsPage.ClickChooseButton();
+            /*UnRegulatedCoursesResultsPage unRegulatedCoursesResultsPage = new UnRegulatedCoursesResultsPage(webDriver);
+            unRegulatedCoursesResultsPage.ClickChooseButton();*/
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.ClickChooseButton();
         }
         [Then(@"add course page should be displayed")]
         public void ThenAddCoursePageShouldBeDisplayed()

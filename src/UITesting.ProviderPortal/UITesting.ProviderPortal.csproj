@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6716 BulkUpload.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Course Management\COUR-107-SearchonYourCourses.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-107-SearchonYourCourses.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-4830 Edit Course Venue.feature.cs">
       <DependentUpon>DFC-4830 Edit Course Venue.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -257,6 +262,7 @@
     <Compile Include="StepDefinitions\Course Management\EditCourseDescription_YC3Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseNameSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\EditCourseRunDetails_YC3Steps.cs" />
+    <Compile Include="StepDefinitions\Course Management\SearchonYourCoursesSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\ViewCourseDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6188ViewCourseRunDetailsLine2Steps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6186ViewCourseRunsSteps.cs" />
@@ -341,6 +347,10 @@
     <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6716 BulkUpload.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\COUR-107-SearchonYourCourses.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-107-SearchonYourCourses.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-4830 Edit Course Venue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

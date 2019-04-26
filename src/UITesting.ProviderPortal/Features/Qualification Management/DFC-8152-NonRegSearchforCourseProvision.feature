@@ -28,7 +28,7 @@ Scenario: Click back to go back to the Regulated qualifications page
 @CI
 Scenario: Enter Valid Z Code
 	Given I have accessed the Unregulated courses page
-	And I have entered a valid Z code "Z00004395"
+	And I have entered a valid Z code "Z0004395"
 	And I click the search button
 	Then I should be able to view the Non regulated course results page
 	And I should be able to view the Choose button and the Cancel Link

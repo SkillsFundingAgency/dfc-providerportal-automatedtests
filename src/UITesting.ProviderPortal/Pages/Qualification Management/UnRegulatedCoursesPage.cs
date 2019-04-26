@@ -15,12 +15,18 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
     {
 
         private static String PAGE_TITLE = "Search for a course provision";
-        private By UnRegBackLink = By.XPath("//*[@id='main-content']/div/div/header/div/a");
+        /*private By UnRegBackLink = By.XPath("//*[@id='main-content']/div/div/header/div/a");*/
+        private By BackLink = By.XPath("//a[@href='/RegulatedQualification']");
         private By ZCodeText = By.Id("Search");
         private By SearchButton = By.Id("searchZCode");
         private By DontKnowZCode = By.XPath("//a[@href='/UnregulatedCourses/UnknownZCode']");
-
+        private By SearchErrMessage = By.Id("Search-error");
+        /* private By ZCodeNotExistErrMessage = By.Id("cd-error-summary-title");*/
+       /* private By ZCodeNotExistErrMessage = By.XPath("//*[@id='results']/div/h1");*/
+        private By ZCodeNotExistErrMessage = By.XPath("//*[@id='cd-error-summary-title']");
         private By ChooseButton = By.XPath("//*[@id='results']/div[2]/a[1]");
+
+       
         private By CancelLink = By.LinkText("Cancel");
 
         public UnRegulatedCoursesPage(IWebDriver  webDriver): base(webDriver)
@@ -34,7 +40,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 
         internal void ClickUnRegBackLink()
         {
-            FormCompletionHelper.ClickElement(UnRegBackLink);
+            FormCompletionHelper.ClickElement(BackLink);
         }
 
         internal void EnterZCode(string strZCode)
@@ -54,7 +60,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 
         internal void ValidateBackLink()
         {
-            PageInteractionHelper.IsElementPresent(UnRegBackLink);
+            PageInteractionHelper.IsElementPresent(BackLink);
         }
 
         internal void ValidateZSearchCodeText()
@@ -85,5 +91,22 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         {
             FormCompletionHelper.IsElementPresent(CancelLink);
         }
+        internal void ValidateErrorMessage(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(SearchErrMessage, errMsg);
+        }
+
+        internal void ValidateDoesNotexistErrorMessage(string errMsg)
+        {
+            PageInteractionHelper.VerifyText(ZCodeNotExistErrMessage, errMsg);
+        }
+        internal void ClickChooseButton()
+        {
+            FormCompletionHelper.ClickElement(ChooseButton);
+        }
+
+
+        
+
     }
 }
