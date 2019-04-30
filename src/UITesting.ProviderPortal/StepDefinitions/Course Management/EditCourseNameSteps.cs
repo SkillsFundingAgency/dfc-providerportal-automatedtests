@@ -36,7 +36,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         public void DfELoginWithUsernameAndPassword(string user, string pass)
         {
             HomePage homePage = new HomePage(webDriver);
-            homePage.ClickLogin();
+            homePage.ClickLoginDfE();
 
             DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
             dfESignInPage.EnterUsername (Configurator.GetConfiguratorInstance().GetdFEUser());

@@ -18,6 +18,7 @@ namespace UITesting.ProviderPortal.Pages
             SelfVerify();
         }
 
+
         protected override bool SelfVerify()
         {
             PageInteractionHelper.WaitForPageToLoad();
@@ -32,6 +33,16 @@ namespace UITesting.ProviderPortal.Pages
             System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
             return new LoginPage(webDriver);
+        }
+
+
+        public DfESignInPage ClickLoginDfE()
+        {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(loginLink);
+            System.Threading.Thread.Sleep(3000);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new DfESignInPage(webDriver);
         }
 
     }
