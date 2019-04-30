@@ -18,8 +18,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
         }
 
-
-        [Given(@"I login as admin with (.*) and (.*)")]
+        //local login
+        [Given(@"I login via Local as admin with (.*) and (.*)")]
         public void GivenILoginWithUsernameAndPassword(string user, string pass)
         {
             HomePage homePage = new HomePage(webDriver);
@@ -29,6 +29,19 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             loginPage.EnterUsername(Configurator.GetConfiguratorInstance().GetadminUser());
             loginPage.EnterPassword(Configurator.GetConfiguratorInstance().GetadminPassword());
             loginPage.ClickLoginButton();
+        }
+
+        //dfe login
+        [Given(@"I login as admin with (.*) and (.*)")]
+        public void DfELoginWithUsernameAndPassword(string user, string pass)
+        {
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLogin();
+
+            DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
+            dfESignInPage.EnterUsername (Configurator.GetConfiguratorInstance().GetdFEUser());
+            dfESignInPage.EnterPassword(Configurator.GetConfiguratorInstance().GetdFEPassword());
+            dfESignInPage.ClickSignInButton();
         }
 
 
