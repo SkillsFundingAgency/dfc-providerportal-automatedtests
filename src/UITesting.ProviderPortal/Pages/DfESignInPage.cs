@@ -41,7 +41,7 @@ namespace UITesting.ProviderPortal.Pages
         public SearchProviderPage ClickSignInButton()
         {
             FormCompletionHelper.ClickElement(signInButton);
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(4000);
             PageInteractionHelper.WaitForPageToLoad();
             return new SearchProviderPage(webDriver);
         }

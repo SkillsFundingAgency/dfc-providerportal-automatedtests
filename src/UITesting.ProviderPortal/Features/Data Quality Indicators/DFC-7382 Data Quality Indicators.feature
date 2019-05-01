@@ -5,7 +5,7 @@
 
 Background:
 	Given I have accessed course directory as a provider
-	And I login as provider admin with sit.10033145@contractsonline.org and Test!234
+	And I login as provider admin with Provider.10033145@gmail.com and SITtesting123
 	Then I am logged in as a provider
 
 @CI
