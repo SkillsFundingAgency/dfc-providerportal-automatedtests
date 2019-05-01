@@ -44,18 +44,32 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             dfESignInPage.ClickSignInButton();
         }
 
-
-        [Given(@"I login as provider admin with (.*) and (.*)")]
+        //local login
+        [Given(@"I login via Local as provider admin with (.*) and (.*)")]
         public void GivenILoginWithProviderUsernameAndPassword(string user, string pass)
         {
             HomePage homePage = new HomePage(webDriver);
             homePage.ClickLogin();
+
             LoginPage loginPage = new LoginPage(webDriver);
             loginPage.EnterUsername(user);
             loginPage.EnterPassword(pass);
             loginPage.ClickLoginButtonProvider();
         }
 
+        //dfe login
+        [Given(@"I login as provider admin with (.*) and (.*)")]
+        public void DfELoginWithProviderUsernameAndPassword(string user, string pass)
+        {
+
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLoginDfE();
+
+            DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
+            dfESignInPage.EnterUsername(user);
+            dfESignInPage.EnterPassword(pass);
+            dfESignInPage.ClickSignInButtonProvider();
+        }
 
         [Then(@"I am logged in")]
         public void ThenIAmLoggedIn()
