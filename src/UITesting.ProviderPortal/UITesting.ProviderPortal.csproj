@@ -156,6 +156,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-8152-NonRegSearchforCourseProvision.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\COUR-11 Delete Venue.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-11 Delete Venue.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -237,6 +242,7 @@
     <Compile Include="Pages\DfESignInPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\Qualification Management\UnRegulatedCoursesResultsPage.cs" />
+    <Compile Include="Pages\Venue Management\DeleteVenuePage.cs" />
     <Compile Include="Pages\Venue Management\EditVenueConfirmAddressPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderSearchUKRLPPage.cs" />
     <Compile Include="Pages\Venue Management\AddVenueEditAddressPage.cs" />
@@ -275,6 +281,7 @@
     <Compile Include="StepDefinitions\Qualification Management\NonRegSSASteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\RegulatedQualificationsSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\DeleteVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EnterAddressManuallySteps.cs" />
@@ -423,6 +430,10 @@
     <None Include="Features\Qualification Management\DFC-8152-NonRegSearchforCourseProvision.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-8152-NonRegSearchforCourseProvision.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\COUR-11 Delete Venue.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-11 Delete Venue.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
