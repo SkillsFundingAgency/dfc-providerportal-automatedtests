@@ -20,7 +20,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By AddressLineValidationMsg = By.XPath("//*[@id='AddressLine1-error']");
         private By TownOrCityValidationMsg = By.XPath("//*[@id='TownOrCity-error']");
         private By PostcodeValidationMsg = By.XPath("//*[@id='Postcode-error']");
-        private By ClickContinueButton = By.XPath("//*[@id='main-content']/form/div[7]/button");
+        /*private By ClickContinueButton = By.XPath("//*[@id='main-content']/form/div[7]/button");*/
+        private By ClickContinueButton = By.XPath("/html/body/div[4]/form/div[7]/button");
         private static String PAGE_TITLE = "Add venue";
 
 

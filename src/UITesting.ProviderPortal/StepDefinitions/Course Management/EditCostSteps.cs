@@ -8,6 +8,7 @@ using UITesting.ProviderPortal.Pages.Course_Management;
 namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
 {
     [Binding]
+    
     public class EditCostSteps : BaseTest
     {
         [Given(@"I have logged to course directory")]

@@ -44,6 +44,8 @@ namespace UITesting.Framework.Helpers
             element.SendKeys(value.ToString());
         }
 
+       
+
         public static void EnterTextWithoutClearing(By locator, String text)
         {
             webDriver.FindElement(locator).SendKeys(text);

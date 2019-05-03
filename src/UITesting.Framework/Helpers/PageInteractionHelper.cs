@@ -41,6 +41,26 @@ namespace UITesting.Framework.Helpers
                 + "\n Found: " + actual + " page");
         }
 
+        public static Boolean VerifyTableData(By locator, String strVenueName)
+        {
+            IList<IWebElement> cols = webDriver.FindElements(locator);
+
+            foreach (var col in cols)
+            {
+                if (col.Text ==strVenueName)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+            throw new Exception("Venue not found");
+        }
+
+        
         public static Boolean VerifyPageHeading(By locator, String expected)
         {
 			//km String actual = webDriver.FindElement(locator).Text;

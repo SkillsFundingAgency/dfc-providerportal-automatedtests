@@ -18,6 +18,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             //SelfVerify();
         }
 
+
+
         protected override bool SelfVerify()
         {
             throw new NotImplementedException();
