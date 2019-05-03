@@ -18,16 +18,22 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
             if (deleteVenuePage.CheckVenuePresent(strVenueName)==false)
             {
+                ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+                viewAllLiveVenuesPage.ClickAddVenueButton();
                 AddVenuePage addVenuePage = new AddVenuePage(webDriver);
-                addVenuePage.EnterVenueName(strVenueName);
-                addVenuePage.EnterPostCode("CV1 2WT");
-                addVenuePage.ClickFindAddress();
-                AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
-                addVenueSelectAddressPage.selectAddress(;
+                addVenuePage.ClickEnterAddressManuallyLink();
+                AddVenueManualAddressPage addVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
+                addVenueManualAddressPage.AddVenueName(strVenueName);
+                addVenueManualAddressPage.AddAddressLine1("Line 1 Del Venue");
+                addVenueManualAddressPage.AddTownCity("Del Venue City");
+                addVenueManualAddressPage.AddPostCode("CV1 2WT");
+                addVenueManualAddressPage.ClickContinue();
+                AddVenueConfirmAddressPage addVenueConfirmAddressPage = new AddVenueConfirmAddressPage(webDriver);
+                addVenueConfirmAddressPage.ClickContinue();
             }
-
+            deleteVenuePage.CheckVenuePresent(strVenueName);
         }
-        
+
         [Given(@"I have clicked the delete link")]
         public void GivenIHaveClickedTheDeleteLink()
         {
