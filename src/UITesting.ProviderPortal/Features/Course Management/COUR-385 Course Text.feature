@@ -12,7 +12,7 @@ Scenario Outline: Create a course with exemplar content
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have accessed the Qualifications page	
-	And I have entered a Qualification Name <qualname>
+	And I have entered a Qualification Name from the list  <qualname>
 	And I click the link to Add Qualification
 	Given I have specified who the course is for testing testing testing...
 	When I click Next Button

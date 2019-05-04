@@ -55,7 +55,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Qualification_Management
             SearchforQualificationPage.EnterLARS_QANNumber(QualName);
         }
 
-        [Given(@"I have entered a Qualification Name (.*)")]
+        [Given(@"I have entered a Qualification Name from the list (.*)")]
         public void GivenIHaveEnteredAQualificationName2(string QualName)
         {
             SearchforQualificationPage SearchforQualificationPage = new SearchforQualificationPage(webDriver);
