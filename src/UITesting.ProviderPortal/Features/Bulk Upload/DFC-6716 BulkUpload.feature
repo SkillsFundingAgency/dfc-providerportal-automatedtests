@@ -138,7 +138,8 @@ Scenario: DFC-7225 Bulk Upload Save Course Run Edit
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
 	When I click fix against the first Course Run i want edit and save
-	And I edit bulk upload course cost 9
+	Given I have changed the course venue to dudley 2
+	When I edit bulk upload course cost 9
 	And I click to Save the Course Run details
 	Then I am on the Fix and publish bulk upload page
 
@@ -166,6 +167,7 @@ Scenario: DFC-6736 Bulk Upload Edit uploaded Course Run
 	Then I am on the Fix and publish bulk upload page
 	When I click fix against the first Course Run i want edit and save
 	And I edit bulk upload course name Test Course 100
-	And I edit bulk upload course cost 9
+	Given I have changed the course venue to dudley 2
+	When I edit bulk upload course cost 9
 	And I click to Save the Course Run details
 	Then I am on the Fix and publish bulk upload page

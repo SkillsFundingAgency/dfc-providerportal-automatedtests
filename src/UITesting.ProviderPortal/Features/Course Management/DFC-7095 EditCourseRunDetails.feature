@@ -34,7 +34,7 @@ Scenario: Edit course run with valid defined start date when Classroom mode is s
 	Given I have accessed the selected course run data
 	And I have selected "Online" as delivery mode
 	And I have selected Start Date "Defined Start Date"
-	And I have entered "25" in Day, "09" in Month and "2019" in Year
+	And I have entered "25" in Day, "04" in Month and "2021" in Year
 	#And I have selected "Weekend" in Attendance
 	#And I have selected "Part-Time" in attendance pattern 
 	When I  Save the data
@@ -67,7 +67,7 @@ Scenario: Edit course run by selecting classrroom mode and a venue is selected
 	Given I have accessed the selected course run data
 	And I have selected "Classroom" as delivery mode
 	And I have selected Start Date "Defined Start Date"
-	And I have entered "25" in Day, "09" in Month and "2019" in Year
+	And I have entered "25" in Day, "04" in Month and "2021" in Year
 	And I have entered selected a venue from the dropdown
 	When I  Save the data
 	Then the course run should be saved and the changed course run link should be visible
