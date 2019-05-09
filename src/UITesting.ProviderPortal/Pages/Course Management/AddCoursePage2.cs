@@ -62,8 +62,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By firstRegion = By.XPath(".//*[@id='SelectRegionCheckBoxes']/details[1]/summary");
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
+        private By nationalTrue = By.Id("National_true");
+        private By nationalFalse = By.Id("National_false");
+        private By nationalError = By.XPath(".//*[@id='sectionRegions']/div/div/div[1]/fieldset/span");   
 
-        //variables
+        //variable
         private string errortxt;
 
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
@@ -213,6 +216,17 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseNameError);
                     PageInteractionHelper.IsElementDisplayed(courseNameError);
                     errortxt = webDriver.FindElement(courseNameError).GetAttribute("innerText");
+                    if (errorMsg != errortxt)
+                    {
+                        throw new Exception("Incorrect Error message displayed");
+                    }
+                    return new AddCoursePage2(webDriver);
+
+
+                case "National Check":
+                    PageInteractionHelper.WaitForElementToBePresent(nationalError);
+                    PageInteractionHelper.IsElementDisplayed(nationalError);
+                    errortxt = webDriver.FindElement(nationalError).GetAttribute("innerText");
                     if (errorMsg != errortxt)
                     {
                         throw new Exception("Incorrect Error message displayed");
@@ -514,6 +528,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new AddCoursePage2(webDriver);
         }
 
+
+        public AddCoursePage2 clickNationalTrue()
+        {
+            FormCompletionHelper.ClickElement(nationalTrue);
+            return new AddCoursePage2(webDriver);
+        }
+
+
+        public AddCoursePage2 clickNationalFalse()
+        {
+            FormCompletionHelper.ClickElement(nationalFalse);
+            return new AddCoursePage2(webDriver);
+        }
 
         public AddCoursePage2 verifyFlexibleStartDateSelected()
         {
