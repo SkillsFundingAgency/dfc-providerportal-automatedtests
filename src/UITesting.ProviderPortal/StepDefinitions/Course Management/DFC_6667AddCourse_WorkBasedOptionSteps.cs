@@ -19,6 +19,21 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.clickWorkBasedRadioButton();
         }
 
+        [When(@"I click on No to National coverage")]
+        public void NationalCoverageFalse()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.clickNationalFalse();
+        }
+
+
+        [When(@"I click on Yes to National coverage")]
+        public void NationalCoverageTrue()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.clickNationalTrue();
+        }
+
         [Then(@"the flexible start date option is selected")]
         public void ThenTheFlexibleStartDateOptionIsSelected()
         {
