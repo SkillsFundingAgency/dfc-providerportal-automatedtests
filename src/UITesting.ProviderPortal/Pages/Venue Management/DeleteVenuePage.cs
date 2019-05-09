@@ -32,6 +32,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         internal Boolean  CheckVenuePresent(string strVenueName)
         {
+
             if (PageInteractionHelper.VerifyTableData(VenueNameColumn, strVenueName)== true)
             {
                 return true;
@@ -42,7 +43,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             }
         }
 
-        internal void ClickDeleteLink()
+        internal void ClickDeleteLink(string strVenueName)
         {
             FormCompletionHelper.ClickElement(DeleteLink);
         }

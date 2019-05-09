@@ -44,12 +44,12 @@ namespace UITesting.Framework.Helpers
         public static Boolean VerifyTableData(By locator, String strVenueName)
         {
             IList<IWebElement> cols = webDriver.FindElements(locator);
-
+            
             foreach (var col in cols)
             {
                 if (col.Text ==strVenueName)
                 {
-                    return true;
+                    return true;                    
                 }
                 else
                 {

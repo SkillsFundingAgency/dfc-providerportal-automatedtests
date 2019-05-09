@@ -7,16 +7,17 @@ using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
+
 namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
 {
     [Binding]
-    public class DeleteVenueSteps : BaseTest 
+    public class DeleteVenueSteps : BaseTest
     {
-        [Given(@"I have clicked the delete link for Venue ""(.*)""")]
-        public void GivenIHaveClickedTheDeleteLinkForVenue(string strVenueName)
+        [Given(@"I have searched for ""(.*)""")]
+        public void GivenIHaveSearchedFor(string strVenueName)
         {
             DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            if (deleteVenuePage.CheckVenuePresent(strVenueName)==false)
+            if (deleteVenuePage.CheckVenuePresent(strVenueName) == false)
             {
                 ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
                 viewAllLiveVenuesPage.ClickAddVenueButton();
@@ -33,26 +34,24 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             }
             deleteVenuePage.CheckVenuePresent(strVenueName);
         }
-
-        [Given(@"I have clicked the delete link")]
-        public void GivenIHaveClickedTheDeleteLink()
+        
+        [Given(@"clicked the delete link for ""(.*)""")]
+        public void GivenClickedTheDeleteLinkFor(string strVenueName)
         {
             DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.ClickDeleteLink();
+            deleteVenuePage.ClickDeleteLink(strVenueName);
         }
         
-        [Given(@"I have clicked the cancel link")]
-        public void GivenIHaveClickedTheCancelLink()
+        [Given(@"I have clicked the cancel link for ""(.*)""")]
+        public void GivenIHaveClickedTheCancelLinkFor(string p0)
         {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.ClickCancelLink();
+            ScenarioContext.Current.Pending();
         }
         
         [When(@"I have clicked the confirm delete button")]
         public void WhenIHaveClickedTheConfirmDeleteButton()
         {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.ClickConfirmDelete();
+            ScenarioContext.Current.Pending();
         }
         
         [Then(@"I should be able to see a Edit and Delete Link")]
@@ -65,57 +64,37 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Then(@"I should be able to see a confirm delete button and a cancel link")]
         public void ThenIShouldBeAbleToSeeAConfirmDeleteButtonAndACancelLink()
         {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.ValidateConfirmDeleteandCancelLink();
+            ScenarioContext.Current.Pending();
         }
         
         [Then(@"Venue ""(.*)"" should not be deleted")]
-        public void ThenVenueShouldNotBeDeleted(string strVenueName)
-        {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.CheckVenuePresent(strVenueName);
-        }
-
-        [Then(@"the venue should be deleted ""(.*)""")]
-        public void ThenTheVenueShouldBeDeleted(string strVenueName)
-        {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.CheckVenueNotPresent(strVenueName);
-        }
-
-       /* [Then(@"the venue should be deleted")]
-        public void ThenTheVenueShouldBeDeleted()
-        {
-            
-        }*/
-        
-        [Then(@"a message should be displayed ""(.*)""")]
-        public void ThenAMessageShouldBeDisplayed(string strMsg)
-        {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.ValidateMessage(strMsg);
-        }
-        [Then(@"a delete message should be displayed ""(.*)""")]
-        public void ThenADeleteMessageShouldBeDisplayed(string strMsg)
-        {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.ValidateDeleteMessage(strMsg);
-        }
-        [Then(@"a delete message should be displayed ""(.*)""")]
-        
-
-        [Then(@"the venue ""(.*)"" should not be deleted")]
-        public void ThenTheVenueShouldNotBeDeleted(string strVenueName)
-        {
-            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
-            deleteVenuePage.CheckVenuePresent(strVenueName);
-        }
-
-
-       /* [Then(@"the venue should not be deleted")]
-        public void ThenTheVenueShouldNotBeDeleted()
+        public void ThenVenueShouldNotBeDeleted(string p0)
         {
             ScenarioContext.Current.Pending();
-        }*/
+        }
+        
+        [Then(@"the venue should be deleted ""(.*)""")]
+        public void ThenTheVenueShouldBeDeleted(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"a delete message should be displayed ""(.*)""")]
+        public void ThenADeleteMessageShouldBeDisplayed(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"the venue ""(.*)"" should not be deleted")]
+        public void ThenTheVenueShouldNotBeDeleted(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"a message should be displayed ""(.*)""")]
+        public void ThenAMessageShouldBeDisplayed(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
     }
 }
