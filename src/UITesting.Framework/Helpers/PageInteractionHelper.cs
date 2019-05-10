@@ -49,7 +49,8 @@ namespace UITesting.Framework.Helpers
             for (int i = 0;i<=rowSize; i++)
             {
                 if (cols[i].Text.Contains(strVenueName))
-                {                    
+                {
+                    
                     return true;                    
                 }
             }
@@ -60,13 +61,15 @@ namespace UITesting.Framework.Helpers
         public static String GetID(By locator, String text, By locatorTable)
         {
             IList<IWebElement> cols = webDriver.FindElements(locatorTable);
-
+          
             int rowSize = cols.Count;
             //foreach (var col in cols)
             for (int i = 0; i <= rowSize; i++)
             { 
                 if (cols[i].Text.Contains(text))
                 {
+                    //
+                    
                     return webDriver.FindElement(locator).GetAttribute("id"); 
                 }              
             }

@@ -22,6 +22,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         //private By VenueTable = By.XPath("//*[@id='live']/table/thead/tr/th[1]");
         private By VenueNameColumn = By.ClassName("govuk-table__cell");
 
+        
         public DeleteVenuePage(IWebDriver webDriver ): base(webDriver)
         {
             SelfVerify();
