@@ -32,7 +32,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
                 AddVenueConfirmAddressPage addVenueConfirmAddressPage = new AddVenueConfirmAddressPage(webDriver);
                 addVenueConfirmAddressPage.ClickContinue();
             }
-            deleteVenuePage.CheckVenuePresent(strVenueName);
+           // deleteVenuePage.CheckVenuePresent(strVenueName);
         }
         
         [Given(@"clicked the delete link for ""(.*)""")]

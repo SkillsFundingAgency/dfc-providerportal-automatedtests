@@ -13,6 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     {
         private static String PAGE_TITLE = "Your Venues";
         private By DeleteLink = By.LinkText("Delete");
+        private By DeleteId = By.CssSelector("a[class='govuk-link delete']");
         private By CancelLink = By.LinkText("Cancel");
         private By EditLink = By.LinkText("Edit");
         private By ConfirmDelete = By.LinkText("Confirm delete");
@@ -21,6 +22,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         //private By VenueTable = By.XPath("//*[@id='live']/table/thead/tr/th[1]");
         private By VenueNameColumn = By.ClassName("govuk-table__cell");
 
+        
         public DeleteVenuePage(IWebDriver webDriver ): base(webDriver)
         {
             SelfVerify();
@@ -29,10 +31,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
-
         internal Boolean  CheckVenuePresent(string strVenueName)
         {
-
             if (PageInteractionHelper.VerifyTableData(VenueNameColumn, strVenueName)== true)
             {
                 return true;
@@ -42,17 +42,15 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
                 return false;
             }
         }
-
         internal void ClickDeleteLink(string strVenueName)
         {
-            FormCompletionHelper.ClickElement(DeleteLink);
+            
+            FormCompletionHelper.ClickElement(By.Id(FormCompletionHelper.GetID(DeleteId, strVenueName, VenueNameColumn)));
         }
-
         internal void ClickCancelLink()
         {
             FormCompletionHelper.ClickElement(CancelLink);
         }
-
         internal void ClickConfirmDelete()
         {
             FormCompletionHelper.ClickElement(ConfirmDelete);

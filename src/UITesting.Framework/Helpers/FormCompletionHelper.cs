@@ -94,6 +94,8 @@ namespace UITesting.Framework.Helpers
             }
         }
 
+        
+
         public static void SelectFromDropDownList(IList<IWebElement> list, String text, By locator)
         {
                 String[] allText = new String[list.Count];
