@@ -94,7 +94,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Missing LARS
 
 @CI
 Scenario: DFC-7224 Bulk Upload Cancel Course Edit
-	Given I have searched for UKPRN "10036790" and clicked search
+	Given I have searched for UKPRN "10036354" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_CancelTest.csv to upload
@@ -106,7 +106,7 @@ Scenario: DFC-7224 Bulk Upload Cancel Course Edit
 
 @CI
 Scenario: DFC-7224 Bulk Upload Cancel Course Run Edit
-	Given I have searched for UKPRN "10036790" and clicked search
+	Given I have searched for UKPRN "10036354" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_CancelTest.csv to upload

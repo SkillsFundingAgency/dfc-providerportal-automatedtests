@@ -11,7 +11,7 @@ namespace UITesting.ProviderPortal.Pages
     {
         private static String PAGE_TITLE = "Welcome to the Course Directory";
         private By loginLink = By.LinkText("Login");
-
+        private By signIn = By.XPath(".//*[@id='form-signin']/div[2]/button"); 
 
         public HomePage(IWebDriver webDriver) : base(webDriver)
         {
@@ -40,8 +40,9 @@ namespace UITesting.ProviderPortal.Pages
         {
             PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(loginLink);
-            System.Threading.Thread.Sleep(3000);
+          //  System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(signIn, 20);
             return new DfESignInPage(webDriver);
         }
 

@@ -24,6 +24,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         protected override bool SelfVerify()
         {
             PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(SearchButton, 20);
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -50,7 +51,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         public ViewYourCoursesPage ClickViewCoursesButton()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(ViewCoursesButton, 10);
+            webDriver.FindElementWait(ViewCoursesButton, 20);
             FormCompletionHelper.ClickElement(ViewCoursesButton);
             PageInteractionHelper.WaitForPageToLoad();
             return new ViewYourCoursesPage(webDriver);
