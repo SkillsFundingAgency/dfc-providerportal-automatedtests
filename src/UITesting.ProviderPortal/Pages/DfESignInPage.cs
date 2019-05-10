@@ -14,7 +14,8 @@ namespace UITesting.ProviderPortal.Pages
         private By usernameField = By.Id("username");
         private By passwordField = By.Id("password");
         private By signInButton = By.ClassName("button");
-
+        private By SearchField = By.Id("SearchTerm");
+        private By DQIUpdateStartDateLink = By.PartialLinkText("courses need their start date updating");
 
         public DfESignInPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -42,16 +43,17 @@ namespace UITesting.ProviderPortal.Pages
         public SearchProviderPage ClickSignInButton()
         {
             FormCompletionHelper.ClickElement(signInButton);
-            System.Threading.Thread.Sleep(4000);
             PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(SearchField, 20);
             return new SearchProviderPage(webDriver);
         }
 
         public DQIDashbordPage ClickSignInButtonProvider()
         {
             FormCompletionHelper.ClickElement(signInButton);
-            System.Threading.Thread.Sleep(4000);
+            //System.Threading.Thread.Sleep(4000);
             PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(DQIUpdateStartDateLink, 20);
             return new DQIDashbordPage(webDriver);
         }
 

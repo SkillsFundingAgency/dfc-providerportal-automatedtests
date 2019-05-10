@@ -88,7 +88,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By verifyModeTitle = By.XPath("//*[starts-with(@id, 'course-run')]/div/div[12]/label");
 
         /*Search Your Courses tests*/
-        private By SearchText = By.Id("search");
+        private By SearchText = By.Id("Search");
         private By SearchErrMessage = By.XPath("//*[@id='results']/div/div/div/p");
 
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
