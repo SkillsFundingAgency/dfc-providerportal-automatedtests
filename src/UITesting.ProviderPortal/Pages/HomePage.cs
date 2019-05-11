@@ -30,7 +30,7 @@ namespace UITesting.ProviderPortal.Pages
         {
             PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(loginLink);
-            System.Threading.Thread.Sleep(3000);
+            //System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
             return new LoginPage(webDriver);
         }
@@ -42,7 +42,7 @@ namespace UITesting.ProviderPortal.Pages
             FormCompletionHelper.ClickElement(loginLink);
           //  System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(signIn, 20);
+            webDriver.FindElementWait(signIn, 60);
             return new DfESignInPage(webDriver);
         }
 

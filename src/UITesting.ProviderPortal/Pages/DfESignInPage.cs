@@ -44,7 +44,7 @@ namespace UITesting.ProviderPortal.Pages
         {
             FormCompletionHelper.ClickElement(signInButton);
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(SearchField, 20);
+            webDriver.FindElementWait(SearchField, 60);
             return new SearchProviderPage(webDriver);
         }
 
@@ -53,7 +53,7 @@ namespace UITesting.ProviderPortal.Pages
             FormCompletionHelper.ClickElement(signInButton);
             //System.Threading.Thread.Sleep(4000);
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(DQIUpdateStartDateLink, 20);
+            webDriver.FindElementWait(DQIUpdateStartDateLink, 60);
             return new DQIDashbordPage(webDriver);
         }
 

@@ -17,9 +17,9 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
             viewYourCoursesPage.clickChevron();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             viewYourCoursesPage.clickInnerChevron();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
 
 
 

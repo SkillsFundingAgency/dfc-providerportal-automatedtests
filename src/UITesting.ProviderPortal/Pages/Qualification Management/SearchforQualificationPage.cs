@@ -90,10 +90,6 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         {
             PageInteractionHelper.WaitForPageToLoad();
             webDriver.FindElementWait(ClearFilters, 10);
-            //if (!FormCompletionHelper.IsElementDisplayed(ClearFilters))
-            //{
-            //    Thread.Sleep(3000);
-            //}
             FormCompletionHelper.ClickElement(ClearFilters);
         }
 
@@ -111,7 +107,8 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         {
             if (webDriver.GetType().Name.ToString().Contains("RemoteWebDriver"))
             {
-                Thread.Sleep(3000);
+                //Thread.Sleep(3000);
+                webDriver.FindElementWait(FirstFilter, 60);
                 var element = this.webDriver.FindElement(FirstFilter);
                 ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
             }

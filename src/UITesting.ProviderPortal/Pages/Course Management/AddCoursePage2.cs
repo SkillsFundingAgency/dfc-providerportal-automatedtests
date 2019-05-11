@@ -77,6 +77,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public AddCoursePage2 clickOnline()
         {
             FormCompletionHelper.ClickElement(selectOnline);
+            PageInteractionHelper.WaitForPageToLoad();
             return new AddCoursePage2(webDriver);
         }
 
@@ -498,8 +499,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             if (webDriver.GetType().Name.ToString().Contains("RemoteWebDriver"))
             {
-                System.Threading.Thread.Sleep(1000);
+                //System.Threading.Thread.Sleep(1000);
                 PageInteractionHelper.WaitForPageToLoad();
+                webDriver.FindElementWait(FirstVenue, 60);
                 var element = this.webDriver.FindElement(FirstVenue);
                 ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
                 PageInteractionHelper.WaitForPageToLoad();

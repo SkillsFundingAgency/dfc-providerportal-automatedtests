@@ -27,7 +27,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
             addCoursePage2.clickOnline();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
         }
 
         [Then(@"I should see Select Venue option")]

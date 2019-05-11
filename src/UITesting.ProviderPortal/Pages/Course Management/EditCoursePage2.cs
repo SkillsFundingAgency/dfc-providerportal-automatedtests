@@ -490,7 +490,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         {
             if (webDriver.GetType().Name.ToString().Contains("RemoteWebDriver"))
             {
-                System.Threading.Thread.Sleep(1000);
+                //System.Threading.Thread.Sleep(1000);
+                PageInteractionHelper.WaitForPageToLoad();
+                webDriver.FindElementWait(FirstVenue, 60);
                 var element = this.webDriver.FindElement(FirstVenue);
                 ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
             }
