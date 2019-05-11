@@ -48,5 +48,13 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
             ViewAllLiveVenuesPage.VenueEdited(venueName);
         }
+
+        [When(@"I delete the following venue (.*)")]
+        public void CountVenues(string venue)
+        {
+            ViewAllLiveVenuesPage ViewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+            ViewAllLiveVenuesPage.DeleteVenue(venue);
+        }
+
     }
 }

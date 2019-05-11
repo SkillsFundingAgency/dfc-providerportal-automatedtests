@@ -100,12 +100,60 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             FormCompletionHelper.VerifyText(firstVenue, venueName);
         }
 
+        internal void DeleteVenue(string venue)
+        {
+            IWebElement venTable = webDriver.FindElement(By.XPath("//*[@id='live']/table"));
+            IList<IWebElement> tableRows = venTable.FindElements(By.TagName("tr")).ToList();
 
-        /* protected override bool SelfVerify()
-         {
-            //return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
-             //
-            // return PageInteractionHelper.VerifyPageTitle(By.XPath("//*[@id='main - content']/div/div[1]/div/div/h1")),PAGE_TITLE)
-         }*/
-    }
+            for (int i = 0; i < tableRows.Count; i++)
+            {
+                IList<IWebElement> tdCollection = tableRows[i].FindElements(By.TagName("td"));
+                var count = 0;
+
+                for (int c = 0; c < tdCollection.Count; c++)
+                {
+                    string column = tdCollection[c].Text;
+                    
+                    if (column == venue)
+                    {
+                        tableRows[i].FindElement(By.PartialLinkText("Delet")).Click();
+                        System.Threading.Thread.Sleep(1000);
+                        tableRows[i].FindElement(By.XPath(".//*[starts-with(@id,'venue-delete')]")).Click();  
+
+                        try
+                        {
+                            tableRows[i].FindElement(By.XPath(".//*[starts-with(@id,'venue-delete')]")).Click();
+                            PageInteractionHelper.WaitForPageToLoad();
+                            count = 1;
+                            break;
+                        }
+                        catch (StaleElementReferenceException)
+                        {
+                            count = 1;
+                            webDriver.Navigate().Refresh();
+                            break;
+                        }
+                        finally
+                        {
+                            Console.WriteLine("COLUMN TEXT = " + column);
+                        }
+                    }
+                }
+                if (count == 1)
+                {
+                    break;
+                }
+            }
+
+        }
+
+
+
+    /* protected override bool SelfVerify()
+     {
+        //return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
+         //
+        // return PageInteractionHelper.VerifyPageTitle(By.XPath("//*[@id='main - content']/div/div[1]/div/div/h1")),PAGE_TITLE)
+     }*/
+}
 }
