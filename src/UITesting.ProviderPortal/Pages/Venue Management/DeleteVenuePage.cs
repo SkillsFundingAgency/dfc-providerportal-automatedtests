@@ -12,14 +12,13 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     public class DeleteVenuePage : BasePage
     {
         private static String PAGE_TITLE = "Your Venues";
-        private By DeleteLink = By.LinkText("Delete");
-        private By DeleteId = By.CssSelector("a[class='govuk-link delete']");
-        private By CancelLink = By.LinkText("Cancel");
+        private By DeleteLink = By.PartialLinkText("Delet");
+        private By CancelLink = By.PartialLinkText("Cance");
         private By EditLink = By.LinkText("Edit");
-        private By ConfirmDelete = By.LinkText("Confirm delete");
+        private By ConfirmDelete = By.XPath(".//*[starts-with(@id,'venue-delete')]");
         private By CourseMessage = By.XPath("//*[@id='LiveCoursesExistMessage']/div/div/p");
         private By DeleteMessage = By.XPath("//*[@id='venueSearchResultForm']/div[1]/div/p");
-        //private By VenueTable = By.XPath("//*[@id='live']/table/thead/tr/th[1]");
+        private By VenueTable = By.XPath("//*[@id='live']/table");
         private By VenueNameColumn = By.ClassName("govuk-table__cell");
 
         
@@ -33,20 +32,109 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         }
         internal Boolean  CheckVenuePresent(string strVenueName)
         {
-            if (PageInteractionHelper.VerifyTableData(VenueNameColumn, strVenueName)== true)
+            IWebElement venTable = webDriver.FindElement(VenueTable);
+            IList<IWebElement> tableRows = venTable.FindElements(By.TagName("tr")).ToList();
+            for (int i = 0; i < tableRows.Count; i++)
             {
-                return true;
+                IList<IWebElement> tdCollection = tableRows[i].FindElements(By.TagName("td"));
+                //var count = 0;
+                for (int c = 0; c < tdCollection.Count; c++)
+                {
+                    string column = tdCollection[c].Text;
+                    if (column == strVenueName)
+                    {
+                        return true;
+                    }
+                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
+            //throw new Exception("Venue does not exists:" + strVenueName);
         }
         internal void ClickDeleteLink(string strVenueName)
         {
-            
-            FormCompletionHelper.ClickElement(By.Id(FormCompletionHelper.GetID(DeleteId, strVenueName, VenueNameColumn)));
+            IWebElement venTable = webDriver.FindElement(VenueTable);
+            IList<IWebElement> tableRows = venTable.FindElements(By.TagName("tr")).ToList();
+            for (int i = 0; i < tableRows.Count; i++)
+                {
+                    IList<IWebElement> tdCollection = tableRows[i].FindElements(By.TagName("td"));
+                //var count = 0;
+                    for (int c = 0; c < tdCollection.Count; c++)
+                    {
+                        string column = tdCollection[c].Text;
+                        if (column == strVenueName)
+                        {
+                            tableRows[i].FindElement(By.PartialLinkText("Delet")).Click();
+                            //System.Threading.Thread.Sleep(1000);
+                        }
+                    }
+                }
         }
+        internal void ClickCancelLink(string strVenueName)
+        {
+            IWebElement venTable = webDriver.FindElement(VenueTable);
+            IList<IWebElement> tableRows = venTable.FindElements(By.TagName("tr")).ToList();
+            for (int i = 0; i < tableRows.Count; i++)
+            {
+                IList<IWebElement> tdCollection = tableRows[i].FindElements(By.TagName("td"));
+                //var count = 0;
+                for (int c = 0; c < tdCollection.Count; c++)
+                {
+                    string column = tdCollection[c].Text;
+                    if (column == strVenueName)
+                    {
+                        //tableRows[i].FindElement(DeleteLink).Click();
+                        tableRows[i].FindElement(CancelLink).Click();
+                        //System.Threading.Thread.Sleep(1000);
+                    }
+                }
+            }
+        }
+        internal void DeleteVenue(string strVenueName)
+        {
+
+            IWebElement venTable = webDriver.FindElement(VenueTable);
+            IList<IWebElement> tableRows = venTable.FindElements(By.TagName("tr")).ToList();
+
+            for (int i = 0; i < tableRows.Count; i++)
+            {
+                IList<IWebElement> tdCollection = tableRows[i].FindElements(By.TagName("td"));
+                var count = 0;
+
+                for (int c = 0; c < tdCollection.Count; c++)
+                {
+                    string column = tdCollection[c].Text;
+
+                    if (column == strVenueName)
+                    {
+                       // tableRows[i].FindElement(DeleteLink).Click();
+                        System.Threading.Thread.Sleep(1000);
+                        tableRows[i].FindElement(ConfirmDelete).Click();
+
+                        try
+                        {
+                            tableRows[i].FindElement(ConfirmDelete).Click();
+                            PageInteractionHelper.WaitForPageToLoad();
+                            count = 1;
+                            break;
+                        }
+                        catch (StaleElementReferenceException)
+                        {
+                            count = 1;
+                            webDriver.Navigate().Refresh();
+                            break;
+                        }
+                        finally
+                        {
+                            Console.WriteLine("COLUMN TEXT = " + column);
+                        }
+                    }
+                }
+                if (count == 1)
+                {
+                    break;
+                }
+            }
+        }        
         internal void ClickCancelLink()
         {
             FormCompletionHelper.ClickElement(CancelLink);
@@ -68,9 +156,25 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             FormCompletionHelper.IsElementPresent(CancelLink);
         }
 
-        internal void CheckVenueNotPresent(object strVenueName)
+        internal Boolean CheckVenueNotPresent(string strVenueName)
         {
-            throw new NotImplementedException();
+            IWebElement venTable = webDriver.FindElement(VenueTable);
+            IList<IWebElement> tableRows = venTable.FindElements(By.TagName("tr")).ToList();
+            for (int i = 0; i < tableRows.Count; i++)
+            {
+                IList<IWebElement> tdCollection = tableRows[i].FindElements(By.TagName("td"));
+                //var count = 0;
+                for (int c = 0; c < tdCollection.Count; c++)
+                {
+                    string column = tdCollection[c].Text;
+                    if (column != strVenueName)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+            throw new Exception("Venue still exists:" + strVenueName);
         }
 
         internal void ValidateMessage(string strMsg)

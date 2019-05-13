@@ -157,7 +157,7 @@ this.FeatureBackground();
 #line 30
  testRunner.Then("I should be able to see a confirm delete button and a cancel link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 31
- testRunner.When("I have clicked the confirm delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I have clicked the confirm delete button for \"TestDeleteVenueNoCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
  testRunner.Then("the venue should be deleted \"TestDeleteVenueNoCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 33
@@ -182,14 +182,12 @@ this.FeatureBackground();
 #line 36
  testRunner.Given("I have searched for \"TestDeleteVenueWithCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 37
- testRunner.And("clicked the delete link for \"TestDeleteVenueWithCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("there is a course associated with the venue \"TestDeleteVenueWithCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
- testRunner.Then("I should be able to see a confirm delete button and a cancel link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
- testRunner.When("I have clicked the confirm delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
- testRunner.Then("the venue \"TestDeleteVenueWithCourse\" should not be deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("clicked the delete link for \"TestDeleteVenueWithCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
+ testRunner.Then("the venue \"TestDeleteVenueWithCourse\" should not be deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
  testRunner.And("a message should be displayed \"There are live courses associated with this venue." +
                     " Please delete these courses or assign a different venue to the courses before d" +
                     "eleting the venue\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

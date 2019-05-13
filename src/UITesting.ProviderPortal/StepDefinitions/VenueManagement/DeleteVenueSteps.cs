@@ -3,6 +3,7 @@ using System.IO;
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.Pages.Venue_Management;
 using UITesting.ProviderPortal.Pages;
+using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
@@ -43,15 +44,17 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         }
         
         [Given(@"I have clicked the cancel link for ""(.*)""")]
-        public void GivenIHaveClickedTheCancelLinkFor(string p0)
+        public void GivenIHaveClickedTheCancelLinkFor(string strVenueName)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.ClickCancelLink(strVenueName);
         }
-        
-        [When(@"I have clicked the confirm delete button")]
-        public void WhenIHaveClickedTheConfirmDeleteButton()
+
+        [When(@"I have clicked the confirm delete button for ""(.*)""")]
+        public void WhenIHaveClickedTheConfirmDeleteButtonFor(string strVenueName)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.DeleteVenue(strVenueName);
         }
         
         [Then(@"I should be able to see a Edit and Delete Link")]
@@ -64,37 +67,65 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Then(@"I should be able to see a confirm delete button and a cancel link")]
         public void ThenIShouldBeAbleToSeeAConfirmDeleteButtonAndACancelLink()
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.ValidateConfirmDeleteandCancelLink();
         }
         
         [Then(@"Venue ""(.*)"" should not be deleted")]
-        public void ThenVenueShouldNotBeDeleted(string p0)
+        public void ThenVenueShouldNotBeDeleted(string strVenueName)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.CheckVenuePresent(strVenueName);
         }
         
         [Then(@"the venue should be deleted ""(.*)""")]
-        public void ThenTheVenueShouldBeDeleted(string p0)
+        public void ThenTheVenueShouldBeDeleted(string strVenueName)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.CheckVenueNotPresent(strVenueName);
         }
         
         [Then(@"a delete message should be displayed ""(.*)""")]
-        public void ThenADeleteMessageShouldBeDisplayed(string p0)
+        public void ThenADeleteMessageShouldBeDisplayed(string ErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.ValidateDeleteMessage(ErrMsg);
         }
         
         [Then(@"the venue ""(.*)"" should not be deleted")]
-        public void ThenTheVenueShouldNotBeDeleted(string p0)
+        public void ThenTheVenueShouldNotBeDeleted(string strVenueName)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.CheckVenuePresent(strVenueName);
         }
         
         [Then(@"a message should be displayed ""(.*)""")]
-        public void ThenAMessageShouldBeDisplayed(string p0)
+        public void ThenAMessageShouldBeDisplayed(string ErrMsg)
         {
-            ScenarioContext.Current.Pending();
+            DeleteVenuePage deleteVenuePage = new DeleteVenuePage(webDriver);
+            deleteVenuePage.ValidateMessage(ErrMsg);
         }
+        [Given(@"there is a course associated with the venue ""(.*)""")]
+        public void GivenThereIsACourseAssociatedWithTheVenue(string strVenueName)
+        {
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "/ProviderCourses/Index";
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickSelect();
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourseRun();
+            EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetails_YC3Page.SelectDeliveryMode("Classroom");
+            editCourseRunDetails_YC3Page.SelectFlexibleStartDate();
+            editCourseRunDetails_YC3Page.SelectVenueByName(strVenueName);
+            editCourseRunDetails_YC3Page.EnterCost("2000.00");
+            editCourseRunDetails_YC3Page.EnterDuration("6");
+            editCourseRunDetails_YC3Page.SelectAttendancePattern("Full-Time");
+            editCourseRunDetails_YC3Page.SelectAttendance("Daytime");
+            editCourseRunDetails_YC3Page.SaveData();
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrlVenues();
+            ViewAllLiveVenuesPage viewAllLiveVenuesPage = new ViewAllLiveVenuesPage(webDriver);
+        }
+
+
     }
 }

@@ -18,6 +18,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By Online_DelMode = By.Id("Online");
         private static By WorkBased_DelMode = By.Id("WorkBased");
         private static By DefStartDate = By.Id("SpecifiedStartDate");
+        private static By FlexStartDate = By.Id("FlexibleStartDate");
         private static By Day = By.Id("Day");
         private static By Month = By.Id("Month");
         private static By Year = By.Id("Year");
@@ -71,6 +72,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(DefStartDate);
         }
 
+        internal void SelectFlexibleStartDate()
+        {
+            FormCompletionHelper.ClickElement(FlexStartDate);
+        }
+
         internal void SelectDeliveryMode(string strDelMode)
         {
             if (strDelMode =="Classroom")
@@ -101,6 +107,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void SelectVenue()
         {
             FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(Venue), 2);
+        }
+        
+        internal void SelectVenueByName(string text)
+        {
+            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(Venue), text);
         }
 
         internal void EnterDuration(string strDuration)

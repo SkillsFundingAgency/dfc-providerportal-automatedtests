@@ -91,6 +91,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By SearchText = By.Id("Search");
         private By SearchErrMessage = By.XPath("//*[@id='results']/div/div/div/p");
 
+        /*Select link*/
+        private By SelectLink = By.LinkText("Select");
+
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
             PageInteractionHelper.WaitForPageToLoad();
@@ -399,6 +402,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ValidateSearchErrorMessage(string errMsg)
         {
             FormCompletionHelper.VerifyText(SearchErrMessage, errMsg);
+        }
+        internal void ClickSelect()
+        {
+            FormCompletionHelper.ClickElement(SelectLink);
         }
 
     }
