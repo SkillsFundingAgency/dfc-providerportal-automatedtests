@@ -56,6 +56,11 @@
     <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
       <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
     </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-350 SearchApprenticeship.feature.cs">
+      <DependentUpon>COUR-350 SearchApprenticeship.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,6 +227,8 @@
       <DependentUpon>DFC-5794 Edit Venue - Commit Edit Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Apprenticeships\AddApprenticeshipPage.cs" />
+    <Compile Include="Pages\Apprenticeships\SearchApprenticeshipPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFilePublishedPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFixPublishPage.cs" />
@@ -265,6 +272,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile> -->
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
+    <Compile Include="StepDefinitions\Apprenticeships\ApprenticeshipSteps.cs" />
     <Compile Include="StepDefinitions\Bulk Upload\BulkUploadSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
@@ -355,6 +363,10 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-350 SearchApprenticeship.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-350 SearchApprenticeship.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
