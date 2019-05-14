@@ -60,7 +60,15 @@ namespace UITesting.ProviderPortal.StepDefinitions.Data_Quality_Indicators
         {
             EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
             editCoursePage2.ClickCancelDQI();
-        }     
+        }
+
+        [When(@"I click on the Provider name in the header")]
+        public void WhenIClickOnTheProviderNameInTheHeader()
+        {
+            DQIDashbordPage dQIDashbordPage = new DQIDashbordPage(webDriver);
+            dQIDashbordPage.NavigateToProviderDetails();
+        }
+
 
     }
 }
