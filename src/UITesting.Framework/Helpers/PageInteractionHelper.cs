@@ -58,23 +58,7 @@ namespace UITesting.Framework.Helpers
             //throw new Exception("Venue not found");
         }
        
-        public static String GetID(By locator, String text, By locatorTable)
-        {
-            IList<IWebElement> cols = webDriver.FindElements(locatorTable);
-          
-            int rowSize = cols.Count;
-            //foreach (var col in cols)
-            for (int i = 0; i <= rowSize; i++)
-            { 
-                if (cols[i].Text.Contains(text))
-                {
-                    //
-                    
-                    return webDriver.FindElement(locator).GetAttribute("id"); 
-                }              
-            }
-            throw new Exception("Venue not found");
-        }
+        
         public static Boolean VerifyPageHeading(By locator, String expected)
         {
 			//km String actual = webDriver.FindElement(locator).Text;

@@ -28,14 +28,15 @@ Scenario: Delete Venue with no course
 	Given I have searched for "TestDeleteVenueNoCourse" 
 	And clicked the delete link for "TestDeleteVenueNoCourse" 
 	Then I should be able to see a confirm delete button and a cancel link
-	When I have clicked the confirm delete button
+	When I have clicked the confirm delete button for "TestDeleteVenueNoCourse"
 	Then the venue should be deleted "TestDeleteVenueNoCourse"
 	And a delete message should be displayed "Venue TestDeleteVenueNoCourse has been deleted"
 @CI
 Scenario: Delete Venue with course associated with Venue
 	Given I have searched for "TestDeleteVenueWithCourse" 
+	And there is a course associated with the venue "TestDeleteVenueWithCourse"
 	And clicked the delete link for "TestDeleteVenueWithCourse" 
-	Then I should be able to see a confirm delete button and a cancel link
-	When I have clicked the confirm delete button
+	#Then I should be able to see a confirm delete button and a cancel link
+	#When I have clicked the confirm delete button for "TestDeleteVenueWithCourse"
 	Then the venue "TestDeleteVenueWithCourse" should not be deleted 
 	And a message should be displayed "There are live courses associated with this venue. Please delete these courses or assign a different venue to the courses before deleting the venue"
