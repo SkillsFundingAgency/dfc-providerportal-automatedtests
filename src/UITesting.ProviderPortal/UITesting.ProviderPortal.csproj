@@ -142,9 +142,14 @@
       <DependentUpon>DFC-5112-5114 AddProviderSearchUKRLP.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Provider Management\DFC-6494 Search Provider.feature.cs">
+      <DependentUpon>DFC-6494 Search Provider.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DFC-6494 Search Provider.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Provider Management\COUR-344 Provider Details.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-344 Provider Details.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature.cs">
       <AutoGen>True</AutoGen>
@@ -251,6 +256,9 @@
     <Compile Include="Pages\Data Quality Indicators\DQIDashbordPage.cs" />
     <Compile Include="Pages\Data Quality Indicators\DQIFixPublishPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\Provider Management\EditProviderDetailsPage.cs" />
+    <Compile Include="Pages\Provider Management\AddProviderDetailsPage.cs" />
+    <Compile Include="Pages\Provider Management\ProviderDetailsPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\UnKnownZCodePage.cs" />
     <Compile Include="Pages\Qualification Management\UnRegulatedCoursesPage.cs" />
@@ -293,6 +301,7 @@
     <Compile Include="StepDefinitions\Course Management\ViewURL_CostDescSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\DFC_6667AddCourse_WorkBasedOptionSteps.cs" />
     <Compile Include="StepDefinitions\Data Quality Indicators\DataQualityIndicatorsSteps.cs" />
+    <Compile Include="StepDefinitions\Provider Management\ProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\SearchProviderSteps.cs" />
     <Compile Include="StepDefinitions\Provider Management\AddProviderSearchUKRLPSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\NonRegSearchforCourseProvisionSteps.cs" />
@@ -441,6 +450,10 @@
     <None Include="Features\Provider Management\DFC-6494 Search Provider.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6494 Search Provider.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Provider Management\COUR-344 Provider Details.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-344 Provider Details.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Qualification Management\DFC-4806 Search For Qualification.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
