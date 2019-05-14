@@ -1,0 +1,86 @@
+﻿Feature: COUR-6 Add Venue-Add_Edit_CopyCourse
+	In order to Add a new Venue
+	As a provider
+	I want to be able to add venue via add course, edit course and copy course
+
+Background:
+	Given I have accessed course directory as a provider
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have searched for UKPRN "10001800" and clicked search
+	When I click to view my courses
+	 
+@CI
+Scenario: Add a Venue when adding a new course
+	Given I have accessed the Regulated Qualifications page
+	When I select the Regulated Option
+	And I click Next
+	Then Lars Search page should be displayed
+	Given I have entered a Qualification Name "Chemistry"
+	And I click the link to Add Qualification
+	Then the Page 1 of Add Course should be displayed
+	Given I have entered the following in Course description "Test Course for Add Venue"
+	And I have clicked Next
+	Then Page 2 of Add Course should be displayed
+	Given I have selected Delivery Mode as "Classroom"
+	And  I have selected start date as "FlexibleStartDate"
+	When I select the link to Add New Venue
+	Then Add venue screen should be displayed.
+	Given I have added a new Venue "TestAddVenue_AddCourse" 
+	#And I have entered a postcode "NW1 3AB" and clicked Find Address
+	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
+	#And  I have clicked continue in confirm Venue screen
+	Then the venue "TestAddVenue_AddCourse" should be present in the Venue List
+	Given I have selected "TestAddVenue_AddCourse" as venue
+	And I have entered as cost "2000.00"
+	And I have entered a value in Duration "6"
+	And I have selected "Full-Time" as attendance pattern
+	And I have selected "Daytime" as attendance
+	And I have clicked Review your changes
+	And I have clicked Accept and Publish
+	Then the course should be added
+@CI
+Scenario: Add a Venue when editing an existing course
+	Given I have selected a course
+	When I clicked the Edit course information
+	Then Page 2 of Add Course should be displayed
+	Given I have selected Delivery Mode as "Classroom"
+	And  I have selected start date as "FlexibleStartDate"
+	When I select the link to Add New Venue
+	Then Add venue screen should be displayed.
+	Given I have added a new Venue "TestAddVenue_EditCourse"
+	#And I have entered a postcode "NW1 3AB" and clicked Find Address
+	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
+	#And  I have clicked continue in confirm Venue screen
+	Then the venue "TestAddVenue_EditCourse" should be present in the Venue List
+	Given I have selected "TestAddVenue_EditCourse" as venue
+	And I have entered as cost "2000.00"
+	And I have entered a value in Duration "6"
+	And I have selected "Full-Time" as attendance pattern
+	And I have selected "Daytime" as attendance
+	And I have clicked Review your changes
+	And I have clicked Accept and Publish
+	Then the course should be added
+
+@CI
+Scenario: Add a Venue when copying an existing course
+	Given I have selected a course
+	When I clicked the Copy Course
+	Then Page 2 of Add Course should be displayed
+	Given I have selected Delivery Mode as "Classroom"
+	And  I have selected start date as "FlexibleStartDate"
+	When I select the link to Add New Venue
+	Then Add venue screen should be displayed.
+	Given I have added a new Venue "TestAddVenue_CopyCourse"
+	#And I have entered a postcode "NW1 3AB" and clicked Find Address
+	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
+	#And  I have clicked continue in confirm Venue screen
+	Then the venue "TestAddVenue_CopyCourse" should be present in the Venue List
+	Given I have selected "TestAddVenue_CopyCourse" as venue
+	And I have entered as cost "2000.00"
+	And I have entered a value in Duration "6"
+	And I have selected "Full-Time" as attendance pattern
+	And I have selected "Daytime" as attendance
+	And I have clicked Review your changes
+	And I have clicked Accept and Publish
+	Then the course should be added

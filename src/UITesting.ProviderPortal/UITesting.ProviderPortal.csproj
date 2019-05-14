@@ -171,6 +171,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COUR-11 Delete Venue.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Venue Management\COUR-6 Add Venue-Add_Edit_CopyCourse.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-6 Add Venue-Add_Edit_CopyCourse.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -294,6 +299,7 @@
     <Compile Include="StepDefinitions\Qualification Management\NonRegSSASteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\RegulatedQualificationsSteps.cs" />
     <Compile Include="StepDefinitions\Qualification Management\SearchForQualificationSteps.cs" />
+    <Compile Include="StepDefinitions\VenueManagement\AddVenue_Add_Edit_CopyCourseSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\DeleteVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\EditVenueSteps.cs" />
     <Compile Include="StepDefinitions\VenueManagement\AddVenue_EditVenueNameSteps.cs" />
@@ -455,6 +461,10 @@
     <None Include="Features\Venue Management\COUR-11 Delete Venue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-11 Delete Venue.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Venue Management\COUR-6 Add Venue-Add_Edit_CopyCourse.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-6 Add Venue-Add_Edit_CopyCourse.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Venue Management\DFC-4759 Add Venue - Find Address via Postcode and Select Address.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
