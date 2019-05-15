@@ -146,7 +146,8 @@ namespace UITesting.Framework.Helpers
                 checkbox.Click();
             }
         }
-
+        
+        
         public static void SelectRadioOptionByForAttribute(By locator, String forAttribute)
         {
             IList<IWebElement> radios = webDriver.FindElements(locator);

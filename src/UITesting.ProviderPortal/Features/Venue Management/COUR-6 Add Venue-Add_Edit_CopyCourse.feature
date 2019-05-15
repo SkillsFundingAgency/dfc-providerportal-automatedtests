@@ -18,57 +18,60 @@ Scenario: Add a Venue when adding a new course
 	Then Lars Search page should be displayed
 	Given I have entered a Qualification Name "Chemistry"
 	And I click the link to Add Qualification
-	Then the Page 1 of Add Course should be displayed
+	Then the First Page of Add Course should be displayed
 	Given I have entered the following in Course description "Test Course for Add Venue"
 	And I have clicked Next
-	Then Page 2 of Add Course should be displayed
+	Then Second Page of Add Course should be displayed
 	Given I have selected Delivery Mode as "Classroom"
 	And  I have selected start date as "FlexibleStartDate"
 	When I select the link to Add New Venue
 	Then Add venue screen should be displayed.
 	Given I have added a new Venue "TestAddVenue_AddCourse" 
-	#And I have entered a postcode "NW1 3AB" and clicked Find Address
-	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
-	#And  I have clicked continue in confirm Venue screen
 	Then the venue "TestAddVenue_AddCourse" should be present in the Venue List
-	Given I have selected "TestAddVenue_AddCourse" as venue
-	And I have entered as cost "2000.00"
-	And I have entered a value in Duration "6"
-	And I have selected "Full-Time" as attendance pattern
-	And I have selected "Daytime" as attendance
-	And I have clicked Review your changes
+	Given I have selected "TestAddVenue_AddCourse" as venue from the Venue Checkbox List
+	When I enter the following in the cost field 999.99
+	When I select duration length 9
+	When I Select study mode Part-time
+	When I Select attendance mode Daytime
+	And I click Publish
+	Then the Add Course Summary Page should be displayed
 	And I have clicked Accept and Publish
 	Then the course should be added
 @CI
 Scenario: Add a Venue when editing an existing course
 	Given I have selected a course
 	When I clicked the Edit course information
-	Then Page 2 of Add Course should be displayed
-	Given I have selected Delivery Mode as "Classroom"
-	And  I have selected start date as "FlexibleStartDate"
-	When I select the link to Add New Venue
+	Then Second Page of Edit Course should be displayed
+	Given I have accessed the selected course run data
+	And I have selected "Classroom" as delivery mode
+	And I have selected Start Date "Defined Start Date"
+	And I have entered "25" in Day, "04" in Month and "2021" in Year
+	When I select the link to Add New Venue in the Edit Screen
 	Then Add venue screen should be displayed.
 	Given I have added a new Venue "TestAddVenue_EditCourse"
 	#And I have entered a postcode "NW1 3AB" and clicked Find Address
 	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
 	#And  I have clicked continue in confirm Venue screen
 	Then the venue "TestAddVenue_EditCourse" should be present in the Venue List
-	Given I have selected "TestAddVenue_EditCourse" as venue
-	And I have entered as cost "2000.00"
+	Given I have selected "TestAddVenue_EditCourse" as venue from Venue Dropdown
+	And I have selected entered a value in cost "200"
 	And I have entered a value in Duration "6"
-	And I have selected "Full-Time" as attendance pattern
-	And I have selected "Daytime" as attendance
-	And I have clicked Review your changes
-	And I have clicked Accept and Publish
+	And I Select study mode "Part-time"
+	And I Select attendance mode "Daytime"
+	When I  Save the data
+	#Then the Add Course Summary Page should be displayed
+	#And I have clicked Accept and Publish
 	Then the course should be added
 
 @CI
 Scenario: Add a Venue when copying an existing course
 	Given I have selected a course
 	When I clicked the Copy Course
-	Then Page 2 of Add Course should be displayed
-	Given I have selected Delivery Mode as "Classroom"
-	And  I have selected start date as "FlexibleStartDate"
+	Then Second Page of Edit Course should be displayed
+	Given I have accessed the selected course run data
+	And I have selected "Classroom" as delivery mode
+	And I have selected Start Date "Defined Start Date"
+	And I have entered "25" in Day, "04" in Month and "2021" in Year
 	When I select the link to Add New Venue
 	Then Add venue screen should be displayed.
 	Given I have added a new Venue "TestAddVenue_CopyCourse"
@@ -76,11 +79,12 @@ Scenario: Add a Venue when copying an existing course
 	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
 	#And  I have clicked continue in confirm Venue screen
 	Then the venue "TestAddVenue_CopyCourse" should be present in the Venue List
-	Given I have selected "TestAddVenue_CopyCourse" as venue
-	And I have entered as cost "2000.00"
+	Given I have selected "TestAddVenue_CopyCourse" as venue from Venue Dropdown
+	And I have selected entered a value in cost "200"
 	And I have entered a value in Duration "6"
-	And I have selected "Full-Time" as attendance pattern
-	And I have selected "Daytime" as attendance
-	And I have clicked Review your changes
-	And I have clicked Accept and Publish
+	And I Select study mode "Part-time"
+	And I Select attendance mode "Daytime"
+	When I  Save the data
+	#Then the Add Course Summary Page should be displayed
+	#And I have clicked Accept and Publish
 	Then the course should be added

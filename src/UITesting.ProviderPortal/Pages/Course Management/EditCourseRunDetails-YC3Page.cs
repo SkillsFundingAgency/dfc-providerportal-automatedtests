@@ -47,7 +47,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By ErrorHeaderTitle = By.XPath("//*[@id='error-summary-title']");
         private static By ErrorHeaderMessage = By.XPath("//*[@id='error-hash-link-start_date-0']");
 
-        
+        private static By AddNewVenueLink = By.Id("addNewVenue");
 
 
         public EditCourseRunDetails_YC3Page(IWebDriver webDriver): base(webDriver)
@@ -91,6 +91,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             {
                 FormCompletionHelper.ClickElement(WorkBased_DelMode);
             }
+        }
+
+        internal void ClickAddNewVenueLink()
+        {
+            FormCompletionHelper.ClickElement(AddNewVenueLink);
         }
 
         internal void EnterCostDescription(string strCostdesc)
