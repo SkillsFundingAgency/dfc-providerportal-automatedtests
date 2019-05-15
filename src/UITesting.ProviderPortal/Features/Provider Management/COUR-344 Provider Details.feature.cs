@@ -77,7 +77,7 @@ namespace UITesting.ProviderPortal.Features.ProviderManagement
  testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
  testRunner.And("I login as provider admin with Provider.10033145@gmail.com and SITtesting123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 9
+#line 10
  testRunner.Then("I am logged in as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
@@ -89,14 +89,14 @@ namespace UITesting.ProviderPortal.Features.ProviderManagement
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-493 View Provider Details", null, new string[] {
                         "CI"});
-#line 12
+#line 13
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 13
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
  testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -109,20 +109,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Alias", null, new string[] {
                         "CI"});
-#line 17
+#line 18
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 18
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
- testRunner.Then("I enter alias Test Alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
+ testRunner.Then("I enter alias Test Alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 23
  testRunner.And("I click Save on Add provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -135,21 +135,21 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Alias Max Chars", null, new string[] {
                         "CI"});
-#line 25
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 26
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 27
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 28
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 29
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 30
  testRunner.Then("I enter alias ALL TRAINING TAKES PLACE 1N THE WORK PLACE. WE WORK WITH OVER 3501 " +
                     "EMPLOYERS ACROSS WHOLE OF ENGLAND", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
+#line 31
  testRunner.And("I click Save on Add provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -162,21 +162,21 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Alias Special Chars", null, new string[] {
                         "CI"});
-#line 33
+#line 34
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 34
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 35
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 36
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 37
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
  testRunner.Then("I enter alias 1234567890-= !\"£$%^&*()_+{}:\'#;@~/.,?> < ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 38
+#line 39
  testRunner.And("I click Save on Add provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -189,21 +189,21 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Alias Over Max Chars", null, new string[] {
                         "CI"});
-#line 41
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 42
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 43
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 45
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 46
  testRunner.Then("I enter alias ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 " +
                     "EMPLOYERS ACROSS WHOLE OF ENGLAND.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 46
+#line 47
  testRunner.And("I click Save on Add provider details page leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -216,20 +216,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Alias Non ASCII", null, new string[] {
                         "CI"});
-#line 49
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 50
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 51
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 52
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 53
- testRunner.Then("I enter alias 我想输入文字", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 54
+ testRunner.Then("I enter alias 我想输入文字", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
  testRunner.And("I click Save on Add provider details page leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -242,20 +242,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Overview", null, new string[] {
                         "CI"});
-#line 57
+#line 58
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 58
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 59
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 60
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 61
- testRunner.Then("I enter overview Provider Overview Testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 62
+ testRunner.Then("I enter overview Provider Overview Testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 63
  testRunner.And("I click Save on Add provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -268,20 +268,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Overview Max Chars", null, new string[] {
                         "CI"});
-#line 65
+#line 66
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 66
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 67
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 68
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 69
- testRunner.Then(@"I enter overview ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES ALL TRAINING TAKES PLAC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 70
+ testRunner.Then(@"I enter overview ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES ALL TRAINING TAKES PLAC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 71
  testRunner.And("I click Save on Add provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -294,21 +294,21 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Overview Special Chars", null, new string[] {
                         "CI"});
-#line 73
+#line 74
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 74
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 75
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 76
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 77
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 78
  testRunner.Then("I enter overview 1234567890-= !\"£$%^&*()_+{}:\'#;@~/.,?> < ABCDEFGHIJKLMNOPQRSTUVW" +
                     "XYZ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
+#line 79
  testRunner.And("I click Save on Add provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -321,20 +321,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Overview Over Max Chars", null, new string[] {
                         "CI"});
-#line 81
+#line 82
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 82
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 83
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 84
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 85
- testRunner.Then(@"I enter overview ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES ALL TRAINING TAKES PLACE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 86
+ testRunner.Then(@"I enter overview ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES PLACE IN THE WORK PLACE. WE WORK WITH OVER 3501 EMPLOYERS ACROSS WHOLE OF ENGLAND ALL TRAINING TAKES ALL TRAINING TAKES PLACE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 87
  testRunner.And("I click Save on Add provider details page leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -347,20 +347,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-496 Add Provider Details - Overview Non ASCII", null, new string[] {
                         "CI"});
-#line 89
+#line 90
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 90
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 91
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 92
- testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 93
- testRunner.Then("I enter overview 我想输入文字", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click add alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 94
+ testRunner.Then("I enter overview 我想输入文字", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 95
  testRunner.And("I click Save on Add provider details page leading to error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -373,20 +373,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-497 Edit Provider Details - Alias", null, new string[] {
                         "CI"});
-#line 97
+#line 98
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 98
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 99
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 100
- testRunner.When("i click edit alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 101
- testRunner.Then("I edit alias Test Alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click edit alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 102
+ testRunner.Then("I edit alias Test Alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 103
  testRunner.And("I click Save on Edit provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -399,20 +399,20 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-497 Edit Provider Details - Overview", null, new string[] {
                         "CI"});
-#line 105
+#line 106
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 106
- testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 107
- testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on the Provider name in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 108
- testRunner.When("i click edit alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I am taken to the provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 109
- testRunner.Then("I edit overview Provider Overview Testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("i click edit alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 110
+ testRunner.Then("I edit overview Provider Overview Testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 111
  testRunner.And("I click Save on Edit provider details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

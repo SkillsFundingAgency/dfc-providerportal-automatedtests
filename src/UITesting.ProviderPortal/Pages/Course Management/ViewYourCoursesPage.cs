@@ -389,12 +389,12 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.OpenAccordians(courseRunTitles);
             Console.WriteLine("Open course runs");
         }
-        internal void EnterSearchTerm(string strSearch)
+        public void EnterSearchTerm(string strSearch)
         {
             FormCompletionHelper.EnterText(SearchText, strSearch);
         }
 
-        internal void ValidateSearchText()
+        public void ValidateSearchText()
         {
             PageInteractionHelper.VerifyElementPresent(SearchText);
         }

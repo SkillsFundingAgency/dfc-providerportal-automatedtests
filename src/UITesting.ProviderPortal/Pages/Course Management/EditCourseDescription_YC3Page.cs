@@ -51,7 +51,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.EnterText(WhatWillLearnText, strData);
         }
 
-        internal void EnterCourseDescription(string strData)
+        public void EnterCourseDescription(string strData)
         {
             FormCompletionHelper.EnterText ( CourseForText, strData);
         }
@@ -124,7 +124,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             PageInteractionHelper.IsElementPresent(CancelLink);
         }       
 
-        internal void ClickSave()
+        public void ClickSave()
         {
             FormCompletionHelper.ClickElement(SaveButton);
         }

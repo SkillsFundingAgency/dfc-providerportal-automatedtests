@@ -4,6 +4,7 @@ using UITesting.ProviderPortal.Pages.Venue_Management;
 using UITesting.ProviderPortal.Pages.Provider_Management;
 using UITesting.ProviderPortal.Pages.Qualification_Management;
 using UITesting.ProviderPortal.Pages.Course_Management;
+using UITesting.ProviderPortal.Pages.Data_Quality_Indicators;
 using UITesting.ProviderPortal.Pages;
 using UITesting.BrowserStack.TestSupport;
 using OpenQA.Selenium;
@@ -43,7 +44,8 @@ namespace UITesting.BrowserStack.StepDefinitions
             PageInteractionHelper.SetDriver(webDriver);
         }
 
-        [Given(@"I login as admin with (.*) and (.*)")]
+        //local login
+        [Given(@"I login via Local as admin with (.*) and (.*)")]
         public void GivenILoginWithUsernameAndPassword(string user, string pass)
         {
             HomePage homePage = new HomePage(webDriver);
@@ -55,11 +57,75 @@ namespace UITesting.BrowserStack.StepDefinitions
             loginPage.ClickLoginButton();
         }
 
+        //dfe login
+        [Given(@"I login as admin with (.*) and (.*)")]
+        public void DfELoginWithUsernameAndPassword(string user, string pass)
+        {
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLoginDfE();
+
+            DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
+            dfESignInPage.EnterUsername(Configurator.GetConfiguratorInstance().GetdFEUser());
+            dfESignInPage.EnterPassword(Configurator.GetConfiguratorInstance().GetdFEPassword());
+            dfESignInPage.ClickSignInButton();
+        }
+
+        //local login
+        [Given(@"I login via Local as provider admin with (.*) and (.*)")]
+        public void GivenILoginWithProviderUsernameAndPassword(string user, string pass)
+        {
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLogin();
+
+            LoginPage loginPage = new LoginPage(webDriver);
+            loginPage.EnterUsername(user);
+            loginPage.EnterPassword(pass);
+            loginPage.ClickLoginButtonProvider();
+        }
+
+        //dfe login
+        [Given(@"I login as provider admin with (.*) and (.*)")]
+        public void DfELoginWithProviderUsernameAndPassword(string user, string pass)
+        {
+
+            HomePage homePage = new HomePage(webDriver);
+            homePage.ClickLoginDfE();
+
+            DfESignInPage dfESignInPage = new DfESignInPage(webDriver);
+            dfESignInPage.EnterUsername(user);
+            dfESignInPage.EnterPassword(pass);
+            dfESignInPage.ClickSignInButtonProvider();
+        }
+
         [Then(@"I am logged in")]
         public void ThenIAmLoggedIn()
         {
             SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
         }
+
+        [Then(@"I am logged in as a provider")]
+        public void ThenIAmLoggedInProvider()
+        {
+            DQIDashbordPage dQIDashbordPage = new DQIDashbordPage(webDriver);
+        }
+
+        //[Given(@"I login as admin with (.*) and (.*)")]
+        //public void GivenILoginWithUsernameAndPassword(string user, string pass)
+        //{
+        //    HomePage homePage = new HomePage(webDriver);
+        //    homePage.ClickLogin();
+
+        //    LoginPage loginPage = new LoginPage(webDriver);
+        //    loginPage.EnterUsername(Configurator.GetConfiguratorInstance().GetadminUser());
+        //    loginPage.EnterPassword(Configurator.GetConfiguratorInstance().GetadminPassword());
+        //    loginPage.ClickLoginButton();
+        //}
+
+        //[Then(@"I am logged in")]
+        //public void ThenIAmLoggedIn()
+        //{
+        //    SearchProviderPage searchProviderPage = new SearchProviderPage(webDriver);
+        //}
 
         [Given(@"I have logged into course directory as a provider")]
         public void LoginToCourseDirectory()
@@ -716,7 +782,179 @@ namespace UITesting.BrowserStack.StepDefinitions
             addCoursePage2.SelectSecondVenue();
         }
 
+        [Given(@"I have clicked the Main Qualification")]
+        public void GivenIHaveClickedTheMainQualification()
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.ClickQual();
+        }
+
+        [Given(@"I have clicked one of the courses available")]
+        public void GivenIHaveClickedOneOfTheCoursesAvailable()
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.ClickCourseName();
+        }
+
+        [Given(@"I have selected a course run to update")]
+        public void GivenIHaveSelectedACourseRunToUpdate()
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourseRun();
+        }
+
+        [Then(@"I should be able to view the course runs\.")]
+        public void ThenIShouldBeAbleToViewTheCourseRuns_()
+        {
+            //ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"I have changed the course name to ""(.*)""")]
+        public void GivenIHaveChangedTheCourseNameTo(string newCourseName)
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterCourseName(newCourseName);
+        }
+
+        [When(@"I Click Save")]
+        public void WhenIClickSave()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.SaveCourse();
+        }
+
+        [When(@"I select Edit Course Description")]
+        public void WhenISelectEditCourseDescription()
+        {
+            //  ViewYourCoursesPage ViewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            //  ViewYourCoursesPage.ClickEditCourseDescriptionLink();
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourse();
+        }
+
+        [Then(@"Edit Course screen should be displayed")]
+        public void ThenEditCourseScreenShouldBeDisplayed()
+        {
+            EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
+        }
+
+        [Given(@"I have edited course description with valid values ""(.*)""")]
+        public void GivenIHaveEditedCourseDescriptionWithValidValues(string strData)
+        {
+            EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
+            editCourseDescription_YC3Page.EnterCourseDescription(strData);
+        }
+
+        [When(@"I Click the Save button")]
+        public void WhenIClickTheSaveButton()
+        {
+            EditCourseDescription_YC3Page editCourseDescription_YC3Page = new EditCourseDescription_YC3Page(webDriver);
+            editCourseDescription_YC3Page.ClickSave();
+        }
+
         #endregion Courses
 
+        #region Your Courses
+
+        [Then(@"I should be able to view a Search box to enter my search criteria")]
+        public void ThenIShouldBeAbleToViewASearchBoxToEnterMySearchCriteria()
+        {
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ValidateSearchText();
+        }
+
+        [Given(@"I have entered a full search term as ""(.*)""")]
+        public void GivenIHaveEnteredAFullSearchTermAs(string strSearch)
+        {
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.EnterSearchTerm(strSearch);
+        }
+
+        [Then(@"the results with biology should be returned")]
+        public void ThenTheResultsWithBiologyShouldBeReturned()
+        {
+            //ScenarioContext.Current.Pending();
+        }
+
+        #endregion Your Courses
+
+
+        #region Non Regulated Qualifications
+
+        [When(@"I Navigate to Regulated Qualifications page")]
+        public void WhenINavigateToRegulatedQualificationsPage()
+        {
+            webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl() + "/RegulatedQualification";
+        }
+
+        [When(@"I have selected Non Regulated Option and Clicked Next")]
+        public void WhenIHaveSelectedNonRegulatedOptionAndClickedNext()
+        {
+            RegulatedQualificationPage regulatedQualificationPage = new RegulatedQualificationPage(webDriver);
+            regulatedQualificationPage.SelectNonRegulatedOption();
+            regulatedQualificationPage.ClickNext();
+        }
+
+        [Then(@"the Unregulated courses page should be displayed")]
+        public void ThenTheUnregulatedCoursesPageShouldBeDisplayed()
+        {
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+        }
+
+        [Given(@"I have clicked  I dont know z code link")]
+        public void GivenIHaveClickedIDontKnowZCodeLink()
+        {
+            UnRegulatedCoursesPage unRegulatedCoursesPage = new UnRegulatedCoursesPage(webDriver);
+            unRegulatedCoursesPage.clickDontKnowZCode();
+        }
+
+        [Then(@"Unknown Z code page should be displayed")]
+        public void ThenUnknownZCodePageShouldBeDisplayed()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+        }
+
+        [When(@"I Select First Level and Second Level")]
+        public void WhenISelectFirstLevelAndSecondLevel()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.ClickFirstLevel();
+            unKnownZCodePage.ClickSecondLevel();
+
+        }
+
+        [When(@"I click the Add this Provision link")]
+        public void WhenIClickTheAddThisProvisionLink()
+        {
+            UnKnownZCodePage unKnownZCodePage = new UnKnownZCodePage(webDriver);
+            unKnownZCodePage.ClickAddThisProvision();
+        }
+
+        [Then(@"add course page should be displayed")]
+        public void ThenAddCoursePageShouldBeDisplayed()
+        {
+            AddCoursePage addCoursePage = new AddCoursePage(webDriver);
+        }
+
+        [Then(@"add course run should be displayed")]
+        public void ThenAddCourseRunShouldBeDisplayed()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+        }
+
+        [Then(@"the course should be listed in the Your courses page")]
+        public void ThenTheCourseShouldBeListedInTheYourCoursesPage()
+        {
+            AddCourseSummaryPage addCourseSummaryPage = new AddCourseSummaryPage(webDriver);
+            addCourseSummaryPage.ClickNext();
+        }
+
+        #endregion Non Regulated Qualifications
     }
 }

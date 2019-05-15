@@ -10,7 +10,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
     {
         private static String PAGE_TITLE = "Search Provider";
         private By SearchField = By.Id("SearchTerm");
-        private By contactDetails = By.XPath("/html/body/div[4]/main/div/div[2]");
+        private By contactDetails = By.XPath("/html/body/div[4]/main/div/div[2]");  
         private By addAlias = By.XPath("/html/body/div[4]/main/div/div[1]/table/tbody/tr[4]/td[2]/a");
         private By addOverview = By.XPath("/html/body/div[4]/main/div/div[1]/table/tbody/tr[5]/td[2]/a");
         private By editAlias = By.XPath("/html/body/div[4]/main/div/div[1]/table/tbody/tr[4]/td[2]/a");
@@ -24,7 +24,6 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         protected override bool SelfVerify()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(contactDetails, 20);
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
