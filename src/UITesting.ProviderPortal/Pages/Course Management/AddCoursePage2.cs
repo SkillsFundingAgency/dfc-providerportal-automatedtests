@@ -64,14 +64,19 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
         private By nationalTrue = By.Id("National_true");
         private By nationalFalse = By.Id("National_false");
-        private By nationalError = By.XPath(".//*[@id='sectionRegions']/div/div/div[1]/fieldset/span");   
-
+        private By nationalError = By.XPath(".//*[@id='sectionRegions']/div/div/div[1]/fieldset/span");
+        private By AddNewVenueLink = By.Id("addNewVenue");
         //variable
         private string errortxt;
 
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
+        }
+
+        internal void ClickAddNewVenueLink()
+        {
+            FormCompletionHelper.ClickElement(AddNewVenueLink);
         }
 
         public AddCoursePage2 clickOnline()
