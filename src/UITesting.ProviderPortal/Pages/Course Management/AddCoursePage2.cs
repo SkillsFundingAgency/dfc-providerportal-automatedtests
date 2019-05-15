@@ -3,7 +3,7 @@ using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
 using OpenQA.Selenium;
 using System.Diagnostics;
-
+using System.Collections.Generic;
 
 namespace UITesting.ProviderPortal.Pages.Course_Management
 {
@@ -44,7 +44,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By FlexDateRadio = By.Id("FlexibleStartDate");
         private By DurationLength = By.Id("DurationLength");
         private By DurationUnit = By.Id("durationDropDown");
-        private By DurationError = By.XPath(".//*[@id='sectionDuration']/div/span[2]");             
+        private By DurationError = By.XPath(".//*[@id='sectionDuration']/div/span[2]");
+
+        
+
         private By FirstVenue = By.Id("VenueName-1");
         private By SecondVenue = By.Id("VenueName-2");
         private By DeliveryMode = By.Name("DeliveryMode");
@@ -72,6 +75,23 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public AddCoursePage2(IWebDriver webDriver) : base(webDriver)
         {
             SelfVerify();
+        }
+
+        internal void SelectCheckBoxByValue(string strVenueName)
+        {
+            IList<IWebElement> CheckBoxList = webDriver.FindElements((By.ClassName("govuk-checkboxes__item"))); 
+            
+            int count = CheckBoxList.Count;
+            for(int i=0;i<=count; i++)
+            {
+                if (CheckBoxList[i].Text ==strVenueName)
+                {
+                    int VenueId = i + 1;
+                    string VenueName = "VenueName-" + VenueId;
+                    webDriver.FindElement(By.Id(VenueName)).Click();
+                    break;
+                }
+            }
         }
 
         internal void ClickAddNewVenueLink()
@@ -587,6 +607,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
             return new AddCoursePage2(webDriver);
         }
+
+        /*internal void SelectVenueByName(string text)
+        {
+            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(Venue), text);
+        }*/
 
     }
 }

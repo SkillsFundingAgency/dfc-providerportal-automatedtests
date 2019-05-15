@@ -26,7 +26,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             AddCoursePage addCoursePage = new AddCoursePage(webDriver);
             addCoursePage.ClickNext();
         }
-
+        
         [Given(@"I have selected Delivery Mode as ""(.*)""")]
         public void GivenIHaveSelectedDeliveryModeAs(string strDeliveryMode)
         {
@@ -56,65 +56,35 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             addVenueConfirmAddressPage.ClickConfirmContinue();
         }
 
-       /* [Given(@"I have entered a postcode ""(.*)"" and clicked Find Address")]
-        public void GivenIHaveEnteredAPostcodeAndClickedFindAddress(string strPostCode)
+        [Given(@"I have selected ""(.*)"" as venue from the Venue Checkbox List")]
+        public void GivenIHaveSelectedAsVenueFromTheVenueCheckboxList(string strVenueName)
         {
-            AddVenuePage addVenuePage = new AddVenuePage(webDriver);
-            addVenuePage.EnterPostCode(strPostCode);
-            addVenuePage.ClickFindAddress();
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.SelectCheckBoxByValue(strVenueName);
         }
 
-        [Given(@"i have selected an address from the dropdown When I select the address and clicked Continue ""(.*)""")]
-        public void GivenIHaveSelectedAnAddressFromTheDropdownWhenISelectTheAddressAndClickedContinue(string strAddress)
-        {
-            AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
-            addVenueSelectAddressPage.selectAddress(strAddress);
-            addVenueSelectAddressPage.ClickContinueConfirm();
-        }
-        
-        [Given(@"I have clicked continue in confirm Venue screen")]
-        public void GivenIHaveClickedContinueInConfirmVenueScreen()
-        {
-            AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
-            addVenueSelectAddressPage.ClickContinue();
-        }*/
-        
-        [Given(@"I have selected ""(.*)"" as venue")]
-        public void GivenIHaveSelectedAsVenue(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"I have entered as cost ""(.*)""")]
-        public void GivenIHaveEnteredAsCost(Decimal p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"I have selected ""(.*)"" as attendance")]
-        public void GivenIHaveSelectedAsAttendance(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"I have clicked Review your changes")]
-        public void GivenIHaveClickedReviewYourChanges()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"I have clicked Accept and Publish")]
-        public void GivenIHaveClickedAcceptAndPublish()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
         [Given(@"I have selected a course")]
         public void GivenIHaveSelectedACourse()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.ClickSelect();
         }
         
+        [Given(@"I have selected ""(.*)"" as venue from Venue Dropdown")]
+        public void GivenIHaveSelectedAsVenueFromVenueDropdown(string strVenueName)
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetails_YC3Page.SelectVenueByName(strVenueName);
+        }
+
+        [When(@"I select the link to Add New Venue in the Edit Screen")]
+        public void WhenISelectTheLinkToAddNewVenueInTheEditScreen()
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetails_YC3Page.ClickAddNewVenueLink();
+        }
+
+
         [When(@"I select the link to Add New Venue")]
         public void WhenISelectTheLinkToAddNewVenue()
         {
@@ -125,23 +95,25 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [When(@"I clicked the Edit course information")]
         public void WhenIClickedTheEditCourseInformation()
         {
-            ScenarioContext.Current.Pending();
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickEditCourseRun();
         }
         
         [When(@"I clicked the Copy Course")]
         public void WhenIClickedTheCopyCourse()
         {
-            ScenarioContext.Current.Pending();
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickCopyCourse();
         }
         
-        [Then(@"the Page (.*) of Add Course should be displayed")]
-        public void ThenThePageOfAddCourseShouldBeDisplayed(int p0)
+        [Then(@"the First Page of Add Course should be displayed")]
+        public void ThenTheFirstPageOfAddCourseShouldBeDisplayed()
         {
             AddCoursePage addCoursePage = new AddCoursePage(webDriver);
         }
         
-        [Then(@"Page (.*) of Add Course should be displayed")]
-        public void ThenPageOfAddCourseShouldBeDisplayed(int p0)
+        [Then(@"Second Page of Add Course should be displayed")]
+        public void ThenSecondPageOfAddCourseShouldBeDisplayed()
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
         }
@@ -153,15 +125,50 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         }
         
         [Then(@"the venue ""(.*)"" should be present in the Venue List")]
-        public void ThenTheVenueShouldBePresentInTheVenueList(string strVenueName)
+        public void ThenTheVenueShouldBePresentInTheVenueList(string p0)
         {
-            ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"the Add Course Summary Page should be displayed")]
+        public void ThenTheAddCourseSummaryPageShouldBeDisplayed()
+        {
+            AddCourseSummaryPage addCourseSummaryPage = new AddCourseSummaryPage(webDriver);
+        }
+        
+        [Then(@"I have clicked Accept and Publish")]
+        public void ThenIHaveClickedAcceptAndPublish()
+        {
+            AddCourseSummaryPage addCourseSummaryPage = new AddCourseSummaryPage(webDriver);
+            addCourseSummaryPage.ClickNext();
         }
         
         [Then(@"the course should be added")]
         public void ThenTheCourseShouldBeAdded()
         {
-            ScenarioContext.Current.Pending();
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
         }
+        
+        [Then(@"Second Page of Edit Course should be displayed")]
+        public void ThenSecondPageOfEditCourseShouldBeDisplayed()
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
+
+        }
+
+        [Given(@"I Select study mode ""(.*)""")]
+        public void GivenISelectStudyMode(string strStudyMode)
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetails_YC3Page.SelectAttendancePattern(strStudyMode);
+        }
+
+        [Given(@"I Select attendance mode ""(.*)""")]
+        public void GivenISelectAttendanceMode(string strAtt)
+        {
+            EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
+            editCourseRunDetails_YC3Page.SelectAttendance(strAtt);
+        }
+
     }
 }
