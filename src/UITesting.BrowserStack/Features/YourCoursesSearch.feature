@@ -1,35 +1,15 @@
-﻿Feature: Add Course
-
-As a User
-I need to provide the mandatory information
-so that I can add a course
-
+﻿Feature: Your Courses Search
 
 @BrowserStack
-Scenario Outline: Add a Course
+Scenario Outline:Your Courses Search
 	Given I have navigated to the Home page using <profile> and <environment>
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have searched for UKPRN "10002815" and clicked search
 	When I click to view my courses
-	## End of Provider Search Steps
-	Given I have accessed the Qualifications page	
-	And I have entered a Qualification Name "Biology"
-	And I click the link to Add Qualification
-	And I have specified who the course is for Semi-qualified (people)
-	And I have entered the entry requirements 1. Industry experience
-	And I have entered what the student will learn Student will learn about the subject 
-	When I click Next Button
-	When I enter the following in the course name field Course test
-	When I select start date Defined Start Date
-	And I enter 01 in the Day field
-	And I enter 01 in the Month field
-	And I enter 2021 in the Year field
-	And I enter the following in the cost field 999
-	And I select duration length 9
-	And I select duration unit Weeks
-	And I select the first venue in the venues list
-	And I click Publish
+	Then I should be able to view a Search box to enter my search criteria
+	Given I have entered a full search term as "Biology"
+	Then the results with biology should be returned
 
 Examples:
 		| profile  | environment    |

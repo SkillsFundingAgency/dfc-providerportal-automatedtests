@@ -1,27 +1,25 @@
-﻿Feature: Search Qualification
-	In order to Search a Qualification
-	As a provider
-	I want to be able to search for a Qualification using LARS/QAN Reference Number 
+﻿Feature: Edit Course
+
+	In order to be able to change the course details
+	As a Provider
+	I want to be able to change the course name
 
 @BrowserStack
-Scenario Outline: Search a Qualification
+Scenario Outline:Edit Course Run Details
 	Given I have navigated to the Home page using <profile> and <environment>
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have searched for UKPRN "10002815" and clicked search
 	When I click to view my courses
 	## End of Provider Search Steps
-	Given I have accessed the Qualifications page	
-	And there is a field to enter the LARS/QAN number.
-	And I have entered LARS/QAN Number "60060955"
-	Then I want to see the Qualifications listed for that LARS/QAN Number
-	And I want to see LARS/QAN number "LARS/QAN", Level "Level" and awarding body "Awarding body" for each qualification
-	And I want to see a Link to add this qualification.
-	And I want to see Qualification Level Filter "Qualification Level"
-	And I want to see Awarding Organisation Filter on the screen "Awarding Organisation"
-	Given I have selected filters in Qualification Level and/or Awarding body
-
-Examples:
+	Given I have clicked the Main Qualification
+	And I have clicked one of the courses available
+	Then I should be able to view the course runs.	
+	Given I have selected a course run to update
+	And I have changed the course name to "Updated Course Name"
+	When I Click Save
+	
+	Examples:
 		| profile  | environment    |
 		| parallel | chrome74win10  |
 		| parallel | chrome73win10  |
@@ -62,20 +60,19 @@ Examples:
 
 
 @BrowserStack
-Scenario Outline: Clear filters when reset is clicked
+Scenario Outline:Edit Course Details
 	Given I have navigated to the Home page using <profile> and <environment>
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have searched for UKPRN "10002815" and clicked search
 	When I click to view my courses
 	## End of Provider Search Steps
-	Given I have accessed the Qualifications page	
-	Given I have entered a Qualification Name "Biology"
-	Given I have selected filters in Qualification Level and/or Awarding body
-	When I click reset
-	Then all filters should be cleared.
+	And I select Edit Course Description
+	Then Edit Course screen should be displayed
+	Given I have edited course description with valid values "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVBCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ" 
+	When I Click the Save button
 
-Examples:
+	Examples:
 		| profile  | environment    |
 		| parallel | chrome74win10  |
 		| parallel | chrome73win10  |

@@ -32,14 +32,22 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
             FormCompletionHelper.ClickElement(RegQualOption);
         }
 
-        internal void ClickNext()
+        public void ClickNext()
         {
             FormCompletionHelper.ClickElement(NextButton);
         }
 
-        internal void SelectNonRegulatedOption()
+        public void SelectNonRegulatedOption()
         {
-            FormCompletionHelper.ClickElement(NonRegOption);
+            //FormCompletionHelper.ClickElement(NonRegOption);
+
+            PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(NonRegOption, 60);
+            var element = this.webDriver.FindElement(NonRegOption);
+            ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
+            PageInteractionHelper.WaitForPageToLoad();
+
+
         }
 
         internal void CheckNoOptionSelected()

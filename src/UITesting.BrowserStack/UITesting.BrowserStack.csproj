@@ -47,6 +47,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddCourse.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\NonRegulatedQualification.feature.cs">
+      <DependentUpon>NonRegulatedQualification.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\YourCoursesSearch.feature.cs">
+      <DependentUpon>YourCoursesSearch.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\EditCourse.feature.cs">
+      <DependentUpon>EditCourse.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\AddVenue.feature.cs">
       <DependentUpon>AddVenue.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -75,6 +90,18 @@
     <None Include="Features\AddCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddCourse.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\NonRegulatedQualification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NonRegulatedQualification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\YourCoursesSearch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>YourCoursesSearch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EditCourse.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditCourse.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\AddVenue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

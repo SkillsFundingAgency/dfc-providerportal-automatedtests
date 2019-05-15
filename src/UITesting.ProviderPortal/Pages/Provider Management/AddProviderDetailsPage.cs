@@ -8,7 +8,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 {
     public class AddProviderDetailsPage : BasePage
     {
-        private static String PAGE_TITLE = "Add your details";
+        private static String PAGE_TITLE = "Edit your details";
         private By aliasName = By.Id("AliasName");
         private By overview = By.Id("BriefOverview");
         private By saveBtn = By.Id("save");
@@ -33,20 +33,21 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         public AddProviderDetailsPage EnterOverview(String Overview)
         {
-            FormCompletionHelper.EnterText(overview, Overview);
+            ((IJavaScriptExecutor)this.webDriver).ExecuteScript("tinyMCE.activeEditor.setContent('<h1>Native API text</h1> TinyMCE')");
             return new AddProviderDetailsPage(webDriver);
         }
 
         public ProviderDetailsPage ClickSave()
         {
             FormCompletionHelper.ClickElement(saveBtn);
+            PageInteractionHelper.WaitForPageToLoad();
             return new ProviderDetailsPage(webDriver);
         }
 
-        public AddProviderDetailsPage ClickSaveError()
+        public ProviderDetailsPage ClickSaveError()
         {
             FormCompletionHelper.ClickElement(saveBtn);
-            return new AddProviderDetailsPage(webDriver);
+            return new ProviderDetailsPage(webDriver);
         }
 
     }

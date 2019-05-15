@@ -42,50 +42,50 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        internal void ClickBackLink()
+        public void ClickBackLink()
         {
             FormCompletionHelper.ClickElement(BackLink);
         }
 
-        internal void ClickFirstLevel()
+        public void ClickFirstLevel()
         {
             FormCompletionHelper.ClickElement(FirstLevelSelect);
             FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(FirstLevelSelect), 1);
             
         }
 
-        internal void ClickSecondLevel()
+        public void ClickSecondLevel()
         {
             FormCompletionHelper.ClickElement(SecondLevelSelect);
             FormCompletionHelper.SelectFromDropDownByIndex(webDriver.FindElement(SecondLevelSelect), 1);
         }
 
-        internal void ClickAddThisProvision()
+        public void ClickAddThisProvision()
         {
             FormCompletionHelper.ClickElement(AddThisProvisionLink);
         }
 
-        internal void SelectPage(string pgNum)
+        public void SelectPage(string pgNum)
         {
             FormCompletionHelper.ClickElement(PageNumber);
         }
 
-        internal void CheckFirstLevelDropDown()
+        public void CheckFirstLevelDropDown()
         {
             PageInteractionHelper.IsElementPresent(FirstLevelSelect);
         }
-        internal void CheckSecondLevelDropDown()
+        public void CheckSecondLevelDropDown()
         {
             FormCompletionHelper.ClickElement(FirstLevelSelect);
             PageInteractionHelper.IsElementPresent(SecondLevelSelect);
         }
 
-        internal void CheckBackLink()
+        public void CheckBackLink()
         {
             PageInteractionHelper.IsElementPresent(BackLink);
         }
 
-        internal void ValidateLevelFilter()
+        public void ValidateLevelFilter()
         {
             PageInteractionHelper.IsElementPresent(LevelFilter);
         }

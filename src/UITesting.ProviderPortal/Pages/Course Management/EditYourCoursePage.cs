@@ -48,17 +48,17 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
-        internal void ClickQual()
+        public void ClickQual()
         {
             PageInteractionHelper.OpenAccordians(QualChevron);           
             
         }
-        internal void ClickCourseName()
+        public void ClickCourseName()
         {
             PageInteractionHelper.OpenAccordians(CourseChevron);           
         }
 
-        internal void SelectCourse()
+        public void SelectCourse()
         {
             PageInteractionHelper.WaitForPageToLoad();
             //FormCompletionHelper.ClickElement(Course);

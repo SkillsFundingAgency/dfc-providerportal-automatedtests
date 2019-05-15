@@ -53,7 +53,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
             FormCompletionHelper.ClickElement(SearchButton);
         }
 
-        internal void clickDontKnowZCode()
+        public void clickDontKnowZCode()
         {
             FormCompletionHelper.ClickElement(DontKnowZCode);
         }

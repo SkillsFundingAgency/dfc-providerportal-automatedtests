@@ -33,7 +33,8 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         public EditProviderDetailsPage EnterOverview(String Overview)
         {
-            FormCompletionHelper.EnterText(overview, Overview);
+            ((IJavaScriptExecutor)this.webDriver).ExecuteScript("tinyMCE.activeEditor.setContent('<h1>Native API text</h1> TinyMCE')");
+            //FormCompletionHelper.EnterText(overview, Overview);
             return new EditProviderDetailsPage(webDriver);
         }
 
