@@ -73,29 +73,30 @@ namespace UITesting.BrowserStack.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Edit Course Run Details")]
         [NUnit.Framework.CategoryAttribute("BrowserStack")]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome72win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome62win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome63win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win8", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win8", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70macos", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69macos", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63osx", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62osx", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win8", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win8", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66osx", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65osx", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win81", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "edge18win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge17win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge16win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "safari12macos", null)]
@@ -140,29 +141,30 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Edit Course Details")]
         [NUnit.Framework.CategoryAttribute("BrowserStack")]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome72win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome62win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome63win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win8", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69win8", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome70macos", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "chrome69macos", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win10", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win81", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62win7", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox63osx", null)]
-        [NUnit.Framework.TestCaseAttribute("parallel", "firefox62osx", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win8", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win8", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome74macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "chrome73macos", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65win10", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65win81", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox66osx", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "firefox65osx", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win81", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "ie11win7", null)]
+        [NUnit.Framework.TestCaseAttribute("parallel", "edge18win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge17win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge16win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "safari12macos", null)]
@@ -175,24 +177,24 @@ this.ScenarioInitialize(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Details", null, @__tags);
-#line 62
+#line 63
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 63
- testRunner.Given(string.Format("I have navigated to the Home page using {0} and {1}", profile, environment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 64
- testRunner.And("I login as admin with user and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given(string.Format("I have navigated to the Home page using {0} and {1}", profile, environment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 65
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I login as admin with user and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 66
- testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 67
+ testRunner.Given("I have searched for UKPRN \"10002815\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 68
  testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
- testRunner.And("I select Edit Course Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 70
- testRunner.Then("Edit Course screen should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I select Edit Course Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 71
+ testRunner.Then("Edit Course screen should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 72
  testRunner.Given("I have edited course description with valid values \"ABCDEFGHIJKLMNOPQRSTUVWXYZABC" +
                     "DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDE" +
                     "FGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGH" +
@@ -219,7 +221,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHI" +
                     "JKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK" +
                     "LMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 72
+#line 73
  testRunner.When("I Click the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
