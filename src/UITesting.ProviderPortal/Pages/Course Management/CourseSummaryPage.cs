@@ -39,11 +39,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new EditCoursePage(webDriver);
         }
 
-        public EditCoursePage2 ClickCopyCourse()
+        public CopyCoursePage ClickCopyCourse()
         {
             FormCompletionHelper.ClickElement(copy);
             PageInteractionHelper.WaitForPageToLoad();
-            return new EditCoursePage2(webDriver);
+            return new CopyCoursePage(webDriver);
         }
     }
 }

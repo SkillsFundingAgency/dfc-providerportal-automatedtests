@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 {
     public class SearchforQualificationPage : TestSupport.BasePage 
     {
-        private static String PAGE_TITLE = "Find a Qualification";
+        private static String PAGE_TITLE = "Find a qualification";
         private static By LARSSearchTerm = By.Id("LarsSearchTerm");
         private By SearchValidationMsg = By.XPath("//*[@id='error-summary-title']");
         //private By QualLevelFilter = By.XPath("//*[@id='tab0']/h3");

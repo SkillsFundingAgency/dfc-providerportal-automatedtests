@@ -170,5 +170,40 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             editCourseRunDetails_YC3Page.SelectAttendance(strAtt);
         }
 
+        [Given(@"I have selected a classrom course")]
+        public void GivenIHaveSelectedAClassromCourse()
+        {
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+            viewYourCoursesPage.EnterSearchTerm("Classroom");
+            viewYourCoursesPage.ClickSelect();
+        }
+
+        [Then(@"Copy Course Page should be displayed")]
+        public void ThenCopyCoursePageShouldBeDisplayed()
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+        }
+
+        [When(@"I select the link to Add New Venue inthe copy course screen")]
+        public void WhenISelectTheLinkToAddNewVenueIntheCopyCourseScreen()
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.ClickAddNewVenueLink();
+        }
+
+        [When(@"I  Save the data in the copy course page")]
+        public void WhenISaveTheDataInTheCopyCoursePage()
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.ClickSave();
+        }
+
+        [Given(@"I have selected ""(.*)"" as venue from Venue Dropdown in the copy course page")]
+        public void GivenIHaveSelectedAsVenueFromVenueDropdownInTheCopyCoursePage(string strVenueName)
+        {
+            CopyCoursePage copyCoursePage  = new CopyCoursePage(webDriver);
+            copyCoursePage.SelectVenueByName(strVenueName);
+        }
+
     }
 }

@@ -217,39 +217,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 68
- testRunner.Given("I have selected a course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have selected a classrom course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 69
  testRunner.When("I clicked the Copy Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 70
- testRunner.Then("Second Page of Edit Course should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 71
- testRunner.Given("I have accessed the selected course run data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 72
- testRunner.And("I have selected \"Classroom\" as delivery mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
- testRunner.And("I have selected Start Date \"Defined Start Date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
- testRunner.And("I have entered \"25\" in Day, \"04\" in Month and \"2021\" in Year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("Copy Course Page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 75
- testRunner.When("I select the link to Add New Venue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select the link to Add New Venue inthe copy course screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 76
  testRunner.Then("Add venue screen should be displayed.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 77
  testRunner.Given("I have added a new Venue \"TestAddVenue_CopyCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 81
- testRunner.Then("the venue \"TestAddVenue_CopyCourse\" should be present in the Venue List", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 82
- testRunner.Given("I have selected \"TestAddVenue_CopyCourse\" as venue from Venue Dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 83
- testRunner.And("I have selected entered a value in cost \"200\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
- testRunner.And("I have entered a value in Duration \"6\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 85
- testRunner.And("I Select study mode \"Part-time\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 86
- testRunner.And("I Select attendance mode \"Daytime\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have selected \"TestAddVenue_CopyCourse\" as venue from Venue Dropdown in the cop" +
+                    "y course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 87
- testRunner.When("I  Save the data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I  Save the data in the copy course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 90
  testRunner.Then("the course should be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

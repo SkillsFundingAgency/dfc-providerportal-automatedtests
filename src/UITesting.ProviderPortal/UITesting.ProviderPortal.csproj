@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DFC-6716 BulkUpload.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Course Management\Copy Course.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Copy Course.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Course Management\COUR-107-SearchonYourCourses.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +248,7 @@
     <Compile Include="Pages\Bulk Upload\BulkUploadPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFixPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\UploadAFilePage.cs" />
+    <Compile Include="Pages\Course Management\CopyCoursePage.cs" />
     <Compile Include="Pages\Course Management\CourseSummaryPage.cs" />
     <Compile Include="Pages\Course Management\EditCoursePage.cs" />
     <Compile Include="Pages\Course Management\EditCoursePage2.cs" />
@@ -386,6 +392,10 @@
     <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6716 BulkUpload.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\Copy Course.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Copy Course.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\COUR-107-SearchonYourCourses.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
