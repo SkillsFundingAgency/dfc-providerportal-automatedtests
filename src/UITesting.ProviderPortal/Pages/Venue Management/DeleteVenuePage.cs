@@ -11,7 +11,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 {
     public class DeleteVenuePage : BasePage
     {
-        private static String PAGE_TITLE = "Your Venues";
+        private static String PAGE_TITLE = "Your venues";
         private By DeleteLink = By.PartialLinkText("Delet");
         private By CancelLink = By.PartialLinkText("Cance");
         private By EditLink = By.LinkText("Edit");
