@@ -18,7 +18,7 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private By BackLink = By.XPath("//a[@href='/UnregulatedCourses']");
         private By FirstLevelSelect = By.Id("LevelOneSelect");
         private By SecondLevelSelect = By.Id("LevelTwoSelect");
-        private By AddThisProvisionLink = By.LinkText("Add this provision");
+        private By AddThisProvisionLink = By.LinkText("Choose this provision");
         // private By LevelSelect = By.Id("LevelsSelect");
         private By LevelFilter = By.XPath("//*[@id='results']/div/div[1]/div[1]/div[1]");
        // private By CategoriesSelect = By.Id("CategoriesSelect");
