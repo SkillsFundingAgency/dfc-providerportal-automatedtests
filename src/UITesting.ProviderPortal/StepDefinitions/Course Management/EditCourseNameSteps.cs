@@ -212,5 +212,28 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             editYourCoursePage.ValidateSavedVenue(venueName);
         }
 
+        [When(@"I edit National coverage to No")]
+        public void NationalCoverageFalse()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.clickNationalFalse();
+        }
+
+
+        [When(@"I edit National coverage to Yes")]
+        public void NationalCoverageTrue()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.clickNationalTrue();
+        }
+
+
+        [When(@"I edit the first course region option on selector")]
+        public void WhenISelectTheFirstCourseRegionOptionOnSelector()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.selectFirstOptionOnRegionSelector();
+        }
+
     }
 }

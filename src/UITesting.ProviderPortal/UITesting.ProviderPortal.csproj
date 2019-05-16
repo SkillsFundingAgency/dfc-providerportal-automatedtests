@@ -76,6 +76,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Features\Course Management\COUR-150 Edit Course National Flag.feature.cs">
+      <DependentUpon>COUR-150 Edit Course National Flag.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Course Management\DFC-4830 Edit Course Venue.feature.cs">
       <DependentUpon>DFC-4830 Edit Course Venue.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -394,6 +399,10 @@
     <None Include="Features\Course Management\COUR-385 Course Text.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-385 Course Text.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Course Management\COUR-150 Edit Course National Flag.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-150 Edit Course National Flag.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Course Management\DFC-4830 Edit Course Venue.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

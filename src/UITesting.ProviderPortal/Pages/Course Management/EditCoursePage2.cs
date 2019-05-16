@@ -62,6 +62,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By workBasedOptionButton = By.Id("WorkBased");
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
+        private By firstRegion = By.XPath(".//*[@id='SelectRegionCheckBoxes']/details[1]/summary");
+        private By nationalTrue = By.Id("National_true");
+        private By nationalFalse = By.Id("National_false");
+        private By nationalError = By.XPath(".//*[@id='sectionRegions']/div/div/div[1]/fieldset/span");
+
 
         //variables
         private string errortxt;
@@ -563,8 +568,44 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new EditCoursePage2(webDriver);
         }
 
+        //public EditCoursePage2 selectFirstOptionOnRegionSelector()
+        //{
+        //    FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
+        //    return new EditCoursePage2(webDriver);
+        //}
+
+        public EditCoursePage2 clickNationalTrue()
+        {
+            if (webDriver.FindElement(nationalTrue).GetAttribute("checked") == "false")
+            {
+                FormCompletionHelper.ClickElement(nationalTrue);
+                return new EditCoursePage2(webDriver);
+            }
+            else
+            {
+                throw new Exception("National flag already set to True");
+            }
+        }
+
+
+        public EditCoursePage2 clickNationalFalse()
+        {
+            if (webDriver.FindElement(nationalFalse).GetAttribute("checked") == "false")
+            {
+                FormCompletionHelper.ClickElement(nationalFalse);
+                return new EditCoursePage2(webDriver);
+            }
+            else
+            {
+                throw new Exception("National flag already set to false");
+            }
+        }
+
         public EditCoursePage2 selectFirstOptionOnRegionSelector()
         {
+            PageInteractionHelper.WaitForPageToLoad();
+            FormCompletionHelper.ClickElement(firstRegion);
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
             return new EditCoursePage2(webDriver);
         }
