@@ -5,6 +5,7 @@ using UITesting.ProviderPortal.Pages.Provider_Management;
 using UITesting.ProviderPortal.Pages.Qualification_Management;
 using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.Pages.Data_Quality_Indicators;
+using UITesting.ProviderPortal.Pages.Bulk_Upload;
 using UITesting.ProviderPortal.Pages;
 using UITesting.BrowserStack.TestSupport;
 using OpenQA.Selenium;
@@ -130,7 +131,7 @@ namespace UITesting.BrowserStack.StepDefinitions
         [Given(@"I have logged into course directory as a provider")]
         public void LoginToCourseDirectory()
         {
-           // webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
+            // webDriver.Url = Configurator.GetConfiguratorInstance().GetBaseUrl();
         }
 
         [Given(@"I have searched for UKPRN ""(.*)"" and clicked search")]
@@ -184,7 +185,7 @@ namespace UITesting.BrowserStack.StepDefinitions
             AddVenuePage addVenuePage = new AddVenuePage(webDriver);
             addVenuePage.ClickFindAddress();
         }
-        
+
         [Then(@"Address validation message is displayed (.*)")]
         public void MessageIsDisplayedPostcodeMustBeEntered(string validationMsg)
         {
@@ -246,7 +247,7 @@ namespace UITesting.BrowserStack.StepDefinitions
             AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
             addVenueSelectAddressPage.SelectAddressVenueValidationMessage(venueValidationMsg);
         }
-        
+
         [When(@"I enter venue name (.*)")]
         public void WhenIEnterVenueName(string venueName)
         {
@@ -956,5 +957,121 @@ namespace UITesting.BrowserStack.StepDefinitions
         }
 
         #endregion Non Regulated Qualifications
+
+        #region Bulk Upload
+
+        [Given(@"I have accessed the Bulk Upload page")]
+        public void GivenIAmOnBulkUploadPage()
+        {
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl() + "/BulkUpload";
+        }
+
+
+        [When(@"I click Choose a File (.*) to upload")]
+        public void WhenIChooseFile(string fileName)
+        {
+            UploadAFilePage uploadAFilePage = new UploadAFilePage(webDriver);
+            uploadAFilePage.ChooseFile(fileName);
+        }
+
+        [When(@"I click Upload File leading to course errors")]
+        public void WhenIClickUploadFile()
+        {
+            UploadAFilePage uploadAFilePage = new UploadAFilePage(webDriver);
+            uploadAFilePage.UploadFile();
+        }
+
+        [When(@"I click Upload File leading to stage1 errors")]
+        public void UploadFileError()
+        {
+            UploadAFilePage uploadAFilePage = new UploadAFilePage(webDriver);
+            uploadAFilePage.UploadFileError();
+        }
+
+        [When(@"I click Upload File leading to no course errors")]
+        public void ClickUploadFileNoError()
+        {
+            UploadAFilePage uploadAFilePage = new UploadAFilePage(webDriver);
+            uploadAFilePage.UploadFileNoErrors();
+        }
+
+        [Then(@"I am on the Fix and publish bulk upload page")]
+        public void OnFixAndPublishPage()
+        {
+            BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
+        }
+
+        [Then(@"I am on the Publish your courses page")]
+        public void OnPublishPage()
+        {
+            BulkUploadPublishPage bulkUploadPublishPage = new BulkUploadPublishPage(webDriver);
+        }
+
+        #endregion Bulk Upload
+
+        #region DQI
+
+        [Given(@"I click on the courses need their start date updated link")]
+        public void GivenIAmOnDashboardPage()
+        {
+            DQIDashbordPage dQIDashbordPage = new DQIDashbordPage(webDriver);
+            dQIDashbordPage.NavigateToDQI();
+        }
+
+
+        [Then(@"I am taken to the DQI page")]
+        public void DQIFixAndPublishPage()
+        {
+            DQIFixPublishPage dQIFixAndPublish = new DQIFixPublishPage(webDriver);
+        }
+
+
+        [When(@"I click on the first course run requiring start date update")]
+        public void FixCourseRunStartDate()
+        {
+            DQIFixPublishPage dQIFixPublishPage = new DQIFixPublishPage(webDriver);
+            dQIFixPublishPage.FixCourseRun();
+        }
+
+
+        [Then(@"I am take to Edit Course page")]
+        public void DQIEdit()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+        }
+
+        [When(@"I update the start date")]
+        [Then(@"I update the start date")]
+        public void DQIUpdateStartDate()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.EnterStartDate("01", "Day");
+            editCoursePage2.EnterStartDate("01", "Month");
+            editCoursePage2.EnterStartDate("2021", "Year");
+        }
+
+
+        [Then(@"the Save button is displayed")]
+        public void DQISave()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.verifySaveButton();
+        }
+
+        [When(@"I click cancel DQI Edit")]
+        public void CancleDQIEdit()
+        {
+            EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
+            editCoursePage2.ClickCancelDQI();
+        }
+
+        [When(@"I click on the Provider name in the header")]
+        public void WhenIClickOnTheProviderNameInTheHeader()
+        {
+            DQIDashbordPage dQIDashbordPage = new DQIDashbordPage(webDriver);
+            dQIDashbordPage.NavigateToProviderDetails();
+        }
+
+        #endregion DQI
     }
 }
