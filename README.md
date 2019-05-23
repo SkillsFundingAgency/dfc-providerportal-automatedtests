@@ -1,5 +1,5 @@
 
-Automated Tests for Provider Portal
+Automated Tests for Provider Portal:
 
 API Tests, UI Tests, Security Tests, Browserstack Integration
 
@@ -8,3 +8,8 @@ Packages used:
 * [RestSharp 105.2.3](http://restsharp.org/)
 * [NUnit 3.6.1](https://www.nunit.org/)
 * [NLog 4.4.9](http://nlog-project.org/)
+
+Performance Tests for Provider Portal
+
+Using:
+Jmeter
