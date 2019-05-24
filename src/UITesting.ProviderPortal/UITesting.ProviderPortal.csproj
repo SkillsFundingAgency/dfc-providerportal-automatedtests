@@ -247,6 +247,10 @@
       <DependentUpon>DFC-5794 Edit Venue - Commit Edit Venue Record.feature</DependentUpon>
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
+    <Compile Include="Pages\Apprenticeships\ClassroomAndEmployerDeliveryOptionPage.cs" />
+    <Compile Include="Pages\Apprenticeships\NationalProviderCapabilityPage.cs" />
+    <Compile Include="Pages\Apprenticeships\ClassroomDeliveryOptionPage.cs" />
+    <Compile Include="Pages\Apprenticeships\AppDeliveryMethodPage.cs" />
     <Compile Include="Pages\Apprenticeships\AddApprenticeshipPage.cs" />
     <Compile Include="Pages\Apprenticeships\SearchApprenticeshipPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFilePublishedPage.cs" />
