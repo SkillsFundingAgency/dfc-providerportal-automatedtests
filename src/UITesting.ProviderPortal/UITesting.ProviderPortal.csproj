@@ -248,6 +248,8 @@
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\Apprenticeships\ClassroomAndEmployerDeliveryOptionPage.cs" />
+    <Compile Include="Pages\Apprenticeships\EmployerBasedDeliveryPage.cs" />
+    <Compile Include="Pages\Apprenticeships\ConfirmDetailsPage.cs" />
     <Compile Include="Pages\Apprenticeships\NationalProviderCapabilityPage.cs" />
     <Compile Include="Pages\Apprenticeships\ClassroomDeliveryOptionPage.cs" />
     <Compile Include="Pages\Apprenticeships\AppDeliveryMethodPage.cs" />

@@ -52,5 +52,19 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
             return new NationalProviderCapabilityPage(webDriver);
         }
 
+        public ConfirmDetailsPage ContinueYes()
+        {
+            FormCompletionHelper.ClickElement(ContinueBtn);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new ConfirmDetailsPage(webDriver);
+        }
+
+        public ConfirmDetailsPage ContinueNo()
+        {
+            FormCompletionHelper.ClickElement(ContinueBtn);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new ConfirmDetailsPage(webDriver);
+        }
+
     }
 }
