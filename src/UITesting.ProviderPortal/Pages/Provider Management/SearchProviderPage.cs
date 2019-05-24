@@ -51,7 +51,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         public ViewYourCoursesPage ClickViewCoursesButton()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(ViewCoursesButton, 20);
+            webDriver.FindElementWait(ViewCoursesButton, 60);
             FormCompletionHelper.ClickElement(ViewCoursesButton);
             PageInteractionHelper.WaitForPageToLoad();
             return new ViewYourCoursesPage(webDriver);

@@ -71,7 +71,7 @@ namespace UITesting.BrowserStack.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Bulk Upload Status of upload Courses")]
+        [NUnit.Framework.DescriptionAttribute("Data Quality Indicator - Start Date")]
         [NUnit.Framework.CategoryAttribute("BrowserStack")]
         [NUnit.Framework.TestCaseAttribute("parallel", "chrome74win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "chrome73win10", null)]
@@ -100,7 +100,7 @@ namespace UITesting.BrowserStack.Features
         [NUnit.Framework.TestCaseAttribute("parallel", "edge17win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "edge16win10", null)]
         [NUnit.Framework.TestCaseAttribute("parallel", "safari12macos", null)]
-        public virtual void BulkUploadStatusOfUploadCourses(string profile, string environment, string[] exampleTags)
+        public virtual void DataQualityIndicator_StartDate(string profile, string environment, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "BrowserStack"};
@@ -108,7 +108,7 @@ namespace UITesting.BrowserStack.Features
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Bulk Upload Status of upload Courses", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Data Quality Indicator - Start Date", null, @__tags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

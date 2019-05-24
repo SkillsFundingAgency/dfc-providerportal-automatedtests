@@ -5,7 +5,7 @@
 
 
 @BrowserStack
-Scenario Outline: Bulk Upload Status of upload Courses
+Scenario Outline: Data Quality Indicator - Start Date
 	Given I have navigated to the Home page using <profile> and <environment>
 	And I login as provider admin with Provider.10033145@gmail.com and SITtesting123
 	Then I am logged in as a provider
