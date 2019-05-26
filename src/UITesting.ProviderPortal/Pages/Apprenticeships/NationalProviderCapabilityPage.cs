@@ -59,11 +59,11 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
             return new ConfirmDetailsPage(webDriver);
         }
 
-        public ConfirmDetailsPage ContinueNo()
+        public EmployerBasedDeliveryPage ContinueNo()
         {
             FormCompletionHelper.ClickElement(ContinueBtn);
             PageInteractionHelper.WaitForPageToLoad();
-            return new ConfirmDetailsPage(webDriver);
+            return new EmployerBasedDeliveryPage(webDriver);
         }
 
     }
