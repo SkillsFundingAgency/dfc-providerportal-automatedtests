@@ -211,6 +211,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
 
 
+        [When(@"I click Page1 link")]
+        public void WhenIClickPage1Link()
+        {
+            AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
+            addCoursePage2.ClickPage1();
+        }
+
+
         [When(@"I select the first venue in the venues list")]
         public void SelectTheFirstVenueInTheVenuesList()
         {

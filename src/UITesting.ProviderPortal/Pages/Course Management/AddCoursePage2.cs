@@ -45,7 +45,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By DurationLength = By.Id("DurationLength");
         private By DurationUnit = By.Id("durationDropDown");
         private By DurationError = By.XPath(".//*[@id='sectionDuration']/div/span[2]");
-
+        private By Page1Link = By.Id("goToSection1Link");
         
 
         private By FirstVenue = By.Id("VenueName-1");
@@ -518,6 +518,13 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(publishBtn);
             PageInteractionHelper.WaitForPageToLoad();
             return new AddCoursePage2(webDriver);
+        }
+
+        public AddCoursePage ClickPage1()
+        {
+            FormCompletionHelper.ClickElement(Page1Link);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new AddCoursePage(webDriver);
         }
 
         public AddCoursePage2 SelectFirstVenue()

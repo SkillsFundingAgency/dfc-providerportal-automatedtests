@@ -9,7 +9,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     public class AddCoursePage : BasePage
     {
         //page objects
-        private static String PAGE_TITLE = "Complete your qualification details";
+        private static String PAGE_TITLE = "Complete qualification details";
         private By howWillLearn = By.Id("HowYouWillLearn");
         private By howWillLearnError = By.XPath(".//*[@id='sectionHowYouWillLearn']/div/div/span[2]");            
         private By howWillLearnInfo = By.Id("HowYouWillLearn-info");
