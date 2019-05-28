@@ -61,6 +61,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-352 CompleteApprenticeshipsDetails.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-352 CompleteApprenticeshipsDetails.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -397,6 +402,10 @@
     <None Include="Features\Apprenticeships\COUR-350 SearchApprenticeship.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-350 SearchApprenticeship.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-352 CompleteApprenticeshipsDetails.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-352 CompleteApprenticeshipsDetails.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
