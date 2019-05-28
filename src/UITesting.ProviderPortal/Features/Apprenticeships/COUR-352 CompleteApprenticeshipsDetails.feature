@@ -1,11 +1,111 @@
 ﻿Feature: COUR-352 CompleteApprenticeshipsDetails
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to Add a new Apprenticehsip
+	As a provider
+	I want to be able to go through the add apprenticeships journey
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+
+Background:
+	Given I have accessed course directory as a provider
+	And I login as admin with user and password
+	Then I am logged in
+	Given I have accessed the Apprenticeship Search page
+	When I use apprenticeship search to search for Plumber
+	Then the Results are displayed
+@CI
+Scenario: Add all valid Values
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testapp@gmail.com"
+	And I have entered a telephone "07112234598"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then the apprenticeship delivery screen should be visible 
+@CI
+Scenario: Apprenticeships info not entered
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information " "
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testapp@gmail.com"
+	And I have entered a telephone "07112234598"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a App Info error message should be displayed "Enter Apprenticeship information for employers"
+@CI
+Scenario: Email not entered
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email " "
+	And I have entered a telephone "07112234598"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a email Info error message should be displayed "Enter email"
+@CI
+Scenario: Phone not entered
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testapp@gmail.com"
+	And I have entered a telephone " "
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a phone Info error message should be displayed "Enter telephone"
+@CI
+Scenario: Invalid Email entered
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testappgmail.uk"
+	And I have entered a telephone "+44 (0)121 445 6767"
+	And I have entered contact details " "
+	Then a email Info error message should be displayed "Email should have an ampersand"
+@CI
+Scenario: Invalid Phone Number entered-less than 11 characters
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testapp@gmail.com"
+	And I have entered a telephone "7112234598"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a phone Info error message should be displayed "Telephone should be minimum 11 characters"
+@CI
+Scenario: Invalid Phone Number entered-no numbers
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testapp@gmail.com"
+	And I have entered a telephone "wrongnumber"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a phone Info error message should be displayed "Telephone should only have numbers and spaces"
+@CI
+Scenario: Apprenticeships info entered that is more than 750 characters
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occid"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "Testapp@gmail.com"
+	And I have entered a telephone "07112234598"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a App Info error message should be displayed "Apprenticeship information for employers should be no more than 750 characters"
+@CI
+Scenario: Email more than 255 characters
+	Given I have selected an apprenticeship
+	And I have accessed the Apprenticeships training details page
+	When I enter apprenticeships information "Test Apprenticeship"
+	And I have entered a website "http:\\www.google.com"
+	And I have entered an email "testABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ@gmail.com"
+	And I have entered a telephone "+44 (0)121 445 6767"
+	And I have entered contact details " "
+	And I have clicked continue
+	Then a email Info error message should be displayed "Email should be no more than 255 characters"

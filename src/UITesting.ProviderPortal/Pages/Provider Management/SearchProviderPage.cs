@@ -8,7 +8,8 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 {
     public class SearchProviderPage : BasePage
     {
-        private static String PAGE_TITLE = "Search Provider";
+        //private static String PAGE_TITLE = "Search Provider";
+        private static String PAGE_TITLE = "Find a course or training provider";
         private By SearchField = By.Id("SearchTerm");
         private By SearchButton = By.Id("searchProvider");
         private By ViewCoursesButton = By.Id("btnQualificationList");

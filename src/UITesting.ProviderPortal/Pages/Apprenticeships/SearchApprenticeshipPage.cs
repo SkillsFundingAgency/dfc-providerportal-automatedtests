@@ -15,6 +15,9 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
         private By apprenticeshipsName = By.XPath(".//*[@id='1']/h3");
         private By level = By.XPath(".//*[@id='1']/span[2]");
         private By selectLink = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div[2]/div[4]/a");
+
+        
+
         private By frameworkLabel = By.XPath("//*[@id='1']/span");
 
         public SearchApprenticeshipPage(IWebDriver webDriver) : base(webDriver)

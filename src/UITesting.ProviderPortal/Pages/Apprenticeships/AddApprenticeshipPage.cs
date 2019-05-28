@@ -10,6 +10,7 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
         private static String PAGE_TITLE = "Add apprenticeship training details";
         private By ApprenticeshipInfo = By.Id("tinymce");
         private By ApprenticeshipInfoError = By.Id("infoRequired");
+        private By ApprenticeshipInfoErrorHeader = By.Id("error-hash-link-a-1");
         private By Website = By.Id("Website");
         private By WebsiteError = By.XPath(".//*[@id='WebsiteContainer']/span[1]");
         private By Email = By.Id("Email");
@@ -38,10 +39,12 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
             return new AddApprenticeshipPage(webDriver);
         }
 
-        public AddApprenticeshipPage AppInfoErrorDisplayed()
+        public AddApprenticeshipPage AppInfoErrorDisplayed(string errMsg)
         {
             PageInteractionHelper.WaitForElementToBePresent(ApprenticeshipInfoError);
             PageInteractionHelper.IsElementDisplayed(ApprenticeshipInfoError);
+            PageInteractionHelper.VerifyText(ApprenticeshipInfoError, errMsg);
+            PageInteractionHelper.VerifyText(ApprenticeshipInfoErrorHeader, errMsg);
             return new AddApprenticeshipPage(webDriver);
         }
 

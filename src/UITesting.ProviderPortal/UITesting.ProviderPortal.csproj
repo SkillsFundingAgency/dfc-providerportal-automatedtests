@@ -308,6 +308,7 @@
     </Compile> -->
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Apprenticeships\ApprenticeshipSteps.cs" />
+    <Compile Include="StepDefinitions\Apprenticeships\CompleteApprenticeshipsDetailsSteps.cs" />
     <Compile Include="StepDefinitions\Bulk Upload\BulkUploadSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
