@@ -5,14 +5,12 @@ using OpenQA.Selenium;
 
 namespace UITesting.ProviderPortal.Pages.Apprenticeships
 {
-    public class ClassroomDeliveryOptionPage : BasePage
+    public class ConfirmDetailsPage : BasePage
     {
-        private static String PAGE_TITLE = "Classroom Delivery Options";
-        private By saveContine = By.Id("next1");
-        private By saveAnother = By.Id("next2");
+        private static String PAGE_TITLE = "Check your answers before saving";
 
 
-        public ClassroomDeliveryOptionPage(IWebDriver webDriver) : base(webDriver)
+        public ConfirmDetailsPage(IWebDriver webDriver) : base(webDriver)
         {
            SelfVerify();
         }
