@@ -357,3 +357,71 @@ Scenario: DFC4900 User Publishes Course
 	And I select duration unit Weeks
 	And I select the first venue in the venues list
 	And I click Publish
+
+@CI
+Scenario: DFC6704 User clicks back to page 1
+	When I enter the following in the course name field Course test
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I select the first venue in the venues list
+	And I click Page1 link
+	When I click Next Button
+	And I click Publish
+
+@CI
+Scenario: DFC6704 Session maintainance - Classroom based
+	When I enter the following in the course name field Course test
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I select the first venue in the venues list
+	And I click Page1 link
+	When I click Next Button
+	And I click Publish
+
+
+Scenario: DFC6704 Session maintainance - Single Region
+	When I enter the following in the course name field Course AutoTestAddWorkBasedOption2
+	And I enter the following in the cost field 1999.00
+	And I click on the Work Based Option Radio Button
+	And I click on No to National coverage
+	And I select the first course region option on selector
+	And I select duration length 9
+	And I click Page1 link
+	When I click Next Button
+	And I click Publish
+
+@CI
+Scenario: DFC6704 Session maintainance - National Coverage
+	When I enter the following in the course name field Course AutoTestAddWorkBasedOption2
+	And I enter the following in the cost field 1999.00
+	And I click on the Work Based Option Radio Button
+	And I click on Yes to National coverage
+	And I select duration length 9
+	And I click Page1 link
+	When I click Next Button
+	And I click Publish
+
+@CI
+Scenario: DFC6704 Session maintainance - Online Delivery
+	When I enter the following in the course name field Course test
+	When I select delivery mode Online
+	When I select start date Defined Start Date
+	And I enter 01 in the Day field
+	And I enter 01 in the Month field
+	And I enter 2021 in the Year field
+	And I enter the following in the cost field 999
+	And I select duration length 9
+	And I select duration unit Weeks
+	And I click Page1 link
+	When I click Next Button
+	And I click Publish
