@@ -68,36 +68,46 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
             addApprenticeshipPage.Continue();
         }
-        
-        /*[When(@"I have entered a telephone ""(.*)""")]
-        public void WhenIHaveEnteredATelephone(string p0)
+        [When(@"I have clicked continue error")]
+        public void WhenIHaveClickedContinueError()
         {
-            ScenarioContext.Current.Pending();
-        }*/
-        
+            AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
+            addApprenticeshipPage.ContinueError();
+        }
+
+
         [Then(@"the apprenticeship delivery screen should be visible")]
         public void ThenTheApprenticeshipDeliveryScreenShouldBeVisible()
         {
-            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+            AppDeliveryMethodPage appDeliveryMethodPage = new AppDeliveryMethodPage(webDriver);
         }
         
         [Then(@"a App Info error message should be displayed ""(.*)""")]
         public void ThenAAppInfoErrorMessageShouldBeDisplayed(string errMsg)
         {
             AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
-            addApprenticeshipPage.AppInfoErrorDisplayed(errMsg);
+            addApprenticeshipPage.AppInfoErrorDisplayed(errMsg,"AddlChar");
         }
-        
-        [Then(@"a email Info error message should be displayed ""(.*)""")]
-        public void ThenAEmailInfoErrorMessageShouldBeDisplayed(string p0)
+        [Then(@"a Blank App Info error message should be displayed ""(.*)""")]
+        public void ThenABlankAppInfoErrorMessageShouldBeDisplayed(string errMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
+            addApprenticeshipPage.AppInfoErrorDisplayed(errMsg, "Blank");
+        }
+
+
+        [Then(@"a email Info error message should be displayed ""(.*)""")]
+        public void ThenAEmailInfoErrorMessageShouldBeDisplayed(string errMsg)
+        {
+            AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
+            addApprenticeshipPage.EmailErrorDisplayed(errMsg);
         }
         
         [Then(@"a phone Info error message should be displayed ""(.*)""")]
-        public void ThenAPhoneInfoErrorMessageShouldBeDisplayed(string p0)
+        public void ThenAPhoneInfoErrorMessageShouldBeDisplayed(string errMsg)
         {
-            ScenarioContext.Current.Pending();
+            AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
+            addApprenticeshipPage.PhoneErrorDisplayed(errMsg);
         }
     }
 }
