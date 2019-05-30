@@ -7,7 +7,8 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
 {
     public class ClassroomDeliveryOptionPage : BasePage
     {
-        private static String PAGE_TITLE = "Classroom Delivery Options";
+        //private static String PAGE_TITLE = "Classroom Delivery Options";
+        private static String PAGE_TITLE = "Select delivery options";
         private By saveContine = By.Id("next1");
         private By saveAnother = By.Id("next2");
 

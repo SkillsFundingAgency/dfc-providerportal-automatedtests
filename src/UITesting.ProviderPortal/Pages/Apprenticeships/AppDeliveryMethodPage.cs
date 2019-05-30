@@ -47,10 +47,11 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
             return new AppDeliveryMethodPage(webDriver);
         }
 
-        public AppDeliveryMethodPage AppInfoErrorDisplayed()
+        public AppDeliveryMethodPage AppInfoErrorDisplayed(string errMsg)
         {
             PageInteractionHelper.WaitForElementToBePresent(ErrorMsg);
             PageInteractionHelper.IsElementDisplayed(ErrorMsg);
+            PageInteractionHelper.VerifyText(errMsg, errMsg);
             return new AppDeliveryMethodPage(webDriver);
         }
 

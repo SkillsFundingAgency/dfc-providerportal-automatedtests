@@ -66,6 +66,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COUR-352 CompleteApprenticeshipsDetails.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-387 AddClassromDeliveryMethodForApprenticeship.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-387 AddClassromDeliveryMethodForApprenticeship.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-615 SelectApprenticeshipsDeliveryType.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COUR-615 SelectApprenticeshipsDeliveryType.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -309,6 +319,7 @@
     <Compile Include="StepDefinitions\AddVenue_EditVenueAddressSteps.cs" />
     <Compile Include="StepDefinitions\Apprenticeships\ApprenticeshipSteps.cs" />
     <Compile Include="StepDefinitions\Apprenticeships\CompleteApprenticeshipsDetailsSteps.cs" />
+    <Compile Include="StepDefinitions\Apprenticeships\SelectApprenticeshipsDeliveryTypeSteps.cs" />
     <Compile Include="StepDefinitions\Bulk Upload\BulkUploadSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourse_AddDescriptionSteps.cs" />
     <Compile Include="StepDefinitions\Course Management\AddCourseSteps.cs" />
@@ -409,6 +420,14 @@
     <None Include="Features\Apprenticeships\COUR-352 CompleteApprenticeshipsDetails.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-352 CompleteApprenticeshipsDetails.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-387 AddClassromDeliveryMethodForApprenticeship.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-387 AddClassromDeliveryMethodForApprenticeship.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-615 SelectApprenticeshipsDeliveryType.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-615 SelectApprenticeshipsDeliveryType.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
