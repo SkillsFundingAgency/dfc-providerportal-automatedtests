@@ -117,11 +117,11 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select a location and Day Release and click SaveAddAnother")]
+        [NUnit.Framework.DescriptionAttribute("Select a location and Day Release and click SaveandContinue")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectALocationAndDayReleaseAndClickSaveAddAnother()
+        public virtual void SelectALocationAndDayReleaseAndClickSaveandContinue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and Day Release and click SaveAddAnother", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and Day Release and click SaveandContinue", null, new string[] {
                         "CI"});
 #line 28
 this.ScenarioInitialize(scenarioInfo);
@@ -133,9 +133,59 @@ this.FeatureBackground();
 #line 30
  testRunner.And("I have selected Day release as delivery mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.When("I click continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click SaveandContinue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the Apprenticeship Summary Screen should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Select a location and Block Release and click SaveandContinue")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void SelectALocationAndBlockReleaseAndClickSaveandContinue()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and Block Release and click SaveandContinue", null, new string[] {
+                        "CI"});
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line 35
+ testRunner.Given("I have selected a venue from the Location dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 36
+ testRunner.And("I have selected Block release as delivery mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.When("I click SaveandContinue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+ testRunner.Then("the Apprenticeship Summary Screen should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Select a location and select both Day and Block Release and click SaveandContinue" +
+            "")]
+        [NUnit.Framework.CategoryAttribute("CI")]
+        public virtual void SelectALocationAndSelectBothDayAndBlockReleaseAndClickSaveandContinue()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and select both Day and Block Release and click SaveandContinue" +
+                    "", null, new string[] {
+                        "CI"});
+#line 40
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line 41
+ testRunner.Given("I have selected a venue from the Location dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 42
+ testRunner.And("I have selected Day Release and Block release as delivery mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
+ testRunner.When("I click SaveandContinue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 44
+ testRunner.Then("the Apprenticeship Summary Screen should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
