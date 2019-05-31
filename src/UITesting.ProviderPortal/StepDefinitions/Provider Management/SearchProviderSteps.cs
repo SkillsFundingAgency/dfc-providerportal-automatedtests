@@ -30,5 +30,43 @@ namespace UITesting.ProviderPortal.StepDefinitions
             searchProviderPage.ClickViewCoursesButton();
         }
 
+        [Then(@"(.*) providers is displayed in the search results")]
+        public void ThenProvidersIsDisplayedInTheSearchResults(int results)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+
+        [Then(@"the UKPRN for the provider is (.*)")]
+        public void ThenTheUKPRNForTheProviderIs(string UKPRN)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"No results message is displayed in the search results")]
+        public void ThenNoResultsMessageIsDisplayedInTheSearchResults()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the Name for the provider is (.*)")]
+        public void ThenTheNameForTheProviderIs(string provider)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click the view link")]
+        public void WhenIClickTheViewLink()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"provider details page is displayed")]
+        public void ThenProviderDetailsPageIsDisplayed()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+
     }
 }
