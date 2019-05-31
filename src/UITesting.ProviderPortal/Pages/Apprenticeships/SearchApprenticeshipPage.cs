@@ -7,7 +7,7 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
 {
     public class SearchApprenticeshipPage : BasePage
     {
-        private static String PAGE_TITLE = "Find apprenticeship training offers";
+        private static String PAGE_TITLE = "Find apprenticeship";
         private By searchInput = By.Id("ApprenticeshipSearchTerm");
         private By searchButton = By.Id("searchApprenticeships");
         private By errorMsg = By.Id("ErrorMessage");

@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COUR-387 AddClassromDeliveryMethodForApprenticeship.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-626 SelectNationalProviderCapability.feature.cs">
+      <DependentUpon>COUR-626 SelectNationalProviderCapability.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Apprenticeships\COUR-615 SelectApprenticeshipsDeliveryType.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -424,6 +429,10 @@
     <None Include="Features\Apprenticeships\COUR-387 AddClassromDeliveryMethodForApprenticeship.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-387 AddClassromDeliveryMethodForApprenticeship.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-626 SelectNationalProviderCapability.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-626 SelectNationalProviderCapability.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Apprenticeships\COUR-615 SelectApprenticeshipsDeliveryType.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

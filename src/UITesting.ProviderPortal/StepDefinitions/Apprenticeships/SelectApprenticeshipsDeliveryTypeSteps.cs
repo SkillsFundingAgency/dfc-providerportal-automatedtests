@@ -68,6 +68,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             ClassroomDeliveryOptionPage classroomDeliveryOptionPage = new ClassroomDeliveryOptionPage(webDriver);
         }
         
+        [Then(@"I am on the National Provider capability page")]
         [Then(@"the national provider capability page should be delivered")]
         public void ThenTheNationalProviderCapabilityPageShouldBeDelivered()
         {

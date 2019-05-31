@@ -60,6 +60,60 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             apprenticeshipSearchPage.SelectApprenticeship();
         }
 
+        [When(@"I press continue on the National provider capability page")]
+        public void WhenIPressContinueOnTheNationalProviderCapabilityPage()
+        {
+            NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+            nationalProviderCapabilityPage.ContinueError();
+        }
+
+        [Then(@"the error message should be displayed (.*)")]
+        public void ThenTheErrorMessageShouldBeDisplayed()
+        {
+            NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+            nationalProviderCapabilityPage.ErrorDisplayed();
+        }
+
+        [When(@"i  select yes to National provider")]
+        public void WhenISelectYesToNationalProvider()
+        {
+            NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+            nationalProviderCapabilityPage.clickYes();
+        }
+
+        [When(@"i  select no to National provider")]
+        public void WhenISelectNoToNationalProvider()
+        {
+            NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+            nationalProviderCapabilityPage.clickNo();
+        }
+
+        [When(@"I press continue on the National provider capability page yes")]
+        public void WhenIPressContinueOnTheNationalProviderCapabilityPageYes()
+        {
+            NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+            nationalProviderCapabilityPage.ContinueYes();
+        }
+
+        [When(@"I press continue on the National provider capability page no")]
+        public void WhenIPressContinueOnTheNationalProviderCapabilityPageNo()
+        {
+            NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+            nationalProviderCapabilityPage.ContinueNo();
+        }
+
+        [Then(@"I am on the confirm details page")]
+        public void ThenIAmOnTheConfirmDetailsPage()
+        {
+            ConfirmDetailsPage confirmDetailsPage = new ConfirmDetailsPage(webDriver);
+        }
+
+        [Then(@"I am on the employer based delivery page")]
+        public void ThenIAmOnTheEmployerBasedDeliveryPage()
+        {
+            EmployerBasedDeliveryPage employerBasedDeliveryPage = new EmployerBasedDeliveryPage(webDriver);
+        }
+
 
     }
 
