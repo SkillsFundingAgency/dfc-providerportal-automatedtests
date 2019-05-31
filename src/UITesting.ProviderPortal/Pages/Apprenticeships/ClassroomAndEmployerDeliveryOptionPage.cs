@@ -7,7 +7,7 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
 {
     public class ClassroomAndEmployerDeliveryOptionPage : BasePage
     {
-        private static String PAGE_TITLE = "How is the training delivered at this location?";
+        private static String PAGE_TITLE = "Select delivery options";
 
 
         public ClassroomAndEmployerDeliveryOptionPage(IWebDriver webDriver) : base(webDriver)
