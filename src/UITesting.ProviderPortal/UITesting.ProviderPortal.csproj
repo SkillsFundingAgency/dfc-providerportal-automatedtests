@@ -71,8 +71,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COUR-387 AddClassromDeliveryMethodForApprenticeship.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Apprenticeships\COUR-626 SelectNationalProviderCapability.feature.cs">
-      <DependentUpon>COUR-626 SelectNationalProviderCapability.feature</DependentUpon>
+    <Compile Include="Features\Apprenticeships\COUR-626 SelectNationalProviderCapability - Copy.feature.cs">
+      <DependentUpon>COUR-626 SelectNationalProviderCapability - Copy.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-388 AddEmployerBasedDeliveryMethod.feature.cs">
+      <DependentUpon>COUR-388 AddEmployerBasedDeliveryMethod.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -430,9 +435,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-387 AddClassromDeliveryMethodForApprenticeship.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Apprenticeships\COUR-626 SelectNationalProviderCapability.feature">
+    <None Include="Features\Apprenticeships\COUR-626 SelectNationalProviderCapability - Copy.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>COUR-626 SelectNationalProviderCapability.feature.cs</LastGenOutput>
+      <LastGenOutput>COUR-626 SelectNationalProviderCapability - Copy.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-388 AddEmployerBasedDeliveryMethod.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-388 AddEmployerBasedDeliveryMethod.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Apprenticeships\COUR-615 SelectApprenticeshipsDeliveryType.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

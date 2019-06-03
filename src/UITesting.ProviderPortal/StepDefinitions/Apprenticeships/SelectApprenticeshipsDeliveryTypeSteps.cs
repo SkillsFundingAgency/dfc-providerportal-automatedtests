@@ -74,6 +74,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
         {
             NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
         }
+
+
         [Then(@"an apprenticeships error message should be displayed ""(.*)""")]
         public void ThenAnApprenticeshipsErrorMessageShouldBeDisplayed(string errMsg)
         {

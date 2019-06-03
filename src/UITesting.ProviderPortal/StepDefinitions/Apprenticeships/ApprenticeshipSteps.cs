@@ -115,6 +115,36 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
         }
 
 
+        [Then(@"I close the (.*) region")]
+        [When(@"I expand the (.*) region")]
+        public void WhenIExpandTheEastMidlandsRegions(string region)
+        {
+            EmployerBasedDeliveryPage employerBasedDeliveryPage = new EmployerBasedDeliveryPage(webDriver);
+            employerBasedDeliveryPage.SelectRegion(region);
+        }
+
+        [When(@"I select the first sub-region")]
+        public void WhenISelectTheFirstSub_Region()
+        {
+            EmployerBasedDeliveryPage employerBasedDeliveryPage = new EmployerBasedDeliveryPage(webDriver);
+            employerBasedDeliveryPage.SelectFirstSubRegion();
+        }
+
+        [When(@"I select the all sub-regions")]
+        public void WhenISelectTheAllSubRegions()
+        {
+            EmployerBasedDeliveryPage employerBasedDeliveryPage = new EmployerBasedDeliveryPage(webDriver);
+            employerBasedDeliveryPage.SelectAllSubRegion();
+        }
+
+        [When(@"I click Continue on Add employer based delivery")]
+        public void WhenIClickContinueOnAddEmployerBasedDelivery()
+        {
+            EmployerBasedDeliveryPage employerBasedDeliveryPage = new EmployerBasedDeliveryPage(webDriver);
+            employerBasedDeliveryPage.ClickContinue();
+        }
+
+
     }
 
 }
