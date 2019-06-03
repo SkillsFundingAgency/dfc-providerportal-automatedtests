@@ -82,7 +82,7 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
 #line 11
  testRunner.Given("I have accessed the Apprenticeship Search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
- testRunner.When("I use apprenticeship search to search for Plumber", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I use apprenticeship search to search for Plum", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
  testRunner.Then("the Results are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -254,7 +254,7 @@ this.FeatureBackground();
 #line 67
  testRunner.And("I have clicked continue error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 68
- testRunner.Then("a email Info error message should be displayed \"Email should have an ampersand\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a email Info error message should be displayed \"Enter a valid email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -323,8 +323,7 @@ this.FeatureBackground();
 #line 89
  testRunner.And("I have clicked continue error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 90
- testRunner.Then("a phone Info error message should be displayed \"Telephone should only have number" +
-                    "s and spaces\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a phone Info error message should be displayed \"Enter a valid telephone number\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
