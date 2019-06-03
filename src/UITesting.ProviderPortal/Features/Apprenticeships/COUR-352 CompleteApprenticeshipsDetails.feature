@@ -9,7 +9,7 @@ Background:
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have accessed the Apprenticeship Search page
-	When I use apprenticeship search to search for Plumber
+	When I use apprenticeship search to search for Plum
 	Then the Results are displayed
 @CI
 Scenario: Add all valid Values
@@ -65,7 +65,7 @@ Scenario: Invalid Email entered
 	And I have entered a telephone "+44 (0)121 445 6767"
 	And I have entered contact details " "
 	And I have clicked continue error
-	Then a email Info error message should be displayed "Email should have an ampersand"
+	Then a email Info error message should be displayed "Enter a valid email"
 @CI
 Scenario: Invalid Phone Number entered-less than 11 characters
 	Given I have selected an apprenticeship
@@ -87,7 +87,7 @@ Scenario: Invalid Phone Number entered-no numbers
 	And I have entered a telephone "wrongnumber"
 	And I have entered contact details " "
 	And I have clicked continue error
-	Then a phone Info error message should be displayed "Telephone should only have numbers and spaces"
+	Then a phone Info error message should be displayed "Enter a valid telephone number"
 @CI
 Scenario: Apprenticeships info entered that is more than 750 characters
 	Given I have selected an apprenticeship

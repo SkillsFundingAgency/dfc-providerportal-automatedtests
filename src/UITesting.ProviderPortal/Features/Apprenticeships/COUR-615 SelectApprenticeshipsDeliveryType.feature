@@ -8,7 +8,7 @@ Background:
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have accessed the Apprenticeship Search page
-	When I use apprenticeship search to search for Plumber
+	When I use apprenticeship search to search for Plum
 	Then the Results are displayed
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
