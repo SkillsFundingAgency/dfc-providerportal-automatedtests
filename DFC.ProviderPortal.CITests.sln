@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.BrowserStack", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.ProviderPortalDebug", "src\UITesting.ProviderPortalDebug\UITesting.ProviderPortalDebug.csproj", "{E92E6574-9C9F-41D5-9898-6B21E6BE0A47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITesting.CourseDirectory", "UITesting.CourseDirectory\UITesting.CourseDirectory.csproj", "{0A748301-791B-4CFE-B200-834CCC997A99}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CITests|Any CPU = CITests|Any CPU

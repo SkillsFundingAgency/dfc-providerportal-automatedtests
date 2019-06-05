@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,9 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
-      <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
-    </Compile>
     <Compile Include="Features\Apprenticeships\COUR-350 SearchApprenticeship.feature.cs">
       <DependentUpon>COUR-350 SearchApprenticeship.feature</DependentUpon>
       <AutoGen>True</AutoGen>

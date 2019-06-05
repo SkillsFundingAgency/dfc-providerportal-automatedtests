@@ -53,9 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\UITesting.CourseDirectory\Steps\Courses\Course\ViewYourCourses_Line1Steps.cs">
-      <Link>StepDefinitions\Course Management\ViewYourCourses_Line1Steps.cs</Link>
-    </Compile>
     <Compile Include="Features\Venue Management\DFC-4761 Edit Venue - View Venue Details.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
