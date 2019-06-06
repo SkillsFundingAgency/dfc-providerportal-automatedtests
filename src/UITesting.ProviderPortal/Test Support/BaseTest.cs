@@ -27,8 +27,8 @@ namespace UITesting.ProviderPortal.TestSupport
             switch (browser)
             {
                 case "debug":
-                    webDriver = new ChromeDriver();
-                    //webDriver = new FirefoxDriver();
+                    //webDriver = new ChromeDriver();
+                    webDriver = new FirefoxDriver();
                     webDriver.Manage().Window.Maximize();
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                     webDriver.Manage().Cookies.DeleteAllCookies();
