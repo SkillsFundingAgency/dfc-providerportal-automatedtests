@@ -53,7 +53,7 @@ namespace UITesting.ProviderPortal.TestSupport
         }
 
         [Scope(Tag = "CI")]
-       // [AfterScenario]
+        [AfterScenario]
         [AfterTestRun]
         public static void TearDown()
         {
@@ -74,12 +74,12 @@ namespace UITesting.ProviderPortal.TestSupport
             //TODO: implement logic that has to run before each scenario
         }
 
-        [Scope(Tag = "CI")]
+        //[Scope(Tag = "CI")]
         [AfterScenario]
         public void AfterScenario()
         {
             //TODO: implement logic that has to run after executing each scenario
-            webDriver.Dispose();
+           // webDriver.Dispose();
         }
 
 

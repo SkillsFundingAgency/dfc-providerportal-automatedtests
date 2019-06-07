@@ -8,7 +8,7 @@ Background:
 	And I login as admin with user and password
 	Then I am logged in
 	Given I have accessed the Apprenticeship Search page
-	When I use apprenticeship search to search for Plumber
+	When I use apprenticeship search to search for Plumbing
 	Then the Results are displayed
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
@@ -42,6 +42,10 @@ Scenario: Select EastMidlands regions and select All sub-regions
 
 @CI
 Scenario: Select All regions and the first sub-region for each
+	When I expand the Yorkshire region
+	And I select the first sub-region
+	Then I close the Yorkshire region
+	#
 	When I expand the East Midlands region
 	And I select the first sub-region
 	Then I close the East Midlands region
@@ -73,10 +77,6 @@ Scenario: Select All regions and the first sub-region for each
 	When I expand the West Midlands region
 	And I select the first sub-region
 	Then I close the West Midlands region
-	#
-	When I expand the Yorkshire region
-	And I select the first sub-region
-	Then I close the Yorkshire region
 	#
 	When I click Continue on Add employer based delivery
 	Then I am on the confirm details page

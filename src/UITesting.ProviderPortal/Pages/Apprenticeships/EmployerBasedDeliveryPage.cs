@@ -97,6 +97,10 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
 
         public EmployerBasedDeliveryPage SelectAllSubRegion()
         {
+            PageInteractionHelper.WaitForPageToLoad();
+            System.Threading.Thread.Sleep(1000);
+            PageInteractionHelper.WaitForElementToBeDisplayed(SelectAll);
+            PageInteractionHelper.WaitForElementToBePresent(SelectAll);
             FormCompletionHelper.ClickElement(SelectAll);
             PageInteractionHelper.WaitForPageToLoad();
             return new EmployerBasedDeliveryPage(webDriver);

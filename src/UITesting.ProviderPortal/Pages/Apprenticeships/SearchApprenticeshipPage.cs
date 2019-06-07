@@ -10,16 +10,12 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
         private static String PAGE_TITLE = "Find apprenticeship";
         private By searchInput = By.Id("ApprenticeshipSearchTerm");
         private By searchButton = By.Id("searchApprenticeships");
-        private By errorMsg = By.Id("ErrorMessage");
-        private By resultReturned = By.XPath("//*[@id='ApprenticeshipsSearchResultContainer']/div/div[2]/div/h3");
-        
-        private By apprenticeshipsName = By.XPath(".//*[@id='1']/h3");
-        private By level = By.XPath(".//*[@id='1']/span[2]");
-        //private By selectLink = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div[2]/div[4]/a");
+        private By errorMsg = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div/div");
+        private By resultReturned = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div/div[1]/span");
+        private By apprenticeshipsName = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div/div[2]/div/h3");
+        private By level = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div/div[2]/div/p[1]/span");
         private By selectLink = By.LinkText("Choose this apprenticeship");
-        
-
-        private By frameworkLabel = By.XPath("//*[@id='1']/span");
+        private By frameworkLabel = By.XPath(".//*[@id='ApprenticeshipsSearchResultContainer']/div/div[2]/div/h3/span");
 
         public SearchApprenticeshipPage(IWebDriver webDriver) : base(webDriver)
         {

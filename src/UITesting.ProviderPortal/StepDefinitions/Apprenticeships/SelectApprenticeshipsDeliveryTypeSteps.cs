@@ -33,6 +33,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             AppDeliveryMethodPage appDeliveryMethodPage = new AppDeliveryMethodPage(webDriver);
             appDeliveryMethodPage.clickEmployer();
         }
+
+        [Given(@"I have selected both as delivery type")]
+        public void GivenIHaveSelectedBothType()
+        {
+            AppDeliveryMethodPage appDeliveryMethodPage = new AppDeliveryMethodPage(webDriver);
+            appDeliveryMethodPage.clickBoth();
+        }
+
         [When(@"I press continue error")]
         public void WhenIPressContinueError()
         {
@@ -61,7 +69,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             appDeliveryMethodPage.ContinueEmployer();
         }
 
-
+        [When(@"I press continue both")]
+        public void WhenIPressContinueBoth()
+        {
+            AppDeliveryMethodPage appDeliveryMethodPage = new AppDeliveryMethodPage(webDriver);
+            appDeliveryMethodPage.ContinueBoth();
+        }
         [Then(@"the Apprenticeships delivery options screen is displayed")]
         public void ThenTheApprenticeshipsDeliveryOptionsScreenIsDisplayed()
         {
@@ -73,6 +86,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
         public void ThenTheNationalProviderCapabilityPageShouldBeDelivered()
         {
             NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
+        }
+
+        [Then(@"the classroom and employer based delivery page should be delivered")]
+        public void ThenTheClassroomAndEmployerBasedDeliveryPageShouldBeDelivered()
+        {
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
         }
 
 

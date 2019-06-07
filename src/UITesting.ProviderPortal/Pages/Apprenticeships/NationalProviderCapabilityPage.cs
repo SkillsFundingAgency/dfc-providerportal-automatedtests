@@ -38,7 +38,7 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
             return new NationalProviderCapabilityPage(webDriver);
         }
 
-        public NationalProviderCapabilityPage ErrorDisplayed()
+        public NationalProviderCapabilityPage ErrorDisplayed(string errorMsg)
         {
             PageInteractionHelper.WaitForElementToBePresent(ErrorMsg);
             PageInteractionHelper.IsElementDisplayed(ErrorMsg);

@@ -68,10 +68,10 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
         }
 
         [Then(@"the error message should be displayed (.*)")]
-        public void ThenTheErrorMessageShouldBeDisplayed()
+        public void ThenTheErrorMessageShouldBeDisplayed(string errorMsg)
         {
             NationalProviderCapabilityPage nationalProviderCapabilityPage = new NationalProviderCapabilityPage(webDriver);
-            nationalProviderCapabilityPage.ErrorDisplayed();
+            nationalProviderCapabilityPage.ErrorDisplayed(errorMsg);
         }
 
         [When(@"i  select yes to National provider")]
@@ -144,6 +144,59 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             employerBasedDeliveryPage.ClickContinue();
         }
 
+        #region classroom and employer based delivery
+
+        [When(@"I select (.*) option")]
+        public void WhenISelectDayRelease(string option)
+        {
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+            classroomAndEmployerDeliveryOptionPage.SelectOption(option);
+        }
+
+        [When(@"I select a location")]
+        public void WhenISelectALocation()
+        {
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+            classroomAndEmployerDeliveryOptionPage.SelectFirstLocation();
+        }
+
+        [When(@"I enter (.*) miles in radius field")]
+        public void WhenIEnterMilesInRadiusField(string radius)
+        {
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+            classroomAndEmployerDeliveryOptionPage.EnterRadius(radius);
+        }
+
+        [When(@"I click Add another")]
+        public void WhenIClickAddAnother()
+        {
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+            classroomAndEmployerDeliveryOptionPage.ClickAddAnother();
+        }
+
+        [When(@"I add (.*) locations for an apprenticeship")]
+        public void WhenIAddLocationsForAnApprenticeship(int numOfReps)
+        {
+
+            int i = 0;
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+
+            do
+            {
+                classroomAndEmployerDeliveryOptionPage.SelectOption("Day Release");
+                classroomAndEmployerDeliveryOptionPage.SelectFirstLocation();
+                classroomAndEmployerDeliveryOptionPage.EnterRadius("10");
+                classroomAndEmployerDeliveryOptionPage.ClickAddAnother();
+
+                i++;
+
+            } while (i < numOfReps);
+
+           // System.Threading.Thread.Sleep(999999999);                                                       
+        }
+
+
+        #endregion classroom and employer based delivery
 
     }
 

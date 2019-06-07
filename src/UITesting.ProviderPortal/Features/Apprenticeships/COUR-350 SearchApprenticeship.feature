@@ -60,7 +60,7 @@ Scenario: COUR-351 Search for an apprenticeship - Less than 3 chars
 @CI
 Scenario: COUR-432 Search for an apprenticeship - Search Results
 	Given I have accessed the Apprenticeship Search page
-	When I use apprenticeship search to search for Plumber
+	When I use apprenticeship search to search for Information
 	Then the Results are displayed
 	And Each result displays the apprenticeship details
 

@@ -37,6 +37,14 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
             return new AddVenueSelectAddressPage(webDriver);
         }
 
+        public AddVenueSelectAddressPage EnterVenueName2(String name)
+        {
+
+            string venName = name + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            FormCompletionHelper.EnterTextWithoutClearing(venueName, name);
+            return new AddVenueSelectAddressPage(webDriver);
+        }
+
         public AddVenueSelectAddressPage selectAddress(string address)
         {
             PageInteractionHelper.WaitForPageToLoad(10);
