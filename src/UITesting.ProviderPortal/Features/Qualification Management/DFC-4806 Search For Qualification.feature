@@ -18,7 +18,7 @@ Scenario: Search for a Qualification by LARS/QAN Reference Number
 	Then I want to see the Qualifications listed for that LARS/QAN Number
 	And I want to see LARS/QAN number "LARS/QAN", Level "Level" and awarding body "Awarding body" for each qualification
 	And I want to see a Link to add this qualification.
-	And I want to see Qualification Level Filter "Qualification Level"
+	And I want to see Qualification Level Filter "Qualification level"
 	And I want to see Awarding Organisation Filter on the screen "Awarding Organisation"
 
 @CI

@@ -36,7 +36,7 @@ Then I should not see the error message on clicking "Find"
 Scenario: User enters valid UKPRN and sees the following input
 When I enter a valid input "10002370"
 Then I should not see the error message on clicking "Find"
-Then The label will be "Course Directory Status" and the data will be "Onboarded"
+Then The label will be "Course directory status" and the data will be "Onboarded"
 Then The label will be "UKPRN Status" and the data value will be "Active"
 And The label will be "UKPRN" and the data value will be the entered regiestration number
 And The label wil be "Name" and the data value will be the Provider name

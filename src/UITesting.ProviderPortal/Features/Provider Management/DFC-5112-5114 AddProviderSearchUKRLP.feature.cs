@@ -168,7 +168,7 @@ testRunner.When("I enter a valid input \"10002370\"", ((string)(null)), ((TechTa
 #line 38
 testRunner.Then("I should not see the error message on clicking \"Find\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 39
-testRunner.Then("The label will be \"Course Directory Status\" and the data will be \"Onboarded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("The label will be \"Course directory status\" and the data will be \"Onboarded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
 testRunner.Then("The label will be \"UKPRN Status\" and the data value will be \"Active\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
