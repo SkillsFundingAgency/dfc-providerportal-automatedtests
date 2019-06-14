@@ -10,7 +10,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 {
     public class BulkUploadFixPublishPage : BasePage
     {
-        private static String PAGE_TITLE = "Fix errors and publish";
+        private static String PAGE_TITLE = "Fix errors";
         private By PublishBtn = By.Id("publish");
         private By FirstFixCourseLink = By.XPath(".//*[@id='course-fix-691e52ab-063c-42cb-a227-2119fbc727c7']");
         private By FirstFixCourseRunLink = By.XPath(".//*[@id='course-run-fix-da673d5a-bb0d-43a9-9cde-770680595312']");

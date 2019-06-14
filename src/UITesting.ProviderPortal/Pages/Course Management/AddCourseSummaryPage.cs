@@ -9,7 +9,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     public class AddCourseSummaryPage : BasePage
     {
 
-        private static String PAGE_TITLE = "Check and publish to the Course directory page";
+        private static String PAGE_TITLE = "Check and publish to the Course directory";
         private By acceptAndPublishBtn = By.Id("publish");
 
         public AddCourseSummaryPage(IWebDriver webDriver) : base(webDriver)

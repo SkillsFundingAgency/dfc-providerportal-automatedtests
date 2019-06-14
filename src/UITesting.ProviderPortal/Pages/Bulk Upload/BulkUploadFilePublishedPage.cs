@@ -7,7 +7,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 {
     public class BulkUploadFilePublishedPage : BasePage
     {
-        private static String PAGE_TITLE = "Your file has been published";
+        private static String PAGE_TITLE = "Publish complete";
         private By PublishBtn = By.Id("publish");
 
 
