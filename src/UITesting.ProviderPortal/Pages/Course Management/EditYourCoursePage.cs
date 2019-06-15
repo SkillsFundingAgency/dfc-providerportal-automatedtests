@@ -30,7 +30,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By CourseRunVenueField = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[2]/span");
         private static By CourseRunURLField = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[2]/span");
 
-        private static By CourseRunSelect10032433 = By.XPath(".//*[@id='results']/div[2]/div/div[4]/a"); 
+        private static By CourseRunSelect10032433 = By.XPath(".//*[@id='results']/div[2]/div/div[3]/a");
 
         /*End DFC-4827-variables*/
 
