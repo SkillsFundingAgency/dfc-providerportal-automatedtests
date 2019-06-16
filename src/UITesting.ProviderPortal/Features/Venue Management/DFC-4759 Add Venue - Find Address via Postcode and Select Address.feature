@@ -365,7 +365,7 @@ Scenario: User selects address and does not enter venue name then clicks continu
 	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
+	When I select the address 120 Sandford Road
 	And I click continue
 	Then Venue Name validation message is displayed Enter a venue name
 
@@ -374,7 +374,7 @@ Scenario: User selects address and enters space in venue name then clicks contin
 	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
+	When I select the address 120 Sandford Road
 	And I enter venue name space
 	And I click continue
 	Then Venue Name validation message is displayed Venue name must not have any leading, trailing or contain multiple consecutive spaces
@@ -384,7 +384,7 @@ Scenario: User selects address and enter invalid venue name then clicks continue
 	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
+	When I select the address 120 Sandford Road
 	And I enter venue name ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV
 	And I click continue
 	Then Venue Name validation message is displayed Venue name must be 255 characters or less
@@ -394,7 +394,7 @@ Scenario: User selects address and enters valid venue name then clicks continue
 	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
+	When I select the address 120 Sandford Road
 	And I enter venue name Test Venue
 	And I click continue to confirm page
 	Then I am on the Add Venue Confirm details page

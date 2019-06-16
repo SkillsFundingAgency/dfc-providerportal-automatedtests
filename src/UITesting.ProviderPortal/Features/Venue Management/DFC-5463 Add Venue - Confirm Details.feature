@@ -18,7 +18,7 @@ Background:
 	When I enter the following postcode b13 9da
 	And I click Find Address
 	Then I am on the Select Address page
-	When I select the address 120 Sandford Road Birmingham, B13 9DA
+	When I select the address 120 Sandford Road
 	And I enter venue name Test Venue
 	And I click continue to confirm page
 

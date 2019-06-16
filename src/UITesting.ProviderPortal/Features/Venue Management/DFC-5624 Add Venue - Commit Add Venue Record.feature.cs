@@ -98,7 +98,7 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
 #line 20
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
- testRunner.When("I select the address 120 Sandford Road Birmingham, B13 9DA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select the address 120 Sandford Road", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
  testRunner.And("I enter venue name Academy Of Contemporary Music", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23

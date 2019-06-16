@@ -8,7 +8,7 @@ Scenario: Edit Course Venue
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
-	Given I have searched for UKPRN "10032433" and clicked search
+	Given I have searched for UKPRN "10040849" and clicked search
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have clicked the Main Qualification
@@ -20,7 +20,7 @@ Scenario: Edit Course Venue
 
 	#Revert changes for next test
 	Given I have logged to course directory as a provider
-	And I have searched for UKPRN "10032433" and clicked search
+	And I have searched for UKPRN "10040849" and clicked search
 	And I have clicked View Courses button to see a list of courses
 	Given I have clicked the Main Qualification
 	Then I should be able to view the course runs.

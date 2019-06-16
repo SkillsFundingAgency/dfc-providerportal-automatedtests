@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 33
  testRunner.Then("I am on the Select Address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 34
- testRunner.When("I select the address 120 Sandford Road Birmingham, B13 9DA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select the address 120 Sandford Road", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 35
  testRunner.And("I enter venue name x venue 99", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 36
