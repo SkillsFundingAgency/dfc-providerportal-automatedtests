@@ -31,6 +31,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By CourseRunURLField = By.XPath(".//*[@id='28120057-e6c7-4c77-8944-d923ace9a49b']/div[2]/span");
 
         private static By CourseRunSelect10032433 = By.XPath(".//*[@id='results']/div[2]/div/div[3]/a");
+        private static By CourseRunSelect10037096 = By.XPath(".//*[@id='results']/div[2]/div/div[4]/a");
 
         /*End DFC-4827-variables*/
 
@@ -61,10 +62,15 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public void SelectCourse()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            //FormCompletionHelper.ClickElement(Course);
-            FormCompletionHelper.ClickElement(CourseRunSelect10032433);
+            if (FormCompletionHelper.IsElementPresent(CourseRunSelect10032433))
+            {
+                FormCompletionHelper.ClickElement(CourseRunSelect10032433);
+            }
+            else
+            {
+                FormCompletionHelper.ClickElement(CourseRunSelect10037096);
+            }
             PageInteractionHelper.WaitForPageToLoad();
-            //FormCompletionHelper.ClickElement(CourseRunEditLink);
         }
 
         internal void EditCourseRun()

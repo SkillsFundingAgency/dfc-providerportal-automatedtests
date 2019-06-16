@@ -568,15 +568,10 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new EditCoursePage2(webDriver);
         }
 
-        //public EditCoursePage2 selectFirstOptionOnRegionSelector()
-        //{
-        //    FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
-        //    return new EditCoursePage2(webDriver);
-        //}
 
         public EditCoursePage2 clickNationalTrue()
         {
-            if (webDriver.FindElement(nationalTrue).GetAttribute("checked") == "false")
+            if (webDriver.FindElement(nationalTrue).GetAttribute("checked") != "false")
             {
                 FormCompletionHelper.ClickElement(nationalTrue);
                 return new EditCoursePage2(webDriver);
@@ -590,7 +585,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public EditCoursePage2 clickNationalFalse()
         {
-            if (webDriver.FindElement(nationalFalse).GetAttribute("checked") == "false")
+            if (webDriver.FindElement(nationalFalse).GetAttribute("checked") != "false")
             {
                 FormCompletionHelper.ClickElement(nationalFalse);
                 return new EditCoursePage2(webDriver);
