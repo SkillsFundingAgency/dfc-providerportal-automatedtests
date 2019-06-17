@@ -25,7 +25,7 @@ Scenario: DFC-7272 Bulk Upload Status of upload Courses - Errors
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_InvalidDuration.csv to upload
+	When I click Choose a File BulkUpload_DurationInvalid.csv to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
 
@@ -34,7 +34,7 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - Pass
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_InvalidDuration.csv to upload
+	When I click Choose a File BulkUpload_DurationInvalid.csv to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
 
@@ -70,7 +70,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_InvalidLARS.csv to upload
+	When I click Choose a File BulkUpload_LARSInvalid.csv to upload
 	And I click Upload File leading to stage1 errors
 	Then the error Line 2, LARS_QAN = 60333079 invalid LARS is displayed in error summary
 
@@ -79,7 +79,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Expired LARS
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_ExpiredLARS.csv to upload
+	When I click Choose a File BulkUpload_LARSExpired.csv to upload
 	And I click Upload File leading to stage1 errors
 	Then the error Line 2, LARS_QAN = 50084914 expired LARS is displayed in error summary
 
@@ -88,7 +88,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Missing LARS
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_MissingLARS.csv to upload
+	When I click Choose a File BulkUpload_LARSMissing.csv to upload
 	And I click Upload File leading to stage1 errors
 	Then the error Line 2, LARS_QAN = => LARS is missing. is displayed in error summary
 
@@ -170,4 +170,22 @@ Scenario: DFC-6736 Bulk Upload Edit uploaded Course Run
 	Given I have changed the course venue to dudley 2
 	When I edit bulk upload course cost 9
 	And I click to Save the Course Run details
+	Then I am on the Fix and publish bulk upload page
+
+@CI
+Scenario: COUR-765 Attendance Patterm Missing
+	Given I have searched for UKPRN "10040846" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_AttendancePatternNone.csv to upload
+	And I click Upload File leading to course errors
+	Then I am on the Fix and publish bulk upload page
+
+@CI
+Scenario: COUR-765 Cost Format Invalid
+	Given I have searched for UKPRN "10040845" and clicked search
+	When I click to view my courses
+	Given I have accessed the Bulk Upload page
+	When I click Choose a File BulkUpload_CostformatInvalid.csv to upload
+	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
