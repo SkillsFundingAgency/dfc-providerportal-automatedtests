@@ -7,7 +7,7 @@ Background:
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
-	Given I have searched for UKPRN "10002815" and clicked search
+	Given I have searched for UKPRN "10040838" and clicked search
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have navigated to the Your Venues Pages
@@ -49,4 +49,4 @@ Scenario: User does not enter PostCode
 Scenario: User does not enter Valid PostCode
 	When I enter the following PostCode "xxxxxx"
 	And I Click Continue 
-	Then a valid postcode validation message should be displayed "Postcode must be a valid format and only include letters a to z, numbers and spaces"
+	Then a valid postcode validation message should be displayed "Enter a real postcode"

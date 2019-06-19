@@ -16,12 +16,11 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By towncityText = By.Id("TownOrCity");
         private By CountyText = By.Id("County");
         private By postcodeText = By.Id("Postcode");
-        private By VenueNameValidationMsg = By.XPath("//*[@id='VenueName-error']");
-        private By AddressLineValidationMsg = By.XPath("//*[@id='AddressLine1-error']");
-        private By TownOrCityValidationMsg = By.XPath("//*[@id='TownOrCity-error']");
-        private By PostcodeValidationMsg = By.XPath("//*[@id='Postcode-error']");
-        /*private By ClickContinueButton = By.XPath("//*[@id='main-content']/form/div[7]/button");*/
-        private By ClickContinueButton = By.XPath("/html/body/div[4]/form/div[7]/button");
+        private By VenueNameValidationMsg = By.XPath(".//*[@id='ManualAddVenueForm']/div[1]/span");               //("//*[@id='VenueName-error']");
+        private By AddressLineValidationMsg = By.XPath(".//*[@id='ManualAddVenueForm']/div[2]/span");             //("//*[@id='AddressLine1-error']");
+        private By TownOrCityValidationMsg = By.XPath(".//*[@id='ManualAddVenueForm']/div[4]/span");              //("//*[@id='TownOrCity-error']");
+        private By PostcodeValidationMsg = By.XPath(".//*[@id='ManualAddVenueForm']/div[6]/span");                //("//*[@id='Postcode-error']");
+        private By ClickContinueButton = By.Id("ManualAddressContinue");                                          //("//*[@id='main-content']/form/div[7]/button");
         private static String PAGE_TITLE = "Add venue";
 
 

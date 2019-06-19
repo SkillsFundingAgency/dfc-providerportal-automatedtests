@@ -12,7 +12,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By UKPRN = By.Id("UKPrn");
         private By venuePostcode = By.Id("Postcode");
         private By FindAddressButton = By.Id("findAddress");
-        private By PostcodeValidationMessage = By.CssSelector("#Postcode-error");
+        //private By PostcodeValidationMessage = By.CssSelector("#Postcode-error");
+        private By PostcodeValidationMessage = By.XPath(".//*[@id='AddVenue']/div[2]/div/div[1]/span");
         private By ClickEnterAddressManually = By.LinkText("Enter address manually");
 
 

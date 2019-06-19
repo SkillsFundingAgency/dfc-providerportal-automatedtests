@@ -7,7 +7,7 @@ Background:
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
-	Given I have searched for UKPRN "10002815" and clicked search
+	Given I have searched for UKPRN "10040838" and clicked search
 	When I click to view my courses
 	## End of Provider Search Steps
 	Given I have navigated to the Your Venues Pages
