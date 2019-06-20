@@ -375,6 +375,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public EditCoursePage2 EnterCourseCost(string cost)
         {
+            //FormCompletionHelper.ClearContents(courseCost);
             FormCompletionHelper.EnterText(courseCost, cost);
             return new EditCoursePage2(webDriver);
         }

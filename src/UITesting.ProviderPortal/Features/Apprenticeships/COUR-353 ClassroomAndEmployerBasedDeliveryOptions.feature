@@ -43,6 +43,6 @@ Scenario: Select Day Release location and add another
 	And I enter 10 miles in radius field
 	And I click Add another
 
-@CI
-Scenario: Add 250 locations
-	When I add 250 locations for an apprenticeship
+#@CI
+#Scenario: Add 250 locations
+#	When I add 250 locations for an apprenticeship

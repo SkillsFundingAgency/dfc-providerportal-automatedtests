@@ -398,7 +398,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
 this.FeatureBackground();
 #line 113
- testRunner.When("I enter the following in the URL field https://wwww..test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the following in the URL field https://w..test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 114
  testRunner.When("I enter the following in the course name field Course test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 115
@@ -410,8 +410,7 @@ this.FeatureBackground();
 #line 118
  testRunner.And("the error summary header should say \"There is an issue with this qualification\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 119
- testRunner.And("the error message should be displayed on the header \"The format of URL is incorre" +
-                    "ct\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the error message is displayed on the header \"The format of URL is incorrect\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1323,9 +1322,11 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("DFC6704 Session maintainance - Single Region")]
+        [NUnit.Framework.CategoryAttribute("CI")]
         public virtual void DFC6704SessionMaintainance_SingleRegion()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC6704 Session maintainance - Single Region", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC6704 Session maintainance - Single Region", null, new string[] {
+                        "CI"});
 #line 392
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

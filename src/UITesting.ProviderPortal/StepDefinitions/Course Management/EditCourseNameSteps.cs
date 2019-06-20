@@ -120,6 +120,29 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
         }
 
 
+
+        [Given(@"I have selected a course run to copy")]
+        public void GivenIHaveSelectedACourseRunToCopy()
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickCopyCourse();
+        }
+
+
+        [Given(@"I have selected a course run to delete")]
+        public void GivenIHaveSelectedACourseRunToDelete()
+        {
+            EditYourCoursePage editYourCoursePage = new EditYourCoursePage(webDriver);
+            editYourCoursePage.SelectCourse();
+
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickDeleteCourse();
+        }
+
+
         [Given(@"I have clicked edit for a course run")]
         public void CourseRunToUpdate()
         {
@@ -234,6 +257,21 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
             editCoursePage2.selectFirstOptionOnRegionSelector();
         }
+
+        [Then(@"Copy Course page should be displayed")]
+        public void ThenCopyCoursePageShouldBeDisplayed()
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+        }
+
+
+        [When(@"I clik save to copy the course")]
+        public void WhenIClikSaveToCopyTheCourse()
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.ClickSave();
+        }
+
 
     }
 }

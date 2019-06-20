@@ -32,6 +32,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         private static By CourseRunSelect10032433 = By.XPath(".//*[@id='results']/div[2]/div/div[3]/a");
         private static By CourseRunSelect10037096 = By.XPath(".//*[@id='results']/div[2]/div/div[4]/a");
+        private By successMsg = By.XPath(".//*[@id='main-content']/div/div/div[1]/h1");
+        private By SearchText = By.Id("Search");
 
         /*End DFC-4827-variables*/
 
@@ -42,8 +44,14 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         public EditYourCoursePage(IWebDriver webDriver):base(webDriver)
         {
-            SelfVerify();
+            PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(SearchText, 60);
+            if (!PageInteractionHelper.IsElementPresent(successMsg))
+            {
+                SelfVerify();
+            }
         }
+
         protected override bool SelfVerify()
         {
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);

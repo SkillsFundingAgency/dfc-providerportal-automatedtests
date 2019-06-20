@@ -110,13 +110,13 @@ Scenario: DFC5115 User enters Invalid course URL 4
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 5
-	When I enter the following in the URL field https://wwww..test
+	When I enter the following in the URL field https://w..test
 	When I enter the following in the course name field Course test
 	And I click Publish leading to error
 	Then course URL error validation is displayed
 	And error message for field URL states The format of URL is incorrect
 	And the error summary header should say "There is an issue with this qualification"
-	And the error message should be displayed on the header "The format of URL is incorrect"
+	And the error message is displayed on the header "The format of URL is incorrect"
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 6
@@ -388,7 +388,7 @@ Scenario: DFC6704 Session maintainance - Classroom based
 	When I click Next Button
 	And I click Publish
 
-
+@CI
 Scenario: DFC6704 Session maintainance - Single Region
 	When I enter the following in the course name field Course AutoTestAddWorkBasedOption2
 	And I enter the following in the cost field 1999.00

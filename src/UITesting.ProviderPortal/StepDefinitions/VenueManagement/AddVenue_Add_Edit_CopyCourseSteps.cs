@@ -98,13 +98,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
             courseSummaryPage.ClickEditCourseRun();
         }
-        
-        [When(@"I clicked the Copy Course")]
-        public void WhenIClickedTheCopyCourse()
-        {
-            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
-            courseSummaryPage.ClickCopyCourse();
-        }
+       
         
         [Then(@"the First Page of Add Course should be displayed")]
         public void ThenTheFirstPageOfAddCourseShouldBeDisplayed()
@@ -143,12 +137,22 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             addCourseSummaryPage.ClickNext();
         }
         
+
+
+
         [Then(@"the course should be added")]
         public void ThenTheCourseShouldBeAdded()
         {
             ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
         }
-        
+
+        [Then(@"the course should be deleted")]
+        public void ThenTheCourseShouldBeDeleted()
+        {
+            ViewYourCoursesPage viewYourCoursesPage = new ViewYourCoursesPage(webDriver);
+        }
+
+
         [Then(@"Second Page of Edit Course should be displayed")]
         public void ThenSecondPageOfEditCourseShouldBeDisplayed()
         {
@@ -204,6 +208,14 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             CopyCoursePage copyCoursePage  = new CopyCoursePage(webDriver);
             copyCoursePage.SelectVenueByName(strVenueName);
         }
+
+        [When(@"I click delete")]
+        public void WhenIClickDelete()
+        {
+            CourseSummaryPage courseSummaryPage = new CourseSummaryPage(webDriver);
+            courseSummaryPage.ClickDeleteConfirm();
+        }
+
 
     }
 }

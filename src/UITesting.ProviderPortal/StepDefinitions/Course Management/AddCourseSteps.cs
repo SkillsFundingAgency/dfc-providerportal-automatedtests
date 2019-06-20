@@ -240,7 +240,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.ValidateHeaderMessage(strHeaderMessage);
         }
 
-        [Then(@"the error message should be displayed on the header ""(.*)""")]
+        [Then(@"the error message is displayed on the header ""(.*)""")]
         public void ThenTheErrorMessageShouldBeDisplayedOnTheHeader(string strHeaderErrorSumm)
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
