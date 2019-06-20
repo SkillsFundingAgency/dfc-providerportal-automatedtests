@@ -14,7 +14,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
     {
         private static String PAGE_TITLE = "Edit venue name";
         private By venueName = By.Id("VenueName");
-        private By submitButton = By.XPath("//*[@id=\"edit-venue\"]/div/div/div[2]/button");
+        private By submitButton = By.Id("editVenueNameSubmit");
         
         public AddVenueEditNamePage(IWebDriver webDriver) : base(webDriver)
         {

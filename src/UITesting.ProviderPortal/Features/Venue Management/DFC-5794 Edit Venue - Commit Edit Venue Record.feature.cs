@@ -121,7 +121,7 @@ this.FeatureBackground();
 #line 27
  testRunner.When("I edit the venue address to b14 7rz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 28
- testRunner.And("I chose the following address 8 York Road Kings Heath, Birmingham, B14 7RZ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I chose the following address 8 York Road", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
  testRunner.And("I click continue on edit venue address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
@@ -191,7 +191,7 @@ this.FeatureBackground();
 #line 52
  testRunner.When("I edit the venue address to b14 7rz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 53
- testRunner.And("I chose the following address 8 York Road Kings Heath, Birmingham, B14 7RZ", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I chose the following address 8 York Road", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 54
  testRunner.And("I click continue on edit venue address page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 55

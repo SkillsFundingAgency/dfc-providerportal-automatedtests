@@ -217,23 +217,21 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 68
- testRunner.Given("I have selected a classrom course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have selected a course run to copy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 69
- testRunner.When("I clicked the Copy Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
  testRunner.Then("Copy Course Page should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 75
+#line 74
  testRunner.When("I select the link to Add New Venue inthe copy course screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 76
+#line 75
  testRunner.Then("Add venue screen should be displayed.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 77
+#line 76
  testRunner.Given("I have added a new Venue \"TestAddVenue_CopyCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 82
+#line 81
  testRunner.Given("I have selected \"TestAddVenue_CopyCourse\" as venue from Venue Dropdown in the cop" +
                     "y course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 87
+#line 86
  testRunner.When("I  Save the data in the copy course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 89
  testRunner.Then("the course should be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

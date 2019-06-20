@@ -76,9 +76,9 @@ namespace UITesting.ProviderPortal.Features.BulkUpload
 #line 7
  testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And("I login as admin with user and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I login as provider admin with Provider.10033145@gmail.com and SITtesting123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.Then("I am logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I am logged in as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
@@ -95,20 +95,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 14
- testRunner.Given("I have searched for UKPRN \"10037355\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 17
+#line 15
  testRunner.When("I click Choose a File BulkUpload_Valid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 16
  testRunner.And("I click Upload File leading to no course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 17
  testRunner.Then("I am on the Publish your courses page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 18
  testRunner.When("I click publish to publish upload courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 19
  testRunner.Then("I am on the courses published page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -121,22 +117,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7272 Bulk Upload Status of upload Courses - Errors", null, new string[] {
                         "CI"});
-#line 24
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 25
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 23
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
+#line 24
  testRunner.When("I click Choose a File BulkUpload_DurationInvalid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 25
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 26
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -149,22 +141,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6738 Bulk Upload Stage 1 - Pass", null, new string[] {
                         "CI"});
-#line 33
+#line 29
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 34
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 30
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
+#line 31
  testRunner.When("I click Choose a File BulkUpload_DurationInvalid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 32
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
+#line 33
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -177,22 +165,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6738 Bulk Upload Stage 1 - File Not CSV", null, new string[] {
                         "CI"});
-#line 42
+#line 36
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 43
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 44
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
+#line 37
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 46
+#line 38
  testRunner.When("I click Choose a File BulkUploadNotCSV.txt to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
+#line 39
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 40
  testRunner.Then("the error The selected file must be a csv is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -205,22 +189,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6738 Bulk Upload Stage 1 - File Empty", null, new string[] {
                         "CI"});
-#line 51
+#line 43
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 52
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 53
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 44
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 55
+#line 45
  testRunner.When("I click Choose a File BulkUpload_Empty.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 46
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
+#line 47
  testRunner.Then("the error The selected file is empty is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -233,22 +213,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6738 Bulk Upload Stage 1 - Missing Columns", null, new string[] {
                         "CI"});
-#line 60
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 61
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 62
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 51
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 64
+#line 52
  testRunner.When("I click Choose a File BulkUpload_MissingColumns.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 65
+#line 53
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 54
  testRunner.Then("the error Fields with names \'COURSE_NAME\', \'DURATION\', \'WHAT_YOU_WILL_LEARN\' do n" +
                     "ot exist is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -262,22 +238,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7379 Bulk Upload LARS Checks - Invalid LARS", null, new string[] {
                         "CI"});
-#line 69
+#line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 70
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 71
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
+#line 58
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 73
+#line 59
  testRunner.When("I click Choose a File BulkUpload_LARSInvalid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
+#line 60
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
+#line 61
  testRunner.Then("the error Line 2, LARS_QAN = 60333079 invalid LARS is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -290,22 +262,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7379 Bulk Upload LARS Checks - Expired LARS", null, new string[] {
                         "CI"});
-#line 78
+#line 64
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 79
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 80
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
+#line 65
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 82
+#line 66
  testRunner.When("I click Choose a File BulkUpload_LARSExpired.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 83
+#line 67
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 68
  testRunner.Then("the error Line 2, LARS_QAN = 50084914 expired LARS is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -318,22 +286,18 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7379 Bulk Upload LARS Checks - Missing LARS", null, new string[] {
                         "CI"});
-#line 87
+#line 71
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 88
- testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 89
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 72
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 91
+#line 73
  testRunner.When("I click Choose a File BulkUpload_LARSMissing.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 92
+#line 74
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 75
  testRunner.Then("the error Line 2, LARS_QAN = => LARS is missing. is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -346,28 +310,24 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7224 Bulk Upload Cancel Course Edit", null, new string[] {
                         "CI"});
-#line 96
+#line 78
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 97
- testRunner.Given("I have searched for UKPRN \"10036354\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 98
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 99
+#line 79
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 100
+#line 80
  testRunner.When("I click Choose a File BulkUpload_CancelTest.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 101
+#line 81
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 102
+#line 82
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 103
+#line 83
  testRunner.When("I click fix against the first Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 104
+#line 84
  testRunner.Then("I click on Cancel to cancel edit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 105
+#line 85
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -380,28 +340,24 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7224 Bulk Upload Cancel Course Run Edit", null, new string[] {
                         "CI"});
-#line 108
+#line 88
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 109
- testRunner.Given("I have searched for UKPRN \"10036354\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 110
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 111
+#line 89
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 112
+#line 90
  testRunner.When("I click Choose a File BulkUpload_CancelTest.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 91
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
+#line 92
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 115
+#line 93
  testRunner.When("I click fix against the first Course Run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 116
+#line 94
  testRunner.Then("I click on Cancel to cancel edit course run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 117
+#line 95
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -414,30 +370,26 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7224 Bulk Upload Save Course Edit", null, new string[] {
                         "CI"});
-#line 120
+#line 98
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 121
- testRunner.Given("I have searched for UKPRN \"10036789\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 122
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 123
+#line 99
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 124
+#line 100
  testRunner.When("I click Choose a File BulkUpload_SaveTest.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 125
+#line 101
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 126
+#line 102
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 127
+#line 103
  testRunner.When("I click fix against the first Course i want edit and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 128
+#line 104
  testRunner.And("I edit bulk upload course description Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 129
+#line 105
  testRunner.And("I click to Save the Course details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
+#line 106
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -450,32 +402,28 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7225 Bulk Upload Save Course Run Edit", null, new string[] {
                         "CI"});
-#line 133
+#line 109
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 134
- testRunner.Given("I have searched for UKPRN \"10036789\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 135
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 136
+#line 110
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 137
+#line 111
  testRunner.When("I click Choose a File BulkUpload_SaveTest.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 112
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
+#line 113
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 140
+#line 114
  testRunner.When("I click fix against the first Course Run i want edit and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 141
+#line 115
  testRunner.Given("I have changed the course venue to dudley 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 142
+#line 116
  testRunner.When("I edit bulk upload course cost 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 143
+#line 117
  testRunner.And("I click to Save the Course Run details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 144
+#line 118
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -488,32 +436,28 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6719 Bulk Upload Edit uploaded Course", null, new string[] {
                         "CI"});
-#line 147
+#line 121
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 148
- testRunner.Given("I have searched for UKPRN \"10036789\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 149
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
+#line 122
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 151
+#line 123
  testRunner.When("I click Choose a File BulkUpload_EditTest.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 152
+#line 124
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 153
+#line 125
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 154
+#line 126
  testRunner.When("I click fix against the first Course i want edit and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 155
+#line 127
  testRunner.And("I edit bulk upload course description Semi-qualified (people)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 156
+#line 128
  testRunner.And("I edit bulk upload course entry requirements None Specified", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 157
+#line 129
  testRunner.And("I click to Save the Course details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
+#line 130
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -526,90 +470,74 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6736 Bulk Upload Edit uploaded Course Run", null, new string[] {
                         "CI"});
-#line 161
+#line 133
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 162
- testRunner.Given("I have searched for UKPRN \"10036789\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 163
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
+#line 134
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 165
+#line 135
  testRunner.When("I click Choose a File BulkUpload_EditTest.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 166
+#line 136
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 167
+#line 137
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 168
+#line 138
  testRunner.When("I click fix against the first Course Run i want edit and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 169
+#line 139
  testRunner.And("I edit bulk upload course name Test Course 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 170
+#line 140
  testRunner.Given("I have changed the course venue to dudley 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 171
+#line 141
  testRunner.When("I edit bulk upload course cost 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
+#line 142
  testRunner.And("I click to Save the Course Run details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
+#line 143
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("COUR-765 Attendance Patterm Missing")]
+        [NUnit.Framework.DescriptionAttribute("COUR-765 Field Validations")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void COUR_765AttendancePattermMissing()
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_AttendancePatternNone.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_CostformatInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_CostorCostDescNone.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_DurationInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDateValid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDatePast.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDateFuture.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_NoStudyMode.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_attendancemissing.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_DateNone.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_dayblockrelease.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_DeliveryModeNone.csv", null)]
+        public virtual void COUR_765FieldValidations(string file, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-765 Attendance Patterm Missing", null, new string[] {
-                        "CI"});
-#line 176
+            string[] @__tags = new string[] {
+                    "CI"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-765 Field Validations", null, @__tags);
+#line 146
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 177
- testRunner.Given("I have searched for UKPRN \"10040846\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 178
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 179
+#line 147
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 180
- testRunner.When("I click Choose a File BulkUpload_AttendancePatternNone.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 181
+#line 148
+ testRunner.When(string.Format("I click Choose a File {0} to upload", file), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 149
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 182
- testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("COUR-765 Cost Format Invalid")]
-        [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void COUR_765CostFormatInvalid()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-765 Cost Format Invalid", null, new string[] {
-                        "CI"});
-#line 185
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 6
-this.FeatureBackground();
-#line 186
- testRunner.Given("I have searched for UKPRN \"10040845\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 187
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 188
- testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 189
- testRunner.When("I click Choose a File BulkUpload_CostformatInvalid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 190
- testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 191
+#line 150
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

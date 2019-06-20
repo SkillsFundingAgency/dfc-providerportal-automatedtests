@@ -65,8 +65,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By firstRegion = By.XPath(".//*[@id='SelectRegionCheckBoxes']/details[1]/summary");
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
-        private By nationalTrue = By.Id("National_true");
-        private By nationalFalse = By.Id("National_false");
+        private By nationalTrue = By.XPath(".//*[@id='nationalRadioButtons']/div[1]/label");       //By.Id("National_true");
+        private By nationalFalse = By.XPath(".//*[@id='nationalRadioButtons']/div[2]/label");      //By.Id("National_false"); 
         private By nationalError = By.XPath(".//*[@id='sectionRegions']/div/div/div[1]/fieldset/span");
         private By AddNewVenueLink = By.Id("addNewVenue");
         //variable

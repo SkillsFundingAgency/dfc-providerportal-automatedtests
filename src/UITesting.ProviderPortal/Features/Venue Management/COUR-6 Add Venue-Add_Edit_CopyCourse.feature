@@ -65,8 +65,7 @@ Scenario: Add a Venue when editing an existing course
 
 @CI
 Scenario: Add a Venue when copying an existing course
-	Given I have selected a classrom course
-	When I clicked the Copy Course
+	Given I have selected a course run to copy
 	Then Copy Course Page should be displayed
 	#Given I have accessed the selected course run data
 	#And I have selected "Classroom" as delivery mode
