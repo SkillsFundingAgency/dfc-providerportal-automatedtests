@@ -9,9 +9,10 @@ namespace UITesting.ProviderPortal.Pages
 
     public class HomePage : BasePage
     {
-        private static String PAGE_TITLE = "Welcome to the Course Directory";
+        private static String PAGE_TITLE = "Publish to the course directory";
         private By loginLink = By.LinkText("Login");
-        private By signIn = By.XPath(".//*[@id='form-signin']/div[2]/button"); 
+        private By signIn = By.XPath(".//*[@id='form-signin']/div[2]/button");
+        private By StartBtn = By.XPath(".//*[@id='main-content']/div/div/a");
 
         public HomePage(IWebDriver webDriver) : base(webDriver)
         {
@@ -29,7 +30,7 @@ namespace UITesting.ProviderPortal.Pages
         public LoginPage ClickLogin()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            FormCompletionHelper.ClickElement(loginLink);
+            FormCompletionHelper.ClickElement(StartBtn);
             //System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
             return new LoginPage(webDriver);
@@ -39,7 +40,7 @@ namespace UITesting.ProviderPortal.Pages
         public DfESignInPage ClickLoginDfE()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            FormCompletionHelper.ClickElement(loginLink);
+            FormCompletionHelper.ClickElement(StartBtn);
           //  System.Threading.Thread.Sleep(3000);
             PageInteractionHelper.WaitForPageToLoad();
             webDriver.FindElementWait(signIn, 60);
