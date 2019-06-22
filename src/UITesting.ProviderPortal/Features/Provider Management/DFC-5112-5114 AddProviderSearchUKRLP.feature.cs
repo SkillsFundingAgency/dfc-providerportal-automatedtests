@@ -170,7 +170,7 @@ testRunner.Then("I should not see the error message on clicking \"Find\"", ((str
 #line 39
 testRunner.Then("The label will be \"Course directory status\" and the data will be \"Onboarded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
-testRunner.Then("The label will be \"UKPRN Status\" and the data value will be \"Active\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("The label will be \"UKPRN status\" and the data value will be \"Active\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
 testRunner.And("The label will be \"UKPRN\" and the data value will be the entered regiestration nu" +
                     "mber", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -187,7 +187,7 @@ testRunner.And("The label wll be \"Email\" and the data value will be the Provid
 testRunner.And("The label will be \"Telephone\" and the data value will be the Provider\'s telephone" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
-testRunner.And("an \"Add Provider\" button at the bottom", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("an \"Add provider\" button at the bottom", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

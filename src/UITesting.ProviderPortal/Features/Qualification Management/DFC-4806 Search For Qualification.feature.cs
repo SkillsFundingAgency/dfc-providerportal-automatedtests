@@ -114,7 +114,7 @@ this.FeatureBackground();
 #line 21
  testRunner.And("I want to see Qualification Level Filter \"Qualification level\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
- testRunner.And("I want to see Awarding Organisation Filter on the screen \"Awarding Organisation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I want to see Awarding Organisation Filter on the screen \"Awarding organisation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

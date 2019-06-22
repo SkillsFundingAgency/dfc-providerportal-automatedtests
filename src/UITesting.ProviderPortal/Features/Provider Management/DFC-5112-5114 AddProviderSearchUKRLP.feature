@@ -37,11 +37,11 @@ Scenario: User enters valid UKPRN and sees the following input
 When I enter a valid input "10002370"
 Then I should not see the error message on clicking "Find"
 Then The label will be "Course directory status" and the data will be "Onboarded"
-Then The label will be "UKPRN Status" and the data value will be "Active"
+Then The label will be "UKPRN status" and the data value will be "Active"
 And The label will be "UKPRN" and the data value will be the entered regiestration number
 And The label wil be "Name" and the data value will be the Provider name
 And The label will be "Address"and the data value will be the Provider's address and the address lines are separated by commas
 And the label will be "Web" and the data value will be the Web address of provider
 And The label wll be "Email" and the data value will be the Provider's email
 And The label will be "Telephone" and the data value will be the Provider's telephone
-And an "Add Provider" button at the bottom
+And an "Add provider" button at the bottom

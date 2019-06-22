@@ -318,7 +318,7 @@ Scenario: DFC4902 No Duration entered
 	When I enter the following in the course name field Course test
 	And I select the first venue in the venues list
 	And I click Publish leading to error
-	Then error message for field Duration states Enter Duration	
+	Then error message for field Duration states Enter duration	
 
 @CI
 Scenario: DFC4769 Select Single Venue 
