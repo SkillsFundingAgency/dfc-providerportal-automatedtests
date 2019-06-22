@@ -620,31 +620,31 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5794 Edit Venue - Commit Edit Venue Record.feature.cs</LastGenOutput>
     </None>
-    <TestData2 Include="Test Data\BulkUploadNotCSV.txt">
+    <None Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
-    <TestData2 Include="Test Data\BulkUpload_AttendancePatternNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CancelTest.csv">
+    </None>
+    <None Include="Test Data\BulkUpload_AttendancePatternNone.csv" />
+    <None Include="Test Data\BulkUpload_CancelTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
-    <TestData2 Include="Test Data\BulkUpload_EditTest.csv">
+    </None>
+    <None Include="Test Data\BulkUpload_EditTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
-    <TestData2 Include="Test Data\BulkUpload_Empty.csv">
+    </None>
+    <None Include="Test Data\BulkUpload_Empty.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
-    <TestData2 Include="Test Data\BulkUpload_LARSExpired.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSMissing.csv" />
-    <TestData2 Include="Test Data\BulkUpload_MissingColumns.csv">
+    </None>
+    <None Include="Test Data\BulkUpload_LARSExpired.csv" />
+    <None Include="Test Data\BulkUpload_LARSInvalid.csv" />
+    <None Include="Test Data\BulkUpload_LARSMissing.csv" />
+    <None Include="Test Data\BulkUpload_MissingColumns.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
-    <TestData2 Include="Test Data\BulkUpload_SaveTest.csv">
+    </None>
+    <None Include="Test Data\BulkUpload_SaveTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
-    <TestData2 Include="Test Data\BulkUpload_Valid.csv">
+    </None>
+    <None Include="Test Data\BulkUpload_Valid.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </TestData2>
+    </None>
   </ItemGroup>
   <!--   <ItemGroup>
     <TestData Include="Test Data\BulkUploadNotCSV.txt">
