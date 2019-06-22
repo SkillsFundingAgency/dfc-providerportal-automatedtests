@@ -620,172 +620,37 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-5794 Edit Venue - Commit Edit Venue Record.feature.cs</LastGenOutput>
     </None>
-    <None Include="Test Data\BulkUploadNotCSV.txt" />
-    <None Include="Test Data\BulkUpload_1000courses.csv" />
-    <None Include="Test Data\BulkUpload_1000Courses_MaxCharsAllFields.csv" />
-    <None Include="Test Data\BulkUpload_100courses.csv" />
-    <None Include="Test Data\BulkUpload_AdultBudgetNone.csv" />
-    <None Include="Test Data\BulkUpload_ALLMAXCHARS.csv" />
-    <None Include="Test Data\BulkUpload_ALLOVERMAXCHARS.csv" />
-    <None Include="Test Data\BulkUpload_attendancemissing.csv" />
-    <None Include="Test Data\BulkUpload_AttendancePatternNone.csv">
+    <None Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_CancelTest.csv" />
-    <None Include="Test Data\BulkUpload_ColumnNameMisplet.csv" />
-    <None Include="Test Data\BulkUpload_CostformatInvalid.csv">
+    <None Include="Test Data\BulkUpload_AttendancePatternNone.csv" />
+    <None Include="Test Data\BulkUpload_CancelTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_CostInvalid.csv" />
-    <None Include="Test Data\BulkUpload_CostNone.csv" />
-    <None Include="Test Data\BulkUpload_CostorCostDescNone.csv" />
-    <None Include="Test Data\BulkUpload_CourseNameColumnMissing.csv" />
-    <None Include="Test Data\BulkUpload_CourseNameMissing.csv" />
-    <None Include="Test Data\BulkUpload_CourseNamemutiplerowsMissing.csv" />
-    <None Include="Test Data\BulkUpload_DateNone.csv" />
-    <None Include="Test Data\BulkUpload_dayblockrelease.csv" />
-    <None Include="Test Data\BulkUpload_DeliveryModeNone.csv" />
-    <None Include="Test Data\BulkUpload_DeliveryModeWrong.csv" />
-    <None Include="Test Data\BulkUpload_DurationDays.csv" />
-    <None Include="Test Data\BulkUpload_DurationHours.csv" />
-    <None Include="Test Data\BulkUpload_DurationInvalid.csv">
+    <None Include="Test Data\BulkUpload_EditTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_DurationOver3digits.csv" />
-    <None Include="Test Data\BulkUpload_DurationYears.csv" />
-    <None Include="Test Data\BulkUpload_EditTest.csv" />
-    <None Include="Test Data\BulkUpload_Empty.csv" />
-    <None Include="Test Data\BulkUpload_extracolumn.csv" />
-    <None Include="Test Data\BulkUpload_extracolumn2.csv" />
-    <None Include="Test Data\BulkUpload_extracolumn3.csv" />
-    <None Include="Test Data\BulkUpload_FlexibleDateSelected.csv" />
-    <None Include="Test Data\BulkUpload_flexibleevening.csv" />
-    <None Include="Test Data\BulkUpload_LARSEnteredaOnly.csv" />
-    <None Include="Test Data\BulkUpload_LARSExpired.csv">
+    <None Include="Test Data\BulkUpload_Empty.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_LARSInvalid.csv">
+    <None Include="Test Data\BulkUpload_LARSExpired.csv" />
+    <None Include="Test Data\BulkUpload_LARSInvalid.csv" />
+    <None Include="Test Data\BulkUpload_LARSMissing.csv" />
+    <None Include="Test Data\BulkUpload_MissingColumns.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_LARSMissing.csv">
+    <None Include="Test Data\BulkUpload_SaveTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_LARSMixture.csv" />
-    <None Include="Test Data\BulkUpload_MissingColumns.csv" />
-    <None Include="Test Data\BulkUpload_NoStudyMode.csv" />
-    <None Include="Test Data\BulkUpload_parttimeweekend.csv" />
-    <None Include="Test Data\BulkUpload_SaveTest.csv" />
-    <None Include="Test Data\BulkUpload_SpecialChars.csv" />
-    <None Include="Test Data\BulkUpload_SpecialChars2.csv" />
-    <None Include="Test Data\BulkUpload_splitcourseruns.csv" />
-    <None Include="Test Data\BulkUpload_StartDateDayInvalid.csv" />
-    <None Include="Test Data\BulkUpload_StartDateDDInvalid.csv" />
-    <None Include="Test Data\BulkUpload_StartDateFuture.csv" />
-    <None Include="Test Data\BulkUpload_StartDateMonthInvalid.csv" />
-    <None Include="Test Data\BulkUpload_StartDatePast.csv" />
-    <None Include="Test Data\BulkUpload_StartDateValid.csv" />
-    <None Include="Test Data\BulkUpload_StartDateYearInvalid.csv" />
-    <None Include="Test Data\BulkUpload_StudyModeInvalid.csv" />
-    <None Include="Test Data\BulkUpload_Success.csv" />
-    <None Include="Test Data\BulkUpload_Success_2500_courses.csv" />
-    <None Include="Test Data\BulkUpload_URLInvalid.csv" />
-    <None Include="Test Data\BulkUpload_Valid.csv" />
-    <None Include="Test Data\BulkUpload_WHOCOURSEFOROVER2000.csv" />
-    <None Include="Test Data\BulkUpload_WrongOrder.csv" />
+    <None Include="Test Data\BulkUpload_Valid.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <!--   <ItemGroup>
     <TestData Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </TestData>
   </ItemGroup> -->
-  <ItemGroup>
-    <TestData2 Include="Test Data\BulkUploadNotCSV.txt" />
-    <TestData2 Include="Test Data\BulkUpload_1000courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_1000Courses_MaxCharsAllFields.csv" />
-    <TestData2 Include="Test Data\BulkUpload_100courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_100Courses_MaxCharsAllFields.csv" />
-    <TestData2 Include="Test Data\BulkUpload_100Courses_MaxCharsAllFields.csv" />
-    <TestData2 Include="Test Data\BulkUpload_300courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_300courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_500courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_500courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_AdultBudgetNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ALLMAXCHARS.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ALLOVERMAXCHARS.csv" />
-    <TestData2 Include="Test Data\BulkUpload_attendancemissing.csv" />
-    <TestData2 Include="Test Data\BulkUpload_AttendancePatternNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CancelTest.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ColumnNameMisplet.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CostformatInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CostInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CostNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CostorCostDescNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CourseNameColumnMissing.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CourseNameMissing.csv" />
-    <TestData2 Include="Test Data\BulkUpload_CourseNamemutiplerowsMissing.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DateNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_dayblockrelease.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DeliveryModeNone.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DeliveryModeWrong.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DurationDays.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DurationHours.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DurationInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DurationOver3digits.csv" />
-    <TestData2 Include="Test Data\BulkUpload_DurationYears.csv" />
-    <TestData2 Include="Test Data\BulkUpload_EditTest.csv" />
-    <TestData2 Include="Test Data\BulkUpload_Empty.csv" />
-    <TestData2 Include="Test Data\BulkUpload_extracolumn.csv" />
-    <TestData2 Include="Test Data\BulkUpload_extracolumn2.csv" />
-    <TestData2 Include="Test Data\BulkUpload_extracolumn3.csv" />
-    <TestData2 Include="Test Data\BulkUpload_FlexibleDateSelected.csv" />
-    <TestData2 Include="Test Data\BulkUpload_flexibleevening.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSEnteredaOnly.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSExpired.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSMissing.csv" />
-    <TestData2 Include="Test Data\BulkUpload_LARSMixture.csv" />
-    <TestData2 Include="Test Data\BulkUpload_MissingColumns.csv" />
-    <TestData2 Include="Test Data\BulkUpload_MultipleErrors.csv" />
-    <TestData2 Include="Test Data\BulkUpload_MultipleErrors.csv" />
-    <TestData2 Include="Test Data\BulkUpload_MultipleErrors1Course5Runs.csv" />
-    <TestData2 Include="Test Data\BulkUpload_MultipleErrors1Course5Runs.csv" />
-    <TestData2 Include="Test Data\BulkUpload_NoStudyMode.csv" />
-    <TestData2 Include="Test Data\BulkUpload_parttimeweekend.csv" />
-    <TestData2 Include="Test Data\BulkUpload_PasswordProtected.csv" />
-    <TestData2 Include="Test Data\BulkUpload_PasswordProtected.csv" />
-    <TestData2 Include="Test Data\BulkUpload_SaveTest.csv" />
-    <TestData2 Include="Test Data\BulkUpload_SpecialChars.csv" />
-    <TestData2 Include="Test Data\BulkUpload_SpecialChars2.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns2.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns2.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns3.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns3.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns4.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns4.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns5.csv" />
-    <TestData2 Include="Test Data\BulkUpload_splitcourseruns5.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDateDayInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDateDDInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDateFuture.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDateMonthInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDatePast.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDateValid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StartDateYearInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_StudyModeInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_Success.csv" />
-    <TestData2 Include="Test Data\BulkUpload_Success_2500_courses.csv" />
-    <TestData2 Include="Test Data\BulkUpload_URLInvalid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_Valid.csv" />
-    <TestData2 Include="Test Data\BulkUpload_Valid1.csv" />
-    <TestData2 Include="Test Data\BulkUpload_Valid1.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ValidMultiple.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ValidMultiple.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ValidMultiple1.csv" />
-    <TestData2 Include="Test Data\BulkUpload_ValidMultiple1.csv" />
-    <TestData2 Include="Test Data\BulkUpload_WHOCOURSEFOROVER2000.csv" />
-    <TestData2 Include="Test Data\BulkUpload_WrongOrder.csv" />
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

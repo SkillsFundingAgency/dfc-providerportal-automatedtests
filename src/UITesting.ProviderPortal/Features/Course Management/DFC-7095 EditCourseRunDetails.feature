@@ -116,7 +116,7 @@ Scenario: Edit course run with blank duration
 	Given I have accessed the selected course run data
 	And I have entered a blank value in Duration " "
 	When I  Save the data
-	Then the following duration message should be displayed "Enter Duration"
+	Then the following duration message should be displayed "Enter duration"
 
 @CI
 Scenario: Edit course with Online and a valid URL

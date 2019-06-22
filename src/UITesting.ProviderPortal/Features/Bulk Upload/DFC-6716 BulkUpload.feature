@@ -21,14 +21,14 @@ Scenario: DFC-6737 Bulk Upload Status of upload Courses - No Errors
 @CI
 Scenario: DFC-7272 Bulk Upload Status of upload Courses - Errors
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_DurationInvalid.csv to upload
+	When I click Choose a File BulkUpload_AttendancePatternNone.csv to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
 
 @CI
 Scenario: DFC-6738 Bulk Upload Stage 1 - Pass
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_DurationInvalid.csv to upload
+	When I click Choose a File BulkUpload_AttendancePatternNone.csv to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
 
@@ -152,19 +152,19 @@ Scenario Outline: COUR-765 Field Validations
 Examples: 
 | file                                 |
 | BulkUpload_AttendancePatternNone.csv |
-| BulkUpload_CostformatInvalid.csv     |
-| BulkUpload_CostorCostDescNone.csv    |
-| BulkUpload_DurationInvalid.csv       |
-| BulkUpload_URLInvalid.csv            |
-| BulkUpload_URLInvalid.csv            |
-| BulkUpload_URLInvalid.csv            |
-| BulkUpload_StartDateValid.csv        |
-| BulkUpload_StartDatePast.csv         |
-| BulkUpload_StartDateFuture.csv       |
-| BulkUpload_NoStudyMode.csv           |
-| BulkUpload_attendancemissing.csv     |
-| BulkUpload_DateNone.csv              |
-| BulkUpload_dayblockrelease.csv       |
-| BulkUpload_DeliveryModeNone.csv      |
+#| BulkUpload_CostformatInvalid.csv     |
+#| BulkUpload_CostorCostDescNone.csv    |
+#| BulkUpload_DurationInvalid.csv       |
+#| BulkUpload_URLInvalid.csv            |
+#| BulkUpload_URLInvalid.csv            |
+#| BulkUpload_URLInvalid.csv            |
+#| BulkUpload_StartDateValid.csv        |
+#| BulkUpload_StartDatePast.csv         |
+#| BulkUpload_StartDateFuture.csv       |
+#| BulkUpload_NoStudyMode.csv           |
+#| BulkUpload_attendancemissing.csv     |
+#| BulkUpload_DateNone.csv              |
+#| BulkUpload_dayblockrelease.csv       |
+#| BulkUpload_DeliveryModeNone.csv      |
 
 

@@ -125,7 +125,7 @@ this.FeatureBackground();
 #line 23
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
- testRunner.When("I click Choose a File BulkUpload_DurationInvalid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click Choose a File BulkUpload_AttendancePatternNone.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
@@ -149,7 +149,7 @@ this.FeatureBackground();
 #line 30
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 31
- testRunner.When("I click Choose a File BulkUpload_DurationInvalid.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click Choose a File BulkUpload_AttendancePatternNone.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
@@ -503,20 +503,6 @@ this.FeatureBackground();
         [NUnit.Framework.DescriptionAttribute("COUR-765 Field Validations")]
         [NUnit.Framework.CategoryAttribute("CI")]
         [NUnit.Framework.TestCaseAttribute("BulkUpload_AttendancePatternNone.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_CostformatInvalid.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_CostorCostDescNone.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_DurationInvalid.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDateValid.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDatePast.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDateFuture.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_NoStudyMode.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_attendancemissing.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_DateNone.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_dayblockrelease.csv", null)]
-        [NUnit.Framework.TestCaseAttribute("BulkUpload_DeliveryModeNone.csv", null)]
         public virtual void COUR_765FieldValidations(string file, string[] exampleTags)
         {
             string[] @__tags = new string[] {
