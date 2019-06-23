@@ -207,10 +207,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         }
 
 
-        public BulkUploadFixPublishPage ClickSaveBURun()
+        public BulkUploadPublishPage ClickSaveBURun()
         {
             FormCompletionHelper.ClickElement(SaveBtn);
-            return new BulkUploadFixPublishPage(webDriver);
+            PageInteractionHelper.WaitForPageToLoad(20);
+            return new BulkUploadPublishPage(webDriver);
         }
 
 
@@ -376,6 +377,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public EditCoursePage2 EnterCourseCost(string cost)
         {
             //FormCompletionHelper.ClearContents(courseCost);
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.EnterText(courseCost, cost);
             return new EditCoursePage2(webDriver);
         }

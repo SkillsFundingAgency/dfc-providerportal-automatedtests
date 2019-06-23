@@ -111,10 +111,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             return new BulkUploadFixPublishPage(webDriver);
         }
 
-        public BulkUploadFixPublishPage ClickSaveBU()
+        public BulkUploadPublishPage ClickSaveBU()
         {
             FormCompletionHelper.ClickElement(SaveBtn);
-            return new BulkUploadFixPublishPage(webDriver);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new BulkUploadPublishPage(webDriver);
         }
 
 

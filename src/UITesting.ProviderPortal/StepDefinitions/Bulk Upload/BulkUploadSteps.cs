@@ -17,6 +17,12 @@ namespace UITesting.ProviderPortal.StepDefinitions
             webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl() + "/BulkUpload";
         }
 
+        [Given(@"I have accessed the Bulk Upload fixes page")]
+        public void GivenIAmOnBulkUploadFixPage()
+        {
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl() + "/PublishCourses?publishMode=BulkUpload";
+        }
+
 
         [When(@"I click Choose a File (.*) to upload")]
         public void WhenIChooseFile(string fileName)
@@ -189,7 +195,7 @@ namespace UITesting.ProviderPortal.StepDefinitions
                 links = webDriver.FindElements(By.LinkText("Fix"));
 
                 //if (!string.IsNullOrEmpty(links[i].Text))
-                if (i == 0)
+                if (i == 1)
                     links[i].Click();
             }
 

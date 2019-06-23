@@ -12,8 +12,8 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
     {
         private static String PAGE_TITLE = "Fix errors";
         private By PublishBtn = By.Id("publish");
-        private By FirstFixCourseLink = By.XPath(".//*[@id='course-fix-691e52ab-063c-42cb-a227-2119fbc727c7']");
-        private By FirstFixCourseRunLink = By.XPath(".//*[@id='course-run-fix-da673d5a-bb0d-43a9-9cde-770680595312']");
+        private By FirstFixCourseLink = By.XPath(".//*[@id='course-fix-feefb502-f343-40ca-92b9-7909dfae0768']");
+        private By FirstFixCourseRunLink = By.XPath(".//*[@id='course-run-fix-0d92ed05-d0be-4eda-9789-67418048a00f']");
         private By FirstFixCourseInstance = By.XPath(".//*[@class='error-link'][0]");
         private By FirstFixCourseRunInstance = By.XPath(".//*[@class='error-link fix'][0]");
 

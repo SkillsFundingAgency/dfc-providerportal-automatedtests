@@ -98,6 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COUR-615 SelectApprenticeshipsDeliveryType.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Bulk Upload\DFC-6716 BulkUpload2.feature.cs">
+      <DependentUpon>DFC-6716 BulkUpload2.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -468,6 +473,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-615 SelectApprenticeshipsDeliveryType.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\Bulk Upload\DFC-6716 BulkUpload2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DFC-6716 BulkUpload2.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Bulk Upload\DFC-6716 BulkUpload.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DFC-6716 BulkUpload.feature.cs</LastGenOutput>
@@ -623,7 +632,9 @@
     <None Include="Test Data\BulkUploadNotCSV.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_AttendancePatternNone.csv" />
+    <None Include="Test Data\BulkUpload_AttendancePatternNone.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Test Data\BulkUpload_CancelTest.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -633,13 +644,22 @@
     <None Include="Test Data\BulkUpload_Empty.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Test Data\BulkUpload_LARSExpired.csv" />
-    <None Include="Test Data\BulkUpload_LARSInvalid.csv" />
-    <None Include="Test Data\BulkUpload_LARSMissing.csv" />
+    <None Include="Test Data\BulkUpload_LARSExpired.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Data\BulkUpload_LARSInvalid.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Data\BulkUpload_LARSMissing.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Test Data\BulkUpload_MissingColumns.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Test Data\BulkUpload_SaveTest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Data\BulkUpload_SaveTest2.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Test Data\BulkUpload_Valid.csv">
