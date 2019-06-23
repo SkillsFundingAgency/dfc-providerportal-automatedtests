@@ -85,11 +85,11 @@ namespace UITesting.ProviderPortal.Features.QualificationManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate Qualification Options")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7391 Validate Qualification Options")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ValidateQualificationOptions()
+        public virtual void DFC_7391ValidateQualificationOptions()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Qualification Options", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7391 Validate Qualification Options", null, new string[] {
                         "CI"});
 #line 13
 this.ScenarioInitialize(scenarioInfo);
@@ -105,11 +105,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select Regulated Qualifications")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7391 Select Regulated Qualifications")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectRegulatedQualifications()
+        public virtual void DFC_7391SelectRegulatedQualifications()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Regulated Qualifications", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7391 Select Regulated Qualifications", null, new string[] {
                         "CI"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);
@@ -129,11 +129,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select Non Regulated Qualifications")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7391 Select Non Regulated Qualifications")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectNonRegulatedQualifications()
+        public virtual void DFC_7391SelectNonRegulatedQualifications()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Non Regulated Qualifications", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7391 Select Non Regulated Qualifications", null, new string[] {
                         "CI"});
 #line 25
 this.ScenarioInitialize(scenarioInfo);
@@ -153,11 +153,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Display error message when no option is selected")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7391 Display error message when no option is selected")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DisplayErrorMessageWhenNoOptionIsSelected()
+        public virtual void DFC_7391DisplayErrorMessageWhenNoOptionIsSelected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display error message when no option is selected", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7391 Display error message when no option is selected", null, new string[] {
                         "CI"});
 #line 32
 this.ScenarioInitialize(scenarioInfo);

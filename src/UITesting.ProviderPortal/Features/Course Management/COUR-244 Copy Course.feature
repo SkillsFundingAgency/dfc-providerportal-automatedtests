@@ -1,4 +1,4 @@
-﻿Feature: Copy Course
+﻿Feature: COUR-244 Copy Course
 	In order to create a course
 	As a provider
 	I want to be able to copy a course
@@ -15,7 +15,7 @@ Background:
 	Then I should be able to view the course runs.	
 
 @CI
-Scenario: Copy a Course
+Scenario: COUR-244 Copy a Course
 	Given I have selected a course run to copy
 	Then Copy Course page should be displayed
 	When I clik save to copy the course

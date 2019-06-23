@@ -91,11 +91,11 @@ testRunner.Given("I have accessed course directory as a provider", ((string)(nul
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate options and buttons")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Validate options and buttons")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ValidateOptionsAndButtons()
+        public virtual void DFC_7094ValidateOptionsAndButtons()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate options and buttons", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Validate options and buttons", null, new string[] {
                         "CI"});
 #line 16
 this.ScenarioInitialize(scenarioInfo);
@@ -113,11 +113,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit course description for a course with valid description with 2000 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit course description for a course with valid description with 2000 ch" +
+            "aracters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseDescriptionForACourseWithValidDescriptionWith2000Characters()
+        public virtual void DFC_7094EditCourseDescriptionForACourseWithValidDescriptionWith2000Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit course description for a course with valid description with 2000 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit course description for a course with valid description with 2000 ch" +
+                    "aracters", null, new string[] {
                         "CI"});
 #line 22
 this.ScenarioInitialize(scenarioInfo);
@@ -162,11 +164,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit course description for a course with description more than 2000 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit course description for a course with description more than 2000 cha" +
+            "racters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseDescriptionForACourseWithDescriptionMoreThan2000Characters()
+        public virtual void DFC_7094EditCourseDescriptionForACourseWithDescriptionMoreThan2000Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit course description for a course with description more than 2000 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit course description for a course with description more than 2000 cha" +
+                    "racters", null, new string[] {
                         "CI"});
 #line 29
 this.ScenarioInitialize(scenarioInfo);
@@ -210,11 +214,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course with no data in course name")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit Course with no data in course name")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseWithNoDataInCourseName()
+        public virtual void DFC_7094EditCourseWithNoDataInCourseName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course with no data in course name", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit Course with no data in course name", null, new string[] {
                         "CI"});
 #line 35
 this.ScenarioInitialize(scenarioInfo);
@@ -239,11 +243,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Entry Requirements with more than 500 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit Entry Requirements with more than 500 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditEntryRequirementsWithMoreThan500Characters()
+        public virtual void DFC_7094EditEntryRequirementsWithMoreThan500Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Entry Requirements with more than 500 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit Entry Requirements with more than 500 characters", null, new string[] {
                         "CI"});
 #line 43
 this.ScenarioInitialize(scenarioInfo);
@@ -262,11 +266,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit What you’ll learn with more than 1000 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit What you’ll learn with more than 1000 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditWhatYouLlLearnWithMoreThan1000Characters()
+        public virtual void DFC_7094EditWhatYouLlLearnWithMoreThan1000Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit What you’ll learn with more than 1000 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit What you’ll learn with more than 1000 characters", null, new string[] {
                         "CI"});
 #line 49
 this.ScenarioInitialize(scenarioInfo);
@@ -285,11 +289,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit How you’ll learn with more than 500 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit How you’ll learn with more than 500 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditHowYouLlLearnWithMoreThan500Characters()
+        public virtual void DFC_7094EditHowYouLlLearnWithMoreThan500Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit How you’ll learn with more than 500 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit How you’ll learn with more than 500 characters", null, new string[] {
                         "CI"});
 #line 55
 this.ScenarioInitialize(scenarioInfo);
@@ -308,11 +312,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit What you’ll need to bring with more than 500 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit What you’ll need to bring with more than 500 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditWhatYouLlNeedToBringWithMoreThan500Characters()
+        public virtual void DFC_7094EditWhatYouLlNeedToBringWithMoreThan500Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit What you’ll need to bring with more than 500 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit What you’ll need to bring with more than 500 characters", null, new string[] {
                         "CI"});
 #line 61
 this.ScenarioInitialize(scenarioInfo);
@@ -331,11 +335,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit How you’ll be assessed with more than 500 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit How you’ll be assessed with more than 500 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditHowYouLlBeAssessedWithMoreThan500Characters()
+        public virtual void DFC_7094EditHowYouLlBeAssessedWithMoreThan500Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit How you’ll be assessed with more than 500 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit How you’ll be assessed with more than 500 characters", null, new string[] {
                         "CI"});
 #line 67
 this.ScenarioInitialize(scenarioInfo);
@@ -354,11 +358,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Where next with more than 500 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit Where next with more than 500 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditWhereNextWithMoreThan500Characters()
+        public virtual void DFC_7094EditWhereNextWithMoreThan500Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Where next with more than 500 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit Where next with more than 500 characters", null, new string[] {
                         "CI"});
 #line 73
 this.ScenarioInitialize(scenarioInfo);
@@ -377,11 +381,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course with invalid characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7094 Edit Course with invalid characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseWithInvalidCharacters()
+        public virtual void DFC_7094EditCourseWithInvalidCharacters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course with invalid characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7094 Edit Course with invalid characters", null, new string[] {
                         "CI"});
 #line 79
 this.ScenarioInitialize(scenarioInfo);

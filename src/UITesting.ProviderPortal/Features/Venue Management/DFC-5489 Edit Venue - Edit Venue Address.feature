@@ -15,7 +15,7 @@ Background:
 	Then I am on the Edit venue details page
 
 @CI
-Scenario: Edit Venue Address
+Scenario: DFC-5489 Edit Venue Address
 	When I click Change Address on Edit Venue page
 	Then I am on Edit Venue Address page
 	When I edit the venue address to b14 7rz

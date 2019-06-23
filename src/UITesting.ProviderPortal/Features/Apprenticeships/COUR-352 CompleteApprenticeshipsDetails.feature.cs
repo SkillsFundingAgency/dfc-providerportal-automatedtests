@@ -89,11 +89,11 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add all valid Values")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Add all valid Values")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void AddAllValidValues()
+        public virtual void COUR_352AddAllValidValues()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add all valid Values", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Add all valid Values", null, new string[] {
                         "CI"});
 #line 15
 this.ScenarioInitialize(scenarioInfo);
@@ -123,11 +123,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Apprenticeships info not entered")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Apprenticeships info not entered")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ApprenticeshipsInfoNotEntered()
+        public virtual void COUR_352ApprenticeshipsInfoNotEntered()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Apprenticeships info not entered", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Apprenticeships info not entered", null, new string[] {
                         "CI"});
 #line 26
 this.ScenarioInitialize(scenarioInfo);
@@ -158,11 +158,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Email not entered")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Email not entered")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EmailNotEntered()
+        public virtual void COUR_352EmailNotEntered()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email not entered", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Email not entered", null, new string[] {
                         "CI"});
 #line 37
 this.ScenarioInitialize(scenarioInfo);
@@ -192,11 +192,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Phone not entered")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Phone not entered")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void PhoneNotEntered()
+        public virtual void COUR_352PhoneNotEntered()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Phone not entered", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Phone not entered", null, new string[] {
                         "CI"});
 #line 48
 this.ScenarioInitialize(scenarioInfo);
@@ -226,11 +226,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Email entered")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Invalid Email entered")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void InvalidEmailEntered()
+        public virtual void COUR_352InvalidEmailEntered()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Email entered", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Invalid Email entered", null, new string[] {
                         "CI"});
 #line 59
 this.ScenarioInitialize(scenarioInfo);
@@ -260,11 +260,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Phone Number entered-less than 11 characters")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Invalid Phone Number entered-less than 11 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void InvalidPhoneNumberEntered_LessThan11Characters()
+        public virtual void COUR_352InvalidPhoneNumberEntered_LessThan11Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Phone Number entered-less than 11 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Invalid Phone Number entered-less than 11 characters", null, new string[] {
                         "CI"});
 #line 70
 this.ScenarioInitialize(scenarioInfo);
@@ -295,11 +295,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Invalid Phone Number entered-no numbers")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Invalid Phone Number entered-no numbers")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void InvalidPhoneNumberEntered_NoNumbers()
+        public virtual void COUR_352InvalidPhoneNumberEntered_NoNumbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid Phone Number entered-no numbers", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Invalid Phone Number entered-no numbers", null, new string[] {
                         "CI"});
 #line 81
 this.ScenarioInitialize(scenarioInfo);
@@ -329,11 +329,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Apprenticeships info entered that is more than 750 characters")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Apprenticeships info entered that is more than 750 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ApprenticeshipsInfoEnteredThatIsMoreThan750Characters()
+        public virtual void COUR_352ApprenticeshipsInfoEnteredThatIsMoreThan750Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Apprenticeships info entered that is more than 750 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Apprenticeships info entered that is more than 750 characters", null, new string[] {
                         "CI"});
 #line 92
 this.ScenarioInitialize(scenarioInfo);
@@ -364,11 +364,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Email more than 255 characters")]
+        [NUnit.Framework.DescriptionAttribute("COUR-352 Email more than 255 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EmailMoreThan255Characters()
+        public virtual void COUR_352EmailMoreThan255Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email more than 255 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-352 Email more than 255 characters", null, new string[] {
                         "CI"});
 #line 103
 this.ScenarioInitialize(scenarioInfo);

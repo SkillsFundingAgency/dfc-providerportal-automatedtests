@@ -24,7 +24,7 @@ Background:
 	Then  I am on the Add Venue Confirm details page
 
 @CI
-Scenario Outline: Change address manually during Add Venue
+Scenario Outline: DFC-5486 Change address manually during Add Venue
 Given I am on the edit venue address screen
 	When Editing I enter the postcode <postcode>
 	And I click Find Address to change to

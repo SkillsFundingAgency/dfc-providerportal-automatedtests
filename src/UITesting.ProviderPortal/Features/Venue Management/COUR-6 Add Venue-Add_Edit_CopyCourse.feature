@@ -11,7 +11,7 @@ Background:
 	When I click to view my courses
 	 
 @CI
-Scenario: Add a Venue when adding a new course
+Scenario: COUR-6 Add a Venue when adding a new course
 	Given I have accessed the Regulated Qualifications page
 	When I select the Regulated Option
 	And I click Next
@@ -37,8 +37,9 @@ Scenario: Add a Venue when adding a new course
 	Then the Add Course Summary Page should be displayed
 	And I have clicked Accept and Publish
 	Then the course should be added
+
 @CI
-Scenario: Add a Venue when editing an existing course
+Scenario: COUR-6 Add a Venue when editing an existing course
 	Given I have selected a course
 	When I clicked the Edit course information
 	Then Second Page of Edit Course should be displayed
@@ -64,7 +65,7 @@ Scenario: Add a Venue when editing an existing course
 	Then the course should be added
 
 @CI
-Scenario: Add a Venue when copying an existing course
+Scenario: COUR-6 Add a Venue when copying an existing course
 	Given I have selected a course run to copy
 	Then Copy Course Page should be displayed
 	#Given I have accessed the selected course run data

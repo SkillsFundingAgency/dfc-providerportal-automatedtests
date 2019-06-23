@@ -4,7 +4,7 @@
 	I want to be able to change the course venue
 
 @CI
-Scenario: Edit Course Venue
+Scenario: DFC-4830 Edit Course Venue
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in

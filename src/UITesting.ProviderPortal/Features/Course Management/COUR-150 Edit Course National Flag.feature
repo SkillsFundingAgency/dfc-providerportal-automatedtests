@@ -4,7 +4,7 @@
 	I want to be able to change the course venue
 
 @CI
-Scenario: Edit National Flag
+Scenario: COUR-150 Edit National Flag
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in

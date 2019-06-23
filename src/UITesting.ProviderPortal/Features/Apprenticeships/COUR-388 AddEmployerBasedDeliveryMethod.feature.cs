@@ -120,11 +120,11 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select EastMidlands regions and the first sub-region")]
+        [NUnit.Framework.DescriptionAttribute("COUR-388 Select EastMidlands regions and the first sub-region")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectEastMidlandsRegionsAndTheFirstSub_Region()
+        public virtual void COUR_388SelectEastMidlandsRegionsAndTheFirstSub_Region()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select EastMidlands regions and the first sub-region", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-388 Select EastMidlands regions and the first sub-region", null, new string[] {
                         "CI"});
 #line 30
 this.ScenarioInitialize(scenarioInfo);
@@ -144,11 +144,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select EastMidlands regions and select All sub-regions")]
+        [NUnit.Framework.DescriptionAttribute("COUR-388 Select EastMidlands regions and select All sub-regions")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectEastMidlandsRegionsAndSelectAllSub_Regions()
+        public virtual void COUR_388SelectEastMidlandsRegionsAndSelectAllSub_Regions()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select EastMidlands regions and select All sub-regions", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-388 Select EastMidlands regions and select All sub-regions", null, new string[] {
                         "CI"});
 #line 37
 this.ScenarioInitialize(scenarioInfo);
@@ -168,11 +168,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select All regions and the first sub-region for each")]
+        [NUnit.Framework.DescriptionAttribute("COUR-388 Select All regions and the first sub-region for each")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectAllRegionsAndTheFirstSub_RegionForEach()
+        public virtual void COUR_388SelectAllRegionsAndTheFirstSub_RegionForEach()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select All regions and the first sub-region for each", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-388 Select All regions and the first sub-region for each", null, new string[] {
                         "CI"});
 #line 44
 this.ScenarioInitialize(scenarioInfo);
@@ -242,11 +242,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select All regions and select All sub-regions")]
+        [NUnit.Framework.DescriptionAttribute("COUR-388 Select All regions and select All sub-regions")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectAllRegionsAndSelectAllSub_Regions()
+        public virtual void COUR_388SelectAllRegionsAndSelectAllSub_Regions()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select All regions and select All sub-regions", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-388 Select All regions and select All sub-regions", null, new string[] {
                         "CI"});
 #line 85
 this.ScenarioInitialize(scenarioInfo);

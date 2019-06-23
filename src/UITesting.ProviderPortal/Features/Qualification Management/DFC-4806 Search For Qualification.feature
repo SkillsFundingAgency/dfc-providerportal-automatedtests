@@ -13,7 +13,7 @@ Background:
 	And there is a field to enter the LARS/QAN number.
 
 @CI
-Scenario: Search for a Qualification by LARS/QAN Reference Number
+Scenario: DFC-4806 Search for a Qualification by LARS/QAN Reference Number
 	Given I have entered LARS/QAN Number "60060955"
 	Then I want to see the Qualifications listed for that LARS/QAN Number
 	And I want to see LARS/QAN number "LARS/QAN", Level "Level" and awarding body "Awarding body" for each qualification
@@ -22,12 +22,12 @@ Scenario: Search for a Qualification by LARS/QAN Reference Number
 	And I want to see Awarding Organisation Filter on the screen "Awarding organisation"
 
 @CI
-Scenario: Search for a Qualification when user enters an invalid search term
+Scenario: DFC-4806 Search for a Qualification when user enters an invalid search term
 	Given that I have entered an invalid search term "xxxxx"
 	Then I want to see a validation message "No records found"
 
 @CI
-Scenario: Search for a Qualification using Qualification Name
+Scenario: DFC-4806 Search for a Qualification using Qualification Name
 	Given I have entered a Qualification Name "Biology"
 	Then I want to see the Qualifications listed for that LARS/QAN Number
 	And I want to see LARS/QAN number "LARS/QAN", Level "Level" and awarding body "Awarding body" for each qualification
@@ -36,17 +36,17 @@ Scenario: Search for a Qualification using Qualification Name
 	And I want to see Level and Awarding body on the screen.
 
 @CI
-Scenario: Select filters for Qualification Level
+Scenario: DFC-4806 Select filters for Qualification Level
 	Given I have retrieved results for a search term
 	And I select one level for qualification level
 
 @CI
-Scenario: Select filters for Awarding Body
+Scenario: DFC-4806 Select filters for Awarding Body
 	Given I have retrieved results for a search term
 	And I have selected one awarding body
 
 @CI
-Scenario: Clear filters when reset is clicked
+Scenario: DFC-4806 Clear filters when reset is clicked
 	Given I have entered a Qualification Name "Biology"
 	Given I have selected filters in Qualification Level and/or Awarding body
 	When I click reset

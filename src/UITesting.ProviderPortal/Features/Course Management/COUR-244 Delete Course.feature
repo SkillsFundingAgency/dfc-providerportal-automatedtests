@@ -1,4 +1,4 @@
-﻿Feature: Delete a Course
+﻿Feature: COUR-71 Delete a Course
 	In order to maintain my courses
 	As a provider
 	I want to be able to delete a course
@@ -15,7 +15,7 @@ Background:
 	Then I should be able to view the course runs.	
 
 @CI
-Scenario: Delete a Course
+Scenario: COUR-71 Delete a Course
 	Given I have selected a course run to delete
 	When I click delete
 	Then the course should be deleted

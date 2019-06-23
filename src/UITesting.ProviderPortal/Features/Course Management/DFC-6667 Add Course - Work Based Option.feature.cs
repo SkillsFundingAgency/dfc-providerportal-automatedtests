@@ -101,11 +101,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter Work Based Options when adding a course field changes")]
+        [NUnit.Framework.DescriptionAttribute("DFC-6667 Enter Work Based Options when adding a course field changes")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterWorkBasedOptionsWhenAddingACourseFieldChanges()
+        public virtual void DFC_6667EnterWorkBasedOptionsWhenAddingACourseFieldChanges()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Work Based Options when adding a course field changes", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6667 Enter Work Based Options when adding a course field changes", null, new string[] {
                         "CI"});
 #line 23
 this.ScenarioInitialize(scenarioInfo);
@@ -134,11 +134,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Publish course with Work Based Options - Single Region")]
+        [NUnit.Framework.DescriptionAttribute("DFC-6667 Publish course with Work Based Options - Single Region")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void PublishCourseWithWorkBasedOptions_SingleRegion()
+        public virtual void DFC_6667PublishCourseWithWorkBasedOptions_SingleRegion()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish course with Work Based Options - Single Region", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6667 Publish course with Work Based Options - Single Region", null, new string[] {
                         "CI"});
 #line 34
 this.ScenarioInitialize(scenarioInfo);
@@ -165,11 +165,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Publish course with Work Based Options - National Coverage")]
+        [NUnit.Framework.DescriptionAttribute("DFC-6667 Publish course with Work Based Options - National Coverage")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void PublishCourseWithWorkBasedOptions_NationalCoverage()
+        public virtual void DFC_6667PublishCourseWithWorkBasedOptions_NationalCoverage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish course with Work Based Options - National Coverage", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6667 Publish course with Work Based Options - National Coverage", null, new string[] {
                         "CI"});
 #line 44
 this.ScenarioInitialize(scenarioInfo);
@@ -194,11 +194,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Publish course with Work Based Options - National Flag not answered")]
+        [NUnit.Framework.DescriptionAttribute("DFC-6667 Publish course with Work Based Options - National Flag not answered")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void PublishCourseWithWorkBasedOptions_NationalFlagNotAnswered()
+        public virtual void DFC_6667PublishCourseWithWorkBasedOptions_NationalFlagNotAnswered()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish course with Work Based Options - National Flag not answered", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6667 Publish course with Work Based Options - National Flag not answered", null, new string[] {
                         "CI"});
 #line 53
 this.ScenarioInitialize(scenarioInfo);

@@ -18,8 +18,8 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Delete a Course")]
-    public partial class DeleteACourseFeature
+    [NUnit.Framework.DescriptionAttribute("COUR-71 Delete a Course")]
+    public partial class COUR_71DeleteACourseFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Delete a Course", "\tIn order to maintain my courses\r\n\tAs a provider\r\n\tI want to be able to delete a " +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "COUR-71 Delete a Course", "\tIn order to maintain my courses\r\n\tAs a provider\r\n\tI want to be able to delete a " +
                     "course", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -93,11 +93,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete a Course")]
+        [NUnit.Framework.DescriptionAttribute("COUR-71 Delete a Course")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DeleteACourse()
+        public virtual void COUR_71DeleteACourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a Course", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-71 Delete a Course", null, new string[] {
                         "CI"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);

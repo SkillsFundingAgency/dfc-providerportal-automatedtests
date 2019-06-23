@@ -17,7 +17,7 @@ Background:
 
 
 @CI
-Scenario: Edit URL with Valid Data
+Scenario: DFC-6185 Edit URL with Valid Data
 	Given I have selected a course run to update
 	And I have changed the URL to http://www.testing.co.uk
 	When I Click Save

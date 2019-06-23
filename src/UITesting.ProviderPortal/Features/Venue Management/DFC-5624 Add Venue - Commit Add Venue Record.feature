@@ -24,7 +24,7 @@ Background:
 
 
 @CI
-Scenario: User Confirms Details
+Scenario: DFC-5624 User Confirms Details
 	When I am on the Add Venue Confirm details page
 	And On the Confirmation Page I click continue
 	Then I am on the View All Live Venues Page

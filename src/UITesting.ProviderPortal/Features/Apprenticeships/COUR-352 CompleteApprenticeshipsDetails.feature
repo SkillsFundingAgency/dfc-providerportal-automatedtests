@@ -12,7 +12,7 @@ Background:
 	When I use apprenticeship search to search for Plum
 	Then the Results are displayed
 @CI
-Scenario: Add all valid Values
+Scenario: COUR-352 Add all valid Values
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"
@@ -23,7 +23,7 @@ Scenario: Add all valid Values
 	And I have clicked continue
 	Then the apprenticeship delivery screen should be visible 
 @CI
-Scenario: Apprenticeships info not entered
+Scenario: COUR-352 Apprenticeships info not entered
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information " "
@@ -34,7 +34,7 @@ Scenario: Apprenticeships info not entered
 	And I have clicked continue error
 	Then a Blank App Info error message should be displayed "Enter Apprenticeship information for employers"
 @CI
-Scenario: Email not entered
+Scenario: COUR-352 Email not entered
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"
@@ -45,7 +45,7 @@ Scenario: Email not entered
 	And I have clicked continue error
 	Then a email Info error message should be displayed "Enter email"
 @CI
-Scenario: Phone not entered
+Scenario: COUR-352 Phone not entered
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"
@@ -56,7 +56,7 @@ Scenario: Phone not entered
 	And I have clicked continue error
 	Then a phone Info error message should be displayed "Enter telephone"
 @CI
-Scenario: Invalid Email entered
+Scenario: COUR-352 Invalid Email entered
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"
@@ -67,7 +67,7 @@ Scenario: Invalid Email entered
 	And I have clicked continue error
 	Then a email Info error message should be displayed "Enter a valid email"
 @CI
-Scenario: Invalid Phone Number entered-less than 11 characters
+Scenario: COUR-352 Invalid Phone Number entered-less than 11 characters
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"
@@ -78,7 +78,7 @@ Scenario: Invalid Phone Number entered-less than 11 characters
 	And I have clicked continue error
 	Then a phone Info error message should be displayed "Telephone should be minimum 11 characters"
 @CI
-Scenario: Invalid Phone Number entered-no numbers
+Scenario: COUR-352 Invalid Phone Number entered-no numbers
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"
@@ -89,7 +89,7 @@ Scenario: Invalid Phone Number entered-no numbers
 	And I have clicked continue error
 	Then a phone Info error message should be displayed "Enter a valid telephone number"
 @CI
-Scenario: Apprenticeships info entered that is more than 750 characters
+Scenario: COUR-352 Apprenticeships info entered that is more than 750 characters
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occid"
@@ -100,7 +100,7 @@ Scenario: Apprenticeships info entered that is more than 750 characters
 	And I have clicked continue error
 	Then a App Info error message should be displayed "Apprenticeship information for employers should be no more than 750 characters"
 @CI
-Scenario: Email more than 255 characters
+Scenario: COUR-352 Email more than 255 characters
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page
 	When I enter apprenticeships information "Test Apprenticeship"

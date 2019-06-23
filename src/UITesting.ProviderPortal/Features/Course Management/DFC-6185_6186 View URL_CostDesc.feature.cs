@@ -93,11 +93,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit URL with Valid Data")]
+        [NUnit.Framework.DescriptionAttribute("DFC-6185 Edit URL with Valid Data")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditURLWithValidData()
+        public virtual void DFC_6185EditURLWithValidData()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit URL with Valid Data", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-6185 Edit URL with Valid Data", null, new string[] {
                         "CI"});
 #line 20
 this.ScenarioInitialize(scenarioInfo);

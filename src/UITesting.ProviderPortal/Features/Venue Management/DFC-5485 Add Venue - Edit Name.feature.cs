@@ -107,11 +107,11 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Change name manually from Edit Venue Screen")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5485 Change name manually from Edit Venue Screen")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ChangeNameManuallyFromEditVenueScreen()
+        public virtual void DFC_5485ChangeNameManuallyFromEditVenueScreen()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change name manually from Edit Venue Screen", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5485 Change name manually from Edit Venue Screen", null, new string[] {
                         "CI"});
 #line 25
 this.ScenarioInitialize(scenarioInfo);

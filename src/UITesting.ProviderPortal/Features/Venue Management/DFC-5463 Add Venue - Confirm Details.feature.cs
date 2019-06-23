@@ -107,11 +107,11 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User is on Add Venue Confirm Address Page")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5463 User is on Add Venue Confirm Address Page")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UserIsOnAddVenueConfirmAddressPage()
+        public virtual void DFC_5463UserIsOnAddVenueConfirmAddressPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User is on Add Venue Confirm Address Page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5463 User is on Add Venue Confirm Address Page", null, new string[] {
                         "CI"});
 #line 27
 this.ScenarioInitialize(scenarioInfo);

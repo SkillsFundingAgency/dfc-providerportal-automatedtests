@@ -26,19 +26,19 @@ Background:
 	When I press continue location
 	Then the Apprenticeships delivery options screen is displayed
 @CI
-Scenario: Select a location and Day Release and click SaveandContinue
+Scenario: COUR-387 Select a location and Day Release and click SaveandContinue
 	Given I have selected a venue from the Location dropdown
 	And I have selected Day release as delivery mode
 	When I click SaveandContinue
 	Then the Apprenticeship Summary Screen should be displayed
 @CI
-Scenario: Select a location and Block Release and click SaveandContinue
+Scenario: COUR-387 Select a location and Block Release and click SaveandContinue
 	Given I have selected a venue from the Location dropdown
 	And I have selected Block release as delivery mode
 	When I click SaveandContinue
 	Then the Apprenticeship Summary Screen should be displayed
 @CI
-Scenario: Select a location and select both Day and Block Release and click SaveandContinue
+Scenario: COUR-387 Select a location and select both Day and Block Release and click SaveandContinue
 	Given I have selected a venue from the Location dropdown
 	And I have selected Day Release and Block release as delivery mode
 	When I click SaveandContinue

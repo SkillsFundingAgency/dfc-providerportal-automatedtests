@@ -4,7 +4,7 @@
 	I want to pre-ppoulated course description shown against courses i add
 
 @CI
-Scenario Outline: Create a course with exemplar content
+Scenario Outline: COUR-385 Create a course with exemplar content
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in

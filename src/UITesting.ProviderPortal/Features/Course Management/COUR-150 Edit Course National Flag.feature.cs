@@ -71,11 +71,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit National Flag")]
+        [NUnit.Framework.DescriptionAttribute("COUR-150 Edit National Flag")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditNationalFlag()
+        public virtual void COUR_150EditNationalFlag()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit National Flag", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-150 Edit National Flag", null, new string[] {
                         "CI"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);

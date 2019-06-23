@@ -93,11 +93,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost with valid value")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4832 Update cost with valid value")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostWithValidValue()
+        public virtual void DFC_4832UpdateCostWithValidValue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with valid value", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4832 Update cost with valid value", null, new string[] {
                         "CI"});
 #line 20
 this.ScenarioInitialize(scenarioInfo);
@@ -115,11 +115,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost with a value without decimals")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4832 Update cost with a value without decimals")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostWithAValueWithoutDecimals()
+        public virtual void DFC_4832UpdateCostWithAValueWithoutDecimals()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with a value without decimals", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4832 Update cost with a value without decimals", null, new string[] {
                         "CI"});
 #line 26
 this.ScenarioInitialize(scenarioInfo);
@@ -137,11 +137,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update cost with a value with one decimals")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4832 Update cost with a value with one decimals")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UpdateCostWithAValueWithOneDecimals()
+        public virtual void DFC_4832UpdateCostWithAValueWithOneDecimals()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update cost with a value with one decimals", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4832 Update cost with a value with one decimals", null, new string[] {
                         "CI"});
 #line 32
 this.ScenarioInitialize(scenarioInfo);

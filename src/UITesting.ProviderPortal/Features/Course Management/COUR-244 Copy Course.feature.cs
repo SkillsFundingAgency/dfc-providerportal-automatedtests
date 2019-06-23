@@ -18,8 +18,8 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Copy Course")]
-    public partial class CopyCourseFeature
+    [NUnit.Framework.DescriptionAttribute("COUR-244 Copy Course")]
+    public partial class COUR_244CopyCourseFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Copy Course", "\tIn order to create a course\r\n\tAs a provider\r\n\tI want to be able to copy a course" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "COUR-244 Copy Course", "\tIn order to create a course\r\n\tAs a provider\r\n\tI want to be able to copy a course" +
                     "", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -93,11 +93,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Copy a Course")]
+        [NUnit.Framework.DescriptionAttribute("COUR-244 Copy a Course")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void CopyACourse()
+        public virtual void COUR_244CopyACourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy a Course", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-244 Copy a Course", null, new string[] {
                         "CI"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);

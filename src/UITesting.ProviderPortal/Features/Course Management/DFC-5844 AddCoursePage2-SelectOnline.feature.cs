@@ -101,11 +101,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add a course with Online Delivery")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5844 Add a course with Online Delivery")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void AddACourseWithOnlineDelivery()
+        public virtual void DFC_5844AddACourseWithOnlineDelivery()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a course with Online Delivery", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5844 Add a course with Online Delivery", null, new string[] {
                         "CI"});
 #line 24
 this.ScenarioInitialize(scenarioInfo);

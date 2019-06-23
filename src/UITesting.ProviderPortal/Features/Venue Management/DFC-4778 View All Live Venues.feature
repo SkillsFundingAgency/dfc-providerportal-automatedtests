@@ -1,4 +1,4 @@
-﻿Feature: View Live Venues
+﻿Feature: DFC-4778 View Live Venues
 	In order to look at all venues
 	As a provider
 	I want to be able to list all my venues
@@ -17,7 +17,7 @@ Scenario: View Live Venues
 
 
 @CI
-Scenario: Delete Venue - add venue to be deleted
+Scenario: DFC-4778 Delete Venue - add venue to be deleted
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
@@ -36,7 +36,7 @@ Scenario: Delete Venue - add venue to be deleted
 	And I click continue to confirm page
 
 @CI
-Scenario: Delete Venue - delete venue
+Scenario: DFC-4778 Delete Venue - delete venue
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in

@@ -24,7 +24,7 @@ Background:
 
 
 @CI
-Scenario: User is on Add Venue Confirm Address Page
+Scenario: DFC-5463 User is on Add Venue Confirm Address Page
 	When I am on the Add Venue Confirm details page
 	Then the Add venue confirm details page displays the expected content
 

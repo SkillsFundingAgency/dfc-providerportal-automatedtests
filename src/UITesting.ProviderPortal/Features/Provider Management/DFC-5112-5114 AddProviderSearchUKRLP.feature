@@ -17,7 +17,7 @@ And I should see a text input field
 And I should see a search icon
 
 @CI
-Scenario: User enters invalid input
+Scenario: DFC-5112 User enters invalid input
 When I do not put an input and click "Find"
 Then I should see an error message UKPRN required
 When I enter UKPRN less than eight digits 102345
@@ -28,12 +28,12 @@ When I enter UKPRN that does not start with one "23456712"
 Then I should see an error message UKPRN is 8 digit number starting with a 1 e.g. 10000364
 
 @CI
-Scenario: User enters valid input
+Scenario: DFC-5112 User enters valid input
 When I enter a valid input "10002370"
 Then I should not see the error message on clicking "Find"
 
 @CI
-Scenario: User enters valid UKPRN and sees the following input
+Scenario: DFC-5114 User enters valid UKPRN and sees the following input
 When I enter a valid input "10002370"
 Then I should not see the error message on clicking "Find"
 Then The label will be "Course directory status" and the data will be "Onboarded"

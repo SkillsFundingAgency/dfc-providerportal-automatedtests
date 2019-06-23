@@ -119,11 +119,11 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select a location and Day Release and click SaveandContinue")]
+        [NUnit.Framework.DescriptionAttribute("COUR-387 Select a location and Day Release and click SaveandContinue")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectALocationAndDayReleaseAndClickSaveandContinue()
+        public virtual void COUR_387SelectALocationAndDayReleaseAndClickSaveandContinue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and Day Release and click SaveandContinue", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-387 Select a location and Day Release and click SaveandContinue", null, new string[] {
                         "CI"});
 #line 29
 this.ScenarioInitialize(scenarioInfo);
@@ -143,11 +143,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select a location and Block Release and click SaveandContinue")]
+        [NUnit.Framework.DescriptionAttribute("COUR-387 Select a location and Block Release and click SaveandContinue")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectALocationAndBlockReleaseAndClickSaveandContinue()
+        public virtual void COUR_387SelectALocationAndBlockReleaseAndClickSaveandContinue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and Block Release and click SaveandContinue", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-387 Select a location and Block Release and click SaveandContinue", null, new string[] {
                         "CI"});
 #line 35
 this.ScenarioInitialize(scenarioInfo);
@@ -167,13 +167,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select a location and select both Day and Block Release and click SaveandContinue" +
-            "")]
+        [NUnit.Framework.DescriptionAttribute("COUR-387 Select a location and select both Day and Block Release and click Savean" +
+            "dContinue")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectALocationAndSelectBothDayAndBlockReleaseAndClickSaveandContinue()
+        public virtual void COUR_387SelectALocationAndSelectBothDayAndBlockReleaseAndClickSaveandContinue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a location and select both Day and Block Release and click SaveandContinue" +
-                    "", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-387 Select a location and select both Day and Block Release and click Savean" +
+                    "dContinue", null, new string[] {
                         "CI"});
 #line 41
 this.ScenarioInitialize(scenarioInfo);

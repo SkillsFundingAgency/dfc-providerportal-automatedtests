@@ -15,40 +15,40 @@ Background:
 	Then I should be able to view the course runs.	
 
 @CI
-Scenario: Edit Course Name with valid data
+Scenario: DFC-4827 Edit Course Name with valid data
 	Given I have selected a course run to update
 	And I have changed the course name to "Updated Course Name"
 	When I Click Save
 
 @CI
-Scenario: Edit Course Name with null data
+Scenario: DFC-4827 Edit Course Name with null data
 	Given I have selected a course run to update
 	And I have changed the course name to " "
 	When I Click Save leading to Error
 	Then the Error message for Course Name should be displayed Enter course name
 
 @CI
-Scenario: Edit Course Name with 255 characters
+Scenario: DFC-4827 Edit Course Name with 255 characters
 	Given I have selected a course run to update
 	And I have changed the course name to "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV"
 	When I Click Save
 
 @CI
-Scenario: Edit Course Name with more than 255 characters
+Scenario: DFC-4827 Edit Course Name with more than 255 characters
 	Given I have selected a course run to update
 	And I have changed the course name to "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVB"
 	When I Click Save leading to Error
 	Then the Error message for Course Name should be displayed The maximum length of Course Name is 255 characters
 
 @CI
-Scenario: Edit Course Name with non-ascii characters
+Scenario: DFC-4827 Edit Course Name with non-ascii characters
 	Given I have selected a course run to update
 	And I have changed the course name to "GCEЕлизавета A Level in Biology - Testing"
 	When I Click Save leading to Error
 	Then the Error message for Course Name should be displayed Course Name contains invalid characters
 
 @CI
-Scenario: Edit Course Name with trailing and leading spaces
+Scenario: DFC-4827 Edit Course Name with trailing and leading spaces
 	Given I have selected a course run to update
 	And I have changed the course name to " Course name update 001 "
 	When I Click Save

@@ -13,6 +13,6 @@ Background:
 	Given I have navigated to the Your Venues Pages
 
 @CI
-Scenario: Select venue to Edit
+Scenario: DFC-4761 Select venue to Edit
 	When I click Edit against the first venue
 	Then I am on the Edit venue details page

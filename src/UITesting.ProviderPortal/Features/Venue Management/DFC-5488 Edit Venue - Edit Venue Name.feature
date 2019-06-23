@@ -15,7 +15,7 @@ Background:
 	Then I am on the Edit venue details page
 
 @CI
-Scenario: Edit Venue Name
+Scenario: DFC-5488 Edit Venue Name
 	When I click Change Name on Edit Venue page
 	Then I am on Edit Venue name page
 	When I edit the venue name to New Venue Name

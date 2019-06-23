@@ -109,10 +109,10 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Change address manually during Add Venue")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5486 Change address manually during Add Venue")]
         [NUnit.Framework.CategoryAttribute("CI")]
         [NUnit.Framework.TestCaseAttribute("CV23 9JR", null)]
-        public virtual void ChangeAddressManuallyDuringAddVenue(string postcode, string[] exampleTags)
+        public virtual void DFC_5486ChangeAddressManuallyDuringAddVenue(string postcode, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "CI"};
@@ -120,7 +120,7 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Change address manually during Add Venue", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5486 Change address manually during Add Venue", null, @__tags);
 #line 27
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

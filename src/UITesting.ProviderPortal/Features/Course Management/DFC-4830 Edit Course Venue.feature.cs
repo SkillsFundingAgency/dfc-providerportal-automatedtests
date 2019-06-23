@@ -71,11 +71,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Venue")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4830 Edit Course Venue")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseVenue()
+        public virtual void DFC_4830EditCourseVenue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Venue", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4830 Edit Course Venue", null, new string[] {
                         "CI"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);

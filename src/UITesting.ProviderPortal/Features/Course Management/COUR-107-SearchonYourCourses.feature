@@ -11,20 +11,22 @@ Background:
 	When I click to view my courses
 	Then I should be able to view a Search box to enter my search criteria
 @CI
-Scenario: Enter a valid search term in full
+Scenario: COUR-107 Enter a valid search term in full
 	Given I have entered a full search term as "Biology"
 	Then the results with biology should be returned
 
 @CI
-Scenario: Enter first three characters of valid search term
+Scenario: COUR-107 Enter first three characters of valid search term
 	Given I have entered a part search term as "Mat"
 	Then the results containing Mat should be returned
+
 @CI
-Scenario: Search via LARS/QAN Number
+Scenario: COUR-107 Search via LARS/QAN Number
 	Given I have entered a LARS number in search "00288759"
 	Then the results with the LARS number should be returned
+
 @CI
-Scenario: Search for a non existent course
+Scenario: COUR-107 Search for a non existent course
 	Given I have entered a non existant course "bsdfaf"
 	Then the following message should be displayed "No courses found that match your search criteria"
 

@@ -15,26 +15,26 @@ Background:
 	Then Unknown Z code page should be displayed
 
 @CI
-Scenario: Validate SSA Page
+Scenario: DFC-7393 Validate SSA Page
 	Given I have accessed the UnKnown Z Code Page
 	Then I should be able to view the First Level and Second Level dropdowns
 	And the Back Link should be visible
 
 @CI
-Scenario: Click Back to go back to Unregulated courses page
+Scenario: DFC-7393 Click Back to go back to Unregulated courses page
 	Given I have accessed the UnKnown Z Code Page
 	When I click the Back Link
 	Then Unregulated course page should be displayed
 
 @CI
-Scenario: Select First Level and Second Level dropdowns and validate the results page
+Scenario: DFC-7393 Select First Level and Second Level dropdowns and validate the results page
 	Given I have accessed the UnKnown Z Code Page
 	When I Select First Level and Second Level
 	Then Level filter and Category filter selections should be visible
 	And a link to add this provision should be visible
 
 @CI
-Scenario: Select First Level and Second Level dropdowns and add selected course 
+Scenario: DFC-7393 Select First Level and Second Level dropdowns and add selected course 
 	Given I have accessed the UnKnown Z Code Page
 	When I Select First Level and Second Level
 	And I click the Add this Provision link
@@ -57,7 +57,7 @@ Scenario: Select First Level and Second Level dropdowns and add selected course
 	Then the course should be listed in the Your courses page
 
 @CI
-Scenario: Select First Level and Second Level dropdowns and add selected course from Page 2
+Scenario: DFC-7393 Select First Level and Second Level dropdowns and add selected course from Page 2
 	Given I have accessed the UnKnown Z Code Page
 	When I Select First Level and Second Level
 	And select page 2 from pagination
@@ -81,7 +81,7 @@ Scenario: Select First Level and Second Level dropdowns and add selected course 
 	Then the course should be listed in the Your courses page
 
 @CI
-Scenario: Select Level filter, category filter and click reset
+Scenario: DFC-7393 Select Level filter, category filter and click reset
 	Given I have accessed the UnKnown Z Code Page
 	When I Select First Level and Second Level
 	And I have selected the first checkbox in Level filter Level 

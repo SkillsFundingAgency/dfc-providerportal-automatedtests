@@ -89,11 +89,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter a valid search term in full")]
+        [NUnit.Framework.DescriptionAttribute("COUR-107 Enter a valid search term in full")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterAValidSearchTermInFull()
+        public virtual void COUR_107EnterAValidSearchTermInFull()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter a valid search term in full", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-107 Enter a valid search term in full", null, new string[] {
                         "CI"});
 #line 14
 this.ScenarioInitialize(scenarioInfo);
@@ -109,11 +109,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter first three characters of valid search term")]
+        [NUnit.Framework.DescriptionAttribute("COUR-107 Enter first three characters of valid search term")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterFirstThreeCharactersOfValidSearchTerm()
+        public virtual void COUR_107EnterFirstThreeCharactersOfValidSearchTerm()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter first three characters of valid search term", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-107 Enter first three characters of valid search term", null, new string[] {
                         "CI"});
 #line 19
 this.ScenarioInitialize(scenarioInfo);
@@ -129,40 +129,40 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search via LARS/QAN Number")]
+        [NUnit.Framework.DescriptionAttribute("COUR-107 Search via LARS/QAN Number")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SearchViaLARSQANNumber()
+        public virtual void COUR_107SearchViaLARSQANNumber()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search via LARS/QAN Number", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-107 Search via LARS/QAN Number", null, new string[] {
                         "CI"});
-#line 23
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 24
- testRunner.Given("I have entered a LARS number in search \"00288759\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
+ testRunner.Given("I have entered a LARS number in search \"00288759\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
  testRunner.Then("the results with the LARS number should be returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search for a non existent course")]
+        [NUnit.Framework.DescriptionAttribute("COUR-107 Search for a non existent course")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SearchForANonExistentCourse()
+        public virtual void COUR_107SearchForANonExistentCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for a non existent course", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-107 Search for a non existent course", null, new string[] {
                         "CI"});
-#line 27
+#line 29
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
 this.FeatureBackground();
-#line 28
+#line 30
  testRunner.Given("I have entered a non existant course \"bsdfaf\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
+#line 31
  testRunner.Then("the following message should be displayed \"No courses found that match your searc" +
                     "h criteria\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

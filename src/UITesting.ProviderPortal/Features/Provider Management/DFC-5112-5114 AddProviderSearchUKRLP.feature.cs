@@ -97,11 +97,11 @@ testRunner.And("I should see a search icon", ((string)(null)), ((TechTalk.SpecFl
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User enters invalid input")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5112 User enters invalid input")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UserEntersInvalidInput()
+        public virtual void DFC_5112UserEntersInvalidInput()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters invalid input", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5112 User enters invalid input", null, new string[] {
                         "CI"});
 #line 20
 this.ScenarioInitialize(scenarioInfo);
@@ -132,11 +132,11 @@ testRunner.Then("I should see an error message UKPRN is 8 digit number starting 
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User enters valid input")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5112 User enters valid input")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UserEntersValidInput()
+        public virtual void DFC_5112UserEntersValidInput()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid input", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5112 User enters valid input", null, new string[] {
                         "CI"});
 #line 31
 this.ScenarioInitialize(scenarioInfo);
@@ -152,11 +152,11 @@ testRunner.Then("I should not see the error message on clicking \"Find\"", ((str
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User enters valid UKPRN and sees the following input")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5114 User enters valid UKPRN and sees the following input")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UserEntersValidUKPRNAndSeesTheFollowingInput()
+        public virtual void DFC_5114UserEntersValidUKPRNAndSeesTheFollowingInput()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters valid UKPRN and sees the following input", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5114 User enters valid UKPRN and sees the following input", null, new string[] {
                         "CI"});
 #line 36
 this.ScenarioInitialize(scenarioInfo);

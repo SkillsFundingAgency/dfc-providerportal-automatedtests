@@ -17,19 +17,19 @@ Background:
 
 
 @CI
-Scenario: Update cost with valid value
+Scenario: DFC-4832 Update cost with valid value
 	Given I have selected a course run to update
 	And I have changed the cost to 1234.56
 	When I Click Save
 
 @CI
-Scenario: Update cost with a value without decimals
+Scenario: DFC-4832 Update cost with a value without decimals
 	Given I have selected a course run to update
 	And I have changed the cost to 123456
 	When I Click Save
 
 @CI
-Scenario: Update cost with a value with one decimals
+Scenario: DFC-4832 Update cost with a value with one decimals
 	Given I have selected a course run to update
 	And I have changed the cost to 1234.5
 	When I Click Save

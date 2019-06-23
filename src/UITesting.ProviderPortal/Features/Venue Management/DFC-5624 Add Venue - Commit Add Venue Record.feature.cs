@@ -107,11 +107,11 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User Confirms Details")]
+        [NUnit.Framework.DescriptionAttribute("DFC-5624 User Confirms Details")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void UserConfirmsDetails()
+        public virtual void DFC_5624UserConfirmsDetails()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Confirms Details", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-5624 User Confirms Details", null, new string[] {
                         "CI"});
 #line 27
 this.ScenarioInitialize(scenarioInfo);

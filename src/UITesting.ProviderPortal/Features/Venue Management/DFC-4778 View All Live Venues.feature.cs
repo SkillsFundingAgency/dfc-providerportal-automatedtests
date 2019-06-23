@@ -18,8 +18,8 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("View Live Venues")]
-    public partial class ViewLiveVenuesFeature
+    [NUnit.Framework.DescriptionAttribute("DFC-4778 View Live Venues")]
+    public partial class DFC_4778ViewLiveVenuesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace UITesting.ProviderPortal.Features.VenueManagement
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "View Live Venues", "\tIn order to look at all venues\r\n\tAs a provider\r\n\tI want to be able to list all m" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DFC-4778 View Live Venues", "\tIn order to look at all venues\r\n\tAs a provider\r\n\tI want to be able to list all m" +
                     "y venues", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -101,11 +101,11 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete Venue - add venue to be deleted")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4778 Delete Venue - add venue to be deleted")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DeleteVenue_AddVenueToBeDeleted()
+        public virtual void DFC_4778DeleteVenue_AddVenueToBeDeleted()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Venue - add venue to be deleted", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4778 Delete Venue - add venue to be deleted", null, new string[] {
                         "CI"});
 #line 20
 this.ScenarioInitialize(scenarioInfo);
@@ -145,11 +145,11 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete Venue - delete venue")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4778 Delete Venue - delete venue")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DeleteVenue_DeleteVenue()
+        public virtual void DFC_4778DeleteVenue_DeleteVenue()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Venue - delete venue", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4778 Delete Venue - delete venue", null, new string[] {
                         "CI"});
 #line 39
 this.ScenarioInitialize(scenarioInfo);

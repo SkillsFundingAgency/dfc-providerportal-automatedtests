@@ -95,11 +95,11 @@ namespace UITesting.ProviderPortal.Features.QualificationManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate SSA Page")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7393 Validate SSA Page")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ValidateSSAPage()
+        public virtual void DFC_7393ValidateSSAPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate SSA Page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7393 Validate SSA Page", null, new string[] {
                         "CI"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);
@@ -117,11 +117,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Click Back to go back to Unregulated courses page")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7393 Click Back to go back to Unregulated courses page")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ClickBackToGoBackToUnregulatedCoursesPage()
+        public virtual void DFC_7393ClickBackToGoBackToUnregulatedCoursesPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click Back to go back to Unregulated courses page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7393 Click Back to go back to Unregulated courses page", null, new string[] {
                         "CI"});
 #line 24
 this.ScenarioInitialize(scenarioInfo);
@@ -139,11 +139,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select First Level and Second Level dropdowns and validate the results page")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7393 Select First Level and Second Level dropdowns and validate the results p" +
+            "age")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectFirstLevelAndSecondLevelDropdownsAndValidateTheResultsPage()
+        public virtual void DFC_7393SelectFirstLevelAndSecondLevelDropdownsAndValidateTheResultsPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select First Level and Second Level dropdowns and validate the results page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7393 Select First Level and Second Level dropdowns and validate the results p" +
+                    "age", null, new string[] {
                         "CI"});
 #line 30
 this.ScenarioInitialize(scenarioInfo);
@@ -163,11 +165,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select First Level and Second Level dropdowns and add selected course")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7393 Select First Level and Second Level dropdowns and add selected course")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectFirstLevelAndSecondLevelDropdownsAndAddSelectedCourse()
+        public virtual void DFC_7393SelectFirstLevelAndSecondLevelDropdownsAndAddSelectedCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select First Level and Second Level dropdowns and add selected course", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7393 Select First Level and Second Level dropdowns and add selected course", null, new string[] {
                         "CI"});
 #line 37
 this.ScenarioInitialize(scenarioInfo);
@@ -220,13 +222,13 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select First Level and Second Level dropdowns and add selected course from Page 2" +
-            "")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7393 Select First Level and Second Level dropdowns and add selected course fr" +
+            "om Page 2")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectFirstLevelAndSecondLevelDropdownsAndAddSelectedCourseFromPage2()
+        public virtual void DFC_7393SelectFirstLevelAndSecondLevelDropdownsAndAddSelectedCourseFromPage2()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select First Level and Second Level dropdowns and add selected course from Page 2" +
-                    "", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7393 Select First Level and Second Level dropdowns and add selected course fr" +
+                    "om Page 2", null, new string[] {
                         "CI"});
 #line 60
 this.ScenarioInitialize(scenarioInfo);
@@ -281,11 +283,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select Level filter, category filter and click reset")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7393 Select Level filter, category filter and click reset")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectLevelFilterCategoryFilterAndClickReset()
+        public virtual void DFC_7393SelectLevelFilterCategoryFilterAndClickReset()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Level filter, category filter and click reset", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7393 Select Level filter, category filter and click reset", null, new string[] {
                         "CI"});
 #line 84
 this.ScenarioInitialize(scenarioInfo);

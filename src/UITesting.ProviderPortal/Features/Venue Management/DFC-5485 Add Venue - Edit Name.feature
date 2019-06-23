@@ -22,7 +22,7 @@ Background:
 	And I click continue to confirm page				
 
 @CI
-Scenario: Change name manually from Edit Venue Screen
+Scenario: DFC-5485 Change name manually from Edit Venue Screen
 Given I am on the edit venue name page
 	And I have cleared the venue name field
 	And I have entered a venue name

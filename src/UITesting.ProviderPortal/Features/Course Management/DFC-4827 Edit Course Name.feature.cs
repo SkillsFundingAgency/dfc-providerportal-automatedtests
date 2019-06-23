@@ -93,11 +93,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Name with valid data")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4827 Edit Course Name with valid data")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseNameWithValidData()
+        public virtual void DFC_4827EditCourseNameWithValidData()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with valid data", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4827 Edit Course Name with valid data", null, new string[] {
                         "CI"});
 #line 18
 this.ScenarioInitialize(scenarioInfo);
@@ -115,11 +115,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Name with null data")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4827 Edit Course Name with null data")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseNameWithNullData()
+        public virtual void DFC_4827EditCourseNameWithNullData()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with null data", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4827 Edit Course Name with null data", null, new string[] {
                         "CI"});
 #line 24
 this.ScenarioInitialize(scenarioInfo);
@@ -139,11 +139,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Name with 255 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4827 Edit Course Name with 255 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseNameWith255Characters()
+        public virtual void DFC_4827EditCourseNameWith255Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with 255 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4827 Edit Course Name with 255 characters", null, new string[] {
                         "CI"});
 #line 31
 this.ScenarioInitialize(scenarioInfo);
@@ -161,11 +161,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Name with more than 255 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4827 Edit Course Name with more than 255 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseNameWithMoreThan255Characters()
+        public virtual void DFC_4827EditCourseNameWithMoreThan255Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with more than 255 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4827 Edit Course Name with more than 255 characters", null, new string[] {
                         "CI"});
 #line 37
 this.ScenarioInitialize(scenarioInfo);
@@ -186,11 +186,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Name with non-ascii characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4827 Edit Course Name with non-ascii characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseNameWithNon_AsciiCharacters()
+        public virtual void DFC_4827EditCourseNameWithNon_AsciiCharacters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with non-ascii characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4827 Edit Course Name with non-ascii characters", null, new string[] {
                         "CI"});
 #line 44
 this.ScenarioInitialize(scenarioInfo);
@@ -211,11 +211,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Course Name with trailing and leading spaces")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4827 Edit Course Name with trailing and leading spaces")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EditCourseNameWithTrailingAndLeadingSpaces()
+        public virtual void DFC_4827EditCourseNameWithTrailingAndLeadingSpaces()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Course Name with trailing and leading spaces", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4827 Edit Course Name with trailing and leading spaces", null, new string[] {
                         "CI"});
 #line 51
 this.ScenarioInitialize(scenarioInfo);

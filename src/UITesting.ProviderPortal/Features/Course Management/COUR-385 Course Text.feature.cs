@@ -71,11 +71,11 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Create a course with exemplar content")]
+        [NUnit.Framework.DescriptionAttribute("COUR-385 Create a course with exemplar content")]
         [NUnit.Framework.CategoryAttribute("CI")]
         [NUnit.Framework.TestCaseAttribute("50093411", null)]
         [NUnit.Framework.TestCaseAttribute("5004767X", null)]
-        public virtual void CreateACourseWithExemplarContent(string qualname, string[] exampleTags)
+        public virtual void COUR_385CreateACourseWithExemplarContent(string qualname, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "CI"};
@@ -83,7 +83,7 @@ namespace UITesting.ProviderPortal.Features.CourseManagement
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a course with exemplar content", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-385 Create a course with exemplar content", null, @__tags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

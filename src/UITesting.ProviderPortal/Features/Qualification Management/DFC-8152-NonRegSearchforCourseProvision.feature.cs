@@ -91,11 +91,11 @@ namespace UITesting.ProviderPortal.Features.QualificationManagement
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Validate the Unregulated courses page")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Validate the Unregulated courses page")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ValidateTheUnregulatedCoursesPage()
+        public virtual void DFC_8152ValidateTheUnregulatedCoursesPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the Unregulated courses page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Validate the Unregulated courses page", null, new string[] {
                         "CI"});
 #line 16
 this.ScenarioInitialize(scenarioInfo);
@@ -115,11 +115,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Click back to go back to the Regulated qualifications page")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Click back to go back to the Regulated qualifications page")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ClickBackToGoBackToTheRegulatedQualificationsPage()
+        public virtual void DFC_8152ClickBackToGoBackToTheRegulatedQualificationsPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click back to go back to the Regulated qualifications page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Click back to go back to the Regulated qualifications page", null, new string[] {
                         "CI"});
 #line 23
 this.ScenarioInitialize(scenarioInfo);
@@ -137,11 +137,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter Valid Z Code")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Enter Valid Z Code")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterValidZCode()
+        public virtual void DFC_8152EnterValidZCode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Valid Z Code", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Enter Valid Z Code", null, new string[] {
                         "CI"});
 #line 29
 this.ScenarioInitialize(scenarioInfo);
@@ -163,11 +163,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter blank Z Code")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Enter blank Z Code")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterBlankZCode()
+        public virtual void DFC_8152EnterBlankZCode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter blank Z Code", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Enter blank Z Code", null, new string[] {
                         "CI"});
 #line 37
 this.ScenarioInitialize(scenarioInfo);
@@ -187,11 +187,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter Invalid Z code- code without z")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Enter Invalid Z code- code without z")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterInvalidZCode_CodeWithoutZ()
+        public virtual void DFC_8152EnterInvalidZCode_CodeWithoutZ()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Invalid Z code- code without z", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Enter Invalid Z code- code without z", null, new string[] {
                         "CI"});
 #line 44
 this.ScenarioInitialize(scenarioInfo);
@@ -212,11 +212,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter Invalid Z code- less than 8 characters")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Enter Invalid Z code- less than 8 characters")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterInvalidZCode_LessThan8Characters()
+        public virtual void DFC_8152EnterInvalidZCode_LessThan8Characters()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Invalid Z code- less than 8 characters", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Enter Invalid Z code- less than 8 characters", null, new string[] {
                         "CI"});
 #line 51
 this.ScenarioInitialize(scenarioInfo);
@@ -237,11 +237,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter Z code- Not available in database")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Enter Z code- Not available in database")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterZCode_NotAvailableInDatabase()
+        public virtual void DFC_8152EnterZCode_NotAvailableInDatabase()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter Z code- Not available in database", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Enter Z code- Not available in database", null, new string[] {
                         "CI"});
 #line 58
 this.ScenarioInitialize(scenarioInfo);
@@ -261,11 +261,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add non regulated course")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Add non regulated course")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void AddNonRegulatedCourse()
+        public virtual void DFC_8152AddNonRegulatedCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add non regulated course", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Add non regulated course", null, new string[] {
                         "CI"});
 #line 65
 this.ScenarioInitialize(scenarioInfo);
@@ -322,11 +322,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Enter valid Z code-Click Cancel link")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Enter valid Z code-Click Cancel link")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void EnterValidZCode_ClickCancelLink()
+        public virtual void DFC_8152EnterValidZCode_ClickCancelLink()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter valid Z code-Click Cancel link", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Enter valid Z code-Click Cancel link", null, new string[] {
                         "CI"});
 #line 90
 this.ScenarioInitialize(scenarioInfo);
@@ -350,11 +350,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Click I don\'t know Z Code")]
+        [NUnit.Framework.DescriptionAttribute("DFC-8152 Click I don\'t know Z Code")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void ClickIDontKnowZCode()
+        public virtual void DFC_8152ClickIDontKnowZCode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click I don\'t know Z Code", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-8152 Click I don\'t know Z Code", null, new string[] {
                         "CI"});
 #line 111
 this.ScenarioInitialize(scenarioInfo);

@@ -21,7 +21,7 @@ Background:
 
 
 @CI
-Scenario: Add a course with Online Delivery
+Scenario: DFC-5844 Add a course with Online Delivery
 	When I enter the following in the course name field Course test
 	When I select delivery mode Online
 	When I select start date Defined Start Date
