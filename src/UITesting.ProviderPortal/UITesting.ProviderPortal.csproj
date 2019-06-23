@@ -325,6 +325,7 @@
     <Compile Include="Pages\Provider Management\EditProviderDetailsPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderDetailsPage.cs" />
     <Compile Include="Pages\Provider Management\ProviderDetailsPage.cs" />
+    <Compile Include="Pages\Provider Management\SearchProviderNewPage.cs" />
     <Compile Include="Pages\Provider Management\SearchProviderPage.cs" />
     <Compile Include="Pages\Qualification Management\UnKnownZCodePage.cs" />
     <Compile Include="Pages\Qualification Management\UnRegulatedCoursesPage.cs" />

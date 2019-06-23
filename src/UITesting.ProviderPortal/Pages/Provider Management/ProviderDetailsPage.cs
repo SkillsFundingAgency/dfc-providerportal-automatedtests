@@ -18,6 +18,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         public ProviderDetailsPage(IWebDriver webDriver) : base(webDriver)
         {
+            PageInteractionHelper.WaitForPageToLoad();
             //SelfVerify();
         }
 
