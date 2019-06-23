@@ -302,7 +302,9 @@
     <Compile Include="Pages\Apprenticeships\AppDeliveryMethodPage.cs" />
     <Compile Include="Pages\Apprenticeships\AddApprenticeshipPage.cs" />
     <Compile Include="Pages\Apprenticeships\SearchApprenticeshipPage.cs" />
+    <Compile Include="Pages\Bulk Upload\BulkUploadFileDeletedPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFilePublishedPage.cs" />
+    <Compile Include="Pages\Bulk Upload\BulkUploadDeletePage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\BulkUploadFixPublishPage.cs" />
     <Compile Include="Pages\Bulk Upload\UploadAFilePage.cs" />
@@ -636,6 +638,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Test Data\BulkUpload_CancelTest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Data\BulkUpload_CostformatInvalid.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Test Data\BulkUpload_EditTest.csv">

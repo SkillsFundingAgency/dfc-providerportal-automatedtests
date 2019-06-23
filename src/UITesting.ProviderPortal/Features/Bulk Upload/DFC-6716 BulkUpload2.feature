@@ -92,15 +92,17 @@ Scenario Outline: COUR-765 Field Validations
 	When I click Choose a File <file> to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
+	#uncomment once working in SIT
+	Given I have accessed the Bulk Upload delete file page
+	When I click delete bulk upload file
+	Then I am on Bulk Upload file deleted page
 
 Examples: 
 | file                                 |
 | BulkUpload_AttendancePatternNone.csv |
-#| BulkUpload_CostformatInvalid.csv     |
+| BulkUpload_CostformatInvalid.csv     |
 #| BulkUpload_CostorCostDescNone.csv    |
 #| BulkUpload_DurationInvalid.csv       |
-#| BulkUpload_URLInvalid.csv            |
-#| BulkUpload_URLInvalid.csv            |
 #| BulkUpload_URLInvalid.csv            |
 #| BulkUpload_StartDateValid.csv        |
 #| BulkUpload_StartDatePast.csv         |

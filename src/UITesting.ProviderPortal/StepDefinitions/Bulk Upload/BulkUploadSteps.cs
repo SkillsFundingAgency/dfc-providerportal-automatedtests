@@ -23,6 +23,12 @@ namespace UITesting.ProviderPortal.StepDefinitions
             webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl() + "/PublishCourses?publishMode=BulkUpload";
         }
 
+        [Given(@"I have accessed the Bulk Upload delete file page")]
+        public void GivenIAmOnBulkUploadDeletePage()
+        {
+            webDriver.Url = TestSupport.Configurator.GetConfiguratorInstance().GetBaseUrl() + "/BulkUpload/DeleteFile";
+        }
+
 
         [When(@"I click Choose a File (.*) to upload")]
         public void WhenIChooseFile(string fileName)
@@ -84,6 +90,20 @@ namespace UITesting.ProviderPortal.StepDefinitions
         {
             BulkUploadFilePublishedPage bulkUploadFilePublishedPage = new BulkUploadFilePublishedPage(webDriver);
         }
+        
+        [When(@"I click delete bulk upload file")]
+        public void WhenIClickDeleteDeleteBulkUploadFile()
+        {
+            BulkUploadDeletePage bulkUploadDeletePage = new BulkUploadDeletePage(webDriver);
+            bulkUploadDeletePage.Delete();
+        }
+        
+        [Then(@"I am on Bulk Upload file deleted page")]
+        public void ThenIAmBulkUploadFileDeleted()
+        {
+            BulkUploadFileDeletedPage bulkUploadFileDeletedPage = new BulkUploadFileDeletedPage(webDriver);
+        }
+
 
         [Then(@"I click on Cancel to cancel edit")]
         public void CancleBUEdit()
@@ -152,7 +172,6 @@ namespace UITesting.ProviderPortal.StepDefinitions
         [When(@"I edit bulk upload course cost (.*)")]
         public void EditUploadedCourseRun(string cost)
         {
-
             EditCoursePage2 editCoursePage2 = new EditCoursePage2(webDriver);
             editCoursePage2.EnterCourseCost(cost);
         }
@@ -164,24 +183,19 @@ namespace UITesting.ProviderPortal.StepDefinitions
             editCoursePage2.EnterCourseName(name);
         }
 
+
         [When(@"I click fix against the first Course i want edit and save")]
         public void FixUploadedCoursesSave()
         {
-
             IList<IWebElement> links = webDriver.FindElements(By.LinkText("Fix"));
             IList<IWebElement> listOflinks = new List<IWebElement>();
 
             for (int i = 0; i < links.Count; i++)
             {
                 links = webDriver.FindElements(By.LinkText("Fix"));
-
-                //if (!string.IsNullOrEmpty(links[i].Text))
                 if (i == 0)
                     links[i].Click();
             }
-
-            //BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
-            //bulkUploadFixPublishPage.FixCourseSave();
         }
 
         [When(@"I click fix against the first Course Run i want edit and save")]
@@ -193,14 +207,9 @@ namespace UITesting.ProviderPortal.StepDefinitions
             for (int i = 0; i < links.Count; i++)
             {
                 links = webDriver.FindElements(By.LinkText("Fix"));
-
-                //if (!string.IsNullOrEmpty(links[i].Text))
                 if (i == 1)
                     links[i].Click();
             }
-
-            //BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
-            //bulkUploadFixPublishPage.FixCourseRunSave();
         }
 
     }
