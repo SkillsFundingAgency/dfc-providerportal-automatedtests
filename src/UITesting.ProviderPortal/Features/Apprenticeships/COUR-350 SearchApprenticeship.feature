@@ -52,7 +52,7 @@ Scenario: COUR-351 Search for an apprenticeship - Invalid Valid Search term
 	Then the No Results error message is displayed
 
 @CI
-Scenario: COUR-351 Search for an apprenticeship - Less than 3 chars
+Scenario: COUR-351 Search for an apprenticeship - Less than 3 chars BUG COUR-1146
 	Given I have accessed the Apprenticeship Search page
 	When I use apprenticeship search to search for pl
 	Then the No Results error message is displayed

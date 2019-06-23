@@ -256,11 +256,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DFC-7379 Bulk Upload LARS Checks - Invalid LARS")]
+        [NUnit.Framework.DescriptionAttribute("DFC-7379 Bulk Upload LARS Checks - Invalid LARS BUG COUR-1134")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DFC_7379BulkUploadLARSChecks_InvalidLARS()
+        public virtual void DFC_7379BulkUploadLARSChecks_InvalidLARSBUGCOUR_1134()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7379 Bulk Upload LARS Checks - Invalid LARS", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-7379 Bulk Upload LARS Checks - Invalid LARS BUG COUR-1134", null, new string[] {
                         "CI"});
 #line 69
 this.ScenarioInitialize(scenarioInfo);

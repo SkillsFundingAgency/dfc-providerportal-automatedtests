@@ -215,11 +215,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("COUR-351 Search for an apprenticeship - Less than 3 chars")]
+        [NUnit.Framework.DescriptionAttribute("COUR-351 Search for an apprenticeship - Less than 3 chars BUG COUR-1146")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void COUR_351SearchForAnApprenticeship_LessThan3Chars()
+        public virtual void COUR_351SearchForAnApprenticeship_LessThan3CharsBUGCOUR_1146()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-351 Search for an apprenticeship - Less than 3 chars", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-351 Search for an apprenticeship - Less than 3 chars BUG COUR-1146", null, new string[] {
                         "CI"});
 #line 55
 this.ScenarioInitialize(scenarioInfo);

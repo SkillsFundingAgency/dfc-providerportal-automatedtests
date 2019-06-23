@@ -66,7 +66,7 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - Missing Columns
 	Then the error Fields with names 'COURSE_NAME', 'DURATION', 'WHAT_YOU_WILL_LEARN' do not exist is displayed in error summary
 
 @CI
-Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS
+Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS BUG COUR-1134
 	Given I have searched for UKPRN "10036802" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page

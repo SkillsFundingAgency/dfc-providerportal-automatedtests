@@ -26,19 +26,19 @@ Background:
 	Then the national provider capability page should be delivered
 
 @CI
-Scenario: Select Nothing
+Scenario: COUR-626 Select Nothing for national provider
 	When I press continue on the National provider capability page
 	Then the error message should be displayed Select Can you deliver this training at employer’s locations anywhere in England?
 
 @CI
-Scenario: Select Yes
+Scenario: COUR-626 Select Yes for national provider
 	When i  select yes to National provider
 	When I press continue on the National provider capability page yes
 	Then I am on the confirm details page
 
 
 @CI
-Scenario: Select No
+Scenario: COUR-626 Select No for national provider
 	When i  select no to National provider
 	When I press continue on the National provider capability page no
 	Then I am on the employer based delivery page

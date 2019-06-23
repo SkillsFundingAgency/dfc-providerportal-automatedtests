@@ -285,6 +285,16 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.CategoryAttribute("CI")]
         [NUnit.Framework.TestCaseAttribute("BulkUpload_AttendancePatternNone.csv", null)]
         [NUnit.Framework.TestCaseAttribute("BulkUpload_CostformatInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_CostorCostDescNone.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_DurationInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_URLInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDateDDInvalid.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDatePast.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_StartDateFuture.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_NoStudyMode.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_attendancemissing.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_DateNone.csv", null)]
+        [NUnit.Framework.TestCaseAttribute("BulkUpload_DeliveryModeNone.csv", null)]
         public virtual void COUR_765FieldValidations(string file, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -312,12 +322,6 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click Upload File leading to course errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 94
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 96
- testRunner.Given("I have accessed the Bulk Upload delete file page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 97
- testRunner.When("I click delete bulk upload file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
- testRunner.Then("I am on Bulk Upload file deleted page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

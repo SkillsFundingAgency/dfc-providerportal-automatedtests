@@ -5,8 +5,8 @@
 
 Background:
 	Given I have accessed course directory as a provider
-	And I login as provider admin with Provider.10033145@gmail.com and SITtesting123
-#	And I login as provider admin with ncscoursedirectoryprovsuper5@guerrillamail.com and Password1!!!
+#	And I login as provider admin with Provider.10033145@gmail.com and SITtesting123
+	And I login as provider admin with ncscoursedirectoryprovsuper5@guerrillamail.com and Password1!!!
 	Then I am logged in as a provider
 
 @CI

@@ -107,11 +107,11 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select Apprenticeship location")]
+        [NUnit.Framework.DescriptionAttribute("COUR-615 Select Apprenticeship location Delivery Method")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectApprenticeshipLocation()
+        public virtual void COUR_615SelectApprenticeshipLocationDeliveryMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Apprenticeship location", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-615 Select Apprenticeship location Delivery Method", null, new string[] {
                         "CI"});
 #line 23
 this.ScenarioInitialize(scenarioInfo);
@@ -131,11 +131,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select employer address")]
+        [NUnit.Framework.DescriptionAttribute("COUR-615 Select employer address Delivery Method")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectEmployerAddress()
+        public virtual void COUR_615SelectEmployerAddressDeliveryMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select employer address", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-615 Select employer address Delivery Method", null, new string[] {
                         "CI"});
 #line 29
 this.ScenarioInitialize(scenarioInfo);
@@ -155,11 +155,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("No Option selected")]
+        [NUnit.Framework.DescriptionAttribute("COUR-615 No Option selected Delivery Method")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void NoOptionSelected()
+        public virtual void COUR_615NoOptionSelectedDeliveryMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("No Option selected", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-615 No Option selected Delivery Method", null, new string[] {
                         "CI"});
 #line 35
 this.ScenarioInitialize(scenarioInfo);

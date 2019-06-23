@@ -118,11 +118,11 @@ namespace UITesting.ProviderPortal.Features.Apprenticeships
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select Nothing")]
+        [NUnit.Framework.DescriptionAttribute("COUR-626 Select Nothing for national provider")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectNothing()
+        public virtual void COUR_626SelectNothingForNationalProvider()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Nothing", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-626 Select Nothing for national provider", null, new string[] {
                         "CI"});
 #line 29
 this.ScenarioInitialize(scenarioInfo);
@@ -139,11 +139,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select Yes")]
+        [NUnit.Framework.DescriptionAttribute("COUR-626 Select Yes for national provider")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectYes()
+        public virtual void COUR_626SelectYesForNationalProvider()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Yes", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-626 Select Yes for national provider", null, new string[] {
                         "CI"});
 #line 34
 this.ScenarioInitialize(scenarioInfo);
@@ -161,11 +161,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Select No")]
+        [NUnit.Framework.DescriptionAttribute("COUR-626 Select No for national provider")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void SelectNo()
+        public virtual void COUR_626SelectNoForNationalProvider()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select No", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("COUR-626 Select No for national provider", null, new string[] {
                         "CI"});
 #line 41
 this.ScenarioInitialize(scenarioInfo);
