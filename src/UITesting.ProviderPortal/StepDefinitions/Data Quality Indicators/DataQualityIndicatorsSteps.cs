@@ -1,7 +1,8 @@
 ﻿using TechTalk.SpecFlow;
 using UITesting.ProviderPortal.Pages.Data_Quality_Indicators;
 using UITesting.ProviderPortal.Pages.Course_Management;
-
+using System.Collections.Generic;
+using OpenQA.Selenium;
 
 namespace UITesting.ProviderPortal.StepDefinitions.Data_Quality_Indicators
 {
@@ -24,12 +25,23 @@ namespace UITesting.ProviderPortal.StepDefinitions.Data_Quality_Indicators
 
 
         [When(@"I click on the first course run requiring start date update")]
-        public void FixCourseRunStartDate()
+        //public void FixCourseRunStartDate()
+        //{
+        //    DQIFixPublishPage dQIFixPublishPage = new DQIFixPublishPage(webDriver);
+        //    dQIFixPublishPage.FixCourseRun();
+        //}
+        public void FixStartDate()
         {
-            DQIFixPublishPage dQIFixPublishPage = new DQIFixPublishPage(webDriver);
-            dQIFixPublishPage.FixCourseRun();
-        }
+            IList<IWebElement> links = webDriver.FindElements(By.LinkText("Fix"));
+            IList<IWebElement> listOflinks = new List<IWebElement>();
 
+            for (int i = 0; i < links.Count; i++)
+            {
+                links = webDriver.FindElements(By.LinkText("Fix"));
+                if (i == 0)
+                    links[i].Click();
+            }
+        }
 
         [Then(@"I am take to Edit Course page")]
         public void DQIEdit()

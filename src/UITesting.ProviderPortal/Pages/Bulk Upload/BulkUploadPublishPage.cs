@@ -20,7 +20,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 
         protected override bool SelfVerify()
         {
-            PageInteractionHelper.WaitForPageToLoad();
+            webDriver.FindElementWait(PublishBtn, 60);
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
