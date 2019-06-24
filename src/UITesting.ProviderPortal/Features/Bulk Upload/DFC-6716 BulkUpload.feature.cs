@@ -278,7 +278,8 @@ this.FeatureBackground();
 #line 74
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
- testRunner.Then("the error Line 2, LARS_QAN = 60333079 invalid LARS is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the error Line 2, LARS_QAN = 60333079, invalid LARS is displayed in error summary" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

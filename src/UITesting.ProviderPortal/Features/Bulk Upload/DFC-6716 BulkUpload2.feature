@@ -12,7 +12,7 @@ Scenario: DFC-7224 Bulk Upload Cancel Course Edit
 	Then I am logged in as a provider
 	Given I have accessed the Bulk Upload fixes page
 	Then I am on the Fix and publish bulk upload page
-	When I click fix against the first Course
+	When I click fix against the first Course i want edit and save
 	Then I click on Cancel to cancel edit
 	Then I am on the Fix and publish bulk upload page
 
@@ -23,14 +23,14 @@ Scenario: DFC-7224 Bulk Upload Cancel Course Run Edit
 	Then I am logged in as a provider
 	Given I have accessed the Bulk Upload fixes page
 	Then I am on the Fix and publish bulk upload page
-	When I click fix against the first Course Run
+	When I click fix against the first Course Run i want edit and save
 	Then I click on Cancel to cancel edit course run
 	Then I am on the Fix and publish bulk upload page
 
 @CI
 Scenario: DFC-6719 Bulk Upload Edit uploaded Course
 	Given I have accessed course directory as a provider
-	And I login as provider admin with ncscoursedirectoryprovsuper4@guerrillamail.com  and Password1!!!
+	And I login as provider admin with ncscoursedirectoryprovsuper1@guerrillamail.com  and Password1!!!
 	Then I am logged in as a provider
 	Given I have accessed the Bulk Upload fixes page
 	Then I am on the Fix and publish bulk upload page
@@ -42,7 +42,7 @@ Scenario: DFC-6719 Bulk Upload Edit uploaded Course
 @CI
 Scenario: DFC-6736 Bulk Upload Edit uploaded Course Run
 	Given I have accessed course directory as a provider
-	And I login as provider admin with ncscoursedirectoryprovsuper4@guerrillamail.com  and Password1!!!
+	And I login as provider admin with ncscoursedirectoryprovsuper1@guerrillamail.com  and Password1!!!
 	Then I am logged in as a provider
 	Given I have accessed the Bulk Upload fixes page
 	Then I am on the Fix and publish bulk upload page

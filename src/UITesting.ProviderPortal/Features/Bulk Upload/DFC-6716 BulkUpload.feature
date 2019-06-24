@@ -72,7 +72,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS BUG COUR-1134
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_LARSInvalid.csv to upload
 	And I click Upload File leading to stage1 errors
-	Then the error Line 2, LARS_QAN = 60333079 invalid LARS is displayed in error summary
+	Then the error Line 2, LARS_QAN = 60333079, invalid LARS is displayed in error summary
 
 @CI
 Scenario: DFC-7379 Bulk Upload LARS Checks - Expired LARS

@@ -92,7 +92,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 15
- testRunner.When("I click fix against the first Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click fix against the first Course i want edit and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
  testRunner.Then("I click on Cancel to cancel edit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
@@ -123,7 +123,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 25
  testRunner.Then("I am on the Fix and publish bulk upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
- testRunner.When("I click fix against the first Course Run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click fix against the first Course Run i want edit and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 27
  testRunner.Then("I click on Cancel to cancel edit course run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 28
@@ -145,7 +145,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 32
  testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 33
- testRunner.And("I login as provider admin with ncscoursedirectoryprovsuper4@guerrillamail.com  an" +
+ testRunner.And("I login as provider admin with ncscoursedirectoryprovsuper1@guerrillamail.com  an" +
                     "d Password1!!!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
  testRunner.Then("I am logged in as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -178,7 +178,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 44
  testRunner.Given("I have accessed course directory as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 45
- testRunner.And("I login as provider admin with ncscoursedirectoryprovsuper4@guerrillamail.com  an" +
+ testRunner.And("I login as provider admin with ncscoursedirectoryprovsuper1@guerrillamail.com  an" +
                     "d Password1!!!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
  testRunner.Then("I am logged in as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

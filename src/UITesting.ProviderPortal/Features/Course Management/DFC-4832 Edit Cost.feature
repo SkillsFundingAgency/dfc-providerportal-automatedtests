@@ -23,7 +23,7 @@ Scenario: DFC-4832 Update cost with valid value
 	When I Click Save
 
 @CI
-Scenario: DFC-4832 Update cost with a value without decimals
+Scenario: DFC-4832 Update cost with a value without decimals_BUG_COUR-1158
 	Given I have selected a course run to update
 	And I have changed the cost to 123456
 	When I Click Save

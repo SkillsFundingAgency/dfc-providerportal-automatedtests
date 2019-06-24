@@ -115,11 +115,11 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DFC-4832 Update cost with a value without decimals")]
+        [NUnit.Framework.DescriptionAttribute("DFC-4832 Update cost with a value without decimals_BUG_COUR-1158")]
         [NUnit.Framework.CategoryAttribute("CI")]
-        public virtual void DFC_4832UpdateCostWithAValueWithoutDecimals()
+        public virtual void DFC_4832UpdateCostWithAValueWithoutDecimals_BUG_COUR_1158()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4832 Update cost with a value without decimals", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DFC-4832 Update cost with a value without decimals_BUG_COUR-1158", null, new string[] {
                         "CI"});
 #line 26
 this.ScenarioInitialize(scenarioInfo);

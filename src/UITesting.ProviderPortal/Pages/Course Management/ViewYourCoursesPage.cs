@@ -89,7 +89,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         /*Search Your Courses tests*/
         private By SearchText = By.Id("Search");
-        private By SearchErrMessage = By.XPath("//*[@id='results']/div/div/div/p");
+        private By SearchErrMessage = By.XPath("//*[@id='results']/div/div/div/span[1]");
 
         /*Select link*/
         private By SelectLink = By.LinkText("Select");

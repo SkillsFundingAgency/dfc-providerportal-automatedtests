@@ -17,7 +17,7 @@ And I should see a text input field
 And I should see a search icon
 
 @CI
-Scenario: DFC-5112 User enters invalid input
+Scenario: DFC-5112 User enters invalid input_BUG_COUR-1159
 When I do not put an input and click "Find"
 Then I should see an error message UKPRN required
 When I enter UKPRN less than eight digits 102345
