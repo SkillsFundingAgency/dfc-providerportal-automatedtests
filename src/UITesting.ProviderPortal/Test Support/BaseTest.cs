@@ -28,6 +28,12 @@ namespace UITesting.ProviderPortal.TestSupport
             {
                 case "debug":
                     //webDriver = new ChromeDriver();
+
+                    //to run headless
+                    //var options = new FirefoxOptions();
+                    //options.AddArguments("--headless");
+                    //webDriver = new FirefoxDriver(options);
+
                     webDriver = new FirefoxDriver();
                     webDriver.Manage().Window.Maximize();
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);

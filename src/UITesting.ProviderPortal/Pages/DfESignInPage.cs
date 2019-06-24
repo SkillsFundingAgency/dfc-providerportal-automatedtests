@@ -18,6 +18,7 @@ namespace UITesting.ProviderPortal.Pages
         private By DQIUpdateStartDateLink = By.PartialLinkText("courses need their start date updating");
         private By HomePageTitle = By.XPath(".//*[@id='VenueSearchResultContainer']/h1");
         private By signOut = By.XPath(".//*[@id='submit-link']");
+        private By continueLink = By.LinkText("Continue to course directory");
 
         public DfESignInPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -53,11 +54,28 @@ namespace UITesting.ProviderPortal.Pages
         public DQIDashbordPage ClickSignInButtonProvider()
         {
             FormCompletionHelper.ClickElement(signInButton);
-            //System.Threading.Thread.Sleep(4000);
             PageInteractionHelper.WaitForPageToLoad();
             webDriver.FindElementWait(signOut, 60);
+
+            if (PageInteractionHelper.IsElementPresent(continueLink))
+            {
+                webDriver.FindElement(continueLink).Click();
+                PageInteractionHelper.WaitForPageToLoad();
+            }
+            else
+            {
+                Console.WriteLine("no intercept page");
+            }
             return new DQIDashbordPage(webDriver);
         }
+
+        //public DQIDashbordPage ClickSignInButtonProvider()
+        //{
+        //    FormCompletionHelper.ClickElement(signInButton);
+        //    PageInteractionHelper.WaitForPageToLoad();
+        //    webDriver.FindElementWait(signOut, 60);
+        //    return new DQIDashbordPage(webDriver);
+        //}
 
     }
 }

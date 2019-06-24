@@ -321,6 +321,7 @@
     <Compile Include="Pages\Course Management\ViewYourCoursesPage.cs" />
     <Compile Include="Pages\Data Quality Indicators\DQIDashbordPage.cs" />
     <Compile Include="Pages\Data Quality Indicators\DQIFixPublishPage.cs" />
+    <Compile Include="Pages\InterceptPage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Provider Management\EditProviderDetailsPage.cs" />
     <Compile Include="Pages\Provider Management\AddProviderDetailsPage.cs" />
