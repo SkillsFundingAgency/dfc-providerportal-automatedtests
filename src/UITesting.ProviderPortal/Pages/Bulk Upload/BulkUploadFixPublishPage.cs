@@ -16,7 +16,8 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         private By FirstFixCourseRunLink = By.XPath(".//*[@id='course-run-fix-0d92ed05-d0be-4eda-9789-67418048a00f']");
         private By FirstFixCourseInstance = By.XPath(".//*[@class='error-link'][0]");
         private By FirstFixCourseRunInstance = By.XPath(".//*[@class='error-link fix'][0]");
-        private By ExitLink = By.XPath(".//*[@id='PublishCourses']/div[2]/div/a");
+        private By ExitLink = By.XPath(".//*[@id='PublishCourses']/div[1]/p[2]/a");
+        private By BackLink = By.LinkText("Back");
 
         public BulkUploadFixPublishPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -26,7 +27,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         protected override bool SelfVerify()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(ExitLink, 60);
+            webDriver.FindElementWait(BackLink, 60);
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
