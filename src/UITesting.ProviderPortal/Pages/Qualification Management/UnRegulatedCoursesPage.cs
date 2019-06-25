@@ -20,9 +20,12 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
         private By ZCodeText = By.Id("Search");
         private By SearchButton = By.Id("searchZCode");
         private By DontKnowZCode = By.XPath("//a[@href='/UnregulatedCourses/UnknownZCode']");
-        private By SearchErrMessage = By.Id("Search-error");
+        //private By SearchErrMessage = By.Id("Search-error");
+        private By SearchErrMessage = By.ClassName("govuk-error-message");
+        
+       
         /* private By ZCodeNotExistErrMessage = By.Id("cd-error-summary-title");*/
-       /* private By ZCodeNotExistErrMessage = By.XPath("//*[@id='results']/div/h1");*/
+        /* private By ZCodeNotExistErrMessage = By.XPath("//*[@id='results']/div/h1");*/
         private By ZCodeNotExistErrMessage = By.XPath("//*[@id='cd-error-summary-title']");
         private By ChooseButton = By.XPath("//*[@id='results']/div[2]/a[1]");
 

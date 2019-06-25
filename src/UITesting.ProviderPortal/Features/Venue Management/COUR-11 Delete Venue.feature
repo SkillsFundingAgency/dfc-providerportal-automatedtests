@@ -7,7 +7,7 @@ Background:
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
-	Given I have searched for UKPRN "10001800" and clicked search
+	Given I have searched for UKPRN "10007348" and clicked search
 	When I click to view my courses
 	Given I have navigated to the Your Venues Pages
 	Then I should be able to see a Edit and Delete Link

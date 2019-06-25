@@ -16,7 +16,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         private By CancelLink = By.PartialLinkText("Cance");
         private By EditLink = By.LinkText("Edit");
         private By ConfirmDelete = By.XPath(".//*[starts-with(@id,'venue-delete')]");
-        private By CourseMessage = By.XPath("//*[@id='LiveCoursesExistMessage']/div/div/p");
+        private By CourseMessage = By.XPath("//*[@id='LiveCoursesExistMessage']/div/div/span[1]");
+       
         private By DeleteMessage = By.XPath("//*[@id='venueSearchResultForm']/div[1]/div/span[1]");
         private By VenueTable = By.XPath("//*[@id='live']/table");
         private By VenueNameColumn = By.ClassName("govuk-table__cell");
