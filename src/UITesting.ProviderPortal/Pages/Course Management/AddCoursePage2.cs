@@ -62,6 +62,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By fullPartTimeButtons = By.Id("FullPartTimeRadioButtons");
         private By attendancePatternButtons = By.Id("AttendancePatternRadioButtons");
         private By workBasedOptionButton = By.Id("WorkBased");
+        private By regionError = By.XPath(".//*[@id='regions-section']/span[2]");
         private By firstRegion = By.XPath(".//*[@id='SelectRegionCheckBoxes']/details[1]/summary");
         private By courseRegionSelector = By.Id("RegionItemsCheckboxList");
         private By courseRegionSelectorFirstField = By.Id("RegionName-1");
@@ -248,11 +249,20 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     }
                     return new AddCoursePage2(webDriver);
 
-
                 case "National Check":
                     PageInteractionHelper.WaitForElementToBePresent(nationalError);
                     PageInteractionHelper.IsElementDisplayed(nationalError);
                     errortxt = webDriver.FindElement(nationalError).GetAttribute("innerText");
+                    if (errorMsg != errortxt)
+                    {
+                        throw new Exception("Incorrect Error message displayed");
+                    }
+                    return new AddCoursePage2(webDriver);
+
+                case "Sub Region":
+                    PageInteractionHelper.WaitForElementToBePresent(regionError);
+                    PageInteractionHelper.IsElementDisplayed(regionError);
+                    errortxt = webDriver.FindElement(regionError).GetAttribute("innerText");
                     if (errorMsg != errortxt)
                     {
                         throw new Exception("Incorrect Error message displayed");
