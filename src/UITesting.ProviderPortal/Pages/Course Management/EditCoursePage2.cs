@@ -224,7 +224,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseURLError);
                     PageInteractionHelper.IsElementDisplayed(courseURLError);
                     errortxt = webDriver.FindElement(courseURLError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -234,7 +234,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseNameError);
                     PageInteractionHelper.IsElementDisplayed(courseNameError);
                     errortxt = webDriver.FindElement(courseNameError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -244,7 +244,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseCostError);
                     PageInteractionHelper.IsElementDisplayed(courseCostError);
                     errortxt = webDriver.FindElement(courseCostError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -254,7 +254,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseCostInvalidLength);
                     PageInteractionHelper.IsElementDisplayed(courseCostInvalidLength);
                     errortxt = webDriver.FindElement(courseCostInvalidLength).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -264,7 +264,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseCostInvalid);
                     PageInteractionHelper.IsElementDisplayed(courseCostInvalid);
                     errortxt = webDriver.FindElement(courseCostInvalid).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -274,7 +274,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(courseIdError);
                     PageInteractionHelper.IsElementDisplayed(courseIdError);
                     errortxt = webDriver.FindElement(courseIdError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -284,7 +284,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(costDescriptionError);
                     PageInteractionHelper.IsElementDisplayed(costDescriptionError);
                     errortxt = webDriver.FindElement(costDescriptionError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -294,7 +294,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(DayError);
                     PageInteractionHelper.IsElementDisplayed(DayError);
                     errortxt = webDriver.FindElement(DayError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -304,7 +304,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(MonthError);
                     PageInteractionHelper.IsElementDisplayed(MonthError);
                     errortxt = webDriver.FindElement(MonthError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -314,7 +314,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(YearError);
                     PageInteractionHelper.IsElementDisplayed(YearError);
                     errortxt = webDriver.FindElement(YearError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -324,7 +324,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(StartDateRequiredError);
                     PageInteractionHelper.IsElementDisplayed(StartDateRequiredError);
                     errortxt = webDriver.FindElement(StartDateRequiredError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -334,7 +334,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(PasttDateError);
                     PageInteractionHelper.IsElementDisplayed(PasttDateError);
                     errortxt = webDriver.FindElement(PasttDateError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -344,7 +344,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(FutureDateError);
                     PageInteractionHelper.IsElementDisplayed(FutureDateError);
                     errortxt = webDriver.FindElement(FutureDateError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -354,7 +354,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(InvalidDateError);
                     PageInteractionHelper.IsElementDisplayed(InvalidDateError);
                     errortxt = webDriver.FindElement(InvalidDateError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }
@@ -364,7 +364,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(DurationError);
                     PageInteractionHelper.IsElementDisplayed(DurationError);
                     errortxt = webDriver.FindElement(DurationError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }

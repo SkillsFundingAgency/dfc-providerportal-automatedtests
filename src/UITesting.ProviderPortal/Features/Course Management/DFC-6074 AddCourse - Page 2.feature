@@ -106,7 +106,7 @@ Scenario: DFC5115 User enters Invalid course URL 4
 	When I enter the following in the course name field Course w.bbc.co.uk
 	And I click Publish leading to error
 	Then course URL error validation is displayed
-	And error message for field URL states The format of URL is incorrect
+	And error message for field URL states The format of URL is incorrect  
 
 @CI
 Scenario: DFC5115 User enters Invalid course URL 5
