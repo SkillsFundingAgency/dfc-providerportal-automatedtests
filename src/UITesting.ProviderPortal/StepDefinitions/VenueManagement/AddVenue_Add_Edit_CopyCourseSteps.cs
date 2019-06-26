@@ -44,6 +44,11 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         [Given(@"I have added a new Venue ""(.*)""")]
         public void GivenIHaveAddedANewVenue(string strVenueName)
         {
+
+            // create unique venue name and store in scenrio context to re-use later
+            strVenueName = strVenueName + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            ScenarioContext.Current["venue name"] = strVenueName;
+
             AddVenuePage addVenuePage = new AddVenuePage(webDriver);
             addVenuePage.ClickEnterAddressManuallyLink();
             AddVenueManualAddressPage addVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
@@ -60,7 +65,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void GivenIHaveSelectedAsVenueFromTheVenueCheckboxList(string strVenueName)
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
-            addCoursePage2.SelectCheckBoxByValue(strVenueName);
+            addCoursePage2.SelectCheckBoxByValue(ScenarioContext.Current["venue name"].ToString());
         }
 
         [Given(@"I have selected a course")]
