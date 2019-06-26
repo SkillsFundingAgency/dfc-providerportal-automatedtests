@@ -37,6 +37,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenueEditNamePage EnterVenueName(String name)
         {
+            name = name + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
             FormCompletionHelper.EnterText(venueName, name);
             return new AddVenueEditNamePage(webDriver);
         }

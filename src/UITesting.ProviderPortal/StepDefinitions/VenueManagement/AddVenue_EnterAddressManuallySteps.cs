@@ -9,13 +9,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
     [Binding]
     public class AddVenue_EnterAddressManuallySteps : TestSupport.BaseTest
     {
-        ///AddVenue_EnterAddressManuallyPage EnterAddressManually = new AddVenue_EnterAddressManuallyPage(webDriver);
-        ///km
-        
-        //AddVenuePage AddVenuePage = new AddVenuePage(webDriver);
-        //Venue_Data VenueData = new Venue_Data();
-        //ViewAllLiveVenuesPage ViewAllLiVeVenuesPage = new ViewAllLiveVenuesPage(webDriver);
-        //AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
+
         [Given(@"I have logged as a provider")]
         public void GivenIHaveLoggedAsAProvider()
         {
@@ -58,7 +52,8 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         {
             AddVenueManualAddressPage AddVenueManualAddressPage = new AddVenueManualAddressPage(webDriver);
             Venue_Data VenueData = new Venue_Data();
-            AddVenueManualAddressPage.AddVenueName(VenueData.VenueName);
+            string venueName = VenueData.VenueName + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            AddVenueManualAddressPage.AddVenueName(venueName);
         }
         
         [When(@"I enter valid Address Line(.*)")]
