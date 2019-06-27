@@ -253,7 +253,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
                     PageInteractionHelper.WaitForElementToBePresent(nationalError);
                     PageInteractionHelper.IsElementDisplayed(nationalError);
                     errortxt = webDriver.FindElement(nationalError).GetAttribute("innerText");
-                    if (errorMsg != errortxt)
+                    if (!errortxt.Contains(errorMsg))
                     {
                         throw new Exception("Incorrect Error message displayed");
                     }

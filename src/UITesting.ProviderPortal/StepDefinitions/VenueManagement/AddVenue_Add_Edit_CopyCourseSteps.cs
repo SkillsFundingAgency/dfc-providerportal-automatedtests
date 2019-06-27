@@ -79,7 +79,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void GivenIHaveSelectedAsVenueFromVenueDropdown(string strVenueName)
         {
             EditCourseRunDetails_YC3Page editCourseRunDetails_YC3Page = new EditCourseRunDetails_YC3Page(webDriver);
-            editCourseRunDetails_YC3Page.SelectVenueByName(strVenueName);
+            editCourseRunDetails_YC3Page.SelectVenueByName(ScenarioContext.Current["venue name"].ToString());
         }
 
         [When(@"I select the link to Add New Venue in the Edit Screen")]
@@ -211,7 +211,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
         public void GivenIHaveSelectedAsVenueFromVenueDropdownInTheCopyCoursePage(string strVenueName)
         {
             CopyCoursePage copyCoursePage  = new CopyCoursePage(webDriver);
-            copyCoursePage.SelectVenueByName(strVenueName);
+            copyCoursePage.SelectVenueByName(ScenarioContext.Current["venue name"].ToString());
         }
 
         [When(@"I click delete")]

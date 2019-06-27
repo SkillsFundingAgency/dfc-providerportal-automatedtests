@@ -72,7 +72,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
             PageInteractionHelper.WaitForElementToBePresent(ErrorMsg);
             PageInteractionHelper.IsElementDisplayed(ErrorMsg);
             errortxt = webDriver.FindElement(ErrorMsg).GetAttribute("innerText");
-            if (errortxt != errorMsg)
+            if (!errortxt.Contains(errorMsg))
             {
                 throw new Exception("No Error message displayed or Incorrect error message displayed"
                                     + "\n Expected: " + errorMsg
