@@ -18,6 +18,8 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         private By FirstFixCourseRunInstance = By.XPath(".//*[@class='error-link fix'][0]");
         private By ExitLink = By.XPath(".//*[@id='PublishCourses']/div[1]/p[2]/a");
         private By BackLink = By.LinkText("Back");
+        private By FixRadio = By.Id("OnScreen");
+        private By ContinueBtn = By.Id("next");
 
         public BulkUploadFixPublishPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -59,6 +61,18 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         {
             FormCompletionHelper.ClickElement(FirstFixCourseRunInstance);
             return new EditCoursePage2(webDriver);
+        }
+
+        public BulkUploadFixPublishPage ClickFix()
+        {
+            FormCompletionHelper.ClickElement(FixRadio);
+            return new BulkUploadFixPublishPage(webDriver);
+        }
+
+        public BulkUploadFixPublishPage ClickContinue()
+        {
+            FormCompletionHelper.ClickElement(ContinueBtn);
+            return new BulkUploadFixPublishPage(webDriver);
         }
 
     }

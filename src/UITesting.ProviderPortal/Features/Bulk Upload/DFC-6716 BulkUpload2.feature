@@ -59,7 +59,7 @@ Scenario: DFC-7224 Bulk Upload Save Course Edit
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_SaveTest.csv to upload
 	And I click Upload File leading to course errors
-	Then I am on the Fix and publish bulk upload page
+	Then I am on the Fix and publish bulk upload page for a new file upload
 	When I click fix against the first Course i want edit and save
 	And I edit bulk upload course description Semi-qualified (people)
 	And I click to Save the Course details
@@ -75,7 +75,7 @@ Scenario: DFC-7225 Bulk Upload Save Course Run Edit
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_SaveTest2.csv to upload
 	And I click Upload File leading to course errors
-	Then I am on the Fix and publish bulk upload page
+	Then I am on the Fix and publish bulk upload page for a new file upload
 	When I click fix against the first Course i want edit and save
 	When I edit bulk upload course cost 9
 	And I click to Save the Course Run details
@@ -91,7 +91,7 @@ Scenario Outline: COUR-765 Field Validations
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File <file> to upload
 	And I click Upload File leading to course errors
-	Then I am on the Fix and publish bulk upload page
+	Then I am on the Fix and publish bulk upload page for a new file upload
 	#uncomment once working in SIT
 	#Given I have accessed the Bulk Upload delete file page
 	#When I click delete bulk upload file

@@ -58,8 +58,16 @@ namespace UITesting.ProviderPortal.StepDefinitions
             uploadAFilePage.UploadFileNoErrors();
         }
 
-        [Then(@"I am on the Fix and publish bulk upload page")]
+        [Then(@"I am on the Fix and publish bulk upload page for a new file upload")]
         public void OnFixAndPublishPage()
+        {
+            BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
+            bulkUploadFixPublishPage.ClickFix();
+            bulkUploadFixPublishPage.ClickContinue();
+        }
+
+        [Then(@"I am on the Fix and publish bulk upload page")]
+        public void OnFixAndPublishPage2()
         {
             BulkUploadFixPublishPage bulkUploadFixPublishPage = new BulkUploadFixPublishPage(webDriver);
         }
