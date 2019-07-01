@@ -395,7 +395,7 @@ Scenario: DFC-4759 User selects address and enters valid venue name then clicks 
 	And I click Find Address
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road
-	And I enter venue name Test Venue
+	And I enter venue name variable Test Venue
 	And I click continue to confirm page
 	Then I am on the Add Venue Confirm details page
 
