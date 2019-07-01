@@ -18,7 +18,7 @@ Background:
 	And I click Find Address
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road
-	And I enter venue name variable Test Venue
+	And I enter variable venue name Test Venue
 	And I click continue to confirm page				
 
 @CI

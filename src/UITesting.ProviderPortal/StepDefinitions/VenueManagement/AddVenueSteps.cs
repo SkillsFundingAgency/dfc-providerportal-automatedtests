@@ -163,7 +163,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             addVenueSelectAddressPage.EnterVenueName(venueName);
         }
 
-        [When(@"I enter venue name variable(.*)")]
+        [When(@"I enter variable venue name(.*)")]
         public void WhenIEnterVenueName2(string venueName)
         {
             AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
