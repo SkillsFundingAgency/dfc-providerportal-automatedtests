@@ -30,7 +30,7 @@ Scenario: COUR-6 Add a Venue when adding a new course
 	Then the venue "TestAddVenue_AddCourse" should be present in the Venue List
 	Given I have selected "TestAddVenue_AddCourse" as venue from the Venue Checkbox List
 	When I enter the following in the cost field 999.99
-	When I select duration length 9
+	When I select duration length 99
 	When I Select study mode Part-time
 	When I Select attendance mode Daytime
 	And I click Publish

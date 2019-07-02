@@ -57,6 +57,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.VenueManagement
             addVenueManualAddressPage.AddTownCity("Del Venue City");
             addVenueManualAddressPage.AddPostCode("CV1 2WT");
             addVenueManualAddressPage.ClickContinue();
+            PageInteractionHelper.WaitForPageToLoad();
             AddVenueConfirmAddressPage addVenueConfirmAddressPage = new AddVenueConfirmAddressPage(webDriver);
             addVenueConfirmAddressPage.ClickConfirmContinue();
         }
