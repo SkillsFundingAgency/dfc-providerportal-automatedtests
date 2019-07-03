@@ -22,7 +22,7 @@ Scenario: DFC-6737 Bulk Upload Status of upload Courses - No Errors
 
 @CI
 Scenario: DFC-7272 Bulk Upload Status of upload Courses - Errors
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_AttendancePatternNone.csv to upload
@@ -31,7 +31,7 @@ Scenario: DFC-7272 Bulk Upload Status of upload Courses - Errors
 
 @CI
 Scenario: DFC-6738 Bulk Upload Stage 1 - Pass
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_AttendancePatternNone.csv to upload
@@ -40,7 +40,7 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - Pass
 
 @CI
 Scenario: DFC-6738 Bulk Upload Stage 1 - File Not CSV
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUploadNotCSV.txt to upload
@@ -49,7 +49,7 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - File Not CSV
 
 @CI
 Scenario: DFC-6738 Bulk Upload Stage 1 - File Empty
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_Empty.csv to upload
@@ -58,7 +58,7 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - File Empty
 
 @CI
 Scenario: DFC-6738 Bulk Upload Stage 1 - Missing Columns
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_MissingColumns.csv to upload
@@ -67,7 +67,7 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - Missing Columns
 
 @CI
 Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS BUG COUR-1134
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_LARSInvalid.csv to upload
@@ -76,7 +76,7 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Invalid LARS BUG COUR-1134
 
 @CI
 Scenario: DFC-7379 Bulk Upload LARS Checks - Expired LARS
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_LARSExpired.csv to upload
@@ -85,7 +85,8 @@ Scenario: DFC-7379 Bulk Upload LARS Checks - Expired LARS
 
 @CI
 Scenario: DFC-7379 Bulk Upload LARS Checks - Missing LARS
-	Given I have searched for UKPRN "10036802" and clicked search
+	#Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10033145" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
 	When I click Choose a File BulkUpload_LARSMissing.csv to upload

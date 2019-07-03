@@ -19,6 +19,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenuePage(IWebDriver webDriver) : base(webDriver)
         {
+            PageInteractionHelper.WaitForPageToLoad();
             SelfVerify();
         }
 

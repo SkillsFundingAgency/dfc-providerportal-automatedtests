@@ -26,7 +26,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         public AddVenueManualAddressPage(IWebDriver webDriver):base(webDriver)
         {
-           SelfVerify();
+            PageInteractionHelper.WaitForPageToLoad();
+            SelfVerify();
         }
         protected override bool SelfVerify()
         {

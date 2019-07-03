@@ -98,6 +98,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         internal void ClickAddNewVenueLink()
         {
             FormCompletionHelper.ClickElement(AddNewVenueLink);
+            PageInteractionHelper.WaitForPageToLoad();
         }
 
         public AddCoursePage2 clickOnline()
