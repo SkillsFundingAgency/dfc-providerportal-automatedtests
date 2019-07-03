@@ -9,7 +9,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 {
     public class UploadAFilePage : BasePage
     {
-        private static String PAGE_TITLE = "Upload a file";
+        private static String PAGE_TITLE = "Bulk upload course information";
         private By ChooseFileBtn = By.Id("bulkUploadFile");
         private By UploadFileBtn = By.Id("uploadButton");
         private By ErrorMsg = By.XPath(".//*[@id='bulkUploadForm']/div[1]/span");
