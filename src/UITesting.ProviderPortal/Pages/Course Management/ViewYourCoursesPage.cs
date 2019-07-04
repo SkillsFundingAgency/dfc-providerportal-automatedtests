@@ -98,8 +98,8 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         public ViewYourCoursesPage(IWebDriver webDriver) : base(webDriver)
         {
             PageInteractionHelper.WaitForPageToLoad();
-            //webDriver.FindElementWait(SearchText, 60);
-            webDriver.FindElementWait(Title, 60);
+            webDriver.FindElementWait(SearchText, 60);
+            //webDriver.FindElementWait(Title, 60);
             if (!PageInteractionHelper.IsElementPresent(successMsg))
             {
                 SelfVerify();
