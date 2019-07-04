@@ -19,6 +19,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 
         public UploadAFilePage(IWebDriver webDriver) : base(webDriver)
         {
+            PageInteractionHelper.WaitForPageToLoad();
             SelfVerify();
         }
 

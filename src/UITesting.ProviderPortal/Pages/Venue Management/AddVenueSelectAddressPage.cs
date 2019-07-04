@@ -29,6 +29,7 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -43,7 +44,8 @@ namespace UITesting.ProviderPortal.Pages.Venue_Management
         {
 
             string venName = name + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-            FormCompletionHelper.EnterTextWithoutClearing(venueName, name);
+            System.Console.WriteLine("venue name:" + venName);
+            FormCompletionHelper.EnterTextWithoutClearing(venueName, venName);
             return new AddVenueSelectAddressPage(webDriver);
         }
 

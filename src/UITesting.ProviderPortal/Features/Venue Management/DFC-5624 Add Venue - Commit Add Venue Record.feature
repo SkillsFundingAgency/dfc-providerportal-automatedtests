@@ -19,7 +19,7 @@ Background:
 	And I click Find Address
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road
-	And I enter variable venue name Academy Of Contemporary Music
+	And I enter variable venue nameAcademy Of Contemporary Music
 	And I click continue to confirm page
 
 
