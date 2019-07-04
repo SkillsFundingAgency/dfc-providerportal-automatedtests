@@ -47,7 +47,7 @@ Scenario: DFC-6667 Publish course with Work Based Options - No Region Selected_B
 	And I click on the Work Based Option Radio Button
 	And I click on No to National coverage
 	And I select duration length 9
-	And I click Publish
+	And I click Publish leading to error
 	Then error message for field Sub Region states Select at least one region
 
 @CI
