@@ -10,7 +10,7 @@ Background:
 	Given I have searched for UKPRN "10002815" and clicked search
 	When I click to view my courses
 	Given I have accessed the Apprenticeship Search page
-	When I use apprenticeship search to search for Plumber
+	When I use apprenticeship search to search for Plumbing
 	Then the Results are displayed
 	Given I have selected an apprenticeship
 	And I have accessed the Apprenticeships training details page

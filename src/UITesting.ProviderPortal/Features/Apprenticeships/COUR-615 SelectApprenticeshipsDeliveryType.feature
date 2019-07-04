@@ -7,6 +7,8 @@ Background:
 	Given I have accessed course directory as a provider
 	And I login as admin with user and password
 	Then I am logged in
+	Given I have searched for UKPRN "10044200" and clicked search
+	When I click to view my courses
 	Given I have accessed the Apprenticeship Search page
 	When I use apprenticeship search to search for Plum
 	Then the Results are displayed
