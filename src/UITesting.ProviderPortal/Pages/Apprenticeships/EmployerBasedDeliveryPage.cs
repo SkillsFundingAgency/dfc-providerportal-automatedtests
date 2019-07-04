@@ -90,7 +90,10 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
 
        public EmployerBasedDeliveryPage SelectFirstSubRegion()
         {
-            FormCompletionHelper.ClickElement(FirstSubRegion);
+            PageInteractionHelper.WaitForPageToLoad();
+            var element = this.webDriver.FindElement(FirstSubRegion);
+            ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
+            //FormCompletionHelper.ClickElement(FirstSubRegion);
             PageInteractionHelper.WaitForPageToLoad();
             return new EmployerBasedDeliveryPage(webDriver);
         }
@@ -98,10 +101,11 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
         public EmployerBasedDeliveryPage SelectAllSubRegion()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            System.Threading.Thread.Sleep(1000);
             PageInteractionHelper.WaitForElementToBeDisplayed(SelectAll);
             PageInteractionHelper.WaitForElementToBePresent(SelectAll);
-            FormCompletionHelper.ClickElement(SelectAll);
+            var element = this.webDriver.FindElement(SelectAll);
+            ((IJavaScriptExecutor)this.webDriver).ExecuteScript("arguments[0].click();", element);
+            //FormCompletionHelper.ClickElement(SelectAll);
             PageInteractionHelper.WaitForPageToLoad();
             return new EmployerBasedDeliveryPage(webDriver);
         }
