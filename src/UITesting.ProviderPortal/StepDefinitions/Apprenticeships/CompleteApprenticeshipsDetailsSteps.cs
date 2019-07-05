@@ -109,5 +109,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
             addApprenticeshipPage.PhoneErrorDisplayed(errMsg);
         }
+        [Then(@"a website error message should be displayed ""(.*)""")]
+        public void ThenAWebsiteErrorMessageShouldBeDisplayed(string errMsg)
+        {
+            AddApprenticeshipPage addApprenticeshipPage = new AddApprenticeshipPage(webDriver);
+            addApprenticeshipPage.WebsiteErrorDisplayed();
+        }
+
     }
 }
