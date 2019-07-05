@@ -43,6 +43,7 @@ Scenario: COUR-353 Select Day Release location and add another second time
 	And I enter 10 miles in radius field
 	And I click Add another
 
+# Test takes too long to run as part of CI
 #@CI
 #Scenario: Add 250 locations
 #	When I add 250 locations for an apprenticeship

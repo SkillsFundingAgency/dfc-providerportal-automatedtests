@@ -37,7 +37,7 @@ Scenario: COUR-6 Add a Venue when adding a new course
 	And I click Publish
 	Then the Add Course Summary Page should be displayed
 	And I have clicked Accept and Publish
-	Then the course should be added
+
 
 @CI
 Scenario: COUR-6 Add a Venue when editing an existing course
@@ -51,9 +51,6 @@ Scenario: COUR-6 Add a Venue when editing an existing course
 	When I select the link to Add New Venue in the Edit Screen
 	Then Add venue screen should be displayed.
 	Given I have added a new Venue "TestAddVenue_EditCourse"
-	#And I have entered a postcode "NW1 3AB" and clicked Find Address
-	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
-	#And  I have clicked continue in confirm Venue screen
 	Then the venue "TestAddVenue_EditCourse" should be present in the Venue List
 	Given I have selected "TestAddVenue_EditCourse" as venue from Venue Dropdown
 	And I have selected entered a value in cost "200"
@@ -61,31 +58,13 @@ Scenario: COUR-6 Add a Venue when editing an existing course
 	And I Select study mode "Part-time"
 	And I Select attendance mode "Daytime"
 	When I  Save the data
-	#Then the Add Course Summary Page should be displayed
-	#And I have clicked Accept and Publish
-	Then the course should be added
 
 @CI
 Scenario: COUR-6 Add a Venue when copying an existing course
 	Given I have selected a course run to copy
 	Then Copy Course Page should be displayed
-	#Given I have accessed the selected course run data
-	#And I have selected "Classroom" as delivery mode
-	#And I have selected Start Date "Defined Start Date"
-	#And I have entered "25" in Day, "04" in Month and "2021" in Year
 	When I select the link to Add New Venue inthe copy course screen
 	Then Add venue screen should be displayed.
 	Given I have added a new Venue "TestAddVenue_CopyCourse"
-	#And I have entered a postcode "NW1 3AB" and clicked Find Address
-	#And i have selected an address from the dropdown When I select the address and clicked Continue "15 Bourdon Place London, W1K 3AB"
-	#And  I have clicked continue in confirm Venue screen
-	#Then the venue "TestAddVenue_CopyCourse" should be present in the Venue List
 	Given I have selected "TestAddVenue_CopyCourse" as venue from Venue Dropdown in the copy course page
-	#And I have selected entered a value in cost "200"
-	#And I have entered a value in Duration "6"
-	#And I Select study mode "Part-time"
-	#And I Select attendance mode "Daytime"
 	When I  Save the data in the copy course page
-	#Then the Add Course Summary Page should be displayed
-	#And I have clicked Accept and Publish
-	Then the course should be added

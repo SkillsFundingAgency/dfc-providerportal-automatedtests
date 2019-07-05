@@ -187,12 +187,13 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
                 classroomAndEmployerDeliveryOptionPage.SelectFirstLocation();
                 classroomAndEmployerDeliveryOptionPage.EnterRadius("10");
                 classroomAndEmployerDeliveryOptionPage.ClickAddAnother();
+                System.Console.WriteLine("repitition " + i);
 
                 i++;
 
             } while (i < numOfReps);
 
-           // System.Threading.Thread.Sleep(999999999);                                                       
+           System.Threading.Thread.Sleep(999999999);                                                       
         }
 
 

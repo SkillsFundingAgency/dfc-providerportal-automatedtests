@@ -128,8 +128,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 25
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 27
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
@@ -156,8 +154,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 34
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 36
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 37
@@ -184,8 +180,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 43
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 44
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 45
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 46
@@ -212,8 +206,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 52
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 53
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 54
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 55
@@ -240,8 +232,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 61
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 62
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 63
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 64
@@ -269,8 +259,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 70
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 71
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 72
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 73
@@ -298,8 +286,6 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line 79
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 80
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 81
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 82
@@ -327,14 +313,12 @@ this.FeatureBackground();
 #line 88
  testRunner.Given("I have searched for UKPRN \"10036802\" and clicked search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 90
- testRunner.When("I click to view my courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
  testRunner.Given("I have accessed the Bulk Upload page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 92
+#line 91
  testRunner.When("I click Choose a File BulkUpload_LARSMissing.csv to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 93
+#line 92
  testRunner.And("I click Upload File leading to stage1 errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 93
  testRunner.Then("the error Line 2, LARS_QAN = => LARS is missing. is displayed in error summary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

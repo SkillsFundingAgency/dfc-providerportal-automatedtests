@@ -25,7 +25,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         protected override bool SelfVerify()
         {
             PageInteractionHelper.WaitForPageToLoad();
-            webDriver.FindElementWait(SearchButton, 20);
+            webDriver.FindElementWait(SearchButton, 60);
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -38,6 +38,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         public SearchProviderPage ClickSearchButton()
         {
             FormCompletionHelper.ClickElement(SearchButton);
+            PageInteractionHelper.WaitForPageToLoad();
             return new SearchProviderPage(webDriver);
         }
 
