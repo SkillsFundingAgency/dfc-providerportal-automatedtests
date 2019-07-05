@@ -112,3 +112,4 @@ Scenario: COUR-352 Email more than 255 characters
 	And I have entered contact details " "
 	And I have clicked continue error
 	Then a email Info error message should be displayed "Email should be no more than 255 characters"
+@CI
