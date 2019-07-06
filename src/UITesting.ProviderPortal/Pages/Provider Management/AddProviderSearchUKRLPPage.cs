@@ -1,9 +1,5 @@
 ﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UITesting.Framework.Helpers;
 
 namespace UITesting.ProviderPortal.Pages.Provider_Management
@@ -28,23 +24,8 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
         private By AddProviderButton = By.CssSelector("a#btnOnboardProvider");
         private By ProviderIsAdded = By.CssSelector("h1.govuk-heading-m");
         private By ValueOnboarded = By.CssSelector(" tr:nth-of-type(1) td.govuk-table__cell");
-        private By SearchErrorMsg = By.Id("SearchTerm-error");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //private By SearchErrorMsg = By.Id("SearchTerm-error");
+        private By SearchErrorMsg = By.XPath(".//*[@id='ProviderSearchResultContainer']/div/div/h1");
 
 
         public AddProviderSearchUKRLPPage(IWebDriver webDriver) : base(webDriver)
@@ -54,6 +35,7 @@ namespace UITesting.ProviderPortal.Pages.Provider_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
             //throw new NotImplementedException();
         }

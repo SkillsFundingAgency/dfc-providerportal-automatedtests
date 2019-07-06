@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading;
+﻿using OpenQA.Selenium;
+using System;
 using System.IO;
+using System.Threading;
 using UITesting.Framework.Helpers;
 using UITesting.ProviderPortal.TestSupport;
-using OpenQA.Selenium;
 
 namespace UITesting.ProviderPortal.Pages.Bulk_Upload
 {
@@ -12,7 +12,7 @@ namespace UITesting.ProviderPortal.Pages.Bulk_Upload
         private static String PAGE_TITLE = "Bulk upload course information";
         private By ChooseFileBtn = By.Id("bulkUploadFile");
         private By UploadFileBtn = By.Id("uploadButton");
-        private By ErrorMsg = By.XPath(".//*[@id='bulkUploadForm']/div[1]/span");
+        private By ErrorMsg = By.XPath(".//*[@id='groupServerSideError']/span");  
         private By ErrorSummaryMsg = By.Id("name-error"); 
 
         private string errortxt;

@@ -7,8 +7,8 @@ Background:
 Given I have accessed course directory as a provider
 And I login as admin with user and password
 Then I am logged in
-Given I have searched for UKPRN "10002815" and clicked search
-When I click to view my courses
+#Given I have searched for UKPRN "10002815" and clicked search
+#When I click to view my courses
 ## End of Provider Search Steps
 Given I am on Add a Provider Page
 Then I should see label "Add Provider"

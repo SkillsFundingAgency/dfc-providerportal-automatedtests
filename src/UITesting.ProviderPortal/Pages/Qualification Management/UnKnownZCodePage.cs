@@ -62,12 +62,14 @@ namespace UITesting.ProviderPortal.Pages.Qualification_Management
 
         public void ClickAddThisProvision()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             FormCompletionHelper.ClickElement(AddThisProvisionLink);
         }
 
         public void SelectPage(string pgNum)
         {
             FormCompletionHelper.ClickElement(PageNumber);
+            PageInteractionHelper.WaitForPageToLoad();
         }
 
         public void CheckFirstLevelDropDown()

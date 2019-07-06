@@ -46,7 +46,6 @@ Scenario: DFC-6738 Bulk Upload Stage 1 - File Not CSV
 	When I click Choose a File BulkUploadNotCSV.txt to upload
 	And I click Upload File leading to stage1 errors
 	Then the error The selected file must be a csv is displayed
-
 @CI
 Scenario: DFC-6738 Bulk Upload Stage 1 - File Empty
 	Given I have searched for UKPRN "10036802" and clicked search
