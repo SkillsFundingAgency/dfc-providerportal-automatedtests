@@ -1,5 +1,4 @@
-﻿using System;
-using UITesting.ProviderPortal.Pages.Course_Management;
+﻿using UITesting.ProviderPortal.Pages.Course_Management;
 using UITesting.ProviderPortal.TestSupport;
 using TechTalk.SpecFlow;
 

@@ -305,7 +305,7 @@ Scenario: DFC-4759 User enters invalid postcode to Find Address B14 E77
 # END OF INVALID  POSTCODE TESTS
 
 @CI
-Scenario: DFC-4759 User enters valid not found postcode to Find Address - (AWAITING FIX BUG DFC-6050)
+Scenario: DFC-4759 User enters valid not found postcode to Find Address
 	When I enter the following postcode b13 9zy
 	And I click Find Address
 	Then Address validation message is displayed Enter a real postcode

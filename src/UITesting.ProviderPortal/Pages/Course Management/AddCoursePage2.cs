@@ -156,6 +156,7 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
 
         protected override bool SelfVerify()
         {
+            PageInteractionHelper.WaitForPageToLoad();
             return PageInteractionHelper.VerifyPageHeading(this.GetPageHeading(), PAGE_TITLE);
         }
 
@@ -625,11 +626,6 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.ClickElement(courseRegionSelectorFirstField);
             return new AddCoursePage2(webDriver);
         }
-
-        /*internal void SelectVenueByName(string text)
-        {
-            FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(Venue), text);
-        }*/
 
     }
 }
