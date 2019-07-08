@@ -174,6 +174,13 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
             classroomAndEmployerDeliveryOptionPage.ClickAddAnother();
         }
 
+        [When(@"I click Save and Continue")]
+        public void WhenIClickSave()
+        {
+            ClassroomAndEmployerDeliveryOptionPage classroomAndEmployerDeliveryOptionPage = new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+            classroomAndEmployerDeliveryOptionPage.ClickSave();
+        }
+
         [When(@"I add (.*) locations for an apprenticeship")]
         public void WhenIAddLocationsForAnApprenticeship(int numOfReps)
         {
@@ -198,6 +205,22 @@ namespace UITesting.ProviderPortal.StepDefinitions.Apprenticeships
 
 
         #endregion classroom and employer based delivery
+
+
+        [When(@"I click publish apprenticeship")]
+        public void WhenIClickPublishApprenticeship()
+        {
+            ConfirmDetailsPage confirmDetailsPage = new ConfirmDetailsPage(webDriver);
+            confirmDetailsPage.ClickPublish();
+        }
+
+        [Then(@"I am on apprenticeship published page")]
+        public void ThenIAmOnApprenticeshipPublishedPage()
+        {
+            AppPublishedPage appPublishedPage = new AppPublishedPage(webDriver);
+        }
+
+
 
     }
 

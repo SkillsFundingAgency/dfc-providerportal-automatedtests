@@ -13,7 +13,7 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
         private By location = By.Id("LocationId");
         private By Radius = By.Id("Radius");
         private By AddAnother = By.Id("next2");
-
+        private By SaveContinue = By.Id("continue");
 
         public ClassroomAndEmployerDeliveryOptionPage(IWebDriver webDriver) : base(webDriver)
         {
@@ -62,6 +62,13 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
             FormCompletionHelper.ClickElement(AddAnother);
             PageInteractionHelper.WaitForPageToLoad();
             return new ClassroomAndEmployerDeliveryOptionPage(webDriver);
+        }
+
+        public ConfirmDetailsPage ClickSave()
+        {
+            FormCompletionHelper.ClickElement(SaveContinue);
+            PageInteractionHelper.WaitForPageToLoad();
+            return new ConfirmDetailsPage(webDriver);
         }
     }
 }
