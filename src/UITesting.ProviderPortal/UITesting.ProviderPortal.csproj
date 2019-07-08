@@ -73,6 +73,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COUR-352 CompleteApprenticeshipsDetails.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Apprenticeships\COUR-599 Publish a New Apprenticeship.feature.cs">
+      <DependentUpon>COUR-599 Publish a New Apprenticeship.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Apprenticeships\COUR-387 AddClassromDeliveryMethodForApprenticeship.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -295,6 +300,7 @@
     </Compile>
     <Compile Include="Models\Venue Management\Venue_Management.cs" />
     <Compile Include="Pages\Apprenticeships\ClassroomAndEmployerDeliveryOptionPage.cs" />
+    <Compile Include="Pages\Apprenticeships\AppPublishedPage.cs" />
     <Compile Include="Pages\Apprenticeships\EmployerBasedDeliveryPage.cs" />
     <Compile Include="Pages\Apprenticeships\ConfirmDetailsPage.cs" />
     <Compile Include="Pages\Apprenticeships\NationalProviderCapabilityPage.cs" />
@@ -457,6 +463,10 @@
     <None Include="Features\Apprenticeships\COUR-352 CompleteApprenticeshipsDetails.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>COUR-352 CompleteApprenticeshipsDetails.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Apprenticeships\COUR-599 Publish a New Apprenticeship.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>COUR-599 Publish a New Apprenticeship.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Apprenticeships\COUR-387 AddClassromDeliveryMethodForApprenticeship.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
