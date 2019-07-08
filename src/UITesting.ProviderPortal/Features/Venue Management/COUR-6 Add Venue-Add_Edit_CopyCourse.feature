@@ -37,6 +37,7 @@ Scenario: COUR-6 Add a Venue when adding a new course
 	And I click Publish
 	Then the Add Course Summary Page should be displayed
 	And I have clicked Accept and Publish
+	Then the course should be added
 
 
 @CI
@@ -58,13 +59,19 @@ Scenario: COUR-6 Add a Venue when editing an existing course
 	And I Select study mode "Part-time"
 	And I Select attendance mode "Daytime"
 	When I  Save the data
+	#Then the course should be added
 
 @CI
 Scenario: COUR-6 Add a Venue when copying an existing course
 	Given I have selected a course run to copy
 	Then Copy Course Page should be displayed
+	Given I have entered the following course name "XXX - COUR-6AddAVenueWhenCopyingAnExistingCourse" when copying a course
+	Given I have selected "Classroom" as delivery mode when copying a course
+	And I have selected Start Date "Defined Start Date" when copying a course
+	And I have entered "25" in Day, "04" in Month and "2021" in Year when copying a course
 	When I select the link to Add New Venue inthe copy course screen
 	Then Add venue screen should be displayed.
 	Given I have added a new Venue "TestAddVenue_CopyCourse"
 	Given I have selected "TestAddVenue_CopyCourse" as venue from Venue Dropdown in the copy course page
 	When I  Save the data in the copy course page
+	#Then the course should be added

@@ -15,6 +15,14 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By SaveButton = By.Id("save");
         private static By AddNewVenueLink = By.Id("addNewVenue");
         private static By Venue = By.Id("VenueId");
+        private static By CourseNameText = By.Id("CourseName");
+        private static By Classroom_DelMode = By.Id("ClassroomBased");
+        private static By Online_DelMode = By.Id("Online");
+        private static By WorkBased_DelMode = By.Id("WorkBased");
+        private static By DefStartDate = By.Id("SpecifiedStartDate");
+        private static By Day = By.Id("start_date_day");
+        private static By Month = By.Id("start_date_month");
+        private static By Year = By.Id("start_date_year");
 
         public CopyCoursePage(IWebDriver  webDriver): base(webDriver)
         {
@@ -37,9 +45,44 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
             FormCompletionHelper.SelectFromDropDownByText(webDriver.FindElement(Venue), strVenueName);
         }
 
+        internal void EnterCourseName(string strCourseName)
+        {
+            FormCompletionHelper.EnterText(CourseNameText, strCourseName);
+        }
+
+        internal void SelectDeliveryMode(string strDelMode)
+        {
+            if (strDelMode == "Classroom")
+            {
+                FormCompletionHelper.ClickElement(Classroom_DelMode);
+            }
+            else if (strDelMode == "Online")
+            {
+                FormCompletionHelper.ClickElement(Online_DelMode);
+            }
+            else if (strDelMode == "Workbased")
+            {
+                FormCompletionHelper.ClickElement(WorkBased_DelMode);
+            }
+        }
+
+        internal void SelectDefinedStartDate(object strDefStartDate)
+        {
+            FormCompletionHelper.ClickElement(DefStartDate);
+        }
+
+        internal void EnterStartDate(string strDay, string strMonth, string strYear)
+        {
+            FormCompletionHelper.EnterText(Day, strDay);
+            FormCompletionHelper.EnterText(Month, strMonth);
+            FormCompletionHelper.EnterText(Year, strYear);
+        }
+
         internal void ClickSave()
         {
             FormCompletionHelper.ClickElement(SaveButton);
         }
+
+
     }
 }
