@@ -4,7 +4,6 @@
 	I want to be able to be able to use the Bulk Upload functionality
 
 
-
 @CI
 Scenario: DFC-7224 Bulk Upload Cancel Course Edit
 	Given I have accessed course directory as a provider
