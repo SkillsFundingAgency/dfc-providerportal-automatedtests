@@ -22,11 +22,25 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             editCourseRunDetailsPage.EnterCourseName(strCourseName);
         }
 
+        [Given(@"I have entered the following course name ""(.*)"" when copying a course")]
+        public void GivenIHaveEnteredTheFollowingCourseNameCopy(string strCourseName)
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.EnterCourseName(strCourseName);
+        }
+
         [Given(@"I have selected ""(.*)"" as delivery mode")]
         public void GivenIHaveSelectedAsDeliveryMode(string strDelMode)
         {
             EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
             editCourseRunDetailsPage.SelectDeliveryMode(strDelMode);
+        }
+
+        [Given(@"I have selected ""(.*)"" as delivery mode when copying a course")]
+        public void GivenIHaveSelectedAsDeliveryModeCopy(string strDelMode)
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.SelectDeliveryMode(strDelMode);
         }
 
         [Given(@"I have selected Start Date ""(.*)""")]
@@ -36,11 +50,27 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             editCourseRunDetailsPage.SelectDefinedStartDate(strDefStartDate);
         }
 
+        [Given(@"I have selected Start Date ""(.*)"" when copying a course")]
+        public void GivenIHaveSelectedStartDateCopy(string strDefStartDate)
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.SelectDefinedStartDate(strDefStartDate);
+        }
+
+
         [Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year")]
         public void GivenIHaveEnteredInDayInMonthAndInYear(string strDay, string strMonth, string strYear)
         {
             EditCourseRunDetails_YC3Page editCourseRunDetailsPage = new EditCourseRunDetails_YC3Page(webDriver);
             editCourseRunDetailsPage.EnterStartDate(strDay, strMonth, strYear);
+        }
+
+
+        [Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year when copying a course")]
+        public void GivenIHaveEnteredInDayInMonthAndInYearCopy(string strDay, string strMonth, string strYear)
+        {
+            CopyCoursePage copyCoursePage = new CopyCoursePage(webDriver);
+            copyCoursePage.EnterStartDate(strDay, strMonth, strYear);
         }
 
         /*[Given(@"I have entered ""(.*)"" in Day, ""(.*)"" in Month and ""(.*)"" in Year")]
