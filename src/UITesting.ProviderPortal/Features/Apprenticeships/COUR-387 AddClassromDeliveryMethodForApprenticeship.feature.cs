@@ -339,8 +339,8 @@ this.FeatureBackground();
 #line 83
  testRunner.When("I click SaveandContinue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 84
- testRunner.Then("Delivery Mode error message should be displayed \"Select How far you are willing t" +
-                    "o travel from selected location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Delivery Mode error message should be displayed \"Select how is the training deliv" +
+                    "ered at this location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -364,8 +364,8 @@ this.FeatureBackground();
 #line 89
  testRunner.Then("Location error message should be displayed \"Select location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 90
- testRunner.Then("Delivery Mode error message should be displayed \"Select How far you are willing t" +
-                    "o travel from selected location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Delivery Mode error message should be displayed \"Select how is the training deliv" +
+                    "ered at this location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -389,8 +389,8 @@ this.FeatureBackground();
 #line 95
  testRunner.Then("Location error message should be displayed \"Select location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 96
- testRunner.Then("Delivery Mode error message should be displayed \"Select How far you are willing t" +
-                    "o travel from selected location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Delivery Mode error message should be displayed \"Select how is the training deliv" +
+                    "ered at this location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
