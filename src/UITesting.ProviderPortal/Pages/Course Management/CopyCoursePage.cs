@@ -20,9 +20,9 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private static By Online_DelMode = By.Id("Online");
         private static By WorkBased_DelMode = By.Id("WorkBased");
         private static By DefStartDate = By.Id("SpecifiedStartDate");
-        private static By Day = By.Id("start_date_day");
-        private static By Month = By.Id("start_date_month");
-        private static By Year = By.Id("start_date_year");
+        private static By Day = By.Id("Day");
+        private static By Month = By.Id("Month");
+        private static By Year = By.Id("Year");
 
         public CopyCoursePage(IWebDriver  webDriver): base(webDriver)
         {

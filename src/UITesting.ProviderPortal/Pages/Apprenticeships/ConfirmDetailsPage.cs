@@ -7,7 +7,7 @@ namespace UITesting.ProviderPortal.Pages.Apprenticeships
 {
     public class ConfirmDetailsPage : BasePage
     {
-        private static String PAGE_TITLE = "Check your answers before saving";
+        private static String PAGE_TITLE = "Check and publish to the course directory";
         private By publishBtn = By.Id("next");
 
 

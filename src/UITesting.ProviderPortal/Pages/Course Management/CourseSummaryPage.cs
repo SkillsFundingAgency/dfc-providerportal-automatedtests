@@ -9,11 +9,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
     {
 
         private static String PAGE_TITLE = "";
-        private By edit = By.XPath(".//html/body/div[4]/main/div/div[1]/h3[1]/a");         
-        private By copy = By.XPath("/html/body/div[4]/main/div/div[2]/a[1]");
+        private By edit = By.XPath(".//*[@id='main-content']/main/div/div[1]/h3[1]/a");         
+        private By copy = By.XPath(".//*[@id='main-content']/main/div/div[2]/a[1]");
         private By delete = By.LinkText("Delete this course");
         private By deleteBtn = By.XPath("//*[@id='course-confirm- archive-c6481b98-505b-4379-ac95-54435502c929']");
-        private By makeChanges = By.XPath(".//html/body/div[4]/main/div/div[2]/a[5]");
+        private By makeChanges = By.XPath(".//*[@id=main-content']/main/div/div[2]/a[5]");
 
         public CourseSummaryPage(IWebDriver webDriver) : base(webDriver)
         {
