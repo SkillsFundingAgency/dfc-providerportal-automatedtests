@@ -19,6 +19,9 @@ namespace UITesting.ProviderPortal.TestSupport
         protected String GetPageHeading()
         {
 			return webDriver.FindElement(pageHeading).GetAttribute("innerText");
-		}
+
+           
+
+        }
 	}
 }

@@ -81,16 +81,16 @@ Scenario: COUR-387 Display Error Message-Location
 Scenario: COUR-387 Display Error Message-Delivery Mode
 	Given I have selected a venue from the Location dropdown
 	When I click SaveandContinue
-	Then Delivery Mode error message should be displayed "Select How far you are willing to travel from selected location"
+	Then Delivery Mode error message should be displayed "Select how is the training delivered at this location"
 @CI
 Scenario: COUR-387 Display Error Message-Location/Delivery Mode/SaveandAddAnother 
 	Given I have not selected a venue 
 	When I click SaveandAddAnother
 	Then Location error message should be displayed "Select location"
-	Then Delivery Mode error message should be displayed "Select How far you are willing to travel from selected location"
+	Then Delivery Mode error message should be displayed "Select how is the training delivered at this location"
 @CI
 Scenario: COUR-387 Display Error Message-Location/Delivery Mode/SaveandContinue 
 	Given I have not selected a venue 
 	When I click SaveandContinue
 	Then Location error message should be displayed "Select location"
-	Then Delivery Mode error message should be displayed "Select How far you are willing to travel from selected location"
+	Then Delivery Mode error message should be displayed "Select how is the training delivered at this location"
