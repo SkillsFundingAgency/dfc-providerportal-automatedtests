@@ -12,7 +12,8 @@ namespace UITesting.ProviderPortal.Pages
         private static String PAGE_TITLE = "Publish to the course directory";
         private By loginLink = By.LinkText("Login");
         private By signIn = By.XPath(".//*[@id='form-signin']/div[2]/button");
-        private By StartBtn = By.XPath(".//*[@id='main-content']/div/div/a");
+        //private By StartBtn = By.XPath(".//*[@id='main-content']/div/div/a");
+        private By StartBtn = By.XPath(".//*[@id='main-content']/div/div/div/div/a");
 
         public HomePage(IWebDriver webDriver) : base(webDriver)
         {
