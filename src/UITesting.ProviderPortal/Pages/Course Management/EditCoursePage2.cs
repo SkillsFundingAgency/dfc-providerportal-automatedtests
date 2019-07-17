@@ -32,11 +32,11 @@ namespace UITesting.ProviderPortal.Pages.Course_Management
         private By saveBtn = By.Id("save");
         private By StartDateRadio = By.Id("SpecifiedStartDate");
         private By StartDateType = By.Name("StartDateType");
-        private By DateDD = By.Id("start_date_day");
+        private By DateDD = By.Id("Day");
         private By DayError = By.Id("invalidDayMessage");
-        private By DateMM = By.Id("start_date_month");
+        private By DateMM = By.Id("Month");
         private By MonthError = By.Id("invalidMonthMessage");
-        private By DateCCYY = By.Id("start_date_year");
+        private By DateCCYY = By.Id("Year");
         private By YearError = By.Id("invalidYearMessage");
         private By StartDateRequiredError = By.XPath(".//*[@id='startDateFormGroup']/span");        
         private By PasttDateError = By.XPath(".//*[@id='startDateFormGroup']/span");                
