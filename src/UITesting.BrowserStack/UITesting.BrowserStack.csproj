@@ -56,11 +56,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Features\BulkUpload.feature.cs">
-      <DependentUpon>BulkUpload.feature</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Features\AddCourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,10 +104,6 @@
     <None Include="Features\DQI.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DQI.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\BulkUpload.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>BulkUpload.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\AddCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

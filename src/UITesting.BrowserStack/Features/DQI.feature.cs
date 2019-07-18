@@ -115,7 +115,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Given(string.Format("I have navigated to the Home page using {0} and {1}", profile, environment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.And("I login as provider admin with Provider.10033145@gmail.com and SITtesting123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I login as provider admin with provider.10021793@gmail.com  and SITtesting123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
  testRunner.Then("I am logged in as a provider", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12

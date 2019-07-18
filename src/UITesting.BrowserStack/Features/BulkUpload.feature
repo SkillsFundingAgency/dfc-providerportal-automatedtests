@@ -9,10 +9,10 @@ Scenario Outline: Bulk Upload Status of upload Courses
 	Given I have navigated to the Home page using <profile> and <environment>
 	And I login as admin with user and password
 	Then I am logged in
-	Given I have searched for UKPRN "10036802" and clicked search
+	Given I have searched for UKPRN "10037355" and clicked search
 	When I click to view my courses
 	Given I have accessed the Bulk Upload page
-	When I click Choose a File BulkUpload_InvalidDuration.csv to upload
+	When I click Choose a File BulkUpload_AttendancePatternNone.csv to upload
 	And I click Upload File leading to course errors
 	Then I am on the Fix and publish bulk upload page
 

@@ -11,6 +11,7 @@ using UITesting.BrowserStack.TestSupport;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace UITesting.BrowserStack.StepDefinitions
 {
@@ -1027,10 +1028,23 @@ namespace UITesting.BrowserStack.StepDefinitions
 
 
         [When(@"I click on the first course run requiring start date update")]
-        public void FixCourseRunStartDate()
+        //public void FixCourseRunStartDate()
+        //{
+        //    DQIFixPublishPage dQIFixPublishPage = new DQIFixPublishPage(webDriver);
+        //    dQIFixPublishPage.FixCourseRun();
+        //}
+
+        public void FixStartDate()
         {
-            DQIFixPublishPage dQIFixPublishPage = new DQIFixPublishPage(webDriver);
-            dQIFixPublishPage.FixCourseRun();
+            IList<IWebElement> links = webDriver.FindElements(By.LinkText("Fix"));
+            IList<IWebElement> listOflinks = new List<IWebElement>();
+
+            for (int i = 0; i < links.Count; i++)
+            {
+                links = webDriver.FindElements(By.LinkText("Fix"));
+                if (i == 0)
+                    links[i].Click();
+            }
         }
 
 
