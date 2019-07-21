@@ -21,7 +21,7 @@ Scenario Outline: Add Venue Details
 	And I click Find Address
 	Then I am on the Select Address page
 	When I select the address 120 Sandford Road
-	And I enter venue name Test Venue
+	And I enter variable venue nameTest Venue
 	And I click continue to confirm page
 	When I am on the Add Venue Confirm details page
 	And On the Confirmation Page I click continue

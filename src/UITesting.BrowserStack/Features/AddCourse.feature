@@ -30,6 +30,7 @@ Scenario Outline: Add a Course
 	And I select duration unit Weeks
 	And I select the first venue in the venues list
 	And I click Publish
+	And I click Confirm Publish on Course Summary
 
 Examples:
 		| profile  | environment    |

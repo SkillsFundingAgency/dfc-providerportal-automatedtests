@@ -249,15 +249,22 @@ namespace UITesting.BrowserStack.StepDefinitions
             addVenueSelectAddressPage.SelectAddressVenueValidationMessage(venueValidationMsg);
         }
 
-        [When(@"I enter venue name (.*)")]
-        public void WhenIEnterVenueName(string venueName)
+        //[When(@"I enter venue name (.*)")]
+        //public void WhenIEnterVenueName(string venueName)
+        //{
+        //    if (venueName == "space")
+        //    {
+        //        venueName = " ";
+        //    }
+        //    AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
+        //    addVenueSelectAddressPage.EnterVenueName(venueName);
+        //}
+
+        [When(@"I enter variable venue name(.*)")]
+        public void WhenIEnterVenueName2(string venueName)
         {
-            if (venueName == "space")
-            {
-                venueName = " ";
-            }
             AddVenueSelectAddressPage addVenueSelectAddressPage = new AddVenueSelectAddressPage(webDriver);
-            addVenueSelectAddressPage.EnterVenueName(venueName);
+            addVenueSelectAddressPage.EnterVenueName2(venueName);
         }
 
         [Then(@"I am on the Add Venue Confirm details page")]
@@ -767,6 +774,13 @@ namespace UITesting.BrowserStack.StepDefinitions
         {
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
             addCoursePage2.PublishCourseError();
+        }
+
+        [When(@"I click Confirm Publish on Course Summary")]
+        public void WhenIClickConfirmPublishOnCourseSummary()
+        {
+            AddCourseSummaryPage addCourseSummaryPage = new AddCourseSummaryPage(webDriver);
+            addCourseSummaryPage.ClickNext();
         }
 
 

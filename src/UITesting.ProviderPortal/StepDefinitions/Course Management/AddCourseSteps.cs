@@ -202,7 +202,7 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             AddCoursePage2 addCoursePage2 = new AddCoursePage2(webDriver);
             addCoursePage2.PublishCourse();
         }
-
+        
         [When(@"I click Publish leading to error")]
         public void WhenIClickPublishLeadingToError()
         {
@@ -218,6 +218,12 @@ namespace UITesting.ProviderPortal.StepDefinitions.Course_Management
             addCoursePage2.ClickPage1();
         }
 
+        [When(@"I click Confirm Publish on Course Summary")]
+        public void WhenIClickConfirmPublishOnCourseSummary()
+        {
+            AddCourseSummaryPage addCourseSummaryPage = new AddCourseSummaryPage(webDriver);
+            addCourseSummaryPage.ClickNext();
+        }
 
         [When(@"I select the first venue in the venues list")]
         public void SelectTheFirstVenueInTheVenuesList()

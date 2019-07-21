@@ -357,6 +357,7 @@ Scenario: DFC4900 User Publishes Course
 	And I select duration unit Weeks
 	And I select the first venue in the venues list
 	And I click Publish
+	And I click Confirm Publish on Course Summary
 
 @CI
 Scenario: DFC6704 User clicks back to page 1
