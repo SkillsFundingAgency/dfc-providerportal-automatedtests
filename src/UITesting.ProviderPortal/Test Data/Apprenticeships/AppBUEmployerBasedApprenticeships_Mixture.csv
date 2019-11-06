@@ -1,0 +1,4 @@
+STANDARD_CODE,STANDARD_VERSION,FRAMEWORK_CODE,FRAMEWORK_PROG_TYPE,FRAMEWORK_PATHWAY_CODE,APPRENTICESHIP_INFORMATION,APPRENTICESHIP_WEBPAGE,CONTACT_EMAIL,CONTACT_PHONE,CONTACT_URL,DELIVERY_METHOD,VENUE,RADIUS,DELIVERY_MODE,ACROSS_ENGLAND, NATIONAL_DELIVERY,REGION,SUB_REGION
+12,1,,,,test 1,http://www.testing1.com/enw,emailaddress1@testing.com,12134567893,http://www.testing1.com/enw,Employer,,,,,Yes,,
+,,560,2,2,test 2,http://www.testing1.com/enw,emailaddress1@testing.com,12134567894,http://www.testing1.com/enw,Employer,,,,,No,West Midlands;London,
+13,1,,,,test 3,http://www.testing1.com/enw,emailaddress1@testing.com,12134567895,http://www.testing1.com/enw,Employer,,,,,No,London,Coventry;Birmingham;Leeds
